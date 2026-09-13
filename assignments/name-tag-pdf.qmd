@@ -1,0 +1,223 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+#let level-plus = rgb("#FFF4BF")
+#let level-4 = rgb("#D5D9DC")
+#let level-3 = rgb("#E2E5E7")
+#let level-2 = rgb("#ECEEEF")
+#let level-1 = rgb("#F5F6F7")
+
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (top: 0.32in, bottom: 0.50in, x: 0.52in),
+  footer: context [
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.8pt,
+      fill: slate,
+      hyphenate: false,
+    )
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 12pt,
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(
+  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  size: 10.3pt,
+  fill: charcoal,
+  hyphenate: false,
+)
+#set par(leading: 0.54em, justify: false)
+
+#grid(
+  columns: (1fr, 2.65in),
+  column-gutter: 24pt,
+  align: top,
+  [
+    #text(size: 26pt, weight: "bold", fill: navy)[Name Tag PDF]
+    #v(1pt)
+    #text(size: 11.5pt, fill: slate)[Clear photo. Clear file. Clear submission.]
+  ],
+  [
+    #grid(
+      columns: (0.58in, 1fr),
+      column-gutter: 9pt,
+      align: horizon,
+      [#image("technology-department-emblem.svg", width: 0.54in)],
+      [
+        #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Commons]
+        #linebreak()
+        #text(size: 7.7pt, fill: slate)[Port Credit Secondary School]
+      ],
+    )
+  ],
+)
+
+#v(7pt)
+#line(length: 0.62in, stroke: 3pt + pcss-gold)
+#v(3pt)
+#line(length: 100%, stroke: 1.4pt + navy)
+#v(7pt)
+
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 18pt,
+  [#text(weight: "bold")[Value:] /10],
+  [#text(weight: "bold")[Submit:] Google Classroom],
+  [#text(weight: "bold")[Final file:] one PDF],
+)
+#v(5pt)
+#line(length: 100%, stroke: 0.7pt + mist)
+
+#v(7pt)
+#text(size: 15.5pt, weight: "bold", fill: navy)[Learning goal]
+#v(3pt)
+I can take a clear, well-composed photo, create and check a PDF that includes my student number, and follow digital submission instructions carefully.
+
+#v(6pt)
+#block(
+  width: 100%,
+  fill: sail,
+  stroke: (left: 4pt + pcss-gold),
+  inset: (left: 12pt, right: 12pt, top: 6pt, bottom: 6pt),
+)[
+  #text(size: 10pt, weight: "bold", fill: navy)[Why are we doing this?]
+  #v(2pt)
+  #text(size: 9pt)[This is practice for a course skill we will use again: turning clear work into one organized PDF, checking it, and submitting the correct file.]
+]
+
+#v(8pt)
+#grid(
+  columns: (1.34fr, 0.66fr),
+  column-gutter: 24pt,
+  align: top,
+  [
+    #text(size: 15pt, weight: "bold", fill: navy)[Your mission]
+    #v(4pt)
+    #table(
+      columns: (0.34in, 1fr),
+      inset: (x: 6pt, y: 4.6pt),
+      stroke: 0.5pt + mist,
+      align: left + top,
+      [#text(weight: "bold", fill: navy)[1]], [Take a clear, well-lit photo of your name tag.],
+      [#text(weight: "bold", fill: navy)[2]], [Add the photo to a Google Doc or other software that can create a PDF.],
+      [#text(weight: "bold", fill: navy)[3]], [Crop and resize the photo so the name tag is clear and easy to read.],
+      [#text(weight: "bold", fill: navy)[4]], [Include your student number on the page using the exact format shown at right. Replace #text(style: "italic")[student-number] with your actual student number.],
+      [#text(weight: "bold", fill: navy)[5]], [Export or save the finished page as a #text(weight: "bold")[PDF].],
+      [#text(weight: "bold", fill: navy)[6]], [Open the PDF and check that everything is clear, upright, complete, and easy to read.],
+      [#text(weight: "bold", fill: navy)[7]], [Submit the PDF to Google Classroom.],
+    )
+  ],
+  [
+    #text(size: 15pt, weight: "bold", fill: navy)[Required format]
+    #v(4pt)
+    #block(
+      width: 100%,
+      fill: navy,
+      inset: (x: 12pt, y: 12pt),
+    )[
+      #text(size: 8.2pt, fill: white)[TYPE THIS ON THE PAGE]
+      #v(4pt)
+      #text(size: 12pt, weight: "bold", fill: white)[Submitted by: student-number]
+    ]
+    #v(4pt)
+    #text(size: 8.5pt, fill: slate)[Replace #text(style: "italic")[student-number] with your actual student number.]
+
+    #v(10pt)
+    #text(size: 15pt, weight: "bold", fill: navy)[Before you submit]
+    #v(4pt)
+    #text(size: 9.2pt)[
+      [☐ Name tag is easy to read] #linebreak()
+      [☐ Photo is cropped and oriented correctly] #linebreak()
+      [☐ Student number is included in the exact format] #linebreak()
+      [☐ File opens as a PDF] #linebreak()
+      [☐ I opened the final PDF and checked it]
+    ]
+  ],
+)
+
+#pagebreak()
+
+#grid(
+  columns: (1fr, auto),
+  align: horizon,
+  [#text(size: 18pt, weight: "bold", fill: navy)[Name Tag PDF · Rubric · /10]],
+  [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
+)
+#v(3pt)
+#text(size: 8.5pt, fill: slate)[Each criterion is worth #text(weight: "bold")[2 marks], for a total of /10: 4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks.]
+#v(6pt)
+
+#table(
+  columns: (1.12fr, 1.18fr, 1.24fr, 1.24fr, 1.18fr, 1.12fr),
+  inset: (x: 5.5pt, y: 5.5pt),
+  align: left + top,
+  stroke: 0.5pt + white,
+  fill: (x, y) => {
+    if x == 1 { level-plus }
+    else if x == 2 { level-4 }
+    else if x == 3 { level-3 }
+    else if x == 4 { level-2 }
+    else if x == 5 { level-1 }
+    else { white }
+  },
+  table.header(
+    [#text(weight: "bold", fill: navy)[Criterion]],
+    [#text(weight: "bold", fill: navy)[4+ · 2 marks]],
+    [#text(weight: "bold", fill: navy)[Level 4 · 1.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 3 · 1 mark]],
+    [#text(weight: "bold", fill: navy)[Level 2 · 0.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 1 · 0 marks]],
+  ),
+
+  [#text(weight: "bold", fill: navy)[Photo quality] #linebreak() #text(fill: slate)[Can we clearly read the name tag?]],
+  [Exceptionally clear, well-lit, sharp, and easy to read.],
+  [Clear, well-lit, and easy to read with only a minor imperfection.],
+  [Readable and appropriately lit; some improvement is possible.],
+  [Partly difficult to read because of lighting, blur, angle, or distance.],
+  [Photo is missing or too unclear to use.],
+
+  [#text(weight: "bold", fill: navy)[Crop & layout] #linebreak() #text(fill: slate)[Is the page clean and focused?]],
+  [Photo is carefully cropped, sized, oriented, and placed for excellent readability.],
+  [Photo is well cropped, sized, oriented, and easy to view.],
+  [Layout works, but there may be extra background, awkward sizing, or minor orientation issues.],
+  [Layout makes the name tag unnecessarily small or difficult to view.],
+  [Photo is not appropriately placed, cropped, or oriented.],
+
+  [#text(weight: "bold", fill: navy)[Student number] #linebreak() #text(fill: slate)[Did you identify your submission correctly?]],
+  [Correct student number is easy to find and uses the exact required format.],
+  [Correct student number is included with only a very minor formatting issue.],
+  [Student number is present but the required format is not followed.],
+  [Identification is incomplete or difficult to find.],
+  [Student number is missing or incorrect.],
+
+  [#text(weight: "bold", fill: navy)[PDF skill] #linebreak() #text(fill: slate)[Did you create and check the file?]],
+  [Clean, correct PDF opens properly and has clearly been checked before submission.],
+  [Correct PDF opens properly and is complete with only a minor issue.],
+  [PDF is usable, but has a small file, page, or presentation issue.],
+  [File is technically a PDF but has significant readability, page, or export problems.],
+  [Submission is not a usable PDF.],
+
+  [#text(weight: "bold", fill: navy)[Following instructions] #linebreak() #text(fill: slate)[Did you complete the whole process?]],
+  [Every instruction is followed carefully and the final submission is complete.],
+  [All required instructions are followed with only a minor oversight.],
+  [Most instructions are followed; one required element needs correction.],
+  [Several instructions are missed or repeated prompting is needed.],
+  [Submission is incomplete or does not demonstrate the required process.],
+)
+```
