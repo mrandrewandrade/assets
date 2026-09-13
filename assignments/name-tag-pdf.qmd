@@ -142,11 +142,11 @@ I can take a clear, well-composed photo, create and check a PDF that includes my
     #text(size: 15pt, weight: "bold", fill: navy)[Before you submit]
     #v(4pt)
     #text(size: 9.2pt)[
-      [☐ Name tag is easy to read] #linebreak()
-      [☐ Photo is cropped and oriented correctly] #linebreak()
-      [☐ Student number is included in the exact format] #linebreak()
-      [☐ File opens as a PDF] #linebreak()
-      [☐ I opened the final PDF and checked it]
+      #box(width: 7pt, height: 7pt, stroke: 0.7pt + slate) #h(4pt) Name tag is easy to read #linebreak()
+      #box(width: 7pt, height: 7pt, stroke: 0.7pt + slate) #h(4pt) Photo is cropped and oriented correctly #linebreak()
+      #box(width: 7pt, height: 7pt, stroke: 0.7pt + slate) #h(4pt) Student number is included in the exact format #linebreak()
+      #box(width: 7pt, height: 7pt, stroke: 0.7pt + slate) #h(4pt) File opens as a PDF #linebreak()
+      #box(width: 7pt, height: 7pt, stroke: 0.7pt + slate) #h(4pt) I opened the final PDF and checked it
     ]
   ],
 )
