@@ -22,7 +22,7 @@ jobs:
         with:
           version: "1.10.18"
 
-      - name: Build About Me resource pack
+      - name: Build 0-series resource pack
         run: bash render.sh about-me
 
       - name: Stage website
