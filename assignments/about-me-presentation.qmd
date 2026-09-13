@@ -140,19 +140,12 @@ You can keep it simple. There is no required number of slides, pictures, or fact
   ],
 )
 
-#v(5pt)
-#block(
-  width: 100%,
-  fill: sail,
-  stroke: (left: 3pt + pcss-gold),
-  inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
-)[
-  #text(size: 9pt, weight: "bold", fill: navy)[During presentations:] #text(size: 9pt)[Phones away unless directed otherwise. Face the speaker, use attentive body language, and avoid side conversations. Write #text(weight: "bold")[one brief note for every presenter] on your Audience Connections sheet, then join the short question/comment discussion. #text(weight: "bold")[Submit the completed sheet after the final presentation day.]]
-]
-#v(4pt)
+#v(7pt)
 Submit your presentation through #text(weight: "bold")[Google Classroom] by #text(weight: "bold")[Tues., Sept. 15, 2026 at 7:00 PM].
-#v(3pt)
+#v(4pt)
 #text(weight: "bold", fill: navy)[After you present:] We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
+#v(4pt)
+#text(size: 9pt, fill: slate)[Listening to classmates is assessed separately in the Presentation Listening & Participation assignment.]
 
 #pagebreak()
 
@@ -225,22 +218,5 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   [Successfully introduces yourself, makes an appropriate connection, and responds appropriately during discussion.],
   [Some connection is made; responses may be brief or need prompting.],
   [Limited connection is made and there is little response to the discussion.],
-)
-
-#v(5pt)
-#line(length: 100%, stroke: 0.7pt + mist)
-#v(4pt)
-#text(size: 9.6pt, weight: "bold", fill: navy)[Learning Skills]
-#v(2pt)
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  column-gutter: 12pt,
-  row-gutter: 2pt,
-  [#text(size: 7.8pt, weight: "bold")[Responsibility:] #text(size: 7.8pt)[prepared, phones away, submits notes]],
-  [#text(size: 7.8pt, weight: "bold")[Organization:] #text(size: 7.8pt)[planned and easy to follow]],
-  [#text(size: 7.8pt, weight: "bold")[Independent Work:] #text(size: 7.8pt)[completes audience notes]],
-  [#text(size: 7.8pt, weight: "bold")[Collaboration:] #text(size: 7.8pt)[attentive body language, listens, joins discussion]],
-  [#text(size: 7.8pt, weight: "bold")[Initiative:] #text(size: 7.8pt)[volunteers or contributes]],
-  [#text(size: 7.8pt, weight: "bold")[Self-Regulation:] #text(size: 7.8pt)[manages time, focus, devices, and nerves]],
 )
 ```
