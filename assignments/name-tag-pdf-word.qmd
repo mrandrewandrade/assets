@@ -113,6 +113,4 @@ Each criterion is worth **2 marks**, for a total of **/10**.
 | Level 2 | 0.5 marks | Several instructions are missed or repeated prompting is needed. |
 | Level 1 | 0 marks | Submission is incomplete or does not demonstrate the required process. |
 
----
-
 **CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
