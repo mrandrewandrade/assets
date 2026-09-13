@@ -1,11 +1,35 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-if [ ! -f .venv/Scripts/python.exe ]; then
-  py -3 -m venv .venv 2>/dev/null || python -m venv .venv
+if ! command -v quarto >/dev/null 2>&1; then
+  echo "Quarto is required to build the PDFs locally."
+  echo
+  echo "On Windows, install it with:"
+  echo "  winget install --id Posit.Quarto -e"
+  echo
+  echo "Then close and reopen Git Bash and run this script again."
+  exit 1
 fi
 
-.venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe -m playwright install chromium
+echo "Quarto:"
+quarto --version
+
+echo
+echo_typst() {
+  echo "Typst bundled with Quarto:"
+  quarto typst --version
+}
+echo_typst
+
+echo
+quarto check
+
+echo
+echo "Local PDF toolchain is ready."
+echo "Build the About Me PDF with:"
+echo "  bash render.sh about-me"
+echo
+echo "Output:"
+echo "  dist/about-me-presentation.pdf"
