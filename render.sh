@@ -8,10 +8,10 @@ case "${1:-}" in
     quarto render assignments/about-me-presentation.qmd
     mv -f assignments/about-me-presentation.pdf dist/about-me-presentation.pdf
 
-    quarto typst compile assignments/about-me-audience-notes.typ
+    quarto render assignments/about-me-audience-notes.qmd
     mv -f assignments/about-me-audience-notes.pdf dist/about-me-audience-notes.pdf
 
-    quarto typst compile assignments/about-me-teacher-marking.typ
+    quarto render assignments/about-me-teacher-marking.qmd
     mv -f assignments/about-me-teacher-marking.pdf dist/about-me-teacher-marking.pdf
     ;;
   *)
