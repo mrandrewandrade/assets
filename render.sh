@@ -12,6 +12,9 @@ build_presentation() {
 
   quarto render assignments/about-me-teacher-marking.qmd
   mv -f assignments/about-me-teacher-marking.pdf dist/past-present-becoming-teacher-marking.pdf
+
+  quarto render assignments/about-me-presentation-teacher-marking-word.qmd
+  mv -f assignments/past-present-becoming-teacher-marking.docx dist/past-present-becoming-teacher-marking.docx
 }
 
 build_listening() {
@@ -24,8 +27,14 @@ build_listening() {
   quarto render assignments/about-me-listening-notes.qmd
   mv -f assignments/about-me-listening-notes.pdf dist/the-way-we-meet-notes.pdf
 
+  quarto render assignments/about-me-listening-notes-word.qmd
+  mv -f assignments/the-way-we-meet-notes.docx dist/the-way-we-meet-notes.docx
+
   quarto render assignments/about-me-listening-teacher-marking.qmd
   mv -f assignments/about-me-listening-teacher-marking.pdf dist/the-way-we-meet-teacher-marking.pdf
+
+  quarto render assignments/about-me-listening-teacher-marking-word.qmd
+  mv -f assignments/the-way-we-meet-teacher-marking.docx dist/the-way-we-meet-teacher-marking.docx
 }
 
 case "${1:-}" in
