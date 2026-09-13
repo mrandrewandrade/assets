@@ -1,5 +1,5 @@
 ---
-title: "Past, Present & Becoming"
+title: "0.1 Past, Present & Becoming"
 subtitle: "Who was I? Who am I? Who am I becoming?"
 format:
   docx:
@@ -60,11 +60,11 @@ Submit **one PDF** by **Tues., Sept. 15, 2026 at 7:00 PM**.
 
 **After you present:** We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
 
-*Listening to classmates is assessed separately in **The Way We Meet**. After hearing the class, you will revisit this rubric and reflect on your own presentation.*
+*Listening to classmates is assessed separately in **0.2 The Way We Meet**. After hearing the class, you will revisit this rubric and compare your own presentation with what you learned from others.*
 
 \newpage
 
-# Rubric · /10
+# 0.1 Past, Present & Becoming · Rubric · /10
 
 Each criterion is worth **2 marks**, for a total of **/10**.
 
@@ -129,7 +129,5 @@ Each criterion is worth **2 marks**, for a total of **/10**.
 | Level 3 | 1 mark | Successfully introduces yourself, makes an appropriate connection, and responds appropriately during discussion. |
 | Level 2 | 0.5 marks | Some connection is made; responses may be brief or need prompting. |
 | Level 1 | 0 marks | Limited connection is made and there is little response to the discussion. |
-
----
 
 **CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
