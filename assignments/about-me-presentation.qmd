@@ -30,7 +30,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [Open sourced by Andrew Andrade · #link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] means you may share and adapt with attribution · #link("https://github.com/mrandrewandrade/assets")[#text(fill: navy)[github.com/mrandrewandrade/assets]]],
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade/assets")[#text(fill: navy)[https://github.com/mrandrewandrade/assets]]],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -154,7 +154,7 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
-#text(size: 8.5pt, fill: slate)[Each criterion is worth #text(weight: "bold")[2 marks], for a total of /10: 4+ = 2 · Level 4 = 1.5 · Level 3 = 1 · Level 2 = 0.5 · Level 1 = 0.]
+#text(size: 8.5pt, fill: slate)[Each criterion is worth #text(weight: "bold")[2 marks], for a total of /10: 4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks.]
 #v(6pt)
 
 #set text(hyphenate: false)
@@ -175,11 +175,11 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   },
   table.header(
     [#text(weight: "bold", fill: navy)[Criterion]],
-    [#text(weight: "bold", fill: navy)[4+ · 2]],
-    [#text(weight: "bold", fill: navy)[Level 4 · 1.5]],
-    [#text(weight: "bold", fill: navy)[Level 3 · 1]],
-    [#text(weight: "bold", fill: navy)[Level 2 · 0.5]],
-    [#text(weight: "bold", fill: navy)[Level 1 · 0]],
+    [#text(weight: "bold", fill: navy)[4+ · 2 marks]],
+    [#text(weight: "bold", fill: navy)[Level 4 · 1.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 3 · 1 mark]],
+    [#text(weight: "bold", fill: navy)[Level 2 · 0.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 1 · 0 marks]],
   ),
 
   [#text(weight: "bold", fill: navy)[Knowledge] #linebreak() #text(fill: slate)[What did we learn about you?]],
