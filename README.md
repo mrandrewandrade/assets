@@ -2,7 +2,7 @@
 
 Reusable branded teaching documents and source assets for Andrew Andrade's Technology Commons materials.
 
-The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Assignment PDFs are generated from Markdown using a shared HTML/CSS template rather than being hand-formatted one at a time.
+The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Current assignment PDFs are authored as Quarto documents and rendered with Typst.
 
 ## Design principles
 
@@ -14,61 +14,75 @@ The document system follows a restrained, Tufte-inspired approach:
 - colour used sparingly and meaningfully
 - thin rules instead of heavy boxes
 - tables designed for scanning, not visual noise
-- source content stays in Markdown
+- source content stays editable and version controlled
 
 The visual tokens are adapted from the Technology Commons brand kit in `mrandrewandrade/commons`.
 
 ## Repository structure
 
 ```text
-assignments/          Markdown source for individual assignments
-brand/                Reusable brand tokens and logo
-templates/            Shared document template and print stylesheet
+assignments/          Quarto/Typst assignment sources and assignment assets
+brand/                Reusable brand assets
+templates/            Legacy HTML/CSS document template
 scripts/              Build and setup tooling
 dist/                 Generated output, not committed
 ```
 
 ## Windows setup
 
-From Git Bash:
+The current PDF toolchain requires Quarto. Typst is bundled with Quarto, so Typst does not need to be installed separately.
+
+From Git Bash, run:
 
 ```bash
 bash scripts/setup-windows.sh
 ```
 
-This creates the local Python environment, installs the Python packages, and installs Playwright Chromium for PDF rendering.
-
-The PDF renderer intentionally uses Chromium rather than WeasyPrint so Windows does not need separate GTK/Pango libraries.
-
-## Build one document
+If Quarto is not installed, the script will show the Windows install command:
 
 ```bash
-source .venv/Scripts/activate
-python scripts/build.py assignments/about-me-presentation.md
+winget install --id Posit.Quarto -e
 ```
 
-Generated files are written to:
+After installing Quarto, close and reopen Git Bash, then run the setup script again.
+
+You can also verify the toolchain directly:
+
+```bash
+quarto --version
+quarto typst --version
+quarto check
+```
+
+## Build the About Me PDF
+
+From the repository root:
+
+```bash
+bash render.sh about-me
+```
+
+The generated PDF is written to:
 
 ```text
-dist/about-me-presentation.html
 dist/about-me-presentation.pdf
 ```
 
-Build every assignment by omitting the filename:
+The underlying source is:
 
-```bash
-python scripts/build.py
+```text
+assignments/about-me-presentation.qmd
 ```
 
-A GitHub Actions workflow also builds the PDFs and uploads them as a workflow artifact on pushes and pull requests.
+The GitHub Actions workflow uses the same Quarto/Typst rendering path and uploads the generated files in `dist/` as a workflow artifact.
 
-## Creating a new assignment
+## Creating another assignment
 
-1. Copy an existing Markdown file in `assignments/`.
-2. Change the YAML front matter and student-facing content.
-3. Keep rubric columns in this order when used: `Category | 4+ | Level 4 | Level 3 | Level 2 | Level 1`.
-4. Use `<div class="page-break"></div>` when a clean page break is needed.
-5. Build only the document you changed and inspect the PDF before posting it for students.
+For the current document system, use the existing `.qmd` assignment as a starting point and keep reusable images or branding in the appropriate asset folder. Add a matching command to `render.sh` when the assignment is ready to become part of the standard build.
+
+## Legacy renderer
+
+The repository still contains the earlier Markdown, HTML/CSS, Python, and Playwright renderer. Those files are retained for reference, but the About Me PDF and current GitHub Actions build use Quarto and Typst.
 
 ## Licensing
 
