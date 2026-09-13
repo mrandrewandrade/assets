@@ -1,10 +1,10 @@
 ---
-title: "About Me Presentation"
-subtitle: "Help the crew get to know you and find something we can connect with."
+title: "Past, Present & Becoming"
+subtitle: "Who was I? Who am I? Who am I becoming?"
 format:
   docx:
     toc: false
-output-file: about-me-presentation.docx
+output-file: past-present-becoming.docx
 ---
 
 **Technology Commons · Port Credit Secondary School**
@@ -17,9 +17,9 @@ output-file: about-me-presentation.docx
 
 ## Learning goal
 
-I can introduce myself clearly, choose details that help others get to know me, and make a meaningful connection with my audience.
+I can reflect on where I have been, describe who I am now, and share something about who I am becoming in a way that helps others connect with me.
 
-## Help us get to know you. Help us connect with you.
+## Tell us where you have been, where you are, and where you are heading.
 
 You can keep it simple. There is no required number of slides, pictures, or facts.
 
@@ -27,12 +27,12 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 
 Choose whatever helps us understand you. Some ideas:
 
-- skills or things you are good at
-- hobbies and interests
-- past projects or things you have made, fixed, designed, or worked on
-- a fun or interesting fact
-- future goals
-- something you are looking forward to learning, making, fixing, or trying in this class
+- something from your past that shaped you
+- a project, experience, skill, or moment you are proud of
+- what matters to you now: interests, skills, people, places, or routines
+- something others may not know about you
+- something you hope to learn, make, fix, try, or become
+- a future goal, direction, or possibility you are curious about
 
 You do **not** need to include everything on this list.
 
@@ -53,7 +53,7 @@ Submit your presentation through **Google Classroom** by **Tues., Sept. 15, 2026
 
 **After you present:** We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
 
-*Listening to classmates is assessed separately in the Presentation Listening & Participation assignment.*
+*Listening to classmates is assessed separately in **The Way We Meet**.*
 
 \newpage
 
