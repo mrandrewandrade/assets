@@ -1,5 +1,4 @@
 ---
-title: false
 format:
   typst: default
 ---
@@ -90,7 +89,6 @@ Submit your presentation through **Google Classroom** by **Tuesday, September 15
 #let l3 = rgb("#E2E5E7")
 #let l2 = rgb("#ECEEEF")
 #let l1 = rgb("#F5F6F7")
-#let rule = rgb("#CBD2D8")
 
 #table(
   columns: (1.05fr, 1.18fr, 1.45fr, 1.35fr, 1.32fr, 1.25fr),
