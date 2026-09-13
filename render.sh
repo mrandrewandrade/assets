@@ -8,6 +8,9 @@ case "${1:-}" in
     quarto render assignments/about-me-presentation.qmd
     mv -f assignments/about-me-presentation.pdf dist/about-me-presentation.pdf
 
+    quarto render assignments/about-me-presentation-word.qmd
+    mv -f assignments/about-me-presentation.docx dist/about-me-presentation.docx
+
     quarto render assignments/about-me-audience-notes.qmd
     mv -f assignments/about-me-audience-notes.pdf dist/about-me-audience-notes.pdf
 
