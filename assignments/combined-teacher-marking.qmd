@@ -42,7 +42,7 @@ format:
     [
       #text(size: 20pt, weight: "bold", fill: navy)[Combined Teacher Marking]
       #v(1pt)
-      #text(size: 8.8pt, fill: slate)[Past, Present & Becoming + The Way We Meet - #section]
+      #text(size: 8.8pt, fill: slate)[0.1 Past, Present & Becoming + 0.2 The Way We Meet - #section]
     ],
     [#text(size: 7.8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
   )
@@ -66,9 +66,9 @@ format:
     inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
   )[
     #text(size: 7.25pt)[
-      #text(weight: "bold")[Presentation:] K Knowledge · T Thinking · C Communication · V Visuals/accessibility · A Application, each /2; P = presentation /10.
+      #text(weight: "bold")[0.1 Presentation:] K Knowledge · T Thinking · C Communication · V Visuals/accessibility · A Application, each /2; P = presentation /10.
       #h(6pt)
-      #text(weight: "bold")[Listening flags:] PH phone · TK talking/side conversation · OF off-task/not facing · NN not taking notes · PR prompted/reminded. Tick only when observed. Blank means no concern was observed. Fill L /10 after checking the submitted notes/photos and self-evaluation. #text(weight: "bold")[LS:] R O IW C I SR.
+      #text(weight: "bold")[0.2 Listening flags:] PH phone · TK talking/side conversation · OF off-task/not facing · NN not taking notes · PR prompted/reminded. Tick only when observed. Blank means no concern was observed. Fill L /10 after checking the submitted notes, Listening Reflection, Presentation Reflection, and self-evaluation. #text(weight: "bold")[LS:] R O IW C I SR.
     ]
   ]
   #v(5pt)
