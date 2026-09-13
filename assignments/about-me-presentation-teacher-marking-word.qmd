@@ -15,71 +15,69 @@ Each criterion is worth **2 marks**, for a total of **/10**.
 
 **4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks**
 
-- **K** - Knowledge: what did we learn about the student?
-- **T** - Thinking: how thoughtfully were ideas chosen and organized?
-- **C** - Communication: was the presentation clear and easy to follow?
-- **V/A** - Visuals & accessibility: did supports help the audience?
-- **A** - Application: did the student connect with the audience and respond during discussion?
+**K** Knowledge · **T** Thinking · **C** Communication · **V/A** Visuals & accessibility · **A** Application
+
+Enter the five criterion scores in the score cell, then record the total and a brief feedback note.
 
 ## Students 1-9
 
-| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
-|---|---:|---:|---:|---:|---:|---:|---|
-| 1. |  |  |  |  |  |  |  |
-| 2. |  |  |  |  |  |  |  |
-| 3. |  |  |  |  |  |  |  |
-| 4. |  |  |  |  |  |  |  |
-| 5. |  |  |  |  |  |  |  |
-| 6. |  |  |  |  |  |  |  |
-| 7. |  |  |  |  |  |  |  |
-| 8. |  |  |  |  |  |  |  |
-| 9. |  |  |  |  |  |  |  |
+| Student | Scores | Total /10 | Feedback / discussion notes |
+|---|---|---:|---|
+| 1. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 2. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 3. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 4. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 5. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 6. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 7. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 8. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 9. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
 
 \newpage
 
 ## Students 10-18
 
-| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
-|---|---:|---:|---:|---:|---:|---:|---|
-| 10. |  |  |  |  |  |  |  |
-| 11. |  |  |  |  |  |  |  |
-| 12. |  |  |  |  |  |  |  |
-| 13. |  |  |  |  |  |  |  |
-| 14. |  |  |  |  |  |  |  |
-| 15. |  |  |  |  |  |  |  |
-| 16. |  |  |  |  |  |  |  |
-| 17. |  |  |  |  |  |  |  |
-| 18. |  |  |  |  |  |  |  |
+| Student | Scores | Total /10 | Feedback / discussion notes |
+|---|---|---:|---|
+| 10. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 11. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 12. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 13. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 14. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 15. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 16. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 17. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 18. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
 
 \newpage
 
 ## Students 19-26
 
-| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
-|---|---:|---:|---:|---:|---:|---:|---|
-| 19. |  |  |  |  |  |  |  |
-| 20. |  |  |  |  |  |  |  |
-| 21. |  |  |  |  |  |  |  |
-| 22. |  |  |  |  |  |  |  |
-| 23. |  |  |  |  |  |  |  |
-| 24. |  |  |  |  |  |  |  |
-| 25. |  |  |  |  |  |  |  |
-| 26. |  |  |  |  |  |  |  |
+| Student | Scores | Total /10 | Feedback / discussion notes |
+|---|---|---:|---|
+| 19. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 20. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 21. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 22. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 23. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 24. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 25. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 26. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
 
 \newpage
 
 ## Students 27-34
 
-| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
-|---|---:|---:|---:|---:|---:|---:|---|
-| 27. |  |  |  |  |  |  |  |
-| 28. |  |  |  |  |  |  |  |
-| 29. |  |  |  |  |  |  |  |
-| 30. |  |  |  |  |  |  |  |
-| 31. |  |  |  |  |  |  |  |
-| 32. |  |  |  |  |  |  |  |
-| 33. |  |  |  |  |  |  |  |
-| 34. |  |  |  |  |  |  |  |
+| Student | Scores | Total /10 | Feedback / discussion notes |
+|---|---|---:|---|
+| 27. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 28. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 29. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 30. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 31. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 32. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 33. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
+| 34. | K: ___  T: ___  C: ___  V/A: ___  A: ___ |  |  |
 
 ---
 
