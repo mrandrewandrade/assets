@@ -16,7 +16,12 @@ format:
   flipped: true,
   margin: (top: 0.34in, bottom: 0.48in, x: 0.42in),
   footer: context [
-    #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 6.6pt, fill: slate, hyphenate: false)
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.6pt,
+      fill: slate,
+      hyphenate: false,
+    )
     #grid(
       columns: (1fr, auto),
       [Technology Commons - About Me quick marking],
