@@ -27,14 +27,16 @@
     h2 { font-size:1.55rem; }
     h3 { font-size:1.15rem; }
     .resource-header p,.download-card p { margin:0; color:var(--slate); }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
     .button { display:inline-block; padding:11px 18px; border-radius:8px; background:var(--navy); color:var(--white); font-weight:700; text-decoration:none; white-space:nowrap; }
+    .button.secondary { background:var(--white); color:var(--navy); border:1px solid var(--navy); }
     .button:hover { text-decoration:underline; }
     .viewer { width:100%; height:min(72vh,760px); min-height:520px; border:0; display:block; background:var(--mist); }
     .downloads { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
     .mobile-note { display:none; padding:18px 22px; color:var(--slate); background:var(--sail); border-top:1px solid var(--mist); }
     footer { padding:0 0 40px; color:var(--slate); font-size:.9rem; }
     footer p { margin:0; }
-    @media (max-width:760px) { .header-inner{align-items:flex-start}.resource-header,.download-card,.downloads{grid-template-columns:1fr}.button{text-align:center}.viewer{min-height:62vh}.mobile-note{display:block} }
+    @media (max-width:760px) { .header-inner{align-items:flex-start}.resource-header,.download-card,.downloads{grid-template-columns:1fr}.actions{justify-content:flex-start}.button{text-align:center}.viewer{min-height:62vh}.mobile-note{display:block} }
   </style>
 </head>
 <body>
@@ -56,14 +58,20 @@
           <h2 id="presentation-title">Past, Present &amp; Becoming - /10</h2>
           <p>Who was I? Who am I? Who am I becoming? A short presentation about the path so far and what may come next.</p>
         </div>
-        <a class="button" href="past-present-becoming.pdf">Open PDF</a>
+        <div class="actions">
+          <a class="button" href="past-present-becoming.pdf">PDF</a>
+          <a class="button secondary" href="past-present-becoming.docx">Editable Word</a>
+        </div>
       </div>
       <iframe class="viewer" src="past-present-becoming.pdf#view=FitH" title="Past, Present and Becoming PDF"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use the Open PDF button above.</p>
+      <p class="mobile-note">If the PDF does not display in your browser, use the PDF button above.</p>
       <div class="downloads">
         <article class="download-card">
           <div><h3>Teacher Quick Marking</h3><p>Quick marking tracker for the five presentation criteria and /10 total.</p></div>
-          <a class="button" href="past-present-becoming-teacher-marking.pdf">Open PDF</a>
+          <div class="actions">
+            <a class="button" href="past-present-becoming-teacher-marking.pdf">PDF</a>
+            <a class="button secondary" href="past-present-becoming-teacher-marking.docx">Editable Word</a>
+          </div>
         </article>
       </div>
     </section>
@@ -74,18 +82,27 @@
           <h2 id="listening-title">The Way We Meet - /10</h2>
           <p>Attention, connection, and making space for one another through listening, notes, discussion, reflection, and Learning Skills.</p>
         </div>
-        <a class="button" href="the-way-we-meet.pdf">Open PDF</a>
+        <div class="actions">
+          <a class="button" href="the-way-we-meet.pdf">PDF</a>
+          <a class="button secondary" href="the-way-we-meet.docx">Editable Word</a>
+        </div>
       </div>
       <iframe class="viewer" src="the-way-we-meet.pdf#view=FitH" title="The Way We Meet PDF"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use the Open PDF button above.</p>
+      <p class="mobile-note">If the PDF does not display in your browser, use the PDF button above.</p>
       <div class="downloads">
         <article class="download-card">
           <div><h3>Listening Notes</h3><p>Double-sided sheet for 34 presenters with a note, connection/question/comment, and honest attention self-rating for each presenter.</p></div>
-          <a class="button" href="the-way-we-meet-notes.pdf">Open PDF</a>
+          <div class="actions">
+            <a class="button" href="the-way-we-meet-notes.pdf">PDF</a>
+            <a class="button secondary" href="the-way-we-meet-notes.docx">Editable Word</a>
+          </div>
         </article>
         <article class="download-card">
           <div><h3>Teacher Quick Marking</h3><p>Quick /10 tracker with Learning Skills evidence and observation notes.</p></div>
-          <a class="button" href="the-way-we-meet-teacher-marking.pdf">Open PDF</a>
+          <div class="actions">
+            <a class="button" href="the-way-we-meet-teacher-marking.pdf">PDF</a>
+            <a class="button secondary" href="the-way-we-meet-teacher-marking.docx">Editable Word</a>
+          </div>
         </article>
       </div>
     </section>
