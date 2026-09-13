@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <style>{{ css | safe }}</style>
+</head>
+<body>
+  <header class="document-header">
+    <img class="brand-mark" src="brand/aa-logo.svg" alt="Andrew Andrade logo">
+    <div class="brand-name">Technology Commons</div>
+    <div class="document-type">{{ document_type }}</div>
+  </header>
+
+  <main>
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+    {{ content | safe }}
+  </main>
+
+  <div class="footer-license">
+    Andrew Andrade · Technology Commons · CC BY 4.0 · github.com/mrandrewandrade/assets
+  </div>
+</body>
+</html>
