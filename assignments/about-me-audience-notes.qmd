@@ -70,7 +70,7 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
   )[
-    #text(size: 8.6pt)[Write #text(weight: "bold")[one brief note for each presentation]. Listen for something you learned or noticed, then jot a connection, question, or comment. Short phrases are enough. After each presentation, we will pause for questions, statements, and discussion.]
+    #text(size: 8.4pt)[#text(weight: "bold")[Audience expectations:] Phones away unless directed otherwise. Face the speaker, use attentive body language, and avoid side conversations. Write #text(weight: "bold")[one brief note for every presenter], then join the short question/comment discussion. #text(weight: "bold")[Submit this completed sheet after the final presentation day.]]
   ]
   #v(6pt)
 ]
