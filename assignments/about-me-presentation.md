@@ -15,6 +15,9 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 
 > **Help us get to know you. Help us connect with you.**
 
+<div class="brief-grid" markdown="1">
+<div markdown="1">
+
 ## What could you share?
 
 Choose whatever helps us understand you. Some ideas:
@@ -28,7 +31,8 @@ Choose whatever helps us understand you. Some ideas:
 
 You do **not** need to include everything on this list.
 
-<div class="accessibility-note">
+</div>
+<div class="accessibility-note" markdown="1">
 
 ## Keep it accessible
 
@@ -43,6 +47,7 @@ If you use slides, everyone in the room should be able to understand them.
 
 **Fancy slides are not the goal. Clear, accessible communication is.**
 
+</div>
 </div>
 
 Submit your presentation through **Google Classroom** by **7:00 PM Tuesday**.
@@ -60,7 +65,7 @@ Submit your presentation through **Google Classroom** by **7:00 PM Tuesday**.
 | <span class="category-name">Communication</span><span class="category-question">Could everyone understand and follow you?</span> | Exceptionally clear, polished, and accessible. Visuals or other supports are purposeful and highly effective. | Clear, effective, and easy to follow. Slides or visuals are readable, accessible, and useful. | Clear and understandable. Supporting material is generally readable and useful. | Usually understandable, but some parts may be difficult to hear, read, or follow. | Often difficult to understand, read, or follow. |
 | <span class="category-name">Application</span><span class="category-question">Did you connect with us?</span> | Creates a particularly strong, thoughtful, or memorable connection with the audience. | Uses the presentation effectively to introduce yourself and create meaningful connections with the class. | Successfully introduces yourself and makes an appropriate connection with the audience. | Some connection is made, but the introduction may need more development. | Limited connection with the audience is made. |
 
-<div class="rubric-note">
+<div class="rubric-note" markdown="1">
 
 ### Going above and beyond
 
