@@ -30,7 +30,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade/assets")[#text(fill: navy)[https://github.com/mrandrewandrade/assets]]],
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
