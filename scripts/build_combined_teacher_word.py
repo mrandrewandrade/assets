@@ -82,7 +82,7 @@ def table(start, end):
         '</w:tblCellMar>'
         '</w:tblPr>'
     )
-    rows = [row(["Student", "Presentation scores", "P /10", "Listening flags", "L /10", "Learning Skills / quick note"], widths, header=True, height=430)]
+    rows = [row(["Student", "0.1 presentation scores", "P /10", "0.2 listening flags", "L /10", "Learning Skills / quick note"], widths, header=True, height=430)]
     for n in range(start, end + 1):
         rows.append(
             row(
@@ -105,18 +105,18 @@ def page_intro(title_suffix):
     return "".join(
         [
             paragraph([run("Combined Teacher Marking", bold=True, size=34, color="1E2B55")], after=40, keep=True),
-            paragraph([run(f"Past, Present & Becoming + The Way We Meet - {title_suffix}", size=17, color="596673")], after=70, keep=True),
+            paragraph([run(f"0.1 Past, Present & Becoming + 0.2 The Way We Meet - {title_suffix}", size=17, color="596673")], after=70, keep=True),
             paragraph(
                 [
-                    run("Presentation: ", bold=True, size=14, color="1E2B55"),
+                    run("0.1 Presentation: ", bold=True, size=14, color="1E2B55"),
                     run("K Knowledge, T Thinking, C Communication, V Visuals/accessibility, A Application, each /2. P = presentation /10.", size=14),
                 ],
                 after=25,
             ),
             paragraph(
                 [
-                    run("Listening flags: ", bold=True, size=14, color="1E2B55"),
-                    run("PH phone, TK talking/side conversation, OF off-task/not facing, NN not taking notes, PR prompted/reminded. Mark only when observed. L = listening /10 after checking submitted notes/photos and self-evaluation.", size=14),
+                    run("0.2 Listening flags: ", bold=True, size=14, color="1E2B55"),
+                    run("PH phone, TK talking/side conversation, OF off-task/not facing, NN not taking notes, PR prompted/reminded. Mark only when observed. L = listening /10 after checking submitted notes, Listening Reflection, Presentation Reflection, and self-evaluation.", size=14),
                 ],
                 after=25,
             ),
