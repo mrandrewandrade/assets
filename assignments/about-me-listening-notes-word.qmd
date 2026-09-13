@@ -1,0 +1,76 @@
+---
+title: "The Way We Meet - Listening Notes"
+subtitle: "Attention, connection, and making space for one another."
+format:
+  docx:
+    toc: false
+output-file: the-way-we-meet-notes.docx
+---
+
+**Technology Commons · Port Credit Secondary School**
+
+**Name:** ________________________________  
+**Class:** ________________________________  
+**Date:** ________________________________
+
+## How to use this sheet
+
+For every presenter, write one brief note and one connection, question, or comment. Then rate your own attention honestly:
+
+- **A** = Attentive
+- **S** = Some lapses
+- **N** = Not attentive
+
+Phones should be away unless directed otherwise. Face the speaker, avoid side conversations, and make space for the person presenting. An honest **S** or **N** is better than a false **A**. Knowingly inaccurate self-ratings can reduce the **Integrity & Reflection** score more than the original lapse would have.
+
+Submit the completed notes after the final presentation day.
+
+## Presenters 1-17
+
+| No. | Presenter | Something I learned / noticed | Connection, question, or comment | My attention A/S/N |
+|---:|---|---|---|:---:|
+| 1 |  |  |  |  |
+| 2 |  |  |  |  |
+| 3 |  |  |  |  |
+| 4 |  |  |  |  |
+| 5 |  |  |  |  |
+| 6 |  |  |  |  |
+| 7 |  |  |  |  |
+| 8 |  |  |  |  |
+| 9 |  |  |  |  |
+| 10 |  |  |  |  |
+| 11 |  |  |  |  |
+| 12 |  |  |  |  |
+| 13 |  |  |  |  |
+| 14 |  |  |  |  |
+| 15 |  |  |  |  |
+| 16 |  |  |  |  |
+| 17 |  |  |  |  |
+
+\newpage
+
+## Presenters 18-34
+
+| No. | Presenter | Something I learned / noticed | Connection, question, or comment | My attention A/S/N |
+|---:|---|---|---|:---:|
+| 18 |  |  |  |  |
+| 19 |  |  |  |  |
+| 20 |  |  |  |  |
+| 21 |  |  |  |  |
+| 22 |  |  |  |  |
+| 23 |  |  |  |  |
+| 24 |  |  |  |  |
+| 25 |  |  |  |  |
+| 26 |  |  |  |  |
+| 27 |  |  |  |  |
+| 28 |  |  |  |  |
+| 29 |  |  |  |  |
+| 30 |  |  |  |  |
+| 31 |  |  |  |  |
+| 32 |  |  |  |  |
+| 33 |  |  |  |  |
+| 34 |  |  |  |  |
+
+---
+
+**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
