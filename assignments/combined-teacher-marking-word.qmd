@@ -7,11 +7,11 @@ format:
 output-file: combined-teacher-marking.docx
 ---
 
-**Technology Commons · Port Credit Secondary School**
+**Technology Commons - Port Credit Secondary School**
 
 ## Quick key
 
-**Presentation:** K = Knowledge · T = Thinking · C = Communication · V = Visuals/accessibility · A = Application. Each is /2. Record the presentation total as **P /10**.
+**Presentation:** K = Knowledge, T = Thinking, C = Communication, V = Visuals/accessibility, A = Application. Each is /2. Record the presentation total as **P /10**.
 
 **Listening observation flags:**
 
@@ -21,7 +21,7 @@ output-file: combined-teacher-marking.docx
 - **NN** = not taking notes
 - **PR** = prompted / reminded
 
-Tick or mark a flag only when you observe it. A blank flag means no concern was observed, not that attention was perfect. Complete **L /10** after checking the student's submitted listening-note photos and self-evaluation.
+Mark a flag only when you observe it. A blank flag means no concern was observed, not that attention was perfect. Complete **L /10** after checking the student's submitted listening-note photos and self-evaluation.
 
 **LS:** Responsibility, Organization, Independent Work, Collaboration, Initiative, Self-Regulation.
 
@@ -29,23 +29,23 @@ Tick or mark a flag only when you observe it. A blank flag means no concern was 
 
 | Student | Presentation scores | P /10 | Listening flags | L /10 | Learning Skills / quick note |
 |---|---|---:|---|---:|---|
-| 1. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 2. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 3. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 4. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 5. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 6. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 7. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 8. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 9. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 10. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 11. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 12. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 13. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 14. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 15. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 16. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 17. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
+| 1. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 2. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 3. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 4. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 5. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 6. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 7. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 8. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 9. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 10. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 11. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 12. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 13. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 14. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 15. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 16. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 17. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
 
 \newpage
 
@@ -53,23 +53,23 @@ Tick or mark a flag only when you observe it. A blank flag means no concern was 
 
 | Student | Presentation scores | P /10 | Listening flags | L /10 | Learning Skills / quick note |
 |---|---|---:|---|---:|---|
-| 18. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 19. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 20. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 21. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 22. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 23. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 24. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 25. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 26. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 27. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 28. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 29. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 30. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 31. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 32. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 33. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
-| 34. | K: ___ T: ___ C: ___ V: ___ A: ___ |  | PH ☐ TK ☐ OF ☐ NN ☐ PR ☐ |  |  |
+| 18. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 19. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 20. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 21. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 22. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 23. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 24. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 25. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 26. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 27. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 28. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 29. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 30. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 31. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 32. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 33. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
+| 34. | K ___ T ___ C ___ V ___ A ___ |  | PH ___ TK ___ OF ___ NN ___ PR ___ |  |  |
 
 ---
 
