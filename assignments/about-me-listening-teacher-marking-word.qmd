@@ -1,0 +1,90 @@
+---
+title: "The Way We Meet - Teacher Quick Marking"
+subtitle: "Attention, connection, and making space for one another."
+format:
+  docx:
+    toc: false
+output-file: the-way-we-meet-teacher-marking.docx
+---
+
+**Technology Commons · Port Credit Secondary School**
+
+## Scoring
+
+Each criterion is worth **2 marks**, for a total of **/10**.
+
+**4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks**
+
+- **AP** - Attention & Presence
+- **N** - Audience Notes
+- **D** - Discussion & Connections
+- **C** - Completion & Consistency
+- **IR** - Integrity & Reflection
+
+**Learning Skills:** Responsibility, Organization, Independent Work, Collaboration, Initiative, Self-Regulation. Use the Learning Skills column for brief evidence such as device management, respectful attention, independent note-taking, contribution to discussion, and refocusing after a lapse.
+
+Knowingly inaccurate attention self-ratings may result in **0/2 for Integrity & Reflection**. Honest acknowledgement of a lapse should be treated more favourably than misrepresenting it.
+
+## Students 1-9
+
+| Student | AP /2 | N /2 | D /2 | C /2 | IR /2 | Total /10 | Learning Skills evidence | Observation notes |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 1. |  |  |  |  |  |  |  |  |
+| 2. |  |  |  |  |  |  |  |  |
+| 3. |  |  |  |  |  |  |  |  |
+| 4. |  |  |  |  |  |  |  |  |
+| 5. |  |  |  |  |  |  |  |  |
+| 6. |  |  |  |  |  |  |  |  |
+| 7. |  |  |  |  |  |  |  |  |
+| 8. |  |  |  |  |  |  |  |  |
+| 9. |  |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 10-18
+
+| Student | AP /2 | N /2 | D /2 | C /2 | IR /2 | Total /10 | Learning Skills evidence | Observation notes |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 10. |  |  |  |  |  |  |  |  |
+| 11. |  |  |  |  |  |  |  |  |
+| 12. |  |  |  |  |  |  |  |  |
+| 13. |  |  |  |  |  |  |  |  |
+| 14. |  |  |  |  |  |  |  |  |
+| 15. |  |  |  |  |  |  |  |  |
+| 16. |  |  |  |  |  |  |  |  |
+| 17. |  |  |  |  |  |  |  |  |
+| 18. |  |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 19-26
+
+| Student | AP /2 | N /2 | D /2 | C /2 | IR /2 | Total /10 | Learning Skills evidence | Observation notes |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 19. |  |  |  |  |  |  |  |  |
+| 20. |  |  |  |  |  |  |  |  |
+| 21. |  |  |  |  |  |  |  |  |
+| 22. |  |  |  |  |  |  |  |  |
+| 23. |  |  |  |  |  |  |  |  |
+| 24. |  |  |  |  |  |  |  |  |
+| 25. |  |  |  |  |  |  |  |  |
+| 26. |  |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 27-34
+
+| Student | AP /2 | N /2 | D /2 | C /2 | IR /2 | Total /10 | Learning Skills evidence | Observation notes |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| 27. |  |  |  |  |  |  |  |  |
+| 28. |  |  |  |  |  |  |  |  |
+| 29. |  |  |  |  |  |  |  |  |
+| 30. |  |  |  |  |  |  |  |  |
+| 31. |  |  |  |  |  |  |  |  |
+| 32. |  |  |  |  |  |  |  |  |
+| 33. |  |  |  |  |  |  |  |  |
+| 34. |  |  |  |  |  |  |  |  |
+
+---
+
+**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
