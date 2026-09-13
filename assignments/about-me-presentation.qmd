@@ -30,7 +30,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [about-me-presentation.pdf #h(5pt) / #h(5pt) Generated #datetime.today().display("[month repr:long] [day], [year]")],
+      [about-me-presentation.pdf #h(5pt) · #h(5pt) Generated #datetime.today().display("[month repr:long] [day], [year]")],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -196,12 +196,8 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   columns: (0.46in, 1fr, auto),
   column-gutter: 10pt,
   align: horizon,
-  [#image("../brand/technology-department-emblem.svg", width: 0.38in)],
-  [
-    #text(size: 8.2pt, weight: "bold", fill: navy)[Technology Department]
-    #linebreak()
-    #text(size: 7.8pt, fill: slate)[Port Credit Secondary School]
-  ],
-  [#text(size: 7.4pt, fill: slate)[Open sourced by Andrew Andrade / CC BY 4.0 / github.com/mrandrewandrade/assets]],
+  [#image("technology-department-emblem.svg", width: 0.38in)],
+  [#text(size: 8pt, weight: "bold", fill: navy)[Technology Department, Port Credit Secondary School.]],
+  [#text(size: 7.4pt, fill: slate)[Open sourced by Andrew Andrade · CC BY 4.0 · github.com/mrandrewandrade/assets]],
 )
 ```
