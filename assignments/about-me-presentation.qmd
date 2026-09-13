@@ -140,8 +140,10 @@ You can keep it simple. There is no required number of slides, pictures, or fact
   ],
 )
 
-#v(7pt)
+#v(6pt)
 Submit your presentation through #text(weight: "bold")[Google Classroom] by #text(weight: "bold")[Tues., Sept. 15, 2026 at 7:00 PM].
+#v(4pt)
+#text(weight: "bold", fill: navy)[After you present:] We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
 
 #pagebreak()
 
@@ -208,12 +210,12 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   [Some choices reduce readability, accessibility, or usefulness.],
   [Supporting material is difficult to read or does not support the presentation.],
 
-  [#text(weight: "bold", fill: navy)[Application] #linebreak() #text(fill: slate)[Did you connect with us?]],
-  [Creates a particularly strong, thoughtful, or memorable connection.],
-  [Effectively introduces yourself and creates a meaningful connection.],
-  [Successfully introduces yourself and makes an appropriate connection.],
-  [Some connection is made, but the introduction needs more development.],
-  [Limited connection with the audience is made.],
+  [#text(weight: "bold", fill: navy)[Application] #linebreak() #text(fill: slate)[Did you connect and discuss?]],
+  [Creates a particularly strong connection and responds thoughtfully to questions or comments, extending the discussion.],
+  [Effectively introduces yourself, creates a meaningful connection, and responds clearly to questions or comments.],
+  [Successfully introduces yourself, makes an appropriate connection, and responds appropriately during discussion.],
+  [Some connection is made; responses may be brief or need prompting.],
+  [Limited connection is made and there is little response to the discussion.],
 )
 
 #v(6pt)
@@ -234,8 +236,8 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
     [#text(size: 8.1pt, weight: "bold")[Responsibility:] #text(size: 8.1pt)[prepared and ready to present]],
     [#text(size: 8.1pt, weight: "bold")[Organization:] #text(size: 8.1pt)[plans and keeps ideas easy to follow]],
     [#text(size: 8.1pt, weight: "bold")[Independent Work:] #text(size: 8.1pt)[uses class time and works without constant prompting]],
-    [#text(size: 8.1pt, weight: "bold")[Collaboration:] #text(size: 8.1pt)[listens respectfully and supports classmates]],
-    [#text(size: 8.1pt, weight: "bold")[Initiative:] #text(size: 8.1pt)[volunteers to present or tries something without being asked]],
+    [#text(size: 8.1pt, weight: "bold")[Collaboration:] #text(size: 8.1pt)[listens respectfully, takes notes, and supports discussion]],
+    [#text(size: 8.1pt, weight: "bold")[Initiative:] #text(size: 8.1pt)[volunteers to present or contributes a question or connection]],
     [#text(size: 8.1pt, weight: "bold")[Self-Regulation:] #text(size: 8.1pt)[manages time, nerves, focus, and feedback]],
   )
 ]
