@@ -2,7 +2,7 @@
 
 Reusable branded teaching documents and source assets for Andrew Andrade's Technology Commons materials.
 
-The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Current assignment PDFs are authored as Quarto documents and rendered with Typst.
+The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Current assignment PDFs are authored as Quarto documents and rendered with Typst. Matching editable Word versions are generated with Quarto/Pandoc.
 
 ## Design principles
 
@@ -26,11 +26,12 @@ brand/                Reusable brand assets
 templates/            Legacy HTML/CSS document template
 scripts/              Build and setup tooling
 dist/                 Generated output, not committed
+site/                 GitHub Pages source
 ```
 
 ## Windows setup
 
-The current PDF toolchain requires Quarto. Typst is bundled with Quarto, so Typst does not need to be installed separately.
+The current toolchain requires Quarto. Typst is bundled with Quarto, so Typst does not need to be installed separately. Python is not required for the current 0-series resource build.
 
 From Git Bash, run:
 
@@ -50,11 +51,10 @@ You can also verify the toolchain directly:
 
 ```bash
 quarto --version
-quarto typst --version
 quarto check
 ```
 
-## Build the About Me PDF
+## Build the 0-series resources
 
 From the repository root:
 
@@ -62,27 +62,39 @@ From the repository root:
 bash render.sh about-me
 ```
 
-The generated PDF is written to:
+The generated files are written to `dist/`:
 
 ```text
-dist/about-me-presentation.pdf
+0.0-name-tag-pdf.pdf
+0.0-name-tag-pdf.docx
+0.1-past-present-becoming.pdf
+0.1-past-present-becoming.docx
+0.2-the-way-we-meet.pdf
+0.2-the-way-we-meet.docx
+0.2-the-way-we-meet-notes.pdf
+0.2-the-way-we-meet-notes.docx
+0.1-0.2-combined-teacher-marking.pdf
+0.1-0.2-combined-teacher-marking.docx
 ```
 
-The underlying source is:
+Individual builds are also available:
 
-```text
-assignments/about-me-presentation.qmd
+```bash
+bash render.sh 0.0
+bash render.sh 0.1
+bash render.sh 0.2
+bash render.sh combined-teacher-marking
 ```
 
-The GitHub Actions workflow uses the same Quarto/Typst rendering path and uploads the generated files in `dist/` as a workflow artifact.
+The GitHub Actions workflow uses the same Quarto/Typst/Pandoc rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs and Word files to GitHub Pages.
 
 ## Creating another assignment
 
-For the current document system, use the existing `.qmd` assignment as a starting point and keep reusable images or branding in the appropriate asset folder. Add a matching command to `render.sh` when the assignment is ready to become part of the standard build.
+Use the existing `.qmd` assignments as a starting point and keep reusable images or branding in the appropriate asset folder. Add a matching command to `render.sh` when the assignment is ready to become part of the standard build.
 
 ## Legacy renderer
 
-The repository still contains the earlier Markdown, HTML/CSS, Python, and Playwright renderer. Those files are retained for reference, but the About Me PDF and current GitHub Actions build use Quarto and Typst.
+The repository still contains some earlier Markdown, HTML/CSS, Python, and Playwright tooling retained for reference. The current 0-series resources and GitHub Actions build use Quarto, Typst, and Pandoc.
 
 ## Licensing
 
