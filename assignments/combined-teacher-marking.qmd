@@ -1,0 +1,112 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (top: 0.30in, bottom: 0.46in, x: 0.38in),
+  footer: context [
+    #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 6.5pt, fill: slate, hyphenate: false)
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 12pt,
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 8.5pt, fill: charcoal, hyphenate: false)
+#set par(leading: 0.48em, justify: false)
+
+#let blank-field(label) = [
+  #text(weight: "bold")[#label:]
+  #h(4pt)
+  #line(length: 1.55in, stroke: 0.5pt + slate)
+]
+
+#let page-header(section) = [
+  #grid(
+    columns: (1fr, auto),
+    align: horizon,
+    [
+      #text(size: 20pt, weight: "bold", fill: navy)[Combined Teacher Marking]
+      #v(1pt)
+      #text(size: 8.8pt, fill: slate)[Past, Present & Becoming + The Way We Meet - #section]
+    ],
+    [#text(size: 7.8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+  )
+  #v(3pt)
+  #line(length: 0.58in, stroke: 3pt + pcss-gold)
+  #v(2pt)
+  #line(length: 100%, stroke: 1.2pt + navy)
+  #v(4pt)
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 12pt,
+    [#blank-field("Class")],
+    [#blank-field("Date")],
+    [#blank-field("Teacher")],
+  )
+  #v(4pt)
+  #block(
+    width: 100%,
+    fill: sail,
+    stroke: (left: 3pt + pcss-gold),
+    inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
+  )[
+    #text(size: 7.25pt)[
+      #text(weight: "bold")[Presentation:] K Knowledge · T Thinking · C Communication · V Visuals/accessibility · A Application, each /2; P = presentation /10.
+      #h(6pt)
+      #text(weight: "bold")[Listening flags:] PH phone · TK talking/side conversation · OF off-task/not facing · NN not taking notes · PR prompted/reminded. Tick only when observed. Blank means no concern was observed. Fill L /10 after checking the submitted notes/photos and self-evaluation. #text(weight: "bold")[LS:] R O IW C I SR.
+    ]
+  ]
+  #v(5pt)
+]
+
+#let table-header = table.header(
+  [#text(weight: "bold", fill: navy)[Student]],
+  [#align(center)[#text(weight: "bold", fill: navy)[K]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[T]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[C]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[V]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[A]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[P /10]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[PH]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[TK]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[OF]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[NN]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[PR]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[L /10]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[LS]]],
+  [#text(weight: "bold", fill: navy)[Quick note]],
+)
+
+#let mark-table(start, end) = table(
+  columns: (1.30in, 0.37in, 0.37in, 0.37in, 0.37in, 0.37in, 0.52in, 0.42in, 0.42in, 0.42in, 0.46in, 0.46in, 0.52in, 0.62in, 2.80in),
+  inset: (x: 3.5pt, y: 5.4pt),
+  stroke: 0.55pt + mist,
+  align: left + top,
+  table-header,
+  ..range(start, end + 1).map(n => (
+    [#n], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+  )).flatten()
+)
+
+#page-header([Side 1 - Students 1-17])
+#mark-table(1, 17)
+
+#pagebreak()
+#page-header([Side 2 - Students 18-34])
+#mark-table(18, 34)
+```
