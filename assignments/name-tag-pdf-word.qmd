@@ -1,5 +1,5 @@
 ---
-title: "Name Tag PDF"
+title: "0.0 Name Tag PDF"
 subtitle: "Clear photo. Clear file. Clear submission."
 format:
   docx:
@@ -47,7 +47,7 @@ This is practice for a course skill we will use again: turning clear work into o
 
 \newpage
 
-# Name Tag PDF · Rubric · /10
+# 0.0 Name Tag PDF · Rubric · /10
 
 Each criterion is worth **2 marks**, for a total of **/10**.
 
