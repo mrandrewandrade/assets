@@ -1,0 +1,223 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+#let level-plus = rgb("#FFF4BF")
+#let level-4 = rgb("#D5D9DC")
+#let level-3 = rgb("#E2E5E7")
+#let level-2 = rgb("#ECEEEF")
+#let level-1 = rgb("#F5F6F7")
+
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (top: 0.32in, bottom: 0.50in, x: 0.52in),
+  footer: context [
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.8pt,
+      fill: slate,
+      hyphenate: false,
+    )
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 12pt,
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(
+  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  size: 9.8pt,
+  fill: charcoal,
+  hyphenate: false,
+)
+#set par(leading: 0.52em, justify: false)
+
+#grid(
+  columns: (1fr, 2.65in),
+  column-gutter: 24pt,
+  align: top,
+  [
+    #text(size: 25pt, weight: "bold", fill: navy)[Presentation Listening & Participation]
+    #v(1pt)
+    #text(size: 11.2pt, fill: slate)[Listening is an assignment too. Give each presenter the attention you want when it is your turn.]
+  ],
+  [
+    #grid(
+      columns: (0.58in, 1fr),
+      column-gutter: 9pt,
+      align: horizon,
+      [#image("technology-department-emblem.svg", width: 0.54in)],
+      [
+        #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Commons]
+        #linebreak()
+        #text(size: 7.7pt, fill: slate)[Port Credit Secondary School]
+      ],
+    )
+  ],
+)
+
+#v(7pt)
+#line(length: 0.62in, stroke: 3pt + pcss-gold)
+#v(3pt)
+#line(length: 100%, stroke: 1.4pt + navy)
+#v(7pt)
+
+#grid(
+  columns: (1.2fr, 1fr, 1.2fr),
+  column-gutter: 18pt,
+  [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
+  [#text(weight: "bold")[Value:] /10 - equal to the presentation assignment],
+  [#text(weight: "bold")[Submit:] completed listening notes after the final presentation day],
+)
+
+#v(7pt)
+#text(size: 15pt, weight: "bold", fill: navy)[Learning goal]
+#v(2pt)
+I can listen actively, record meaningful notes, contribute respectfully to discussion, and reflect honestly on my own attention.
+
+#v(7pt)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 22pt,
+  [
+    #text(size: 14pt, weight: "bold", fill: navy)[What active listening looks like]
+    #v(3pt)
+    - phones away unless directed otherwise
+    - face the speaker and use attentive body language
+    - avoid side conversations and other distractions
+    - write one brief note for every presenter
+    - listen for something you learned, noticed, or connected with
+    - be ready to ask a question, make a comment, or share a connection
+  ],
+  [
+    #text(size: 14pt, weight: "bold", fill: navy)[Your listening notes]
+    #v(3pt)
+    For each presenter, record:
+    #v(2pt)
+    - something you learned or noticed
+    - a connection, question, or comment
+    - your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]
+    #v(3pt)
+    Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
+  ],
+)
+
+#v(7pt)
+#block(
+  width: 100%,
+  fill: sail,
+  stroke: (left: 4pt + pcss-gold),
+  inset: (left: 12pt, right: 12pt, top: 7pt, bottom: 7pt),
+)[
+  #text(size: 10.2pt, weight: "bold", fill: navy)[Be honest about your attention]
+  #v(2pt)
+  #text(size: 9.2pt)[An honest "Some lapses" or "Not attentive" is better than falsely claiming full attention. A lapse does not automatically mean zero. If your self-rating is knowingly inaccurate, the #text(weight: "bold")[Integrity & Reflection] score can be reduced more than the original attention lapse would have cost.]
+]
+
+#v(7pt)
+#text(size: 14pt, weight: "bold", fill: navy)[Learning Skills - especially important in this assignment]
+#v(3pt)
+#table(
+  columns: (1.05fr, 2.25fr, 1.05fr, 2.25fr),
+  inset: (x: 6pt, y: 5pt),
+  stroke: 0.5pt + mist,
+  [#text(weight: "bold", fill: navy)[Responsibility]], [brings the sheet, keeps phones away, completes and submits the work],
+  [#text(weight: "bold", fill: navy)[Organization]], [keeps notes complete, readable, and in order],
+  [#text(weight: "bold", fill: navy)[Independent Work]], [records notes without repeated reminders],
+  [#text(weight: "bold", fill: navy)[Collaboration]], [listens respectfully and helps create a good audience for classmates],
+  [#text(weight: "bold", fill: navy)[Initiative]], [offers thoughtful questions, comments, or connections],
+  [#text(weight: "bold", fill: navy)[Self-Regulation]], [manages devices, impulses, distractions, and refocuses after a lapse],
+)
+
+#pagebreak()
+
+#grid(
+  columns: (1fr, auto),
+  align: horizon,
+  [#text(size: 18pt, weight: "bold", fill: navy)[Listening Rubric · /10]],
+  [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
+)
+#v(3pt)
+#text(size: 8.5pt, fill: slate)[Each criterion is worth #text(weight: "bold")[2 marks]: 4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks.]
+#v(6pt)
+
+#table(
+  columns: (1.16fr, 1.18fr, 1.28fr, 1.28fr, 1.20fr, 1.18fr),
+  inset: (x: 5.5pt, y: 5.8pt),
+  align: left + top,
+  stroke: 0.5pt + white,
+  fill: (x, y) => {
+    if x == 1 { level-plus }
+    else if x == 2 { level-4 }
+    else if x == 3 { level-3 }
+    else if x == 4 { level-2 }
+    else if x == 5 { level-1 }
+    else { white }
+  },
+  table.header(
+    [#text(weight: "bold", fill: navy)[Criterion]],
+    [#text(weight: "bold", fill: navy)[4+ · 2 marks]],
+    [#text(weight: "bold", fill: navy)[Level 4 · 1.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 3 · 1 mark]],
+    [#text(weight: "bold", fill: navy)[Level 2 · 0.5 marks]],
+    [#text(weight: "bold", fill: navy)[Level 1 · 0 marks]],
+  ),
+
+  [#text(weight: "bold", fill: navy)[Attention & Presence] #linebreak() #text(fill: slate)[Were you genuinely listening?]],
+  [Consistently attentive, respectful, and visibly engaged; quickly redirects any minor distraction.],
+  [Attentive and respectful throughout with very few lapses.],
+  [Generally attentive with some minor lapses that do not disrupt others.],
+  [Attention is inconsistent; repeated distraction, device use, or side conversation is evident.],
+  [Frequently disengaged, distracting, or not meaningfully listening.],
+
+  [#text(weight: "bold", fill: navy)[Audience Notes] #linebreak() #text(fill: slate)[Did your notes show listening?]],
+  [Complete, specific notes consistently capture meaningful details and connections.],
+  [Complete notes capture clear details and useful connections for nearly every presenter.],
+  [Most notes are complete and show reasonable attention to the presentations.],
+  [Notes are incomplete, vague, or missing for several presenters.],
+  [Very few usable notes are recorded.],
+
+  [#text(weight: "bold", fill: navy)[Discussion & Connections] #linebreak() #text(fill: slate)[Did you help the conversation?]],
+  [Thoughtful questions, comments, or connections consistently deepen discussion.],
+  [Contributes relevant questions, comments, or connections when appropriate.],
+  [Participates appropriately and makes some relevant contributions.],
+  [Rarely contributes or contributions need significant prompting.],
+  [Does not participate respectfully in discussion.],
+
+  [#text(weight: "bold", fill: navy)[Completion & Consistency] #linebreak() #text(fill: slate)[Did you follow through?]],
+  [Complete across all presentations and both days, with careful follow-through.],
+  [Nearly complete and consistently maintained across the presentation days.],
+  [Mostly complete with only a few gaps.],
+  [Several gaps, missing sections, or repeated reminders are needed.],
+  [Work is largely incomplete or not submitted.],
+
+  [#text(weight: "bold", fill: navy)[Integrity & Reflection] #linebreak() #text(fill: slate)[Were your attention ratings honest?]],
+  [Self-ratings are accurate, thoughtful, and show strong awareness of lapses and recovery.],
+  [Self-ratings are honest and align well with notes and observed behaviour.],
+  [Self-ratings are generally honest with minor inconsistency or limited reflection.],
+  [Self-ratings are superficial, inconsistent, or need prompting to be accurate.],
+  [Self-assessment is missing or knowingly inaccurate.],
+)
+
+#v(7pt)
+#block(
+  width: 100%,
+  fill: sail,
+  stroke: (left: 3pt + pcss-gold),
+  inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
+)[
+  #text(size: 9pt, weight: "bold", fill: navy)[Integrity rule:] #text(size: 9pt)[Knowingly marking yourself "Attentive" when your notes or observed behaviour clearly show otherwise may result in #text(weight: "bold")[0/2 for Integrity & Reflection]. Honest acknowledgement of a lapse is treated more favourably than misrepresenting it.]
+]
+```
