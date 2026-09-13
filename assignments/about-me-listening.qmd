@@ -79,13 +79,13 @@ format:
   column-gutter: 18pt,
   [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
   [#text(weight: "bold")[Value:] /10 - equal to Past, Present & Becoming],
-  [#text(weight: "bold")[Submit:] clear photos of both sides of your completed listening sheet after the final presentation day],
+  [#text(weight: "bold")[Submit:] one completed PDF after the final presentation day],
 )
 
 #v(7pt)
 #text(size: 15pt, weight: "bold", fill: navy)[Learning goal]
 #v(2pt)
-I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and reflecting honestly on my own attention.
+I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and using what I hear to reflect honestly on both my listening and my own presentation.
 
 #v(7pt)
 #grid(
@@ -102,32 +102,50 @@ I can make space for another person by listening with attention, recording meani
     - be ready to ask a question, make a comment, or share a connection
   ],
   [
-    #text(size: 14pt, weight: "bold", fill: navy)[Your listening notes]
+    #text(size: 14pt, weight: "bold", fill: navy)[Your listening package]
     #v(3pt)
-    For each presenter, record:
-    #v(2pt)
-    - something you learned, noticed, connected with, questioned, or wanted to comment on
-    - your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]
+    For each presenter, record a brief listening note and your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]. Short phrases are enough.
     #v(3pt)
-    Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
-    #v(3pt)
-    #text(weight: "bold")[Before you submit:] complete the /10 self-evaluation, Learning Skills reflection, and activity feedback on the back. Then upload clear photos of both sides to Google Classroom.
+    After the final presentation, complete:
+    #v(1pt)
+    - your /10 listening self-evaluation with evidence
+    - your Learning Skills self-check with evidence or a next step
+    - a reflection on #text(weight: "bold")[your own presentation] after hearing classmates
+    - brief feedback on the activity
   ],
 )
 
-#v(7pt)
-#block(
-  width: 100%,
-  fill: sail,
-  stroke: (left: 4pt + pcss-gold),
-  inset: (left: 12pt, right: 12pt, top: 7pt, bottom: 7pt),
-)[
-  #text(size: 10.2pt, weight: "bold", fill: navy)[Be honest about your attention]
-  #v(2pt)
-  #text(size: 9.2pt)[An honest "Some lapses" or "Not attentive" is better than falsely claiming full attention. A lapse does not automatically mean zero. If your self-rating is knowingly inaccurate, the #text(weight: "bold")[Integrity & Reflection] score can be reduced more than the original attention lapse would have cost.]
-]
+#v(6pt)
+#grid(
+  columns: (0.92fr, 1.08fr),
+  column-gutter: 18pt,
+  [
+    #block(
+      width: 100%,
+      fill: sail,
+      stroke: (left: 4pt + pcss-gold),
+      inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
+    )[
+      #text(size: 9.6pt, weight: "bold", fill: navy)[Be honest about your attention]
+      #v(2pt)
+      #text(size: 8.5pt)[An honest "Some lapses" or "Not attentive" is better than falsely claiming full attention. A lapse does not automatically mean zero. A knowingly inaccurate self-rating can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse would have.]
+    ]
+  ],
+  [
+    #block(
+      width: 100%,
+      fill: sail,
+      stroke: (left: 4pt + navy),
+      inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
+    )[
+      #text(size: 9.6pt, weight: "bold", fill: navy)[Google Classroom - submit one PDF]
+      #v(2pt)
+      #text(size: 8.3pt)[#text(weight: "bold")[Digital:] use the editable Word file in Word or upload it to Google Drive and open it with Google Docs, then export/download as PDF. #text(weight: "bold")[Paper:] scan the pages directly to PDF, or take clear photos, place them in a Google Doc or Word file in order, then export as PDF. Submit one readable PDF, not separate images.]
+    ]
+  ],
+)
 
-#v(7pt)
+#v(6pt)
 #text(size: 14pt, weight: "bold", fill: navy)[Learning Skills - how we meet one another matters]
 #v(3pt)
 #table(
@@ -198,18 +216,18 @@ I can make space for another person by listening with attention, recording meani
   [Does not participate respectfully in discussion.],
 
   [#text(weight: "bold", fill: navy)[Completion & Consistency] #linebreak() #text(fill: slate)[Did you follow through?]],
-  [Complete across all presentations and both days, with careful follow-through.],
-  [Nearly complete and consistently maintained across the presentation days.],
+  [Complete across all presentations and reflection sections, with careful follow-through.],
+  [Nearly complete and consistently maintained across the presentation days and reflection.],
   [Mostly complete with only a few gaps.],
   [Several gaps, missing sections, or repeated reminders are needed.],
   [Work is largely incomplete or not submitted.],
 
-  [#text(weight: "bold", fill: navy)[Integrity & Reflection] #linebreak() #text(fill: slate)[Were your attention ratings honest?]],
-  [Self-ratings are accurate, thoughtful, and show strong awareness of lapses and recovery.],
-  [Self-ratings are honest and align well with notes and observed behaviour.],
-  [Self-ratings are generally honest with minor inconsistency or limited reflection.],
-  [Self-ratings are superficial, inconsistent, or need prompting to be accurate.],
-  [Self-assessment is missing or knowingly inaccurate.],
+  [#text(weight: "bold", fill: navy)[Integrity & Reflection] #linebreak() #text(fill: slate)[Were your ratings and reflection honest?]],
+  [Self-ratings are accurate and thoughtful; reflection on the student's own presentation uses specific learning from classmates to identify strengths and next steps.],
+  [Self-ratings are honest and align well with notes and observed behaviour; presentation reflection is specific and thoughtful.],
+  [Self-ratings are generally honest; presentation reflection identifies a reasonable strength or next step.],
+  [Self-ratings are superficial or inconsistent; presentation reflection is vague or needs prompting.],
+  [Self-assessment is missing, knowingly inaccurate, or shows little meaningful reflection.],
 )
 
 #v(7pt)

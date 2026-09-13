@@ -140,12 +140,21 @@ You can keep it simple. There is no required number of slides, pictures, or fact
   ],
 )
 
-#v(7pt)
-Submit your presentation through #text(weight: "bold")[Google Classroom] by #text(weight: "bold")[Tues., Sept. 15, 2026 at 7:00 PM].
-#v(4pt)
-#text(weight: "bold", fill: navy)[After you present:] We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
-#v(4pt)
-#text(size: 9pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[The Way We Meet].]
+#v(6pt)
+#block(
+  width: 100%,
+  fill: sail,
+  stroke: (left: 3pt + navy),
+  inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
+)[
+  #text(size: 9.2pt, weight: "bold", fill: navy)[Google Classroom - submit one PDF]
+  #v(1pt)
+  #text(size: 8.2pt)[Submit one PDF by #text(weight: "bold")[Tues., Sept. 15, 2026 at 7:00 PM]. If you used Google Slides, PowerPoint, Word, or Google Docs, download or export your work as a PDF. If you used paper, photos, or a physical object, scan it to PDF or place clear photos in a Google Doc or Word file in the correct order and export that as a PDF. Open the PDF before submitting and make sure everything is readable and complete.]
+]
+#v(3pt)
+#text(size: 8.8pt, weight: "bold", fill: navy)[After you present:] #text(size: 8.8pt)[We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.]
+#v(2pt)
+#text(size: 8.3pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[The Way We Meet]. After hearing the class, you will revisit this rubric and reflect on your own presentation.]
 
 #pagebreak()
 

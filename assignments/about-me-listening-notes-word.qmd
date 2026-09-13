@@ -23,7 +23,7 @@ For every presenter, write one brief note that shows what you learned, noticed, 
 
 Phones should be away unless directed otherwise. Face the speaker, avoid side conversations, and make space for the person presenting. An honest **S** or **N** is better than a false **A**. Knowingly inaccurate self-ratings can reduce the **Integrity & Reflection** score more than the original lapse would have.
 
-On the back, complete the listening self-evaluation using evidence from what you actually did. Then complete the Learning Skills self-check and explain one strength and one next step.
+After the final presentation, complete the reflection page. You will evaluate your listening, your Learning Skills, and your own **Past, Present & Becoming** presentation using what you learned from hearing other people.
 
 ## Presenters 1-17
 
@@ -71,37 +71,58 @@ On the back, complete the listening self-evaluation using evidence from what you
 | 33 |  |  |  |
 | 34 |  |  |  |
 
-## Listening self-evaluation - use evidence
+\newpage
 
-Score each area using the **The Way We Meet** rubric. Give brief evidence of what you actually did. If the area was not strong, write what you should do differently next time.
+# Reflection & Submission
+
+Use evidence from what you actually did. If something was not strong, say what happened and what you will do differently next time.
+
+## Listening self-evaluation
 
 | Listening area | What I should evaluate | My score | My evidence or next step |
 |---|---|:---:|---|
-| Attention & Presence | Phone away, face the speaker, avoid side conversations, refocus after distractions | ___ /2 | ______________________________ |
-| Audience Notes | A specific listening note for each presenter | ___ /2 | ______________________________ |
-| Discussion & Connections | Questions, comments, or connections that help the conversation | ___ /2 | ______________________________ |
-| Completion & Consistency | Kept the sheet up to date across both days with few or no gaps | ___ /2 | ______________________________ |
-| Integrity & Reflection | Honest A/S/N ratings and awareness of lapses | ___ /2 | ______________________________ |
+| Attention & Presence | Phone away, face the speaker, avoid side conversations, refocus after distractions | ___ /2 |  |
+| Audience Notes | A specific listening note for each presenter | ___ /2 |  |
+| Discussion & Connections | Questions, comments, or connections that help the conversation | ___ /2 |  |
+| Completion & Consistency | Kept the sheet up to date across both days and completed the reflection | ___ /2 |  |
+| Integrity & Reflection | Honest A/S/N ratings and thoughtful reflection on my own presentation | ___ /2 |  |
 | **Total** |  | **___ /10** | |
 
-## Learning Skills self-check
+## Learning Skills self-evaluation
 
-Circle **C = Consistently**, **S = Sometimes**, or **N = Not yet** for each skill.
+For each skill, choose **C = Consistently**, **S = Sometimes**, or **N = Not yet**. In the last column, give evidence of what you did. If you did not show the skill consistently, write what you should do differently next time.
 
-| Learning Skill | C / S / N | What it looked like during this activity |
-|---|:---:|---|
-| Responsibility | C / S / N | Prepared, phone away, completed and submitted the work |
-| Organization | C / S / N | Notes complete, readable, and in order |
-| Independent Work | C / S / N | Worked without repeated reminders |
-| Collaboration | C / S / N | Was a respectful audience member and supported speakers |
-| Initiative | C / S / N | Offered a thoughtful question, comment, or connection |
-| Self-Regulation | C / S / N | Managed distractions and refocused after a lapse |
+| Learning Skill | C / S / N | What it can look like | My evidence or next step |
+|---|:---:|---|---|
+| Responsibility | C / S / N | Prepared, phone away, completed and submitted the work |  |
+| Organization | C / S / N | Notes complete, readable, and in order |  |
+| Independent Work | C / S / N | Worked without repeated reminders |  |
+| Collaboration | C / S / N | Was a respectful audience member and supported speakers |  |
+| Initiative | C / S / N | Offered a thoughtful question, comment, or connection |  |
+| Self-Regulation | C / S / N | Managed distractions and refocused after a lapse |  |
 
-**Evidence from one Learning Skill I showed:**
+## Looking back at my Past, Present & Becoming presentation
+
+Now that you have heard other people present, use the same five criteria from Assignment 1 to reconsider your own work. This reflection is about learning from what you heard, not changing the original teacher mark.
+
+| Criterion | My score |
+|---|:---:|
+| Knowledge | ___ /2 |
+| Thinking | ___ /2 |
+| Communication | ___ /2 |
+| Visuals & accessibility | ___ /2 |
+| Application | ___ /2 |
+| **Total** | **___ /10** |
+
+**One strength I recognize in my own presentation now:**
 
 ________________________________________________________________________________
 
-**One Learning Skill I did not show consistently, and what I will do differently next time:**
+**Something another presenter did that I could learn from:**
+
+________________________________________________________________________________
+
+**If I presented again, one specific change I would make:**
 
 ________________________________________________________________________________
 
@@ -115,9 +136,14 @@ ________________________________________________________________________________
 
 ________________________________________________________________________________
 
-## Submission
+## Google Classroom submission - one PDF
 
-Take clear photos of **both sides** of your completed printed sheet and submit both images to Google Classroom after the final presentation day. Make sure your notes and self-evaluation are readable in the photos.
+Submit **one PDF** containing all of your completed listening and reflection pages.
+
+- **Digital option:** complete this editable Word file in Word, or upload it to Google Drive and open it with Google Docs. When finished, download/export it as a PDF.
+- **Paper option:** scan the completed pages directly to PDF using a document scanning app. If you take regular photos instead, put the clear photos into a Google Doc or Word file in the correct order, then export that file as a PDF.
+- Open the final PDF before submitting. Check that every page is readable, upright, complete, and in the correct order.
+- Submit the **one PDF**, not separate JPG/PNG images or an editable Word/Google file.
 
 ---
 

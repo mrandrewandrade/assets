@@ -13,11 +13,11 @@ output-file: the-way-we-meet.docx
 |---|---|
 | **Presentations** | Weds., Sept. 16 & Thurs., Sept. 17, 2026 |
 | **Value** | /10 - equal to Past, Present & Becoming |
-| **Submit** | Clear photos of both sides of the completed listening sheet after the final presentation day |
+| **Submit** | One completed PDF after the final presentation day |
 
 ## Learning goal
 
-I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and reflecting honestly on my own attention.
+I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and using what I hear to reflect honestly on both my listening and my own presentation.
 
 ## Being present for someone else
 
@@ -28,7 +28,7 @@ I can make space for another person by listening with attention, recording meani
 - Listen for something you learned, noticed, or connected with.
 - Be ready to ask a question, make a comment, or share a connection.
 
-## Your listening notes
+## Your listening package
 
 For each presenter, record:
 
@@ -37,11 +37,25 @@ For each presenter, record:
 
 Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
 
-**Before you submit:** complete the **/10 self-evaluation**, identify a Learning Skill strength and next step, and give brief feedback on the activity on the back of the sheet. Then take clear photos of **both sides** and submit both images to Google Classroom.
+After the final presentation, complete:
+
+- your **/10 listening self-evaluation** using evidence from what you actually did
+- your **Learning Skills self-check**, including evidence or a next step
+- a reflection on **your own Past, Present & Becoming presentation** after hearing classmates
+- brief feedback on the activity
 
 ## Be honest about your attention
 
 An honest **Some lapses** or **Not attentive** is better than falsely claiming full attention. A lapse does not automatically mean zero. If your self-rating is knowingly inaccurate, the **Integrity & Reflection** score can be reduced more than the original attention lapse would have cost.
+
+## Google Classroom submission - one PDF
+
+Submit **one PDF** containing your completed listening notes and reflection pages.
+
+- **Digital option:** use the editable Word file in Word, or upload it to Google Drive and open it with Google Docs. When finished, download/export it as a PDF.
+- **Paper option:** scan the completed pages directly to PDF using a document scanning app, or take clear photos, place the photos in a Google Doc or Word file in the correct order, and export that file as a PDF.
+- Before submitting, open the PDF and check that every page is readable, upright, complete, and in the correct order.
+- Submit the **one PDF**, not separate JPG/PNG images or an editable Word/Google file.
 
 # Learning Skills
 
@@ -106,23 +120,23 @@ Each criterion is worth **2 marks**.
 
 | Level | Marks | Evidence |
 |---|---:|---|
-| 4+ | 2 marks | Complete across all presentations and both days, with careful follow-through. |
-| Level 4 | 1.5 marks | Nearly complete and consistently maintained across the presentation days. |
+| 4+ | 2 marks | Complete across all presentations and reflection sections, with careful follow-through. |
+| Level 4 | 1.5 marks | Nearly complete and consistently maintained across the presentation days and reflection. |
 | Level 3 | 1 mark | Mostly complete with only a few gaps. |
 | Level 2 | 0.5 marks | Several gaps, missing sections, or repeated reminders are needed. |
 | Level 1 | 0 marks | Work is largely incomplete or not submitted. |
 
 ## Integrity & Reflection
 
-*Were your attention ratings honest?*
+*Were your ratings and reflection honest?*
 
 | Level | Marks | Evidence |
 |---|---:|---|
-| 4+ | 2 marks | Self-ratings are accurate, thoughtful, and show strong awareness of lapses and recovery. |
-| Level 4 | 1.5 marks | Self-ratings are honest and align well with notes and observed behaviour. |
-| Level 3 | 1 mark | Self-ratings are generally honest with minor inconsistency or limited reflection. |
-| Level 2 | 0.5 marks | Self-ratings are superficial, inconsistent, or need prompting to be accurate. |
-| Level 1 | 0 marks | Self-assessment is missing or knowingly inaccurate. |
+| 4+ | 2 marks | Self-ratings are accurate and thoughtful; reflection on the student's own presentation uses specific learning from classmates to identify strengths and next steps. |
+| Level 4 | 1.5 marks | Self-ratings are honest and align well with notes and observed behaviour; presentation reflection is specific and thoughtful. |
+| Level 3 | 1 mark | Self-ratings are generally honest; presentation reflection identifies a reasonable strength or next step. |
+| Level 2 | 0.5 marks | Self-ratings are superficial or inconsistent; presentation reflection is vague or needs prompting. |
+| Level 1 | 0 marks | Self-assessment is missing, knowingly inaccurate, or shows little meaningful reflection. |
 
 **Integrity rule:** Knowingly marking yourself **Attentive** when your notes or observed behaviour clearly show otherwise may result in **0/2 for Integrity & Reflection**. Honest acknowledgement of a lapse is treated more favourably than misrepresenting it.
 
