@@ -1,10 +1,10 @@
 ---
-title: "Presentation Listening & Participation"
-subtitle: "Listening is an assignment too."
+title: "The Way We Meet"
+subtitle: "Attention, connection, and making space for one another."
 format:
   docx:
     toc: false
-output-file: about-me-listening.docx
+output-file: the-way-we-meet.docx
 ---
 
 **Technology Commons · Port Credit Secondary School**
@@ -12,14 +12,14 @@ output-file: about-me-listening.docx
 | | |
 |---|---|
 | **Presentations** | Weds., Sept. 16 & Thurs., Sept. 17, 2026 |
-| **Value** | /10 - equal to the presentation assignment |
+| **Value** | /10 - equal to Past, Present & Becoming |
 | **Submit** | Completed listening notes after the final presentation day |
 
 ## Learning goal
 
-I can listen actively, record meaningful notes, contribute respectfully to discussion, and reflect honestly on my own attention.
+I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and reflecting honestly on my own attention.
 
-## What active listening looks like
+## Being present for someone else
 
 - Phones away unless directed otherwise.
 - Face the speaker and use attentive body language.
@@ -44,7 +44,7 @@ An honest **Some lapses** or **Not attentive** is better than falsely claiming f
 
 # Learning Skills
 
-These are reported separately from the /10 achievement mark, but this assignment gives strong evidence of them.
+How we meet one another matters. These are reported separately from the /10 achievement mark, but this assignment gives strong evidence of them.
 
 | Learning Skill | How you can show it while listening |
 |---|---|
@@ -57,7 +57,7 @@ These are reported separately from the /10 achievement mark, but this assignment
 
 \newpage
 
-# Listening Rubric · /10
+# The Way We Meet · /10
 
 Each criterion is worth **2 marks**.
 
