@@ -70,7 +70,7 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
   )[
-    #text(size: 7.7pt)[Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A.]
+    #text(size: 7.7pt)[Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. On the back, score your listening and explain the evidence for your choices.]
   ]
   #v(5pt)
 ]
@@ -96,40 +96,77 @@ format:
 
 #pagebreak()
 #page-header([Side 2 - Presenters 18-34])
-#notes-table(18, 34, 4.35pt)
+#notes-table(18, 34, 3.35pt)
 
-#v(5pt)
+#v(4pt)
 #block(
   width: 100%,
   fill: sail,
   stroke: (left: 3pt + pcss-gold),
-  inset: (left: 9pt, right: 9pt, top: 5pt, bottom: 5pt),
+  inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
 )[
   #grid(
-    columns: (1fr, 1fr),
-    column-gutter: 18pt,
+    columns: (1.14fr, 0.86fr),
+    column-gutter: 16pt,
     [
-      #text(size: 8.6pt, weight: "bold", fill: navy)[Self-evaluation before you submit]
+      #text(size: 8.4pt, weight: "bold", fill: navy)[Listening self-evaluation - use evidence]
       #v(2pt)
-      #text(size: 7.4pt)[Attention & Presence ___/2 · Audience Notes ___/2 · Discussion & Connections ___/2]
-      #linebreak()
-      #text(size: 7.4pt)[Completion & Consistency ___/2 · Integrity & Reflection ___/2 · #text(weight: "bold")[Total ___/10]]
-      #v(3pt)
-      #text(size: 7.3pt, weight: "bold")[Learning Skills:] #text(size: 7.3pt)[Strongest: ____________________   Next step: ____________________]
+      #text(size: 6.9pt, fill: slate)[Score each area, then write a few words showing what you actually did or what you need to improve.]
+      #v(2pt)
+      #table(
+        columns: (1.34in, 0.48in, 1fr),
+        inset: (x: 3pt, y: 2.1pt),
+        stroke: 0.45pt + mist,
+        [#text(size: 6.8pt, weight: "bold", fill: navy)[Area]], [#text(size: 6.8pt, weight: "bold", fill: navy)[/2]], [#text(size: 6.8pt, weight: "bold", fill: navy)[My evidence / next step]],
+        [#text(size: 6.7pt)[Attention & Presence]], [___], [],
+        [#text(size: 6.7pt)[Audience Notes]], [___], [],
+        [#text(size: 6.7pt)[Discussion & Connections]], [___], [],
+        [#text(size: 6.7pt)[Completion & Consistency]], [___], [],
+        [#text(size: 6.7pt)[Integrity & Reflection]], [___], [],
+      )
+      #v(2pt)
+      #text(size: 7.1pt, weight: "bold")[My listening total: ____ /10]
     ],
     [
-      #text(size: 8.6pt, weight: "bold", fill: navy)[Help improve this activity]
+      #text(size: 8.4pt, weight: "bold", fill: navy)[Learning Skills reflection]
       #v(2pt)
-      #text(size: 7.3pt)[What helped you listen, connect, or learn from others?]
+      #text(size: 6.9pt)[Choose the Learning Skills that best describe your behaviour during the presentations:]
+      #v(2pt)
+      #text(size: 6.8pt)[Responsibility · Organization · Independent Work · Collaboration · Initiative · Self-Regulation]
+      #v(3pt)
+      #text(size: 6.9pt, weight: "bold")[A skill I showed: __________________________]
+      #linebreak()
+      #text(size: 6.8pt)[What did I actually do to show it?]
       #v(1pt)
       #line(length: 100%, stroke: 0.45pt + slate)
-      #v(4pt)
-      #text(size: 7.3pt)[What should change next time?]
+      #v(3pt)
+      #text(size: 6.9pt, weight: "bold")[A skill I did not show consistently: __________________]
+      #linebreak()
+      #text(size: 6.8pt)[What happened, and what would I do differently next time?]
       #v(1pt)
       #line(length: 100%, stroke: 0.45pt + slate)
     ],
   )
   #v(4pt)
-  #text(size: 7.3pt, weight: "bold", fill: navy)[Submit:] #text(size: 7.3pt)[Take clear photos of #text(weight: "bold")[both sides] of this sheet and submit both images to Google Classroom after the final presentation day. Make sure your writing is readable.]
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 16pt,
+    [
+      #text(size: 7.7pt, weight: "bold", fill: navy)[Activity feedback]
+      #linebreak()
+      #text(size: 6.8pt)[What helped you listen, connect, or learn from others?]
+      #v(1pt)
+      #line(length: 100%, stroke: 0.45pt + slate)
+    ],
+    [
+      #text(size: 7.7pt, weight: "bold", fill: navy)[Improve it next time]
+      #linebreak()
+      #text(size: 6.8pt)[What should change to make this activity better?]
+      #v(1pt)
+      #line(length: 100%, stroke: 0.45pt + slate)
+    ],
+  )
+  #v(3pt)
+  #text(size: 6.9pt, weight: "bold", fill: navy)[Submit:] #text(size: 6.9pt)[Take clear photos of #text(weight: "bold")[both sides] and submit both images to Google Classroom after the final presentation day. Make sure your notes and self-evaluation are readable.]
 ]
 ```
