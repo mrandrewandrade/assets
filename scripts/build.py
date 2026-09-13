@@ -54,7 +54,7 @@ def render(path: Path) -> tuple[Path, Path]:
 
     content = markdown.markdown(
         body,
-        extensions=["tables", "sane_lists", "fenced_code"],
+        extensions=["tables", "sane_lists", "fenced_code", "md_in_html"],
         output_format="html5",
     )
 
