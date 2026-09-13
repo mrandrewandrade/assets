@@ -22,11 +22,11 @@ jobs:
         with:
           version: "1.10.18"
 
-      - name: Build About Me PDF
+      - name: Build About Me resource pack
         run: bash render.sh about-me
 
-      - name: Add PDF to website
-        run: cp dist/about-me-presentation.pdf site/about-me-presentation.pdf
+      - name: Add PDFs to website
+        run: cp dist/*.pdf site/
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
