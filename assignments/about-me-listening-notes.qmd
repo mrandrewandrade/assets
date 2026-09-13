@@ -45,9 +45,9 @@ format:
     columns: (1fr, auto),
     align: horizon,
     [
-      #text(size: 21pt, weight: "bold", fill: navy)[Listening Notes]
+      #text(size: 21pt, weight: "bold", fill: navy)[The Way We Meet - Listening Notes]
       #v(1pt)
-      #text(size: 8.8pt, fill: slate)[About Me Presentations - #side]
+      #text(size: 8.8pt, fill: slate)[Attention, connection, and making space for one another - #side]
     ],
     [#text(size: 7.8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
   )
@@ -70,7 +70,7 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 9pt, right: 9pt, top: 4pt, bottom: 4pt),
   )[
-    #text(size: 8pt)[Phones away unless directed otherwise. Face the speaker, avoid side conversations, and write one brief note for every presenter. In the final column, circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. Knowingly inaccurate self-ratings can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse. #text(weight: "bold")[Submit this sheet after the final presentation day.]]
+    #text(size: 8pt)[Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. In the final column, circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. Knowingly inaccurate self-ratings can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse. #text(weight: "bold")[Submit this sheet after the final presentation day.]]
   ]
   #v(5pt)
 ]
