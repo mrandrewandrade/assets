@@ -1,0 +1,118 @@
+---
+title: "Name Tag PDF"
+subtitle: "Clear photo. Clear file. Clear submission."
+format:
+  docx:
+    toc: false
+output-file: name-tag-pdf.docx
+---
+
+**Technology Commons · Port Credit Secondary School**
+
+| | |
+|---|---|
+| **Value** | /10 |
+| **Submit** | Google Classroom |
+| **Final file** | One PDF |
+
+## Learning goal
+
+I can take a clear, well-composed photo, create and check a PDF that includes my student number, and follow digital submission instructions carefully.
+
+## Why are we doing this?
+
+This is practice for a course skill we will use again: turning clear work into one organized PDF, checking it, and submitting the correct file.
+
+## Your mission
+
+1. Take a clear, well-lit photo of your name tag.
+2. Add the photo to a Google Doc or other software that can create a PDF.
+3. Crop and resize the photo so the name tag is clear and easy to read.
+4. Include your student number on the page using this exact format:
+
+   **Submitted by: student-number**
+
+   Replace *student-number* with your actual student number.
+5. Export or save the finished page as a **PDF**.
+6. Open the PDF and check that everything is clear, upright, complete, and easy to read.
+7. Submit the PDF to Google Classroom.
+
+## Before you submit
+
+- [ ] Name tag is easy to read
+- [ ] Photo is cropped and oriented correctly
+- [ ] Student number is included in the exact format
+- [ ] File opens as a PDF
+- [ ] I opened the final PDF and checked it
+
+\newpage
+
+# Name Tag PDF · Rubric · /10
+
+Each criterion is worth **2 marks**, for a total of **/10**.
+
+**4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks**
+
+## Photo quality
+
+*Can we clearly read the name tag?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Exceptionally clear, well-lit, sharp, and easy to read. |
+| Level 4 | 1.5 marks | Clear, well-lit, and easy to read with only a minor imperfection. |
+| Level 3 | 1 mark | Readable and appropriately lit; some improvement is possible. |
+| Level 2 | 0.5 marks | Partly difficult to read because of lighting, blur, angle, or distance. |
+| Level 1 | 0 marks | Photo is missing or too unclear to use. |
+
+## Crop & layout
+
+*Is the page clean and focused?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Photo is carefully cropped, sized, oriented, and placed for excellent readability. |
+| Level 4 | 1.5 marks | Photo is well cropped, sized, oriented, and easy to view. |
+| Level 3 | 1 mark | Layout works, but there may be extra background, awkward sizing, or minor orientation issues. |
+| Level 2 | 0.5 marks | Layout makes the name tag unnecessarily small or difficult to view. |
+| Level 1 | 0 marks | Photo is not appropriately placed, cropped, or oriented. |
+
+## Student number
+
+*Did you identify your submission correctly?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Correct student number is easy to find and uses the exact required format. |
+| Level 4 | 1.5 marks | Correct student number is included with only a very minor formatting issue. |
+| Level 3 | 1 mark | Student number is present but the required format is not followed. |
+| Level 2 | 0.5 marks | Identification is incomplete or difficult to find. |
+| Level 1 | 0 marks | Student number is missing or incorrect. |
+
+## PDF skill
+
+*Did you create and check the file?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Clean, correct PDF opens properly and has clearly been checked before submission. |
+| Level 4 | 1.5 marks | Correct PDF opens properly and is complete with only a minor issue. |
+| Level 3 | 1 mark | PDF is usable, but has a small file, page, or presentation issue. |
+| Level 2 | 0.5 marks | File is technically a PDF but has significant readability, page, or export problems. |
+| Level 1 | 0 marks | Submission is not a usable PDF. |
+
+## Following instructions
+
+*Did you complete the whole process?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Every instruction is followed carefully and the final submission is complete. |
+| Level 4 | 1.5 marks | All required instructions are followed with only a minor oversight. |
+| Level 3 | 1 mark | Most instructions are followed; one required element needs correction. |
+| Level 2 | 0.5 marks | Several instructions are missed or repeated prompting is needed. |
+| Level 1 | 0 marks | Submission is incomplete or does not demonstrate the required process. |
+
+---
+
+**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
