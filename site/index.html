@@ -77,7 +77,8 @@
 
     main { padding: 42px 0 56px; }
 
-    .resource {
+    .resource,
+    .download-card {
       background: var(--white);
       border: 1px solid var(--mist);
       border-radius: 14px;
@@ -85,22 +86,27 @@
       box-shadow: 0 12px 32px rgba(30, 43, 85, 0.08);
     }
 
-    .resource-header {
+    .resource-header,
+    .download-card {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 24px;
       align-items: center;
       padding: 26px 28px;
-      border-bottom: 1px solid var(--mist);
     }
 
-    h2 {
+    .resource-header { border-bottom: 1px solid var(--mist); }
+
+    h2, h3 {
       margin: 0 0 5px;
       color: var(--navy);
-      font-size: 1.55rem;
     }
 
-    .resource-header p { margin: 0; color: var(--slate); }
+    h2 { font-size: 1.55rem; }
+    h3 { font-size: 1.15rem; }
+
+    .resource-header p,
+    .download-card p { margin: 0; color: var(--slate); }
 
     .button {
       display: inline-block;
@@ -124,6 +130,13 @@
       background: var(--mist);
     }
 
+    .downloads {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
     .mobile-note {
       display: none;
       padding: 18px 22px;
@@ -140,9 +153,11 @@
 
     footer p { margin: 0; }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       .header-inner { align-items: flex-start; }
-      .resource-header { grid-template-columns: 1fr; }
+      .resource-header,
+      .download-card,
+      .downloads { grid-template-columns: 1fr; }
       .button { text-align: center; }
       .viewer { min-height: 62vh; }
       .mobile-note { display: block; }
@@ -166,12 +181,30 @@
       <div class="resource-header">
         <div>
           <h2 id="about-me-title">About Me Presentation</h2>
-          <p>Assignment instructions and rubric.</p>
+          <p>Assignment instructions, discussion expectations, learning skills, and rubric.</p>
         </div>
         <a class="button" href="about-me-presentation.pdf">Open PDF</a>
       </div>
       <iframe class="viewer" src="about-me-presentation.pdf#view=FitH" title="About Me Presentation PDF"></iframe>
       <p class="mobile-note">If the PDF does not display in your browser, use the Open PDF button above.</p>
+    </section>
+
+    <section class="downloads" aria-label="About Me printable resources">
+      <article class="download-card">
+        <div>
+          <h3>Student Audience Connections</h3>
+          <p>Double-sided note sheet with room for 34 presenters. Students record something learned plus a connection, question, or comment.</p>
+        </div>
+        <a class="button" href="about-me-audience-notes.pdf">Open PDF</a>
+      </article>
+
+      <article class="download-card">
+        <div>
+          <h3>Teacher Quick Marking</h3>
+          <p>Double-sided 34-student tracker with all five rubric scores, /10 total, learning-skills evidence, and quick feedback notes.</p>
+        </div>
+        <a class="button" href="about-me-teacher-marking.pdf">Open PDF</a>
+      </article>
     </section>
   </main>
 
