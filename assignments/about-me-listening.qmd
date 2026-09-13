@@ -49,9 +49,9 @@ format:
   column-gutter: 24pt,
   align: top,
   [
-    #text(size: 25pt, weight: "bold", fill: navy)[Presentation Listening & Participation]
+    #text(size: 25pt, weight: "bold", fill: navy)[The Way We Meet]
     #v(1pt)
-    #text(size: 11.2pt, fill: slate)[Listening is an assignment too. Give each presenter the attention you want when it is your turn.]
+    #text(size: 11.2pt, fill: slate)[Attention, connection, and making space for one another.]
   ],
   [
     #grid(
@@ -78,21 +78,21 @@ format:
   columns: (1.2fr, 1fr, 1.2fr),
   column-gutter: 18pt,
   [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
-  [#text(weight: "bold")[Value:] /10 - equal to the presentation assignment],
+  [#text(weight: "bold")[Value:] /10 - equal to Past, Present & Becoming],
   [#text(weight: "bold")[Submit:] completed listening notes after the final presentation day],
 )
 
 #v(7pt)
 #text(size: 15pt, weight: "bold", fill: navy)[Learning goal]
 #v(2pt)
-I can listen actively, record meaningful notes, contribute respectfully to discussion, and reflect honestly on my own attention.
+I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and reflecting honestly on my own attention.
 
 #v(7pt)
 #grid(
   columns: (1fr, 1fr),
   column-gutter: 22pt,
   [
-    #text(size: 14pt, weight: "bold", fill: navy)[What active listening looks like]
+    #text(size: 14pt, weight: "bold", fill: navy)[Being present for someone else]
     #v(3pt)
     - phones away unless directed otherwise
     - face the speaker and use attentive body language
@@ -127,7 +127,7 @@ I can listen actively, record meaningful notes, contribute respectfully to discu
 ]
 
 #v(7pt)
-#text(size: 14pt, weight: "bold", fill: navy)[Learning Skills - especially important in this assignment]
+#text(size: 14pt, weight: "bold", fill: navy)[Learning Skills - how we meet one another matters]
 #v(3pt)
 #table(
   columns: (1.05fr, 2.25fr, 1.05fr, 2.25fr),
@@ -146,7 +146,7 @@ I can listen actively, record meaningful notes, contribute respectfully to discu
 #grid(
   columns: (1fr, auto),
   align: horizon,
-  [#text(size: 18pt, weight: "bold", fill: navy)[Listening Rubric · /10]],
+  [#text(size: 18pt, weight: "bold", fill: navy)[The Way We Meet · /10]],
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
