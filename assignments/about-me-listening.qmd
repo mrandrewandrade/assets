@@ -19,7 +19,7 @@ format:
 #set page(
   paper: "us-letter",
   flipped: true,
-  margin: (top: 0.32in, bottom: 0.50in, x: 0.52in),
+  margin: (top: 0.30in, bottom: 0.50in, x: 0.52in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
@@ -38,20 +38,20 @@ format:
 
 #set text(
   font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-  size: 9.8pt,
+  size: 9.6pt,
   fill: charcoal,
   hyphenate: false,
 )
-#set par(leading: 0.52em, justify: false)
+#set par(leading: 0.49em, justify: false)
 
 #grid(
   columns: (1fr, 2.65in),
   column-gutter: 24pt,
   align: top,
   [
-    #text(size: 25pt, weight: "bold", fill: navy)[The Way We Meet]
+    #text(size: 24pt, weight: "bold", fill: navy)[The Way We Meet]
     #v(1pt)
-    #text(size: 11.2pt, fill: slate)[Attention, connection, and making space for one another.]
+    #text(size: 10.8pt, fill: slate)[Attention, connection, and making space for one another.]
   ],
   [
     #grid(
@@ -68,11 +68,11 @@ format:
   ],
 )
 
-#v(7pt)
+#v(5pt)
 #line(length: 0.62in, stroke: 3pt + pcss-gold)
-#v(3pt)
+#v(2pt)
 #line(length: 100%, stroke: 1.4pt + navy)
-#v(7pt)
+#v(5pt)
 
 #grid(
   columns: (1.2fr, 1fr, 1.2fr),
@@ -82,18 +82,18 @@ format:
   [#text(weight: "bold")[Submit:] one completed PDF after the final presentation day],
 )
 
-#v(7pt)
-#text(size: 15pt, weight: "bold", fill: navy)[Learning goal]
-#v(2pt)
+#v(5pt)
+#text(size: 14pt, weight: "bold", fill: navy)[Learning goal]
+#v(1pt)
 I can make space for another person by listening with attention, recording meaningful notes, contributing respectfully, and using what I hear to reflect honestly on both my listening and my own presentation.
 
-#v(7pt)
+#v(5pt)
 #grid(
   columns: (1fr, 1fr),
   column-gutter: 22pt,
   [
-    #text(size: 14pt, weight: "bold", fill: navy)[Being present for someone else]
-    #v(3pt)
+    #text(size: 13pt, weight: "bold", fill: navy)[Being present for someone else]
+    #v(2pt)
     - phones away unless directed otherwise
     - face the speaker and use attentive body language
     - avoid side conversations and other distractions
@@ -102,12 +102,11 @@ I can make space for another person by listening with attention, recording meani
     - be ready to ask a question, make a comment, or share a connection
   ],
   [
-    #text(size: 14pt, weight: "bold", fill: navy)[Your listening package]
-    #v(3pt)
+    #text(size: 13pt, weight: "bold", fill: navy)[Your listening package]
+    #v(2pt)
     For each presenter, record a brief listening note and your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]. Short phrases are enough.
-    #v(3pt)
+    #v(2pt)
     After the final presentation, complete:
-    #v(1pt)
     - your /10 listening self-evaluation with evidence
     - your Learning Skills self-check with evidence or a next step
     - a reflection on #text(weight: "bold")[your own presentation] after hearing classmates
@@ -115,7 +114,7 @@ I can make space for another person by listening with attention, recording meani
   ],
 )
 
-#v(6pt)
+#v(4pt)
 #grid(
   columns: (0.92fr, 1.08fr),
   column-gutter: 18pt,
@@ -124,11 +123,11 @@ I can make space for another person by listening with attention, recording meani
       width: 100%,
       fill: sail,
       stroke: (left: 4pt + pcss-gold),
-      inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
+      inset: (left: 9pt, right: 9pt, top: 4pt, bottom: 4pt),
     )[
-      #text(size: 9.6pt, weight: "bold", fill: navy)[Be honest about your attention]
-      #v(2pt)
-      #text(size: 8.5pt)[An honest "Some lapses" or "Not attentive" is better than falsely claiming full attention. A lapse does not automatically mean zero. A knowingly inaccurate self-rating can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse would have.]
+      #text(size: 9pt, weight: "bold", fill: navy)[Be honest about your attention]
+      #v(1pt)
+      #text(size: 8pt)[An honest "Some lapses" or "Not attentive" is better than falsely claiming full attention. A lapse does not automatically mean zero. A knowingly inaccurate self-rating can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse would have.]
     ]
   ],
   [
@@ -136,28 +135,28 @@ I can make space for another person by listening with attention, recording meani
       width: 100%,
       fill: sail,
       stroke: (left: 4pt + navy),
-      inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
+      inset: (left: 9pt, right: 9pt, top: 4pt, bottom: 4pt),
     )[
-      #text(size: 9.6pt, weight: "bold", fill: navy)[Google Classroom - submit one PDF]
-      #v(2pt)
-      #text(size: 8.3pt)[#text(weight: "bold")[Digital:] use the editable Word file in Word or upload it to Google Drive and open it with Google Docs, then export/download as PDF. #text(weight: "bold")[Paper:] scan the pages directly to PDF, or take clear photos, place them in a Google Doc or Word file in order, then export as PDF. Submit one readable PDF, not separate images.]
+      #text(size: 9pt, weight: "bold", fill: navy)[Google Classroom - submit one PDF]
+      #v(1pt)
+      #text(size: 7.9pt)[#text(weight: "bold")[Digital:] use the editable Word file in Word or upload it to Google Drive and open it with Google Docs, then export/download as PDF. #text(weight: "bold")[Paper:] scan directly to PDF, or put clear photos in a Google Doc or Word file in order and export as PDF. Submit one readable PDF, not separate images.]
     ]
   ],
 )
 
-#v(6pt)
-#text(size: 14pt, weight: "bold", fill: navy)[Learning Skills - how we meet one another matters]
-#v(3pt)
-#table(
-  columns: (1.05fr, 2.25fr, 1.05fr, 2.25fr),
-  inset: (x: 6pt, y: 5pt),
-  stroke: 0.5pt + mist,
-  [#text(weight: "bold", fill: navy)[Responsibility]], [brings the sheet, keeps phones away, completes and submits the work],
-  [#text(weight: "bold", fill: navy)[Organization]], [keeps notes complete, readable, and in order],
-  [#text(weight: "bold", fill: navy)[Independent Work]], [records notes without repeated reminders],
-  [#text(weight: "bold", fill: navy)[Collaboration]], [listens respectfully and helps create a good audience for classmates],
-  [#text(weight: "bold", fill: navy)[Initiative]], [offers thoughtful questions, comments, or connections],
-  [#text(weight: "bold", fill: navy)[Self-Regulation]], [manages devices, impulses, distractions, and refocuses after a lapse],
+#v(4pt)
+#text(size: 12.5pt, weight: "bold", fill: navy)[Learning Skills - how we meet one another matters]
+#v(2pt)
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 10pt,
+  row-gutter: 3pt,
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Responsibility:] #text(size: 7.6pt)[prepared, phone away, completes and submits]],
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Organization:] #text(size: 7.6pt)[notes complete, readable, and in order]],
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Independent Work:] #text(size: 7.6pt)[records notes without repeated reminders]],
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Collaboration:] #text(size: 7.6pt)[listens respectfully and supports speakers]],
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Initiative:] #text(size: 7.6pt)[offers thoughtful questions, comments, or connections]],
+  [#text(size: 7.6pt, weight: "bold", fill: navy)[Self-Regulation:] #text(size: 7.6pt)[manages distractions and refocuses after a lapse]],
 )
 
 #pagebreak()
