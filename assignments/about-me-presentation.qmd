@@ -30,7 +30,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [about-me-presentation.pdf #h(5pt) · #h(5pt) Generated #datetime.today().display("[month repr:long] [day], [year]")],
+      [Open sourced by Andrew Andrade · CC BY 4.0 · github.com/mrandrewandrade/assets],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -75,11 +75,11 @@ format:
 #v(8pt)
 
 #grid(
-  columns: (0.80fr, 1.40fr, 2.10fr),
+  columns: (0.80fr, 1.32fr, 2.18fr),
   column-gutter: 18pt,
   [#text(weight: "bold")[Length:] about 1-3 minutes],
-  [#text(weight: "bold")[Due:] Tuesday, September 15, 2026 at 7:00 PM],
-  [#text(weight: "bold")[Presentations:] Wednesday, September 16 and Thursday, September 17, 2026],
+  [#text(weight: "bold")[Due:] Tues., Sept. 15, 2026 at 7:00 PM],
+  [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
 )
 
 #v(9pt)
@@ -139,7 +139,7 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 )
 
 #v(7pt)
-Submit your presentation through #text(weight: "bold")[Google Classroom] by #text(weight: "bold")[Tuesday, September 15, 2026 at 7:00 PM].
+Submit your presentation through #text(weight: "bold")[Google Classroom] by #text(weight: "bold")[Tues., Sept. 15, 2026 at 7:00 PM].
 
 #pagebreak()
 
