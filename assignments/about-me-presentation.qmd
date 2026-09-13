@@ -220,9 +220,9 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
       stroke: (left: 3pt + pcss-gold),
       inset: (left: 11pt, right: 11pt, top: 7pt, bottom: 7pt),
     )[
-      #text(size: 10.5pt, weight: "bold", fill: navy)[Submission buffer /2]
+      #text(size: 10.5pt, weight: "bold", fill: navy)[Presentation initiative /2]
       #v(2pt)
-      #text(size: 8.7pt)[Normally 2/2 when submitted by the deadline and in the requested format. Late or missed work may reduce this buffer under school/board policy. Approved or excused circumstances are not penalized.]
+      #text(size: 8.7pt)[2/2 for volunteering to present without being called on. 1/2 for presenting when called on. 0/2 if you choose not to present when expected. Approved or excused circumstances are not penalized.]
     ]
   ],
   [
