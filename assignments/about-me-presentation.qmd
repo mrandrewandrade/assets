@@ -49,9 +49,9 @@ format:
   column-gutter: 24pt,
   align: top,
   [
-    #text(size: 26pt, weight: "bold", fill: navy)[About Me Presentation]
+    #text(size: 26pt, weight: "bold", fill: navy)[Past, Present & Becoming]
     #v(1pt)
-    #text(size: 11.5pt, fill: slate)[Help the crew get to know you and find something we can connect with.]
+    #text(size: 11.5pt, fill: slate)[Who was I? Who am I? Who am I becoming?]
   ],
   [
     #grid(
@@ -87,7 +87,7 @@ format:
 #v(8pt)
 #text(size: 15.5pt, weight: "bold", fill: navy)[Learning goal]
 #v(3pt)
-I can introduce myself clearly, choose details that help others get to know me, and make a meaningful connection with my audience.
+I can reflect on where I have been, describe who I am now, and share something about who I am becoming in a way that helps others connect with me.
 
 #v(6pt)
 #block(
@@ -96,7 +96,7 @@ I can introduce myself clearly, choose details that help others get to know me, 
   stroke: (left: 4pt + pcss-gold),
   inset: (left: 14pt, right: 12pt, top: 7pt, bottom: 7pt),
 )[
-  #text(size: 12pt, weight: "bold", fill: navy)[Help us get to know you. Help us connect with you.]
+  #text(size: 12pt, weight: "bold", fill: navy)[Tell us where you have been, where you are, and where you are heading.]
 ]
 #v(4pt)
 You can keep it simple. There is no required number of slides, pictures, or facts.
@@ -110,12 +110,12 @@ You can keep it simple. There is no required number of slides, pictures, or fact
     #v(3pt)
     Choose whatever helps us understand you. Some ideas:
     #v(2pt)
-    - skills or things you are good at
-    - hobbies and interests
-    - past projects or things you have made, fixed, designed, or worked on
-    - a fun or interesting fact
-    - future goals
-    - something you are looking forward to learning, making, fixing, or trying in this class
+    - something from your past that shaped you
+    - a project, experience, skill, or moment you are proud of
+    - what matters to you now: interests, skills, people, places, or routines
+    - something others may not know about you
+    - something you hope to learn, make, fix, try, or become
+    - a future goal, direction, or possibility you are curious about
     #v(3pt)
     You do #text(weight: "bold")[not] need to include everything on this list.
   ],
@@ -145,7 +145,7 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
 #v(4pt)
 #text(weight: "bold", fill: navy)[After you present:] We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.
 #v(4pt)
-#text(size: 9pt, fill: slate)[Listening to classmates is assessed separately in the Presentation Listening & Participation assignment.]
+#text(size: 9pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[The Way We Meet].]
 
 #pagebreak()
 
