@@ -16,96 +16,44 @@ format:
   flipped: true,
   margin: (top: 0.32in, bottom: 0.46in, x: 0.40in),
   footer: context [
-    #set text(
-      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-      size: 7pt,
-      fill: slate,
-      hyphenate: false,
-    )
-    #grid(
-      columns: (1fr, auto),
-      column-gutter: 12pt,
+    #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 7pt, fill: slate, hyphenate: false)
+    #grid(columns: (1fr, auto), column-gutter: 12pt,
       [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
 )
-
 #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 9.4pt, fill: charcoal, hyphenate: false)
 #set par(leading: 0.52em, justify: false)
-
-#let blank-field(label) = [
-  #text(weight: "bold")[#label:]
-  #h(5pt)
-  #line(length: 1.85in, stroke: 0.55pt + slate)
-]
-
+#let blank-field(label) = [#text(weight: "bold")[#label:] #h(5pt) #line(length: 1.85in, stroke: 0.55pt + slate)]
 #let page-header(section) = [
-  #grid(
-    columns: (1fr, auto),
-    align: horizon,
-    [
-      #text(size: 22pt, weight: "bold", fill: navy)[About Me Presentation - Quick Marking]
-      #v(1pt)
-      #text(size: 9.4pt, fill: slate)[#section]
-    ],
+  #grid(columns: (1fr, auto), align: horizon,
+    [#text(size: 22pt, weight: "bold", fill: navy)[Past, Present & Becoming - Quick Marking] #v(1pt) #text(size: 9.4pt, fill: slate)[#section]],
     [#text(size: 8.4pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
   )
-  #v(4pt)
-  #line(length: 0.58in, stroke: 3pt + pcss-gold)
-  #v(2pt)
-  #line(length: 100%, stroke: 1.2pt + navy)
+  #v(4pt) #line(length: 0.58in, stroke: 3pt + pcss-gold) #v(2pt) #line(length: 100%, stroke: 1.2pt + navy) #v(5pt)
+  #grid(columns: (1fr, 1fr, 1fr), column-gutter: 14pt, [#blank-field("Class")], [#blank-field("Date")], [#blank-field("Teacher")])
   #v(5pt)
-  #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 14pt,
-    [#blank-field("Class")],
-    [#blank-field("Date")],
-    [#blank-field("Teacher")],
-  )
-  #v(5pt)
-  #block(
-    width: 100%,
-    fill: sail,
-    stroke: (left: 3pt + pcss-gold),
-    inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
-  )[
+  #block(width: 100%, fill: sail, stroke: (left: 3pt + pcss-gold), inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt))[
     #text(size: 8.4pt)[#text(weight: "bold")[Scoring:] 4+ = 2 marks · L4 = 1.5 marks · L3 = 1 mark · L2 = 0.5 marks · L1 = 0 marks. #text(weight: "bold")[K] Knowledge · #text(weight: "bold")[T] Thinking · #text(weight: "bold")[C] Communication · #text(weight: "bold")[V/A] Visuals & accessibility · #text(weight: "bold")[A] Application, including response to post-presentation discussion.]
   ]
   #v(6pt)
 ]
-
 #let table-header = table.header(
-  [#text(weight: "bold", fill: navy)[Student]],
-  [#align(center)[#text(weight: "bold", fill: navy)[K]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[T]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[C]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[V/A]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[A]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[/10]]],
-  [#text(weight: "bold", fill: navy)[Feedback / discussion notes]],
+  [#text(weight: "bold", fill: navy)[Student]], [#align(center)[#text(weight: "bold", fill: navy)[K]]], [#align(center)[#text(weight: "bold", fill: navy)[T]]], [#align(center)[#text(weight: "bold", fill: navy)[C]]], [#align(center)[#text(weight: "bold", fill: navy)[V/A]]], [#align(center)[#text(weight: "bold", fill: navy)[A]]], [#align(center)[#text(weight: "bold", fill: navy)[/10]]], [#text(weight: "bold", fill: navy)[Feedback / discussion notes]],
 )
-
 #let mark-table(rows, pad) = table(
-  columns: (1.42in, 0.48in, 0.48in, 0.48in, 0.58in, 0.48in, 0.56in, 5.38in),
-  inset: (x: 5pt, y: pad),
-  stroke: 0.6pt + mist,
-  align: left + top,
-  table-header,
+  columns: (1.42in, 0.48in, 0.48in, 0.48in, 0.58in, 0.48in, 0.56in, 5.38in), inset: (x: 5pt, y: pad), stroke: 0.6pt + mist, align: left + top, table-header,
   ..range(0, rows).map(_ => ([], [], [], [], [], [], [], [])).flatten()
 )
-
 #page-header([Students 1-9])
 #mark-table(9, 13pt)
-
 #pagebreak()
 #page-header([Students 10-18])
 #mark-table(9, 13pt)
-
 #pagebreak()
 #page-header([Students 19-26])
 #mark-table(8, 14.5pt)
-
 #pagebreak()
 #page-header([Students 27-34])
 #mark-table(8, 14.5pt)
