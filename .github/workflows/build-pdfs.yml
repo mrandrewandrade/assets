@@ -1,10 +1,13 @@
-name: Build teaching PDFs
+name: Build and publish teaching PDFs
 
 on:
   push:
     branches: [master]
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -22,9 +25,33 @@ jobs:
       - name: Build About Me PDF
         run: bash render.sh about-me
 
+      - name: Add PDF to website
+        run: cp dist/about-me-presentation.pdf site/about-me-presentation.pdf
+
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
         with:
           name: teaching-pdfs
           path: dist/
           if-no-files-found: error
+
+      - name: Upload Pages site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
