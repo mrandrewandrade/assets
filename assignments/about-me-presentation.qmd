@@ -1,0 +1,162 @@
+---
+title: false
+format:
+  typst: default
+---
+
+```{=typst}
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (x: 0.58in, y: 0.48in),
+  footer: context [
+    #set text(size: 7pt, fill: rgb("#66717B"))
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 12pt,
+      [about-me-presentation.pdf · Generated #datetime.today().display("[month repr:long] [day], [year]")],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+#set text(
+  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  size: 10pt,
+  fill: rgb("#17212B")
+)
+#set par(leading: 0.62em)
+#set heading(numbering: none)
+#show heading.where(level: 1): set text(size: 26pt, weight: "bold", fill: rgb("#17365D"))
+#show heading.where(level: 2): set text(size: 15pt, weight: "bold", fill: rgb("#17365D"))
+#show heading.where(level: 3): set text(size: 11pt, weight: "bold", fill: rgb("#17365D"))
+```
+
+# About Me Presentation
+
+*Help the crew get to know you and find something we can connect with.*
+
+**Length:** about 1-3 minutes  
+**Due:** Tuesday, September 15, 2026 at 7:00 PM  
+**Presentations:** Wednesday, September 16 and Thursday, September 17, 2026
+
+## The goal
+
+Introduce yourself in a way that helps the class get to know you and make connections with you.
+
+You can keep it simple. There is no required number of slides, pictures, or facts.
+
+> **Help us get to know you. Help us connect with you.**
+
+## What could you share?
+
+Choose whatever helps us understand you. Some ideas:
+
+- skills or things you are good at
+- hobbies and interests
+- past projects or things you have made, fixed, designed, or worked on
+- a fun or interesting fact
+- future goals
+- something you are looking forward to learning, making, fixing, or trying in this class
+
+You do **not** need to include everything on this list.
+
+## Keep it accessible
+
+If you use slides, everyone in the room should be able to understand them.
+
+- use large, readable text
+- use clear contrast
+- keep layouts simple
+- use images when they help explain something
+- avoid too much text
+- do not rely on colour alone to communicate meaning
+
+**Fancy slides are not the goal. Clear, accessible communication is.**
+
+Submit your presentation through **Google Classroom** by **Tuesday, September 15, 2026 at 7:00 PM**.
+
+```{=typst}
+#pagebreak()
+```
+
+## Rubric
+
+*Level 4+ describes exceptional evidence within Level 4. It is not a separate Ontario achievement level.*
+
+```{=typst}
+#let navy = rgb("#17365D")
+#let gold = rgb("#FFF1AD")
+#let l4 = rgb("#D5D9DC")
+#let l3 = rgb("#E2E5E7")
+#let l2 = rgb("#ECEEEF")
+#let l1 = rgb("#F5F6F7")
+#let rule = rgb("#CBD2D8")
+
+#table(
+  columns: (1.05fr, 1.18fr, 1.45fr, 1.35fr, 1.32fr, 1.25fr),
+  inset: 6pt,
+  stroke: 0.5pt + white,
+  fill: (x, y) => {
+    if x == 1 { gold }
+    else if x == 2 { l4 }
+    else if x == 3 { l3 }
+    else if x == 4 { l2 }
+    else if x == 5 { l1 }
+    else { white }
+  },
+  table.header(
+    [#text(weight: "bold", fill: navy)[Category]],
+    [#text(weight: "bold", fill: navy)[4+]],
+    [#text(weight: "bold", fill: navy)[Level 4]],
+    [#text(weight: "bold", fill: navy)[Level 3]],
+    [#text(weight: "bold", fill: navy)[Level 2]],
+    [#text(weight: "bold", fill: navy)[Level 1]],
+  ),
+  [*Knowledge*\ What did we learn about you?],
+  [We learn something especially meaningful, specific, or memorable about you.],
+  [Clear, relevant information helps us understand who you are, your interests, experiences, skills, or goals.],
+  [Relevant information gives us a good sense of who you are.],
+  [Some relevant information is shared, but ideas may be limited or unclear.],
+  [Very limited information is shared.],
+
+  [*Thinking*\ How did you choose and organize what to share?],
+  [Choices are especially thoughtful, purposeful, creative, or effective.],
+  [Ideas are thoughtfully chosen and organized to support the presentation.],
+  [Ideas are chosen and organized appropriately.],
+  [Some planning and organization are shown, but ideas may be incomplete or disconnected.],
+  [Limited planning or organization is evident.],
+
+  [*Communication*\ Could everyone understand and follow you?],
+  [Exceptionally clear, polished, and accessible. Visuals or other supports are purposeful and highly effective.],
+  [Clear, effective, and easy to follow. Slides or visuals are readable, accessible, and useful.],
+  [Clear and understandable. Supporting material is generally readable and useful.],
+  [Usually understandable, but some parts may be difficult to hear, read, or follow.],
+  [Often difficult to understand, read, or follow.],
+
+  [*Application*\ Did you connect with us?],
+  [Creates a particularly strong, thoughtful, or memorable connection with the audience.],
+  [Uses the presentation effectively to introduce yourself and create meaningful connections with the class.],
+  [Successfully introduces yourself and makes an appropriate connection with the audience.],
+  [Some connection is made, but the introduction may need more development.],
+  [Limited connection with the audience is made.],
+)
+```
+
+### Going above and beyond
+
+A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you.
+
+These are ideas, not extra requirements. **A simple, clear, genuine presentation can earn 100%.**
+
+```{=typst}
+#v(0.15in)
+#line(length: 100%, stroke: 0.6pt + rgb("#D7DCE0"))
+#v(0.07in)
+#text(size: 8pt, fill: rgb("#66717B"))[
+  Technology Department, Port Credit Secondary School
+]
+#h(1fr)
+#text(size: 7.5pt, fill: rgb("#66717B"))[
+  Open sourced by Andrew Andrade · CC BY 4.0 · github.com/mrandrewandrade/assets
+]
+```
