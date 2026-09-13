@@ -6,12 +6,13 @@ from __future__ import annotations
 import base64
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 import markdown
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from weasyprint import HTML
+from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSIGNMENTS = ROOT / "assignments"
@@ -42,6 +43,32 @@ def combined_css() -> str:
     stylesheet = (TEMPLATES / "assignment.css").read_text(encoding="utf-8")
     stylesheet = re.sub(r'^@import url\("\.\./brand/tokens\.css"\);\s*', "", stylesheet)
     return tokens + "\n" + stylesheet
+
+
+def write_pdf(html_path: Path, pdf_path: Path) -> None:
+    generated = date.today().isoformat()
+    footer = f"""
+    <div style="width:100%; padding:0 0.58in; font-family:Arial,Helvetica,sans-serif;
+                font-size:7.5pt; color:#66717B; display:flex; justify-content:space-between;">
+      <span>{pdf_path.name} · generated {generated}</span>
+      <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
+    </div>
+    """
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch()
+        page = browser.new_page()
+        page.goto(html_path.resolve().as_uri(), wait_until="networkidle")
+        page.emulate_media(media="print")
+        page.pdf(
+            path=str(pdf_path),
+            print_background=True,
+            prefer_css_page_size=True,
+            display_header_footer=True,
+            header_template="<span></span>",
+            footer_template=footer,
+        )
+        browser.close()
 
 
 def render(path: Path) -> tuple[Path, Path]:
@@ -77,7 +104,7 @@ def render(path: Path) -> tuple[Path, Path]:
     pdf_path = DIST / f"{slug}.pdf"
 
     html_path.write_text(html, encoding="utf-8")
-    HTML(string=html, base_url=str(ROOT)).write_pdf(pdf_path)
+    write_pdf(html_path, pdf_path)
 
     return html_path, pdf_path
 
