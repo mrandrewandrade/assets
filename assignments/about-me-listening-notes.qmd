@@ -1,0 +1,101 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (top: 0.30in, bottom: 0.48in, x: 0.42in),
+  footer: context [
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.6pt,
+      fill: slate,
+      hyphenate: false,
+    )
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 12pt,
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 8.5pt, fill: charcoal, hyphenate: false)
+#set par(leading: 0.48em, justify: false)
+
+#let blank-field(label) = [
+  #text(weight: "bold")[#label:]
+  #h(5pt)
+  #line(length: 1.8in, stroke: 0.55pt + slate)
+]
+
+#let page-header(side) = [
+  #grid(
+    columns: (1fr, auto),
+    align: horizon,
+    [
+      #text(size: 21pt, weight: "bold", fill: navy)[Listening Notes]
+      #v(1pt)
+      #text(size: 8.8pt, fill: slate)[About Me Presentations - #side]
+    ],
+    [#text(size: 7.8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+  )
+  #v(3pt)
+  #line(length: 0.58in, stroke: 3pt + pcss-gold)
+  #v(2pt)
+  #line(length: 100%, stroke: 1.2pt + navy)
+  #v(4pt)
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 14pt,
+    [#blank-field("Name")],
+    [#blank-field("Class")],
+    [#blank-field("Date")],
+  )
+  #v(4pt)
+  #block(
+    width: 100%,
+    fill: sail,
+    stroke: (left: 3pt + pcss-gold),
+    inset: (left: 9pt, right: 9pt, top: 4pt, bottom: 4pt),
+  )[
+    #text(size: 8pt)[Phones away unless directed otherwise. Face the speaker, avoid side conversations, and write one brief note for every presenter. In the final column, circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. Knowingly inaccurate self-ratings can reduce #text(weight: "bold")[Integrity & Reflection] more than the original lapse. #text(weight: "bold")[Submit this sheet after the final presentation day.]]
+  ]
+  #v(5pt)
+]
+
+#let notes-table(start, end) = table(
+  columns: (0.34in, 1.28in, 3.05in, 3.35in, 1.78in),
+  inset: (x: 4pt, y: 6.6pt),
+  stroke: 0.55pt + mist,
+  align: left + top,
+  table.header(
+    [#text(weight: "bold", fill: navy)[No.]],
+    [#text(weight: "bold", fill: navy)[Presenter]],
+    [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
+    [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
+    [#align(center)[#text(weight: "bold", fill: navy)[My attention]] #linebreak() #align(center)[#text(size: 7.2pt, fill: slate)[A / S / N]]],
+  ),
+  ..range(start, end + 1).map(n => (
+    [#n], [], [], [], [#align(center)[A / S / N]],
+  )).flatten()
+)
+
+#page-header([Side 1 - Presenters 1-17])
+#notes-table(1, 17)
+
+#pagebreak()
+#page-header([Side 2 - Presenters 18-34])
+#notes-table(18, 34)
+```
