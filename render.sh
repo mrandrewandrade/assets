@@ -24,6 +24,14 @@ run_python_script() {
   fi
 }
 
+build_name_tag() {
+  quarto render assignments/name-tag-pdf.qmd
+  mv -f assignments/name-tag-pdf.pdf dist/name-tag-pdf.pdf
+
+  quarto render assignments/name-tag-pdf-word.qmd
+  mv -f assignments/name-tag-pdf.docx dist/name-tag-pdf.docx
+}
+
 build_presentation() {
   quarto render assignments/about-me-presentation.qmd
   mv -f assignments/about-me-presentation.pdf dist/past-present-becoming.pdf
@@ -56,9 +64,13 @@ build_teacher_marking() {
 
 case "${1:-}" in
   about-me|about-me-all)
+    build_name_tag
     build_presentation
     build_listening
     build_teacher_marking
+    ;;
+  name-tag|name-tag-pdf)
+    build_name_tag
     ;;
   past-present-becoming|about-me-presentation)
     build_presentation
@@ -72,6 +84,7 @@ case "${1:-}" in
   *)
     echo "Use:"
     echo "  bash render.sh about-me"
+    echo "  bash render.sh name-tag-pdf"
     echo "  bash render.sh past-present-becoming"
     echo "  bash render.sh the-way-we-meet"
     echo "  bash render.sh combined-teacher-marking"
