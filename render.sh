@@ -3,90 +3,86 @@ set -e
 
 mkdir -p dist
 
-# Remove superseded separate teacher trackers from older local builds.
+# Remove old filenames from previous local builds so dist only shows the current names.
 rm -f \
+  dist/name-tag-pdf.pdf \
+  dist/name-tag-pdf.docx \
+  dist/past-present-becoming.pdf \
+  dist/past-present-becoming.docx \
+  dist/the-way-we-meet.pdf \
+  dist/the-way-we-meet.docx \
+  dist/the-way-we-meet-notes.pdf \
+  dist/the-way-we-meet-notes.docx \
+  dist/combined-teacher-marking.pdf \
+  dist/combined-teacher-marking.docx \
   dist/past-present-becoming-teacher-marking.pdf \
   dist/past-present-becoming-teacher-marking.docx \
   dist/the-way-we-meet-teacher-marking.pdf \
   dist/the-way-we-meet-teacher-marking.docx
 
-run_python_script() {
-  if command -v python3 >/dev/null 2>&1; then
-    python3 "$@"
-  elif command -v python >/dev/null 2>&1; then
-    python "$@"
-  elif command -v py >/dev/null 2>&1; then
-    py -3 "$@"
-  else
-    echo "Python 3 is required to generate the editable combined teacher marking DOCX."
-    echo "Install Python 3, reopen Git Bash, and run this command again."
-    exit 1
-  fi
-}
-
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
-  mv -f assignments/name-tag-pdf.pdf dist/name-tag-pdf.pdf
+  mv -f assignments/name-tag-pdf.pdf dist/0.0-name-tag-pdf.pdf
 
   quarto render assignments/name-tag-pdf-word.qmd
-  mv -f assignments/name-tag-pdf.docx dist/name-tag-pdf.docx
+  mv -f assignments/name-tag-pdf.docx dist/0.0-name-tag-pdf.docx
 }
 
 build_presentation() {
   quarto render assignments/about-me-presentation.qmd
-  mv -f assignments/about-me-presentation.pdf dist/past-present-becoming.pdf
+  mv -f assignments/about-me-presentation.pdf dist/0.1-past-present-becoming.pdf
 
   quarto render assignments/about-me-presentation-word.qmd
-  mv -f assignments/past-present-becoming.docx dist/past-present-becoming.docx
+  mv -f assignments/past-present-becoming.docx dist/0.1-past-present-becoming.docx
 }
 
 build_listening() {
   quarto render assignments/about-me-listening.qmd
-  mv -f assignments/about-me-listening.pdf dist/the-way-we-meet.pdf
+  mv -f assignments/about-me-listening.pdf dist/0.2-the-way-we-meet.pdf
 
   quarto render assignments/about-me-listening-word.qmd
-  mv -f assignments/the-way-we-meet.docx dist/the-way-we-meet.docx
+  mv -f assignments/the-way-we-meet.docx dist/0.2-the-way-we-meet.docx
 
   quarto render assignments/about-me-listening-notes.qmd
-  mv -f assignments/about-me-listening-notes.pdf dist/the-way-we-meet-notes.pdf
+  mv -f assignments/about-me-listening-notes.pdf dist/0.2-the-way-we-meet-notes.pdf
 
   quarto render assignments/about-me-listening-notes-word.qmd
-  mv -f assignments/the-way-we-meet-notes.docx dist/the-way-we-meet-notes.docx
+  mv -f assignments/the-way-we-meet-notes.docx dist/0.2-the-way-we-meet-notes.docx
 }
 
 build_teacher_marking() {
   quarto render assignments/combined-teacher-marking.qmd
-  mv -f assignments/combined-teacher-marking.pdf dist/combined-teacher-marking.pdf
+  mv -f assignments/combined-teacher-marking.pdf dist/0.1-0.2-combined-teacher-marking.pdf
 
-  run_python_script scripts/build_combined_teacher_word.py
-  mv -f assignments/combined-teacher-marking.docx dist/combined-teacher-marking.docx
+  quarto render assignments/combined-teacher-marking-word.qmd
+  mv -f assignments/combined-teacher-marking.docx dist/0.1-0.2-combined-teacher-marking.docx
 }
 
 case "${1:-}" in
-  about-me|about-me-all)
+  about-me|about-me-all|0-series)
     build_name_tag
     build_presentation
     build_listening
     build_teacher_marking
     ;;
-  name-tag|name-tag-pdf)
+  0.0|0.0-name-tag|name-tag|name-tag-pdf)
     build_name_tag
     ;;
-  past-present-becoming|about-me-presentation)
+  0.1|0.1-past-present-becoming|past-present-becoming|about-me-presentation)
     build_presentation
     ;;
-  the-way-we-meet|about-me-listening)
+  0.2|0.2-the-way-we-meet|the-way-we-meet|about-me-listening)
     build_listening
     ;;
-  combined-teacher-marking)
+  combined-teacher-marking|0.1-0.2-combined-teacher-marking)
     build_teacher_marking
     ;;
   *)
     echo "Use:"
     echo "  bash render.sh about-me"
-    echo "  bash render.sh name-tag-pdf"
-    echo "  bash render.sh past-present-becoming"
-    echo "  bash render.sh the-way-we-meet"
+    echo "  bash render.sh 0.0"
+    echo "  bash render.sh 0.1"
+    echo "  bash render.sh 0.2"
     echo "  bash render.sh combined-teacher-marking"
     exit 1
     ;;
