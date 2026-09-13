@@ -25,7 +25,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [Open sourced by Andrew Andrade · #link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution],
+      [#link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[#text(fill: navy)[https://github.com/mrandrewandrade]]],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -70,7 +70,7 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
   )[
-    #text(size: 8.4pt)[#text(weight: "bold")[Scoring:] 4+ = 2 · L4 = 1.5 · L3 = 1 · L2 = 0.5 · L1 = 0.  #text(weight: "bold")[K] Knowledge · #text(weight: "bold")[T] Thinking · #text(weight: "bold")[C] Communication · #text(weight: "bold")[V/A] Visuals & accessibility · #text(weight: "bold")[A] Application, including response to post-presentation discussion.  #text(weight: "bold")[Learning Skills:] R, O, IW, C, I, SR.]
+    #text(size: 8.4pt)[#text(weight: "bold")[Scoring:] 4+ = 2 marks · L4 = 1.5 marks · L3 = 1 mark · L2 = 0.5 marks · L1 = 0 marks.  #text(weight: "bold")[K] Knowledge · #text(weight: "bold")[T] Thinking · #text(weight: "bold")[C] Communication · #text(weight: "bold")[V/A] Visuals & accessibility · #text(weight: "bold")[A] Application, including response to post-presentation discussion.  #text(weight: "bold")[Learning Skills:] R, O, IW, C, I, SR.]
   ]
   #v(6pt)
 ]
