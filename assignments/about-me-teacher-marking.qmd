@@ -33,6 +33,12 @@ format:
 #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 8.4pt, fill: charcoal, hyphenate: false)
 #set par(leading: 0.5em, justify: false)
 
+#let blank-field(label) = [
+  #text(weight: "bold")[#label:]
+  #h(5pt)
+  #line(length: 1.9in, stroke: 0.55pt + slate)
+]
+
 #let page-header(side) = [
   #grid(
     columns: (1fr, auto),
@@ -52,9 +58,9 @@ format:
   #grid(
     columns: (1fr, 1fr, 1fr),
     column-gutter: 14pt,
-    [#text(weight: "bold")[Class:] __________________________________],
-    [#text(weight: "bold")[Date:] ___________________________________],
-    [#text(weight: "bold")[Teacher:] ________________________________],
+    [#blank-field("Class")],
+    [#blank-field("Date")],
+    [#blank-field("Teacher")],
   )
   #v(4pt)
   #block(
