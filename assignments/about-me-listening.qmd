@@ -79,7 +79,7 @@ format:
   column-gutter: 18pt,
   [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
   [#text(weight: "bold")[Value:] /10 - equal to Past, Present & Becoming],
-  [#text(weight: "bold")[Submit:] completed listening notes after the final presentation day],
+  [#text(weight: "bold")[Submit:] clear photos of both sides of your completed listening sheet after the final presentation day],
 )
 
 #v(7pt)
@@ -106,11 +106,12 @@ I can make space for another person by listening with attention, recording meani
     #v(3pt)
     For each presenter, record:
     #v(2pt)
-    - something you learned or noticed
-    - a connection, question, or comment
+    - something you learned, noticed, connected with, questioned, or wanted to comment on
     - your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]
     #v(3pt)
     Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
+    #v(3pt)
+    #text(weight: "bold")[Before you submit:] complete the /10 self-evaluation, Learning Skills reflection, and activity feedback on the back. Then upload clear photos of both sides to Google Classroom.
   ],
 )
 
