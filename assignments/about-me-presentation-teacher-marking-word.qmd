@@ -1,0 +1,86 @@
+---
+title: "Past, Present & Becoming - Teacher Quick Marking"
+subtitle: "Who was I? Who am I? Who am I becoming?"
+format:
+  docx:
+    toc: false
+output-file: past-present-becoming-teacher-marking.docx
+---
+
+**Technology Commons · Port Credit Secondary School**
+
+## Scoring
+
+Each criterion is worth **2 marks**, for a total of **/10**.
+
+**4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks**
+
+- **K** - Knowledge: what did we learn about the student?
+- **T** - Thinking: how thoughtfully were ideas chosen and organized?
+- **C** - Communication: was the presentation clear and easy to follow?
+- **V/A** - Visuals & accessibility: did supports help the audience?
+- **A** - Application: did the student connect with the audience and respond during discussion?
+
+## Students 1-9
+
+| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 1. |  |  |  |  |  |  |  |
+| 2. |  |  |  |  |  |  |  |
+| 3. |  |  |  |  |  |  |  |
+| 4. |  |  |  |  |  |  |  |
+| 5. |  |  |  |  |  |  |  |
+| 6. |  |  |  |  |  |  |  |
+| 7. |  |  |  |  |  |  |  |
+| 8. |  |  |  |  |  |  |  |
+| 9. |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 10-18
+
+| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 10. |  |  |  |  |  |  |  |
+| 11. |  |  |  |  |  |  |  |
+| 12. |  |  |  |  |  |  |  |
+| 13. |  |  |  |  |  |  |  |
+| 14. |  |  |  |  |  |  |  |
+| 15. |  |  |  |  |  |  |  |
+| 16. |  |  |  |  |  |  |  |
+| 17. |  |  |  |  |  |  |  |
+| 18. |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 19-26
+
+| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 19. |  |  |  |  |  |  |  |
+| 20. |  |  |  |  |  |  |  |
+| 21. |  |  |  |  |  |  |  |
+| 22. |  |  |  |  |  |  |  |
+| 23. |  |  |  |  |  |  |  |
+| 24. |  |  |  |  |  |  |  |
+| 25. |  |  |  |  |  |  |  |
+| 26. |  |  |  |  |  |  |  |
+
+\newpage
+
+## Students 27-34
+
+| Student | K /2 | T /2 | C /2 | V/A /2 | A /2 | Total /10 | Feedback / discussion notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| 27. |  |  |  |  |  |  |  |
+| 28. |  |  |  |  |  |  |  |
+| 29. |  |  |  |  |  |  |  |
+| 30. |  |  |  |  |  |  |  |
+| 31. |  |  |  |  |  |  |  |
+| 32. |  |  |  |  |  |  |  |
+| 33. |  |  |  |  |  |  |  |
+| 34. |  |  |  |  |  |  |  |
+
+---
+
+**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
