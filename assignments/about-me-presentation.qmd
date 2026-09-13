@@ -60,7 +60,7 @@ format:
       align: horizon,
       [#image("technology-department-emblem.svg", width: 0.54in)],
       [
-        #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Department]
+        #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Commons]
         #linebreak()
         #text(size: 7.7pt, fill: slate)[Port Credit Secondary School]
       ],
@@ -81,11 +81,13 @@ format:
   [#text(weight: "bold")[Due:] Tues., Sept. 15, 2026 at 7:00 PM],
   [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
 )
+#v(5pt)
+#line(length: 100%, stroke: 0.7pt + mist)
 
-#v(9pt)
-#text(size: 15.5pt, weight: "bold", fill: navy)[The goal]
+#v(8pt)
+#text(size: 15.5pt, weight: "bold", fill: navy)[Learning goal]
 #v(3pt)
-Introduce yourself in a way that helps the class get to know you and make connections with you.
+I can introduce myself clearly, choose details that help others get to know me, and make a meaningful connection with my audience.
 #v(3pt)
 You can keep it simple. There is no required number of slides, pictures, or facts.
 
@@ -147,7 +149,7 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   columns: (1fr, auto),
   align: horizon,
   [#text(size: 18pt, weight: "bold", fill: navy)[Rubric]],
-  [#text(size: 7.7pt, fill: slate)[Technology Department · Port Credit Secondary School]],
+  [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
 #text(size: 8.8pt, fill: slate)[Level 4+ describes exceptional evidence within Level 4. It is not a separate Ontario achievement level.]
