@@ -16,36 +16,49 @@ The document system follows a restrained, Tufte-inspired approach:
 - tables designed for scanning, not visual noise
 - source content stays in Markdown
 
-The visual tokens are adapted from the Technology Commons brand kit in `mrandrewandrade/commons`, using Sail White, Lighthouse Black, Port Credit Navy, Technical Blue, and PCSS Gold.
+The visual tokens are adapted from the Technology Commons brand kit in `mrandrewandrade/commons`.
 
 ## Repository structure
 
 ```text
 assignments/          Markdown source for individual assignments
 brand/                Reusable brand tokens and logo
-scripts/              PDF build tooling
 templates/            Shared document template and print stylesheet
+scripts/              Build and setup tooling
 dist/                 Generated output, not committed
 ```
 
-## Build
+## Windows setup
 
-Requires Python 3.11+.
+From Git Bash:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python scripts/build.py
+bash scripts/setup-windows.sh
 ```
 
-Build one document:
+This creates the local Python environment, installs the Python packages, and installs Playwright Chromium for PDF rendering.
+
+The PDF renderer intentionally uses Chromium rather than WeasyPrint so Windows does not need separate GTK/Pango libraries.
+
+## Build one document
 
 ```bash
+source .venv/Scripts/activate
 python scripts/build.py assignments/about-me-presentation.md
 ```
 
-Generated PDFs and HTML previews are written to `dist/`.
+Generated files are written to:
+
+```text
+dist/about-me-presentation.html
+dist/about-me-presentation.pdf
+```
+
+Build every assignment by omitting the filename:
+
+```bash
+python scripts/build.py
+```
 
 A GitHub Actions workflow also builds the PDFs and uploads them as a workflow artifact on pushes and pull requests.
 
@@ -55,7 +68,7 @@ A GitHub Actions workflow also builds the PDFs and uploads them as a workflow ar
 2. Change the YAML front matter and student-facing content.
 3. Keep rubric columns in this order when used: `Category | 4+ | Level 4 | Level 3 | Level 2 | Level 1`.
 4. Use `<div class="page-break"></div>` when a clean page break is needed.
-5. Run the build and inspect the PDF before posting it for students.
+5. Build only the document you changed and inspect the PDF before posting it for students.
 
 ## Licensing
 
