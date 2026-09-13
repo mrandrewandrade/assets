@@ -10,6 +10,20 @@ rm -f \
   dist/the-way-we-meet-teacher-marking.pdf \
   dist/the-way-we-meet-teacher-marking.docx
 
+run_python_script() {
+  if command -v python3 >/dev/null 2>&1; then
+    python3 "$@"
+  elif command -v python >/dev/null 2>&1; then
+    python "$@"
+  elif command -v py >/dev/null 2>&1; then
+    py -3 "$@"
+  else
+    echo "Python 3 is required to generate the editable combined teacher marking DOCX."
+    echo "Install Python 3, reopen Git Bash, and run this command again."
+    exit 1
+  fi
+}
+
 build_presentation() {
   quarto render assignments/about-me-presentation.qmd
   mv -f assignments/about-me-presentation.pdf dist/past-present-becoming.pdf
@@ -36,7 +50,7 @@ build_teacher_marking() {
   quarto render assignments/combined-teacher-marking.qmd
   mv -f assignments/combined-teacher-marking.pdf dist/combined-teacher-marking.pdf
 
-  quarto render assignments/combined-teacher-marking-word.qmd
+  run_python_script scripts/build_combined_teacher_word.py
   mv -f assignments/combined-teacher-marking.docx dist/combined-teacher-marking.docx
 }
 
