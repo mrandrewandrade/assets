@@ -1,5 +1,5 @@
 ---
-title: "The Way We Meet"
+title: "0.2 The Way We Meet"
 subtitle: "Attention, connection, and making space for one another."
 format:
   docx:
@@ -12,7 +12,7 @@ output-file: the-way-we-meet.docx
 | | |
 |---|---|
 | **Presentations** | Weds., Sept. 16 & Thurs., Sept. 17, 2026 |
-| **Value** | /10 - equal to Past, Present & Becoming |
+| **Value** | /10 - equal to 0.1 Past, Present & Becoming |
 | **Submit** | One completed PDF after the final presentation day |
 
 ## Learning goal
@@ -28,21 +28,14 @@ I can make space for another person by listening with attention, recording meani
 - Listen for something you learned, noticed, or connected with.
 - Be ready to ask a question, make a comment, or share a connection.
 
-## Your listening package
+## Your 4-part listening package
 
-For each presenter, record:
+- **Pages 1-2:** listening notes for every presenter plus an honest **A / S / N** attention rating.
+- **Page 3:** **Listening Reflection** plus your Learning Skills self-evaluation. You must explain how you listened, where your attention slipped if it did, and what you will do next time.
+- **Page 4:** **Presentation Reflection**. Reconsider your **0.1 Past, Present & Becoming** presentation after hearing classmates. Compare what you did with effective choices you noticed in other presentations, then identify a next step.
+- **Page 4:** brief feedback on the activity and your final PDF submission check.
 
-- something you learned, noticed, connected with, questioned, or wanted to comment on
-- your own attention: **Attentive / Some lapses / Not attentive**
-
-Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
-
-After the final presentation, complete:
-
-- your **/10 listening self-evaluation** using evidence from what you actually did
-- your **Learning Skills self-check**, including evidence or a next step
-- a reflection on **your own Past, Present & Becoming presentation** after hearing classmates
-- brief feedback on the activity
+**Both written reflections are required.**
 
 ## Be honest about your attention
 
@@ -50,7 +43,7 @@ An honest **Some lapses** or **Not attentive** is better than falsely claiming f
 
 ## Google Classroom submission - one PDF
 
-Submit **one PDF** containing your completed listening notes and reflection pages.
+Submit **one PDF** containing your completed listening notes and both reflection pages.
 
 - **Digital option:** use the editable Word file in Word, or upload it to Google Drive and open it with Google Docs. When finished, download/export it as a PDF.
 - **Paper option:** scan the completed pages directly to PDF using a document scanning app, or take clear photos, place the photos in a Google Doc or Word file in the correct order, and export that file as a PDF.
@@ -72,7 +65,7 @@ How we meet one another matters. These are reported separately from the /10 achi
 
 \newpage
 
-# The Way We Meet · /10
+# 0.2 The Way We Meet · Rubric · /10
 
 Each criterion is worth **2 marks**.
 
@@ -120,26 +113,24 @@ Each criterion is worth **2 marks**.
 
 | Level | Marks | Evidence |
 |---|---:|---|
-| 4+ | 2 marks | Complete across all presentations and reflection sections, with careful follow-through. |
-| Level 4 | 1.5 marks | Nearly complete and consistently maintained across the presentation days and reflection. |
+| 4+ | 2 marks | All four parts are complete and carefully maintained across the presentation days and reflections. |
+| Level 4 | 1.5 marks | Nearly complete and consistently maintained across the notes and both reflection pages. |
 | Level 3 | 1 mark | Mostly complete with only a few gaps. |
 | Level 2 | 0.5 marks | Several gaps, missing sections, or repeated reminders are needed. |
 | Level 1 | 0 marks | Work is largely incomplete or not submitted. |
 
 ## Integrity & Reflection
 
-*Were your ratings and reflection honest?*
+*Were you honest and thoughtful?*
 
 | Level | Marks | Evidence |
 |---|---:|---|
-| 4+ | 2 marks | Self-ratings are accurate and thoughtful; reflection on the student's own presentation uses specific learning from classmates to identify strengths and next steps. |
-| Level 4 | 1.5 marks | Self-ratings are honest and align well with notes and observed behaviour; presentation reflection is specific and thoughtful. |
-| Level 3 | 1 mark | Self-ratings are generally honest; presentation reflection identifies a reasonable strength or next step. |
-| Level 2 | 0.5 marks | Self-ratings are superficial or inconsistent; presentation reflection is vague or needs prompting. |
-| Level 1 | 0 marks | Self-assessment is missing, knowingly inaccurate, or shows little meaningful reflection. |
+| 4+ | 2 marks | Self-ratings are accurate; the listening reflection uses specific evidence, and the presentation reflection thoughtfully compares the student's work with classmates to identify clear learning and next steps. |
+| Level 4 | 1.5 marks | Self-ratings are honest; both reflections are specific, thoughtful, and well connected to what was observed and heard. |
+| Level 3 | 1 mark | Self-ratings are generally honest; both reflections identify reasonable evidence, learning, or next steps. |
+| Level 2 | 0.5 marks | Self-ratings or reflections are superficial, inconsistent, vague, or need prompting. |
+| Level 1 | 0 marks | Self-assessment is missing, knowingly inaccurate, or one or both required reflections show little meaningful thought. |
 
 **Integrity rule:** Knowingly marking yourself **Attentive** when your notes or observed behaviour clearly show otherwise may result in **0/2 for Integrity & Reflection**. Honest acknowledgement of a lapse is treated more favourably than misrepresenting it.
-
----
 
 **CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
