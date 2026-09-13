@@ -70,7 +70,7 @@
   stroke: 0.55pt + mist,
   align: left + top,
   table.header(
-    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[No.]],
     [#text(weight: "bold", fill: navy)[Presenter]],
     [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
     [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
@@ -103,7 +103,7 @@
   stroke: 0.55pt + mist,
   align: left + top,
   table.header(
-    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[No.]],
     [#text(weight: "bold", fill: navy)[Presenter]],
     [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
     [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
