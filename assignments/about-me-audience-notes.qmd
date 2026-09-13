@@ -33,6 +33,12 @@ format:
 #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 9pt, fill: charcoal, hyphenate: false)
 #set par(leading: 0.52em, justify: false)
 
+#let blank-field(label) = [
+  #text(weight: "bold")[#label:]
+  #h(5pt)
+  #line(length: 1.9in, stroke: 0.55pt + slate)
+]
+
 #let page-header(side) = [
   #grid(
     columns: (1fr, auto),
@@ -52,9 +58,9 @@ format:
   #grid(
     columns: (1fr, 1fr, 1fr),
     column-gutter: 14pt,
-    [#text(weight: "bold")[Name:] __________________________________],
-    [#text(weight: "bold")[Class:] _________________________________],
-    [#text(weight: "bold")[Date:] __________________________________],
+    [#blank-field("Name")],
+    [#blank-field("Class")],
+    [#blank-field("Date")],
   )
   #v(5pt)
   #block(
@@ -76,7 +82,7 @@ format:
   stroke: 0.55pt + mist,
   align: left + top,
   table.header(
-    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[No.]],
     [#text(weight: "bold", fill: navy)[Presenter]],
     [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
     [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
@@ -109,7 +115,7 @@ format:
   stroke: 0.55pt + mist,
   align: left + top,
   table.header(
-    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[No.]],
     [#text(weight: "bold", fill: navy)[Presenter]],
     [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
     [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
