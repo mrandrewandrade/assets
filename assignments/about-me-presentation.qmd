@@ -218,51 +218,20 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   [Limited connection is made and there is little response to the discussion.],
 )
 
-#v(6pt)
-#block(
-  width: 100%,
-  fill: sail,
-  stroke: (left: 3pt + pcss-gold),
-  inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
-)[
-  #text(size: 10.2pt, weight: "bold", fill: navy)[Learning Skills · feedback only]
-  #v(2pt)
-  #text(size: 8.1pt, fill: slate)[These are separate from the /10 mark. Here are examples of how you can show them during this assignment:]
-  #v(3pt)
-  #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 12pt,
-    row-gutter: 3pt,
-    [#text(size: 8.1pt, weight: "bold")[Responsibility:] #text(size: 8.1pt)[prepared and ready to present]],
-    [#text(size: 8.1pt, weight: "bold")[Organization:] #text(size: 8.1pt)[plans and keeps ideas easy to follow]],
-    [#text(size: 8.1pt, weight: "bold")[Independent Work:] #text(size: 8.1pt)[uses class time and works without constant prompting]],
-    [#text(size: 8.1pt, weight: "bold")[Collaboration:] #text(size: 8.1pt)[listens respectfully, takes notes, and supports discussion]],
-    [#text(size: 8.1pt, weight: "bold")[Initiative:] #text(size: 8.1pt)[volunteers to present or contributes a question or connection]],
-    [#text(size: 8.1pt, weight: "bold")[Self-Regulation:] #text(size: 8.1pt)[manages time, nerves, focus, and feedback]],
-  )
-]
-
 #v(5pt)
+#line(length: 100%, stroke: 0.7pt + mist)
+#v(4pt)
+#text(size: 9.6pt, weight: "bold", fill: navy)[Learning Skills]
+#v(2pt)
 #grid(
-  columns: (1fr, 1.45in),
-  column-gutter: 14pt,
-  [
-    #text(size: 10.4pt, weight: "bold", fill: navy)[Going above and beyond]
-    #v(2pt)
-    #text(size: 8.4pt)[A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you. These are ideas, not extra requirements.]
-  ],
-  [
-    #block(
-      width: 100%,
-      fill: navy,
-      inset: (x: 10pt, y: 10pt),
-    )[
-      #align(center)[
-        #text(size: 8.5pt, fill: white)[TOTAL]
-        #linebreak()
-        #text(size: 20pt, weight: "bold", fill: white)[/10]
-      ]
-    ]
-  ],
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 12pt,
+  row-gutter: 2pt,
+  [#text(size: 7.8pt, weight: "bold")[Responsibility:] #text(size: 7.8pt)[prepared and ready]],
+  [#text(size: 7.8pt, weight: "bold")[Organization:] #text(size: 7.8pt)[planned and easy to follow]],
+  [#text(size: 7.8pt, weight: "bold")[Independent Work:] #text(size: 7.8pt)[uses class time well]],
+  [#text(size: 7.8pt, weight: "bold")[Collaboration:] #text(size: 7.8pt)[listens, takes notes, joins discussion]],
+  [#text(size: 7.8pt, weight: "bold")[Initiative:] #text(size: 7.8pt)[volunteers or contributes]],
+  [#text(size: 7.8pt, weight: "bold")[Self-Regulation:] #text(size: 7.8pt)[manages time, focus, and nerves]],
 )
 ```
