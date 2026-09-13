@@ -49,7 +49,7 @@ format:
   column-gutter: 24pt,
   align: top,
   [
-    #text(size: 24pt, weight: "bold", fill: navy)[The Way We Meet]
+    #text(size: 24pt, weight: "bold", fill: navy)[0.2 The Way We Meet]
     #v(1pt)
     #text(size: 10.8pt, fill: slate)[Attention, connection, and making space for one another.]
   ],
@@ -78,7 +78,7 @@ format:
   columns: (1.2fr, 1fr, 1.2fr),
   column-gutter: 18pt,
   [#text(weight: "bold")[Presentations:] Weds., Sept. 16 & Thurs., Sept. 17, 2026],
-  [#text(weight: "bold")[Value:] /10 - equal to Past, Present & Becoming],
+  [#text(weight: "bold")[Value:] /10 - equal to 0.1 Past, Present & Becoming],
   [#text(weight: "bold")[Submit:] one completed PDF after the final presentation day],
 )
 
@@ -102,15 +102,15 @@ I can make space for another person by listening with attention, recording meani
     - be ready to ask a question, make a comment, or share a connection
   ],
   [
-    #text(size: 13pt, weight: "bold", fill: navy)[Your listening package]
+    #text(size: 13pt, weight: "bold", fill: navy)[Your 4-part listening package]
     #v(2pt)
-    For each presenter, record a brief listening note and your own attention: #text(weight: "bold")[Attentive / Some lapses / Not attentive]. Short phrases are enough.
-    #v(2pt)
-    After the final presentation, complete:
-    - your /10 listening self-evaluation with evidence
-    - your Learning Skills self-check with evidence or a next step
-    - a reflection on #text(weight: "bold")[your own presentation] after hearing classmates
-    - brief feedback on the activity
+    #text(weight: "bold")[Pages 1-2:] notes for all presenters + A/S/N attention ratings.
+    #linebreak()
+    #text(weight: "bold")[Page 3:] Listening Reflection + Learning Skills self-evaluation.
+    #linebreak()
+    #text(weight: "bold")[Page 4:] Presentation Reflection comparing your #text(weight: "bold")[0.1 presentation] with what you learned from classmates + activity feedback.
+    #v(3pt)
+    #text(weight: "bold", fill: navy)[Both written reflections are required.]
   ],
 )
 
@@ -164,7 +164,7 @@ I can make space for another person by listening with attention, recording meani
 #grid(
   columns: (1fr, auto),
   align: horizon,
-  [#text(size: 18pt, weight: "bold", fill: navy)[The Way We Meet · /10]],
+  [#text(size: 18pt, weight: "bold", fill: navy)[0.2 The Way We Meet · Rubric · /10]],
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
@@ -215,18 +215,18 @@ I can make space for another person by listening with attention, recording meani
   [Does not participate respectfully in discussion.],
 
   [#text(weight: "bold", fill: navy)[Completion & Consistency] #linebreak() #text(fill: slate)[Did you follow through?]],
-  [Complete across all presentations and reflection sections, with careful follow-through.],
-  [Nearly complete and consistently maintained across the presentation days and reflection.],
+  [All four parts are complete and carefully maintained across the presentation days and reflections.],
+  [Nearly complete and consistently maintained across the notes and both reflection pages.],
   [Mostly complete with only a few gaps.],
   [Several gaps, missing sections, or repeated reminders are needed.],
   [Work is largely incomplete or not submitted.],
 
-  [#text(weight: "bold", fill: navy)[Integrity & Reflection] #linebreak() #text(fill: slate)[Were your ratings and reflection honest?]],
-  [Self-ratings are accurate and thoughtful; reflection on the student's own presentation uses specific learning from classmates to identify strengths and next steps.],
-  [Self-ratings are honest and align well with notes and observed behaviour; presentation reflection is specific and thoughtful.],
-  [Self-ratings are generally honest; presentation reflection identifies a reasonable strength or next step.],
-  [Self-ratings are superficial or inconsistent; presentation reflection is vague or needs prompting.],
-  [Self-assessment is missing, knowingly inaccurate, or shows little meaningful reflection.],
+  [#text(weight: "bold", fill: navy)[Integrity & Reflection] #linebreak() #text(fill: slate)[Were you honest and thoughtful?]],
+  [Self-ratings are accurate; the listening reflection uses specific evidence, and the presentation reflection thoughtfully compares the student's work with classmates to identify clear learning and next steps.],
+  [Self-ratings are honest; both reflections are specific, thoughtful, and well connected to what was observed and heard.],
+  [Self-ratings are generally honest; both reflections identify reasonable evidence, learning, or next steps.],
+  [Self-ratings or reflections are superficial, inconsistent, vague, or need prompting.],
+  [Self-assessment is missing, knowingly inaccurate, or one or both required reflections show little meaningful thought.],
 )
 
 #v(7pt)
