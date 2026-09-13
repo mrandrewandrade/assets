@@ -36,7 +36,7 @@ build_teacher_marking() {
   quarto render assignments/combined-teacher-marking.qmd
   mv -f assignments/combined-teacher-marking.pdf dist/combined-teacher-marking.pdf
 
-  quarto render assignments/combined-teacher-marking-word.qmd
+  quarto pandoc assignments/combined-teacher-marking-word.md --to docx --output assignments/combined-teacher-marking.docx
   mv -f assignments/combined-teacher-marking.docx dist/combined-teacher-marking.docx
 }
 
