@@ -49,7 +49,7 @@ format:
   column-gutter: 24pt,
   align: top,
   [
-    #text(size: 25pt, weight: "bold", fill: navy)[Past, Present & Becoming]
+    #text(size: 25pt, weight: "bold", fill: navy)[0.1 Past, Present & Becoming]
     #v(1pt)
     #text(size: 11pt, fill: slate)[Who was I? Who am I? Who am I becoming?]
   ],
@@ -154,14 +154,14 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 #v(2pt)
 #text(size: 8.5pt, weight: "bold", fill: navy)[After you present:] #text(size: 8.5pt)[We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.]
 #v(1pt)
-#text(size: 8pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[The Way We Meet]. After hearing the class, you will revisit this rubric and reflect on your own presentation.]
+#text(size: 8pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[0.2 The Way We Meet]. After hearing the class, you will revisit this rubric and compare your own presentation with what you learned from others.]
 
 #pagebreak()
 
 #grid(
   columns: (1fr, auto),
   align: horizon,
-  [#text(size: 18pt, weight: "bold", fill: navy)[Rubric · /10]],
+  [#text(size: 18pt, weight: "bold", fill: navy)[0.1 Past, Present & Becoming · Rubric · /10]],
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
