@@ -148,19 +148,19 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
 #grid(
   columns: (1fr, auto),
   align: horizon,
-  [#text(size: 18pt, weight: "bold", fill: navy)[Rubric]],
+  [#text(size: 18pt, weight: "bold", fill: navy)[Rubric · 8 marks]],
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
-#text(size: 8.8pt, fill: slate)[Level 4+ describes exceptional evidence within Level 4. It is not a separate Ontario achievement level.]
-#v(8pt)
+#text(size: 8.5pt, fill: slate)[Each category is worth 2 marks. Level 4+ = 2.0 · Level 4 = 1.6-1.9 · Level 3 = 1.4-1.5 · Level 2 = 1.2-1.3 · Level 1 = 1.0-1.1 · Below Level 1 = 0-0.9. Level 4+ is exceptional evidence within Level 4, not a separate Ontario achievement level.]
+#v(6pt)
 
 #set text(hyphenate: false)
 #set par(justify: false)
 
 #table(
   columns: (1.08fr, 1.24fr, 1.42fr, 1.35fr, 1.30fr, 1.28fr),
-  inset: (x: 6.5pt, y: 8pt),
+  inset: (x: 6.5pt, y: 7pt),
   align: left + top,
   stroke: 0.5pt + white,
   fill: (x, y) => {
@@ -180,28 +180,28 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
     [#text(weight: "bold", fill: navy)[Level 1]],
   ),
 
-  [#text(weight: "bold", fill: navy)[Knowledge] #linebreak() #text(fill: slate)[What did we learn about you?]],
+  [#text(weight: "bold", fill: navy)[Knowledge /2] #linebreak() #text(fill: slate)[What did we learn about you?]],
   [We learn something especially meaningful, specific, or memorable about you.],
   [Clear, relevant information helps us understand who you are, your interests, experiences, skills, or goals.],
   [Relevant information gives us a good sense of who you are.],
   [Some relevant information is shared, but ideas may be limited or unclear.],
   [Very limited information is shared.],
 
-  [#text(weight: "bold", fill: navy)[Thinking] #linebreak() #text(fill: slate)[How did you choose and organize what to share?]],
+  [#text(weight: "bold", fill: navy)[Thinking /2] #linebreak() #text(fill: slate)[How did you choose and organize what to share?]],
   [Choices are especially thoughtful, purposeful, creative, or effective.],
   [Ideas are thoughtfully chosen and organized to support the presentation.],
   [Ideas are chosen and organized appropriately.],
   [Some planning and organization are shown, but ideas may be incomplete or disconnected.],
   [Limited planning or organization is evident.],
 
-  [#text(weight: "bold", fill: navy)[Communication] #linebreak() #text(fill: slate)[Could everyone understand and follow you?]],
+  [#text(weight: "bold", fill: navy)[Communication /2] #linebreak() #text(fill: slate)[Could everyone understand and follow you?]],
   [Exceptionally clear, polished, and accessible. Visuals or other supports are purposeful and highly effective.],
   [Clear, effective, and easy to follow. Slides or visuals are readable, accessible, and useful.],
   [Clear and understandable. Supporting material is generally readable and useful.],
   [Usually understandable, but some parts may be difficult to hear, read, or follow.],
   [Often difficult to understand, read, or follow.],
 
-  [#text(weight: "bold", fill: navy)[Application] #linebreak() #text(fill: slate)[Did you connect with us?]],
+  [#text(weight: "bold", fill: navy)[Application /2] #linebreak() #text(fill: slate)[Did you connect with us?]],
   [Creates a particularly strong, thoughtful, or memorable connection with the audience.],
   [Uses the presentation effectively to introduce yourself and create meaningful connections with the class.],
   [Successfully introduces yourself and makes an appropriate connection with the audience.],
@@ -209,17 +209,39 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
   [Limited connection with the audience is made.],
 )
 
-#v(10pt)
-#block(
-  width: 100%,
-  fill: sail,
-  stroke: (left: 3pt + pcss-gold),
-  inset: (left: 12pt, right: 12pt, top: 8pt, bottom: 8pt),
-)[
-  #text(size: 11.5pt, weight: "bold", fill: navy)[Going above and beyond]
-  #v(3pt)
-  #text(size: 9.2pt)[A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you.]
-  #v(3pt)
-  #text(size: 9.2pt)[These are ideas, not extra requirements. #text(weight: "bold")[A simple, clear, genuine presentation can earn 100%.]]
-]
+#v(7pt)
+#grid(
+  columns: (1fr, 1.65in),
+  column-gutter: 14pt,
+  [
+    #block(
+      width: 100%,
+      fill: sail,
+      stroke: (left: 3pt + pcss-gold),
+      inset: (left: 11pt, right: 11pt, top: 7pt, bottom: 7pt),
+    )[
+      #text(size: 10.5pt, weight: "bold", fill: navy)[Submission buffer /2]
+      #v(2pt)
+      #text(size: 8.7pt)[Normally 2/2 when submitted by the deadline and in the requested format. Late or missed work may reduce this buffer under school/board policy. Approved or excused circumstances are not penalized.]
+    ]
+  ],
+  [
+    #block(
+      width: 100%,
+      fill: navy,
+      inset: (x: 12pt, y: 12pt),
+    )[
+      #align(center)[
+        #text(size: 9pt, fill: white)[TOTAL]
+        #linebreak()
+        #text(size: 21pt, weight: "bold", fill: white)[/10]
+      ]
+    ]
+  ],
+)
+
+#v(7pt)
+#text(size: 10.8pt, weight: "bold", fill: navy)[Going above and beyond]
+#v(2pt)
+#text(size: 8.8pt)[A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you. These are ideas, not extra requirements. A simple, clear, genuine presentation can earn full achievement marks.]
 ```
