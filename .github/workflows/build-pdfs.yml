@@ -25,8 +25,12 @@ jobs:
       - name: Build About Me resource pack
         run: bash render.sh about-me
 
-      - name: Add resources to website
-        run: cp dist/*.pdf dist/*.docx site/
+      - name: Stage website
+        run: |
+          rm -rf site-build
+          mkdir -p site-build
+          cp site/index.html site-build/index.html
+          cp dist/*.pdf dist/*.docx site-build/
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
@@ -38,7 +42,7 @@ jobs:
       - name: Upload Pages site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site/
+          path: site-build/
 
   deploy:
     if: github.event_name != 'pull_request'
