@@ -40,12 +40,22 @@ format:
   #line(length: 1.8in, stroke: 0.55pt + slate)
 ]
 
-#let page-header(side) = [
+#let identity-fields = [
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 14pt,
+    [#blank-field("Name")],
+    [#blank-field("Class")],
+    [#blank-field("Date")],
+  )
+]
+
+#let notes-header(side) = [
   #grid(
     columns: (1fr, auto),
     align: horizon,
     [
-      #text(size: 20pt, weight: "bold", fill: navy)[The Way We Meet - Listening Notes]
+      #text(size: 20pt, weight: "bold", fill: navy)[0.2 The Way We Meet - Listening Notes]
       #v(1pt)
       #text(size: 8.6pt, fill: slate)[Attention, connection, and making space for one another - #side]
     ],
@@ -56,13 +66,7 @@ format:
   #v(2pt)
   #line(length: 100%, stroke: 1.2pt + navy)
   #v(4pt)
-  #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 14pt,
-    [#blank-field("Name")],
-    [#blank-field("Class")],
-    [#blank-field("Date")],
-  )
+  #identity-fields
   #v(4pt)
   #block(
     width: 100%,
@@ -70,9 +74,29 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
   )[
-    #text(size: 7.7pt)[Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. Complete the reflection page after the final presentation.]
+    #text(size: 7.7pt)[Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. After the final presentation, complete the two reflection pages.]
   ]
   #v(5pt)
+]
+
+#let reflection-header(title, subtitle) = [
+  #grid(
+    columns: (1fr, auto),
+    align: horizon,
+    [
+      #text(size: 20pt, weight: "bold", fill: navy)[#title]
+      #v(1pt)
+      #text(size: 8.6pt, fill: slate)[#subtitle]
+    ],
+    [#text(size: 7.6pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+  )
+  #v(3pt)
+  #line(length: 0.58in, stroke: 3pt + pcss-gold)
+  #v(2pt)
+  #line(length: 100%, stroke: 1.2pt + navy)
+  #v(4pt)
+  #identity-fields
+  #v(6pt)
 ]
 
 #let notes-table(start, end, pad) = table(
@@ -91,37 +115,26 @@ format:
   )).flatten()
 )
 
-#page-header([Side 1 - Presenters 1-17])
+#let response-box(prompt, height: 0.85in) = block(
+  width: 100%,
+  height: height,
+  stroke: 0.55pt + mist,
+  inset: 6pt,
+  [#text(size: 7.2pt, weight: "bold", fill: navy)[#prompt]]
+)
+
+#notes-header([Page 1 - Presenters 1-17])
 #notes-table(1, 17, 6.0pt)
 
 #pagebreak()
-#page-header([Side 2 - Presenters 18-34])
+#notes-header([Page 2 - Presenters 18-34])
 #notes-table(18, 34, 6.0pt)
 
 #pagebreak()
-#grid(
-  columns: (1fr, auto),
-  align: horizon,
-  [
-    #text(size: 20pt, weight: "bold", fill: navy)[The Way We Meet - Reflection & Submission]
-    #v(1pt)
-    #text(size: 8.6pt, fill: slate)[Use what you heard to evaluate your listening, your Learning Skills, and your own presentation.]
-  ],
-  [#text(size: 7.6pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+#reflection-header(
+  [0.2 The Way We Meet - Listening Reflection],
+  [Evaluate how you listened, how you handled lapses, and what you will do next time.],
 )
-#v(3pt)
-#line(length: 0.58in, stroke: 3pt + pcss-gold)
-#v(2pt)
-#line(length: 100%, stroke: 1.2pt + navy)
-#v(4pt)
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  column-gutter: 14pt,
-  [#blank-field("Name")],
-  [#blank-field("Class")],
-  [#blank-field("Date")],
-)
-#v(6pt)
 
 #grid(
   columns: (1fr, 1fr),
@@ -139,7 +152,7 @@ format:
       [#text(size: 6.5pt, weight: "bold")[Attention & Presence] #linebreak() #text(size: 6.1pt, fill: slate)[phone away, face speaker, avoid side talk, refocus]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
       [#text(size: 6.5pt, weight: "bold")[Audience Notes] #linebreak() #text(size: 6.1pt, fill: slate)[specific note for each presenter]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
       [#text(size: 6.5pt, weight: "bold")[Discussion & Connections] #linebreak() #text(size: 6.1pt, fill: slate)[questions, comments, or connections]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
-      [#text(size: 6.5pt, weight: "bold")[Completion & Consistency] #linebreak() #text(size: 6.1pt, fill: slate)[kept up across both days and reflection]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
+      [#text(size: 6.5pt, weight: "bold")[Completion & Consistency] #linebreak() #text(size: 6.1pt, fill: slate)[kept up across all four pages]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
       [#text(size: 6.5pt, weight: "bold")[Integrity & Reflection] #linebreak() #text(size: 6.1pt, fill: slate)[honest ratings and thoughtful reflection]], [#line(length: 0.24in, stroke: 0.45pt + slate)], [#v(9pt)],
     )
     #v(2pt)
@@ -148,7 +161,7 @@ format:
   [
     #text(size: 10.5pt, weight: "bold", fill: navy)[Learning Skills self-evaluation]
     #v(2pt)
-    #text(size: 7pt, fill: slate)[Circle C = Consistently, S = Sometimes, or N = Not yet. For each skill, think about what you did or what you need to change.]
+    #text(size: 7pt, fill: slate)[Circle C = Consistently, S = Sometimes, or N = Not yet. Give evidence of what you did or a specific next step.]
     #v(3pt)
     #table(
       columns: (1.48in, 0.54in, 1fr),
@@ -165,81 +178,74 @@ format:
   ],
 )
 
-#v(6pt)
+#v(8pt)
+#text(size: 11pt, weight: "bold", fill: navy)[Listening reflection - write in your own words]
+#v(3pt)
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 12pt,
+  [#response-box([When was I most attentive? What did I do that helped me listen?], height: 1.0in)],
+  [#response-box([Where did my attention slip, or where did I need a reminder? What happened?], height: 1.0in)],
+  [#response-box([What is one specific thing I will do next time to be a better listener and audience member?], height: 1.0in)],
+)
+
+#pagebreak()
+#reflection-header(
+  [0.2 The Way We Meet - Presentation Reflection & Submission],
+  [Compare your 0.1 presentation with what you learned from watching and listening to classmates.],
+)
+
 #block(
   width: 100%,
   fill: sail,
   stroke: (left: 3pt + pcss-gold),
   inset: (left: 9pt, right: 9pt, top: 5pt, bottom: 5pt),
 )[
-  #text(size: 10pt, weight: "bold", fill: navy)[Looking back at my Past, Present & Becoming presentation]
-  #v(2pt)
-  #text(size: 7pt, fill: slate)[Now that you have heard other people present, use the same five criteria from Assignment 1 to reconsider your own work. This is about learning from what you heard, not changing the original teacher mark.]
-  #v(3pt)
-  #grid(
-    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-    column-gutter: 8pt,
-    [#text(size: 6.7pt, weight: "bold")[Knowledge] #linebreak() #line(length: 0.30in, stroke: 0.45pt + slate) /2],
-    [#text(size: 6.7pt, weight: "bold")[Thinking] #linebreak() #line(length: 0.30in, stroke: 0.45pt + slate) /2],
-    [#text(size: 6.7pt, weight: "bold")[Communication] #linebreak() #line(length: 0.30in, stroke: 0.45pt + slate) /2],
-    [#text(size: 6.7pt, weight: "bold")[Visuals & access.] #linebreak() #line(length: 0.30in, stroke: 0.45pt + slate) /2],
-    [#text(size: 6.7pt, weight: "bold")[Application] #linebreak() #line(length: 0.30in, stroke: 0.45pt + slate) /2],
-    [#text(size: 6.7pt, weight: "bold")[Total] #linebreak() #line(length: 0.36in, stroke: 0.45pt + slate) /10],
-  )
-  #v(4pt)
-  #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 14pt,
-    [
-      #text(size: 6.8pt, weight: "bold")[One strength I recognize in my own presentation now:]
-      #v(2pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-      #v(4pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-    ],
-    [
-      #text(size: 6.8pt, weight: "bold")[Something another presenter did that I could learn from:]
-      #v(2pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-      #v(4pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-    ],
-    [
-      #text(size: 6.8pt, weight: "bold")[If I presented again, one specific change I would make:]
-      #v(2pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-      #v(4pt)
-      #line(length: 100%, stroke: 0.45pt + slate)
-    ],
-  )
+  #text(size: 9pt, weight: "bold", fill: navy)[This is a reflection, not a re-mark.] #text(size: 8pt)[After seeing other approaches, reconsider what worked in your own 0.1 Past, Present & Becoming presentation and what you would do differently next time.]
 ]
 
-#v(5pt)
+#v(6pt)
+#text(size: 10.5pt, weight: "bold", fill: navy)[Re-score my 0.1 presentation after hearing the class]
+#v(3pt)
+#grid(
+  columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  column-gutter: 8pt,
+  [#text(size: 7pt, weight: "bold")[Knowledge] #linebreak() #line(length: 0.34in, stroke: 0.45pt + slate) /2],
+  [#text(size: 7pt, weight: "bold")[Thinking] #linebreak() #line(length: 0.34in, stroke: 0.45pt + slate) /2],
+  [#text(size: 7pt, weight: "bold")[Communication] #linebreak() #line(length: 0.34in, stroke: 0.45pt + slate) /2],
+  [#text(size: 7pt, weight: "bold")[Visuals & access.] #linebreak() #line(length: 0.34in, stroke: 0.45pt + slate) /2],
+  [#text(size: 7pt, weight: "bold")[Application] #linebreak() #line(length: 0.34in, stroke: 0.45pt + slate) /2],
+  [#text(size: 7pt, weight: "bold")[Total] #linebreak() #line(length: 0.40in, stroke: 0.45pt + slate) /10],
+)
+
+#v(8pt)
+#text(size: 11pt, weight: "bold", fill: navy)[Presentation reflection - compare, do not just score]
+#v(3pt)
 #grid(
   columns: (1fr, 1fr),
-  column-gutter: 14pt,
-  [
-    #text(size: 7.8pt, weight: "bold", fill: navy)[Activity feedback]
-    #linebreak()
-    #text(size: 6.8pt)[What helped you listen, connect, or learn from others?]
-    #v(2pt)
-    #line(length: 100%, stroke: 0.45pt + slate)
-  ],
-  [
-    #text(size: 7.8pt, weight: "bold", fill: navy)[Improve it next time]
-    #linebreak()
-    #text(size: 6.8pt)[What should change to make this activity better?]
-    #v(2pt)
-    #line(length: 100%, stroke: 0.45pt + slate)
-  ],
+  column-gutter: 12pt,
+  row-gutter: 10pt,
+  [#response-box([After hearing others, what is one part of my own presentation that I still think was effective? Why?], height: 1.05in)],
+  [#response-box([Describe one specific thing another presenter did effectively. Why did it work for the audience?], height: 1.05in)],
+  [#response-box([Compared with what I saw and heard, what is one part of my presentation I would change? Why?], height: 1.05in)],
+  [#response-box([What is one specific thing I will do differently in my next presentation?], height: 1.05in)],
 )
-#v(5pt)
+
+#v(8pt)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 12pt,
+  [#response-box([Activity feedback: What helped you listen, connect, or learn from other people?], height: 0.72in)],
+  [#response-box([Improve it next time: What should change to make this activity better?], height: 0.72in)],
+)
+
+#v(7pt)
 #block(
   width: 100%,
   fill: sail,
   stroke: (left: 3pt + navy),
   inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
 )[
-  #text(size: 7.1pt, weight: "bold", fill: navy)[Submit one PDF to Google Classroom.] #text(size: 7.1pt)[Digital: complete the editable Word file in Word, or upload it to Google Drive and open it with Google Docs, then download/export as PDF. Paper: scan these pages directly to PDF, or take clear photos, place them in a Google Doc or Word file in the correct order, then export as PDF. Open the PDF and check that all #text(weight: "bold")[three pages] are readable, upright, complete, and in order. Do not submit separate images.]
+  #text(size: 7.1pt, weight: "bold", fill: navy)[Submit one PDF to Google Classroom.] #text(size: 7.1pt)[Digital: complete the editable Word file in Word, or upload it to Google Drive and open it with Google Docs, then download/export as PDF. Paper: scan these pages directly to PDF, or take clear photos, place them in a Google Doc or Word file in the correct order, then export as PDF. Open the PDF and check that all #text(weight: "bold")[four pages] are readable, upright, complete, and in order. Do not submit separate images.]
 ]
 ```
