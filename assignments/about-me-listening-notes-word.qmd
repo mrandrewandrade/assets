@@ -1,5 +1,5 @@
 ---
-title: "The Way We Meet - Listening Notes"
+title: "0.2 The Way We Meet - Listening Notes & Reflection"
 subtitle: "Attention, connection, and making space for one another."
 format:
   docx:
@@ -13,7 +13,7 @@ output-file: the-way-we-meet-notes.docx
 **Class:** ________________________________  
 **Date:** ________________________________
 
-## How to use this sheet
+## How to use this package
 
 For every presenter, write one brief note that shows what you learned, noticed, connected with, questioned, or wanted to comment on. Then rate your own attention honestly:
 
@@ -23,7 +23,12 @@ For every presenter, write one brief note that shows what you learned, noticed, 
 
 Phones should be away unless directed otherwise. Face the speaker, avoid side conversations, and make space for the person presenting. An honest **S** or **N** is better than a false **A**. Knowingly inaccurate self-ratings can reduce the **Integrity & Reflection** score more than the original lapse would have.
 
-After the final presentation, complete the reflection page. You will evaluate your listening, your Learning Skills, and your own **Past, Present & Becoming** presentation using what you learned from hearing other people.
+This package has four parts:
+
+1. **Listening notes, presenters 1-17**
+2. **Listening notes, presenters 18-34**
+3. **Listening Reflection + Learning Skills self-evaluation**
+4. **Presentation Reflection + activity feedback + submission check**
 
 ## Presenters 1-17
 
@@ -73,9 +78,9 @@ After the final presentation, complete the reflection page. You will evaluate yo
 
 \newpage
 
-# Reflection & Submission
+# 0.2 Listening Reflection
 
-Use evidence from what you actually did. If something was not strong, say what happened and what you will do differently next time.
+This is where you evaluate **how you listened**, not just whether you filled in the notes table. Use evidence from what you actually did. If something was not strong, explain what happened and what you will do differently next time.
 
 ## Listening self-evaluation
 
@@ -84,13 +89,13 @@ Use evidence from what you actually did. If something was not strong, say what h
 | Attention & Presence | Phone away, face the speaker, avoid side conversations, refocus after distractions | ___ /2 |  |
 | Audience Notes | A specific listening note for each presenter | ___ /2 |  |
 | Discussion & Connections | Questions, comments, or connections that help the conversation | ___ /2 |  |
-| Completion & Consistency | Kept the sheet up to date across both days and completed the reflection | ___ /2 |  |
-| Integrity & Reflection | Honest A/S/N ratings and thoughtful reflection on my own presentation | ___ /2 |  |
+| Completion & Consistency | Kept the package up to date and completed all four parts | ___ /2 |  |
+| Integrity & Reflection | Honest A/S/N ratings and thoughtful reflection | ___ /2 |  |
 | **Total** |  | **___ /10** | |
 
 ## Learning Skills self-evaluation
 
-For each skill, choose **C = Consistently**, **S = Sometimes**, or **N = Not yet**. In the last column, give evidence of what you did. If you did not show the skill consistently, write what you should do differently next time.
+For each skill, choose **C = Consistently**, **S = Sometimes**, or **N = Not yet**. Give evidence of what you did. If you did not show the skill consistently, write a specific next step.
 
 | Learning Skill | C / S / N | What it can look like | My evidence or next step |
 |---|:---:|---|---|
@@ -101,11 +106,35 @@ For each skill, choose **C = Consistently**, **S = Sometimes**, or **N = Not yet
 | Initiative | C / S / N | Offered a thoughtful question, comment, or connection |  |
 | Self-Regulation | C / S / N | Managed distractions and refocused after a lapse |  |
 
-## Looking back at my Past, Present & Becoming presentation
+## Listening reflection - write in your own words
 
-Now that you have heard other people present, use the same five criteria from Assignment 1 to reconsider your own work. This reflection is about learning from what you heard, not changing the original teacher mark.
+**When was I most attentive? What did I do that helped me listen?**
 
-| Criterion | My score |
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+**Where did my attention slip, or where did I need a reminder? What happened?**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+**What is one specific thing I will do next time to be a better listener and audience member?**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+\newpage
+
+# 0.2 Presentation Reflection
+
+After hearing the class, compare your own **0.1 Past, Present & Becoming** presentation with what you saw and heard from other presenters. This is a reflection, not a re-mark of the original presentation.
+
+## Re-score my 0.1 presentation after hearing the class
+
+| Criterion | My score now |
 |---|:---:|
 | Knowledge | ___ /2 |
 | Thinking | ___ /2 |
@@ -114,15 +143,29 @@ Now that you have heard other people present, use the same five criteria from As
 | Application | ___ /2 |
 | **Total** | **___ /10** |
 
-**One strength I recognize in my own presentation now:**
+## Presentation reflection - compare, do not just score
+
+**After hearing others, what is one part of my own presentation that I still think was effective? Why?**
 
 ________________________________________________________________________________
 
-**Something another presenter did that I could learn from:**
+________________________________________________________________________________
+
+**Describe one specific thing another presenter did effectively. Why did it work for the audience?**
 
 ________________________________________________________________________________
 
-**If I presented again, one specific change I would make:**
+________________________________________________________________________________
+
+**Compared with what I saw and heard, what is one part of my presentation I would change? Why?**
+
+________________________________________________________________________________
+
+________________________________________________________________________________
+
+**What is one specific thing I will do differently in my next presentation?**
+
+________________________________________________________________________________
 
 ________________________________________________________________________________
 
@@ -138,13 +181,11 @@ ________________________________________________________________________________
 
 ## Google Classroom submission - one PDF
 
-Submit **one PDF** containing all of your completed listening and reflection pages.
+Submit **one PDF** containing all four completed parts of this package.
 
 - **Digital option:** complete this editable Word file in Word, or upload it to Google Drive and open it with Google Docs. When finished, download/export it as a PDF.
 - **Paper option:** scan the completed pages directly to PDF using a document scanning app. If you take regular photos instead, put the clear photos into a Google Doc or Word file in the correct order, then export that file as a PDF.
 - Open the final PDF before submitting. Check that every page is readable, upright, complete, and in the correct order.
 - Submit the **one PDF**, not separate JPG/PNG images or an editable Word/Google file.
-
----
 
 **CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
