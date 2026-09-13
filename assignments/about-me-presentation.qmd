@@ -23,14 +23,14 @@ format:
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-      size: 7pt,
+      size: 6.8pt,
       fill: slate,
       hyphenate: false,
     )
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [Open sourced by Andrew Andrade · CC BY 4.0 · github.com/mrandrewandrade/assets],
+      [Open sourced by Andrew Andrade · #link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] means you may share and adapt with attribution · #link("https://github.com/mrandrewandrade/assets")[#text(fill: navy)[github.com/mrandrewandrade/assets]]],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -88,10 +88,8 @@ format:
 #text(size: 15.5pt, weight: "bold", fill: navy)[Learning goal]
 #v(3pt)
 I can introduce myself clearly, choose details that help others get to know me, and make a meaningful connection with my audience.
-#v(3pt)
-You can keep it simple. There is no required number of slides, pictures, or facts.
 
-#v(8pt)
+#v(6pt)
 #block(
   width: 100%,
   fill: sail,
@@ -100,8 +98,10 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 )[
   #text(size: 12pt, weight: "bold", fill: navy)[Help us get to know you. Help us connect with you.]
 ]
+#v(4pt)
+You can keep it simple. There is no required number of slides, pictures, or facts.
 
-#v(9pt)
+#v(8pt)
 #grid(
   columns: (1.08fr, 0.92fr),
   column-gutter: 26pt,
