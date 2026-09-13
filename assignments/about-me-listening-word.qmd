@@ -1,0 +1,130 @@
+---
+title: "Presentation Listening & Participation"
+subtitle: "Listening is an assignment too."
+format:
+  docx:
+    toc: false
+output-file: about-me-listening.docx
+---
+
+**Technology Commons · Port Credit Secondary School**
+
+| | |
+|---|---|
+| **Presentations** | Weds., Sept. 16 & Thurs., Sept. 17, 2026 |
+| **Value** | /10 - equal to the presentation assignment |
+| **Submit** | Completed listening notes after the final presentation day |
+
+## Learning goal
+
+I can listen actively, record meaningful notes, contribute respectfully to discussion, and reflect honestly on my own attention.
+
+## What active listening looks like
+
+- Phones away unless directed otherwise.
+- Face the speaker and use attentive body language.
+- Avoid side conversations and other distractions.
+- Write one brief note for every presenter.
+- Listen for something you learned, noticed, or connected with.
+- Be ready to ask a question, make a comment, or share a connection.
+
+## Your listening notes
+
+For each presenter, record:
+
+- something you learned or noticed
+- a connection, question, or comment
+- your own attention: **Attentive / Some lapses / Not attentive**
+
+Short phrases are enough. The goal is evidence that you were actually listening, not long paragraphs.
+
+## Be honest about your attention
+
+An honest **Some lapses** or **Not attentive** is better than falsely claiming full attention. A lapse does not automatically mean zero. If your self-rating is knowingly inaccurate, the **Integrity & Reflection** score can be reduced more than the original attention lapse would have cost.
+
+# Learning Skills
+
+These are reported separately from the /10 achievement mark, but this assignment gives strong evidence of them.
+
+| Learning Skill | How you can show it while listening |
+|---|---|
+| **Responsibility** | brings the sheet, keeps phones away, completes and submits the work |
+| **Organization** | keeps notes complete, readable, and in order |
+| **Independent Work** | records notes without repeated reminders |
+| **Collaboration** | listens respectfully and helps create a good audience for classmates |
+| **Initiative** | offers thoughtful questions, comments, or connections |
+| **Self-Regulation** | manages devices, impulses, distractions, and refocuses after a lapse |
+
+\newpage
+
+# Listening Rubric · /10
+
+Each criterion is worth **2 marks**.
+
+**4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks**
+
+## Attention & Presence
+
+*Were you genuinely listening?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Consistently attentive, respectful, and visibly engaged; quickly redirects any minor distraction. |
+| Level 4 | 1.5 marks | Attentive and respectful throughout with very few lapses. |
+| Level 3 | 1 mark | Generally attentive with some minor lapses that do not disrupt others. |
+| Level 2 | 0.5 marks | Attention is inconsistent; repeated distraction, device use, or side conversation is evident. |
+| Level 1 | 0 marks | Frequently disengaged, distracting, or not meaningfully listening. |
+
+## Audience Notes
+
+*Did your notes show listening?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Complete, specific notes consistently capture meaningful details and connections. |
+| Level 4 | 1.5 marks | Complete notes capture clear details and useful connections for nearly every presenter. |
+| Level 3 | 1 mark | Most notes are complete and show reasonable attention to the presentations. |
+| Level 2 | 0.5 marks | Notes are incomplete, vague, or missing for several presenters. |
+| Level 1 | 0 marks | Very few usable notes are recorded. |
+
+## Discussion & Connections
+
+*Did you help the conversation?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Thoughtful questions, comments, or connections consistently deepen discussion. |
+| Level 4 | 1.5 marks | Contributes relevant questions, comments, or connections when appropriate. |
+| Level 3 | 1 mark | Participates appropriately and makes some relevant contributions. |
+| Level 2 | 0.5 marks | Rarely contributes or contributions need significant prompting. |
+| Level 1 | 0 marks | Does not participate respectfully in discussion. |
+
+## Completion & Consistency
+
+*Did you follow through?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Complete across all presentations and both days, with careful follow-through. |
+| Level 4 | 1.5 marks | Nearly complete and consistently maintained across the presentation days. |
+| Level 3 | 1 mark | Mostly complete with only a few gaps. |
+| Level 2 | 0.5 marks | Several gaps, missing sections, or repeated reminders are needed. |
+| Level 1 | 0 marks | Work is largely incomplete or not submitted. |
+
+## Integrity & Reflection
+
+*Were your attention ratings honest?*
+
+| Level | Marks | Evidence |
+|---|---:|---|
+| 4+ | 2 marks | Self-ratings are accurate, thoughtful, and show strong awareness of lapses and recovery. |
+| Level 4 | 1.5 marks | Self-ratings are honest and align well with notes and observed behaviour. |
+| Level 3 | 1 mark | Self-ratings are generally honest with minor inconsistency or limited reflection. |
+| Level 2 | 0.5 marks | Self-ratings are superficial, inconsistent, or need prompting to be accurate. |
+| Level 1 | 0 marks | Self-assessment is missing or knowingly inaccurate. |
+
+**Integrity rule:** Knowingly marking yourself **Attentive** when your notes or observed behaviour clearly show otherwise may result in **0/2 for Integrity & Reflection**. Honest acknowledgement of a lapse is treated more favourably than misrepresenting it.
+
+---
+
+**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
