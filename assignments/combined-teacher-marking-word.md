@@ -16,279 +16,177 @@ Mark a flag only when you observe it. A blank flag means no concern was observed
 
 ## Students 1-17
 
-### 1. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 2. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 3. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 4. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 5. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 6. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 7. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 8. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 9. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 10. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 11. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 12. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 13. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 14. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 15. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 16. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 17. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
+### Student 1
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 2
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 3
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 4
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 5
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 6
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 7
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 8
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 9
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 10
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 11
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 12
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 13
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 14
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 15
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 16
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 17
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
 
 ## Students 18-34
 
-### 18. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 19. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 20. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 21. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 22. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 23. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 24. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 25. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 26. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 27. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 28. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 29. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 30. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 31. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 32. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 33. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
-
-### 34. ______________________________________________
-
-**Presentation:** K ___  T ___  C ___  V ___  A ___  **P /10** ___  
-
-**Listening:** PH ___  TK ___  OF ___  NN ___  PR ___  **L /10** ___  
-
-**Learning Skills / quick note:** ______________________________________________
+### Student 18
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 19
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 20
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 21
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 22
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 23
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 24
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 25
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 26
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 27
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 28
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 29
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 30
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 31
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 32
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 33
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
+
+### Student 34
+Presentation: K /2:   T /2:   C /2:   V /2:   A /2:   P /10:  
+Listening: PH [ ]   TK [ ]   OF [ ]   NN [ ]   PR [ ]   L /10:  
+Learning Skills / quick note:
 
 ---
 
