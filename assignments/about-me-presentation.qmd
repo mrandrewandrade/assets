@@ -10,11 +10,10 @@ format:
 #let mist = rgb("#D9DEE2")
 #let sail = rgb("#F4F5F6")
 #let pcss-gold = rgb("#F4C91D")
-#let level-plus = rgb("#FFF4BF")
-#let level-4 = rgb("#D5D9DC")
-#let level-3 = rgb("#E2E5E7")
-#let level-2 = rgb("#ECEEEF")
-#let level-1 = rgb("#F5F6F7")
+#let level-4 = rgb("#FFF4BF")
+#let level-3 = rgb("#D5D9DC")
+#let level-2 = rgb("#E2E5E7")
+#let level-1 = rgb("#ECEEEF")
 
 #set page(
   paper: "us-letter",
@@ -148,62 +147,62 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
 #grid(
   columns: (1fr, auto),
   align: horizon,
-  [#text(size: 18pt, weight: "bold", fill: navy)[Rubric · 8 marks]],
+  [#text(size: 18pt, weight: "bold", fill: navy)[Rubric · /10]],
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
-#text(size: 8.5pt, fill: slate)[Each category is worth 2 marks. Level 4+ = 2.0 · Level 4 = 1.6-1.9 · Level 3 = 1.4-1.5 · Level 2 = 1.2-1.3 · Level 1 = 1.0-1.1 · Below Level 1 = 0-0.9. Level 4+ is exceptional evidence within Level 4, not a separate Ontario achievement level.]
+#text(size: 8.5pt, fill: slate)[Five criteria × 4 points = 20. Divide the total by 2 for a mark out of 10. A 4+ may be noted for exceptional evidence within Level 4, but it still scores 4/4.]
 #v(6pt)
 
 #set text(hyphenate: false)
 #set par(justify: false)
 
 #table(
-  columns: (1.08fr, 1.24fr, 1.42fr, 1.35fr, 1.30fr, 1.28fr),
-  inset: (x: 6.5pt, y: 7pt),
+  columns: (1.20fr, 1.44fr, 1.40fr, 1.34fr, 1.30fr),
+  inset: (x: 6.5pt, y: 6.3pt),
   align: left + top,
   stroke: 0.5pt + white,
   fill: (x, y) => {
-    if x == 1 { level-plus }
-    else if x == 2 { level-4 }
-    else if x == 3 { level-3 }
-    else if x == 4 { level-2 }
-    else if x == 5 { level-1 }
+    if x == 1 { level-4 }
+    else if x == 2 { level-3 }
+    else if x == 3 { level-2 }
+    else if x == 4 { level-1 }
     else { white }
   },
   table.header(
-    [#text(weight: "bold", fill: navy)[Category]],
-    [#text(weight: "bold", fill: navy)[4+]],
-    [#text(weight: "bold", fill: navy)[Level 4]],
-    [#text(weight: "bold", fill: navy)[Level 3]],
-    [#text(weight: "bold", fill: navy)[Level 2]],
-    [#text(weight: "bold", fill: navy)[Level 1]],
+    [#text(weight: "bold", fill: navy)[Criterion]],
+    [#text(weight: "bold", fill: navy)[Level 4 · 4 pts]],
+    [#text(weight: "bold", fill: navy)[Level 3 · 3 pts]],
+    [#text(weight: "bold", fill: navy)[Level 2 · 2 pts]],
+    [#text(weight: "bold", fill: navy)[Level 1 · 1 pt]],
   ),
 
-  [#text(weight: "bold", fill: navy)[Knowledge /2] #linebreak() #text(fill: slate)[What did we learn about you?]],
-  [We learn something especially meaningful, specific, or memorable about you.],
-  [Clear, relevant information helps us understand who you are, your interests, experiences, skills, or goals.],
+  [#text(weight: "bold", fill: navy)[Knowledge] #linebreak() #text(fill: slate)[What did we learn about you?]],
+  [Clear, relevant, specific information helps us understand who you are, your interests, experiences, skills, or goals.],
   [Relevant information gives us a good sense of who you are.],
   [Some relevant information is shared, but ideas may be limited or unclear.],
   [Very limited information is shared.],
 
-  [#text(weight: "bold", fill: navy)[Thinking /2] #linebreak() #text(fill: slate)[How did you choose and organize what to share?]],
-  [Choices are especially thoughtful, purposeful, creative, or effective.],
+  [#text(weight: "bold", fill: navy)[Thinking] #linebreak() #text(fill: slate)[How did you choose and organize what to share?]],
   [Ideas are thoughtfully chosen and organized to support the presentation.],
   [Ideas are chosen and organized appropriately.],
   [Some planning and organization are shown, but ideas may be incomplete or disconnected.],
   [Limited planning or organization is evident.],
 
-  [#text(weight: "bold", fill: navy)[Communication /2] #linebreak() #text(fill: slate)[Could everyone understand and follow you?]],
-  [Exceptionally clear, polished, and accessible. Visuals or other supports are purposeful and highly effective.],
-  [Clear, effective, and easy to follow. Slides or visuals are readable, accessible, and useful.],
-  [Clear and understandable. Supporting material is generally readable and useful.],
-  [Usually understandable, but some parts may be difficult to hear, read, or follow.],
-  [Often difficult to understand, read, or follow.],
+  [#text(weight: "bold", fill: navy)[Communication] #linebreak() #text(fill: slate)[Could everyone understand and follow you?]],
+  [Clear, effective, confident, and easy to follow.],
+  [Clear and understandable with only minor lapses.],
+  [Usually understandable, but some parts may be difficult to hear or follow.],
+  [Often difficult to hear, understand, or follow.],
 
-  [#text(weight: "bold", fill: navy)[Application /2] #linebreak() #text(fill: slate)[Did you connect with us?]],
-  [Creates a particularly strong, thoughtful, or memorable connection with the audience.],
-  [Uses the presentation effectively to introduce yourself and create meaningful connections with the class.],
+  [#text(weight: "bold", fill: navy)[Visuals & accessibility] #linebreak() #text(fill: slate)[Did your supports help the audience?]],
+  [Slides, visuals, or other supports are highly readable, accessible, purposeful, and effective.],
+  [Supporting material is readable, accessible, and useful.],
+  [Supporting material is somewhat useful, but some choices reduce readability or accessibility.],
+  [Supporting material is difficult to read, distracting, or does not support the presentation.],
+
+  [#text(weight: "bold", fill: navy)[Application] #linebreak() #text(fill: slate)[Did you connect with us?]],
+  [Uses the presentation effectively to introduce yourself and create a meaningful connection with the audience.],
   [Successfully introduces yourself and makes an appropriate connection with the audience.],
   [Some connection is made, but the introduction may need more development.],
   [Limited connection with the audience is made.],
@@ -211,37 +210,43 @@ Submit your presentation through #text(weight: "bold")[Google Classroom] by #tex
 
 #v(7pt)
 #grid(
-  columns: (1fr, 1.65in),
+  columns: (1fr, 1.55in),
   column-gutter: 14pt,
   [
     #block(
       width: 100%,
       fill: sail,
       stroke: (left: 3pt + pcss-gold),
-      inset: (left: 11pt, right: 11pt, top: 7pt, bottom: 7pt),
+      inset: (left: 11pt, right: 11pt, top: 6pt, bottom: 6pt),
     )[
-      #text(size: 10.5pt, weight: "bold", fill: navy)[Presentation initiative /2]
+      #text(size: 10.4pt, weight: "bold", fill: navy)[Learning Skills · feedback only]
       #v(2pt)
-      #text(size: 8.7pt)[2/2 for volunteering to present without being called on. 1/2 for presenting when called on. 0/2 if you choose not to present when expected. Approved or excused circumstances are not penalized.]
+      #text(size: 8.5pt)[Responsibility · Organization · Independent Work · Collaboration · Initiative · Self-Regulation]
+      #v(2pt)
+      #text(size: 8.4pt, fill: slate)[These are reported separately and are not part of the /10 mark. Volunteering to present can be evidence of Initiative.]
     ]
   ],
   [
     #block(
       width: 100%,
       fill: navy,
-      inset: (x: 12pt, y: 12pt),
+      inset: (x: 10pt, y: 9pt),
     )[
       #align(center)[
-        #text(size: 9pt, fill: white)[TOTAL]
+        #text(size: 8.5pt, fill: white)[RAW SCORE]
         #linebreak()
-        #text(size: 21pt, weight: "bold", fill: white)[/10]
+        #text(size: 15pt, weight: "bold", fill: white)[/20]
+        #v(2pt)
+        #text(size: 8pt, fill: white)[÷ 2]
+        #linebreak()
+        #text(size: 17pt, weight: "bold", fill: white)[/10]
       ]
     ]
   ],
 )
 
-#v(7pt)
-#text(size: 10.8pt, weight: "bold", fill: navy)[Going above and beyond]
+#v(6pt)
+#text(size: 10.6pt, weight: "bold", fill: navy)[Going above and beyond]
 #v(2pt)
-#text(size: 8.8pt)[A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you. These are ideas, not extra requirements. A simple, clear, genuine presentation can earn full achievement marks.]
+#text(size: 8.6pt)[A 4+ might come from a memorable story, a thoughtful connection, an effective project or object, a strong visual, a creative example, or another choice that genuinely helps the audience understand and connect with you. These are ideas, not extra requirements.]
 ```
