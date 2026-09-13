@@ -14,11 +14,11 @@ format:
 #set page(
   paper: "us-letter",
   flipped: true,
-  margin: (top: 0.34in, bottom: 0.48in, x: 0.42in),
+  margin: (top: 0.32in, bottom: 0.46in, x: 0.40in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-      size: 6.6pt,
+      size: 7pt,
       fill: slate,
       hyphenate: false,
     )
@@ -30,25 +30,25 @@ format:
   ]
 )
 
-#set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 8.4pt, fill: charcoal, hyphenate: false)
-#set par(leading: 0.5em, justify: false)
+#set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 9.4pt, fill: charcoal, hyphenate: false)
+#set par(leading: 0.52em, justify: false)
 
 #let blank-field(label) = [
   #text(weight: "bold")[#label:]
   #h(5pt)
-  #line(length: 1.9in, stroke: 0.55pt + slate)
+  #line(length: 1.85in, stroke: 0.55pt + slate)
 ]
 
-#let page-header(side) = [
+#let page-header(section) = [
   #grid(
     columns: (1fr, auto),
     align: horizon,
     [
-      #text(size: 21pt, weight: "bold", fill: navy)[About Me - Quick Marking]
+      #text(size: 22pt, weight: "bold", fill: navy)[About Me - Quick Marking]
       #v(1pt)
-      #text(size: 8.7pt, fill: slate)[#side]
+      #text(size: 9.4pt, fill: slate)[#section]
     ],
-    [#text(size: 8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+    [#text(size: 8.4pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
   )
   #v(4pt)
   #line(length: 0.58in, stroke: 3pt + pcss-gold)
@@ -62,44 +62,37 @@ format:
     [#blank-field("Date")],
     [#blank-field("Teacher")],
   )
-  #v(4pt)
+  #v(5pt)
   #block(
     width: 100%,
     fill: sail,
     stroke: (left: 3pt + pcss-gold),
-    inset: (left: 9pt, right: 9pt, top: 4pt, bottom: 4pt),
+    inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
   )[
-    #text(size: 7.7pt)[#text(weight: "bold")[Rubric score for each criterion:] 4+ = 2 · L4 = 1.5 · L3 = 1 · L2 = 0.5 · L1 = 0.  #text(weight: "bold")[K] Knowledge · #text(weight: "bold")[T] Thinking · #text(weight: "bold")[C] Communication · #text(weight: "bold")[V/A] Visuals & accessibility · #text(weight: "bold")[A] Application, including response to post-presentation questions/comments.  #text(weight: "bold")[Learning Skills codes:] R, O, IW, C, I, SR.]
+    #text(size: 8.4pt)[#text(weight: "bold")[Scoring:] 4+ = 2 · L4 = 1.5 · L3 = 1 · L2 = 0.5 · L1 = 0.  #text(weight: "bold")[K] Knowledge · #text(weight: "bold")[T] Thinking · #text(weight: "bold")[C] Communication · #text(weight: "bold")[V/A] Visuals & accessibility · #text(weight: "bold")[A] Application, including response to post-presentation discussion.  #text(weight: "bold")[Learning Skills:] R, O, IW, C, I, SR.]
   ]
-  #v(5pt)
+  #v(6pt)
 ]
 
-#page-header([Side 1 - Students 1-17])
+#let table-header = table.header(
+  [#text(weight: "bold", fill: navy)[Student]],
+  [#align(center)[#text(weight: "bold", fill: navy)[K]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[T]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[C]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[V/A]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[A]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[/10]]],
+  [#text(weight: "bold", fill: navy)[Learning Skills]],
+  [#text(weight: "bold", fill: navy)[Feedback / discussion notes]],
+)
 
+#page-header([Students 1-9])
 #table(
-  columns: (1.45in, 0.42in, 0.42in, 0.42in, 0.48in, 0.42in, 0.50in, 1.25in, 4.05in),
-  inset: (x: 4pt, y: 6.8pt),
-  stroke: 0.55pt + mist,
+  columns: (1.35in, 0.45in, 0.45in, 0.45in, 0.55in, 0.45in, 0.55in, 1.10in, 4.45in),
+  inset: (x: 5pt, y: 13pt),
+  stroke: 0.6pt + mist,
   align: left + top,
-  table.header(
-    [#text(weight: "bold", fill: navy)[Student]],
-    [#align(center)[#text(weight: "bold", fill: navy)[K]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[T]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[C]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[V/A]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[A]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[/10]]],
-    [#text(weight: "bold", fill: navy)[Learning Skills evidence]],
-    [#text(weight: "bold", fill: navy)[Quick feedback / discussion notes]],
-  ),
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
-  [], [], [], [], [], [], [], [], [],
+  table-header,
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
@@ -112,24 +105,13 @@ format:
 )
 
 #pagebreak()
-#page-header([Side 2 - Students 18-34])
-
+#page-header([Students 10-18])
 #table(
-  columns: (1.45in, 0.42in, 0.42in, 0.42in, 0.48in, 0.42in, 0.50in, 1.25in, 4.05in),
-  inset: (x: 4pt, y: 6.8pt),
-  stroke: 0.55pt + mist,
+  columns: (1.35in, 0.45in, 0.45in, 0.45in, 0.55in, 0.45in, 0.55in, 1.10in, 4.45in),
+  inset: (x: 5pt, y: 13pt),
+  stroke: 0.6pt + mist,
   align: left + top,
-  table.header(
-    [#text(weight: "bold", fill: navy)[Student]],
-    [#align(center)[#text(weight: "bold", fill: navy)[K]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[T]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[C]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[V/A]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[A]]],
-    [#align(center)[#text(weight: "bold", fill: navy)[/10]]],
-    [#text(weight: "bold", fill: navy)[Learning Skills evidence]],
-    [#text(weight: "bold", fill: navy)[Quick feedback / discussion notes]],
-  ),
+  table-header,
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
@@ -139,6 +121,34 @@ format:
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
+)
+
+#pagebreak()
+#page-header([Students 19-26])
+#table(
+  columns: (1.35in, 0.45in, 0.45in, 0.45in, 0.55in, 0.45in, 0.55in, 1.10in, 4.45in),
+  inset: (x: 5pt, y: 14.5pt),
+  stroke: 0.6pt + mist,
+  align: left + top,
+  table-header,
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+  [], [], [], [], [], [], [], [], [],
+)
+
+#pagebreak()
+#page-header([Students 27-34])
+#table(
+  columns: (1.35in, 0.45in, 0.45in, 0.45in, 0.55in, 0.45in, 0.55in, 1.10in, 4.45in),
+  inset: (x: 5pt, y: 14.5pt),
+  stroke: 0.6pt + mist,
+  align: left + top,
+  table-header,
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
   [], [], [], [], [], [], [], [], [],
