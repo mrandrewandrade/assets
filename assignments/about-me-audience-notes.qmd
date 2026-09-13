@@ -24,7 +24,8 @@ format:
     )
     #grid(
       columns: (1fr, auto),
-      [Technology Commons - Audience Connections],
+      column-gutter: 12pt,
+      [Open sourced by Andrew Andrade · #link("https://creativecommons.org/licenses/by/4.0/")[#text(fill: navy)[CC BY 4.0]] - you may share and adapt with attribution],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
