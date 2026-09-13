@@ -14,20 +14,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
-          python-version: "3.12"
-          cache: pip
+          version: "1.10.15"
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      - name: Install Chromium
-        run: python -m playwright install --with-deps chromium
-
-      - name: Build PDFs
-        run: python scripts/build.py
+      - name: Build About Me PDF
+        run: bash render.sh about-me
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
