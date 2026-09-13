@@ -1,0 +1,130 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+
+#set page(
+  paper: "us-letter",
+  flipped: true,
+  margin: (top: 0.34in, bottom: 0.48in, x: 0.46in),
+  footer: context [
+    #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 6.7pt, fill: slate, hyphenate: false)
+    #grid(
+      columns: (1fr, auto),
+      [Technology Commons - Audience Connections],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 9pt, fill: charcoal, hyphenate: false)
+#set par(leading: 0.52em, justify: false)
+
+#let page-header(side) = [
+  #grid(
+    columns: (1fr, auto),
+    align: horizon,
+    [
+      #text(size: 22pt, weight: "bold", fill: navy)[Audience Connections]
+      #v(1pt)
+      #text(size: 9pt, fill: slate)[About Me Presentations - #side]
+    ],
+    [#text(size: 8pt, weight: "bold", fill: navy)[Technology Commons · Port Credit Secondary School]]
+  )
+  #v(4pt)
+  #line(length: 0.58in, stroke: 3pt + pcss-gold)
+  #v(2pt)
+  #line(length: 100%, stroke: 1.2pt + navy)
+  #v(5pt)
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 14pt,
+    [#text(weight: "bold")[Name:] __________________________________],
+    [#text(weight: "bold")[Class:] _________________________________],
+    [#text(weight: "bold")[Date:] __________________________________],
+  )
+  #v(5pt)
+  #block(
+    width: 100%,
+    fill: sail,
+    stroke: (left: 3pt + pcss-gold),
+    inset: (left: 10pt, right: 10pt, top: 5pt, bottom: 5pt),
+  )[
+    #text(size: 8.6pt)[Write #text(weight: "bold")[one brief note for each presentation]. Listen for something you learned or noticed, then jot a connection, question, or comment. Short phrases are enough. After each presentation, we will pause for questions, statements, and discussion.]
+  ]
+  #v(6pt)
+]
+
+#page-header([Side 1 - Presenters 1-17])
+
+#table(
+  columns: (0.38in, 1.55in, 3.55in, 4.05in),
+  inset: (x: 5pt, y: 7.2pt),
+  stroke: 0.55pt + mist,
+  align: left + top,
+  table.header(
+    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[Presenter]],
+    [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
+    [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
+  ),
+  [1], [], [], [],
+  [2], [], [], [],
+  [3], [], [], [],
+  [4], [], [], [],
+  [5], [], [], [],
+  [6], [], [], [],
+  [7], [], [], [],
+  [8], [], [], [],
+  [9], [], [], [],
+  [10], [], [], [],
+  [11], [], [], [],
+  [12], [], [], [],
+  [13], [], [], [],
+  [14], [], [], [],
+  [15], [], [], [],
+  [16], [], [], [],
+  [17], [], [], [],
+)
+
+#pagebreak()
+#page-header([Side 2 - Presenters 18-34])
+
+#table(
+  columns: (0.38in, 1.55in, 3.55in, 4.05in),
+  inset: (x: 5pt, y: 7.2pt),
+  stroke: 0.55pt + mist,
+  align: left + top,
+  table.header(
+    [#text(weight: "bold", fill: navy)[#]],
+    [#text(weight: "bold", fill: navy)[Presenter]],
+    [#text(weight: "bold", fill: navy)[Something I learned / noticed]],
+    [#text(weight: "bold", fill: navy)[Connection, question, or comment]],
+  ),
+  [18], [], [], [],
+  [19], [], [], [],
+  [20], [], [], [],
+  [21], [], [], [],
+  [22], [], [], [],
+  [23], [], [], [],
+  [24], [], [], [],
+  [25], [], [], [],
+  [26], [], [], [],
+  [27], [], [], [],
+  [28], [], [], [],
+  [29], [], [], [],
+  [30], [], [], [],
+  [31], [], [], [],
+  [32], [], [], [],
+  [33], [], [], [],
+  [34], [], [], [],
+)
+```
