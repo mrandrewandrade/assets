@@ -10,14 +10,16 @@ format:
 #let mist = rgb("#D9DEE2")
 #let sail = rgb("#F4F5F6")
 #let pcss-gold = rgb("#F4C91D")
+#let pale-gold = rgb("#FFF8D6")
 
 #set page(
   paper: "us-letter",
-  margin: (top: 0.28in, bottom: 0.42in, x: 0.44in),
+  flipped: true,
+  margin: (top: 0.27in, bottom: 0.42in, x: 0.44in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-      size: 6.4pt,
+      size: 6.5pt,
       fill: slate,
       hyphenate: false,
     )
@@ -38,120 +40,133 @@ format:
 )
 #set par(leading: 0.46em, justify: false)
 
-#let write-line() = line(length: 100%, stroke: 0.7pt + slate)
-#let check-box() = rect(width: 9pt, height: 9pt, stroke: 0.9pt + navy, radius: 1pt)
+#let write-line(stroke-color: slate) = line(length: 100%, stroke: 0.75pt + stroke-color)
+#let check-box() = rect(width: 9.5pt, height: 9.5pt, stroke: 1pt + navy, radius: 1pt)
 
 #let brand-header(title, subtitle) = [
   #grid(
-    columns: (1fr, 2.35in),
+    columns: (1fr, 2.42in),
     column-gutter: 18pt,
     align: top,
     [
-      #text(size: 22pt, weight: "bold", fill: navy)[#title]
+      #text(size: 23pt, weight: "bold", fill: navy)[#title]
       #v(1pt)
-      #text(size: 10.2pt, weight: "bold", fill: slate)[#subtitle]
+      #text(size: 10.6pt, weight: "bold", fill: slate)[#subtitle]
     ],
     [
       #grid(
-        columns: (0.52in, 1fr),
+        columns: (0.54in, 1fr),
         column-gutter: 8pt,
         align: horizon,
-        [#image("technology-department-emblem.svg", width: 0.48in)],
+        [#image("technology-department-emblem.svg", width: 0.50in)],
         [
-          #text(size: 8.2pt, weight: "bold", fill: navy)[Technology Commons]
+          #text(size: 8.5pt, weight: "bold", fill: navy)[Technology Commons]
           #linebreak()
-          #text(size: 7.4pt, fill: slate)[Port Credit Secondary School]
+          #text(size: 7.6pt, fill: slate)[Port Credit Secondary School]
         ],
       )
     ],
   )
-  #v(4pt)
-  #line(length: 0.66in, stroke: 3pt + pcss-gold)
+  #v(3pt)
+  #line(length: 0.68in, stroke: 3pt + pcss-gold)
   #v(2pt)
-  #line(length: 100%, stroke: 1.2pt + navy)
+  #line(length: 100%, stroke: 1.25pt + navy)
+]
+
+#let info-row() = [
+  #grid(
+    columns: (auto, 1.35fr, auto, 0.86fr, auto, 0.94fr),
+    column-gutter: 6pt,
+    align: horizon,
+    [#text(size: 9.6pt, weight: "bold")[Name:]], [#write-line()],
+    [#text(size: 9.6pt, weight: "bold")[Course:]], [#write-line()],
+    [#text(size: 9.6pt, weight: "bold")[Week of:]], [#write-line()],
+  )
 ]
 
 #let eval-item(label) = [
   #grid(
     columns: (1fr, auto),
-    column-gutter: 5pt,
+    column-gutter: 4pt,
     align: horizon,
-    [#text(size: 8.4pt, weight: "bold", fill: charcoal)[#label]],
+    [#text(size: 8.1pt, weight: "bold", fill: charcoal)[#label]],
     [#check-box()]
   )
 ]
 
+#let evaluation-panel() = [
+  #block(
+    width: 100%,
+    height: 100%,
+    fill: pale-gold,
+    stroke: 0.7pt + mist,
+    radius: 3pt,
+    inset: (x: 7pt, y: 5pt),
+  )[
+    #text(size: 8.3pt, weight: "bold", fill: navy)[CHECK]
+    #v(3pt)
+    #eval-item([Neat])
+    #v(3pt)
+    #eval-item([Detailed])
+    #v(3pt)
+    #eval-item([Technical terms])
+    #v(3pt)
+    #eval-item([Level 1-4])
+  ]
+]
+
+#let labelled-line(label) = [
+  #text(size: 8.9pt, weight: "bold", fill: charcoal)[#label]
+  #v(2pt)
+  #write-line()
+]
+
+#let evidence-area() = [
+  #text(size: 8.9pt, weight: "bold", fill: navy)[Evidence: what did I accomplish or learn?]
+  #v(4pt)
+  #write-line()
+  #v(8pt)
+  #write-line()
+  #v(8pt)
+  #write-line()
+]
+
 #let daily-box(day) = block(
   width: 100%,
-  height: 1.70in,
-  stroke: 0.8pt + mist,
+  height: 1.15in,
+  stroke: 0.85pt + mist,
   radius: 4pt,
-  inset: (x: 8pt, y: 7pt),
+  inset: (x: 8pt, y: 6pt),
 )[
   #grid(
-    columns: (1fr, 1.26in),
-    column-gutter: 10pt,
+    columns: (0.93fr, 1.18fr, 1.24in),
+    column-gutter: 12pt,
     align: top,
     [
-      #text(size: 12.4pt, weight: "bold", fill: navy)[#day]
+      #text(size: 12pt, weight: "bold", fill: navy)[#day]
       #v(3pt)
-      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
-        [#text(size: 9.6pt, weight: "bold")[Today's goal (specific):]],
-        [#write-line()]
-      )
-      #v(6pt)
-      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
-        [#text(size: 9.6pt, weight: "bold")[How will I know I met it?]],
-        [#write-line()]
-      )
-      #v(6pt)
-      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
-        [#text(size: 9.6pt, weight: "bold")[Who did I work with?]],
-        [#write-line()]
-      )
-      #v(6pt)
-      #text(size: 9.6pt, weight: "bold")[What did I accomplish or learn today?]
+      #labelled-line([Today's goal])
       #v(4pt)
-      #write-line()
-      #v(8pt)
-      #write-line()
+      #labelled-line([How will I know I met it?])
+      #v(4pt)
+      #labelled-line([Who did I work with?])
     ],
-    [
-      #block(
-        height: 100%,
-        fill: sail,
-        stroke: 0.6pt + mist,
-        radius: 3pt,
-        inset: (x: 7pt, y: 7pt),
-      )[
-        #text(size: 9pt, weight: "bold", fill: navy)[Evaluation]
-        #v(6pt)
-        #eval-item([Neat])
-        #v(7pt)
-        #eval-item([Detailed])
-        #v(7pt)
-        #eval-item([Technical terms])
-        #v(7pt)
-        #eval-item([Level 1-4])
-      ]
-    ]
+    [#evidence-area()],
+    [#evaluation-panel()]
   )
 ]
 
 #brand-header([Weekly Progress Log], [Set the Goal. Follow the Way. Take Action.])
+#v(4pt)
+#info-row()
 #v(5pt)
 #grid(
-  columns: (auto, 1.25fr, auto, 0.82fr, auto, 1fr),
-  column-gutter: 5pt,
+  columns: (auto, 1fr),
+  column-gutter: 10pt,
   align: horizon,
-  [#text(weight: "bold")[Name:]], [#write-line()],
-  [#text(weight: "bold")[Course:]], [#write-line()],
-  [#text(weight: "bold")[Week of:]], [#write-line()],
+  [#text(size: 14.5pt, weight: "bold", fill: navy)[Daily Progress]],
+  [#line(length: 100%, stroke: 2.3pt + pcss-gold)]
 )
-#v(7pt)
-#text(size: 15pt, weight: "bold", fill: navy)[Daily Progress]
-#v(2pt)
-#line(length: 100%, stroke: 2pt + pcss-gold)
 #v(5pt)
 
 #daily-box([Monday])
@@ -168,41 +183,46 @@ format:
 
 #let rating-panel() = [
   #block(
+    width: 100%,
     height: 100%,
-    fill: sail,
-    stroke: 0.6pt + mist,
+    fill: pale-gold,
+    stroke: 0.7pt + mist,
     radius: 3pt,
-    inset: (x: 7pt, y: 7pt),
+    inset: (x: 7pt, y: 5pt),
   )[
-    #text(size: 8pt, weight: "bold", fill: navy)[SELF-RATING]
-    #v(5pt)
-    #grid(columns: (auto, auto), column-gutter: 5pt, row-gutter: 6pt,
-      [#text(size: 8.4pt, weight: "bold")[E]], [#check-box()],
-      [#text(size: 8.4pt, weight: "bold")[G]], [#check-box()],
-      [#text(size: 8.4pt, weight: "bold")[S]], [#check-box()],
-      [#text(size: 8.4pt, weight: "bold")[N]], [#check-box()],
+    #text(size: 7.8pt, weight: "bold", fill: navy)[SELF-RATING]
+    #v(3pt)
+    #grid(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      column-gutter: 4pt,
+      align: horizon,
+      [#text(size: 8.2pt, weight: "bold")[E]], [#check-box()],
+      [#text(size: 8.2pt, weight: "bold")[G]], [#check-box()],
+      [#text(size: 8.2pt, weight: "bold")[S]], [#check-box()],
+      [#text(size: 8.2pt, weight: "bold")[N]], [#check-box()],
     )
   ]
 ]
 
 #let skill-row(title, prompt) = block(
   width: 100%,
-  height: 1.28in,
-  stroke: 0.8pt + mist,
+  height: 0.91in,
+  stroke: 0.85pt + mist,
   radius: 4pt,
-  inset: (x: 8pt, y: 7pt),
+  inset: (x: 8pt, y: 5pt),
 )[
   #grid(
-    columns: (1fr, 0.88in),
-    column-gutter: 10pt,
+    columns: (2.45in, 1fr, 2.05in),
+    column-gutter: 12pt,
     align: top,
     [
-      #text(size: 11.5pt, weight: "bold", fill: navy)[#title]
-      #v(1pt)
-      #text(size: 8.8pt, fill: slate)[#prompt]
-      #v(5pt)
-      #write-line()
-      #v(8pt)
+      #text(size: 10.9pt, weight: "bold", fill: navy)[#title]
+      #v(2pt)
+      #text(size: 8.4pt, fill: slate)[#prompt]
+    ],
+    [
+      #text(size: 8.7pt, weight: "bold", fill: charcoal)[My evidence or next step]
+      #v(4pt)
       #write-line()
       #v(8pt)
       #write-line()
@@ -212,28 +232,28 @@ format:
 ]
 
 #brand-header([Learning Skills Reflection], [How have I demonstrated and improved these learning skills?])
+#v(4pt)
+#info-row()
+#v(4pt)
+#block(
+  width: 100%,
+  fill: sail,
+  stroke: (left: 4pt + pcss-gold),
+  inset: (x: 8pt, y: 4pt),
+)[
+  #text(size: 8.6pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement. Use a specific example in each row.]
+]
 #v(5pt)
-#grid(
-  columns: (auto, 1.18fr, auto, 0.86fr, auto, 0.9fr),
-  column-gutter: 5pt,
-  align: horizon,
-  [#text(weight: "bold")[Name:]], [#write-line()],
-  [#text(weight: "bold")[Course:]], [#write-line()],
-  [#text(weight: "bold")[Week of:]], [#write-line()],
-)
-#v(5pt)
-#text(size: 8.2pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement]
-#v(7pt)
 
-#skill-row([Responsibility], [Getting things done without reminders, using class time well, and following through on tasks.])
-#v(4pt)
-#skill-row([Organization], [Keeping track of goals, tools, materials, files, and time in an effective way.])
-#v(4pt)
-#skill-row([Independent Work], [Starting promptly, staying focused, using available resources, and solving problems before asking for help.])
-#v(4pt)
-#skill-row([Initiative], [Doing what needs to be done, asking thoughtful questions, seeking feedback, and acting on next steps.])
-#v(4pt)
-#skill-row([Collaboration], [Working well with others, listening, sharing tools and space, and helping the group succeed.])
-#v(4pt)
-#skill-row([Self-Regulation], [Managing distractions, staying balanced and safe, responding to feedback, and adjusting when something is not working.])
+#skill-row([Responsibility], [Uses class time well, follows through, and completes agreed work without repeated reminders.])
+#v(3pt)
+#skill-row([Organization], [Keeps goals, tools, materials, files, and time organized so work can move forward.])
+#v(3pt)
+#skill-row([Independent Work], [Starts promptly, stays focused, uses resources, and attempts solutions before asking for help.])
+#v(3pt)
+#skill-row([Collaboration], [Listens, shares tools and space, contributes fairly, and helps the group succeed.])
+#v(3pt)
+#skill-row([Initiative], [Asks thoughtful questions, seeks feedback, notices what needs doing, and takes useful action.])
+#v(3pt)
+#skill-row([Self-Regulation], [Manages distractions, works safely, responds to feedback, and adjusts when something is not working.])
 ```
