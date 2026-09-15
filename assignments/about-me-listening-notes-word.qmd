@@ -9,7 +9,8 @@ output-file: the-way-we-meet-notes.docx
 
 **Technology Commons · Port Credit Secondary School**
 
-**Name:** ________________________________  
+**Submitted by:** ________________________________  
+**Student Number:** ______________________________  
 **Class:** ________________________________  
 **Date:** ________________________________
 
