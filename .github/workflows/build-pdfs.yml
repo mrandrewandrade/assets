@@ -25,6 +25,9 @@ jobs:
       - name: Build 0-series resource pack
         run: bash render.sh about-me
 
+      - name: Build weekly progress printable
+        run: bash render.sh weekly-progress
+
       - name: Stage website
         run: |
           rm -rf site-build
