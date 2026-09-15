@@ -52,11 +52,12 @@ format:
   #line(length: 100%, stroke: 1.2pt + navy)
   #v(4pt)
   #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 12pt,
+    columns: (0.8fr, 0.8fr, 1.15fr, 1.55fr),
+    column-gutter: 10pt,
     [#blank-field("Class")],
     [#blank-field("Date")],
     [#blank-field("Teacher")],
+    [#blank-field("Expectation(s)")],
   )
   #v(4pt)
   #block(
@@ -65,10 +66,12 @@ format:
     stroke: (left: 3pt + pcss-gold),
     inset: (left: 8pt, right: 8pt, top: 4pt, bottom: 4pt),
   )[
-    #text(size: 7.25pt)[
-      #text(weight: "bold")[0.1 Presentation:] K Knowledge · T Thinking · C Communication · V Visuals/accessibility · A Application, each /2; P = presentation /10.
-      #h(6pt)
-      #text(weight: "bold")[0.2 Listening flags:] PH phone · TK talking/side conversation · OF off-task/not facing · NN not taking notes · PR prompted/reminded. Tick only when observed. Blank means no concern was observed. Fill L /10 after checking the submitted notes, Listening Reflection, Presentation Reflection, and self-evaluation. #text(weight: "bold")[LS:] R O IW C I SR.
+    #text(size: 7.05pt)[
+      #text(weight: "bold")[0.1 Presentation:] IC Ideas/Content · OC Organization/Clarity · C Communication · CR Connection/Reflection. Record Levels 4-1 or BL1 as evidence, then determine P /10 from the overall pattern using professional judgement. Do not average the four columns mechanically.
+      #h(5pt)
+      #text(weight: "bold")[0.2 Listening flags:] PH phone · TK talking/side conversation · OF off-task/not facing · NN not taking notes · PR prompted/reminded. These are separate from the 0.1 curricular mark. Fill L /10 only from the separate 0.2 task. #text(weight: "bold")[LS:] R O IW C I SR.
+      #linebreak()
+      #text(weight: "bold")[Feedback:] use the final note for Strength + specific Evidence + one useful Next Step.
     ]
   ]
   #v(5pt)
@@ -76,11 +79,10 @@ format:
 
 #let table-header = table.header(
   [#text(weight: "bold", fill: navy)[Student]],
-  [#align(center)[#text(weight: "bold", fill: navy)[K]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[T]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[IC]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[OC]]],
   [#align(center)[#text(weight: "bold", fill: navy)[C]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[V]]],
-  [#align(center)[#text(weight: "bold", fill: navy)[A]]],
+  [#align(center)[#text(weight: "bold", fill: navy)[CR]]],
   [#align(center)[#text(weight: "bold", fill: navy)[P /10]]],
   [#align(center)[#text(weight: "bold", fill: navy)[PH]]],
   [#align(center)[#text(weight: "bold", fill: navy)[TK]]],
@@ -89,17 +91,17 @@ format:
   [#align(center)[#text(weight: "bold", fill: navy)[PR]]],
   [#align(center)[#text(weight: "bold", fill: navy)[L /10]]],
   [#align(center)[#text(weight: "bold", fill: navy)[LS]]],
-  [#text(weight: "bold", fill: navy)[Quick note]],
+  [#text(weight: "bold", fill: navy)[Strength / Evidence / Next Step]],
 )
 
 #let mark-table(start, end) = table(
-  columns: (1.30in, 0.37in, 0.37in, 0.37in, 0.37in, 0.37in, 0.52in, 0.42in, 0.42in, 0.42in, 0.46in, 0.46in, 0.52in, 0.62in, 2.80in),
-  inset: (x: 3.5pt, y: 5.4pt),
+  columns: (1.20in, 0.46in, 0.46in, 0.42in, 0.46in, 0.54in, 0.42in, 0.42in, 0.42in, 0.46in, 0.46in, 0.52in, 0.62in, 3.05in),
+  inset: (x: 3.3pt, y: 5.3pt),
   stroke: 0.55pt + mist,
   align: left + top,
   table-header,
   ..range(start, end + 1).map(n => (
-    [#n], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+    [#n], [], [], [], [], [], [], [], [], [], [], [], [], [],
   )).flatten()
 )
 
