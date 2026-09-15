@@ -17,7 +17,7 @@ format:
 #set page(
   paper: "us-letter",
   flipped: true,
-  margin: (top: 0.28in, bottom: 0.48in, x: 0.42in),
+  margin: (top: 0.26in, bottom: 0.48in, x: 0.42in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
@@ -57,7 +57,7 @@ format:
   width: 100%,
   fill: navy,
   radius: 5pt,
-  inset: (left: 10pt, right: 10pt, top: 7pt, bottom: 7pt),
+  inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
   [
     #grid(
       columns: (1fr, auto),
@@ -102,13 +102,13 @@ format:
     [Attention, connection, and making space for one another],
     side: side,
   )
-  #v(5pt)
+  #v(4pt)
   #identity-fields
-  #v(5pt)
+  #v(4pt)
   #instruction-panel([
     Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. After the final presentation, complete the two reflection pages.
   ])
-  #v(5pt)
+  #v(4pt)
 ]
 
 #let reflection-header(title, subtitle) = [
@@ -151,11 +151,11 @@ format:
 )
 
 #notes-header([Page 1 - Presenters 1-17])
-#notes-table(1, 17, 6.8pt)
+#notes-table(1, 17, 7.3pt)
 
 #pagebreak()
 #notes-header([Page 2 - Presenters 18-34])
-#notes-table(18, 34, 6.8pt)
+#notes-table(18, 34, 7.3pt)
 
 #pagebreak()
 #reflection-header(
