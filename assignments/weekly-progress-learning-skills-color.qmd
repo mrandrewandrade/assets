@@ -15,7 +15,7 @@ format:
 #set page(
   paper: "us-letter",
   flipped: true,
-  margin: (top: 0.27in, bottom: 0.42in, x: 0.44in),
+  margin: (top: 0.24in, bottom: 0.38in, x: 0.42in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
@@ -38,7 +38,7 @@ format:
   fill: charcoal,
   hyphenate: false,
 )
-#set par(leading: 0.46em, justify: false)
+#set par(leading: 0.44em, justify: false)
 
 #let write-line(stroke-color: slate) = line(length: 100%, stroke: 0.75pt + stroke-color)
 #let check-box() = rect(width: 9.5pt, height: 9.5pt, stroke: 1pt + navy, radius: 1pt)
@@ -67,9 +67,9 @@ format:
       )
     ],
   )
-  #v(3pt)
-  #line(length: 0.68in, stroke: 3pt + pcss-gold)
   #v(2pt)
+  #line(length: 0.68in, stroke: 3pt + pcss-gold)
+  #v(1pt)
   #line(length: 100%, stroke: 1.25pt + navy)
 ]
 
@@ -84,12 +84,22 @@ format:
   )
 ]
 
-#let eval-item(label) = [
+#let inline-line(label) = [
+  #grid(
+    columns: (auto, 1fr),
+    column-gutter: 5pt,
+    align: horizon,
+    [#text(size: 8.6pt, weight: "bold", fill: charcoal)[#label]],
+    [#write-line()]
+  )
+]
+
+#let compact-check(label) = [
   #grid(
     columns: (1fr, auto),
     column-gutter: 4pt,
     align: horizon,
-    [#text(size: 8.1pt, weight: "bold", fill: charcoal)[#label]],
+    [#text(size: 7.7pt, weight: "bold", fill: charcoal)[#label]],
     [#check-box()]
   )
 ]
@@ -103,26 +113,22 @@ format:
     radius: 3pt,
     inset: (x: 7pt, y: 5pt),
   )[
-    #text(size: 8.3pt, weight: "bold", fill: navy)[CHECK]
-    #v(3pt)
-    #eval-item([Neat])
-    #v(3pt)
-    #eval-item([Detailed])
-    #v(3pt)
-    #eval-item([Technical terms])
-    #v(3pt)
-    #eval-item([Level 1-4])
+    #text(size: 8.1pt, weight: "bold", fill: navy)[CHECK]
+    #v(4pt)
+    #grid(
+      columns: (1fr, 1fr),
+      column-gutter: 9pt,
+      row-gutter: 5pt,
+      [#compact-check([Neat])],
+      [#compact-check([Detailed])],
+      [#compact-check([Technical terms])],
+      [#compact-check([Level 1-4])],
+    )
   ]
 ]
 
-#let labelled-line(label) = [
-  #text(size: 8.9pt, weight: "bold", fill: charcoal)[#label]
-  #v(2pt)
-  #write-line()
-]
-
 #let evidence-area() = [
-  #text(size: 8.9pt, weight: "bold", fill: navy)[Evidence: what did I accomplish or learn?]
+  #text(size: 8.8pt, weight: "bold", fill: navy)[Evidence: what did I accomplish or learn?]
   #v(4pt)
   #write-line()
   #v(8pt)
@@ -133,23 +139,23 @@ format:
 
 #let daily-box(day) = block(
   width: 100%,
-  height: 1.15in,
+  height: 1.03in,
   stroke: 0.85pt + mist,
   radius: 4pt,
-  inset: (x: 8pt, y: 6pt),
+  inset: (x: 8pt, y: 5pt),
 )[
   #grid(
-    columns: (0.93fr, 1.18fr, 1.24in),
+    columns: (0.92fr, 1.22fr, 1.72in),
     column-gutter: 12pt,
     align: top,
     [
-      #text(size: 12pt, weight: "bold", fill: navy)[#day]
+      #text(size: 11.7pt, weight: "bold", fill: navy)[#day]
       #v(3pt)
-      #labelled-line([Today's goal])
+      #inline-line([Today's goal:])
       #v(4pt)
-      #labelled-line([How will I know I met it?])
+      #inline-line([How will I know?])
       #v(4pt)
-      #labelled-line([Who did I work with?])
+      #inline-line([Worked with:])
     ],
     [#evidence-area()],
     [#evaluation-panel()]
@@ -157,9 +163,9 @@ format:
 ]
 
 #brand-header([Weekly Progress Log], [Set the Goal. Follow the Way. Take Action.])
-#v(4pt)
+#v(3pt)
 #info-row()
-#v(5pt)
+#v(4pt)
 #grid(
   columns: (auto, 1fr),
   column-gutter: 10pt,
@@ -167,16 +173,16 @@ format:
   [#text(size: 14.5pt, weight: "bold", fill: navy)[Daily Progress]],
   [#line(length: 100%, stroke: 2.3pt + pcss-gold)]
 )
-#v(5pt)
+#v(4pt)
 
 #daily-box([Monday])
-#v(4pt)
+#v(3pt)
 #daily-box([Tuesday])
-#v(4pt)
+#v(3pt)
 #daily-box([Wednesday])
-#v(4pt)
+#v(3pt)
 #daily-box([Thursday])
-#v(4pt)
+#v(3pt)
 #daily-box([Friday])
 
 #pagebreak()
@@ -190,38 +196,38 @@ format:
     radius: 3pt,
     inset: (x: 7pt, y: 5pt),
   )[
-    #text(size: 7.8pt, weight: "bold", fill: navy)[SELF-RATING]
-    #v(3pt)
+    #text(size: 7.7pt, weight: "bold", fill: navy)[SELF-RATING]
+    #v(4pt)
     #grid(
       columns: (auto, auto, auto, auto, auto, auto, auto, auto),
       column-gutter: 4pt,
       align: horizon,
-      [#text(size: 8.2pt, weight: "bold")[E]], [#check-box()],
-      [#text(size: 8.2pt, weight: "bold")[G]], [#check-box()],
-      [#text(size: 8.2pt, weight: "bold")[S]], [#check-box()],
-      [#text(size: 8.2pt, weight: "bold")[N]], [#check-box()],
+      [#text(size: 8pt, weight: "bold")[E]], [#check-box()],
+      [#text(size: 8pt, weight: "bold")[G]], [#check-box()],
+      [#text(size: 8pt, weight: "bold")[S]], [#check-box()],
+      [#text(size: 8pt, weight: "bold")[N]], [#check-box()],
     )
   ]
 ]
 
 #let skill-row(title, prompt) = block(
   width: 100%,
-  height: 0.91in,
+  height: 0.80in,
   stroke: 0.85pt + mist,
   radius: 4pt,
   inset: (x: 8pt, y: 5pt),
 )[
   #grid(
-    columns: (2.45in, 1fr, 2.05in),
+    columns: (2.75in, 1fr, 2.05in),
     column-gutter: 12pt,
     align: top,
     [
-      #text(size: 10.9pt, weight: "bold", fill: navy)[#title]
+      #text(size: 10.7pt, weight: "bold", fill: navy)[#title]
       #v(2pt)
-      #text(size: 8.4pt, fill: slate)[#prompt]
+      #text(size: 8.1pt, fill: slate)[#prompt]
     ],
     [
-      #text(size: 8.7pt, weight: "bold", fill: charcoal)[My evidence or next step]
+      #text(size: 8.6pt, weight: "bold", fill: charcoal)[My evidence or next step]
       #v(4pt)
       #write-line()
       #v(8pt)
@@ -232,18 +238,18 @@ format:
 ]
 
 #brand-header([Learning Skills Reflection], [How have I demonstrated and improved these learning skills?])
-#v(4pt)
+#v(3pt)
 #info-row()
-#v(4pt)
+#v(3pt)
 #block(
   width: 100%,
   fill: sail,
   stroke: (left: 4pt + pcss-gold),
-  inset: (x: 8pt, y: 4pt),
+  inset: (x: 8pt, y: 3pt),
 )[
-  #text(size: 8.6pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement. Use a specific example in each row.]
+  #text(size: 8.4pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement. Use a specific example in each row.]
 ]
-#v(5pt)
+#v(4pt)
 
 #skill-row([Responsibility], [Uses class time well, follows through, and completes agreed work without repeated reminders.])
 #v(3pt)
