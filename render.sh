@@ -20,6 +20,7 @@ rm -f \
   dist/the-way-we-meet-teacher-marking.pdf \
   dist/the-way-we-meet-teacher-marking.docx \
   dist/weekly-progress-learning-skills.pdf \
+  dist/weekly-progress-learning-skills.docx \
   dist/weekly-progress-learning-skills-color.pdf \
   dist/weekly-progress-learning-skills-bw.pdf
 
@@ -67,6 +68,9 @@ build_weekly_progress() {
 
   quarto render assignments/weekly-progress-learning-skills-bw.qmd
   mv -f assignments/weekly-progress-learning-skills-bw.pdf dist/weekly-progress-learning-skills-bw.pdf
+
+  quarto render assignments/weekly-progress-learning-skills-word.qmd
+  mv -f assignments/weekly-progress-learning-skills.docx dist/weekly-progress-learning-skills.docx
 }
 
 case "${1:-}" in
