@@ -18,7 +18,8 @@ rm -f \
   dist/past-present-becoming-teacher-marking.pdf \
   dist/past-present-becoming-teacher-marking.docx \
   dist/the-way-we-meet-teacher-marking.pdf \
-  dist/the-way-we-meet-teacher-marking.docx
+  dist/the-way-we-meet-teacher-marking.docx \
+  dist/weekly-progress-learning-skills.pdf
 
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
@@ -58,6 +59,11 @@ build_teacher_marking() {
   mv -f assignments/combined-teacher-marking.docx dist/0.1-0.2-combined-teacher-marking.docx
 }
 
+build_weekly_progress() {
+  quarto render assignments/weekly-progress-learning-skills.qmd
+  mv -f assignments/weekly-progress-learning-skills.pdf dist/weekly-progress-learning-skills.pdf
+}
+
 case "${1:-}" in
   about-me|about-me-all|0-series)
     build_name_tag
@@ -77,6 +83,9 @@ case "${1:-}" in
   combined-teacher-marking|0.1-0.2-combined-teacher-marking)
     build_teacher_marking
     ;;
+  weekly-progress|weekly-progress-learning-skills)
+    build_weekly_progress
+    ;;
   *)
     echo "Use:"
     echo "  bash render.sh about-me"
@@ -84,6 +93,7 @@ case "${1:-}" in
     echo "  bash render.sh 0.1"
     echo "  bash render.sh 0.2"
     echo "  bash render.sh combined-teacher-marking"
+    echo "  bash render.sh weekly-progress"
     exit 1
     ;;
 esac
