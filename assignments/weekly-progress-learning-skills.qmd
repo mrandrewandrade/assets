@@ -1,0 +1,258 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+
+#set page(
+  paper: "us-letter",
+  margin: (top: 0.34in, bottom: 0.48in, x: 0.48in),
+  footer: context [
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.6pt,
+      fill: slate,
+      hyphenate: false,
+    )
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 10pt,
+      [Technology Commons - Weekly Progress + Learning Skills],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(
+  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  size: 9pt,
+  fill: charcoal,
+  hyphenate: false,
+)
+#set par(leading: 0.46em, justify: false)
+
+#let write-line() = line(length: 100%, stroke: 0.55pt + slate)
+
+#let daily-box(day) = block(
+  width: 100%,
+  height: 1.56in,
+  stroke: 0.65pt + mist,
+  radius: 3pt,
+  inset: (x: 8pt, y: 6pt),
+)[
+  #grid(
+    columns: (1fr, 0.86in),
+    column-gutter: 10pt,
+    align: top,
+    [
+      #text(size: 11.2pt, weight: "bold", fill: navy)[#day]
+      #v(2pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt,
+        [#text(weight: "bold")[Goal:]],
+        [#write-line()]
+      )
+      #v(4pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt,
+        [#text(weight: "bold")[By the end of class, I will have:]],
+        [#write-line()]
+      )
+      #v(4pt)
+      #text(weight: "bold")[Progress + proof:] #text(fill: slate)[What did you make, fix, test, practise, learn, or document?]
+      #v(4pt)
+      #write-line()
+      #v(7pt)
+      #write-line()
+      #v(5pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt,
+        [#text(weight: "bold")[Next step:]],
+        [#write-line()]
+      )
+    ],
+    [
+      #block(
+        fill: sail,
+        inset: (x: 6pt, y: 6pt),
+        radius: 2pt,
+      )[
+        #text(size: 7.4pt, weight: "bold", fill: navy)[TEACHER CHECK]
+        #v(4pt)
+        #text(size: 7.4pt, fill: slate)[Progress]
+        #v(2pt)
+        #text(size: 9pt)[0  1  2  3  4]
+        #v(5pt)
+        #text(size: 7.4pt, fill: slate)[Evidence]
+        #v(2pt)
+        #text(size: 9pt)[0  1  2  3  4]
+        #v(5pt)
+        #text(size: 7.4pt, fill: slate)[Work habits]
+        #v(2pt)
+        #text(size: 9pt)[0  1  2  3  4]
+      ]
+    ]
+  )
+]
+
+#grid(
+  columns: (1fr, 2.25in),
+  column-gutter: 18pt,
+  align: top,
+  [
+    #text(size: 21pt, weight: "bold", fill: navy)[Weekly Progress Log]
+    #v(1pt)
+    #text(size: 9.4pt, fill: slate)[Plan the work. Do the work. Show the learning.]
+  ],
+  [
+    #grid(
+      columns: (0.52in, 1fr),
+      column-gutter: 8pt,
+      align: horizon,
+      [#image("../brand/technology-department-emblem.svg", width: 0.48in)],
+      [
+        #text(size: 8pt, weight: "bold", fill: navy)[Technology Commons]
+        #linebreak()
+        #text(size: 7.2pt, fill: slate)[Port Credit Secondary School]
+      ],
+    )
+  ],
+)
+#v(4pt)
+#line(length: 0.58in, stroke: 3pt + pcss-gold)
+#v(3pt)
+#line(length: 100%, stroke: 1.2pt + navy)
+#v(5pt)
+
+#grid(
+  columns: (auto, 1.2fr, auto, 0.8fr, auto, 1fr),
+  column-gutter: 5pt,
+  align: horizon,
+  [#text(weight: "bold")[Name:]], [#write-line()],
+  [#text(weight: "bold")[Course:]], [#write-line()],
+  [#text(weight: "bold")[Week of:]], [#write-line()],
+)
+#v(7pt)
+
+#daily-box([Monday])
+#v(5pt)
+#daily-box([Tuesday])
+#v(5pt)
+#daily-box([Wednesday])
+#v(5pt)
+#daily-box([Thursday])
+#v(5pt)
+#daily-box([Friday])
+
+#pagebreak()
+
+#let skill-row(title, prompt) = block(
+  width: 100%,
+  height: 1.14in,
+  stroke: 0.65pt + mist,
+  radius: 3pt,
+  inset: (x: 9pt, y: 7pt),
+)[
+  #grid(
+    columns: (1fr, 0.82in),
+    column-gutter: 10pt,
+    align: top,
+    [
+      #text(size: 10.5pt, weight: "bold", fill: navy)[#title]
+      #v(1pt)
+      #text(size: 8.2pt, fill: slate)[#prompt]
+      #v(5pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+    ],
+    [
+      #block(fill: sail, inset: 6pt, radius: 2pt)[
+        #text(size: 7.2pt, weight: "bold", fill: navy)[SELF-RATING]
+        #v(5pt)
+        #text(size: 10pt, weight: "bold")[E  G  S  N]
+        #v(4pt)
+        #text(size: 6.8pt, fill: slate)[Circle one]
+      ]
+    ]
+  )
+]
+
+#grid(
+  columns: (1fr, 2.25in),
+  column-gutter: 18pt,
+  align: top,
+  [
+    #text(size: 20pt, weight: "bold", fill: navy)[Learning Skills: Show the Evidence]
+    #v(1pt)
+    #text(size: 9.2pt, fill: slate)[Use specific examples from this week. What did you actually do?]
+  ],
+  [
+    #grid(
+      columns: (0.52in, 1fr),
+      column-gutter: 8pt,
+      align: horizon,
+      [#image("../brand/technology-department-emblem.svg", width: 0.48in)],
+      [
+        #text(size: 8pt, weight: "bold", fill: navy)[Technology Commons]
+        #linebreak()
+        #text(size: 7.2pt, fill: slate)[Port Credit Secondary School]
+      ],
+    )
+  ],
+)
+#v(4pt)
+#line(length: 0.58in, stroke: 3pt + pcss-gold)
+#v(3pt)
+#line(length: 100%, stroke: 1.2pt + navy)
+#v(5pt)
+
+#grid(
+  columns: (auto, 1fr, auto, 1fr),
+  column-gutter: 5pt,
+  align: horizon,
+  [#text(weight: "bold")[Name:]], [#write-line()],
+  [#text(weight: "bold")[Week of:]], [#write-line()],
+)
+#v(4pt)
+#text(size: 7.5pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement]
+#v(6pt)
+
+#skill-row([Responsibility], [I meet commitments, use class time well, care for tools and materials, and complete what I say I will do.])
+#v(4pt)
+#skill-row([Organization], [I plan my steps, keep tools, files, materials, and deadlines organized, and arrive ready to work.])
+#v(4pt)
+#skill-row([Independent Work], [I start promptly, stay focused, use available resources, and persist before asking someone else to solve the problem for me.])
+#v(4pt)
+#skill-row([Collaboration], [I contribute, listen, share space and tools, communicate clearly, and help others without taking over their work.])
+#v(4pt)
+#skill-row([Initiative], [I notice what needs doing, ask useful questions, seek feedback, try ideas, and act on next steps without waiting to be told.])
+#v(4pt)
+#skill-row([Self-Regulation], [I manage distractions, use devices for learning, follow safety routines, respond to feedback, and adjust when something is not working.])
+
+#v(6pt)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 10pt,
+  [
+    #text(size: 8.2pt, weight: "bold", fill: navy)[One learning skill I want to strengthen next week:]
+    #v(5pt)
+    #write-line()
+    #v(8pt)
+    #write-line()
+  ],
+  [
+    #text(size: 8.2pt, weight: "bold", fill: navy)[Teacher note / next step:]
+    #v(5pt)
+    #write-line()
+    #v(8pt)
+    #write-line()
+  ]
+)
+```
