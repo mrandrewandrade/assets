@@ -9,6 +9,9 @@ output-file: the-way-we-meet.docx
 
 **Technology Commons · Port Credit Secondary School**
 
+**Submitted by:** ________________________________  
+**Student Number:** ______________________________
+
 | | |
 |---|---|
 | **Presentations** | Weds., Sept. 16 & Thurs., Sept. 17, 2026 |
