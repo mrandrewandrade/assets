@@ -19,7 +19,9 @@ rm -f \
   dist/past-present-becoming-teacher-marking.docx \
   dist/the-way-we-meet-teacher-marking.pdf \
   dist/the-way-we-meet-teacher-marking.docx \
-  dist/weekly-progress-learning-skills.pdf
+  dist/weekly-progress-learning-skills.pdf \
+  dist/weekly-progress-learning-skills-color.pdf \
+  dist/weekly-progress-learning-skills-bw.pdf
 
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
@@ -60,8 +62,11 @@ build_teacher_marking() {
 }
 
 build_weekly_progress() {
-  quarto render assignments/weekly-progress-learning-skills.qmd
-  mv -f assignments/weekly-progress-learning-skills.pdf dist/weekly-progress-learning-skills.pdf
+  quarto render assignments/weekly-progress-learning-skills-color.qmd
+  mv -f assignments/weekly-progress-learning-skills-color.pdf dist/weekly-progress-learning-skills-color.pdf
+
+  quarto render assignments/weekly-progress-learning-skills-bw.qmd
+  mv -f assignments/weekly-progress-learning-skills-bw.pdf dist/weekly-progress-learning-skills-bw.pdf
 }
 
 case "${1:-}" in
