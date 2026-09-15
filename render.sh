@@ -19,7 +19,9 @@ rm -f \
   dist/past-present-becoming-teacher-marking.pdf \
   dist/past-present-becoming-teacher-marking.docx \
   dist/the-way-we-meet-teacher-marking.pdf \
-  dist/the-way-we-meet-teacher-marking.docx
+  dist/the-way-we-meet-teacher-marking.docx \
+  dist/weekly-smart-goal-progress-log.pdf \
+  dist/weekly-smart-goal-progress-log-bw.pdf
 
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
@@ -62,12 +64,21 @@ build_teacher_marking() {
   mv -f assignments/combined-teacher-marking.docx dist/0.1-0.2-combined-teacher-marking.docx
 }
 
+build_weekly_progress() {
+  quarto render assignments/weekly-smart-goal-progress-log.qmd
+  mv -f assignments/weekly-smart-goal-progress-log.pdf dist/weekly-smart-goal-progress-log.pdf
+
+  quarto render assignments/weekly-smart-goal-progress-log-bw.qmd
+  mv -f assignments/weekly-smart-goal-progress-log-bw.pdf dist/weekly-smart-goal-progress-log-bw.pdf
+}
+
 case "${1:-}" in
-  about-me|about-me-all|0-series)
+  about-me|about-me-all|0-series|all)
     build_name_tag
     build_presentation
     build_listening
     build_teacher_marking
+    build_weekly_progress
     ;;
   0.0|0.0-name-tag|name-tag|name-tag-pdf)
     build_name_tag
@@ -81,13 +92,18 @@ case "${1:-}" in
   combined-teacher-marking|0.1-0.2-combined-teacher-marking)
     build_teacher_marking
     ;;
+  weekly|weekly-smart|weekly-progress|progress-log)
+    build_weekly_progress
+    ;;
   *)
     echo "Use:"
+    echo "  bash render.sh all"
     echo "  bash render.sh about-me"
     echo "  bash render.sh 0.0"
     echo "  bash render.sh 0.1"
     echo "  bash render.sh 0.2"
     echo "  bash render.sh combined-teacher-marking"
+    echo "  bash render.sh weekly"
     exit 1
     ;;
 esac
