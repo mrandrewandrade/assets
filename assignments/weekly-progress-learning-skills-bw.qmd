@@ -52,7 +52,7 @@ format:
         columns: (0.52in, 1fr),
         column-gutter: 8pt,
         align: horizon,
-        [#image("../brand/technology-department-emblem.svg", width: 0.48in)],
+        [#image("technology-department-emblem.svg", width: 0.48in)],
         [
           #text(size: 8.2pt, weight: "bold", fill: ink)[Technology Commons]
           #linebreak()
