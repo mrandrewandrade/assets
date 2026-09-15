@@ -24,8 +24,6 @@ ________________________________________________________________________________
 
 **Attainable, Realistic, Timely:** ______________________________________________________________
 
-**Who did you work with?** __________________________________________________________________
-
 **In detail, explain what you accomplished/learned today.**
 
 ____________________________________________________________________________________________
@@ -48,8 +46,6 @@ ________________________________________________________________________________
 **Measurable (by end of class, I will have):** __________________________________________________
 
 **Attainable, Realistic, Timely:** ______________________________________________________________
-
-**Who did you work with?** __________________________________________________________________
 
 **In detail, explain what you accomplished/learned today.**
 
@@ -74,8 +70,6 @@ ________________________________________________________________________________
 
 **Attainable, Realistic, Timely:** ______________________________________________________________
 
-**Who did you work with?** __________________________________________________________________
-
 **In detail, explain what you accomplished/learned today.**
 
 ____________________________________________________________________________________________
@@ -99,8 +93,6 @@ ________________________________________________________________________________
 
 **Attainable, Realistic, Timely:** ______________________________________________________________
 
-**Who did you work with?** __________________________________________________________________
-
 **In detail, explain what you accomplished/learned today.**
 
 ____________________________________________________________________________________________
@@ -123,8 +115,6 @@ ________________________________________________________________________________
 **Measurable (by end of class, I will have):** __________________________________________________
 
 **Attainable, Realistic, Timely:** ______________________________________________________________
-
-**Who did you work with?** __________________________________________________________________
 
 **In detail, explain what you accomplished/learned today.**
 
@@ -219,3 +209,46 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________
 
 **Rating:** ______
+
+\newpage
+
+# Weekly Reflection
+
+**Look back on the week before you move forward.**
+
+**Name:** ____________________________________  **Course:** ____________________  **Week of:** ____________________
+
+## Highlight of the Week
+
+*A moment, accomplishment, idea, conversation, or experience that mattered to you. Write, sketch, or diagram it here.*
+
+
+
+
+
+
+
+## What are you grateful for?
+
+*Something, someone, or an opportunity you appreciated this week.*
+
+
+
+
+
+## What could have gone better?
+
+*What would you change, try again, or approach differently next time?*
+
+
+
+
+
+## How can we help?
+
+*What support, tools, feedback, explanation, or next step would help you move forward?*
+
+
+
+
+
