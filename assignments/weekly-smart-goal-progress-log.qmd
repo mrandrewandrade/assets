@@ -1,0 +1,9 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#import "weekly-smart-goal-progress-log.typ": render
+#render(colour: true)
+```
