@@ -277,7 +277,7 @@
       #text(size: 7.5pt, weight: "bold", fill: primary)[RATING]
       #v(16pt)
       #grid(
-        columns: (repeat(8, auto)),
+        columns: (auto, auto, auto, auto, auto, auto, auto, auto),
         column-gutter: 5pt,
         align: horizon,
         [#text(size: 8pt, weight: "bold")[E]], [#checkbox(size: 8pt)],
