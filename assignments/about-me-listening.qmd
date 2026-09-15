@@ -82,6 +82,14 @@ format:
   [#text(weight: "bold")[Submit:] one completed PDF after the final presentation day],
 )
 
+#v(4pt)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 18pt,
+  [#text(weight: "bold", fill: navy)[Submitted by:] #h(5pt) #line(length: 2.4in, stroke: 0.7pt + navy)],
+  [#text(weight: "bold", fill: navy)[Student Number:] #h(5pt) #line(length: 2.0in, stroke: 0.7pt + navy)],
+)
+
 #v(5pt)
 #text(size: 14pt, weight: "bold", fill: navy)[Learning goal]
 #v(1pt)
