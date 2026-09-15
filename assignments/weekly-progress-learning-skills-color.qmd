@@ -4,29 +4,29 @@ format:
 ---
 
 ```{=typst}
-#let navy = rgb("#1E2B55")
-#let charcoal = rgb("#20262D")
-#let slate = rgb("#596673")
-#let mist = rgb("#D9DEE2")
-#let sail = rgb("#F4F5F6")
-#let pcss-gold = rgb("#F4C91D")
-#let pale-gold = rgb("#FFF8D6")
+#let navy = rgb("#1D2347")
+#let charcoal = rgb("#23272B")
+#let slate = rgb("#3C454D")
+#let mist = rgb("#DDE2E6")
+#let sail = rgb("#F5F6F7")
+#let pcss-gold = rgb("#FCD937")
+#let pale-gold = rgb("#FFF9D9")
 
 #set page(
   paper: "us-letter",
   flipped: true,
-  margin: (top: 0.24in, bottom: 0.38in, x: 0.42in),
+  margin: (top: 0.22in, bottom: 0.38in, x: 0.42in),
   footer: context [
     #set text(
       font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-      size: 6.5pt,
+      size: 6.4pt,
       fill: slate,
       hyphenate: false,
     )
     #grid(
       columns: (1fr, auto),
       column-gutter: 10pt,
-      [Technology Commons - Weekly Progress + Learning Skills],
+      [Technology Commons - Weekly SMART Goal + Learning Skills],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
@@ -34,24 +34,25 @@ format:
 
 #set text(
   font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-  size: 10pt,
+  size: 9.6pt,
   fill: charcoal,
   hyphenate: false,
 )
-#set par(leading: 0.44em, justify: false)
+#set par(leading: 0.42em, justify: false)
 
-#let write-line(stroke-color: slate) = line(length: 100%, stroke: 0.75pt + stroke-color)
-#let check-box() = rect(width: 9.5pt, height: 9.5pt, stroke: 1pt + navy, radius: 1pt)
+#let write-line(stroke-color: slate) = line(length: 100%, stroke: 0.72pt + stroke-color)
+#let rating-box() = rect(width: 0.28in, height: 0.17in, stroke: 0.8pt + navy, radius: 1pt)
+#let check-box() = rect(width: 9pt, height: 9pt, stroke: 0.95pt + navy, radius: 1pt)
 
 #let brand-header(title, subtitle) = [
   #grid(
-    columns: (1fr, 2.42in),
+    columns: (1fr, 2.55in),
     column-gutter: 18pt,
     align: top,
     [
-      #text(size: 23pt, weight: "bold", fill: navy)[#title]
+      #text(size: 22pt, weight: "bold", fill: navy)[#title]
       #v(1pt)
-      #text(size: 10.6pt, weight: "bold", fill: slate)[#subtitle]
+      #text(size: 10.4pt, weight: "bold", fill: slate)[#subtitle]
     ],
     [
       #grid(
@@ -60,47 +61,50 @@ format:
         align: horizon,
         [#image("technology-department-emblem.svg", width: 0.50in)],
         [
-          #text(size: 8.5pt, weight: "bold", fill: navy)[Technology Commons]
+          #text(size: 8.4pt, weight: "bold", fill: navy)[Technology Commons]
           #linebreak()
-          #text(size: 7.6pt, fill: slate)[Port Credit Secondary School]
+          #text(size: 7.5pt, fill: slate)[Port Credit Secondary School]
+          #linebreak()
+          #text(size: 7.3pt, weight: "bold", fill: slate)[May the Light Never Fail.]
         ],
       )
     ],
   )
   #v(2pt)
-  #line(length: 0.68in, stroke: 3pt + pcss-gold)
+  #line(length: 0.70in, stroke: 3pt + pcss-gold)
   #v(1pt)
   #line(length: 100%, stroke: 1.25pt + navy)
 ]
 
 #let info-row() = [
   #grid(
-    columns: (auto, 1.35fr, auto, 0.86fr, auto, 0.94fr),
+    columns: (auto, 1.32fr, auto, 0.82fr, auto, 0.92fr, auto),
     column-gutter: 6pt,
     align: horizon,
-    [#text(size: 9.6pt, weight: "bold")[Name:]], [#write-line()],
-    [#text(size: 9.6pt, weight: "bold")[Course:]], [#write-line()],
-    [#text(size: 9.6pt, weight: "bold")[Week of:]], [#write-line()],
+    [#text(size: 9.3pt, weight: "bold")[Name:]], [#write-line()],
+    [#text(size: 9.3pt, weight: "bold")[Course:]], [#write-line()],
+    [#text(size: 9.3pt, weight: "bold")[Week of:]], [#write-line()],
+    [#text(size: 13pt, weight: "bold", fill: navy)[/20]],
   )
 ]
 
-#let inline-line(label) = [
+#let field(label) = [
   #grid(
     columns: (auto, 1fr),
-    column-gutter: 5pt,
+    column-gutter: 4pt,
     align: horizon,
-    [#text(size: 8.6pt, weight: "bold", fill: charcoal)[#label]],
+    [#text(size: 8.0pt, weight: "bold", fill: charcoal)[#label]],
     [#write-line()]
   )
 ]
 
-#let compact-check(label) = [
+#let eval-row(label) = [
   #grid(
     columns: (1fr, auto),
-    column-gutter: 4pt,
+    column-gutter: 5pt,
     align: horizon,
-    [#text(size: 7.7pt, weight: "bold", fill: charcoal)[#label]],
-    [#check-box()]
+    [#text(size: 7.4pt, weight: "bold", fill: charcoal)[#label]],
+    [#rating-box()]
   )
 ]
 
@@ -113,56 +117,60 @@ format:
     radius: 3pt,
     inset: (x: 7pt, y: 5pt),
   )[
-    #text(size: 8.1pt, weight: "bold", fill: navy)[CHECK]
+    #text(size: 8.0pt, weight: "bold", fill: navy)[Evaluation]
     #v(3pt)
-    #grid(
-      columns: (1fr, 1fr),
-      column-gutter: 9pt,
-      row-gutter: 4pt,
-      [#compact-check([Neat])],
-      [#compact-check([Detailed])],
-      [#compact-check([Technical terms])],
-      [#compact-check([Level 1-4])],
-    )
+    #eval-row([Neatly Written])
+    #v(3pt)
+    #eval-row([Detailed Information])
+    #v(3pt)
+    #eval-row([Use of Technical Terms])
+    #v(3pt)
+    #eval-row([Level 1-4])
   ]
-]
-
-#let evidence-area() = [
-  #text(size: 8.8pt, weight: "bold", fill: navy)[Evidence: what did I accomplish or learn?]
-  #v(3pt)
-  #write-line()
-  #v(7pt)
-  #write-line()
-  #v(7pt)
-  #write-line()
 ]
 
 #let daily-box(day) = block(
   width: 100%,
-  height: 0.99in,
+  height: 1.02in,
   stroke: 0.85pt + mist,
   radius: 4pt,
   inset: (x: 8pt, y: 5pt),
 )[
   #grid(
-    columns: (0.92fr, 1.22fr, 1.72in),
+    columns: (3.72in, 1fr, 1.82in),
     column-gutter: 12pt,
     align: top,
     [
-      #text(size: 11.7pt, weight: "bold", fill: navy)[#day]
+      #grid(
+        columns: (auto, 1fr),
+        column-gutter: 5pt,
+        align: horizon,
+        [#text(size: 11.3pt, weight: "bold", fill: navy)[#day]],
+        [#text(size: 8.4pt, weight: "bold", fill: slate)[What is your goal today?]],
+      )
       #v(2pt)
-      #inline-line([Today's goal:])
+      #field([Specific:])
       #v(3pt)
-      #inline-line([How will I know?])
+      #field([Measurable (by end of class, I will have):])
       #v(3pt)
-      #inline-line([Worked with:])
+      #field([Attainable, Realistic, Timely:])
+      #v(3pt)
+      #field([Who did you work with?])
     ],
-    [#evidence-area()],
+    [
+      #text(size: 8.4pt, weight: "bold", fill: navy)[In detail, explain what you accomplished/learned today.]
+      #v(4pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+    ],
     [#evaluation-panel()]
   )
 ]
 
-#brand-header([Weekly Progress Log], [Set the Goal. Follow the Way. Take Action.])
+#brand-header([Weekly SMART Goal & Progress Log], [Set the Goal. Follow the Way. Take Action.])
 #v(2pt)
 #info-row()
 #v(3pt)
@@ -170,7 +178,7 @@ format:
   columns: (auto, 1fr),
   column-gutter: 10pt,
   align: horizon,
-  [#text(size: 14.5pt, weight: "bold", fill: navy)[Daily Progress]],
+  [#text(size: 14.2pt, weight: "bold", fill: navy)[Daily SMART Goals & Progress]],
   [#line(length: 100%, stroke: 2.3pt + pcss-gold)]
 )
 #v(3pt)
@@ -196,7 +204,7 @@ format:
     radius: 3pt,
     inset: (x: 7pt, y: 5pt),
   )[
-    #text(size: 7.7pt, weight: "bold", fill: navy)[SELF-RATING]
+    #text(size: 7.6pt, weight: "bold", fill: navy)[RATING]
     #v(4pt)
     #grid(
       columns: (auto, auto, auto, auto, auto, auto, auto, auto),
@@ -218,16 +226,16 @@ format:
   inset: (x: 8pt, y: 5pt),
 )[
   #grid(
-    columns: (2.75in, 1fr, 2.05in),
+    columns: (3.25in, 1fr, 1.80in),
     column-gutter: 12pt,
     align: top,
     [
-      #text(size: 10.7pt, weight: "bold", fill: navy)[#title]
+      #text(size: 10.5pt, weight: "bold", fill: navy)[#title]
       #v(2pt)
-      #text(size: 8.1pt, fill: slate)[#prompt]
+      #text(size: 8.0pt, fill: slate)[#prompt]
     ],
     [
-      #text(size: 8.6pt, weight: "bold", fill: charcoal)[My evidence or next step]
+      #text(size: 8.4pt, weight: "bold", fill: charcoal)[How have you demonstrated and improved?]
       #v(4pt)
       #write-line()
       #v(8pt)
@@ -237,7 +245,7 @@ format:
   )
 ]
 
-#brand-header([Learning Skills Reflection], [How have I demonstrated and improved these learning skills?])
+#brand-header([Warrior Work Ethic: Proof of My Learning Skills], [How have you demonstrated and improved?])
 #v(3pt)
 #info-row()
 #v(3pt)
@@ -247,19 +255,19 @@ format:
   stroke: (left: 4pt + pcss-gold),
   inset: (x: 8pt, y: 3pt),
 )[
-  #text(size: 8.4pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement. Use a specific example in each row.]
+  #text(size: 8.4pt, weight: "bold", fill: slate)[E, G, S, N]
 ]
 #v(4pt)
 
-#skill-row([Responsibility], [Uses class time well, follows through, and completes agreed work without repeated reminders.])
+#skill-row([Responsibility], [Getting things done without anyone reminding you. Not just submitting tasks - but showing you're in control of your life.])
 #v(3pt)
-#skill-row([Organization], [Keeps goals, tools, materials, files, and time organized so work can move forward.])
+#skill-row([Organization], [Keeping track of goals, tools & materials on your own. Using your planner/log so your life isn't chaos in a backpack.])
 #v(3pt)
-#skill-row([Independent Work], [Starts promptly, stays focused, uses resources, and attempts solutions before asking for help.])
+#skill-row([Independent work], [Starting right away, staying focused, keeping goals. Figuring things out yourself before looking for help.])
 #v(3pt)
-#skill-row([Collaboration], [Listens, shares tools and space, contributes fairly, and helps the group succeed.])
+#skill-row([Initiative], [Doing what needs to be done without being asked/assigned. Asking good questions and seeking ways to grow.])
 #v(3pt)
-#skill-row([Initiative], [Asks thoughtful questions, seeks feedback, notices what needs doing, and takes useful action.])
+#skill-row([Collaboration], [Being someone others actually want to work with. Helping others improve their weaknesses & learning from their strengths.])
 #v(3pt)
-#skill-row([Self-Regulation], [Manages distractions, works safely, responds to feedback, and adjusts when something is not working.])
+#skill-row([Self-regulation], [No phones unless absolutely necessary - you stay in control, not distracted. Finding the middle path and maintaining balance.])
 ```
