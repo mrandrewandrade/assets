@@ -12,6 +12,7 @@ rm -f \
   dist/the-way-we-meet.pdf \
   dist/the-way-we-meet.docx \
   dist/the-way-we-meet-notes.pdf \
+  dist/the-way-we-meet-notes-bw.pdf \
   dist/the-way-we-meet-notes.docx \
   dist/combined-teacher-marking.pdf \
   dist/combined-teacher-marking.docx \
@@ -45,6 +46,9 @@ build_listening() {
 
   quarto render assignments/about-me-listening-notes.qmd
   mv -f assignments/about-me-listening-notes.pdf dist/0.2-the-way-we-meet-notes.pdf
+
+  quarto render assignments/about-me-listening-notes-bw.qmd
+  mv -f assignments/about-me-listening-notes-bw.pdf dist/0.2-the-way-we-meet-notes-bw.pdf
 
   quarto render assignments/about-me-listening-notes-word.qmd
   mv -f assignments/the-way-we-meet-notes.docx dist/0.2-the-way-we-meet-notes.docx
