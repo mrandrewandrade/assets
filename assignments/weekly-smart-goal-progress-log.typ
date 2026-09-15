@@ -14,8 +14,7 @@
 
   set page(
     paper: "us-letter",
-    flipped: true,
-    margin: (top: 0.30in, bottom: 0.46in, x: 0.42in),
+    margin: (top: 0.30in, bottom: 0.46in, x: 0.25in),
     footer: context [
       #set text(
         font: ("Arial", "Liberation Sans", "DejaVu Sans"),
@@ -23,6 +22,8 @@
         fill: footer-ink,
         hyphenate: false,
       )
+      #line(length: 100%, stroke: 0.65pt + primary)
+      #v(3pt)
       #grid(
         columns: (1fr, auto),
         column-gutter: 12pt,
@@ -34,7 +35,7 @@
 
   set text(
     font: ("Arial", "Liberation Sans", "DejaVu Sans"),
-    size: 8.4pt,
+    size: 8.2pt,
     fill: black,
     hyphenate: false,
   )
@@ -42,151 +43,169 @@
 
   let identity-fields(score: true) = [
     #grid(
-      columns: (1fr, 1fr, 1fr, auto),
-      column-gutter: 14pt,
+      columns: (2.45in, 1.95in, 2.30in, auto),
+      column-gutter: 11pt,
       align: horizon,
       [
         #text(weight: "bold")[Name:]
-        #h(5pt)
-        #line(length: 2.10in, stroke: 0.7pt + black)
+        #h(7pt)
+        #line(length: 1.88in, stroke: 0.7pt + secondary)
       ],
       [
         #text(weight: "bold")[Course:]
-        #h(5pt)
-        #line(length: 1.70in, stroke: 0.7pt + black)
+        #h(7pt)
+        #line(length: 1.35in, stroke: 0.7pt + secondary)
       ],
       [
         #text(weight: "bold")[Week of:]
-        #h(5pt)
-        #line(length: 1.70in, stroke: 0.7pt + black)
+        #h(7pt)
+        #line(length: 1.42in, stroke: 0.7pt + secondary)
       ],
-      [#if score [#text(size: 10pt, weight: "bold")[/20]]],
+      [#if score [#text(size: 9pt, weight: "bold")[/20]]],
     )
   ]
 
-  let page-header(title, subtitle, score: true, title-size: 22pt) = [
+  let page-header(title, subtitle, score: true, title-size: 21pt) = [
     #grid(
-      columns: (1fr, 2.75in),
-      column-gutter: 18pt,
+      columns: (1fr, 2.55in),
+      column-gutter: 14pt,
       align: top,
       [
         #text(size: title-size, weight: "bold", fill: primary)[#title]
         #v(2pt)
-        #text(size: 10pt, weight: "bold")[#subtitle]
+        #text(size: 10.2pt, weight: "bold")[#subtitle]
         #v(5pt)
-        #line(length: 0.66in, stroke: 3pt + accent)
+        #line(length: 0.72in, stroke: 3pt + accent)
       ],
       [
         #grid(
-          columns: (0.58in, 1fr),
+          columns: (0.55in, 1fr),
           column-gutter: 8pt,
           align: horizon,
-          [#image("technology-department-emblem.svg", width: 0.54in)],
+          [#image("technology-department-emblem.svg", width: 0.50in)],
           [
-            #text(size: 8.4pt, weight: "bold", fill: primary)[Technology Commons]
+            #text(size: 8.2pt, weight: "bold")[Technology Commons]
             #linebreak()
-            #text(size: 7.7pt)[Port Credit Secondary School]
+            #text(size: 7.5pt)[Port Credit Secondary School]
             #linebreak()
-            #text(size: 7.5pt, weight: "bold")[May the Light Never Fail.]
+            #text(size: 7.4pt, weight: "bold")[May the Light Never Fail.]
           ],
         )
       ],
     )
     #v(4pt)
-    #line(length: 100%, stroke: 1.2pt + secondary)
-    #v(6pt)
+    #line(length: 100%, stroke: 1pt + secondary)
+    #v(7pt)
     #identity-fields(score: score)
-    #v(8pt)
+    #v(10pt)
+  ]
+
+  let two-write-lines() = [
+    #v(6pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(9pt)
+    #line(length: 100%, stroke: 0.6pt + black)
   ]
 
   let goal-lines = [
-    #text(size: 7.8pt, weight: "bold")[Specific]
-    #v(4pt)
-    #line(length: 100%, stroke: 0.65pt + black)
-    #v(7pt)
-    #text(size: 7.4pt, weight: "bold")[Measurable (by end of class, I will have)]
-    #v(4pt)
-    #line(length: 100%, stroke: 0.65pt + black)
-    #v(7pt)
-    #text(size: 7.4pt, weight: "bold")[Attainable, Realistic, Timely]
-    #v(4pt)
-    #line(length: 100%, stroke: 0.65pt + black)
+    #text(size: 7.4pt, weight: "bold")[Specific]
+    #two-write-lines()
+    #v(6pt)
+    #text(size: 7.2pt, weight: "bold")[Measurable (by end of class, I will have)]
+    #two-write-lines()
+    #v(6pt)
+    #text(size: 7.2pt, weight: "bold")[Attainable, Realistic, Timely]
+    #two-write-lines()
   ]
 
   let progress-lines = [
-    #text(size: 7.8pt, weight: "bold")[In detail, explain what you accomplished / learned today.]
-    #v(7pt)
-    #line(length: 100%, stroke: 0.65pt + black)
+    #text(size: 7.4pt, weight: "bold")[In detail, explain what you accomplished / learned today.]
+    #v(8pt)
+    #line(length: 100%, stroke: 0.6pt + black)
     #v(10pt)
-    #line(length: 100%, stroke: 0.65pt + black)
+    #line(length: 100%, stroke: 0.6pt + black)
     #v(10pt)
-    #line(length: 100%, stroke: 0.65pt + black)
+    #line(length: 100%, stroke: 0.6pt + black)
     #v(10pt)
-    #line(length: 100%, stroke: 0.65pt + black)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(10pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(10pt)
+    #line(length: 100%, stroke: 0.6pt + black)
   ]
+
+  let checkbox(size: 7.5pt) = box(
+    width: size,
+    height: size,
+    stroke: 0.75pt + primary,
+  )
 
   let evaluation-box = block(
     width: 100%,
+    height: 1.72in,
     fill: eval-fill,
-    stroke: 0.8pt + primary,
-    radius: 4pt,
-    inset: 6pt,
+    stroke: 0.9pt + primary,
+    radius: 5pt,
+    inset: 7pt,
     [
-      #text(size: 8pt, weight: "bold", fill: primary)[Teacher evaluation]
-      #v(5pt)
+      #text(size: 8.2pt, weight: "bold", fill: primary)[Teacher evaluation]
+      #v(7pt)
       #grid(
         columns: (1fr, auto),
-        row-gutter: 4pt,
-        [#text(size: 7pt)[Neatly written]], [#box(width: 8pt, height: 8pt, stroke: 0.7pt + primary)],
-        [#text(size: 7pt)[Detailed information]], [#box(width: 8pt, height: 8pt, stroke: 0.7pt + primary)],
-        [#text(size: 7pt)[Technical terms]], [#box(width: 8pt, height: 8pt, stroke: 0.7pt + primary)],
+        row-gutter: 6pt,
+        align: horizon,
+        [#text(size: 7pt)[Neatly written]], [#checkbox()],
+        [#text(size: 7pt)[Detailed information]], [#checkbox()],
+        [#text(size: 7pt)[Technical terms]], [#checkbox()],
       )
-      #v(5pt)
-      #text(size: 7pt, weight: "bold")[Level]
-      #h(6pt)
-      #text(size: 7pt)[1]
-      #box(width: 7pt, height: 7pt, stroke: 0.7pt + primary)
-      #h(4pt)
-      #text(size: 7pt)[2]
-      #box(width: 7pt, height: 7pt, stroke: 0.7pt + primary)
-      #h(4pt)
-      #text(size: 7pt)[3]
-      #box(width: 7pt, height: 7pt, stroke: 0.7pt + primary)
-      #h(4pt)
-      #text(size: 7pt)[4]
-      #box(width: 7pt, height: 7pt, stroke: 0.7pt + primary)
+      #v(8pt)
+      #line(length: 100%, stroke: 0.5pt + primary)
+      #v(6pt)
+      #grid(
+        columns: (auto, 1fr),
+        column-gutter: 6pt,
+        align: horizon,
+        [#text(size: 7.2pt, weight: "bold")[Level]],
+        [
+          #text(size: 7pt)[1] #checkbox(size: 6.5pt)
+          #h(4pt)
+          #text(size: 7pt)[2] #checkbox(size: 6.5pt)
+          #h(4pt)
+          #text(size: 7pt)[3] #checkbox(size: 6.5pt)
+          #h(4pt)
+          #text(size: 7pt)[4] #checkbox(size: 6.5pt)
+        ],
+      )
     ]
   )
 
   let daily-card(day) = block(
     width: 100%,
-    height: 1.78in,
+    height: 2.43in,
     fill: white,
     stroke: 1pt + primary,
-    radius: 5pt,
+    radius: 6pt,
     inset: 0pt,
     clip: true,
     [
       #block(
         width: 100%,
-        height: 0.30in,
+        height: 0.38in,
         fill: header-fill,
-        inset: (x: 8pt, y: 4pt),
+        inset: (x: 9pt, y: 5pt),
         [
           #grid(
             columns: (1.10in, 1fr),
-            column-gutter: 8pt,
+            column-gutter: 9pt,
             align: horizon,
-            [#text(size: 12.5pt, weight: "bold", fill: primary)[#day]],
+            [#text(size: 13.5pt, weight: "bold", fill: primary)[#day]],
             [#text(size: 8pt, weight: "bold")[Set a SMART goal for today]],
           )
         ],
       )
-      #line(length: 100%, stroke: 0.7pt + primary)
-      #v(5pt)
-      #pad(x: 8pt)[
+      #pad(x: 9pt, top: 6pt)[
         #grid(
-          columns: (3.08in, 1fr, 1.55in),
+          columns: (2.52in, 1fr, 1.50in),
           column-gutter: 12pt,
           align: top,
           [#goal-lines],
@@ -199,101 +218,99 @@
 
   let weekly-review = block(
     width: 100%,
-    height: 1.72in,
+    height: 3.02in,
     fill: white,
     stroke: 1pt + primary,
-    radius: 5pt,
-    inset: 8pt,
+    radius: 6pt,
+    inset: 9pt,
     [
-      #text(size: 13pt, weight: "bold", fill: primary)[Weekly Progress Check]
-      #v(2pt)
-      #line(length: 0.48in, stroke: 2.4pt + accent)
-      #v(6pt)
+      #text(size: 13.5pt, weight: "bold", fill: primary)[Weekly Progress Check]
+      #v(3pt)
+      #line(length: 0.65in, stroke: 2.5pt + accent)
+      #v(12pt)
       #text(size: 8pt, weight: "bold")[What progress did you make toward your goals this week?]
-      #v(6pt)
-      #line(length: 100%, stroke: 0.65pt + black)
-      #v(10pt)
-      #line(length: 100%, stroke: 0.65pt + black)
-      #v(10pt)
-      #line(length: 100%, stroke: 0.65pt + black)
-      #v(10pt)
+      #v(9pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(11pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(11pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(15pt)
       #text(size: 8pt, weight: "bold")[What is one specific next step for next week?]
-      #v(6pt)
-      #line(length: 100%, stroke: 0.65pt + black)
-      #v(10pt)
-      #line(length: 100%, stroke: 0.65pt + black)
+      #v(9pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(11pt)
+      #line(length: 100%, stroke: 0.6pt + black)
     ]
   )
 
   let reflection-box(title, prompt) = block(
     width: 100%,
-    height: 2.62in,
+    height: 3.68in,
     fill: white,
     stroke: 1pt + primary,
-    radius: 5pt,
+    radius: 6pt,
     inset: 0pt,
     clip: true,
     [
       #block(
         width: 100%,
-        height: 0.34in,
+        height: 0.38in,
         fill: header-fill,
-        inset: (x: 8pt, y: 5pt),
+        inset: (x: 9pt, y: 5pt),
         [#text(size: 13pt, weight: "bold", fill: primary)[#title]],
       )
-      #line(length: 100%, stroke: 0.7pt + primary)
-      #pad(x: 8pt, top: 6pt)[
-        #text(size: 7.8pt, weight: "medium")[#prompt]
+      #pad(x: 9pt, top: 7pt)[
+        #text(size: 7.8pt)[#prompt]
       ]
     ]
   )
 
   let rating-box = block(
     width: 100%,
+    height: 0.90in,
     fill: eval-fill,
-    stroke: 0.8pt + primary,
-    radius: 4pt,
-    inset: 6pt,
+    stroke: 0.9pt + primary,
+    radius: 5pt,
+    inset: 8pt,
     [
-      #text(size: 7.4pt, weight: "bold", fill: primary)[RATING]
-      #v(10pt)
-      #text(size: 8pt, weight: "bold")[E]
-      #box(width: 9pt, height: 9pt, stroke: 0.7pt + primary)
-      #h(7pt)
-      #text(size: 8pt, weight: "bold")[G]
-      #box(width: 9pt, height: 9pt, stroke: 0.7pt + primary)
-      #h(7pt)
-      #text(size: 8pt, weight: "bold")[S]
-      #box(width: 9pt, height: 9pt, stroke: 0.7pt + primary)
-      #h(7pt)
-      #text(size: 8pt, weight: "bold")[N]
-      #box(width: 9pt, height: 9pt, stroke: 0.7pt + primary)
+      #text(size: 7.5pt, weight: "bold", fill: primary)[RATING]
+      #v(16pt)
+      #grid(
+        columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+        column-gutter: 5pt,
+        align: horizon,
+        [#text(size: 8pt, weight: "bold")[E]], [#checkbox(size: 8pt)],
+        [#text(size: 8pt, weight: "bold")[G]], [#checkbox(size: 8pt)],
+        [#text(size: 8pt, weight: "bold")[S]], [#checkbox(size: 8pt)],
+        [#text(size: 8pt, weight: "bold")[N]], [#checkbox(size: 8pt)],
+      )
     ]
   )
 
   let skill-card(title, description) = block(
     width: 100%,
-    height: 0.79in,
+    height: 1.12in,
     fill: white,
     stroke: 0.9pt + primary,
-    radius: 4pt,
-    inset: 8pt,
+    radius: 5pt,
+    inset: 9pt,
     [
       #grid(
-        columns: (3.25in, 1fr, 1.55in),
-        column-gutter: 12pt,
+        columns: (1.90in, 1fr, 1.48in),
+        column-gutter: 13pt,
         align: top,
         [
           #text(size: 10.5pt, weight: "bold", fill: primary)[#title]
-          #v(5pt)
-          #text(size: 7pt)[#description]
+          #v(9pt)
+          #text(size: 6.8pt)[#description]
         ],
         [
-          #text(size: 8pt, weight: "bold")[How have you demonstrated or improved this?]
-          #v(9pt)
-          #line(length: 100%, stroke: 0.65pt + black)
+          #text(size: 7.2pt, weight: "bold")[How have you demonstrated or improved this?]
+          #v(11pt)
+          #line(length: 100%, stroke: 0.6pt + black)
           #v(10pt)
-          #line(length: 100%, stroke: 0.65pt + black)
+          #line(length: 100%, stroke: 0.6pt + black)
         ],
         [#rating-box],
       )
@@ -347,12 +364,12 @@
     [Warrior Work Ethic: Proof of My Learning Skills],
     [How have you demonstrated and improved?],
     score: false,
-    title-size: 19.5pt,
+    title-size: 18.5pt,
   )
   text(size: 7.8pt, weight: "bold")[
     Circle one rating: E = Excellent, G = Good, S = Satisfactory, N = Needs Improvement
   ]
-  v(6pt)
+  v(8pt)
 
   skill-card(
     [Responsibility],
