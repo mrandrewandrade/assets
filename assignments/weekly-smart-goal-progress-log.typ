@@ -8,6 +8,7 @@
   let primary = if colour { navy } else { black }
   let secondary = if colour { blue } else { black }
   let accent = if colour { gold } else { black }
+  let header-fill = if colour { gold } else { white }
   let eval-fill = if colour { pale-gold } else { white }
   let footer-ink = if colour { rgb("#3C454D") } else { black }
 
@@ -163,26 +164,36 @@
     fill: white,
     stroke: 1pt + primary,
     radius: 5pt,
-    inset: 8pt,
+    inset: 0pt,
+    clip: true,
     [
-      #grid(
-        columns: (1.10in, 1fr),
-        column-gutter: 8pt,
-        align: horizon,
-        [#text(size: 12.5pt, weight: "bold", fill: primary)[#day]],
-        [#text(size: 8pt, weight: "bold")[Set a SMART goal for today]],
+      #block(
+        width: 100%,
+        height: 0.30in,
+        fill: header-fill,
+        inset: (x: 8pt, y: 4pt),
+        [
+          #grid(
+            columns: (1.10in, 1fr),
+            column-gutter: 8pt,
+            align: horizon,
+            [#text(size: 12.5pt, weight: "bold", fill: primary)[#day]],
+            [#text(size: 8pt, weight: "bold")[Set a SMART goal for today]],
+          )
+        ],
       )
-      #v(2pt)
-      #line(length: 0.48in, stroke: 2.4pt + accent)
+      #line(length: 100%, stroke: 0.7pt + primary)
       #v(5pt)
-      #grid(
-        columns: (3.08in, 1fr, 1.55in),
-        column-gutter: 12pt,
-        align: top,
-        [#goal-lines],
-        [#progress-lines],
-        [#evaluation-box],
-      )
+      #pad(x: 8pt)[
+        #grid(
+          columns: (3.08in, 1fr, 1.55in),
+          column-gutter: 12pt,
+          align: top,
+          [#goal-lines],
+          [#progress-lines],
+          [#evaluation-box],
+        )
+      ]
     ]
   )
 
@@ -211,6 +222,29 @@
       #line(length: 100%, stroke: 0.65pt + black)
       #v(10pt)
       #line(length: 100%, stroke: 0.65pt + black)
+    ]
+  )
+
+  let reflection-box(title, prompt) = block(
+    width: 100%,
+    height: 2.62in,
+    fill: white,
+    stroke: 1pt + primary,
+    radius: 5pt,
+    inset: 0pt,
+    clip: true,
+    [
+      #block(
+        width: 100%,
+        height: 0.34in,
+        fill: header-fill,
+        inset: (x: 8pt, y: 5pt),
+        [#text(size: 13pt, weight: "bold", fill: primary)[#title]],
+      )
+      #line(length: 100%, stroke: 0.7pt + primary)
+      #pad(x: 8pt, top: 6pt)[
+        #text(size: 7.8pt, weight: "medium")[#prompt]
+      ]
     ]
   )
 
@@ -268,7 +302,7 @@
 
   page-header(
     [Weekly SMART Goal & Progress Log],
-    [Set the Goal. Follow the Way. Take Action.],
+    [Set the Goal. Follow the Way. Reflect.],
     score: true,
   )
   daily-card([Monday])
@@ -281,7 +315,7 @@
 
   page-header(
     [Weekly SMART Goal & Progress Log],
-    [Set the Goal. Follow the Way. Take Action.],
+    [Set the Goal. Follow the Way. Reflect.],
     score: true,
   )
   daily-card([Thursday])
@@ -289,6 +323,23 @@
   daily-card([Friday])
   v(7pt)
   weekly-review
+
+  pagebreak()
+
+  page-header(
+    [Weekly SMART Goal & Progress Log],
+    [Set the Goal. Follow the Way. Reflect.],
+    score: true,
+  )
+  reflection-box(
+    [Highlight of the Week],
+    [Show your best moment, success, or something you are proud of. Use words, drawings, diagrams, or symbols.],
+  )
+  v(8pt)
+  reflection-box(
+    [What could have been better?],
+    [Reflect on a challenge, a missed opportunity, or one thing you want to improve next time.],
+  )
 
   pagebreak()
 
