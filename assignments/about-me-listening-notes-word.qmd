@@ -7,11 +7,12 @@ format:
 output-file: the-way-we-meet-notes.docx
 ---
 
-**Technology Commons · Port Credit Secondary School**
+![](technology-department-emblem.svg){width=0.65in}
 
-**Submitted by:** ________________________________  
-**Student Number:** ______________________________  
-**Class:** ________________________________  
+**TECHNOLOGY COMMONS**  
+**Port Credit Secondary School**
+
+**Submitted by (student number):** ________________________________________________  
 **Date:** ________________________________
 
 ## How to use this package
@@ -24,14 +25,13 @@ For every presenter, write one brief note that shows what you learned, noticed, 
 
 Phones should be away unless directed otherwise. Face the speaker, avoid side conversations, and make space for the person presenting. An honest **S** or **N** is better than a false **A**. Knowingly inaccurate self-ratings can reduce the **Integrity & Reflection** score more than the original lapse would have.
 
-This package has four parts:
+This package has three parts:
 
-1. **Listening notes, presenters 1-17**
-2. **Listening notes, presenters 18-34**
-3. **Listening Reflection + Learning Skills self-evaluation**
-4. **Presentation Reflection + activity feedback + submission check**
+1. **Listening notes, presenters 1-34**
+2. **Listening Reflection + Learning Skills self-evaluation**
+3. **Presentation Reflection + activity feedback + submission check**
 
-## Presenters 1-17
+## Listening notes - presenters 1-34
 
 | No. | Presenter | Listening note / connection / question / comment | My attention A/S/N |
 |---:|---|---|:---:|
@@ -55,7 +55,7 @@ This package has four parts:
 
 \newpage
 
-## Presenters 18-34
+## Listening notes - continued
 
 | No. | Presenter | Listening note / connection / question / comment | My attention A/S/N |
 |---:|---|---|:---:|
@@ -81,31 +81,33 @@ This package has four parts:
 
 # 0.2 Listening Reflection
 
-This is where you evaluate **how you listened**, not just whether you filled in the notes table. Use evidence from what you actually did. If something was not strong, explain what happened and what you will do differently next time.
+Use evidence from what you actually did. If something was not strong, explain what happened and what you will do differently next time.
 
 ## Listening self-evaluation
 
 | Listening area | What I should evaluate | My score | My evidence or next step |
 |---|---|:---:|---|
-| Attention & Presence | Phone away, face the speaker, avoid side conversations, refocus after distractions | ___ /2 |  |
-| Audience Notes | A specific listening note for each presenter | ___ /2 |  |
-| Discussion & Connections | Questions, comments, or connections that help the conversation | ___ /2 |  |
-| Completion & Consistency | Kept the package up to date and completed all four parts | ___ /2 |  |
-| Integrity & Reflection | Honest A/S/N ratings and thoughtful reflection | ___ /2 |  |
+| Attention & Presence | Phone away, face speaker, avoid side talk, refocus | ___ /2 |  |
+| Audience Notes | A specific note for every presenter | ___ /2 |  |
+| Discussion & Connections | Useful questions, comments, or connections | ___ /2 |  |
+| Completion & Consistency | Kept up across all presenters | ___ /2 |  |
+| Integrity & Reflection | Honest ratings and thoughtful reflection | ___ /2 |  |
 | **Total** |  | **___ /10** | |
 
 ## Learning Skills self-evaluation
 
-For each skill, choose **C = Consistently**, **S = Sometimes**, or **N = Not yet**. Give evidence of what you did. If you did not show the skill consistently, write a specific next step.
+Choose **C = Consistently**, **S = Sometimes**, or **N = Not yet**, then give evidence or a specific next step.
 
 | Learning Skill | C / S / N | What it can look like | My evidence or next step |
 |---|:---:|---|---|
-| Responsibility | C / S / N | Prepared, phone away, completed and submitted the work |  |
-| Organization | C / S / N | Notes complete, readable, and in order |  |
+| Responsibility | C / S / N | Prepared, phone away, completed/submitted |  |
+| Organization | C / S / N | Notes complete, readable, in order |  |
 | Independent Work | C / S / N | Worked without repeated reminders |  |
-| Collaboration | C / S / N | Was a respectful audience member and supported speakers |  |
-| Initiative | C / S / N | Offered a thoughtful question, comment, or connection |  |
-| Self-Regulation | C / S / N | Managed distractions and refocused after a lapse |  |
+| Collaboration | C / S / N | Respectful audience; supported speakers |  |
+| Initiative | C / S / N | Offered a question, comment, or connection |  |
+| Self-Regulation | C / S / N | Managed distractions and refocused |  |
+
+\newpage
 
 ## Listening reflection - write in your own words
 
@@ -182,7 +184,7 @@ ________________________________________________________________________________
 
 ## Google Classroom submission - one PDF
 
-Submit **one PDF** containing all four completed parts of this package.
+Submit **one PDF** containing all three completed parts of this package.
 
 - **Digital option:** complete this editable Word file in Word, or upload it to Google Drive and open it with Google Docs. When finished, download/export it as a PDF.
 - **Paper option:** scan the completed pages directly to PDF using a document scanning app. If you take regular photos instead, put the clear photos into a Google Doc or Word file in the correct order, then export that file as a PDF.
