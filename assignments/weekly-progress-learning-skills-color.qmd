@@ -1,0 +1,239 @@
+---
+format:
+  typst: default
+---
+
+```{=typst}
+#let navy = rgb("#1E2B55")
+#let charcoal = rgb("#20262D")
+#let slate = rgb("#596673")
+#let mist = rgb("#D9DEE2")
+#let sail = rgb("#F4F5F6")
+#let pcss-gold = rgb("#F4C91D")
+
+#set page(
+  paper: "us-letter",
+  margin: (top: 0.28in, bottom: 0.42in, x: 0.44in),
+  footer: context [
+    #set text(
+      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      size: 6.4pt,
+      fill: slate,
+      hyphenate: false,
+    )
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 10pt,
+      [Technology Commons - Weekly Progress + Learning Skills],
+      [Page #counter(page).display("1 of 1", both: true)]
+    )
+  ]
+)
+
+#set text(
+  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  size: 10pt,
+  fill: charcoal,
+  hyphenate: false,
+)
+#set par(leading: 0.46em, justify: false)
+
+#let write-line() = line(length: 100%, stroke: 0.7pt + slate)
+#let check-box() = rect(width: 9pt, height: 9pt, stroke: 0.9pt + navy, radius: 1pt)
+
+#let brand-header(title, subtitle) = [
+  #grid(
+    columns: (1fr, 2.35in),
+    column-gutter: 18pt,
+    align: top,
+    [
+      #text(size: 22pt, weight: "bold", fill: navy)[#title]
+      #v(1pt)
+      #text(size: 10.2pt, weight: "bold", fill: slate)[#subtitle]
+    ],
+    [
+      #grid(
+        columns: (0.52in, 1fr),
+        column-gutter: 8pt,
+        align: horizon,
+        [#image("../brand/technology-department-emblem.svg", width: 0.48in)],
+        [
+          #text(size: 8.2pt, weight: "bold", fill: navy)[Technology Commons]
+          #linebreak()
+          #text(size: 7.4pt, fill: slate)[Port Credit Secondary School]
+        ],
+      )
+    ],
+  )
+  #v(4pt)
+  #line(length: 0.66in, stroke: 3pt + pcss-gold)
+  #v(2pt)
+  #line(length: 100%, stroke: 1.2pt + navy)
+]
+
+#let eval-item(label) = [
+  #grid(
+    columns: (1fr, auto),
+    column-gutter: 5pt,
+    align: horizon,
+    [#text(size: 8.4pt, weight: "bold", fill: charcoal)[#label]],
+    [#check-box()]
+  )
+]
+
+#let daily-box(day) = block(
+  width: 100%,
+  height: 1.70in,
+  stroke: 0.8pt + mist,
+  radius: 4pt,
+  inset: (x: 8pt, y: 7pt),
+)[
+  #grid(
+    columns: (1fr, 1.26in),
+    column-gutter: 10pt,
+    align: top,
+    [
+      #text(size: 12.4pt, weight: "bold", fill: navy)[#day]
+      #v(3pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
+        [#text(size: 9.6pt, weight: "bold")[Today's goal (specific):]],
+        [#write-line()]
+      )
+      #v(6pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
+        [#text(size: 9.6pt, weight: "bold")[How will I know I met it?]],
+        [#write-line()]
+      )
+      #v(6pt)
+      #grid(columns: (auto, 1fr), column-gutter: 5pt, align: horizon,
+        [#text(size: 9.6pt, weight: "bold")[Who did I work with?]],
+        [#write-line()]
+      )
+      #v(6pt)
+      #text(size: 9.6pt, weight: "bold")[What did I accomplish or learn today?]
+      #v(4pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+    ],
+    [
+      #block(
+        height: 100%,
+        fill: sail,
+        stroke: 0.6pt + mist,
+        radius: 3pt,
+        inset: (x: 7pt, y: 7pt),
+      )[
+        #text(size: 9pt, weight: "bold", fill: navy)[Evaluation]
+        #v(6pt)
+        #eval-item([Neat])
+        #v(7pt)
+        #eval-item([Detailed])
+        #v(7pt)
+        #eval-item([Technical terms])
+        #v(7pt)
+        #eval-item([Level 1-4])
+      ]
+    ]
+  )
+]
+
+#brand-header([Weekly Progress Log], [Set the Goal. Follow the Way. Take Action.])
+#v(5pt)
+#grid(
+  columns: (auto, 1.25fr, auto, 0.82fr, auto, 1fr),
+  column-gutter: 5pt,
+  align: horizon,
+  [#text(weight: "bold")[Name:]], [#write-line()],
+  [#text(weight: "bold")[Course:]], [#write-line()],
+  [#text(weight: "bold")[Week of:]], [#write-line()],
+)
+#v(7pt)
+#text(size: 15pt, weight: "bold", fill: navy)[Daily Progress]
+#v(2pt)
+#line(length: 100%, stroke: 2pt + pcss-gold)
+#v(5pt)
+
+#daily-box([Monday])
+#v(4pt)
+#daily-box([Tuesday])
+#v(4pt)
+#daily-box([Wednesday])
+#v(4pt)
+#daily-box([Thursday])
+#v(4pt)
+#daily-box([Friday])
+
+#pagebreak()
+
+#let rating-panel() = [
+  #block(
+    height: 100%,
+    fill: sail,
+    stroke: 0.6pt + mist,
+    radius: 3pt,
+    inset: (x: 7pt, y: 7pt),
+  )[
+    #text(size: 8pt, weight: "bold", fill: navy)[SELF-RATING]
+    #v(5pt)
+    #grid(columns: (auto, auto), column-gutter: 5pt, row-gutter: 6pt,
+      [#text(size: 8.4pt, weight: "bold")[E]], [#check-box()],
+      [#text(size: 8.4pt, weight: "bold")[G]], [#check-box()],
+      [#text(size: 8.4pt, weight: "bold")[S]], [#check-box()],
+      [#text(size: 8.4pt, weight: "bold")[N]], [#check-box()],
+    )
+  ]
+]
+
+#let skill-row(title, prompt) = block(
+  width: 100%,
+  height: 1.28in,
+  stroke: 0.8pt + mist,
+  radius: 4pt,
+  inset: (x: 8pt, y: 7pt),
+)[
+  #grid(
+    columns: (1fr, 0.88in),
+    column-gutter: 10pt,
+    align: top,
+    [
+      #text(size: 11.5pt, weight: "bold", fill: navy)[#title]
+      #v(1pt)
+      #text(size: 8.8pt, fill: slate)[#prompt]
+      #v(5pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+      #v(8pt)
+      #write-line()
+    ],
+    [#rating-panel()]
+  )
+]
+
+#brand-header([Learning Skills Reflection], [How have I demonstrated and improved these learning skills?])
+#v(5pt)
+#grid(
+  columns: (auto, 1.18fr, auto, 0.86fr, auto, 0.9fr),
+  column-gutter: 5pt,
+  align: horizon,
+  [#text(weight: "bold")[Name:]], [#write-line()],
+  [#text(weight: "bold")[Course:]], [#write-line()],
+  [#text(weight: "bold")[Week of:]], [#write-line()],
+)
+#v(5pt)
+#text(size: 8.2pt, fill: slate)[E = Excellent   G = Good   S = Satisfactory   N = Needs Improvement]
+#v(7pt)
+
+#skill-row([Responsibility], [Getting things done without reminders, using class time well, and following through on tasks.])
+#v(4pt)
+#skill-row([Organization], [Keeping track of goals, tools, materials, files, and time in an effective way.])
+#v(4pt)
+#skill-row([Independent Work], [Starting promptly, staying focused, using available resources, and solving problems before asking for help.])
+#v(4pt)
+#skill-row([Initiative], [Doing what needs to be done, asking thoughtful questions, seeking feedback, and acting on next steps.])
+#v(4pt)
+#skill-row([Collaboration], [Working well with others, listening, sharing tools and space, and helping the group succeed.])
+#v(4pt)
+#skill-row([Self-Regulation], [Managing distractions, staying balanced and safe, responding to feedback, and adjusting when something is not working.])
+```
