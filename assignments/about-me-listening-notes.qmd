@@ -10,7 +10,6 @@ format:
 #let charcoal = rgb("#23272B")
 #let slate = rgb("#66717B")
 #let mist = rgb("#DDE2E6")
-#let sail = rgb("#F5F6F7")
 #let pcss-gold = rgb("#FCD937")
 #let white = rgb("#FFFFFF")
 
@@ -37,20 +36,18 @@ format:
 #set text(font: ("Arial", "Liberation Sans", "DejaVu Sans"), size: 8.5pt, fill: charcoal, hyphenate: false)
 #set par(leading: 0.5em, justify: false)
 
-#let blank-field(label) = [
+#let blank-field(label, length: 1.35in) = [
   #text(weight: "bold", fill: navy)[#label:]
   #h(5pt)
-  #line(length: 1.35in, stroke: 0.7pt + technical-blue)
+  #line(length: length, stroke: 0.7pt + technical-blue)
 ]
 
 #let identity-fields = [
   #grid(
-    columns: (1.2fr, 1.25fr, 0.9fr, 0.9fr),
-    column-gutter: 10pt,
-    [#blank-field("Submitted by")],
-    [#blank-field("Student Number")],
-    [#blank-field("Class")],
-    [#blank-field("Date")],
+    columns: (1fr, auto),
+    column-gutter: 16pt,
+    [#blank-field("Submitted by (student number)", length: 3.45in)],
+    [#blank-field("Date", length: 1.25in)],
   )
 ]
 
@@ -58,11 +55,13 @@ format:
   width: 100%,
   fill: navy,
   radius: 5pt,
-  inset: (left: 10pt, right: 10pt, top: 7pt, bottom: 7pt),
+  inset: (left: 10pt, right: 10pt, top: 6pt, bottom: 6pt),
   [
     #grid(
-      columns: (1fr, auto),
+      columns: (auto, 1fr, auto),
+      column-gutter: 10pt,
       align: horizon,
+      [#image("technology-department-emblem.svg", height: 0.48in)],
       [
         #text(size: 20pt, weight: "bold", fill: white)[#title]
         #v(1pt)
@@ -107,7 +106,7 @@ format:
   #identity-fields
   #v(5pt)
   #instruction-panel([
-    Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. After the final presentation, complete the two reflection pages.
+    Make space for each speaker: phones away unless directed otherwise, face the speaker, avoid side conversations, and write one brief note for every presenter. Circle #text(weight: "bold")[A] = Attentive, #text(weight: "bold")[S] = Some lapses, or #text(weight: "bold")[N] = Not attentive. Be honest: an honest S or N is better than a false A. After the final presentation, complete the reflection pages.
   ])
   #v(5pt)
 ]
@@ -151,11 +150,11 @@ format:
   [#text(size: 7.5pt, weight: "bold", fill: navy)[#prompt]]
 )
 
-#notes-header([Page 1 - Presenters 1-17])
+#notes-header([Presenters 1-34])
 #notes-table(1, 17, 6.8pt)
 
 #pagebreak()
-#notes-header([Page 2 - Presenters 18-34])
+#notes-header([Listening notes - continued])
 #notes-table(18, 34, 6.8pt)
 
 #pagebreak()
@@ -180,7 +179,7 @@ format:
       [#text(size: 6.6pt, weight: "bold")[Attention & Presence] #linebreak() #text(size: 6.2pt, fill: slate)[phone away, face speaker, avoid side talk, refocus]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
       [#text(size: 6.6pt, weight: "bold")[Audience Notes] #linebreak() #text(size: 6.2pt, fill: slate)[specific note for each presenter]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
       [#text(size: 6.6pt, weight: "bold")[Discussion & Connections] #linebreak() #text(size: 6.2pt, fill: slate)[questions, comments, or connections]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
-      [#text(size: 6.6pt, weight: "bold")[Completion & Consistency] #linebreak() #text(size: 6.2pt, fill: slate)[kept up across all four pages]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
+      [#text(size: 6.6pt, weight: "bold")[Completion & Consistency] #linebreak() #text(size: 6.2pt, fill: slate)[kept up across all presenters]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
       [#text(size: 6.6pt, weight: "bold")[Integrity & Reflection] #linebreak() #text(size: 6.2pt, fill: slate)[honest ratings and thoughtful reflection]], [#line(length: 0.24in, stroke: 0.55pt + slate)], [#v(10pt)],
     )
     #v(3pt)
