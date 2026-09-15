@@ -36,7 +36,7 @@ format:
 #set par(leading: 0.42em, justify: false)
 
 #let write-line() = line(length: 100%, stroke: 0.95pt + ink)
-#let rating-box() = rect(width: 0.28in, height: 0.17in, stroke: 1pt + ink, radius: 1pt)
+#let rating-box() = rect(width: 0.25in, height: 0.15in, stroke: 1pt + ink, radius: 1pt)
 #let check-box() = rect(width: 9pt, height: 9pt, stroke: 1.1pt + ink, radius: 1pt)
 
 #let brand-header(title, subtitle) = [
@@ -71,7 +71,7 @@ format:
   #line(length: 100%, stroke: 1.35pt + ink)
 ]
 
-#let info-row() = [
+#let info-row-score() = [
   #grid(
     columns: (auto, 1.32fr, auto, 0.82fr, auto, 0.92fr, auto),
     column-gutter: 6pt,
@@ -83,12 +83,23 @@ format:
   )
 ]
 
+#let info-row() = [
+  #grid(
+    columns: (auto, 1.35fr, auto, 0.86fr, auto, 1fr),
+    column-gutter: 6pt,
+    align: horizon,
+    [#text(size: 9.3pt, weight: "bold")[Name:]], [#write-line()],
+    [#text(size: 9.3pt, weight: "bold")[Course:]], [#write-line()],
+    [#text(size: 9.3pt, weight: "bold")[Week of:]], [#write-line()],
+  )
+]
+
 #let field(label) = [
   #grid(
     columns: (auto, 1fr),
     column-gutter: 4pt,
     align: horizon,
-    [#text(size: 8.0pt, weight: "bold", fill: ink)[#label]],
+    [#text(size: 7.6pt, weight: "bold", fill: ink)[#label]],
     [#write-line()]
   )
 ]
@@ -96,9 +107,9 @@ format:
 #let eval-row(label) = [
   #grid(
     columns: (1fr, auto),
-    column-gutter: 5pt,
+    column-gutter: 4pt,
     align: horizon,
-    [#text(size: 7.4pt, weight: "bold", fill: ink)[#label]],
+    [#text(size: 6.5pt, weight: "bold", fill: ink)[#label]],
     [#rating-box()]
   )
 ]
@@ -110,23 +121,23 @@ format:
     fill: paper,
     stroke: 1pt + ink,
     radius: 2pt,
-    inset: (x: 7pt, y: 5pt),
+    inset: (x: 6pt, y: 4pt),
   )[
-    #text(size: 8.0pt, weight: "bold", fill: ink)[Evaluation]
-    #v(3pt)
+    #text(size: 7.5pt, weight: "bold", fill: ink)[Evaluation]
+    #v(2pt)
     #eval-row([Neatly Written])
-    #v(3pt)
+    #v(2pt)
     #eval-row([Detailed Information])
-    #v(3pt)
+    #v(2pt)
     #eval-row([Use of Technical Terms])
-    #v(3pt)
+    #v(2pt)
     #eval-row([Level 1-4])
   ]
 ]
 
 #let daily-box(day) = block(
   width: 100%,
-  height: 1.02in,
+  height: 1.08in,
   stroke: 1.1pt + ink,
   radius: 2pt,
   inset: (x: 8pt, y: 5pt),
@@ -141,19 +152,19 @@ format:
         column-gutter: 5pt,
         align: horizon,
         [#text(size: 11.3pt, weight: "bold", fill: ink)[#day]],
-        [#text(size: 8.4pt, weight: "bold", fill: ink)[What is your goal today?]],
+        [#text(size: 8.2pt, weight: "bold", fill: ink)[What is your goal today?]],
       )
       #v(2pt)
       #field([Specific:])
-      #v(3pt)
+      #v(2pt)
       #field([Measurable (by end of class, I will have):])
-      #v(3pt)
+      #v(2pt)
       #field([Attainable, Realistic, Timely:])
-      #v(3pt)
+      #v(2pt)
       #field([Who did you work with?])
     ],
     [
-      #text(size: 8.4pt, weight: "bold", fill: ink)[In detail, explain what you accomplished/learned today.]
+      #text(size: 8.2pt, weight: "bold", fill: ink)[In detail, explain what you accomplished/learned today.]
       #v(4pt)
       #write-line()
       #v(8pt)
@@ -167,7 +178,7 @@ format:
 
 #brand-header([Weekly SMART Goal & Progress Log], [Set the Goal. Follow the Way. Take Action.])
 #v(2pt)
-#info-row()
+#info-row-score()
 #v(3pt)
 #grid(
   columns: (auto, 1fr),
@@ -179,13 +190,13 @@ format:
 #v(3pt)
 
 #daily-box([Monday])
-#v(2pt)
+#v(1pt)
 #daily-box([Tuesday])
-#v(2pt)
+#v(1pt)
 #daily-box([Wednesday])
-#v(2pt)
+#v(1pt)
 #daily-box([Thursday])
-#v(2pt)
+#v(1pt)
 #daily-box([Friday])
 
 #pagebreak()
