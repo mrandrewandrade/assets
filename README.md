@@ -72,9 +72,13 @@ The generated files are written to `dist/`:
 0.2-the-way-we-meet.pdf
 0.2-the-way-we-meet.docx
 0.2-the-way-we-meet-notes.pdf
+0.2-the-way-we-meet-notes-bw.pdf
 0.2-the-way-we-meet-notes.docx
 0.1-0.2-combined-teacher-marking.pdf
 0.1-0.2-combined-teacher-marking.docx
+weekly-smart-goal-progress-log.pdf
+weekly-smart-goal-progress-log-bw.pdf
+weekly-smart-goal-progress-log.docx
 ```
 
 Individual builds are also available:
@@ -84,6 +88,7 @@ bash render.sh 0.0
 bash render.sh 0.1
 bash render.sh 0.2
 bash render.sh combined-teacher-marking
+bash render.sh weekly
 ```
 
 The GitHub Actions workflow uses the same Quarto/Typst/Pandoc rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs and Word files to GitHub Pages.

@@ -1,0 +1,227 @@
+---
+title: "Weekly SMART Goal & Progress Log"
+subtitle: "Set the Goal. Follow the Way. Take Action."
+format:
+  docx:
+    toc: false
+output-file: weekly-smart-goal-progress-log.docx
+---
+
+**Technology Commons - Port Credit Secondary School**\
+**May the Light Never Fail.**
+
+**Name:** ______________________________  **Course:** ______________  **Week of:** ______________  **/20**
+
+# Daily SMART Goals & Progress
+
+## Monday - What is your goal today?
+
+**Specific:** _______________________________________________________________________\
+____________________________________________________________________________________
+
+**Measurable (by end of class, I will have):** ___________________________________________\
+**Attainable, Realistic, Timely:** ______________________________________________________
+
+**In detail, explain what you accomplished or learned today.**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**Teacher evaluation:** Neatly written [ ]  Detailed information [ ]  Technical terms [ ]  Level: 1 [ ] 2 [ ] 3 [ ] 4 [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Tuesday - What is your goal today?
+
+**Specific:** _______________________________________________________________________\
+____________________________________________________________________________________
+
+**Measurable (by end of class, I will have):** ___________________________________________\
+**Attainable, Realistic, Timely:** ______________________________________________________
+
+**In detail, explain what you accomplished or learned today.**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**Teacher evaluation:** Neatly written [ ]  Detailed information [ ]  Technical terms [ ]  Level: 1 [ ] 2 [ ] 3 [ ] 4 [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Daily SMART Goals & Progress - continued
+
+**Name:** ______________________________  **Course:** ______________  **Week of:** ______________  **/20**
+
+## Wednesday - What is your goal today?
+
+**Specific:** _______________________________________________________________________\
+____________________________________________________________________________________
+
+**Measurable (by end of class, I will have):** ___________________________________________\
+**Attainable, Realistic, Timely:** ______________________________________________________
+
+**In detail, explain what you accomplished or learned today.**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**Teacher evaluation:** Neatly written [ ]  Detailed information [ ]  Technical terms [ ]  Level: 1 [ ] 2 [ ] 3 [ ] 4 [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Thursday - What is your goal today?
+
+**Specific:** _______________________________________________________________________\
+____________________________________________________________________________________
+
+**Measurable (by end of class, I will have):** ___________________________________________\
+**Attainable, Realistic, Timely:** ______________________________________________________
+
+**In detail, explain what you accomplished or learned today.**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**Teacher evaluation:** Neatly written [ ]  Detailed information [ ]  Technical terms [ ]  Level: 1 [ ] 2 [ ] 3 [ ] 4 [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Daily SMART Goals & Progress - continued
+
+**Name:** ______________________________  **Course:** ______________  **Week of:** ______________  **/20**
+
+## Friday - What is your goal today?
+
+**Specific:** _______________________________________________________________________\
+____________________________________________________________________________________
+
+**Measurable (by end of class, I will have):** ___________________________________________\
+**Attainable, Realistic, Timely:** ______________________________________________________
+
+**In detail, explain what you accomplished or learned today.**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**Teacher evaluation:** Neatly written [ ]  Detailed information [ ]  Technical terms [ ]  Level: 1 [ ] 2 [ ] 3 [ ] 4 [ ]
+
+## Weekly Progress Check
+
+**What progress did you make toward your goals this week?**\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+**What is one specific next step for next week?**\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Warrior Work Ethic: Proof of My Learning Skills
+
+**Circle one rating: E = Excellent, G = Good, S = Satisfactory, N = Needs Improvement**
+
+## Responsibility
+
+Getting things done without anyone reminding you. Not just submitting tasks - but showing you are in control of your life.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+## Organization
+
+Keeping track of goals, tools and materials on your own. Using your planner or log so your life is not chaos in a backpack.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Independent work
+
+Starting right away, staying focused, and keeping goals. Figuring things out yourself before looking for help.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+## Initiative
+
+Doing what needs to be done without being asked or assigned. Asking good questions and seeking ways to grow.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Warrior Work Ethic - continued
+
+## Collaboration
+
+Being someone others actually want to work with. Helping others improve their weaknesses and learning from their strengths.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+## Self-regulation
+
+No phones unless absolutely necessary. Stay in control, avoid distraction, find the middle path, and maintain balance.\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+**Rating:** E [ ]  G [ ]  S [ ]  N [ ]
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Weekly Reflection
+
+**Look back on the week before you move forward.**
+
+**Name:** ______________________________  **Course:** ______________  **Week of:** ______________
+
+## Highlight of the Week
+
+*Show your best moment, success, or something you are proud of. Use words, drawings, diagrams, or symbols.*\
+____________________________________________________________________________________\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+## What are you grateful for?
+
+*Something, someone, or an opportunity you appreciated this week.*\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+## What could have gone better?
+
+*What would you change, try again, or approach differently next time?*\
+____________________________________________________________________________________\
+____________________________________________________________________________________
+
+## How can we help?
+
+*What support, tools, feedback, explanation, or next step would help you move forward?*\
+____________________________________________________________________________________\
+____________________________________________________________________________________

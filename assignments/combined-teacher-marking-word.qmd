@@ -11,62 +11,65 @@ output-file: combined-teacher-marking.docx
 
 **Class:** ________________________________  
 **Date:** ________________________________  
-**Teacher:** ________________________________
+**Teacher:** ________________________________  
+**Curriculum expectation(s):** ________________________________________________
 
 ## Quick key
 
-**0.1 Presentation:** K = Knowledge, T = Thinking, C = Communication, V = Visuals & accessibility, A = Application. Each is /2.
+**0.1 Presentation evidence:** IC = Ideas / Content, OC = Organization / Clarity, C = Communication, CR = Connection / Reflection. Record **Level 4, Level 3, Level 2, Level 1, or BL1** for each criterion, then determine the final **0.1 /10** from the overall pattern of evidence using professional judgement. Do not mechanically average the four criteria.
+
+The **0.1 curricular achievement mark** must remain separate from effort, punctuality, attendance, submission timing, personality, general behaviour, Learning Skills, and the listening/participation evidence recorded for 0.2.
 
 **0.2 Listening flags:** PH = phone, TK = talking/side conversation, OF = off-task/not facing, NN = not taking notes, PR = prompted/reminded. Mark a flag only when observed. A blank flag means no concern was observed.
 
 **Learning Skills:** R = Responsibility, O = Organization, IW = Independent Work, C = Collaboration, I = Initiative, SR = Self-Regulation.
 
-Enter the final **0.2 /10** after reviewing the student's submitted listening notes, Listening Reflection, Learning Skills self-evaluation, and Presentation Reflection.
+For feedback, record a **Strength**, the **specific evidence** that supports it, and one useful **Next Step**.
 
 ## Students 1-17
 
-| Student | 0.1 Presentation | 0.2 Listening | Learning Skills / quick note |
+| Student | 0.1 Presentation evidence | 0.2 Listening | Learning Skills / Strength-Evidence-Next Step |
 |---|---|---|---|
-| 1 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 2 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 3 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 4 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 5 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 6 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 7 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 8 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 9 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 10 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 11 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 12 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 13 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 14 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 15 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 16 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 17 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 1 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 2 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 3 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 4 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 5 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 6 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 7 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 8 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 9 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 10 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 11 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 12 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 13 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 14 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 15 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 16 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 17 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
 
 \newpage
 
 ## Students 18-34
 
-| Student | 0.1 Presentation | 0.2 Listening | Learning Skills / quick note |
+| Student | 0.1 Presentation evidence | 0.2 Listening | Learning Skills / Strength-Evidence-Next Step |
 |---|---|---|---|
-| 18 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 19 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 20 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 21 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 22 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 23 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 24 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 25 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 26 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 27 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 28 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 29 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 30 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 31 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 32 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 33 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
-| 34 | K ___ T ___ C ___ V ___ A ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 18 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 19 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 20 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 21 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 22 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 23 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 24 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 25 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 26 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 27 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 28 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 29 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 30 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 31 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 32 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 33 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
+| 34 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
 
 **CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.

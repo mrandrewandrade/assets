@@ -7,7 +7,7 @@ format:
 output-file: the-way-we-meet-notes.docx
 ---
 
-![](technology-department-emblem.svg){width=0.65in}
+![](technology-department-emblem.png){width=0.65in}
 
 **TECHNOLOGY COMMONS**  
 **Port Credit Secondary School**

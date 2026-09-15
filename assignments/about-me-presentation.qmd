@@ -10,11 +10,11 @@ format:
 #let mist = rgb("#D9DEE2")
 #let sail = rgb("#F4F5F6")
 #let pcss-gold = rgb("#F4C91D")
-#let level-plus = rgb("#FFF4BF")
 #let level-4 = rgb("#D5D9DC")
 #let level-3 = rgb("#E2E5E7")
 #let level-2 = rgb("#ECEEEF")
 #let level-1 = rgb("#F5F6F7")
+#let below = rgb("#FAFAFA")
 
 #set page(
   paper: "us-letter",
@@ -22,7 +22,7 @@ format:
   margin: (top: 0.30in, bottom: 0.50in, x: 0.52in),
   footer: context [
     #set text(
-      font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+      font: "Source Sans 3",
       size: 6.8pt,
       fill: slate,
       hyphenate: false,
@@ -37,7 +37,7 @@ format:
 )
 
 #set text(
-  font: ("Arial", "Liberation Sans", "DejaVu Sans"),
+  font: "Source Sans 3",
   size: 10pt,
   fill: charcoal,
   hyphenate: false,
@@ -154,7 +154,7 @@ You can keep it simple. There is no required number of slides, pictures, or fact
 #v(2pt)
 #text(size: 8.5pt, weight: "bold", fill: navy)[After you present:] #text(size: 8.5pt)[We will pause for questions, comments, and connections. Be ready to respond and help the class build a short discussion.]
 #v(1pt)
-#text(size: 8pt, fill: slate)[Listening to classmates is assessed separately in #text(weight: "bold")[0.2 The Way We Meet]. After hearing the class, you will revisit this rubric and compare your own presentation with what you learned from others.]
+#text(size: 8pt, fill: slate)[Your #text(weight: "bold")[0.1 achievement mark] is based on the curriculum learning demonstrated in this presentation. Effort, punctuality, attendance, submission timing, personality, and general behaviour are not scored in this rubric. Listening, participation, and Learning Skills are recorded separately in #text(weight: "bold")[0.2 The Way We Meet] and other course evidence.]
 
 #pagebreak()
 
@@ -165,67 +165,90 @@ You can keep it simple. There is no required number of slides, pictures, or fact
   [#text(size: 7.7pt, fill: slate)[Technology Commons · Port Credit Secondary School]],
 )
 #v(3pt)
-#text(size: 8.5pt, fill: slate)[Each criterion is worth #text(weight: "bold")[2 marks], for a total of /10: 4+ = 2 marks · Level 4 = 1.5 marks · Level 3 = 1 mark · Level 2 = 0.5 marks · Level 1 = 0 marks.]
-#v(6pt)
+#text(size: 8.5pt, fill: slate)[Use the achievement levels to describe the quality of the evidence. The final /10 is based on the overall pattern of evidence and professional judgement, not a simple total of equal points from each row.]
+#v(5pt)
 
 #set text(hyphenate: false)
 #set par(justify: false)
 
 #table(
-  columns: (1.14fr, 1.20fr, 1.30fr, 1.30fr, 1.22fr, 1.16fr),
-  inset: (x: 5.5pt, y: 5.7pt),
+  columns: (1.18fr, 1.30fr, 1.30fr, 1.25fr, 1.18fr, 1.12fr),
+  inset: (x: 5.3pt, y: 5.4pt),
   align: left + top,
   stroke: 0.5pt + white,
   fill: (x, y) => {
-    if x == 1 { level-plus }
-    else if x == 2 { level-4 }
-    else if x == 3 { level-3 }
-    else if x == 4 { level-2 }
-    else if x == 5 { level-1 }
+    if x == 1 { level-4 }
+    else if x == 2 { level-3 }
+    else if x == 3 { level-2 }
+    else if x == 4 { level-1 }
+    else if x == 5 { below }
     else { white }
   },
   table.header(
     [#text(weight: "bold", fill: navy)[Criterion]],
-    [#text(weight: "bold", fill: navy)[4+ · 2 marks]],
-    [#text(weight: "bold", fill: navy)[Level 4 · 1.5 marks]],
-    [#text(weight: "bold", fill: navy)[Level 3 · 1 mark]],
-    [#text(weight: "bold", fill: navy)[Level 2 · 0.5 marks]],
-    [#text(weight: "bold", fill: navy)[Level 1 · 0 marks]],
+    [#text(weight: "bold", fill: navy)[Level 4]],
+    [#text(weight: "bold", fill: navy)[Level 3]],
+    [#text(weight: "bold", fill: navy)[Level 2]],
+    [#text(weight: "bold", fill: navy)[Level 1]],
+    [#text(weight: "bold", fill: navy)[Below Level 1 / insufficient evidence]],
   ),
 
-  [#text(weight: "bold", fill: navy)[Knowledge] #linebreak() #text(fill: slate)[What did we learn about you?]],
-  [Especially meaningful, specific, or memorable information helps us understand you.],
-  [Clear, relevant, specific information helps us understand who you are.],
-  [Relevant information gives us a good sense of who you are.],
-  [Some relevant information is shared, but ideas may be limited or unclear.],
-  [Very limited information is shared.],
+  [#text(weight: "bold", fill: navy)[Ideas / Content] #linebreak() #text(fill: slate)[What did you communicate about yourself?]],
+  [Communicates meaningful, relevant, and specific information about experiences, interests, strengths, goals, or identity with a high degree of effectiveness.],
+  [Communicates relevant and specific information with considerable effectiveness. The audience develops a clear understanding of the student.],
+  [Communicates some relevant information with some effectiveness, but parts may be general, uneven, or underdeveloped.],
+  [Communicates limited relevant information. Important ideas may be unclear or only partly developed.],
+  [Provides too little relevant evidence to demonstrate Level 1 achievement.],
 
-  [#text(weight: "bold", fill: navy)[Thinking] #linebreak() #text(fill: slate)[How did you choose and organize what to share?]],
-  [Choices are especially thoughtful, purposeful, or creative.],
-  [Ideas are thoughtfully chosen and organized to support the presentation.],
-  [Ideas are chosen and organized appropriately.],
-  [Some planning is shown, but ideas may be incomplete or disconnected.],
-  [Limited planning or organization is evident.],
+  [#text(weight: "bold", fill: navy)[Organization / Clarity] #linebreak() #text(fill: slate)[How effectively were the ideas selected and structured?]],
+  [Selects and organizes ideas purposefully. The presentation is coherent, focused, and especially easy to follow.],
+  [Selects and organizes ideas effectively. The presentation has a clear structure and is easy to follow.],
+  [Shows some effective organization, but parts may be disconnected, repetitive, or need clearer sequencing.],
+  [Shows limited organization. The audience may have difficulty following how ideas fit together.],
+  [Provides too little organized evidence to demonstrate Level 1 achievement.],
 
-  [#text(weight: "bold", fill: navy)[Communication] #linebreak() #text(fill: slate)[Could everyone understand and follow you?]],
-  [Exceptionally clear, confident, polished, and easy to follow.],
-  [Clear, effective, confident, and easy to follow.],
-  [Clear and understandable with only minor lapses.],
-  [Usually understandable, but some parts may be difficult to hear or follow.],
-  [Often difficult to hear, understand, or follow.],
+  [#text(weight: "bold", fill: navy)[Communication] #linebreak() #text(fill: slate)[How effectively did your choices help the audience understand?]],
+  [Uses explanation, examples, voice, visuals, objects, or other supports with a high degree of effectiveness. Communication is clear and accessible.],
+  [Uses appropriate presentation methods and supports with considerable effectiveness. Communication is clear and accessible.],
+  [Uses presentation methods with some effectiveness. Some choices may reduce clarity or accessibility.],
+  [Uses presentation methods with limited effectiveness. Important parts may be difficult to understand or access.],
+  [Provides too little communication evidence to demonstrate Level 1 achievement.],
 
-  [#text(weight: "bold", fill: navy)[Visuals & accessibility] #linebreak() #text(fill: slate)[Did your supports help the audience?]],
-  [Supports are especially purposeful, readable, accessible, and effective.],
-  [Supports are highly readable, accessible, purposeful, and effective.],
-  [Supporting material is readable, accessible, and useful.],
-  [Some choices reduce readability, accessibility, or usefulness.],
-  [Supporting material is difficult to read or does not support the presentation.],
+  [#text(weight: "bold", fill: navy)[Connection / Reflection] #linebreak() #text(fill: slate)[How meaningfully did you connect past, present, future, or audience?]],
+  [Makes thoughtful, meaningful connections among experiences, interests, strengths, goals, future directions, and/or audience response with a high degree of effectiveness.],
+  [Makes clear and meaningful connections with considerable effectiveness.],
+  [Makes some relevant connections, though they may be brief, obvious, or only partly developed.],
+  [Makes limited connections. Reflection or response may need significant prompting.],
+  [Provides too little connection or reflection evidence to demonstrate Level 1 achievement.],
+)
 
-  [#text(weight: "bold", fill: navy)[Application] #linebreak() #text(fill: slate)[Did you connect and discuss?]],
-  [Creates a particularly strong connection and responds thoughtfully to questions or comments, extending the discussion.],
-  [Effectively introduces yourself, creates a meaningful connection, and responds clearly to questions or comments.],
-  [Successfully introduces yourself, makes an appropriate connection, and responds appropriately during discussion.],
-  [Some connection is made; responses may be brief or need prompting.],
-  [Limited connection is made and there is little response to the discussion.],
+#v(6pt)
+#grid(
+  columns: (1fr, 1.45fr, 1fr),
+  column-gutter: 10pt,
+  [
+    #block(fill: sail, inset: 7pt, width: 100%)[
+      #text(weight: "bold", fill: navy)[Strength]
+      #v(2pt)
+      #text(size: 8pt, fill: slate)[What did the student demonstrate effectively?]
+      #v(14pt)
+    ]
+  ],
+  [
+    #block(fill: sail, inset: 7pt, width: 100%)[
+      #text(weight: "bold", fill: navy)[Evidence]
+      #v(2pt)
+      #text(size: 8pt, fill: slate)[What specific example supports that strength?]
+      #v(14pt)
+    ]
+  ],
+  [
+    #block(fill: sail, inset: 7pt, width: 100%)[
+      #text(weight: "bold", fill: navy)[Next step]
+      #v(2pt)
+      #text(size: 8pt, fill: slate)[What is one useful action to extend the learning?]
+      #v(14pt)
+    ]
+  ],
 )
 ```

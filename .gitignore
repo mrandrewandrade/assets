@@ -4,3 +4,11 @@ __pycache__/
 .DS_Store
 dist/*.pdf
 dist/*.html
+dist/*.docx
+**/.quarto/
+assignments/*.pdf
+assignments/*.docx
+assignments/*.typ
+.tools/
+tmp/
+site-build/

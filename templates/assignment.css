@@ -29,7 +29,7 @@ body {
   margin: 0;
   color: var(--commons-harbour-charcoal);
   background: #FFFFFF;
-  font-family: Aptos, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
   line-height: 1.42;
 }
 

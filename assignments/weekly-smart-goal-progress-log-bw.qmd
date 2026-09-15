@@ -4,6 +4,6 @@ format:
 ---
 
 ```{=typst}
-#import "weekly-smart-goal-progress-log.typ": render
+#import "weekly-smart-goal-progress-log-layout.typ": render
 #render(colour: false)
 ```

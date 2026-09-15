@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+export TYPST_FONT_PATHS="${PWD}/brand/fonts${TYPST_FONT_PATHS:+:${TYPST_FONT_PATHS}}"
 
 mkdir -p dist
 
@@ -20,8 +24,12 @@ rm -f \
   dist/past-present-becoming-teacher-marking.docx \
   dist/the-way-we-meet-teacher-marking.pdf \
   dist/the-way-we-meet-teacher-marking.docx \
+  dist/about-me-audience-notes.pdf \
+  dist/about-me-presentation.pdf \
+  dist/about-me-teacher-marking.pdf \
   dist/weekly-smart-goal-progress-log.pdf \
-  dist/weekly-smart-goal-progress-log-bw.pdf
+  dist/weekly-smart-goal-progress-log-bw.pdf \
+  dist/weekly-smart-goal-progress-log.docx
 
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
@@ -70,6 +78,9 @@ build_weekly_progress() {
 
   quarto render assignments/weekly-smart-goal-progress-log-bw.qmd
   mv -f assignments/weekly-smart-goal-progress-log-bw.pdf dist/weekly-smart-goal-progress-log-bw.pdf
+
+  quarto render assignments/weekly-smart-goal-progress-log-word.qmd
+  mv -f assignments/weekly-smart-goal-progress-log.docx dist/weekly-smart-goal-progress-log.docx
 }
 
 case "${1:-}" in
@@ -92,7 +103,7 @@ case "${1:-}" in
   combined-teacher-marking|0.1-0.2-combined-teacher-marking)
     build_teacher_marking
     ;;
-  weekly|weekly-smart|weekly-progress|progress-log)
+  weekly|weekly-smart|weekly-progress|progress-log|weekly-smart-goal-progress-log|weekly-smart-goal-progress-log-bw)
     build_weekly_progress
     ;;
   *)
