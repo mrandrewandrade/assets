@@ -109,11 +109,11 @@ format:
     inset: (x: 7pt, y: 5pt),
   )[
     #text(size: 8.1pt, weight: "bold", fill: ink)[CHECK]
-    #v(4pt)
+    #v(3pt)
     #grid(
       columns: (1fr, 1fr),
       column-gutter: 9pt,
-      row-gutter: 5pt,
+      row-gutter: 4pt,
       [#compact-check([Neat])],
       [#compact-check([Detailed])],
       [#compact-check([Technical terms])],
@@ -124,17 +124,17 @@ format:
 
 #let evidence-area() = [
   #text(size: 8.8pt, weight: "bold", fill: ink)[Evidence: what did I accomplish or learn?]
-  #v(4pt)
+  #v(3pt)
   #write-line()
-  #v(8pt)
+  #v(7pt)
   #write-line()
-  #v(8pt)
+  #v(7pt)
   #write-line()
 ]
 
 #let daily-box(day) = block(
   width: 100%,
-  height: 1.03in,
+  height: 0.99in,
   stroke: 1.1pt + ink,
   radius: 2pt,
   inset: (x: 8pt, y: 5pt),
@@ -145,11 +145,11 @@ format:
     align: top,
     [
       #text(size: 11.7pt, weight: "bold", fill: ink)[#day]
-      #v(3pt)
+      #v(2pt)
       #inline-line([Today's goal:])
-      #v(4pt)
+      #v(3pt)
       #inline-line([How will I know?])
-      #v(4pt)
+      #v(3pt)
       #inline-line([Worked with:])
     ],
     [#evidence-area()],
@@ -158,9 +158,9 @@ format:
 ]
 
 #brand-header([Weekly Progress Log], [Set the Goal. Follow the Way. Take Action.])
-#v(3pt)
+#v(2pt)
 #info-row()
-#v(4pt)
+#v(3pt)
 #grid(
   columns: (auto, 1fr),
   column-gutter: 10pt,
@@ -168,16 +168,16 @@ format:
   [#text(size: 14.5pt, weight: "bold", fill: ink)[Daily Progress]],
   [#line(length: 100%, stroke: 1.8pt + ink)]
 )
-#v(4pt)
+#v(3pt)
 
 #daily-box([Monday])
-#v(3pt)
+#v(2pt)
 #daily-box([Tuesday])
-#v(3pt)
+#v(2pt)
 #daily-box([Wednesday])
-#v(3pt)
+#v(2pt)
 #daily-box([Thursday])
-#v(3pt)
+#v(2pt)
 #daily-box([Friday])
 
 #pagebreak()
