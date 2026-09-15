@@ -149,12 +149,12 @@ format:
       )
       #v(1.5pt)
       #field([Specific:])
+      #v(5pt)
+      #write-line()
       #v(1.5pt)
       #field([Measurable (by end of class, I will have):])
       #v(1.5pt)
       #field([Attainable, Realistic, Timely:])
-      #v(1.5pt)
-      #field([Who did you work with?])
     ],
     [
       #text(size: 8.0pt, weight: "bold", fill: ink)[In detail, explain what you accomplished/learned today.]
@@ -269,4 +269,51 @@ format:
 #skill-row([Collaboration], [Being someone others actually want to work with. Helping others improve their weaknesses & learning from their strengths.])
 #v(3pt)
 #skill-row([Self-regulation], [No phones unless absolutely necessary - you stay in control, not distracted. Finding the middle path and maintaining balance.])
+
+#pagebreak()
+
+#let reflection-box(title, prompt, box-height) = block(
+  width: 100%,
+  height: box-height,
+  fill: paper,
+  stroke: 1.1pt + ink,
+  radius: 2pt,
+  inset: (x: 11pt, y: 9pt),
+)[
+  #text(size: 13pt, weight: "bold", fill: ink)[#title]
+  #v(3pt)
+  #text(size: 8.5pt, fill: ink)[#prompt]
+]
+
+#brand-header([Weekly Reflection], [Look back on the week before you move forward.])
+#v(3pt)
+#info-row()
+#v(6pt)
+
+#reflection-box(
+  [Highlight of the Week],
+  [A moment, accomplishment, idea, conversation, or experience that mattered to you. Write, sketch, or diagram it here.],
+  1.72in,
+)
+#v(7pt)
+#reflection-box(
+  [What are you grateful for?],
+  [Something, someone, or an opportunity you appreciated this week.],
+  1.36in,
+)
+#v(7pt)
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 10pt,
+  [#reflection-box(
+    [What could have gone better?],
+    [What would you change, try again, or approach differently next time?],
+    2.28in,
+  )],
+  [#reflection-box(
+    [How can we help?],
+    [What support, tools, feedback, explanation, or next step would help you move forward?],
+    2.28in,
+  )],
+)
 ```
