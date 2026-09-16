@@ -350,14 +350,26 @@
     [Set the Goal. Follow the Way. Take Action.],
     score: true,
   )
-  reflection-box(
-    [Highlight of the Week],
-    [Show your best moment, success, or something you are proud of. Use words, drawings, diagrams, or symbols.],
-  )
-  v(8pt)
-  reflection-box(
-    [What could have been better?],
-    [Reflect on a challenge, a missed opportunity, or one thing you want to improve next time.],
+  grid(
+    columns: (1fr, 1fr),
+    column-gutter: 8pt,
+    row-gutter: 8pt,
+    reflection-box(
+      [Highlight of the Week],
+      [Show your best moment, success, or something you are proud of. Use words, drawings, diagrams, or symbols.],
+    ),
+    reflection-box(
+      [What are you grateful for?],
+      [Something, someone, or an opportunity you appreciated this week.],
+    ),
+    reflection-box(
+      [What could have gone better?],
+      [Reflect on a challenge, a missed opportunity, or one thing you want to improve next time.],
+    ),
+    reflection-box(
+      [How can we help?],
+      [What support, tools, feedback, explanation, or next step would help you move forward?],
+    ),
   )
 
   pagebreak()
