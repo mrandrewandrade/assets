@@ -14,7 +14,7 @@
 
   set page(
     paper: "us-letter",
-    margin: (top: 0.30in, bottom: 0.46in, x: 0.25in),
+    margin: (top: 0.30in, bottom: 0.46in, left: 0.75in, right: 0.25in),
     footer: context [
       #set text(
         font: "Source Sans 3",
