@@ -152,7 +152,7 @@ def document_xml():
 
 
 def footer_xml():
-    text = "CC BY 4.0 - share and adapt with attribution to Andrew Andrade: https://github.com/mrandrewandrade"
+    text = "CC BY-SA 4.0 | Modified versions remain CC BY-SA 4.0 | andrewandrade.ca + github.com/mrandrewandrade | Add your name/links | Sharing is caring"
     return f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:ftr xmlns:w="{W}" xmlns:r="{R}">{paragraph([run(text, size=12, color="596673")], align="center")}</w:ftr>'''
 
