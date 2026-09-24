@@ -8,7 +8,7 @@ output-file: weekly-smart-goal-progress-log.docx
 ---
 
 **Technology Commons - Port Credit Secondary School**\
-**May the Light Never Fail.**
+**May The Light Never Be Lacking**
 
 **Name:** ______________________________  **Course:** ______________  **Week of:** ______________  **/20**
 
@@ -225,3 +225,7 @@ ________________________________________________________________________________
 *What support, tools, feedback, explanation, or next step would help you move forward?*\
 ____________________________________________________________________________________\
 ____________________________________________________________________________________
+
+---
+
+**CC BY-SA 4.0:** Share, modify, and redistribute. Modified versions remain **CC BY-SA 4.0**. Attribute the original source at **https://andrewandrade.ca** and **https://github.com/mrandrewandrade**. Add your own name and links when adapting. **Sharing is caring.**
