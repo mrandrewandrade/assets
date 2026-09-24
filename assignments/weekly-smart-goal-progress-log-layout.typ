@@ -27,7 +27,11 @@
       #grid(
         columns: (1fr, auto),
         column-gutter: 12pt,
-        [Technology Commons - Weekly SMART Goal + Learning Skills],
+        [
+          #text(weight: "bold")[Technology Commons - Weekly SMART Goal + Learning Skills]
+          #linebreak()
+          #text(size: 5.7pt)[CC BY-SA 4.0 · Modified versions remain CC BY-SA 4.0 · andrewandrade.ca + github.com/mrandrewandrade · Add your name/links · Sharing is caring]
+        ],
         [Page #counter(page).display("1 of 1", both: true)]
       )
     ]
@@ -88,7 +92,7 @@
             #linebreak()
             #text(size: 7.5pt)[Port Credit Secondary School]
             #linebreak()
-            #text(size: 7.4pt, weight: "bold")[May the Light Never Fail.]
+            #text(size: 7.4pt, weight: "bold")[May The Light Never Be Lacking]
           ],
         )
       ],
