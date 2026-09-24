@@ -21,7 +21,7 @@ format:
     #grid(
       columns: (1fr, auto),
       column-gutter: 12pt,
-      [#link("https://creativecommons.org/licenses/by/4.0/")[CC BY 4.0] - share and adapt with attribution to Andrew Andrade: #link("https://github.com/mrandrewandrade")[https://github.com/mrandrewandrade]],
+      [#link("https://creativecommons.org/licenses/by-sa/4.0/")[CC BY-SA 4.0] · Modified versions remain CC BY-SA 4.0 · #link("https://andrewandrade.ca")[andrewandrade.ca] + #link("https://github.com/mrandrewandrade")[github.com/mrandrewandrade] · Add your name/links · Sharing is caring],
       [Page #counter(page).display("1 of 1", both: true)]
     )
   ]
