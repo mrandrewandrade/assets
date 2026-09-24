@@ -191,4 +191,4 @@ Submit **one PDF** containing all three completed parts of this package.
 - Open the final PDF before submitting. Check that every page is readable, upright, complete, and in the correct order.
 - Submit the **one PDF**, not separate JPG/PNG images or an editable Word/Google file.
 
-**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
+**CC BY-SA 4.0:** Share, modify, and redistribute. Modified versions remain **CC BY-SA 4.0**. Attribute the original source at **https://andrewandrade.ca** and **https://github.com/mrandrewandrade**. Add your own name and links when adapting. **Sharing is caring.**
