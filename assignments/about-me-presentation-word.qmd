@@ -124,4 +124,4 @@ Use the achievement levels to describe the quality of the evidence. The final **
 | **Evidence** | What specific example supports that strength? |
 | **Next step** | What is one useful action to extend the learning? |
 
-**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
+**CC BY-SA 4.0:** Share, modify, and redistribute. Modified versions remain **CC BY-SA 4.0**. Attribute the original source at **https://andrewandrade.ca** and **https://github.com/mrandrewandrade**. Add your own name and links when adapting. **Sharing is caring.**
