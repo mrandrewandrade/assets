@@ -103,16 +103,21 @@ The repository still contains some earlier Markdown, HTML/CSS, Python, and Playw
 
 ## Licensing
 
-Unless a file says otherwise, original material in this repository is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+Unless a file says otherwise, original educational material in this repository is licensed under the **[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0)**.
 
-You may share and adapt the material, including commercially, as long as you provide appropriate attribution, link to the licence, and indicate whether changes were made.
+**Share, adapt, and pass it on.** You may copy, modify, remix, and redistribute the material. Modified and adapted versions remain under **CC BY-SA 4.0**, identify that changes were made, and preserve attribution to the original source:
+
+- https://andrewandrade.ca
+- https://github.com/mrandrewandrade
+
+You can also add your own name, website, repository, and links when you adapt the work so later versions can credit your contribution too. **Sharing is caring.**
 
 Suggested attribution:
 
-> Technology Commons teaching materials by Andrew Andrade, licensed under CC BY 4.0. Source: https://github.com/mrandrewandrade/assets
+> Technology Commons teaching materials by Andrew Andrade and contributors. Original source: https://andrewandrade.ca and https://github.com/mrandrewandrade. Licensed under CC BY-SA 4.0.
 
 For an adaptation:
 
-> Adapted from Technology Commons teaching materials by Andrew Andrade, licensed under CC BY 4.0. Changes were made. Source: https://github.com/mrandrewandrade/assets
+> Based on Technology Commons teaching materials by Andrew Andrade and contributors. Original source: https://andrewandrade.ca and https://github.com/mrandrewandrade. Licensed under CC BY-SA 4.0. Modified by [your name], [your link]. Changes were made.
 
 See [LICENSE.md](LICENSE.md) for the licence notice and canonical licence link.
