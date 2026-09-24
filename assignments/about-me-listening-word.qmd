@@ -137,4 +137,4 @@ Each criterion is worth **2 marks**.
 
 **Integrity rule:** Knowingly marking yourself **Attentive** when your notes or observed behaviour clearly show otherwise may result in **0/2 for Integrity & Reflection**. Honest acknowledgement of a lapse is treated more favourably than misrepresenting it.
 
-**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
+**CC BY-SA 4.0:** Share, modify, and redistribute. Modified versions remain **CC BY-SA 4.0**. Attribute the original source at **https://andrewandrade.ca** and **https://github.com/mrandrewandrade**. Add your own name and links when adapting. **Sharing is caring.**
