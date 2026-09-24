@@ -72,4 +72,4 @@ For feedback, record a **Strength**, the **specific evidence** that supports it,
 | 33 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
 | 34 | IC ___ OC ___ C ___ CR ___ **/10 ___** | PH [ ] TK [ ] OF [ ] NN [ ] PR [ ] **/10 ___** | |
 
-**CC BY 4.0:** You may share and adapt this work with attribution. Attribution must include **Andrew Andrade** and the full URL **https://github.com/mrandrewandrade**.
+**CC BY-SA 4.0:** Share, modify, and redistribute. Modified versions remain **CC BY-SA 4.0**. Attribute the original source at **https://andrewandrade.ca** and **https://github.com/mrandrewandrade**. Add your own name and links when adapting. **Sharing is caring.**
