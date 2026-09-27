@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Technology Commons teaching resources by Andrew Andrade.">
-  <title>Technology Commons | Teaching Resources</title>
+  <meta name="description" content="Print-first Technology Commons resources generated from Quarto and Typst source.">
+  <title>Technology Commons | Generated Print Resources</title>
   <style>
     :root { --navy:#1e2b55; --charcoal:#20262d; --slate:#596673; --mist:#d9dee2; --sail:#f4f5f6; --gold:#f4c91d; --white:#ffffff; }
     * { box-sizing: border-box; }
@@ -34,6 +34,8 @@
     .viewer { width:100%; height:min(72vh,760px); min-height:520px; border:0; display:block; background:var(--mist); }
     .downloads { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
     .mobile-note { display:none; padding:18px 22px; color:var(--slate); background:var(--sail); border-top:1px solid var(--mist); }
+    .site-note { margin:0 0 28px; padding:20px 22px; background:var(--white); border:1px solid var(--mist); border-left:5px solid var(--gold); border-radius:10px; }
+    .site-note p { margin:0; }
     footer { padding:0 0 40px; color:var(--slate); font-size:.9rem; }
     footer p { margin:0; }
     @media (max-width:760px) { .header-inner{align-items:flex-start}.resource-header,.download-card,.downloads{grid-template-columns:1fr}.actions{justify-content:flex-start}.button{text-align:center}.viewer{min-height:62vh}.mobile-note{display:block} }
@@ -45,13 +47,17 @@
       <div>
         <p class="eyebrow">Port Credit Secondary School</p>
         <h1>Technology Commons</h1>
-        <p class="school">Teaching resources by Andrew Andrade</p>
+        <p class="school">Print-first resources generated from Quarto + Typst</p>
         <div class="gold-rule" aria-hidden="true"></div>
       </div>
     </div>
   </header>
 
   <main class="page">
+    <section class="site-note" aria-label="About these generated resources">
+      <p><strong>Generated print resources.</strong> These documents are built from Quarto (<code>.qmd</code>) and Typst source when precise page layout matters. They do not have Google Docs versions. For the full collection of teaching materials, slides, notes, and editable classroom resources, visit <a href="https://andrewandrade.ca/tech-edu-resources/teaching-materials/">Technology Education Resources</a>.</p>
+    </section>
+
     <section class="resource" aria-labelledby="name-tag-title">
       <div class="resource-header">
         <div>
