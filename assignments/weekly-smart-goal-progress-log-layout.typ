@@ -45,15 +45,21 @@
   )
   set par(leading: 0.48em, justify: false)
 
+  let checkbox(size: 7.5pt) = box(
+    width: size,
+    height: size,
+    stroke: 0.75pt + primary,
+  )
+
   let identity-fields(score: true) = [
     #grid(
-      columns: (2.45in, 1.95in, 2.30in, auto),
+      columns: (2.75in, 1.95in, 1.85in, auto),
       column-gutter: 11pt,
       align: horizon,
       [
-        #text(weight: "bold")[Name:]
+        #text(weight: "bold")[Student Number:]
         #h(7pt)
-        #line(length: 1.88in, stroke: 0.7pt + secondary)
+        #line(length: 1.55in, stroke: 0.7pt + secondary)
       ],
       [
         #text(weight: "bold")[Course:]
@@ -61,15 +67,74 @@
         #line(length: 1.35in, stroke: 0.7pt + secondary)
       ],
       [
-        #text(weight: "bold")[Week of:]
+        #text(weight: "bold")[Week #:]
         #h(7pt)
-        #line(length: 1.42in, stroke: 0.7pt + secondary)
+        #line(length: 0.92in, stroke: 0.7pt + secondary)
       ],
       [#if score [#text(size: 9pt, weight: "bold")[/20]]],
     )
   ]
 
-  let page-header(title, subtitle, score: true, title-size: 21pt) = [
+  let weekly-quick-mark = block(
+    width: 100%,
+    height: 0.62in,
+    fill: white,
+    stroke: 0.8pt + primary,
+    radius: 5pt,
+    inset: (x: 8pt, y: 5pt),
+    [
+      #grid(
+        columns: (1.12in, 1fr),
+        column-gutter: 8pt,
+        align: horizon,
+        [#text(size: 7.5pt, weight: "bold", fill: primary)[Weekly quick mark]],
+        [#text(size: 6.4pt)[C = clear / legible · D = detailed · T = technical terms · L = overall level]],
+      )
+      #v(4pt)
+      #grid(
+        columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+        column-gutter: 7pt,
+        align: horizon,
+        [
+          #text(size: 6.8pt, weight: "bold")[Mon]
+          #h(3pt) C #checkbox(size: 6pt)
+          #h(2pt) D #checkbox(size: 6pt)
+          #h(2pt) T #checkbox(size: 6pt)
+          #h(2pt) L __
+        ],
+        [
+          #text(size: 6.8pt, weight: "bold")[Tue]
+          #h(3pt) C #checkbox(size: 6pt)
+          #h(2pt) D #checkbox(size: 6pt)
+          #h(2pt) T #checkbox(size: 6pt)
+          #h(2pt) L __
+        ],
+        [
+          #text(size: 6.8pt, weight: "bold")[Wed]
+          #h(3pt) C #checkbox(size: 6pt)
+          #h(2pt) D #checkbox(size: 6pt)
+          #h(2pt) T #checkbox(size: 6pt)
+          #h(2pt) L __
+        ],
+        [
+          #text(size: 6.8pt, weight: "bold")[Thu]
+          #h(3pt) C #checkbox(size: 6pt)
+          #h(2pt) D #checkbox(size: 6pt)
+          #h(2pt) T #checkbox(size: 6pt)
+          #h(2pt) L __
+        ],
+        [
+          #text(size: 6.8pt, weight: "bold")[Fri]
+          #h(3pt) C #checkbox(size: 6pt)
+          #h(2pt) D #checkbox(size: 6pt)
+          #h(2pt) T #checkbox(size: 6pt)
+          #h(2pt) L __
+        ],
+      )
+    ]
+  )
+
+  let page-header(title, subtitle, score: true, title-size: 21pt, quick-mark: false) = [
     #grid(
       columns: (1fr, 2.55in),
       column-gutter: 14pt,
@@ -86,7 +151,7 @@
           columns: (0.55in, 1fr),
           column-gutter: 8pt,
           align: horizon,
-          [#image("technology-commons-emblem.svg", width: 0.50in)],
+          [#image("technology-commons-header-logo.png", width: 0.50in)],
           [
             #text(size: 8.2pt, weight: "bold")[Technology Commons]
             #linebreak()
@@ -97,11 +162,13 @@
         )
       ],
     )
-    #v(4pt)
-    #line(length: 100%, stroke: 1pt + secondary)
     #v(7pt)
     #identity-fields(score: score)
-    #v(10pt)
+    #if quick-mark [
+      #v(6pt)
+      #weekly-quick-mark
+    ]
+    #v(8pt)
   ]
 
   let two-write-lines() = [
@@ -125,65 +192,24 @@
   let progress-lines = [
     #text(size: 8.2pt, weight: "bold", fill: primary)[Daily Progress]
     #v(2pt)
-    #text(size: 6.9pt, weight: "bold")[In detail, explain what you accomplished / learned today.]
+    #text(size: 6.9pt, weight: "bold")[What I did / learned]
     #v(5pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(10pt)
+    #v(9pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(10pt)
+    #v(7pt)
+    #text(size: 6.9pt, weight: "bold")[What could have been better?]
+    #v(5pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(10pt)
+    #v(9pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(10pt)
+    #v(7pt)
+    #text(size: 6.9pt, weight: "bold")[What's next?]
+    #v(5pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(10pt)
+    #v(9pt)
     #line(length: 100%, stroke: 0.6pt + black)
   ]
-
-  let checkbox(size: 7.5pt) = box(
-    width: size,
-    height: size,
-    stroke: 0.75pt + primary,
-  )
-
-  let evaluation-box = block(
-    width: 100%,
-    height: 1.72in,
-    fill: eval-fill,
-    stroke: 0.9pt + primary,
-    radius: 5pt,
-    inset: 7pt,
-    [
-      #text(size: 8.2pt, weight: "bold", fill: primary)[Teacher evaluation]
-      #v(7pt)
-      #grid(
-        columns: (1fr, auto),
-        row-gutter: 6pt,
-        align: horizon,
-        [#text(size: 7pt)[Neatly written]], [#checkbox()],
-        [#text(size: 7pt)[Detailed information]], [#checkbox()],
-        [#text(size: 7pt)[Technical terms]], [#checkbox()],
-      )
-      #v(8pt)
-      #line(length: 100%, stroke: 0.5pt + primary)
-      #v(6pt)
-      #grid(
-        columns: (auto, 1fr),
-        column-gutter: 6pt,
-        align: horizon,
-        [#text(size: 7.2pt, weight: "bold")[Level]],
-        [
-          #text(size: 7pt)[1] #checkbox(size: 6.5pt)
-          #h(4pt)
-          #text(size: 7pt)[2] #checkbox(size: 6.5pt)
-          #h(4pt)
-          #text(size: 7pt)[3] #checkbox(size: 6.5pt)
-          #h(4pt)
-          #text(size: 7pt)[4] #checkbox(size: 6.5pt)
-        ],
-      )
-    ]
-  )
 
   let daily-card(day) = block(
     width: 100%,
@@ -211,12 +237,11 @@
       )
       #pad(x: 9pt, top: 6pt)[
         #grid(
-          columns: (2.52in, 1fr, 1.50in),
-          column-gutter: 12pt,
+          columns: (2.48in, 1fr),
+          column-gutter: 14pt,
           align: top,
           [#goal-lines],
           [#progress-lines],
-          [#evaluation-box],
         )
       ]
     ]
@@ -233,19 +258,23 @@
       #text(size: 13.5pt, weight: "bold", fill: primary)[Weekly Progress Check]
       #v(3pt)
       #line(length: 0.65in, stroke: 2.5pt + accent)
-      #v(12pt)
-      #text(size: 8pt, weight: "bold")[What progress did you make toward your goals this week?]
+      #v(9pt)
+      #text(size: 7.8pt, weight: "bold")[What progress did you make toward your goals this week?]
+      #v(7pt)
+      #line(length: 100%, stroke: 0.6pt + black)
       #v(9pt)
       #line(length: 100%, stroke: 0.6pt + black)
-      #v(11pt)
+      #v(10pt)
+      #text(size: 7.8pt, weight: "bold")[What still needs attention, practice, or another try?]
+      #v(7pt)
       #line(length: 100%, stroke: 0.6pt + black)
-      #v(11pt)
-      #line(length: 100%, stroke: 0.6pt + black)
-      #v(15pt)
-      #text(size: 8pt, weight: "bold")[What is one specific next step for next week?]
       #v(9pt)
       #line(length: 100%, stroke: 0.6pt + black)
-      #v(11pt)
+      #v(10pt)
+      #text(size: 7.8pt, weight: "bold")[What is one useful thing you can do over the weekend?]
+      #v(3pt)
+      #text(size: 6.8pt)[Catch up · practise · revise / improve · organize / prepare · explore / learn more]
+      #v(7pt)
       #line(length: 100%, stroke: 0.6pt + black)
     ]
   )
@@ -327,6 +356,7 @@
     [Weekly SMART Goal & Progress Log],
     [Set the Goal. Follow the Way. Take Action.],
     score: true,
+    quick-mark: true,
   )
   daily-card([Monday])
   v(7pt)
@@ -360,19 +390,19 @@
     row-gutter: 8pt,
     reflection-box(
       [Highlight of the Week],
-      [Show your best moment, success, or something you are proud of. Use words, drawings, diagrams, or symbols.],
+      [Something you made, learned, solved, improved, or are proud of. Use words, drawings, diagrams, or symbols.],
     ),
     reflection-box(
-      [What are you grateful for?],
-      [Something, someone, or an opportunity you appreciated this week.],
+      [Thanks + Credit],
+      [Give credit to a classmate, source, tool, example, or idea that helped you learn or make progress.],
     ),
     reflection-box(
-      [What could have gone better?],
-      [Reflect on a challenge, a missed opportunity, or one thing you want to improve next time.],
+      [What Helped Me Work Well?],
+      [A routine, workspace choice, break, tool, teamwork habit, or way of working that helped you focus, stay safe, or feel balanced.],
     ),
     reflection-box(
-      [How can we help?],
-      [What support, tools, feedback, explanation, or next step would help you move forward?],
+      [Reset for Next Week],
+      [One thing you will adjust to make your learning or work smoother, safer, or less stressful.],
     ),
   )
 
