@@ -67,7 +67,7 @@
         #line(length: 1.35in, stroke: 0.7pt + secondary)
       ],
       [
-        #text(weight: "bold")[Week #:]
+        #text(weight: "bold")[Week \#: ]
         #h(7pt)
         #line(length: 0.92in, stroke: 0.7pt + secondary)
       ],
@@ -100,35 +100,35 @@
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L __
+          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Tue]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L __
+          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Wed]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L __
+          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Thu]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L __
+          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Fri]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L __
+          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
         ],
       )
     ]
