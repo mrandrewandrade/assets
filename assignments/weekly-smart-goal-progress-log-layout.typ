@@ -100,35 +100,50 @@
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
+          #linebreak()
+          #text(size: 6.1pt)[Level]
+          #h(3pt)
+          #line(length: 0.24in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Tue]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
+          #linebreak()
+          #text(size: 6.1pt)[Level]
+          #h(3pt)
+          #line(length: 0.24in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Wed]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
+          #linebreak()
+          #text(size: 6.1pt)[Level]
+          #h(3pt)
+          #line(length: 0.24in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Thu]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
+          #linebreak()
+          #text(size: 6.1pt)[Level]
+          #h(3pt)
+          #line(length: 0.24in, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.8pt, weight: "bold")[Fri]
           #h(3pt) C #checkbox(size: 6pt)
           #h(2pt) D #checkbox(size: 6pt)
           #h(2pt) T #checkbox(size: 6pt)
-          #h(2pt) L #line(length: 0.16in, stroke: 0.6pt + black)
+          #linebreak()
+          #text(size: 6.1pt)[Level]
+          #h(3pt)
+          #line(length: 0.24in, stroke: 0.6pt + black)
         ],
       )
     ]
@@ -201,13 +216,9 @@
     #text(size: 6.9pt, weight: "bold")[What could have been better?]
     #v(5pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(9pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(7pt)
+    #v(8pt)
     #text(size: 6.9pt, weight: "bold")[What's next?]
     #v(5pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(9pt)
     #line(length: 100%, stroke: 0.6pt + black)
   ]
 
@@ -393,8 +404,8 @@
       [Something you made, learned, solved, improved, or are proud of. Use words, drawings, diagrams, or symbols.],
     ),
     reflection-box(
-      [Thanks + Credit],
-      [Give credit to a classmate, source, tool, example, or idea that helped you learn or make progress.],
+      [Thankful + Credit],
+      [Who or what are you thankful for this week? Give credit to a classmate, source, tool, example, or idea that helped you learn or make progress.],
     ),
     reflection-box(
       [What Helped Me Work Well?],
