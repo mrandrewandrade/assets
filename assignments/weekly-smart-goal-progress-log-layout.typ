@@ -77,7 +77,7 @@
 
   let weekly-quick-mark = block(
     width: 100%,
-    height: 0.46in,
+    height: 0.40in,
     fill: white,
     stroke: 0.8pt + primary,
     radius: 5pt,
@@ -101,7 +101,7 @@
           #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
           #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
           #h(1pt) #text(size: 5.8pt)[L]
-          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
+          #h(1pt) #box(width: 0.20in, height: 6.5pt, stroke: 0.6pt + black)
         ],
         [
           #text(size: 6.3pt, weight: "bold")[Tue]
@@ -194,25 +194,23 @@
 
   let progress-lines = [
     #text(size: 8.2pt, weight: "bold", fill: primary)[Daily Progress]
-    #v(2pt)
+    #v(1pt)
     #text(size: 6.9pt, weight: "bold")[What I did / learned]
-    #v(4pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(8pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(8pt)
+    #v(3pt)
     #line(length: 100%, stroke: 0.6pt + black)
     #v(6pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(5pt)
     #text(size: 6.9pt, weight: "bold")[What could have been better?]
-    #v(4pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(8pt)
+    #v(3pt)
     #line(length: 100%, stroke: 0.6pt + black)
     #v(6pt)
-    #text(size: 6.9pt, weight: "bold")[What's next?]
-    #v(4pt)
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(8pt)
+    #v(5pt)
+    #text(size: 6.9pt, weight: "bold")[What's next?]
+    #v(3pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(6pt)
     #line(length: 100%, stroke: 0.6pt + black)
   ]
 
