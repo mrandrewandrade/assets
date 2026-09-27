@@ -77,74 +77,64 @@
 
   let weekly-quick-mark = block(
     width: 100%,
-    height: 0.62in,
+    height: 0.46in,
     fill: white,
     stroke: 0.8pt + primary,
     radius: 5pt,
-    inset: (x: 8pt, y: 5pt),
+    inset: (x: 8pt, y: 4pt),
     [
       #grid(
         columns: (1.12in, 1fr),
         column-gutter: 8pt,
         align: horizon,
-        [#text(size: 7.5pt, weight: "bold", fill: primary)[Weekly quick mark]],
-        [#text(size: 6.4pt)[C = clear / legible · D = detailed · T = technical terms · L = overall level]],
+        [#text(size: 7.3pt, weight: "bold", fill: primary)[Weekly quick mark]],
+        [#text(size: 6.2pt)[C = clear / legible · D = detailed · T = technical terms · L = overall level]],
       )
-      #v(4pt)
+      #v(2pt)
       #grid(
         columns: (1fr, 1fr, 1fr, 1fr, 1fr),
-        column-gutter: 7pt,
+        column-gutter: 5pt,
         align: horizon,
         [
-          #text(size: 6.8pt, weight: "bold")[Mon]
-          #h(3pt) C #checkbox(size: 6pt)
-          #h(2pt) D #checkbox(size: 6pt)
-          #h(2pt) T #checkbox(size: 6pt)
-          #linebreak()
-          #text(size: 6.1pt)[Level]
-          #h(3pt)
-          #line(length: 0.24in, stroke: 0.6pt + black)
+          #text(size: 6.3pt, weight: "bold")[Mon]
+          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[L]
+          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.8pt, weight: "bold")[Tue]
-          #h(3pt) C #checkbox(size: 6pt)
-          #h(2pt) D #checkbox(size: 6pt)
-          #h(2pt) T #checkbox(size: 6pt)
-          #linebreak()
-          #text(size: 6.1pt)[Level]
-          #h(3pt)
-          #line(length: 0.24in, stroke: 0.6pt + black)
+          #text(size: 6.3pt, weight: "bold")[Tue]
+          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[L]
+          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.8pt, weight: "bold")[Wed]
-          #h(3pt) C #checkbox(size: 6pt)
-          #h(2pt) D #checkbox(size: 6pt)
-          #h(2pt) T #checkbox(size: 6pt)
-          #linebreak()
-          #text(size: 6.1pt)[Level]
-          #h(3pt)
-          #line(length: 0.24in, stroke: 0.6pt + black)
+          #text(size: 6.3pt, weight: "bold")[Wed]
+          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[L]
+          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.8pt, weight: "bold")[Thu]
-          #h(3pt) C #checkbox(size: 6pt)
-          #h(2pt) D #checkbox(size: 6pt)
-          #h(2pt) T #checkbox(size: 6pt)
-          #linebreak()
-          #text(size: 6.1pt)[Level]
-          #h(3pt)
-          #line(length: 0.24in, stroke: 0.6pt + black)
+          #text(size: 6.3pt, weight: "bold")[Thu]
+          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[L]
+          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.8pt, weight: "bold")[Fri]
-          #h(3pt) C #checkbox(size: 6pt)
-          #h(2pt) D #checkbox(size: 6pt)
-          #h(2pt) T #checkbox(size: 6pt)
-          #linebreak()
-          #text(size: 6.1pt)[Level]
-          #h(3pt)
-          #line(length: 0.24in, stroke: 0.6pt + black)
-        ],
+          #text(size: 6.3pt, weight: "bold")[Fri]
+          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
+          #h(1pt) #text(size: 5.8pt)[L]
+          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
+        ]
       )
     ]
   )
@@ -158,8 +148,6 @@
         #text(size: title-size, weight: "bold", fill: primary)[#title]
         #v(2pt)
         #text(size: 10.2pt, weight: "bold")[#subtitle]
-        #v(5pt)
-        #line(length: 0.72in, stroke: 3pt + accent)
       ],
       [
         #grid(
@@ -208,17 +196,23 @@
     #text(size: 8.2pt, weight: "bold", fill: primary)[Daily Progress]
     #v(2pt)
     #text(size: 6.9pt, weight: "bold")[What I did / learned]
-    #v(5pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(9pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(7pt)
-    #text(size: 6.9pt, weight: "bold")[What could have been better?]
-    #v(5pt)
+    #v(4pt)
     #line(length: 100%, stroke: 0.6pt + black)
     #v(8pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(8pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(6pt)
+    #text(size: 6.9pt, weight: "bold")[What could have been better?]
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(8pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(6pt)
     #text(size: 6.9pt, weight: "bold")[What's next?]
-    #v(5pt)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(8pt)
     #line(length: 100%, stroke: 0.6pt + black)
   ]
 
@@ -348,8 +342,8 @@
         align: top,
         [
           #text(size: 10.5pt, weight: "bold", fill: primary)[#title]
-          #v(9pt)
-          #text(size: 6.8pt)[#description]
+          #v(6pt)
+          #text(size: 7.8pt)[#description]
         ],
         [
           #text(size: 7.2pt, weight: "bold")[How have you demonstrated or improved this?]
