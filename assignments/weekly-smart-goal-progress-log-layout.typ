@@ -151,7 +151,7 @@
           columns: (0.55in, 1fr),
           column-gutter: 8pt,
           align: horizon,
-          [#image("technology-commons-header-logo.png", width: 0.50in)],
+          [#image("technology-commons-header-logo.jpg", width: 0.50in)],
           [
             #text(size: 8.2pt, weight: "bold")[Technology Commons]
             #linebreak()
