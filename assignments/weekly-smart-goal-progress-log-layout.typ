@@ -181,7 +181,7 @@
 
   let daily-card(day) = block(
     width: 100%,
-    height: 2.58in,
+    height: 2.68in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
@@ -190,9 +190,9 @@
     [
       #block(
         width: 100%,
-        height: 0.38in,
+        height: 0.32in,
         fill: header-fill,
-        inset: (x: 9pt, y: 5pt),
+        inset: (x: 9pt, y: 3pt),
         [
           #grid(
             columns: (1.10in, 1fr),
@@ -203,7 +203,7 @@
           )
         ],
       )
-      #pad(x: 9pt, top: 5pt)[
+      #pad(x: 9pt, top: 0pt)[
         #grid(
           columns: (2.48in, 1fr),
           column-gutter: 14pt,
