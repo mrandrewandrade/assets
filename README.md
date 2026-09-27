@@ -2,7 +2,7 @@
 
 Reusable branded teaching documents and source assets for Andrew Andrade's Technology Commons materials.
 
-The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Current assignment PDFs are authored as Quarto documents and rendered with Typst. Matching editable Word versions are generated with Quarto/Pandoc.
+The goal of this repository is to keep student-facing documents simple, accessible, reproducible, and easy to revise. Current assignment PDFs are authored as Quarto documents and rendered with Typst.
 
 ## Design principles
 
@@ -66,19 +66,13 @@ The generated files are written to `dist/`:
 
 ```text
 0.0-name-tag-pdf.pdf
-0.0-name-tag-pdf.docx
 0.1-past-present-becoming.pdf
-0.1-past-present-becoming.docx
 0.2-the-way-we-meet.pdf
-0.2-the-way-we-meet.docx
 0.2-the-way-we-meet-notes.pdf
 0.2-the-way-we-meet-notes-bw.pdf
-0.2-the-way-we-meet-notes.docx
 0.1-0.2-combined-teacher-marking.pdf
-0.1-0.2-combined-teacher-marking.docx
 weekly-smart-goal-progress-log.pdf
 weekly-smart-goal-progress-log-bw.pdf
-weekly-smart-goal-progress-log.docx
 ```
 
 Individual builds are also available:
@@ -91,7 +85,7 @@ bash render.sh combined-teacher-marking
 bash render.sh weekly
 ```
 
-The GitHub Actions workflow uses the same Quarto/Typst/Pandoc rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs and Word files to GitHub Pages.
+The GitHub Actions workflow uses the same Quarto/Typst rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs to GitHub Pages.
 
 ## Creating another assignment
 

@@ -56,7 +56,7 @@ format:
       columns: (auto, 1fr, auto),
       column-gutter: 10pt,
       align: horizon,
-      [#image("technology-department-emblem.svg", height: 0.48in)],
+      [#image("tech-edu-resources.png", height: 0.48in)],
       [
         #text(size: 19pt, weight: "bold")[#title]
         #v(1pt)
@@ -271,6 +271,6 @@ format:
   radius: 3pt,
   inset: (left: 9pt, right: 9pt, top: 5pt, bottom: 5pt),
 )[
-  #text(size: 7.4pt, weight: "bold")[Submit one PDF to Google Classroom.] #text(size: 7.4pt)[Digital: complete the editable Word file in Word, or upload it to Google Drive and open it with Google Docs, then download/export as PDF. Paper: scan these pages directly to PDF, or take clear photos, place them in a Google Doc or Word file in the correct order, then export as PDF. Open the PDF and check that all #text(weight: "bold")[four pages] are readable, upright, complete, and in order. Do not submit separate images.]
+  #text(size: 7.4pt, weight: "bold")[Submit one PDF to Google Classroom.] #text(size: 7.4pt)[Digital: complete a digital copy, then download or export it as a PDF. Paper: scan these pages directly to PDF, or take clear photos, place them in a document in the correct order, then export as PDF. Open the PDF and check that all #text(weight: "bold")[four pages] are readable, upright, complete, and in order. Do not submit separate images.]
 ]
 ```

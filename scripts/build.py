@@ -33,9 +33,9 @@ def read_source(path: Path) -> tuple[dict, str]:
 
 
 def logo_data_uri() -> str:
-    data = (BRAND / "aa-logo.svg").read_bytes()
+    data = (BRAND / "tech-edu-resources.png").read_bytes()
     encoded = base64.b64encode(data).decode("ascii")
-    return f"data:image/svg+xml;base64,{encoded}"
+    return f"data:image/png;base64,{encoded}"
 
 
 def combined_css() -> str:

@@ -58,7 +58,7 @@ format:
       columns: (0.58in, 1fr),
       column-gutter: 9pt,
       align: horizon,
-      [#image("technology-department-emblem.svg", width: 0.54in)],
+      [#image("tech-edu-resources.png", width: 0.54in)],
       [
         #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Commons]
         #linebreak()

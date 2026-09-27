@@ -30,7 +30,7 @@ jobs:
           rm -rf site-build
           mkdir -p site-build
           cp site/index.html site-build/index.html
-          cp dist/*.pdf dist/*.docx site-build/
+          cp dist/*.pdf site-build/
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4

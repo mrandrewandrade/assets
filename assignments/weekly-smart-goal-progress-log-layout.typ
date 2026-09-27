@@ -14,7 +14,8 @@
 
   set page(
     paper: "us-letter",
-    margin: (top: 0.30in, bottom: 0.46in, left: 0.75in, right: 0.25in),
+    margin: (top: 0.18in, bottom: 0.46in, left: 0.75in, right: 0.25in),
+    footer-descent: 0.18in,
     footer: context [
       #set text(
         font: "Source Sans 3",
@@ -22,8 +23,6 @@
         fill: footer-ink,
         hyphenate: false,
       )
-      #line(length: 100%, stroke: 0.65pt + primary)
-      #v(3pt)
       #grid(
         columns: (1fr, auto),
         column-gutter: 12pt,
@@ -52,6 +51,7 @@
   )
 
   let identity-fields(score: true) = [
+    #set text(size: 11pt)
     #grid(
       columns: (2.75in, 1.95in, 1.85in, auto),
       column-gutter: 11pt,
@@ -71,117 +71,137 @@
         #h(7pt)
         #line(length: 0.92in, stroke: 0.7pt + secondary)
       ],
-      [#if score [#text(size: 9pt, weight: "bold")[/20]]],
+      [#if score [#text(size: 11pt, weight: "bold")[/20]]],
     )
   ]
 
   let weekly-quick-mark = block(
     width: 100%,
-    height: 0.40in,
+    height: 0.75in,
     fill: white,
     stroke: 0.8pt + primary,
     radius: 5pt,
     inset: (x: 8pt, y: 4pt),
     [
-      #grid(
-        columns: (1.12in, 1fr),
-        column-gutter: 8pt,
-        align: horizon,
-        [#text(size: 7.3pt, weight: "bold", fill: primary)[Weekly quick mark]],
-        [#text(size: 6.2pt)[C = clear / legible · D = detailed · T = technical terms · L = overall level]],
-      )
-      #v(2pt)
-      #grid(
-        columns: (1fr, 1fr, 1fr, 1fr, 1fr),
-        column-gutter: 4pt,
-        align: horizon,
-        [#text(size: 6pt)[#strong[Mon]  C □  D □  T □  L □]],
-        [#text(size: 6pt)[#strong[Tue]  C □  D □  T □  L □]],
-        [#text(size: 6pt)[#strong[Wed]  C □  D □  T □  L □]],
-        [#text(size: 6pt)[#strong[Thu]  C □  D □  T □  L □]],
-        [#text(size: 6pt)[#strong[Fri]  C □  D □  T □  L □]],
-      )
+      #text(size: 12pt, weight: "bold", fill: primary)[Expectations]
+      #v(-6pt)
+      #text(size: 10pt)[Make your work easy to see: write clearly, add useful details, and use the right technical words. If I cannot read it, the mark is 0. Use this sheet to plan your class time. I give you enough time in class, so I do not normally assign homework. Want to get more from the course? Practise, build, and keep learning outside class too. Be intentional - you can do more than you think.]
     ]
   )
 
   let page-header(title, subtitle, score: true, title-size: 21pt, quick-mark: false) = [
     #grid(
-      columns: (1fr, 2.55in),
+      columns: (4.65in, 1fr),
       column-gutter: 14pt,
       align: top,
       [
         #text(size: title-size, weight: "bold", fill: primary)[#title]
-        #v(2pt)
-        #text(size: 10.2pt, weight: "bold")[#subtitle]
+        #v(-12pt)
+        #text(size: 11pt, weight: "bold")[#subtitle]
       ],
       [
         #grid(
           columns: (0.55in, 1fr),
           column-gutter: 8pt,
           align: horizon,
-          [#image("technology-commons-header-logo.svg", width: 0.50in)],
+          [#image("tech-edu-resources.png", width: 0.50in)],
           [
-            #text(size: 8.2pt, weight: "bold")[Technology Commons]
+            #text(size: 10pt, weight: "bold")[Technology Commons]
             #linebreak()
-            #text(size: 7.5pt)[Port Credit Secondary School]
+            #text(size: 10pt)[Port Credit Secondary School]
             #linebreak()
-            #text(size: 7.4pt, weight: "bold")[May The Light Never Be Lacking]
+            #text(size: 10pt, weight: "bold")[May The Light Never Be Lacking]
           ],
         )
       ],
     )
-    #v(7pt)
+    #v(-1pt)
     #identity-fields(score: score)
     #if quick-mark [
-      #v(6pt)
+      #v(0pt)
       #weekly-quick-mark
     ]
-    #v(8pt)
+    #v(1pt)
   ]
 
-  let two-write-lines() = [
-    #v(6pt)
+  // Every daily writing line uses the same measured vertical interval.
+  let four-write-lines = [
     #line(length: 100%, stroke: 0.6pt + black)
-    #v(9pt)
+    #v(4pt)
     #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+  ]
+
+  let three-write-lines = [
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+  ]
+
+  let two-write-lines = [
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+  ]
+
+  let left-top-write-lines = [
+    #hide(line(length: 100%, stroke: 0.6pt + black))
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+  ]
+
+  let offset-two-write-lines = [
+    #hide(line(length: 100%, stroke: 0.6pt + black))
+    #v(4pt)
+    #line(length: 100%, stroke: 0.6pt + black)
+  ]
+
+  let standard-four-line-section(prompt) = [
+    #block(height: 0.18in)[
+      #text(size: 10pt, weight: "bold")[#prompt]
+    ]
+    #four-write-lines
+  ]
+
+  let standard-two-line-section(prompt) = [
+    #block(height: 0.18in)[
+      #text(size: 10pt, weight: "bold")[#prompt]
+    ]
+    #two-write-lines
   ]
 
   let goal-lines = [
-    #text(size: 7.4pt, weight: "bold")[Specific]
-    #two-write-lines()
-    #v(6pt)
-    #text(size: 7.2pt, weight: "bold")[Measurable (by end of class, I will have)]
-    #two-write-lines()
-    #v(6pt)
-    #text(size: 7.2pt, weight: "bold")[Attainable, Realistic, Timely]
-    #two-write-lines()
+    #standard-four-line-section([What will I do? Be specific.])
+    #standard-two-line-section([Is it attainable, relevant, and timely?])
+    #block(height: 0.18in)[
+      #text(size: 10pt, weight: "bold")[Measurable: What is done by end of class?]
+    ]
+    #two-write-lines
   ]
 
   let progress-lines = [
-    #text(size: 8.2pt, weight: "bold", fill: primary)[Daily Progress]
-    #v(1pt)
-    #text(size: 6.9pt, weight: "bold")[What I did / learned]
-    #v(3pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(6pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(5pt)
-    #text(size: 6.9pt, weight: "bold")[What could have been better?]
-    #v(3pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(6pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(5pt)
-    #text(size: 6.9pt, weight: "bold")[What's next?]
-    #v(3pt)
-    #line(length: 100%, stroke: 0.6pt + black)
-    #v(6pt)
-    #line(length: 100%, stroke: 0.6pt + black)
+    #standard-four-line-section([What I did / learned this period])
+    #standard-two-line-section([What could have been better?])
+    #block(height: 0.22in)[
+      #text(size: 10pt, weight: "bold")[What's next?]
+      #v(-7pt)
+      #text(size: 10pt)[Finish, practice, or explore more after school if you choose.]
+    ]
+    #offset-two-write-lines
   ]
 
   let daily-card(day) = block(
     width: 100%,
-    height: 2.68in,
+    height: 2.66in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
@@ -190,20 +210,28 @@
     [
       #block(
         width: 100%,
-        height: 0.32in,
+        height: 0.36in,
         fill: header-fill,
         inset: (x: 9pt, y: 3pt),
         [
           #grid(
-            columns: (1.10in, 1fr),
-            column-gutter: 9pt,
+            columns: (2.48in, 1fr),
+            column-gutter: 14pt,
             align: horizon,
-            [#text(size: 13.5pt, weight: "bold", fill: primary)[#day]],
-            [#text(size: 8pt, weight: "bold")[Set a SMART goal for today]],
+            [
+              #grid(
+                columns: (0.98in, 1fr),
+                column-gutter: 5pt,
+                align: horizon,
+                [#text(size: 13.5pt, weight: "bold", fill: primary)[#day]],
+                [#text(size: 10pt, weight: "bold")[Set a SMART Goal]],
+              )
+            ],
+            [#text(size: 13.5pt, weight: "bold", fill: primary)[Daily Progress]],
           )
         ],
       )
-      #pad(x: 9pt, top: 0pt)[
+      #pad(x: 9pt, top: -6pt)[
         #grid(
           columns: (2.48in, 1fr),
           column-gutter: 14pt,
@@ -217,39 +245,47 @@
 
   let weekly-review = block(
     width: 100%,
-    height: 3.02in,
+    height: 3.35in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
     inset: 9pt,
     [
       #text(size: 13.5pt, weight: "bold", fill: primary)[Weekly Progress Check]
+      #v(4pt)
+      #text(size: 10pt, weight: "bold")[What progress did you make toward your goals this week?]
       #v(3pt)
-      #line(length: 0.65in, stroke: 2.5pt + accent)
-      #v(9pt)
-      #text(size: 7.8pt, weight: "bold")[What progress did you make toward your goals this week?]
-      #v(7pt)
       #line(length: 100%, stroke: 0.6pt + black)
-      #v(9pt)
+      #v(4pt)
       #line(length: 100%, stroke: 0.6pt + black)
-      #v(10pt)
-      #text(size: 7.8pt, weight: "bold")[What still needs attention, practice, or another try?]
-      #v(7pt)
-      #line(length: 100%, stroke: 0.6pt + black)
-      #v(9pt)
-      #line(length: 100%, stroke: 0.6pt + black)
-      #v(10pt)
-      #text(size: 7.8pt, weight: "bold")[What is one useful thing you can do over the weekend?]
+      #v(4pt)
+      #text(size: 10pt, weight: "bold")[What still needs attention, practice, or another try?]
       #v(3pt)
-      #text(size: 6.8pt)[Catch up · practise · revise / improve · organize / prepare · explore / learn more]
-      #v(7pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(4pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(4pt)
+      #text(size: 10pt, weight: "bold")[How can you balance getting work done, being present, and taking care of yourself over the weekend?]
+      #v(1pt)
+      #text(size: 10pt)[Catch up · practice · prepare · rest · connect · be fully present]
+      #v(2pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(2pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(2pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(2pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(2pt)
+      #line(length: 100%, stroke: 0.6pt + black)
+      #v(2pt)
       #line(length: 100%, stroke: 0.6pt + black)
     ]
   )
 
   let reflection-box(title, prompt) = block(
     width: 100%,
-    height: 3.68in,
+    height: 2.65in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
@@ -258,61 +294,63 @@
     [
       #block(
         width: 100%,
-        height: 0.38in,
+        height: 0.32in,
         fill: header-fill,
-        inset: (x: 9pt, y: 5pt),
+        inset: (x: 9pt, y: 4pt),
         [#text(size: 13pt, weight: "bold", fill: primary)[#title]],
       )
-      #pad(x: 9pt, top: 7pt)[
-        #text(size: 7.8pt)[#prompt]
+      #pad(x: 9pt, top: -12pt)[
+        #text(size: 11pt)[#prompt]
       ]
     ]
   )
 
   let rating-box = block(
     width: 100%,
-    height: 0.90in,
-    fill: eval-fill,
-    stroke: 0.9pt + primary,
-    radius: 5pt,
-    inset: 8pt,
+    height: 0.96in,
+    inset: 0pt,
     [
-      #text(size: 7.5pt, weight: "bold", fill: primary)[RATING]
-      #v(16pt)
+      #text(size: 10pt, weight: "bold", fill: primary)[RATING]
+      #v(2pt)
       #grid(
-        columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-        column-gutter: 5pt,
+        columns: (auto, auto),
+        column-gutter: 6pt,
+        row-gutter: 1pt,
         align: horizon,
-        [#text(size: 8pt, weight: "bold")[E]], [#checkbox(size: 8pt)],
-        [#text(size: 8pt, weight: "bold")[G]], [#checkbox(size: 8pt)],
-        [#text(size: 8pt, weight: "bold")[S]], [#checkbox(size: 8pt)],
-        [#text(size: 8pt, weight: "bold")[N]], [#checkbox(size: 8pt)],
+        [#text(size: 10pt, weight: "bold")[E]], [#checkbox(size: 10pt)],
+        [#text(size: 10pt, weight: "bold")[G]], [#checkbox(size: 10pt)],
+        [#text(size: 10pt, weight: "bold")[S]], [#checkbox(size: 10pt)],
+        [#text(size: 10pt, weight: "bold")[N]], [#checkbox(size: 10pt)],
       )
     ]
   )
 
   let skill-card(title, description) = block(
     width: 100%,
-    height: 1.12in,
+    height: 1.22in,
     fill: white,
     stroke: 0.9pt + primary,
     radius: 5pt,
     inset: 9pt,
     [
       #grid(
-        columns: (1.90in, 1fr, 1.48in),
-        column-gutter: 13pt,
+        columns: (2.15in, 1fr, 0.70in),
+        column-gutter: 10pt,
         align: top,
         [
           #text(size: 10.5pt, weight: "bold", fill: primary)[#title]
           #v(6pt)
-          #text(size: 7.8pt)[#description]
+          #text(size: 10.5pt)[#description]
         ],
         [
-          #text(size: 7.2pt, weight: "bold")[How have you demonstrated or improved this?]
-          #v(11pt)
+          #text(size: 10pt, weight: "bold")[How have you demonstrated or improved this?]
+          #v(5pt)
           #line(length: 100%, stroke: 0.6pt + black)
-          #v(10pt)
+          #v(4pt)
+          #line(length: 100%, stroke: 0.6pt + black)
+          #v(4pt)
+          #line(length: 100%, stroke: 0.6pt + black)
+          #v(4pt)
           #line(length: 100%, stroke: 0.6pt + black)
         ],
         [#rating-box],
@@ -327,9 +365,9 @@
     quick-mark: true,
   )
   daily-card([Monday])
-  v(3pt)
+  v(1pt)
   daily-card([Tuesday])
-  v(3pt)
+  v(1pt)
   daily-card([Wednesday])
 
   pagebreak()
@@ -340,9 +378,9 @@
     score: true,
   )
   daily-card([Thursday])
-  v(3pt)
+  v(1pt)
   daily-card([Friday])
-  v(3pt)
+  v(1pt)
   weekly-review
 
   pagebreak()
@@ -373,45 +411,59 @@
       [One thing you will adjust to make your learning or work smoother, safer, or less stressful.],
     ),
   )
+  v(8pt)
+  block(
+    width: 100%,
+    height: 2.85in,
+    fill: white,
+    stroke: 1pt + primary,
+    radius: 6pt,
+    inset: 9pt,
+    [#text(size: 11pt, weight: "bold")[Something fun I want to do this weekend]],
+  )
 
   pagebreak()
 
   page-header(
-    [Warrior Work Ethic: Proof of My Learning Skills],
+    [Warrior Work Ethic: Learning Skills Proof],
     [Set the Goal. Follow the Way. Take Action.],
     score: false,
     title-size: 18.5pt,
   )
-  text(size: 7.8pt, weight: "bold")[
+  text(size: 10pt, weight: "bold")[
     Circle one rating: E = Excellent, G = Good, S = Satisfactory, N = Needs Improvement
   ]
-  v(8pt)
+  v(2pt)
+  text(size: 10pt)[
+    Rate the evidence honestly. Giving yourself all Es without earning them will lose you marks. For example, if the class is asked to participate and you do not, Initiative and Collaboration should be N, not E.
+  ]
+  v(5pt)
 
   skill-card(
     [Responsibility],
     [Getting things done without anyone reminding you. Not just submitting tasks - but showing you are in control of your life.],
   )
-  v(5pt)
+  v(1pt)
   skill-card(
     [Organization],
     [Keeping track of goals, tools & materials on your own. Using your planner/log so your life is not chaos in a backpack.],
   )
-  v(5pt)
+  v(1pt)
   skill-card(
     [Independent work],
     [Starting right away, staying focused, keeping goals. Figuring things out yourself before looking for help.],
   )
-  v(5pt)
+  v(1pt)
   skill-card(
     [Initiative],
     [Doing what needs to be done without being asked/assigned. Asking good questions and seeking ways to grow.],
   )
-  v(5pt)
+  v(1pt)
   skill-card(
     [Collaboration],
     [Being someone others actually want to work with. Helping others improve their weaknesses & learning from their strengths.],
   )
-  v(5pt)
+  v(1pt)
   skill-card(
     [Self-regulation],
     [No phones unless absolutely necessary - you stay in control, not distracted. Finding the middle path and maintaining balance.],

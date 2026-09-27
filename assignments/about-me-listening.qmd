@@ -58,7 +58,7 @@ format:
       columns: (0.58in, 1fr),
       column-gutter: 9pt,
       align: horizon,
-      [#image("technology-department-emblem.svg", width: 0.54in)],
+      [#image("tech-edu-resources.png", width: 0.54in)],
       [
         #text(size: 8.3pt, weight: "bold", fill: navy)[Technology Commons]
         #linebreak()
@@ -142,7 +142,7 @@ I can make space for another person by listening with attention, recording meani
     )[
       #text(size: 9pt, weight: "bold", fill: navy)[Google Classroom - submit one PDF]
       #v(1pt)
-      #text(size: 7.9pt)[#text(weight: "bold")[Digital:] use the editable Word file in Word or upload it to Google Drive and open it with Google Docs, then export/download as PDF. #text(weight: "bold")[Paper:] scan directly to PDF, or put clear photos in a Google Doc or Word file in order and export as PDF. Submit one readable PDF, not separate images.]
+      #text(size: 7.9pt)[#text(weight: "bold")[Digital:] complete a digital copy, then export or download it as a PDF. #text(weight: "bold")[Paper:] scan directly to PDF, or put clear photos in a document in order and export as PDF. Submit one readable PDF, not separate images.]
     ]
   ],
 )
