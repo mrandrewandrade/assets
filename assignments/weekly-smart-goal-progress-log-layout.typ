@@ -93,48 +93,13 @@
       #v(2pt)
       #grid(
         columns: (1fr, 1fr, 1fr, 1fr, 1fr),
-        column-gutter: 5pt,
+        column-gutter: 4pt,
         align: horizon,
-        [
-          #text(size: 5.9pt, weight: "bold")[Mon]
-          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[L]
-          #h(0.5pt) #box(width: 8pt, height: 6pt, stroke: 0.6pt + black)
-        ],
-        [
-          #text(size: 5.9pt, weight: "bold")[Tue]
-          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[L]
-          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
-        ],
-        [
-          #text(size: 5.9pt, weight: "bold")[Wed]
-          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[L]
-          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
-        ],
-        [
-          #text(size: 5.9pt, weight: "bold")[Thu]
-          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[L]
-          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
-        ],
-        [
-          #text(size: 5.9pt, weight: "bold")[Fri]
-          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
-          #h(0.5pt) #text(size: 5.4pt)[L]
-          #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
-        ]
+        [#text(size: 6pt)[#strong[Mon]  C □  D □  T □  L □]],
+        [#text(size: 6pt)[#strong[Tue]  C □  D □  T □  L □]],
+        [#text(size: 6pt)[#strong[Wed]  C □  D □  T □  L □]],
+        [#text(size: 6pt)[#strong[Thu]  C □  D □  T □  L □]],
+        [#text(size: 6pt)[#strong[Fri]  C □  D □  T □  L □]],
       )
     ]
   )
@@ -216,7 +181,7 @@
 
   let daily-card(day) = block(
     width: 100%,
-    height: 2.48in,
+    height: 2.58in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
@@ -362,9 +327,9 @@
     quick-mark: true,
   )
   daily-card([Monday])
-  v(5pt)
+  v(3pt)
   daily-card([Tuesday])
-  v(5pt)
+  v(3pt)
   daily-card([Wednesday])
 
   pagebreak()
@@ -375,9 +340,9 @@
     score: true,
   )
   daily-card([Thursday])
-  v(5pt)
+  v(3pt)
   daily-card([Friday])
-  v(5pt)
+  v(3pt)
   weekly-review
 
   pagebreak()
