@@ -96,43 +96,43 @@
         column-gutter: 5pt,
         align: horizon,
         [
-          #text(size: 6.3pt, weight: "bold")[Mon]
-          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[L]
-          #h(1pt) #box(width: 0.20in, height: 6.5pt, stroke: 0.6pt + black)
+          #text(size: 5.9pt, weight: "bold")[Mon]
+          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[L]
+          #h(0.5pt) #box(width: 8pt, height: 6pt, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.3pt, weight: "bold")[Tue]
-          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[L]
+          #text(size: 5.9pt, weight: "bold")[Tue]
+          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[L]
           #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.3pt, weight: "bold")[Wed]
-          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[L]
+          #text(size: 5.9pt, weight: "bold")[Wed]
+          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[L]
           #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.3pt, weight: "bold")[Thu]
-          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[L]
+          #text(size: 5.9pt, weight: "bold")[Thu]
+          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[L]
           #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ],
         [
-          #text(size: 6.3pt, weight: "bold")[Fri]
-          #h(2pt) #text(size: 5.8pt)[C] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[D] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[T] #checkbox(size: 5.5pt)
-          #h(1pt) #text(size: 5.8pt)[L]
+          #text(size: 5.9pt, weight: "bold")[Fri]
+          #h(1pt) #text(size: 5.4pt)[C] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[D] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[T] #checkbox(size: 5pt)
+          #h(0.5pt) #text(size: 5.4pt)[L]
           #h(1pt) #line(length: 0.18in, stroke: 0.6pt + black)
         ]
       )
@@ -216,7 +216,7 @@
 
   let daily-card(day) = block(
     width: 100%,
-    height: 2.43in,
+    height: 2.48in,
     fill: white,
     stroke: 1pt + primary,
     radius: 6pt,
@@ -238,7 +238,7 @@
           )
         ],
       )
-      #pad(x: 9pt, top: 6pt)[
+      #pad(x: 9pt, top: 5pt)[
         #grid(
           columns: (2.48in, 1fr),
           column-gutter: 14pt,
@@ -362,9 +362,9 @@
     quick-mark: true,
   )
   daily-card([Monday])
-  v(7pt)
+  v(5pt)
   daily-card([Tuesday])
-  v(7pt)
+  v(5pt)
   daily-card([Wednesday])
 
   pagebreak()
@@ -375,9 +375,9 @@
     score: true,
   )
   daily-card([Thursday])
-  v(7pt)
+  v(5pt)
   daily-card([Friday])
-  v(7pt)
+  v(5pt)
   weekly-review
 
   pagebreak()
