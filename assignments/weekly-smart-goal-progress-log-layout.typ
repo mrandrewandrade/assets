@@ -1,4 +1,4 @@
-#let render(colour: true) = {
+#let render(colour: true, feedback-qr: none) = {
   let black = rgb("#000000")
   let white = rgb("#FFFFFF")
   let navy = rgb("#1D2347")
@@ -412,15 +412,48 @@
     ),
   )
   v(8pt)
-  block(
-    width: 100%,
-    height: 2.85in,
-    fill: white,
-    stroke: 1pt + primary,
-    radius: 6pt,
-    inset: 9pt,
-    [#text(size: 11pt, weight: "bold")[Something fun I want to do this weekend]],
-  )
+  if feedback-qr == none [
+    #block(
+      width: 100%,
+      height: 2.85in,
+      fill: white,
+      stroke: 1pt + primary,
+      radius: 6pt,
+      inset: 9pt,
+      [#text(size: 11pt, weight: "bold")[Something fun I want to do this weekend]],
+    )
+  ] else [
+    #grid(
+      columns: (1fr, 1fr),
+      column-gutter: 8pt,
+      block(
+        width: 100%,
+        height: 2.85in,
+        fill: white,
+        stroke: 1pt + primary,
+        radius: 6pt,
+        inset: 9pt,
+        [#text(size: 11pt, weight: "bold")[Something fun I want to do this weekend]],
+      ),
+      block(
+        width: 100%,
+        height: 2.85in,
+        fill: white,
+        stroke: 1pt + primary,
+        radius: 6pt,
+        inset: 9pt,
+        [
+          #align(center)[
+            #text(size: 11pt, weight: "bold", fill: primary)[Anonymous Feedback Survey]
+            #v(2pt)
+            #text(size: 9pt)[Scan to share honest, anonymous feedback about the class.]
+            #v(5pt)
+            #image(feedback-qr, width: 1.72in)
+          ]
+        ],
+      ),
+    )
+  ]
 
   pagebreak()
 

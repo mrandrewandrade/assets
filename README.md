@@ -73,6 +73,8 @@ The generated files are written to `dist/`:
 0.1-0.2-combined-teacher-marking.pdf
 weekly-smart-goal-progress-log.pdf
 weekly-smart-goal-progress-log-bw.pdf
+weekly-smart-goal-progress-log-andrew.pdf
+weekly-smart-goal-progress-log-andrew-bw.pdf
 ```
 
 Individual builds are also available:

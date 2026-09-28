@@ -21,7 +21,9 @@ rm -f \
   dist/about-me-presentation.pdf \
   dist/about-me-teacher-marking.pdf \
   dist/weekly-smart-goal-progress-log.pdf \
-  dist/weekly-smart-goal-progress-log-bw.pdf
+  dist/weekly-smart-goal-progress-log-bw.pdf \
+  dist/weekly-smart-goal-progress-log-andrew.pdf \
+  dist/weekly-smart-goal-progress-log-andrew-bw.pdf
 
 build_name_tag() {
   quarto render assignments/name-tag-pdf.qmd
@@ -57,6 +59,14 @@ build_weekly_progress() {
   mv -f assignments/weekly-smart-goal-progress-log-bw.pdf dist/weekly-smart-goal-progress-log-bw.pdf
 }
 
+build_personal_weekly_progress() {
+  quarto render assignments/weekly-smart-goal-progress-log-andrew.qmd
+  mv -f assignments/weekly-smart-goal-progress-log-andrew.pdf dist/weekly-smart-goal-progress-log-andrew.pdf
+
+  quarto render assignments/weekly-smart-goal-progress-log-andrew-bw.qmd
+  mv -f assignments/weekly-smart-goal-progress-log-andrew-bw.pdf dist/weekly-smart-goal-progress-log-andrew-bw.pdf
+}
+
 case "${1:-}" in
   about-me|about-me-all|0-series|all)
     build_name_tag
@@ -64,6 +74,7 @@ case "${1:-}" in
     build_listening
     build_teacher_marking
     build_weekly_progress
+    build_personal_weekly_progress
     ;;
   0.0|0.0-name-tag|name-tag|name-tag-pdf)
     build_name_tag
@@ -80,6 +91,9 @@ case "${1:-}" in
   weekly|weekly-smart|weekly-progress|progress-log|weekly-smart-goal-progress-log|weekly-smart-goal-progress-log-bw)
     build_weekly_progress
     ;;
+  weekly-andrew|weekly-personal|weekly-smart-goal-progress-log-andrew|weekly-smart-goal-progress-log-andrew-bw)
+    build_personal_weekly_progress
+    ;;
   *)
     echo "Use:"
     echo "  bash render.sh all"
@@ -89,6 +103,7 @@ case "${1:-}" in
     echo "  bash render.sh 0.2"
     echo "  bash render.sh combined-teacher-marking"
     echo "  bash render.sh weekly"
+    echo "  bash render.sh weekly-andrew"
     exit 1
     ;;
 esac
