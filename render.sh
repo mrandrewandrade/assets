@@ -22,7 +22,6 @@ rm -f \
   dist/about-me-teacher-marking.pdf \
   dist/weekly-smart-goal-progress-log.pdf \
   dist/weekly-smart-goal-progress-log-bw.pdf \
-  dist/weekly-smart-goal-progress-log-andrew.pdf \
   dist/weekly-smart-goal-progress-log-andrew-bw.pdf
 
 build_name_tag() {
@@ -60,9 +59,6 @@ build_weekly_progress() {
 }
 
 build_personal_weekly_progress() {
-  quarto render assignments/weekly-smart-goal-progress-log-andrew.qmd
-  mv -f assignments/weekly-smart-goal-progress-log-andrew.pdf dist/weekly-smart-goal-progress-log-andrew.pdf
-
   quarto render assignments/weekly-smart-goal-progress-log-andrew-bw.qmd
   mv -f assignments/weekly-smart-goal-progress-log-andrew-bw.pdf dist/weekly-smart-goal-progress-log-andrew-bw.pdf
 }
@@ -91,7 +87,7 @@ case "${1:-}" in
   weekly|weekly-smart|weekly-progress|progress-log|weekly-smart-goal-progress-log|weekly-smart-goal-progress-log-bw)
     build_weekly_progress
     ;;
-  weekly-andrew|weekly-personal|weekly-smart-goal-progress-log-andrew|weekly-smart-goal-progress-log-andrew-bw)
+  weekly-andrew|weekly-personal|weekly-smart-goal-progress-log-andrew-bw)
     build_personal_weekly_progress
     ;;
   *)

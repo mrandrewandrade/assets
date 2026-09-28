@@ -1,9 +1,0 @@
----
-format:
-  typst: default
----
-
-```{=typst}
-#import "weekly-smart-goal-progress-log-layout.typ": render
-#render(colour: true, feedback-qr: "anonymous-feedback-qr.png")
-```
