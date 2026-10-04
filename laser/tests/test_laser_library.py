@@ -69,6 +69,21 @@ class LaserLibraryTests(unittest.TestCase):
     def test_unreviewed_shop_taxonomy_is_not_published_as_fake_holders(self) -> None:
         self.assertFalse(any(asset_id.startswith("tc-organizer-") for asset_id in self.assets))
 
+    def test_technology_area_tags_are_selective_and_complete(self) -> None:
+        expected = {
+            "exploring-technologies", "technological-design", "manufacturing", "construction",
+            "transportation", "computer-technology", "communications-technology", "green-industries",
+            "hairstyling-aesthetics", "hospitality-tourism", "health-care",
+        }
+        represented = {area for record in self.assets.values() for area in record["technology_areas"]}
+        self.assertEqual(represented, expected)
+        self.assertTrue(all(1 <= len(record["technology_areas"]) <= 6 for record in self.assets.values()))
+        self.assertIn("transportation", self.assets["tc-holder-socket-rack"]["technology_areas"])
+        self.assertIn("computer-technology", self.assets["tc-jig-pcb-spacing"]["technology_areas"])
+        self.assertIn("green-industries", self.assets["tc-theme-nature-leaf"]["technology_areas"])
+        self.assertIn("hospitality-tourism", self.assets["tc-project-coaster-blank"]["technology_areas"])
+        self.assertNotIn("health-care", self.assets["tc-holder-socket-rack"]["technology_areas"])
+
     def test_published_holders_are_multi_part_rack_kits(self) -> None:
         holders = [record for record in self.document["assets"] if record["category"] == "tool-holders"]
         self.assertEqual(len(holders), 18)

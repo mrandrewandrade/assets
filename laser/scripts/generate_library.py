@@ -111,6 +111,7 @@ class Asset:
     shop: str = "general"
     tool_family: str = "none"
     tags: list[str] = field(default_factory=list)
+    technology_areas: list[str] = field(default_factory=list)
     skill_level: str = "introductory"
     fit_type: str = "none"
     parameters: dict[str, Any] = field(default_factory=dict)
@@ -124,6 +125,85 @@ class Asset:
     tests: dict[str, float] = field(default_factory=dict)
 
 
+TECHNOLOGY_AREAS = {
+    "exploring-technologies", "technological-design", "manufacturing", "construction",
+    "transportation", "computer-technology", "communications-technology", "green-industries",
+    "hairstyling-aesthetics", "hospitality-tourism", "health-care",
+}
+
+
+def technology_areas_for(asset: Asset) -> list[str]:
+    """Return selective curriculum contexts supported by an asset's actual form and use."""
+    areas = {"exploring-technologies", "technological-design"}
+    identifier = asset.id
+
+    if asset.category in {"calibration", "french-cleat"}:
+        areas.add("manufacturing")
+    if asset.category == "french-cleat":
+        areas.add("construction")
+
+    shop_areas = {
+        "machine": {"manufacturing"},
+        "auto": {"transportation", "manufacturing"},
+        "wood": {"construction"},
+        "electronics": {"computer-technology"},
+    }
+    areas.update(shop_areas.get(asset.shop, set()))
+
+    if asset.category == "jigs-gauges":
+        if any(term in identifier for term in ("pcb", "cable-wire")):
+            areas.add("computer-technology")
+        if any(term in identifier for term in ("shelf", "sanding", "drill-spacing", "screw-length")):
+            areas.add("construction")
+        if any(term in identifier for term in ("fastener", "wrench", "bolt-circle", "drill-size", "setup-block", "slot-width")):
+            areas.add("manufacturing")
+        if any(term in identifier for term in ("fastener", "wrench", "screw-length")):
+            areas.add("transportation")
+
+    if asset.category == "tool-holders":
+        if any(term in identifier for term in ("cable", "test-lead", "precision-driver", "solder")):
+            areas.add("communications-technology")
+        if any(term in identifier for term in ("marker", "brush", "tweezer")):
+            areas.add("hairstyling-aesthetics")
+
+    if asset.category == "core-geometry":
+        if asset.subcategory in {"label-plates", "frames"}:
+            areas.add("communications-technology")
+        if asset.subcategory == "label-plates":
+            areas.update({"hospitality-tourism", "health-care"})
+        if asset.subcategory == "mounting-patterns":
+            areas.add("computer-technology")
+        if asset.subcategory in {"brackets", "bolt-circles", "gussets", "hooks", "keyholes", "spacers"}:
+            areas.update({"manufacturing", "construction"})
+
+    if asset.category == "project-components":
+        if any(term in identifier for term in ("sign", "plaque", "easel", "tag", "bookmark")):
+            areas.add("communications-technology")
+        if any(term in identifier for term in ("coaster", "sign", "easel")):
+            areas.add("hospitality-tourism")
+        if any(term in identifier for term in ("tag", "sign", "divider")):
+            areas.add("hairstyling-aesthetics")
+        if any(term in identifier for term in ("sign", "divider")):
+            areas.add("health-care")
+        if any(term in identifier for term in ("box", "divider", "joint", "leg", "foot")):
+            areas.update({"manufacturing", "construction"})
+
+    if asset.category == "themed-starters":
+        areas.add("communications-technology")
+        if asset.subcategory in {"nature", "animals"}:
+            areas.add("green-industries")
+        if asset.subcategory == "architecture" or "hard-hat" in identifier:
+            areas.add("construction")
+        if asset.subcategory == "transportation":
+            areas.add("transportation")
+        if asset.subcategory in {"technology", "science", "space"}:
+            areas.add("computer-technology")
+        if any(term in identifier for term in ("ppe", "safety-glasses", "caution", "exit")):
+            areas.add("health-care")
+
+    return sorted(areas)
+
+
 class Catalogue:
     def __init__(self, config: dict[str, Any]):
         self.cfg = config["library"]
@@ -132,6 +212,8 @@ class Catalogue:
     def add(self, asset: Asset) -> None:
         if not asset.tags:
             asset.tags = [asset.category, asset.subcategory]
+        if not asset.technology_areas:
+            asset.technology_areas = technology_areas_for(asset)
         self.assets.append(asset)
 
     def metadata(self, asset: Asset) -> dict[str, Any]:
@@ -156,6 +238,7 @@ class Catalogue:
             "shop": asset.shop,
             "tool_family": asset.tool_family,
             "tags": sorted(set(asset.tags)),
+            "technology_areas": sorted(set(asset.technology_areas)),
             "skill_level": asset.skill_level,
             "dimensions": {"width": round(asset.width, 4), "height": round(asset.height, 4)},
             "units": "mm",
@@ -196,7 +279,10 @@ def svg_document(asset: Asset, metadata: dict[str, Any], preview: bool = False) 
         width_attr = f"{n(asset.width)}mm"
         height_attr = f"{n(asset.height)}mm"
         background = ""
-    meta_text = html.escape(json.dumps(metadata, sort_keys=True, separators=(",", ":")))
+    # Technology-area discovery belongs in the catalogue. Keeping it out of the
+    # embedded fabrication metadata avoids rewriting otherwise identical SVGs.
+    embedded_metadata = {key: value for key, value in metadata.items() if key != "technology_areas"}
+    meta_text = html.escape(json.dumps(embedded_metadata, sort_keys=True, separators=(",", ":")))
     groups = []
     for operation in ("CUT", "SCORE", "ENGRAVE"):
         items = [item for item in asset.geometry if f'data-operation="{operation}"' in item]
@@ -839,14 +925,15 @@ def write_outputs(catalogue: Catalogue) -> None:
     catalog_path = GENERATED / "catalog.json"
     catalog_path.write_text(json.dumps(document, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
 
-    columns = ["id","title","category","subcategory","shop","tool_family","skill_level","dimensions","operations","fit_type","svg","preview","license","sensitivity","trademark_status","review_status"]
+    columns = ["id","title","category","subcategory","shop","tool_family","technology_areas","skill_level","dimensions","operations","fit_type","svg","preview","license","sensitivity","trademark_status","review_status"]
     with (GENERATED / "catalog.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=columns)
         writer.writeheader()
         for item in manifest:
             writer.writerow({
                 "id": item["id"], "title": item["title"], "category": item["category"], "subcategory": item["subcategory"],
-                "shop": item["shop"], "tool_family": item["tool_family"], "skill_level": item["skill_level"],
+                "shop": item["shop"], "tool_family": item["tool_family"],
+                "technology_areas": "|".join(item["technology_areas"]), "skill_level": item["skill_level"],
                 "dimensions": f'{item["dimensions"]["width"]} × {item["dimensions"]["height"]} mm',
                 "operations": "+".join(item["operations"]), "fit_type": item["fit_type"], "svg": item["files"]["svg"],
                 "preview": item["files"]["preview"], "license": item["license"], "sensitivity": item["sensitivity"],
