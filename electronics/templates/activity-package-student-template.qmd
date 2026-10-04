@@ -11,9 +11,9 @@ execute: {enabled: false}
 
 **Student:** ____________________  **Date:** __________  **Class:** ______
 
-| Quest | Pathway | Prerequisites | Time | Risk |
-|:--|:--|:--|:--|:--|
-| [ID] | [pathway] | [IDs] | [time] | [risk] |
+| Quest | Pathway | Difficulty | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|:--|:--|
+| [ID] | [pathway] | [difficulty] | [IDs] | [time] | [risk] |
 
 ## Learning goals and success criteria {.unnumbered}
 

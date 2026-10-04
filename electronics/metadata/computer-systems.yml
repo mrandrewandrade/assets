@@ -12,6 +12,7 @@ modules:
   - id: CS01
     title: Fast electricity-to-computer bridge
     pathway: main-quest
+    difficulty: introductory
     prerequisites: [H01, H02, H07, H08, H10, D01]
     time: 45-minutes
     risk: low
@@ -21,6 +22,7 @@ modules:
   - id: CS02
     title: Parts, baseline testing, ESD, and safe opening
     pathway: main-quest
+    difficulty: introductory
     prerequisites: [CS01]
     time: 75-minutes
     risk: supervised-hardware
@@ -30,6 +32,7 @@ modules:
   - id: CS03
     title: Computer power and connections
     pathway: main-quest
+    difficulty: developing
     prerequisites: [CS02, H08, H10, H14]
     time: 75-minutes
     risk: supervised-hardware
@@ -39,6 +42,7 @@ modules:
   - id: CS04
     title: Ready-to-power inspection and supervised first boot
     pathway: main-quest
+    difficulty: introductory
     prerequisites: [CS03]
     time: 60-minutes
     risk: supervised-power
@@ -48,6 +52,7 @@ modules:
   - id: CS05
     title: POST and BIOS/UEFI
     pathway: main-quest
+    difficulty: developing
     prerequisites: [CS04]
     time: 60-minutes
     risk: low
@@ -57,6 +62,7 @@ modules:
   - id: CS06
     title: Linux Mint Xfce installation and workstation commissioning
     pathway: main-quest
+    difficulty: developing
     prerequisites: [CS05]
     time: 150-minutes
     risk: data-loss
@@ -66,6 +72,7 @@ modules:
   - id: CS07
     title: RAM compatibility, installation, and verification
     pathway: main-quest
+    difficulty: developing
     prerequisites: [CS02, CS05, CS06]
     time: 90-minutes
     risk: supervised-hardware
@@ -75,6 +82,7 @@ modules:
   - id: CS08
     title: Build-the-best-computer benchmarking challenge
     pathway: main-quest
+    difficulty: advanced
     prerequisites: [CS01, CS02, CS03, CS04, CS05, CS06, CS07]
     time: 240-minutes
     risk: supervised-hardware
@@ -84,6 +92,7 @@ modules:
   - id: SQ01
     title: Controlled teardown and reassembly
     pathway: side-quest
+    difficulty: developing
     prerequisites: [CS02, CS04]
     time: 120-minutes
     risk: supervised-hardware
@@ -93,6 +102,7 @@ modules:
   - id: SQ02
     title: Teacher-prepared POST and hardware fault stations
     pathway: side-quest
+    difficulty: developing
     prerequisites: [CS05]
     time: 90-minutes
     risk: teacher-prepared-faults
@@ -102,6 +112,7 @@ modules:
   - id: SQ03
     title: Storage and expansion upgrades
     pathway: side-quest
+    difficulty: developing
     prerequisites: [CS03, CS05, CS06]
     time: 120-minutes
     risk: data-loss
@@ -111,6 +122,7 @@ modules:
   - id: SQ04
     title: Linux hardware inventory and introductory administration
     pathway: side-quest
+    difficulty: developing
     prerequisites: [CS06]
     time: 120-minutes
     risk: approved-commands
@@ -120,6 +132,7 @@ modules:
   - id: SQ05
     title: Power, efficiency, cooling, fan control, and thermal behaviour
     pathway: side-quest
+    difficulty: advanced
     prerequisites: [CS03, CS06, C01, C03]
     time: 120-minutes
     risk: enclosed-meter-only
@@ -129,6 +142,7 @@ modules:
   - id: SQ06
     title: Repair, reuse, file recovery, and advanced commissioning
     pathway: side-quest
+    difficulty: advanced
     prerequisites: [CS06, one-of-SQ01-SQ05]
     time: 180-minutes
     risk: teacher-approved-scope
