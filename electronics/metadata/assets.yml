@@ -18,7 +18,7 @@ assets:
     download_path: dist/TEJ-Electronics-Formula-Reference.pdf
     website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Formula-Reference.html
     slide_url: null
-    version: 1.0.0
+    version: 1.1.0
     last_updated: 2026-10-04
     completion_status: reviewed
   - module_id: H01

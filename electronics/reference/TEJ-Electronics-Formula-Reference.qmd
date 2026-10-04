@@ -71,27 +71,27 @@ Scientific notation uses $a\times10^n$ with $1\leq |a|<10$. Engineering notation
 
 # GUESS method
 
-| Step | Evidence |
-|:--:|:--|
-| G - Given | Record every known symbol, value, and unit in a table. |
-| U - Unknown | Name each requested symbol and target unit. |
-| E - Equation | Write the general equation, then rearrange it symbolically. |
-| S - Substitute | Insert values with units and show the exact calculator entry. |
-| S - Solve | Keep the unrounded result, then report correct significant figures and a sensible prefix. |
-| Statement | Answer in a complete sentence and include a final-results table. |
+| Letter | Step | Evidence |
+|:--:|:--|:--|
+| **G** | Given | Record every known symbol, value, and unit in a table. |
+| **U** | Unknown | Name each requested symbol and target unit. |
+| **E** | Equation | Write the general equation, then rearrange it symbolically. |
+| **S** | Substitute | Insert values with units and show the exact calculator entry. |
+| **S** | Solve | Keep the unrounded result, then report correct significant figures and a sensible prefix. |
+| - | Statement | Answer in a complete sentence and include a final-results table. |
 
 # Charge, current, voltage, resistance, power, and energy
 
 | Quantity | Relationship | SI unit |
 |:--|:--|:--|
-| Charge | $Q=It$ | coulomb, $\mathrm{C}$ |
-| Current | $I=\dfrac{Q}{t}$ | ampere, $\mathrm{A}$ |
-| Voltage | $V=\dfrac{W}{Q}$ | volt, $\mathrm{V}$ |
-| Resistance | $R=\dfrac{V}{I}$ | ohm, $\Omega$ |
-| Conductance | $G=\dfrac{1}{R}$ | siemens, $\mathrm{S}$ |
-| Power | $P=VI=I^2R=\dfrac{V^2}{R}$ | watt, $\mathrm{W}$ |
-| Energy | $E=Pt$ | joule, $\mathrm{J}$ |
-| Electrical energy | $E_{\mathrm{Wh}}=P_{\mathrm{W}}t_{\mathrm{h}}$ | watt-hour, $\mathrm{Wh}$ |
+| Charge | $Q = I\,t$ | coulomb, $\mathrm{C}$ |
+| Current | $I = \dfrac{Q}{t}$ | ampere, $\mathrm{A}$ |
+| Voltage | $V = \dfrac{W}{Q}$ | volt, $\mathrm{V}$ |
+| Resistance | $R = \dfrac{V}{I}$ | ohm, $\Omega$ |
+| Conductance | $G = \dfrac{1}{R}$ | siemens, $\mathrm{S}$ |
+| Power | $P = V\,I = I^2R = \dfrac{V^2}{R}$ | watt, $\mathrm{W}$ |
+| Energy | $E = P\,t$ | joule, $\mathrm{J}$ |
+| Electrical energy | $E_{\mathrm{Wh}} = P_{\mathrm{W}}\,t_{\mathrm{h}}$ | watt-hour, $\mathrm{Wh}$ |
 
 $1\ \mathrm{Wh}=3600\ \mathrm{J}$ and $1\ \mathrm{kWh}=3.6\ \mathrm{MJ}$.
 
@@ -102,6 +102,20 @@ $$V=IR \qquad I=\frac{V}{R} \qquad R=\frac{V}{I}$$
 $$P=VI \qquad P=I^2R \qquad P=\frac{V^2}{R}$$
 
 Check that calculated component power remains below the component rating with an appropriate design margin.
+
+# Series and parallel at a glance
+
+::: {.content-visible when-format="html"}
+![Series has one current path; parallel has multiple branches across the same two nodes.](../schematics/Series_Parallel_Comparison.svg){fig-cap="Series and parallel topology reference. Trace nodes before deciding which rule applies." width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Series has one current path; parallel has multiple branches across the same two nodes.](../schematics/Series_Parallel_Comparison.pdf){fig-cap="Series and parallel topology reference. Trace nodes before deciding which rule applies." width=100%}
+:::
+
+**Series test:** components are in series only when the same current must pass through each one and their shared node has no other branch.
+
+**Parallel test:** components are in parallel only when both ends connect to the same two nodes, so they have the same voltage.
 
 # Series circuits
 
@@ -154,6 +168,23 @@ Loaded divider: replace $R_2$ with $R_2\parallel R_L$ before applying the divide
 Two-branch current divider:
 
 $$I_1=I_T\frac{R_2}{R_1+R_2} \qquad I_2=I_T\frac{R_1}{R_1+R_2}$$
+
+# Common reference circuits
+
+::: {.content-visible when-format="html"}
+![Four common circuits: LED current limiter, voltage divider, RC low-pass, and NPN low-side driver.](../schematics/Common_Reference_Circuits.svg){fig-cap="Reference circuits. Confirm component values, ratings, polarity, pinout, and protection before building." width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Four common circuits: LED current limiter, voltage divider, RC low-pass, and NPN low-side driver.](../schematics/Common_Reference_Circuits.pdf){fig-cap="Reference circuits. Confirm component values, ratings, polarity, pinout, and protection before building." width=100%}
+:::
+
+| Circuit | Main relationship | Design check |
+|:--|:--|:--|
+| LED current limiter | $R=(V_S-V_F)/I_{\mathrm{LED}}$ | resistor power and LED current |
+| Voltage divider | $V_{\mathrm{out}}=V_{\mathrm{in}}R_2/(R_1+R_2)$ | loading changes $R_2$ |
+| RC low-pass or timer | $\tau=RC$ | capacitor polarity and voltage rating |
+| NPN low-side driver | $I_B\geq I_C/\beta_{\mathrm{forced}}$ | pinout, device limits, and flyback diode |
 
 # Conductors, protection, and batteries
 
@@ -229,6 +260,84 @@ $$N=\sum b_n2^n$$
 - Half adder: $S=A\oplus B$, $C=AB$.
 - Full adder: $S=A\oplus B\oplus C_{\mathrm{in}}$.
 - Full-adder carry: $C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B)$.
+
+## Logic gates {.unnumbered}
+
+::: {.content-visible when-format="html"}
+![Standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR gates.](../schematics/Logic_Gates_Reference.svg){fig-cap="Logic-gate symbol reference. A small output bubble means inversion." width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR gates.](../schematics/Logic_Gates_Reference.pdf){fig-cap="Logic-gate symbol reference. A small output bubble means inversion." width=100%}
+:::
+
+| Gate | Boolean form | Output is 1 when... |
+|:--|:--|:--|
+| NOT | $Y=\overline{A}$ | the input is 0 |
+| AND | $Y=AB$ | both inputs are 1 |
+| OR | $Y=A+B$ | at least one input is 1 |
+| XOR | $Y=A\oplus B$ | the inputs are different |
+| NAND | $Y=\overline{AB}$ | AND would be 0 |
+| NOR | $Y=\overline{A+B}$ | both inputs are 0 |
+| XNOR | $Y=\overline{A\oplus B}$ | the inputs are the same |
+
+**One-input NOT truth table**
+
+| $A$ | $\overline{A}$ |
+|:--:|:--:|
+| 0 | 1 |
+| 1 | 0 |
+
+**Two-input gate truth table**
+
+| $A$ | $B$ | AND | OR | XOR | NAND | NOR | XNOR |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
+
+## Build a truth table by counting in binary {.unnumbered}
+
+For $n$ inputs, make $2^n$ rows. With three inputs there are $2^3=8$ rows. Count from `000` to `111`, changing the rightmost input every row, the middle input every two rows, and the leftmost input every four rows.
+
+Use a decimal **Count** column only as a row-order check. Logic output columns contain only `0` or `1`.
+
+| Count | $A$ | $B$ | $C$ | Output 1 | Output 2 |
+|--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 |  |  |
+| 1 | 0 | 0 | 1 |  |  |
+| 2 | 0 | 1 | 0 |  |  |
+| 3 | 0 | 1 | 1 |  |  |
+| 4 | 1 | 0 | 0 |  |  |
+| 5 | 1 | 0 | 1 |  |  |
+| 6 | 1 | 1 | 0 |  |  |
+| 7 | 1 | 1 | 1 |  |  |
+
+```{=latex}
+\newpage
+```
+
+## Worked three-input, two-output example: full adder {.unnumbered}
+
+A full adder has inputs $A$, $B$, and $C_{\mathrm{in}}$. Its two outputs are the sum bit $S$ and carry bit $C_{\mathrm{out}}$.
+
+$$S=A\oplus B\oplus C_{\mathrm{in}}$$
+
+$$C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B)$$
+
+| Count | $A$ | $B$ | $C_{\mathrm{in}}$ | $S$ | $C_{\mathrm{out}}$ |
+|--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 0 |
+| 2 | 0 | 1 | 0 | 1 | 0 |
+| 3 | 0 | 1 | 1 | 0 | 1 |
+| 4 | 1 | 0 | 0 | 1 | 0 |
+| 5 | 1 | 0 | 1 | 0 | 1 |
+| 6 | 1 | 1 | 0 | 0 | 1 |
+| 7 | 1 | 1 | 1 | 1 | 1 |
+
+Read each row as a test case. For example, `011` means $A=0$, $B=1$, and $C_{\mathrm{in}}=1$; the output is $S=0$ and $C_{\mathrm{out}}=1$.
 
 # Casio fx-991ES PLUS C procedures
 

@@ -1,0 +1,52 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\definecolor{TEJBlue}{HTML}{1769AA}
+\begin{document}
+\begin{tikzpicture}[line width=1.05pt,draw=TEJNavy]
+  \ctikzset{bipoles/length=1.05cm}
+
+  \node[font=\bfseries\Large,text=TEJNavy] at (2.8,8.2) {LED current limiter};
+  \draw
+    (0,4.9) to[battery1,l_=$V_S$] (0,7.3)
+    to[R,l=$R$] (3.0,7.3)
+    to[leD] (5.6,7.3)
+    -- (5.6,4.9) -- (0,4.9);
+  \node[font=\large,text=TEJNavy] at (2.8,4.35)
+    {$R=(V_S-V_F)/I_{\mathrm{LED}}$};
+
+  \begin{scope}[xshift=9.0cm]
+    \node[font=\bfseries\Large,text=TEJNavy] at (2.8,8.2) {Voltage divider};
+    \draw
+      (0,4.9) to[battery1,l_=$V_{\mathrm{in}}$] (0,7.3)
+      -- (3.0,7.3)
+      to[R,l=$R_1$] (3.0,6.1)
+      to[R,l=$R_2$] (3.0,4.9)
+      -- (0,4.9);
+    \draw (3.0,6.1) -- (5.6,6.1) node[right,font=\large] {$V_{\mathrm{out}}$};
+    \fill[TEJNavy] (3.0,6.1) circle (2.1pt);
+    \node[font=\large,text=TEJNavy] at (2.8,4.35)
+      {$V_{\mathrm{out}}=V_{\mathrm{in}}R_2/(R_1+R_2)$};
+  \end{scope}
+
+  \node[font=\bfseries\Large,text=TEJNavy] at (2.8,3.55) {RC low-pass};
+  \draw
+    (0,1.9) node[left,font=\large] {$V_{\mathrm{in}}$}
+    to[R,l=$R$] (3.0,1.9)
+    -- (5.6,1.9) node[right,font=\large] {$V_{\mathrm{out}}$};
+  \draw (3.8,1.9) to[C,l=$C$] (3.8,0) node[ground] {};
+  \fill[TEJNavy] (3.8,1.9) circle (2.1pt);
+  \node[font=\large,text=TEJNavy] at (2.8,-0.05) {$\tau=RC$};
+
+  \begin{scope}[xshift=9.0cm]
+    \node[font=\bfseries\Large,text=TEJNavy] at (2.8,3.85) {NPN low-side driver};
+    \node[npn,scale=1.15] (Q) at (3.2,1.05) {};
+    \draw (Q.E) -- ++(0,-0.45) node[ground] {};
+    \draw (Q.B) to[R,l_=$R_B$] (0.3,1.05) node[left,font=\large] {$V_{\mathrm{in}}$};
+    \draw (Q.C) -- (3.2,1.95) to[L,l=load] (3.2,2.75) node[vcc] {$+V_S$};
+    \draw (3.2,2.75) -- (5.0,2.75) to[D*,invert,l_=$D_F$] (5.0,1.95) -- (3.2,1.95);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

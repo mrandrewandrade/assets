@@ -10,6 +10,7 @@
 body { color: #20262d; }
 h1, h2, h3 { color: var(--tej-navy); }
 table { font-size: 0.94rem; }
+th, td { padding: .5rem .72rem; vertical-align: top; }
 thead { background: var(--tej-navy); color: white; }
 .callout-note { border-left-color: var(--tej-blue); }
 .callout-warning, .callout-important { border-left-color: var(--tej-red); }

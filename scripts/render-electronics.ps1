@@ -6,10 +6,34 @@ New-Item -ItemType Directory -Force -Path (Join-Path $repoRoot 'dist') | Out-Nul
 
 $magick = Get-Command magick -ErrorAction SilentlyContinue
 if (-not $magick) { throw 'ImageMagick is required to create print-ready schematic PDFs.' }
+$pdflatex = Get-Command pdflatex -ErrorAction SilentlyContinue
+if (-not $pdflatex) { throw 'pdfLaTeX is required to generate CircuitikZ schematics.' }
+$dvisvgm = Get-Command dvisvgm -ErrorAction SilentlyContinue
+if (-not $dvisvgm) { throw 'dvisvgm is required to generate vector SVG schematics.' }
+$quarto = Get-Command quarto.exe -ErrorAction SilentlyContinue
+if (-not $quarto) { $quarto = Get-Command quarto -ErrorAction SilentlyContinue }
+if (-not $quarto) { throw 'Quarto is required to render the electronics assets.' }
+
+$schematicBuild = Join-Path $repoRoot 'tmp/schematics'
+New-Item -ItemType Directory -Force -Path $schematicBuild | Out-Null
+
+Get-ChildItem -LiteralPath 'electronics/schematics' -Filter '*.tex' | ForEach-Object {
+    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
+    & $pdflatex.Source '-interaction=nonstopmode' '-halt-on-error' "-output-directory=$schematicBuild" $_.FullName | Out-Null
+    if ($LASTEXITCODE -ne 0) { throw "CircuitikZ PDF generation failed for $($_.FullName)" }
+    $generatedPdf = Join-Path $schematicBuild "$baseName.pdf"
+    $pdfPath = Join-Path $_.DirectoryName "$baseName.pdf"
+    $svgPath = Join-Path $_.DirectoryName "$baseName.svg"
+    Copy-Item -LiteralPath $generatedPdf -Destination $pdfPath -Force
+    & $dvisvgm.Source '--pdf' '--no-fonts' '--exact-bbox' '--bbox=min' "--output=$svgPath" $generatedPdf
+    if ($LASTEXITCODE -ne 0) { throw "CircuitikZ SVG generation failed for $($_.FullName)" }
+}
 
 Get-ChildItem -LiteralPath 'electronics/schematics' -Filter '*.svg' | ForEach-Object {
+    $texPath = [System.IO.Path]::ChangeExtension($_.FullName, '.tex')
+    if (Test-Path -LiteralPath $texPath) { return }
     $pdfPath = [System.IO.Path]::ChangeExtension($_.FullName, '.pdf')
-    & $magick.Source -background white -density 144 $_.FullName $pdfPath
+    & $magick.Source -density 144 $_.FullName -background white -alpha remove -alpha off -compress Zip $pdfPath
     if ($LASTEXITCODE -ne 0) { throw "Schematic conversion failed for $($_.FullName)" }
 }
 
@@ -19,7 +43,7 @@ function Render-Pdf {
         [Parameter(Mandatory = $true)][string]$Output
     )
 
-    quarto render $Source --to pdf --output $Output
+    & $quarto.Source render $Source --to pdf --output $Output
     if ($LASTEXITCODE -ne 0) { throw "Quarto PDF render failed for $Source" }
     Move-Item -LiteralPath $Output -Destination (Join-Path 'dist' $Output) -Force
 }
@@ -27,7 +51,7 @@ function Render-Pdf {
 Render-Pdf 'electronics/reference/TEJ-Electronics-Formula-Reference.qmd' 'TEJ-Electronics-Formula-Reference.pdf'
 Push-Location -LiteralPath 'electronics/reference'
 try {
-    quarto render 'TEJ-Electronics-Formula-Reference.qmd' --to html --output 'TEJ-Electronics-Formula-Reference.html'
+    & $quarto.Source render 'TEJ-Electronics-Formula-Reference.qmd' --to html --output 'TEJ-Electronics-Formula-Reference.html'
     if ($LASTEXITCODE -ne 0) { throw 'Quarto HTML render failed for the formula reference' }
 }
 finally {
@@ -44,11 +68,10 @@ Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Answer_Key.qmd" 'H01_Safety_Lab_P
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Lab.qmd" 'H01_Safety_Lab_Practice_Lab.pdf'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Tinkercad_Guide.qmd" 'H01_Safety_Lab_Practice_Tinkercad_Guide.pdf'
 
-Copy-Item -LiteralPath 'electronics/schematics/H01_Safety_Lab_Practice_Schematic.svg' -Destination 'dist/H01_Safety_Lab_Practice_Schematic.svg' -Force
-Copy-Item -LiteralPath 'electronics/schematics/H01_Blade_Fuse_Cutaway.svg' -Destination 'dist/H01_Blade_Fuse_Cutaway.svg' -Force
-Copy-Item -LiteralPath 'electronics/schematics/Circuit_Calculations_Parallel_Schematic.svg' -Destination 'dist/Circuit_Calculations_Parallel_Schematic.svg' -Force
-Copy-Item -LiteralPath 'electronics/schematics/H01_Safety_Lab_Practice_Schematic.pdf' -Destination 'dist/H01_Safety_Lab_Practice_Schematic.pdf' -Force
-Copy-Item -LiteralPath 'electronics/schematics/H01_Blade_Fuse_Cutaway.pdf' -Destination 'dist/H01_Blade_Fuse_Cutaway.pdf' -Force
-Copy-Item -LiteralPath 'electronics/schematics/Circuit_Calculations_Parallel_Schematic.pdf' -Destination 'dist/Circuit_Calculations_Parallel_Schematic.pdf' -Force
+Get-ChildItem -LiteralPath 'electronics/schematics' -File |
+    Where-Object { $_.Extension -in @('.svg', '.pdf') } |
+    ForEach-Object {
+        Copy-Item -LiteralPath $_.FullName -Destination (Join-Path 'dist' $_.Name) -Force
+    }
 
 Write-Host 'Rendered TEJ electronics assets to dist/.'
