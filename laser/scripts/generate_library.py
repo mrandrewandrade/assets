@@ -635,7 +635,10 @@ def write_outputs(catalogue: Catalogue) -> None:
             info = zipfile.ZipInfo(arcname.as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
-            archive.writestr(info, file_path.read_bytes())
+            payload = file_path.read_bytes()
+            if file_path.suffix.lower() in {".csv", ".json", ".md", ".svg", ".txt", ".yml", ".yaml"}:
+                payload = payload.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            archive.writestr(info, payload)
     print(f"Generated {len(manifest)} assets across {len(summary)} categories")
     print(f"Manifest: {catalog_path.relative_to(ROOT)}")
     print(f"Bundle: {bundle_path.relative_to(ROOT)}")
