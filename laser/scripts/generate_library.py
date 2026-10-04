@@ -13,7 +13,6 @@ import html
 import io
 import json
 import math
-import re
 import shutil
 import zipfile
 from dataclasses import dataclass, field
@@ -402,94 +401,334 @@ def add_french_cleat(c: Catalogue) -> None:
 
 
 def add_holders(c: Catalogue) -> None:
+    material_thickness = float(c.cfg["default_material"]["measured_thickness_mm"])
     for spec in c.cfg["holder_families"]:
         count, diameter, spacing = int(spec["count"]), float(spec["diameter_mm"]), float(spec["spacing_mm"])
-        width = max(100, 30 + (count-1)*spacing + diameter)
-        height = 80
-        geometry = [rect(0.5,0.5,width-1,height-1,rx=3),label(width/2,16,spec["title"].upper(),4,"middle")]
-        start = (width-(count-1)*spacing)/2
+        rack_width = max(100, 30 + (count-1)*spacing + diameter)
+        width, height = rack_width + 72, 160
+        geometry = [
+            # Labelled back plate with two mounting holes.
+            rect(5, 5, rack_width, 55, rx=3),
+            circle(17, 17, 2.6),
+            circle(5 + rack_width - 12, 17, 2.6),
+            label(5 + rack_width / 2, 26, spec["title"].upper(), 4, "middle"),
+            label(5 + rack_width / 2, 38, "MEASURE · TEST FIT · ASSEMBLE", 2.5, "middle"),
+            # Horizontal retention deck and front rail.
+            rect(5, 70, rack_width, 45, rx=2),
+            rect(5, 126, rack_width, 18, rx=2),
+            # Two right-triangle cheeks support the deck as a three-dimensional rack.
+            polygon([(rack_width + 17, 5), (rack_width + 67, 5), (rack_width + 17, 55)]),
+            polygon([(rack_width + 17, 68), (rack_width + 67, 68), (rack_width + 17, 118)]),
+            label(rack_width + 42, 127, "2 × CHEEKS", 2.3, "middle"),
+        ]
+        start = 5 + (rack_width-(count-1)*spacing)/2
         for i in range(count):
             x = start+i*spacing
             if spec["retention"] == "hole-array":
-                geometry.append(circle(x,46,diameter/2))
+                geometry.append(circle(x,92,diameter/2))
             else:
-                geometry.append(path(f"M {n(x-diameter/2)} 0.5 V 47 Q {n(x)} 53 {n(x+diameter/2)} 47 V 0.5",closed=False))
-        c.add(Asset(f"tc-holder-{spec['id']}",spec["title"],
-            "A generic, measurement-first holder starter composed from a back plate, retention array and engraved label.",
+                geometry.append(path(f"M {n(x-diameter/2)} 115 V 92 Q {n(x)} 86 {n(x+diameter/2)} 92 V 115",closed=False))
+        parameters = dict(spec)
+        parameters.update({
+            "rack_width_mm": rack_width,
+            "material_thickness_mm": material_thickness,
+            "components": ["back-plate", "retention-deck", "front-rail", "left-cheek", "right-cheek"],
+        })
+        c.add(Asset(f"tc-holder-{spec['id']}", f"{spec['title']} kit",
+            "A five-part benchtop rack kit with a labelled back plate, horizontal retention deck, front rail and two support cheeks.",
             "tool-holders",spec["retention"],width,height,geometry,shop=spec["shop"],tool_family=spec["id"],
-            tags=[spec["title"].lower(),spec["shop"],"holder","French cleat compatible"],skill_level="intermediate",
-            operations=["CUT","ENGRAVE"],parameters=dict(spec),
-            notes="Starting geometry only. Measure the actual tools, verify removal clearance and centre of mass, then prototype and load-test."))
+            tags=[spec["title"].lower(),spec["shop"],"holder","rack kit","benchtop","laminated assembly"],skill_level="intermediate",
+            operations=["CUT","ENGRAVE"],parameters=parameters,
+            notes="Glue the deck and front rail between the support cheeks and back plate. Measure the actual tools, verify removal clearance and centre of mass, then prototype and load-test before wall mounting."))
 
-    def slugify(value: str) -> str:
-        return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    # `shop_coverage` is a requirements backlog, not permission to publish a
+    # renamed generic plate for every tool name. Only reviewed holder families
+    # with explicit retention parameters are emitted above.
 
-    def display_title(value: str) -> str:
-        result = value.title()
-        for ordinary, preferred in {"Obd": "OBD", "Sae": "SAE", "Ic": "IC", "Pcb": "PCB", "Usb": "USB"}.items():
-            result = re.sub(rf"\b{ordinary}\b", preferred, result)
-        return result
 
-    comb_terms = ("wrench", "key", "lead", "cable", "cord", "clamp", "plier", "tweezer", "probe", "blade", "sheet")
-    hole_terms = ("bit", "mill", "drill", "tap", "die", "collet", "insert", "socket", "driver", "brush", "marker", "pencil", "punch", "reamer", "countersink")
-    for shop, titles in c.cfg["shop_coverage"].items():
-        for title in titles:
-            slug = slugify(title)
-            retention = "slot-comb" if any(term in title.lower() for term in comb_terms) else "hole-array" if any(term in title.lower() for term in hole_terms) else "tray-starter"
-            width, height = 150, 100
-            geometry = [rect(0, 0, width, height, rx=3), circle(12, 12, 2.6), circle(width-12, 12, 2.6),
-                        label(width/2, 20, title.upper(), 3.4, "middle")]
-            if retention == "hole-array":
-                geometry.extend(circle(35+i*20, 58, 5) for i in range(5))
-            elif retention == "slot-comb":
-                geometry.extend(path(f"M {25+i*22} 100 V 58 Q {30+i*22} 52 {35+i*22} 58 V 100", closed=False) for i in range(5))
-            else:
-                geometry += [line(18, 42, 132, 42, "SCORE"), rect(25, 55, 35, 8, rx=4), rect(90, 55, 35, 8, rx=4),
-                             label(width/2, 82, "MEASURE · RETAIN · TEST", 3, "middle")]
-            operations = ["CUT", "ENGRAVE"] + (["SCORE"] if retention == "tray-starter" else [])
-            c.add(Asset(f"tc-organizer-{shop}-{slug}", f"{display_title(title)} organization starter",
-                "A generic labelled module for composing measured retention geometry without copying a branded tool silhouette.",
-                "tool-holders", retention, width, height, geometry, shop=shop, tool_family=slug,
-                tags=[shop, title, "organization", "shadow board", "French cleat compatible"], skill_level="intermediate",
-                operations=operations, parameters={"face_width_mm": width, "face_height_mm": height, "retention": retention},
-                notes="Starting geometry only. Measure the actual tool or set, add functional retention, verify removal clearance and centre of mass, then prototype and load-test."))
+def add_jigs_gauges(c: Catalogue) -> None:
+    """Add purpose-built measuring and setup tools with distinct geometry."""
+
+    def add_jig(
+        asset_id: str,
+        title: str,
+        description: str,
+        subcategory: str,
+        width: float,
+        height: float,
+        geometry: list[str],
+        *,
+        parameters: dict[str, Any],
+        tests: dict[str, float] | None = None,
+        notes: str,
+    ) -> None:
+        operations = [
+            operation for operation in ("CUT", "SCORE", "ENGRAVE")
+            if any(f'data-operation="{operation}"' in item for item in geometry)
+        ]
+        c.add(Asset(
+            f"tc-jig-{asset_id}", title, description, "jigs-gauges", subcategory,
+            width, height, geometry, shop="general", tool_family=subcategory,
+            tags=["jig", "gauge", subcategory, *asset_id.split("-")],
+            operations=operations, parameters=parameters, tests=tests or {}, notes=notes,
+        ))
+
+    radii = [2, 4, 6, 8, 10, 15, 20]
+    geometry = [label(90, 8, "EXTERNAL CORNER RADIUS LEAVES", 3.5, "middle")]
+    for index, radius in enumerate(radii):
+        row, column = divmod(index, 4)
+        x, y = 4 + column * 44, 14 + row * 42
+        geometry.append(path(
+            f"M {n(x)} {n(y)} H {n(x + 40 - radius)} "
+            f"A {n(radius)} {n(radius)} 0 0 1 {n(x + 40)} {n(y + radius)} "
+            f"V {n(y + 36)} H {n(x)} Z"
+        ))
+        geometry.append(label(x + 20, y + 30, f"R{radius}", 2.5, "middle"))
+    add_jig(
+        "radius-gauge", "External radius gauge leaves R2–R20",
+        "Seven separate corner leaves with true tangent arcs for comparing an outside corner radius.",
+        "radius-gauges", 180, 100, geometry,
+        parameters={"radii_mm": radii, "profile": "convex-quarter-circle"},
+        tests={"smallest_radius_mm": 2, "largest_radius_mm": 20},
+        notes="Cut as separate leaves. Compare by backlighting the contact edge; this is a shop reference, not an inspection-certified gauge.",
+    )
+
+    angles = [15, 30, 45, 60, 75, 90]
+    centre_x, centre_y, ray_length = 90, 88, 68
+    geometry = [rect(0.5, 0.5, 179, 99, rx=3), label(90, 10, "ANGLE REFERENCE — ALIGN TO BASELINE", 3.4, "middle")]
+    geometry.append(line(15, centre_y, 165, centre_y, "SCORE"))
+    for angle in angles:
+        radians = math.radians(angle)
+        end_x = centre_x + ray_length * math.cos(radians)
+        end_y = centre_y - ray_length * math.sin(radians)
+        geometry.append(line(centre_x, centre_y, end_x, end_y, "SCORE"))
+        geometry.append(label(
+            centre_x + (ray_length + 8) * math.cos(radians),
+            centre_y - (ray_length + 8) * math.sin(radians),
+            f"{angle}°", 2.4, "middle",
+        ))
+    add_jig(
+        "angle-gauge", "Angle reference 15°–90°",
+        "A common-vertex angle fan with a scored baseline and six exact reference rays.",
+        "angle-gauges", 180, 100, geometry,
+        parameters={"angles_deg": angles, "ray_length_mm": ray_length},
+        tests={"largest_angle_deg": 90},
+        notes="Align one workpiece edge to the horizontal datum and compare the second edge to a scored ray.",
+    )
+
+    geometry = [rect(0.5, 0.5, 159, 109, rx=3), label(80, 10, "CIRCLE CENTRE FINDER", 3.5, "middle")]
+    centre_x, centre_y = 80, 60
+    geometry += [circle(centre_x, centre_y, 2), line(12, centre_y, 148, centre_y, "SCORE"),
+                 line(centre_x, 18, centre_x, 102, "SCORE"), line(35, 15, 125, 105, "SCORE"),
+                 line(35, 105, 125, 15, "SCORE")]
+    for radius in (10, 20, 30, 40):
+        geometry.append(circle(centre_x, centre_y, radius, "SCORE"))
+        geometry.append(label(centre_x + radius + 1.5, centre_y - 1.5, f"Ø{radius * 2}", 2.1))
+    add_jig(
+        "centering-template", "Circle centering template",
+        "Crosshairs, diagonals and concentric scored circles locate the centre of round work up to 80 mm diameter.",
+        "centering", 160, 110, geometry,
+        parameters={"reference_diameters_mm": [20, 40, 60, 80], "centre_hole_mm": 4},
+        tests={"largest_reference_diameter_mm": 80, "centre_hole_diameter_mm": 4},
+        notes="Use the scored references to align the work, then mark through the 4 mm centre hole.",
+    )
+
+    spacings = [10, 20, 30, 40, 50]
+    geometry = [rect(0.5, 0.5, 209, 109, rx=3), label(105, 10, "DRILL SPACING — CENTRE TO CENTRE", 3.4, "middle")]
+    for index, spacing in enumerate(spacings):
+        y, x1 = 26 + index * 17, 40
+        x2 = x1 + spacing
+        geometry += [circle(x1, y, 1.5), circle(x2, y, 1.5), line(x1, y, x2, y, "SCORE"),
+                     label(105, y + 1, f"{spacing} mm C-C", 2.6, "middle")]
+    add_jig(
+        "drill-spacing", "Drill spacing template 10–50 mm",
+        "Five labelled pairs of 3 mm pilot holes set exact centre-to-centre spacing.",
+        "drill-spacing", 210, 110, geometry,
+        parameters={"spacings_mm": spacings, "pilot_hole_mm": 3},
+        tests={"minimum_spacing_mm": 10, "maximum_spacing_mm": 50},
+        notes="Insert a transfer punch or mark through both pilot holes; compensate for kerf after a test cut.",
+    )
+
+    fasteners = [3, 4, 5, 6, 8, 10, 12]
+    geometry = [rect(0.5, 0.5, 209, 87, rx=3), label(105, 10, "METRIC FASTENER SHANK SIZING", 3.4, "middle")]
+    for index, size in enumerate(fasteners):
+        x = 20 + index * 28
+        geometry += [circle(x, 42, size / 2), label(x, 62, f"M{size}", 2.8, "middle"),
+                     label(x, 69, f"Ø{size} mm", 2.1, "middle")]
+    add_jig(
+        "fastener-sizing", "Metric fastener shank sizing board",
+        "A labelled M3–M12 through-hole board for identifying nominal metric fastener shank diameter.",
+        "fastener-sizing", 210, 88, geometry,
+        parameters={"nominal_metric_sizes": fasteners, "hole_diameters_mm": fasteners},
+        tests={"smallest_hole_diameter_mm": 3, "largest_hole_diameter_mm": 12},
+        notes="Hole size is kerf-sensitive. Test-cut and measure the finished holes before using the board as a reference.",
+    )
+
+    geometry = [rect(0.5, 0.5, 179, 69, rx=3), label(90, 9, "SCREW LENGTH — UNDER HEAD TO TIP", 3.4, "middle")]
+    zero_x, scale_y, scale_length = 25, 53, 120
+    geometry += [line(zero_x, 18, zero_x, 58, "SCORE"), line(zero_x, scale_y, zero_x + scale_length, scale_y, "SCORE"),
+                 label(zero_x - 2, 17, "HEAD DATUM", 2.2, "end")]
+    for millimetre in range(scale_length + 1):
+        x = zero_x + millimetre
+        tick = 8 if millimetre % 10 == 0 else 5 if millimetre % 5 == 0 else 2.5
+        geometry.append(line(x, scale_y, x, scale_y - tick, "SCORE"))
+        if millimetre % 10 == 0:
+            geometry.append(label(x, 64, str(millimetre), 2.2, "middle"))
+    geometry.append(label(zero_x + scale_length + 6, 64, "mm", 2.2))
+    add_jig(
+        "screw-length", "Screw length gauge 0–120 mm",
+        "A linear under-head datum and millimetre scale for measuring screw length—not screw diameter.",
+        "screw-length", 180, 70, geometry,
+        parameters={"measurement_axis": "under-head-to-tip", "scale_length_mm": scale_length, "minor_division_mm": 1},
+        tests={"scale_length_mm": scale_length, "minor_division_mm": 1},
+        notes="Seat the underside of the screw head on the vertical zero datum and read the tip against the engraved scale.",
+    )
+
+    drill_sizes = list(range(3, 13))
+    geometry = [rect(0.5, 0.5, 229, 81, rx=3), label(115, 10, "METRIC DRILL SHANK CHECK", 3.4, "middle")]
+    for index, size in enumerate(drill_sizes):
+        x = 17 + index * 22
+        geometry += [circle(x, 39, size / 2), label(x, 62, f"Ø{size}", 2.5, "middle")]
+    add_jig(
+        "drill-size", "Metric drill-size gauge Ø3–12 mm",
+        "Ten sequential through-holes identify common metric drill-shank diameters from 3 to 12 mm.",
+        "drill-size", 230, 82, geometry,
+        parameters={"hole_diameters_mm": drill_sizes, "increment_mm": 1},
+        tests={"smallest_hole_diameter_mm": 3, "largest_hole_diameter_mm": 12},
+        notes="Laser kerf changes the finished holes. Measure a physical test cut and record the correction before shop use.",
+    )
+
+    wrench_sizes = [6, 7, 8, 10, 12, 13, 14, 15, 17, 19]
+    geometry = [rect(0.5, 0.5, 229, 109, rx=3), label(115, 10, "HEX / NUT ACROSS-FLATS CHECK", 3.4, "middle")]
+    for index, size in enumerate(wrench_sizes):
+        row, column = divmod(index, 5)
+        x, y = 24 + column * 45, 31 + row * 42
+        geometry += [rect(x - size / 2, y, size, 15, rx=1), label(x, y + 23, f"{size} mm", 2.4, "middle")]
+    add_jig(
+        "wrench-size", "Metric wrench-size gauge 6–19 mm",
+        "Ten exact-width slots compare the across-flats dimension of metric hex heads and nuts.",
+        "wrench-size", 230, 110, geometry,
+        parameters={"slot_widths_mm": wrench_sizes, "reference": "hex-across-flats"},
+        tests={"smallest_slot_width_mm": 6, "largest_slot_width_mm": 19},
+        notes="Use only after measuring kerf compensation; this reference does not replace a wrench or caliper.",
+    )
+
+    wire_sizes = [0.5, 0.8, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0, 6.0]
+    geometry = [rect(0.5, 0.5, 209, 89, rx=3), label(105, 10, "CABLE / WIRE OUTSIDE DIAMETER", 3.4, "middle")]
+    for index, size in enumerate(wire_sizes):
+        x = 16 + index * 22
+        geometry += [path(f"M {n(x - size / 2)} 89 V 42 H {n(x + size / 2)} V 89", closed=False),
+                     label(x, 33, f"{n(size)}", 2.4, "middle")]
+    geometry.append(label(105, 78, "OPEN SLOTS · VALUES IN mm", 2.4, "middle"))
+    add_jig(
+        "cable-wire", "Cable and wire outside-diameter gauge",
+        "Nine open-edge slots compare cable or insulated-wire outside diameter from 0.5 to 6 mm.",
+        "cable-wire", 210, 90, geometry,
+        parameters={"slot_widths_mm": wire_sizes, "measurement": "outside-diameter"},
+        tests={"smallest_slot_width_mm": 0.5, "largest_slot_width_mm": 6},
+        notes="Do not force conductors into a slot. Deburr the cut edges and verify slot width after kerf compensation.",
+    )
+
+    block_heights = [10, 20, 30, 40, 50]
+    geometry = [label(90, 8, "SEPARATE SETUP BLOCKS", 3.5, "middle")]
+    for index, block_height in enumerate(block_heights):
+        x, y = 6 + index * 34, 68 - block_height
+        geometry += [rect(x, y, 28, block_height, rx=1),
+                     label(x + 14, max(y + 7, 14), f"{block_height} mm", 2.5, "middle")]
+    add_jig(
+        "setup-block", "Setup block set 10–50 mm",
+        "Five separate rectangular setup blocks whose physical heights are 10, 20, 30, 40 and 50 mm.",
+        "setup-blocks", 180, 72, geometry,
+        parameters={"block_heights_mm": block_heights, "block_width_mm": 28},
+        tests={"smallest_block_height_mm": 10, "largest_block_height_mm": 50},
+        notes="Measure the finished blocks with calipers before using them to position work or machinery.",
+    )
+
+    sanding_radii = [5, 10, 15, 20, 25, 30]
+    geometry = [label(110, 8, "QUARTER-ROUND SANDING PROFILES", 3.5, "middle")]
+    for index, radius in enumerate(sanding_radii):
+        row, column = divmod(index, 3)
+        x, y = 10 + column * 70, 15 + row * 53
+        geometry.append(path(f"M {n(x)} {n(y)} H {n(x + radius)} A {radius} {radius} 0 0 1 {n(x)} {n(y + radius)} Z"))
+        geometry.append(label(x + 33, y + min(radius, 25), f"R{radius}", 2.5))
+    add_jig(
+        "sanding-radius", "Quarter-round sanding profiles R5–R30",
+        "Six separate quarter-circle profiles provide exact convex forms for checking or backing an inside radius.",
+        "sanding-radius", 220, 120, geometry,
+        parameters={"radii_mm": sanding_radii, "profile": "quarter-circle"},
+        tests={"smallest_radius_mm": 5, "largest_radius_mm": 30},
+        notes="Laminate pieces when a wider sanding block is needed; verify the finished arc before use.",
+    )
+
+    pitch = 2.54
+    columns, rows = 20, 10
+    start_x, start_y = 24, 25
+    geometry = [rect(0.5, 0.5, 139, 69, rx=3), label(70, 10, "PCB 2.54 mm / 0.1 in PITCH", 3.4, "middle")]
+    for column in range(columns):
+        for row in range(rows):
+            geometry.append(circle(start_x + column * pitch, start_y + row * pitch, 0.45))
+    geometry += [line(start_x, 58, start_x + 10 * pitch, 58, "SCORE"),
+                 label(start_x + 5 * pitch, 65, "10 pitches = 25.4 mm", 2.3, "middle")]
+    add_jig(
+        "pcb-spacing", "PCB pitch template 2.54 mm (0.1 in)",
+        "A 20 × 10 through-hole grid on true 2.54 mm pitch with a ten-pitch dimensional reference.",
+        "pcb-spacing", 140, 70, geometry,
+        parameters={"pitch_mm": pitch, "columns": columns, "rows": rows, "hole_diameter_mm": 0.9},
+        tests={"pitch_mm": pitch, "ten_pitch_span_mm": 25.4},
+        notes="This is a layout reference. Verify the 25.4 mm ten-pitch span after cutting before aligning electronics hardware.",
+    )
+
+    slot_widths = [3, 4, 5, 6, 8, 10, 12]
+    geometry = [rect(0.5, 0.5, 209, 89, rx=3), label(105, 10, "SLOT WIDTH CHECK", 3.4, "middle")]
+    for index, width in enumerate(slot_widths):
+        x = 18 + index * 29
+        geometry += [rect(x - width / 2, 30, width, 28, rx=width / 2),
+                     label(x, 70, f"{width} mm", 2.4, "middle")]
+    add_jig(
+        "slot-width", "Slot-width gauge 3–12 mm",
+        "Seven cut slots provide direct physical checks of finished slot width after kerf compensation.",
+        "slot-gauges", 210, 90, geometry,
+        parameters={"slot_widths_mm": slot_widths},
+        tests={"smallest_slot_width_mm": 3, "largest_slot_width_mm": 12},
+        notes="Measure the fabricated slots; nominal SVG width is not proof of finished width on a laser cutter.",
+    )
+
+    bolt_circles = [20, 30, 40]
+    geometry = [rect(0.5, 0.5, 179, 99, rx=3), label(90, 10, "FOUR-HOLE BOLT CIRCLES", 3.4, "middle")]
+    for index, diameter in enumerate(bolt_circles):
+        cx, cy, radius = 35 + index * 55, 53, diameter / 2
+        geometry += [circle(cx, cy, radius, "SCORE"), circle(cx, cy, 1.5)]
+        for angle in (0, 90, 180, 270):
+            radians = math.radians(angle)
+            geometry.append(circle(cx + radius * math.cos(radians), cy + radius * math.sin(radians), 1.5))
+        geometry.append(label(cx, 88, f"PCD {diameter}", 2.4, "middle"))
+    add_jig(
+        "bolt-circle", "Four-hole bolt-circle templates PCD 20–40 mm",
+        "Three four-hole patterns place 3 mm pilot holes on exact 20, 30 and 40 mm pitch-circle diameters.",
+        "bolt-circle", 180, 100, geometry,
+        parameters={"pitch_circle_diameters_mm": bolt_circles, "hole_count": 4, "pilot_hole_mm": 3},
+        tests={"smallest_pcd_mm": 20, "largest_pcd_mm": 40},
+        notes="Use transfer punches through the pilot holes; confirm centre distances after the first cut.",
+    )
+
+    shelf_pitch, shelf_count = 32, 7
+    geometry = [rect(0.5, 0.5, 69, 239, rx=3), label(8, 120, "32 mm SYSTEM", 3.2, "middle")]
+    hole_x, first_y = 37, 22
+    geometry += [line(hole_x, 14, hole_x, 224, "SCORE"), line(0.5, 14, 69.5, 14, "SCORE")]
+    for index in range(shelf_count):
+        y = first_y + index * shelf_pitch
+        geometry += [circle(hole_x, y, 2.5), label(48, y + 1, str(index * shelf_pitch), 2.2)]
+    add_jig(
+        "shelf-spacing", "32 mm shelf-hole spacing template",
+        "A vertical seven-hole template on 32 mm pitch with a 37 mm edge setback reference.",
+        "shelf-spacing", 70, 240, geometry,
+        parameters={"pitch_mm": shelf_pitch, "hole_count": shelf_count, "edge_setback_mm": 37, "hole_diameter_mm": 5},
+        tests={"pitch_mm": shelf_pitch, "edge_setback_mm": 37},
+        notes="Clamp to a verified cabinet edge and use an appropriate drill guide; the laser-cut part is a layout template, not a precision bushing.",
+    )
 
 
 def add_jigs_projects_themes(c: Catalogue) -> None:
-    jigs = [
-        ("radius-gauge", "Radius gauge R2–R20", "radius-gauges"),
-        ("angle-gauge", "Angle gauge 15°–90°", "angle-gauges"),
-        ("centering-template", "Circle centering template", "centering"),
-        ("drill-spacing", "Drill spacing template 10–50 mm", "drill-spacing"),
-        ("fastener-sizing", "Metric fastener sizing board", "fastener-sizing"),
-        ("screw-length", "Screw length gauge", "screw-length"),
-        ("drill-size", "Drill-size gauge 3–12 mm", "drill-size"),
-        ("wrench-size", "Wrench-size gauge 6–19 mm", "wrench-size"),
-        ("cable-wire", "Cable and wire gauge", "cable-wire"),
-        ("setup-block", "Setup block 10–50 mm", "setup-blocks"),
-        ("sanding-radius", "Sanding-radius template", "sanding-radius"),
-        ("pcb-spacing", "PCB spacing template 2.54 mm", "pcb-spacing")
-    ]
-    for i,(aid,title,sub) in enumerate(jigs):
-        width,height=180,80
-        geometry=[rect(0.5,0.5,width-1,height-1,rx=3),label(width/2,13,title.upper(),3.5,"middle")]
-        if "angle" in aid:
-            for j,angle in enumerate((15,30,45,60,75,90)):
-                x=25+j*24; geometry += [line(x,65,x,30), line(x,65,x+18*math.cos(math.radians(angle)),65-18*math.sin(math.radians(angle))),label(x,75,f"{angle}°",2.3,"middle")]
-        elif "radius" in aid:
-            for j,r in enumerate((2,4,6,8,10,15,20)):
-                x=18+j*23; geometry += [circle(x,42,r/2),label(x,67,f"R{r}",2.3,"middle")]
-        elif "pcb" in aid:
-            for x in range(20,161,13):
-                for y in (32,45,58): geometry.append(circle(x,y,0.6))
-        else:
-            for j,size in enumerate((3,4,5,6,8,10,12)):
-                x=20+j*23; geometry += [circle(x,43,size/2),label(x,67,f"{size}",2.3,"middle")]
-        c.add(Asset(f"tc-jig-{aid}",title,"A labelled workshop measurement or setup starter template.",
-            "jigs-gauges",sub,width,height,geometry,shop="general",tool_family=sub,tags=["jig","gauge",sub],
-            operations=["CUT","SCORE","ENGRAVE"] if any('data-operation="SCORE"' in g for g in geometry) else ["CUT","ENGRAVE"],
-            notes="Reference geometry only. Compare against certified measuring tools before relying on it for inspection."))
-
     thickness=float(c.cfg["default_material"]["measured_thickness_mm"]); clearance=float(c.cfg["fabrication"]["clearance_mm"]); slot=thickness+clearance
     projects = [
         ("sign-blank", "Rounded sign blank", 200,100,[rect(0.5,0.5,199,99,rx=8),circle(15,15,2.5),circle(185,15,2.5)]),
@@ -652,6 +891,7 @@ def build_catalogue(config: dict[str, Any]) -> Catalogue:
     add_core_geometry(catalogue)
     add_french_cleat(catalogue)
     add_holders(catalogue)
+    add_jigs_gauges(catalogue)
     add_jigs_projects_themes(catalogue)
     return catalogue
 

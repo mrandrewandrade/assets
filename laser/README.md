@@ -23,6 +23,10 @@ python -m unittest discover -s laser/tests -p "test_*.py" -v
 
 Generation is deterministic. It writes canonical fabrication SVGs, colour-coded SVG previews, JSON/CSV manifests, checksums, and a ZIP download bundle under `laser/generated/`.
 
+The `shop_coverage` lists in configuration are a design backlog. They are not
+automatically turned into renamed generic plates. A holder is published only
+after its retention geometry and parameters are purposefully defined.
+
 ## Operation convention
 
 - `CUT`: red hairline (`#ff0000`), closed geometry where appropriate.

@@ -49,6 +49,35 @@ class LaserLibraryTests(unittest.TestCase):
         self.assertIn("Measure every sheet", record["material"]["warning"])
         self.assertEqual(record["review_status"], "unverified")
 
+    def test_screw_length_gauge_is_a_linear_length_scale(self) -> None:
+        record = self.assets["tc-jig-screw-length"]
+        root = ET.parse(ROOT / record["files"]["svg"]).getroot()
+        self.assertEqual(record["parameters"]["measurement_axis"], "under-head-to-tip")
+        self.assertEqual(record["dimensional_tests"]["scale_length_mm"], 120)
+        self.assertEqual(root.findall(f".//{SVG}circle"), [])
+        self.assertGreaterEqual(len(root.findall(f".//{SVG}line")), 120)
+
+    def test_jigs_have_specific_geometry_and_metadata(self) -> None:
+        jigs = [record for record in self.document["assets"] if record["category"] == "jigs-gauges"]
+        self.assertGreaterEqual(len(jigs), 15)
+        for record in jigs:
+            self.assertNotIn("starter template", record["description"].lower())
+            self.assertTrue(record["parameters"], record["id"])
+            self.assertTrue(record["dimensional_tests"], record["id"])
+        self.assertEqual(self.assets["tc-jig-pcb-spacing"]["parameters"]["pitch_mm"], 2.54)
+
+    def test_unreviewed_shop_taxonomy_is_not_published_as_fake_holders(self) -> None:
+        self.assertFalse(any(asset_id.startswith("tc-organizer-") for asset_id in self.assets))
+
+    def test_published_holders_are_multi_part_rack_kits(self) -> None:
+        holders = [record for record in self.document["assets"] if record["category"] == "tool-holders"]
+        self.assertEqual(len(holders), 18)
+        for record in holders:
+            self.assertEqual(len(record["parameters"]["components"]), 5, record["id"])
+            root = ET.parse(ROOT / record["files"]["svg"]).getroot()
+            self.assertGreaterEqual(len(root.findall(f".//{SVG}rect")), 3, record["id"])
+            self.assertEqual(len(root.findall(f".//{SVG}polygon")), 2, record["id"])
+
     def test_all_fabrication_svgs_have_mm_canvas_and_no_raster(self) -> None:
         for record in self.document["assets"]:
             path = ROOT / record["files"]["svg"]
