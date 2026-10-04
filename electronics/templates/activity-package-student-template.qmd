@@ -1,0 +1,44 @@
+---
+title: "[ID] [Title]"
+subtitle: "Student activity package | [Main Quest or Side Quest]"
+format:
+  pdf:
+    pdf-engine: xelatex
+    include-in-header: ../styles/tej-preamble.tex
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+---
+
+**Student:** ____________________  **Date:** __________  **Class:** ______
+
+| Quest | Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|:--|
+| [ID] | [pathway] | [IDs] | [time] | [risk] |
+
+## Learning goals and success criteria {.unnumbered}
+
+[Goals and observable criteria.]
+
+## Safety gate {.unnumbered}
+
+[Exact stop conditions and prohibited actions.]
+
+## Real object, functional blocks, and schematic {.unnumbered}
+
+[Use an original cutaway, functional block diagram, and proper schematic where relevant.]
+
+## Worked example {.unnumbered}
+
+Show GUESS, the general equation, exact equation, substitution with units, full calculator value, final significant-figure result, calculator sequence, and a plain-language interpretation.
+
+## Required evidence: Questions 1 to 5 {.unnumbered}
+
+[Progress from recognition through verification, design, and troubleshooting.]
+
+## Optional challenge: Questions 6 to 10 {.unnumbered}
+
+[Use for calculation packages and suitable Level 4 extensions.]
+
+## Verification, lab, and evidence checklist {.unnumbered}
+
+[Predict, calculate, draw, verify, build, compare, diagnose, and explain.]

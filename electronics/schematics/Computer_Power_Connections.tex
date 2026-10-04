@@ -1,0 +1,24 @@
+\documentclass[border=6pt]{standalone}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\usetikzlibrary{arrows.meta,positioning,fit}
+\definecolor{navy}{HTML}{1E2B55}
+\definecolor{blue}{HTML}{1769AA}
+\definecolor{gold}{HTML}{B8860B}
+\begin{document}
+\begin{circuitikz}[font=\sffamily,>=Latex]
+  \node[draw=navy,very thick,rounded corners,minimum width=2.5cm,minimum height=1.3cm,align=center] (ac) at (0,0) {wall AC\\source};
+  \node[draw=blue,very thick,rounded corners,minimum width=2.6cm,minimum height=1.3cm,align=center] (psu) at (4,0) {sealed PSU\\conversion and\\protection};
+  \node[circ,label=above:{DC rail}] (rail) at (7,0) {};
+  \draw[navy,very thick,->] (ac) -- node[above]{power cord} (psu);
+  \draw[gold,very thick] (psu) -- (rail);
+  \draw[gold,very thick] (rail) -- ++(0,-4.5) coordinate (return);
+  \node[draw=navy,thick,rounded corners,minimum width=3.1cm,minimum height=0.9cm,align=center] (mb) at (10,2.1) {motherboard and CPU};
+  \node[draw=navy,thick,rounded corners,minimum width=3.1cm,minimum height=0.9cm,align=center] (st) at (10,0.6) {storage};
+  \node[draw=navy,thick,rounded corners,minimum width=3.1cm,minimum height=0.9cm,align=center] (fan) at (10,-0.9) {fans};
+  \node[draw=navy,thick,rounded corners,minimum width=3.1cm,minimum height=0.9cm,align=center] (usb) at (10,-2.4) {USB and expansion loads};
+  \foreach \n in {mb,st,fan,usb} {
+    \draw[blue,thick,->] (rail) |- (\n.west);
+  }
+  \node[anchor=west,text=black!70] at (0,-4.9) {Computer loads connect to regulated rails in parallel. Connector keying and ratings still matter.};
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,22 @@
+---
+title: "[ID] [Title]"
+subtitle: "Teacher overview and answer guide"
+format:
+  pdf:
+    pdf-engine: xelatex
+    include-in-header: ../styles/tej-preamble.tex
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+---
+
+## Teacher overview {.unnumbered}
+
+Include pathway, expectations, prerequisites, preparation, materials, safety controls, timing, misconceptions, accommodations, and evidence to assess.
+
+## Answer and evidence guide {.unnumbered}
+
+For calculations, show the schematic first, then givens and unknowns tables, general and substituted equations, units, full precision, final significant figures, a teacher note explaining the precision, and a plain-language interpretation.
+
+## Verification and physical lab {.unnumbered}
+
+Separate student prediction from teacher-prepared conditions. Never instruct students to create shorts, invent hardware faults, open a PSU, or probe inside an energized computer.

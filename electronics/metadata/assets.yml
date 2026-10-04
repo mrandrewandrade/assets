@@ -109,3 +109,47 @@ assets:
     version: 1.0.0
     last_updated: 2026-10-04
     completion_status: reviewed
+  - module_id: CS01-CS08
+    topic: Basic Computer Systems Main Quest
+    asset_type: activity-package-collection
+    audience: mixed
+    requirement: required
+    component_tags: [psu, motherboard, cpu, ram, storage, fan]
+    equipment_tags: [desktop-computer, esd-mat, usb-installer, enclosed-power-meter]
+    context_tags: [computer-systems, linux, service, commissioning]
+    difficulty: introductory-to-intermediate
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1, TEJ3M-B2, TEJ3M-C1, TEJ3M-C2]
+    grob_reference: "Course-developed computer-systems bridge using completed electronics prerequisites"
+    safety_category: supervised-computer-service
+    estimated_time: 795-minutes
+    copyright_category: original-with-citations
+    access: public-student-and-restricted-teacher
+    source_path: electronics/computer-systems/
+    download_path: dist/TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/
+    slide_url: https://andrewandrade.ca/slides/future/basic-computer-systems.html
+    version: 1.0.0
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: SQ01-SQ06
+    topic: Basic Computer Systems Side Quests
+    asset_type: activity-package-collection
+    audience: mixed
+    requirement: optional
+    component_tags: [ram, storage, pcie, fan, sensors]
+    equipment_tags: [desktop-computer, esd-mat, enclosed-power-meter, linux-workstation]
+    context_tags: [troubleshooting, repair, reuse, administration, thermal-control]
+    difficulty: intermediate
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B2, TEJ3M-C2, TEJ4M-C2]
+    grob_reference: "Course-developed computer-systems extensions"
+    safety_category: teacher-prepared-and-supervised
+    estimated_time: 750-minutes
+    copyright_category: original-with-citations
+    access: public-student-and-restricted-teacher
+    source_path: electronics/computer-systems/
+    download_path: dist/TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/side-quests.html
+    slide_url: https://andrewandrade.ca/slides/future/basic-computer-systems.html
+    version: 1.0.0
+    last_updated: 2026-10-04
+    completion_status: reviewed

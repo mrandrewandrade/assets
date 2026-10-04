@@ -1,0 +1,137 @@
+catalog_id: tej-basic-computer-systems
+title: Basic Computer Systems
+version: 1.0.0
+last_updated: 2026-10-04
+pathway_field: pathway
+score_scale: "0-4"
+classroom_model:
+  main_quest: regular_assignment
+  side_quest_topic: Side Quests
+  tracker_access: teacher-only
+modules:
+  - id: CS01
+    title: Fast electricity-to-computer bridge
+    pathway: main-quest
+    prerequisites: [H01, H02, H07, H08, H10, D01]
+    time: 45-minutes
+    risk: low
+    simulation: diagram-verification
+    physical_lab: observation-only
+    tags: [electricity, computer-parts, power, block-diagram, introductory]
+  - id: CS02
+    title: Parts, baseline testing, ESD, and safe opening
+    pathway: main-quest
+    prerequisites: [CS01]
+    time: 75-minutes
+    risk: supervised-hardware
+    simulation: none
+    physical_lab: required
+    tags: [parts, baseline, esd, safe-opening, inspection]
+  - id: CS03
+    title: Computer power and connections
+    pathway: main-quest
+    prerequisites: [CS02, H08, H10, H14]
+    time: 75-minutes
+    risk: supervised-hardware
+    simulation: calculation-and-diagram
+    physical_lab: required
+    tags: [psu, connectors, power, parallel-loads, guess]
+  - id: CS04
+    title: Ready-to-power inspection and supervised first boot
+    pathway: main-quest
+    prerequisites: [CS03]
+    time: 60-minutes
+    risk: supervised-power
+    simulation: checklist-rehearsal
+    physical_lab: required
+    tags: [inspection, first-boot, safety, commissioning]
+  - id: CS05
+    title: POST and BIOS/UEFI
+    pathway: main-quest
+    prerequisites: [CS04]
+    time: 60-minutes
+    risk: low
+    simulation: boot-sequence
+    physical_lab: required
+    tags: [post, bios, uefi, firmware, boot-order]
+  - id: CS06
+    title: Linux Mint Xfce installation and workstation commissioning
+    pathway: main-quest
+    prerequisites: [CS05]
+    time: 150-minutes
+    risk: data-loss
+    simulation: live-session
+    physical_lab: required
+    tags: [linux-mint, xfce, installation, commissioning, storage]
+  - id: CS07
+    title: RAM compatibility, installation, and verification
+    pathway: main-quest
+    prerequisites: [CS02, CS05, CS06]
+    time: 90-minutes
+    risk: supervised-hardware
+    simulation: compatibility-research
+    physical_lab: required
+    tags: [ram, memory, compatibility, esd, benchmark]
+  - id: CS08
+    title: Build-the-best-computer benchmarking challenge
+    pathway: main-quest
+    prerequisites: [CS01, CS02, CS03, CS04, CS05, CS06, CS07]
+    time: 240-minutes
+    risk: supervised-hardware
+    simulation: benchmark-plan
+    physical_lab: required
+    tags: [benchmark, compatibility, optimization, design, evidence]
+  - id: SQ01
+    title: Controlled teardown and reassembly
+    pathway: side-quest
+    prerequisites: [CS02, CS04]
+    time: 120-minutes
+    risk: supervised-hardware
+    simulation: photo-plan
+    physical_lab: optional
+    tags: [teardown, reassembly, documentation, service]
+  - id: SQ02
+    title: Teacher-prepared POST and hardware fault stations
+    pathway: side-quest
+    prerequisites: [CS05]
+    time: 90-minutes
+    risk: teacher-prepared-faults
+    simulation: diagnosis-plan
+    physical_lab: optional
+    tags: [post, troubleshooting, beep-code, boot-order, fault-station]
+  - id: SQ03
+    title: Storage and expansion upgrades
+    pathway: side-quest
+    prerequisites: [CS03, CS05, CS06]
+    time: 120-minutes
+    risk: data-loss
+    simulation: compatibility-research
+    physical_lab: optional
+    tags: [storage, sata, nvme, pcie, upgrade]
+  - id: SQ04
+    title: Linux hardware inventory and introductory administration
+    pathway: side-quest
+    prerequisites: [CS06]
+    time: 120-minutes
+    risk: approved-commands
+    simulation: command-plan
+    physical_lab: optional
+    tags: [linux, inventory, administration, command-line, diagnostics]
+  - id: SQ05
+    title: Power, efficiency, cooling, fan control, and thermal behaviour
+    pathway: side-quest
+    prerequisites: [CS03, CS06, C01, C03]
+    time: 120-minutes
+    risk: enclosed-meter-only
+    simulation: data-analysis
+    physical_lab: optional
+    tags: [power, energy, cooling, fan-control, thermal, feedback]
+  - id: SQ06
+    title: Repair, reuse, file recovery, and advanced commissioning
+    pathway: side-quest
+    prerequisites: [CS06, one-of-SQ01-SQ05]
+    time: 180-minutes
+    risk: teacher-approved-scope
+    simulation: decision-matrix
+    physical_lab: optional
+    tags: [repair, reuse, recovery, commissioning, lifecycle]

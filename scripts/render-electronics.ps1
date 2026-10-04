@@ -77,6 +77,10 @@ $controlDir = 'electronics/modules/C06-control-systems'
 Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Student.qmd" 'C06_Control_Methods_Comparison_Student.pdf'
 Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Answer_Key.qmd" 'C06_Control_Methods_Comparison_Answer_Key.pdf'
 
+$computerSystemsDir = 'electronics/computer-systems'
+Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" 'TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" 'TEJ-Basic-Computer-Systems-Teacher-Guide.pdf'
+
 Get-ChildItem -LiteralPath 'electronics/schematics' -File |
     Where-Object { $_.Extension -in @('.svg', '.pdf') } |
     ForEach-Object {

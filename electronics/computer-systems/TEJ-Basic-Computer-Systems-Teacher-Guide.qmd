@@ -1,0 +1,301 @@
+---
+title: "TEJ Basic Computer Systems"
+subtitle: "Teacher overview, preparation, and answer guide"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+# Teacher overview {.unnumbered}
+
+The eight Main Quests form a short required sprint from basic electricity to a commissioned, upgraded, benchmarked Linux workstation. The six Side Quests extend service, troubleshooting, administration, thermal-control, and lifecycle work.
+
+## Curriculum and prerequisite map {.unnumbered}
+
+| Package | Pathway | Primary prerequisites | Main evidence |
+|:--|:--|:--|:--|
+| CS01 | Main Quest | H01, basic electricity, D01 | annotated photograph and block diagram |
+| CS02 | Main Quest | CS01 | baseline, labels, safety sign-off |
+| CS03 | Main Quest | CS02, power, parallel circuits, conductors | connection map and GUESS work |
+| CS04 | Main Quest | CS03 | signed ready-to-power gate |
+| CS05 | Main Quest | CS04 | POST and firmware record |
+| CS06 | Main Quest | CS05 | installation and acceptance record |
+| CS07 | Main Quest | CS02, CS05, CS06 | compatibility and before/after verification |
+| CS08 | Main Quest | CS01-CS07 | benchmark evidence and recommendation |
+| SQ01-SQ06 | Side Quest | stated package prerequisites | optional extension evidence |
+
+**Ontario connections:** technological education safety and professional practice, technical knowledge, design process, fabrication/service skills, testing, troubleshooting, communication, and career-ready documentation. Match course-specific expectation codes to the current board course outline before posting.
+
+## Non-negotiable safety controls {.unnumbered}
+
+- Students never open or probe inside a PSU.
+- Students never create shorts or invent hardware faults.
+- The teacher prepares and documents every fault station.
+- Power is removed before opening a chassis or changing parts.
+- A teacher signs the ready-to-power gate before first boot after service.
+- Installation, partitioning, file recovery, and reuse work follow school data-handling requirements.
+- Damaged power parts, swollen cells, and unknown batteries remain out of service.
+
+## Preparation {.unnumbered}
+
+Label each computer and removable part. Record known-good baselines. Prepare ESD controls, cameras, accepted installer media, model-specific service references, and a rollback plan. Keep teacher-only fault cards and answer materials separate from student downloads.
+
+## Assessment model {.unnumbered}
+
+One Classroom assignment can update several rubric topics. Record 0 to 4 only after reviewing evidence. Keep the master tracker and Leaderboard teacher-only. Main Quest or Side Quest classification comes from `electronics/metadata/computer-systems.yml`.
+
+\newpage
+
+# CS01 Answer and Facilitation Guide {.unnumbered}
+
+**Familiar example:** A desktop receiving wall power while a keyboard input changes what appears on the display.
+
+**Teacher preparation:** Provide a powered-off real computer and the cutaway. The bridge should remain brief because students already studied source, conductor, protection, control, and load.
+
+| Required item | Expected evidence |
+|:--|:--|
+| circuit roles | wall/PSU as source and conversion, cables/traces as conductors, PSU or board protection, power button as control input, components as loads |
+| information roles | keyboard/mouse input, CPU processing, RAM active memory, drive storage, display/audio output |
+| parallel explanation | loads receive regulated rail voltages independently rather than sharing one series current |
+| power button | usually signals control logic; it does not directly switch total internal load current |
+| sealed PSU | hazardous stored energy and mains-connected circuitry can remain inside |
+
+Accept different valid device mappings when the student explains the function. Assess the connection between the two models, not memorized labels alone.
+
+# CS02 Answer and Facilitation Guide {.unnumbered}
+
+**Teacher preparation:** Record each machine's known-good condition before students handle it. Select the permitted panel and provide model-specific opening guidance.
+
+| Prompt | Expected evidence |
+|:--|:--|
+| purpose of baseline | separates a pre-existing fault from a change introduced during service |
+| ESD versus shock | ESD can damage sensitive electronics at energy too small to feel; electric shock harms a person |
+| stop conditions | liquid, burn marks, damaged insulation/connectors, swollen cell, loose metal, unknown modification, or unsafe smell |
+| after-check | same POST, detected parts, display, sound, and operating-system result as baseline |
+
+Use the labels on the student's actual photograph. Do not accept a stock image in place of the assigned machine evidence.
+
+# CS03 Worked Answers {.unnumbered}
+
+![Computer power schematic shown before the calculations.](../schematics/Computer_Power_Connections.pdf){width=96%}
+
+## Question 2: USB device power {.unnumbered}
+
+| Given quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| voltage | $V$ | 5.00 | V |
+| current | $I$ | 0.840 | A |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| power | $P$ | W |
+
+**General equation:** \answer{$P=VI$}
+
+**Substitution with units:** \answer{$P=(5.00\ \mathrm{V})(0.840\ \mathrm{A})$}
+
+**Exact calculator entry:** \answer{\texttt{5.00 × 0.840 =}}
+
+**Full calculator result:** \answer{$4.20000\ \mathrm{W}$}
+
+**Correct final result:** \answer{$4.20\ \mathrm{W}$}
+
+\begin{tejwarning}[Significant-figure check]
+Both measured values contain three significant figures. Round only the final result to three significant figures.
+\end{tejwarning}
+
+| Final result | Value |
+|:--|:--|
+| USB device power | \answer{$4.20\ \mathrm{W}$} |
+
+**Answer sentence:** \answer{The USB device uses $4.20\ \mathrm{W}$ at the stated operating point.}
+
+## Question 3: Fan rating {.unnumbered}
+
+| Given quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| rated voltage | $V$ | 12.0 | V |
+| rated current | $I$ | 0.25 | A |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| rated power | $P$ | W |
+
+**General equation:** \answer{$P=VI$}
+
+**Substitution:** \answer{$P=(12.0\ \mathrm{V})(0.25\ \mathrm{A})$}
+
+**Full calculator result:** \answer{$3.00000\ \mathrm{W}$}
+
+**Final result:** \answer{$3.0\ \mathrm{W}$}
+
+\begin{tejwarning}[Significant-figure check]
+The current has two significant figures, so it limits the final result to two significant figures.
+\end{tejwarning}
+
+**Answer sentence:** \answer{The fan is rated for about $3.0\ \mathrm{W}$ during its stated operating condition. Startup current and actual speed control can change the instantaneous value.}
+
+## Remaining CS03 answers {.unnumbered}
+
+- Q1: Wall AC feeds the sealed conversion/protection unit. Regulated rails feed motherboard, storage, fans, and expansion loads as parallel branches.
+- Q4: A valid power path may run PSU to SATA power to drive. A valid data path may run drive to motherboard SATA or NVMe interface.
+- Q5: Nameplate wattage states an output capability under specified conditions. Actual use depends on installed loads and operating state.
+- Q6: $65.0+18.5+7.2+4.8=95.5\ \mathrm{W}$. The estimate omits conversion losses, startup peaks, or other loads.
+- Q7: Keep power removed. Inspect connector seating, discolouration, debris, mechanical fit, and cable damage. Quarantine damaged parts.
+- Q8: Accept accurate shape, keying, latch, pin-count, and purpose comparisons for the real system.
+- Q9: The map should visually separate energy paths from signal paths and label both ends.
+- Q10: Contact resistance at a poor connection produces local heating through $P=I^2R$. A large PSU rating does not remove connector limits.
+
+\newpage
+
+# CS04 Answer and Facilitation Guide {.unnumbered}
+
+**Teacher gate:** Inspect the machine independently before signing. A student tick alone does not authorize power.
+
+Expected normal evidence may include a brief fan surge, power indicator, manufacturer logo or POST screen, and one normal beep depending on model. Absence of a beep is not automatically a fault.
+
+For no display, strong first checks include monitor power/input, display cable, correct video port, and documented status lights. Hardware changes require power removal and teacher approval.
+
+Assess whether the student predicted before observation, recorded the actual sequence, and used a safe next test.
+
+# CS05 Answer and Facilitation Guide {.unnumbered}
+
+| Term | Expected meaning |
+|:--|:--|
+| POST | early checks that essential hardware can begin startup |
+| BIOS/UEFI | firmware that initializes hardware and selects a boot path |
+| bootloader | program that starts the selected operating system |
+| operating system | software that manages hardware, processes, files, users, and applications |
+
+Possible symptom predictions: missing RAM can stop POST with a model-specific code, a missing boot drive can allow POST but produce no bootable-device evidence, and a wrong boot order can start the wrong device or fail to reach the installed system. These are predictions only in the Main Quest. Students do not create faults.
+
+# CS06 Answer and Facilitation Guide {.unnumbered}
+
+**Teacher preparation:** Use the school-approved image and account policy. Verify installer media and target-machine backups. The official Linux Mint guide states that erase-disk installation destroys target-drive data, so the teacher must approve the target choice.
+
+**Expected evidence:** live-session hardware check, exact target drive record, teacher authorization, successful installation, approved updates, and all acceptance tests.
+
+Do not require screenshots containing passwords, private account data, serial numbers that should remain internal, or network secrets. Accept a photographed working desktop plus a completed checklist when that better protects privacy.
+
+Common corrections:
+
+- A live session proves temporary hardware support, not a completed installation.
+- Seeing a drive in firmware does not prove the chosen partition action is safe.
+- One successful boot does not replace USB, sound, display, network, and restart checks.
+
+# CS07 Answer and Facilitation Guide {.unnumbered}
+
+**Compatibility evidence:** exact system or board model, supported DDR generation, DIMM/SODIMM form factor, capacity limits, slot arrangement, ECC support, and manufacturer restrictions where available.
+
+DDR generations and form factors are not interchangeable merely because a module appears similar. The notch is a key, not a guide for applying extra force.
+
+If POST fails after the approved upgrade, remove power, restore the baseline configuration, inspect seating, and test one documented change at a time. Record both the failed configuration and the verified recovery.
+
+# CS08 Answer and Facilitation Guide {.unnumbered}
+
+**Teacher preparation:** Assign user profiles such as general classroom workstation, light coding workstation, or media playback station. Approve benchmarks and part combinations. Record labelled parts before the challenge.
+
+Strong work defines best before final results and keeps conditions constant. Require benchmark name/version, power mode, background-task rule, run count, units, and temperature context. A faster score alone does not prove a better machine for every user.
+
+Assess the recommendation against the stated workload, compatibility, observed bottleneck, temperatures, reliability, and uncertainty.
+
+\newpage
+
+# SQ01 Answer and Facilitation Guide {.unnumbered}
+
+Prepare a removal boundary for each workstation. Field-replaceable parts may include RAM, storage, a fan, drive cage, or approved cable. Exclude the PSU interior, unknown batteries, damaged parts, and processor-cooler removal unless the lab and materials specifically support it.
+
+Complete evidence includes a chronological photo sequence, matching fastener map, connector purpose, controlled parts storage, reassembly inspection, successful POST, and acceptance test.
+
+# SQ02 Answer and Facilitation Guide {.unnumbered}
+
+Only the teacher inserts faults. Document the intended fault, known symptoms, permitted tests, correction, and baseline-restoration check on a teacher-only card.
+
+Strong diagnostic logs distinguish observation from hypothesis and perform one test that separates competing causes. Do not grade speed ahead of safety and reasoning.
+
+Possible safe stations include improperly seated RAM, disconnected storage, wrong boot order, or an approved fan connector issue. Never use a deliberate short, damaged power lead, unknown battery, or exposed mains condition.
+
+# SQ03 Answer and Facilitation Guide {.unnumbered}
+
+Accept an upgrade only when physical form factor, interface, keying, lane or port availability, power, firmware support, operating-system support, and data plan all align.
+
+For a device visible in firmware but absent in Linux, safe checks include inventory tools, partition/filesystem status, driver support, mount state, and logs. Students should not initialize, format, or overwrite data without explicit approval.
+
+# SQ04 Answer and Facilitation Guide {.unnumbered}
+
+Expected distinctions:
+
+- Physical labels give identity and ratings but may not show current configuration.
+- Firmware reports hardware detected before the operating system.
+- Linux reports devices, drivers, capacities, state, and software-visible health.
+
+Approved commands should be read-only for the initial inventory. Review scripts before execution. A failing SMART or sensor result is evidence for caution, not permission to keep relying on the device.
+
+\newpage
+
+# SQ05 Worked Answers {.unnumbered}
+
+## Energy example {.unnumbered}
+
+| Given quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| average power | $P$ | 74.6 | W |
+| elapsed time | $t$ | 2.50 | h |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| electrical energy | $E$ | Wh and kWh |
+
+**General equation:** \answer{$E=Pt$}
+
+**Substitution with units:** \answer{$E=(74.6\ \mathrm{W})(2.50\ \mathrm{h})$}
+
+**Exact calculator entry:** \answer{\texttt{74.6 × 2.50 =}}
+
+**Full calculator value:** \answer{$186.50000\ \mathrm{Wh}=0.18650000\ \mathrm{kWh}$}
+
+**Final result:** \answer{$187\ \mathrm{Wh}=0.187\ \mathrm{kWh}$}
+
+\begin{tejwarning}[Significant-figure check]
+Both measured inputs contain three significant figures. The final result therefore uses three significant figures.
+\end{tejwarning}
+
+**Answer sentence:** \answer{The workstation uses approximately $0.187\ \mathrm{kWh}$ during the stated session.}
+
+## Assessment notes {.unnumbered}
+
+The control diagram should show measured temperature returning to controller logic that adjusts the fan or cooling command. Heat generation and room conditions act as disturbances. Students must keep the computer closed or otherwise in the approved operating configuration and use an enclosed wall meter.
+
+For Q6, daily energy is $E=P_{avg}(6.00\ \mathrm{h})$, with power converted to kilowatts when reporting kWh. Use the student's measured average rather than inventing a class value.
+
+Reward identical test conditions, timestamped measurements, appropriate graph units, and honest limits. Do not reward unsafe efforts to produce a larger temperature change.
+
+# SQ06 Answer and Facilitation Guide {.unnumbered}
+
+Approve the scope before work begins. The commissioning report should state user need, initial condition, chosen option, bill of materials, safety and privacy controls, steps, test evidence, remaining risks, user instructions, and the destination of removed parts.
+
+For file recovery, establish ownership and permission, use approved media, preserve originals when required, and avoid opening private files unnecessarily. For reuse, record secure data handling and follow school e-waste procedures.
+
+## Schematic-tool choice {.unnumbered}
+
+Use Tinkercad for building, measuring, and verifying introductory circuits. Use CircuitikZ for generated curriculum schematics. KiCad is the preferred free and open-source GUI for student schematic capture because it supports real symbols, electrical rule checking, simulation links, and an optional path to PCB design. EasyEDA remains an optional PCB-design pathway. PCB fabrication is enrichment and does not block the core sequence.
+
+## Source notes {.unnumbered}
+
+- Linux Mint: <https://linuxmint.com/download.php/> and <https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html>
+- KiCad schematic editor: <https://docs.kicad.org/9.0/en/eeschema/eeschema.html>
+- Hardware specifications should come from the exact manufacturer service manual, motherboard manual, CPU documentation, or memory qualification information for the assigned system.
+
+{{< include ../includes/common-assessment-rubric.qmd >}}
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

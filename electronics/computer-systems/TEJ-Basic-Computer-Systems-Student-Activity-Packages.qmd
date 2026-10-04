@@ -1,0 +1,600 @@
+---
+title: "TEJ Basic Computer Systems"
+subtitle: "Student activity packages | CS01-CS08 Main Quest and SQ01-SQ06 Side Quests"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Student:** ______________________________  **Class:** ______  **Start date:** __________
+
+This book contains eight required Main Quests and six optional Side Quests. Each package stands alone, but the Main Quest sequence should be completed in order. Google Classroom remains the submission system. Your teacher records verified achievement in the private tracker.
+
+## Evidence cycle {.unnumbered}
+
+Predict, calculate using GUESS when numbers matter, draw, verify, build or test only when approved, compare evidence, diagnose, and explain.
+
+## Safety boundary {.unnumbered}
+
+- Never open or probe inside a power supply.
+- Shut down and unplug before opening a computer or changing hardware.
+- Never create a short or invent a hardware fault.
+- Use only teacher-prepared fault stations and teacher-approved parts.
+- Stop for damage, liquid, swollen cells, burnt areas, smoke, unusual smell, abnormal heat, or unexpected noise.
+- Confirm the target drive before any installation or recovery action that can change data.
+
+![A labelled desktop-computer cutaway showing the sealed power supply, motherboard, CPU, RAM, storage, expansion slots, and fan.](../schematics/Computer_System_Cutaway.pdf){fig-cap="Original cutaway map. Inspect the real machine beside this diagram." width=96%}
+
+## Main Quest route {.unnumbered}
+
+CS01 Bridge, CS02 baseline and safe opening, CS03 power and connections, CS04 inspection and first boot, CS05 POST and firmware, CS06 Linux commissioning, CS07 RAM upgrade, CS08 benchmark challenge.
+
+## Side Quest route {.unnumbered}
+
+SQ01 teardown, SQ02 teacher-prepared faults, SQ03 storage and expansion, SQ04 Linux inventory, SQ05 power and thermal control, SQ06 repair and reuse.
+
+\newpage
+
+# CS01 Fast Electricity-to-Computer Bridge {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | H01, basic electricity, digital inputs | 45 minutes | observation only |
+
+**Learning goal:** Treat a computer as both a powered circuit and an information-processing system.
+
+**Success criteria:** Identify source, conductors, protection, controls, and loads, then identify input, processing, memory, storage, and output.
+
+**Materials:** Powered-off computer, exterior photograph, cutaway visual, coloured pencils.
+
+![Functional power connections from the wall source through the sealed PSU to parallel computer loads.](../schematics/Computer_Power_Connections.pdf){width=96%}
+
+## Component explanation {.unnumbered}
+
+| Part | Electrical role | Information role |
+|:--|:--|:--|
+| PSU | converts and distributes power | reports or supports power state |
+| motherboard | distributes rails and signals | connects CPU, memory, storage, and interfaces |
+| CPU | electrical load | executes instructions |
+| RAM | electrical load | holds active data and instructions |
+| storage | electrical load | retains files and the operating system |
+| display, USB, network | loads and signal paths | input, output, or communication |
+
+## Required evidence {.unnumbered}
+
+1. Label the five circuit roles on one computer photograph.
+2. Label input, processing, memory, storage, and output on a functional block diagram.
+3. Explain why most computer loads behave like parallel branches rather than one series loop.
+4. Compare the power button as a control input with a switch that directly carries load current.
+5. Explain why the PSU label may be read but the enclosure must remain closed.
+
+**Verification:** Compare your labels with the real machine while it remains powered off.
+
+**Optional extension:** Trace one user action, such as pressing a keyboard key, from input through processing to output.
+
+**Evidence checklist:** annotated photograph, block diagram, five responses, one verbal check.
+
+\newpage
+
+# CS02 Parts, Baseline Testing, ESD, and Safe Opening {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS01 | 75 minutes | supervised hardware |
+
+**Learning goal:** Establish a known-good baseline before service, then open the case without introducing damage.
+
+**Success criteria:** Record identity and startup behaviour, complete a controlled shutdown, use ESD controls, and identify major parts after opening.
+
+**Materials:** Assigned computer, camera, asset record, ESD mat or approved grounding procedure, parts labels.
+
+## Baseline record {.unnumbered}
+
+| Evidence | Before opening | After reassembly |
+|:--|:--|:--|
+| asset number and model | | |
+| display and startup result | | |
+| unusual sound or smell | | |
+| visible ports and damage | | |
+| operating system and login status | | |
+
+## Safe opening sequence {.unnumbered}
+
+1. Record the powered baseline without changing settings.
+2. Shut down through the operating system.
+3. Unplug external power and all peripherals.
+4. Move to the approved ESD work area.
+5. Photograph cable locations and the closed case.
+6. Open only the chassis panel directed by the teacher.
+7. Touch components by their edges and keep the PSU closed.
+
+## Required evidence {.unnumbered}
+
+1. Explain why the baseline comes before the first hardware change.
+2. Label PSU, motherboard, CPU cooler, RAM, storage, fans, and power/data cables in your photograph.
+3. Distinguish an ESD hazard from an electrical-shock hazard.
+4. List three observations that require an immediate stop and teacher check.
+5. Complete the after-reassembly baseline and report any difference.
+
+**Physical lab:** L21 baseline, parts, and safe opening.
+
+**Optional extension:** Create a removable fastener and cable map for this chassis model.
+
+**Evidence checklist:** baseline table, labelled photograph, safety sign-off, after-check.
+
+\newpage
+
+# CS03 Computer Power and Connections {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS02, H08, H10, H14 | 75 minutes | no energized internal probing |
+
+**Learning goal:** Trace power and data paths, read a PSU nameplate, and calculate a bounded power value without confusing rating with actual use.
+
+**Success criteria:** Identify key connections, respect connector keying, and complete GUESS with units and significant figures.
+
+## Worked GUESS example {.unnumbered}
+
+A labelled $12.0\ \mathrm{V}$ rail supplies a measured $3.25\ \mathrm{A}$ load.
+
+| GUESS step | Work |
+|:--|:--|
+| Given | $V=12.0\ \mathrm{V}$, $I=3.25\ \mathrm{A}$ |
+| Unknown | $P$ in watts |
+| Equation | $P=VI$ |
+| Substitute | $P=(12.0\ \mathrm{V})(3.25\ \mathrm{A})$ |
+| Solve | calculator gives $39.00000\ \mathrm{W}$ |
+| Statement | To three significant figures, the measured load uses $39.0\ \mathrm{W}$ on that rail. |
+
+**Casio fx-991ES PLUS C:** `12.0 × 3.25 =`
+
+::: {.callout-note title="Precision"}
+Both measured values have three significant figures, so the final result has three significant figures. Keep the full calculator value until the final line.
+:::
+
+## Required questions 1 to 5 {.unnumbered}
+
+1. On the schematic, mark source, conversion/protection, distribution point, and four parallel loads.
+2. A $5.00\ \mathrm{V}$ USB device draws $0.840\ \mathrm{A}$. Use GUESS to calculate power.
+3. A fan is labelled $12.0\ \mathrm{V}$ and $0.25\ \mathrm{A}$. Calculate rated power and explain why startup may differ.
+4. Trace one power path and one data path in the assigned computer without disconnecting anything.
+5. Explain why a $500\ \mathrm{W}$ PSU rating does not prove that the computer currently draws $500\ \mathrm{W}$.
+
+## Optional questions 6 to 10 {.unnumbered}
+
+6. Add $65.0$, $18.5$, $7.2$, and $4.8\ \mathrm{W}$ loads. State the total and one limitation of this estimate.
+7. A connector shows heat damage. Give a safe diagnosis plan without powering the computer.
+8. Compare keyed motherboard power, SATA power, fan, and data connectors by shape and purpose.
+9. Propose a connection map that separates power paths from data paths.
+10. Explain how an overloaded or poorly seated connection can produce heat even when the PSU rating appears adequate.
+
+\enlargethispage{3\baselineskip}
+
+**Physical lab:** L22 power connections and ready-to-power preparation.
+
+**Evidence checklist:** schematic labels, PSU record, two GUESS solutions, connection map, safety explanation.
+
+\newpage
+
+# CS04 Ready-to-Power Inspection and Supervised First Boot {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS03 | 60 minutes | supervised power |
+
+**Learning goal:** Use an inspection gate before applying power and recognize normal startup evidence.
+
+![The commissioning flow from baseline through inspection, firmware, Linux, acceptance tests, and the final asset record.](../schematics/Computer_Commissioning_Flow.pdf){width=100%}
+
+## Ready-to-power gate {.unnumbered}
+
+Do not apply power until every item is checked and the teacher signs the gate.
+
+| Inspection item | Pass | Evidence or correction |
+|:--|:--:|:--|
+| no loose metal or tools | | |
+| RAM and approved cards fully seated | | |
+| power and data connectors aligned and latched | | |
+| CPU cooler and fans secure | | |
+| cables clear of fans | | |
+| chassis stable and panel secured as directed | | |
+| display, keyboard, and power connected externally | | |
+| teacher approval | | |
+
+## Required evidence {.unnumbered}
+
+1. Predict the normal lights, fan movement, display messages, and sounds for first boot.
+2. Explain why a correct power connector can still be unsafe when partly seated.
+3. Complete the gate without skipping an item.
+4. Observe the supervised first boot and record the actual sequence.
+5. Compare prediction with observation and identify one next check if no display appears.
+
+**Stop conditions:** smoke, smell, unusual noise, fan obstruction, repeated power cycling, abnormal heat, or teacher instruction.
+
+**Optional extension:** Improve the checklist for the assigned chassis model without deleting any safety control.
+
+**Evidence checklist:** completed gate, teacher signature, prediction, observation table, comparison.
+
+\newpage
+
+# CS05 POST and BIOS/UEFI {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS04 | 60 minutes | known-good machine only |
+
+**Learning goal:** Explain the startup sequence and use firmware screens to verify detected hardware without changing unapproved settings.
+
+## Functional sequence {.unnumbered}
+
+Power command, stable rails, firmware begins, POST checks essential hardware, firmware selects a boot device, bootloader starts, operating system loads.
+
+## Firmware record {.unnumbered}
+
+| Item | Detected value | Where found |
+|:--|:--|:--|
+| firmware vendor/version | | |
+| CPU model | | |
+| installed RAM | | |
+| storage devices | | |
+| boot order | | |
+| date and time | | |
+
+## Required evidence {.unnumbered}
+
+1. Draw the startup sequence as a block diagram.
+2. Record how the assigned computer enters BIOS/UEFI.
+3. Complete the firmware record without changing unapproved settings.
+4. Explain the difference between POST, BIOS/UEFI, a bootloader, and an operating system.
+5. Predict what missing RAM, a missing boot drive, or a wrong boot order could look like. Do not create any fault.
+
+**Verification:** Restart normally and confirm that the known-good baseline remains unchanged.
+
+**Optional extension:** Research the official meaning of one manufacturer beep or LED code for the exact model.
+
+**Evidence checklist:** sequence diagram, firmware record, explanations, normal reboot.
+
+\newpage
+
+# CS06 Linux Mint Xfce Installation and Commissioning {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS05 | 150 minutes | target-drive data loss |
+
+**Learning goal:** Install the teacher-approved Linux Mint Xfce image on the confirmed target drive and prove that the workstation is usable.
+
+**Official sources:** [Linux Mint download](https://linuxmint.com/download.php/) and [installation guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html).
+
+## Installation gate {.unnumbered}
+
+| Check | Record |
+|:--|:--|
+| assigned asset and target drive | |
+| required files already preserved | |
+| approved installer and checksum record | |
+| firmware sees the target drive | |
+| teacher confirms the erase or partition choice | |
+
+## Required evidence {.unnumbered}
+
+1. Use the live session to test display, keyboard, mouse, USB, sound, and network before installation.
+2. Record the exact target drive by model and capacity.
+3. Obtain teacher approval before any erase or partition action.
+4. Install the approved Linux Mint Xfce image, then apply approved updates.
+5. Complete the commissioning table below.
+
+| Acceptance test | Method | Result | Evidence |
+|:--|:--|:--:|:--|
+| CPU detected | system information | | |
+| RAM capacity | firmware and Linux | | |
+| storage capacity | Disks or approved command | | |
+| USB port | approved device | | |
+| sound | test output | | |
+| display | native or approved resolution | | |
+| network | local and approved Internet test | | |
+| restart and login | normal reboot | | |
+
+**Optional extension:** Write a short user handoff with login, update, shutdown, and support information. Do not include a password.
+
+**Evidence checklist:** installation gate, live-session results, working desktop image, update evidence, acceptance table.
+
+\newpage
+
+# CS07 RAM Compatibility, Installation, and Verification {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS02, CS05, CS06 | 90 minutes | ESD and incompatible parts |
+
+**Learning goal:** Research a compatible memory upgrade, install approved RAM, and verify the result in firmware and Linux.
+
+## Compatibility table {.unnumbered}
+
+| Requirement | Existing system | Candidate module | Compatible? | Source |
+|:--|:--|:--|:--:|:--|
+| DDR generation | | | | |
+| form factor | | | | |
+| capacity per module | | | | |
+| total capacity limit | | | | |
+| speed supported | | | | |
+| ECC or non-ECC | | | | |
+| voltage or special requirement | | | | |
+
+## Required evidence {.unnumbered}
+
+1. Record baseline RAM in BIOS/UEFI and Linux.
+2. Use manufacturer documentation or an approved compatibility source to complete the table.
+3. Present the candidate to the teacher for approval before opening the case.
+4. Shut down, unplug, use ESD controls, align the notch, and seat the module until both latches are correct.
+5. Verify the new capacity in firmware and Linux, then repeat one baseline test.
+
+**Troubleshooting:** If POST fails, power off and unplug before checking seating. Do not swap random parts.
+
+**Optional extension:** Compare one-module and matched-channel arrangements using evidence supported by the system documentation.
+
+**Evidence checklist:** compatibility table, before/after photographs, firmware verification, Linux verification, revised asset record.
+
+\newpage
+
+# CS08 Build-the-Best-Computer Benchmarking Challenge {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Main Quest | CS01-CS07 | 240 minutes | approved changes only |
+
+**Learning goal:** Define what best means for a user, run repeatable tests, improve one compatible computer, and support the recommendation with evidence.
+
+![A repeatable benchmark loop from user needs and baseline through one approved change and a fair retest.](../schematics/Computer_Benchmark_Loop.pdf){width=100%}
+
+## Assigned user and criteria {.unnumbered}
+
+| User or workload | Most important measures | Constraints |
+|:--|:--|:--|
+| | | |
+
+## Benchmark table {.unnumbered}
+
+| Test | Conditions and version | Baseline | Final | Change | Units |
+|:--|:--|--:|--:|--:|:--|
+| boot or login time | | | | | s |
+| CPU task | | | | | |
+| memory task | | | | | |
+| storage task | | | | | |
+| temperature at stated load | | | | | $^\circ$C |
+| user-task score | | | | | |
+
+## Required evidence {.unnumbered}
+
+1. Define best for the assigned user before seeing final scores.
+2. Record hardware, software, test versions, temperature conditions, and baseline results.
+3. Identify the likely bottleneck using the evidence.
+4. Propose and receive approval for compatible part combinations or settings.
+5. Make the approved change, verify the system, rerun the same tests, and recommend the best build.
+
+\enlargethispage{3\baselineskip}
+
+**Optional extension:** Explain uncertainty, a result that did not improve, and the next test that would distinguish two possible bottlenecks.
+
+**Evidence checklist:** benchmark table, build plan, parts record, before/after images, graph, recommendation, restoration record if required.
+
+\newpage
+
+# SQ01 Controlled Teardown and Reassembly {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS02 and CS04 | 120 minutes | teacher-approved parts only |
+
+**Goal:** Remove and reinstall approved field-replaceable parts while preserving a complete service record.
+
+**Safety:** Never open the PSU. Stop for damage, liquid, swollen cells, burnt areas, or uncertainty.
+
+## Required evidence {.unnumbered}
+
+1. Record the known-good baseline and photograph every side before opening.
+2. Create a labelled fastener map and cable map.
+3. Remove only the approved RAM, storage, cables, fans, or drive cages.
+4. Explain the electrical and mechanical purpose of each connector or fastener removed.
+5. Reassemble, complete the ready-to-power gate, POST, and acceptance check.
+
+**Design extension:** Improve cable routing without blocking airflow or stressing connectors.
+
+**Evidence checklist:** photo sequence, fastener map, cable map, parts tray record, successful POST and acceptance tests.
+
+\newpage
+
+# SQ02 Teacher-Prepared POST and Hardware Fault Stations {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS05 | 90 minutes | teacher-prepared faults only |
+
+**Goal:** Diagnose a controlled fault from evidence while changing one variable at a time.
+
+**Safety:** Never create a short, invent a fault, or change hardware while power is connected.
+
+## Diagnostic log {.unnumbered}
+
+| Step | Observation | Hypothesis | Safe test | Result | Next decision |
+|--:|:--|:--|:--|:--|:--|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+
+## Required evidence {.unnumbered}
+
+1. Record symptoms before touching the station.
+2. Predict the normal result and list two possible causes.
+3. Use beep/LED information, visual inspection, firmware, or boot evidence to choose one safe test.
+4. Make only the teacher-approved correction.
+5. Verify return to the documented baseline and explain why the evidence supports the diagnosis.
+
+**Possible stations:** improperly seated RAM, disconnected storage, wrong boot order, or approved fan connection issue. Only the teacher prepares them.
+
+\newpage
+
+# SQ03 Storage and Expansion Upgrades {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS03, CS05, CS06 | 120 minutes | data and compatibility |
+
+**Goal:** Research, install, and verify one compatible SATA, NVMe, or PCIe device.
+
+## Compatibility table {.unnumbered}
+
+| Check | System evidence | Candidate evidence | Decision |
+|:--|:--|:--|:--|
+| physical form factor and space | | | |
+| interface and keying | | | |
+| available connector or lane | | | |
+| power requirement | | | |
+| firmware and operating-system support | | | |
+| data backup or migration plan | | | |
+
+## Required evidence {.unnumbered}
+
+1. State the upgrade purpose and success measure.
+2. Complete the compatibility table from primary or manufacturer sources.
+3. Protect required data and obtain approval.
+4. Install without forcing a connector, then inspect before power.
+5. Verify the device in firmware and Linux, run an appropriate test, and update the asset record.
+
+**Troubleshooting extension:** Propose safe tests for a detected device that does not appear in the operating system.
+
+\newpage
+
+# SQ04 Linux Hardware Inventory and Introductory Administration {.unnumbered}
+
+| Pathway | Prerequisite | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS06 | 120 minutes | approved commands only |
+
+**Goal:** Compare physical labels, firmware records, and Linux reports for the same workstation.
+
+## Approved inventory commands {.unnumbered}
+
+Use only commands approved by the teacher. Examples may include `lscpu`, `free -h`, `lsblk`, `lspci`, `lsusb`, `ip address`, `smartctl`, and `sensors`. Availability depends on installed packages and permissions.
+
+| Item | Physical evidence | Firmware evidence | Linux evidence | Agreement or question |
+|:--|:--|:--|:--|:--|
+| CPU | | | | |
+| RAM | | | | |
+| storage | | | | |
+| network | | | | |
+| temperatures | | | | |
+
+## Required evidence {.unnumbered}
+
+1. Predict which layer can report each item before using a command.
+2. Capture the command and relevant output, not the entire terminal history.
+3. Create one user or software-management plan without executing unapproved administrative commands.
+4. Explain one disagreement among physical, firmware, and Linux evidence.
+5. Produce a concise workstation inventory and one maintenance recommendation.
+
+**Optional extension:** Write a read-only health-check script and explain every command before running it.
+
+\newpage
+
+# SQ05 Power, Efficiency, Cooling, and Thermal Behaviour {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS03, CS06, control-system basics | 120 minutes | enclosed wall meter only |
+
+**Goal:** Relate electrical power, energy, temperature, fan response, and feedback control using measured data.
+
+**Safety:** No internal live probing. Keep cooling hardware installed. Stop for abnormal temperature, smell, sound, or fan failure.
+
+## Worked GUESS example {.unnumbered}
+
+A workstation averages $74.6\ \mathrm{W}$ for $2.50\ \mathrm{h}$.
+
+| GUESS step | Work |
+|:--|:--|
+| Given | $P=74.6\ \mathrm{W}$, $t=2.50\ \mathrm{h}$ |
+| Unknown | $E$ in Wh and kWh |
+| Equation | $E=Pt$ |
+| Substitute | $E=(74.6\ \mathrm{W})(2.50\ \mathrm{h})$ |
+| Solve | $186.50000\ \mathrm{Wh}=0.18650000\ \mathrm{kWh}$ |
+| Statement | To three significant figures, the session uses $187\ \mathrm{Wh}$ or $0.187\ \mathrm{kWh}$. |
+
+**Casio fx-991ES PLUS C:** `74.6 × 2.50 =`
+
+## Required questions 1 to 5 {.unnumbered}
+
+1. Predict the relative power at shutdown, standby, idle, and approved load.
+2. Record power, CPU temperature, and fan evidence under identical timed conditions.
+3. Use GUESS to calculate energy for a stated interval.
+4. Draw the feedback loop with temperature sensor, controller, fan, computer heat, and measured temperature.
+5. Compare prediction and measurement, then state one limitation.
+
+## Optional questions 6 to 10 {.unnumbered}
+
+6. Estimate daily energy for $6.00\ \mathrm{h}$ at the measured average power.
+7. Compare two approved power settings using the same workload.
+8. Explain why a higher fan speed can reduce temperature while increasing fan power and noise.
+9. Evaluate one approved cleaning or configuration change with before/after data.
+10. Propose a safer or more repeatable thermal test and justify the change.
+
+**Evidence checklist:** GUESS work, measurements, graph, control block diagram, before/after comparison, limitations statement.
+
+\newpage
+
+# SQ06 Repair, Reuse, File Recovery, and Advanced Commissioning {.unnumbered}
+
+| Pathway | Prerequisites | Time | Risk |
+|:--|:--|:--|:--|
+| Side Quest | CS06 and one earlier Side Quest | 180 minutes | teacher-approved scope |
+
+**Goal:** Use evidence, compatibility, performance, energy, cost, maintainability, and lifecycle to return a computer to useful service or justify another responsible outcome.
+
+## Decision table {.unnumbered}
+
+| Criterion | Evidence | Weight | Option A | Option B |
+|:--|:--|--:|--:|--:|
+| safety | | | | |
+| required workload | | | | |
+| repair or upgrade cost | | | | |
+| data and privacy | | | | |
+| energy and expected life | | | | |
+| repairability and parts | | | | |
+
+## Required evidence {.unnumbered}
+
+1. Define the user need and current machine condition.
+2. Choose an approved scope: return to service, upgrade proposal, approved file recovery, or responsible reuse plan.
+3. Build a bill of materials and test plan before changing hardware or data.
+4. Complete the approved work and repeat acceptance tests.
+5. Deliver a commissioning report with results, remaining risks, user notes, and disposition of removed parts.
+
+**Safety and privacy:** Follow school data-handling and e-waste procedures. Do not reuse damaged power parts or unknown batteries. Mount recovery drives only as directed.
+
+**Evidence checklist:** decision table, bill of materials, service log, tests, user handoff, reflection.
+
+\newpage
+
+{{< include ../includes/common-assessment-rubric.qmd >}}
+
+## Submission map {.unnumbered}
+
+- Main Quests appear as regular Google Classroom assignments.
+- Side Quests appear under the Classroom topic **Side Quests**.
+- Submit student evidence in Classroom. Students do not edit the master tracker.
+- The teacher records verified achievement from 0 to 4 in the private tracker.
+- The Leaderboard is a teacher-only progress view, not a public competition.
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

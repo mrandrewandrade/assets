@@ -66,6 +66,10 @@ control_dir=electronics/modules/C06-control-systems
 render_pdf "$control_dir/C06_Control_Methods_Comparison_Student.qmd" C06_Control_Methods_Comparison_Student.pdf
 render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Control_Methods_Comparison_Answer_Key.pdf
 
+computer_systems_dir=electronics/computer-systems
+render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
+render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" TEJ-Basic-Computer-Systems-Teacher-Guide.pdf
+
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/
 
