@@ -1,0 +1,77 @@
+---
+title: "C06 Control-Method Comparison"
+subtitle: "Open loop, on-off, hysteresis, proportional, and PI or PID control"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Student:** ______________________________  **Date:** __________________
+
+Use one simulated temperature process for all five activities. Plot setpoint and measured temperature on the same graph. Apply identical initial conditions and disturbances so the control methods can be compared fairly.
+
+# Activity 1: Open loop {.unnumbered}
+
+Predict the response to a fixed $40\%$ heater command. At $t=10\ \mathrm{min}$, apply the same heat-loss disturbance used in later activities.
+
+**Required:** block diagram, expected graph, simulated data, final error, and one limitation.
+
+| Time (min) | Setpoint ($^\circ$C) | Measured ($^\circ$C) | Command (%) |
+|--:|--:|--:|--:|
+| 0 | 22 | | 40 |
+| 5 | 22 | | 40 |
+| 10 | 22 | | 40 |
+| 15 | 22 | | 40 |
+| 20 | 22 | | 40 |
+
+# Activity 2: On-off control {.unnumbered}
+
+Use one switching threshold at $22^\circ\mathrm{C}$. Record cycling or chatter near the threshold. Identify the highest and lowest measured temperatures.
+
+**Design question:** What physical factors make the temperature continue changing after the command switches?
+
+# Activity 3: On-off control with hysteresis {.unnumbered}
+
+Use a $21^\circ\mathrm{C}$ turn-on threshold and a $23^\circ\mathrm{C}$ turn-off threshold. Compare switching frequency and temperature variation with Activity 2.
+
+**Required design change:** Adjust the hysteresis band once. Provide evidence that the change improved one chosen criterion and state the trade-off.
+
+# Activity 4: Proportional control {.unnumbered}
+
+Use $u=K_Pe$ with output limited to $0\%$ through $100\%$. Compare at least three $K_P$ values.
+
+| $K_P$ | Rise time | Overshoot | Steady-state error | Stability comment |
+|--:|--:|--:|--:|:--|
+| low | | | | |
+| medium | | | | |
+| high | | | | |
+
+# Activity 5: PI or PID control {.unnumbered}
+
+Begin from the best proportional result. Add integral action to reduce remaining error. Add derivative action only if the data are clean enough to justify it.
+
+$$u_k=K_Pe_k+K_I\sum e\Delta t+K_D\frac{e_k-e_{k-1}}{\Delta t}$$
+
+**Required:** tuned gains, output limits, one windup observation or prevention method, final graph, performance table, one design change, and a written engineering conclusion comparing all five methods.
+
+## Performance summary {.unnumbered}
+
+| Method | Rise time | Overshoot or cycling | Steady-state error | Main advantage | Main limitation |
+|:--|--:|--:|--:|:--|:--|
+| open loop | | | | | |
+| on-off | | | | | |
+| hysteresis | | | | | |
+| P | | | | | |
+| PI or PID | | | | | |
+
+{{< include ../../includes/common-assessment-rubric.qmd >}}

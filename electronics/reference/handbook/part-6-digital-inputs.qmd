@@ -1,0 +1,198 @@
+```{=latex}
+\newpage
+```
+
+# Part 6: Digital inputs and microcontroller interfacing
+
+```{=latex}
+\markright{D01 Digital voltage levels}
+```
+
+## D01 Digital voltage levels and logic states
+
+A digital input does not measure an abstract 0 or 1. It measures voltage and compares that voltage with device-specific thresholds. Values below $V_{IL(\max)}$ read low. Values above $V_{IH(\min)}$ read high. The region between those limits is not guaranteed.
+
+| System example | Typical logic supply | Interface rule |
+|:--|:--:|:--|
+| many classic Arduino boards | $5\ \mathrm{V}$ | confirm the exact board and processor |
+| Raspberry Pi GPIO | $3.3\ \mathrm{V}$ | inputs are 3.3 V tolerant, not general 5 V inputs |
+| micro:bit and many modern MCUs | $3.3\ \mathrm{V}$ | check pin data before connection |
+
+**Warning:** A 5 V power pin beside a GPIO header does not make the GPIO 5 V tolerant. Use an approved divider, buffer, or level shifter when voltage domains differ.
+
+**Application and links:** Digital sensors, switches, encoders, and logic outputs. See the official [Raspberry Pi GPIO documentation](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header).
+
+```{=latex}
+\newpage\markright{D02 Switches and floating inputs}
+```
+
+## D02 Switches as inputs and floating inputs
+
+A switch can connect an input to a rail, but the open switch leaves no defined path unless another component establishes the idle state. A high-impedance input can then respond to leakage, nearby signals, static charge, or a hand approaching the wire.
+
+::: {.content-visible when-format="html"}
+![An unconnected GPIO input marked incorrect because it has no defined voltage.](../schematics/Floating_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![An unconnected GPIO input marked incorrect because it has no defined voltage.](../schematics/Floating_Input.pdf){width=92%}
+:::
+
+| Switch position | Electrical connection | Pin voltage | Logic state | Interpretation |
+|:--|:--|:--|:--:|:--|
+| open, no pull resistor | undefined | unpredictable | ? | invalid |
+| closed to ground | ground | near $0\ \mathrm{V}$ | 0 | defined |
+| closed to supply | supply | near $V_{CC}$ | 1 | defined |
+
+**Common mistake:** A simulator may display one stable value for a floating input. The physical input remains undefined.
+
+```{=latex}
+\newpage\markright{D03 External pull-down resistor}
+```
+
+## D03 External pull-down resistor
+
+A pull-down resistor connects the input weakly to ground. The input reads 0 while the switch is open. Closing the switch connects the input strongly to $V_{CC}$ and produces 1.
+
+::: {.content-visible when-format="html"}
+![A switch connects a GPIO input to VCC while an external resistor pulls the open input to ground.](../schematics/External_Pull_Down_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![A switch connects a GPIO input to VCC while an external resistor pulls the open input to ground.](../schematics/External_Pull_Down_Input.pdf){width=92%}
+:::
+
+| Switch | Electrical connection | Pin voltage | Logic | Meaning |
+|:--|:--|:--|:--:|:--|
+| open | through $R_{PD}$ to ground | about $0\ \mathrm{V}$ | 0 | inactive |
+| closed | directly to $V_{CC}$ | about $V_{CC}$ | 1 | active |
+
+The input draws almost no current. When the switch closes, the resistor is not placed directly across the source in this topology because both resistor ends rise toward $V_{CC}$. The resistor still establishes a defined open-switch state.
+
+**Application:** Active-high pushbuttons and sensors that connect an input to the positive rail.
+
+```{=latex}
+\newpage\markright{D04 External pull-up and active-low input}
+```
+
+## D04 External pull-up resistor
+
+A pull-up resistor connects the input weakly to $V_{CC}$. The input reads 1 while the switch is open. Closing the switch connects the input to ground and produces 0.
+
+::: {.content-visible when-format="html"}
+![A resistor pulls a GPIO input to VCC while a switch connects the input to ground when pressed.](../schematics/External_Pull_Up_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![A resistor pulls a GPIO input to VCC while a switch connects the input to ground when pressed.](../schematics/External_Pull_Up_Input.pdf){width=92%}
+:::
+
+| Switch | Electrical connection | Pin voltage | Logic | Meaning |
+|:--|:--|:--|:--:|:--|
+| open | through $R_{PU}$ to $V_{CC}$ | about $V_{CC}$ | 1 | inactive |
+| closed | directly to ground | about $0\ \mathrm{V}$ | 0 | active |
+
+When the switch closes, current through the resistor is limited to approximately $I=V_{CC}/R_{PU}$. The resistor prevents the switch from shorting the source.
+
+### Active-low interpretation {.unnumbered}
+
+The pressed state is active at logic 0, so the signal may be written $\overline{\mathrm{BUTTON}}$, `/BUTTON`, or `BUTTON_N` according to the project convention.
+
+**Worked GUESS check:** A $10\ \mathrm{k}\Omega$ pull-up on $5.0\ \mathrm{V}$ carries $0.50\ \mathrm{mA}$ while the switch is pressed.
+
+```{=latex}
+\newpage\markright{D05 Internal pull-ups}
+```
+
+## D05 Internal microcontroller pull-ups
+
+Many microcontrollers can connect a built-in resistor from an input pin to the device supply. The external circuit still behaves like a pull-up: connect the switch between the input and ground, then interpret a pressed switch as low.
+
+::: {.content-visible when-format="html"}
+![Equivalent circuit for a software-enabled pull-up resistor inside a microcontroller.](../schematics/Internal_Pull_Up_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Equivalent circuit for a software-enabled pull-up resistor inside a microcontroller.](../schematics/Internal_Pull_Up_Input.pdf){width=92%}
+:::
+
+Example Arduino configuration:
+
+```cpp
+pinMode(buttonPin, INPUT_PULLUP);
+bool pressed = digitalRead(buttonPin) == LOW;
+```
+
+Use an external resistor when the internal value is too weak or poorly specified, when the line is long or noisy, when a defined state must exist during reset, or when the interface requires a different voltage or timing value. Confirm the specific processor data.
+
+The official [Arduino digital-pin documentation](https://docs.arduino.cc/learn/microcontrollers/digital-pins/) explains that an unconnected input can change randomly and that `INPUT_PULLUP` enables the internal resistor.
+
+```{=latex}
+\newpage\markright{D06 Contact bounce and debouncing}
+```
+
+## D06 Contact bounce and debouncing
+
+Mechanical contacts can open and close several times during one physical press. A fast digital input may interpret one press as many events. Debouncing can use time-based software, a state machine, an RC network with a suitable threshold input, or a dedicated debounce circuit.
+
+::: {.content-visible when-format="html"}
+![An RC network filters rapid transitions from a switch before the GPIO input.](../schematics/RC_Debounce_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![An RC network filters rapid transitions from a switch before the GPIO input.](../schematics/RC_Debounce_Input.pdf){width=92%}
+:::
+
+$$\tau=RC$$
+
+**Worked GUESS check:** $R=10\ \mathrm{k}\Omega$ and $C=100\ \mathrm{nF}$ give $\tau=1.0\ \mathrm{ms}$. This is a starting calculation, not proof of reliable operation.
+
+**Warning:** A slow edge can spend time between valid logic thresholds. Use a Schmitt-trigger input or another approved method where clean transitions are required.
+
+```{=latex}
+\newpage\markright{D07 GPIO limits and input protection}
+```
+
+## D07 GPIO voltage, current, and input protection
+
+An input-protection network can limit fault current and clamp moderate transients, but it does not make incompatible voltage levels safe by itself. Start with the receiving device's absolute maximum ratings and input thresholds.
+
+::: {.content-visible when-format="html"}
+![A digital input with a series resistor and upper and lower clamp diodes.](../schematics/Protected_Digital_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![A digital input with a series resistor and upper and lower clamp diodes.](../schematics/Protected_Digital_Input.pdf){width=92%}
+:::
+
+| Check | Question |
+|:--|:--|
+| voltage compatibility | Will high and low fall inside guaranteed input ranges? |
+| absolute maximum | Can any fault exceed the allowed pin voltage? |
+| clamp current | Does the series resistor keep current within device limits? |
+| power sequencing | Can an external signal feed an unpowered device? |
+| environment | Are long wires, static, or inductive loads present? |
+
+**Warning:** Do not imply universal 5 V tolerance. Raspberry Pi documentation identifies its general-purpose pins as 3.3 V GPIO. Confirm every board and shield separately.
+
+```{=latex}
+\newpage\markright{D08 Circuits culminating project}
+```
+
+## D08 Circuits culminating project
+
+Complete the circuits strand before beginning the separate microcontroller strand. Build a small logic system with stable switch inputs, at least two logic functions, indicators, and an output-driver stage where the load exceeds logic-gate capability.
+
+::: {.content-visible when-format="html"}
+![A pull-down switch drives one input of an AND gate while the other input is a separate logic signal.](../schematics/Switch_Logic_Gate_Input.svg){width=92%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![A pull-down switch drives one input of an AND gate while the other input is a separate logic signal.](../schematics/Switch_Logic_Gate_Input.pdf){width=92%}
+:::
+
+**Required evidence cycle:** Predict, calculate using GUESS, draw the schematic, simulate or verify, build or test, compare expected and observed results, diagnose one fault or limitation, then explain and reflect.
+
+**Possible systems:** access interlock model, two-button game, alarm logic, bicycle-light controller, or miniature conveyor permissive circuit.
+
+**Assessment:** mathematical reasoning, schematic quality, verification evidence, safe construction, troubleshooting, design decisions, and communication.

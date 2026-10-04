@@ -1,0 +1,12 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\begin{document}\begin{tikzpicture}[line width=1.1pt,draw=TEJNavy]
+\node[draw=TEJNavy,minimum width=2.8cm,minimum height=1.2cm,font=\Large] (pin) at (6.2,2.2) {$\overline{\mathrm{BUTTON}}$};
+\draw (3.6,2.2) -- (pin.west);
+\draw (3.6,2.2) to[R,l=$R_{PU}$] (3.6,3.7) node[vcc] {$V_{CC}$};
+\draw (3.6,2.2) to[nos,l_=SW] (3.6,0.6) node[ground] {};
+\fill[TEJNavy] (3.6,2.2) circle (2pt);
+\node[font=\large,text=TEJNavy] at (4.0,-0.1) {Pressed is active and produces logic 0};
+\end{tikzpicture}\end{document}

@@ -1,0 +1,61 @@
+```{=latex}
+\newpage
+```
+
+# Part 3: Network analysis
+
+```{=latex}
+\markright{H11 Series-parallel circuits and Kirchhoff's laws}
+```
+
+## H11 Series-parallel circuits and Kirchhoff's laws
+
+Reduce only groups that are clearly series or parallel. Kirchhoff's current law checks charge conservation at a node. Kirchhoff's voltage law checks energy transfer around a closed loop.
+
+$$\sum I_{\mathrm{in}}=\sum I_{\mathrm{out}} \qquad \sum V=0$$
+
+**Method:** mark nodes, identify series and parallel groups, reduce the network, solve total values, then expand back to branch values. Verify KCL and KVL at the end.
+
+**Worked check:** If $I_T=30\ \mathrm{mA}$ enters a node and $I_1=12\ \mathrm{mA}$ leaves, then $I_2=18\ \mathrm{mA}$.
+
+**Common mistake:** A negative result often means the actual direction is opposite to the assumed reference. It does not automatically mean the calculation failed.
+
+**Application and links:** Multi-load power distribution and troubleshooting. Related practice and answer keys are indexed in the [electronics library](https://andrewandrade.ca/tech-edu-resources/tej3-4/electronics-library/).
+
+```{=latex}
+\newpage\markright{H12 Voltage and current dividers}
+```
+
+## H12 Voltage and current dividers
+
+A voltage divider produces an unloaded fraction of the input voltage. Connecting a load changes the lower effective resistance and therefore changes the output.
+
+$$V_{\mathrm{out}}=V_{\mathrm{in}}\frac{R_2}{R_1+R_2}$$
+
+For two parallel branches:
+
+$$I_1=I_T\frac{R_2}{R_1+R_2} \qquad I_2=I_T\frac{R_1}{R_1+R_2}$$
+
+**Worked GUESS example:** $V_{\mathrm{in}}=5.0\ \mathrm{V}$, $R_1=3.3\ \mathrm{k}\Omega$, and $R_2=2.2\ \mathrm{k}\Omega$. $V_{\mathrm{out}}=2.0\ \mathrm{V}$. Casio entry: `5.0 × 2.2 ÷ ( 3.3 + 2.2 ) =`.
+
+**Warning:** A divider is not a regulated power supply. Load current can move the output far from the unloaded result.
+
+**Application and links:** Potentiometers, sensor scaling, reference voltages, and biasing. See the common reference circuits in this handbook.
+
+```{=latex}
+\newpage\markright{H13 Thevenin, Norton, and maximum power}
+```
+
+## H13 Thevenin, Norton, and maximum power
+
+This optional extension replaces a linear two-terminal network with a simpler equivalent. A Thevenin equivalent uses $V_{TH}$ in series with $R_{TH}$. A Norton equivalent uses $I_N$ in parallel with $R_N$.
+
+$$V_{TH}=I_NR_{TH} \qquad R_N=R_{TH}$$
+
+**When it applies:** Use equivalents to predict how different loads affect the same source network. Determine $R_{TH}$ using the approved source-deactivation method for the circuit type.
+
+**Worked check:** If $V_{TH}=6.0\ \mathrm{V}$ and $R_{TH}=1.0\ \mathrm{k}\Omega$, then $I_N=6.0\ \mathrm{mA}$.
+
+**Warning:** Maximum power transfer does not mean maximum efficiency. At the matching condition, the source resistance dissipates substantial power.
+
+**Application and links:** Sensor networks, amplifier inputs, source modelling, and fault analysis. See [All About Circuits network theorems](https://www.allaboutcircuits.com/textbook/direct-current/chpt-10/).

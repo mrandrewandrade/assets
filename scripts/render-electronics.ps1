@@ -48,16 +48,17 @@ function Render-Pdf {
     Move-Item -LiteralPath $Output -Destination (Join-Path 'dist' $Output) -Force
 }
 
-Render-Pdf 'electronics/reference/TEJ-Electronics-Formula-Reference.qmd' 'TEJ-Electronics-Formula-Reference.pdf'
+Render-Pdf 'electronics/reference/TEJ-Electronics-Quick-Reference.qmd' 'TEJ-Electronics-Quick-Reference.pdf'
+Render-Pdf 'electronics/reference/TEJ-Electronics-Reference-Handbook.qmd' 'TEJ-Electronics-Reference-Handbook.pdf'
 Push-Location -LiteralPath 'electronics/reference'
 try {
-    & $quarto.Source render 'TEJ-Electronics-Formula-Reference.qmd' --to html --output 'TEJ-Electronics-Formula-Reference.html'
-    if ($LASTEXITCODE -ne 0) { throw 'Quarto HTML render failed for the formula reference' }
+    & $quarto.Source render 'TEJ-Electronics-Reference-Handbook.qmd' --to html --output 'TEJ-Electronics-Reference-Handbook.html'
+    if ($LASTEXITCODE -ne 0) { throw 'Quarto HTML render failed for the reference handbook' }
 }
 finally {
     Pop-Location
 }
-Move-Item -LiteralPath 'electronics/reference/TEJ-Electronics-Formula-Reference.html' -Destination 'dist/TEJ-Electronics-Formula-Reference.html' -Force
+Move-Item -LiteralPath 'electronics/reference/TEJ-Electronics-Reference-Handbook.html' -Destination 'dist/TEJ-Electronics-Reference-Handbook.html' -Force
 
 Render-Pdf 'electronics/worksheets/TEJ-Basic-Circuit-Calculations-Student-Worksheet.qmd' 'TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf'
 Render-Pdf 'electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd' 'TEJ_Basic_Circuit_Calculations_Answer_Key.pdf'
@@ -67,6 +68,14 @@ Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Student_Worksheet.qmd" 'H01_Safet
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Answer_Key.qmd" 'H01_Safety_Lab_Practice_Answer_Key.pdf'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Lab.qmd" 'H01_Safety_Lab_Practice_Lab.pdf'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Tinkercad_Guide.qmd" 'H01_Safety_Lab_Practice_Tinkercad_Guide.pdf'
+
+$digitalDir = 'electronics/modules/D01-digital-inputs'
+Render-Pdf "$digitalDir/D01_Digital_Inputs_Student_Worksheet.qmd" 'D01_Digital_Inputs_Student_Worksheet.pdf'
+Render-Pdf "$digitalDir/D01_Digital_Inputs_Answer_Key.qmd" 'D01_Digital_Inputs_Answer_Key.pdf'
+
+$controlDir = 'electronics/modules/C06-control-systems'
+Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Student.qmd" 'C06_Control_Methods_Comparison_Student.pdf'
+Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Answer_Key.qmd" 'C06_Control_Methods_Comparison_Answer_Key.pdf'
 
 Get-ChildItem -LiteralPath 'electronics/schematics' -File |
     Where-Object { $_.Extension -in @('.svg', '.pdf') } |

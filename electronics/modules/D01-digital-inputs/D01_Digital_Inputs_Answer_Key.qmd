@@ -1,0 +1,62 @@
+---
+title: "D01 Digital Inputs and Stable Switch Circuits"
+subtitle: "Teacher answer key"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+# Activity 1: Digital voltage levels {.unnumbered}
+
+| Applied voltage | Interpretation | Safe? | Evidence |
+|--:|:--:|:--:|:--|
+| $0.2\ \mathrm{V}$ | \answer{0} | \answer{yes} | \answer{below $0.8\ \mathrm{V}$} |
+| $1.2\ \mathrm{V}$ | \answer{indeterminate} | \answer{not a valid logic design} | \answer{between thresholds} |
+| $2.4\ \mathrm{V}$ | \answer{1} | \answer{yes if within absolute limits} | \answer{above $2.0\ \mathrm{V}$} |
+| $5.0\ \mathrm{V}$ | \answer{not permitted} | \answer{potentially damaging} | \answer{exceeds a 3.3 V GPIO domain} |
+
+# Activity 2: Floating input and pull-down {.unnumbered}
+
+\answer{A floating input has no defined DC path to either rail. Leakage, electrical noise, or capacitive coupling can change the reading.}
+
+| Switch | Connection | Voltage | Logic | Meaning |
+|:--|:--|:--|:--:|:--|
+| open | \answer{through $R_{PD}$ to ground} | \answer{about $0\ \mathrm{V}$} | \answer{0} | \answer{inactive} |
+| closed | \answer{to $V_{CC}$} | \answer{about $V_{CC}$} | \answer{1} | \answer{active} |
+
+# Activity 3: Pull-up and active-low input {.unnumbered}
+
+| Switch | Connection | Voltage | Logic | Meaning |
+|:--|:--|:--|:--:|:--|
+| open | \answer{through $R_{PU}$ to $V_{CC}$} | \answer{$5.0\ \mathrm{V}$} | \answer{1} | \answer{inactive} |
+| pressed | \answer{to ground} | \answer{about $0\ \mathrm{V}$} | \answer{0} | \answer{active} |
+
+**GUESS:** \answer{$I=V/R=(5.0\ \mathrm{V})/(10\,000\ \Omega)=0.00050\ \mathrm{A}=0.50\ \mathrm{mA}$.}
+
+**Exact entry:** \answer{\texttt{5.0 ÷ 10000 =}}
+
+\answer{The resistor limits switch current to $0.50\ \mathrm{mA}$ instead of allowing a direct source-to-ground short. Suitable names include $\overline{\mathrm{BUTTON}}$, \texttt{BUTTON\_N}, or \texttt{/BUTTON}.}
+
+# Activity 4: Internal pull-up and debounce {.unnumbered}
+
+Accept justified selections. External resistors remain appropriate for a stronger bias, a known value, long or noisy wiring, a required reset state, another logic voltage, or a chosen RC time constant.
+
+Example: \answer{$R=10\ \mathrm{k}\Omega$ and $C=470\ \mathrm{nF}$ give $\tau=(10\times10^3)(470\times10^{-9})=4.7\ \mathrm{ms}$.}
+
+# Activity 5: Protected input troubleshooting {.unnumbered}
+
+\answer{The student exceeded the intended 3.3 V GPIO domain. Required data include sensor output high and low, source impedance, GPIO thresholds, absolute maximum voltage, allowed clamp current, power sequencing, and switching rate. Use an approved level shifter or divider only after calculation and teacher review. Verify the interface without the GPIO first, confirm voltage with a high-impedance meter, power down, connect through the approved protection, then test a non-critical input with current limiting.}
+
+Teacher assessment should reward a cause-and-evidence conclusion rather than an unsupported claim that the pin is damaged.
+
+{{< include ../../includes/common-assessment-rubric.qmd >}}

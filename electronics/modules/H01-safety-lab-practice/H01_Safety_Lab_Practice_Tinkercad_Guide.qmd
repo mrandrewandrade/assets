@@ -16,6 +16,8 @@ execute: {enabled: false}
 lang: en-CA
 ---
 
+**Document role:** This guide contains simulator construction, measurements, screenshots, comparison, and simulation limitations. Complete calculations and predictions in the worksheet before using this guide.
+
 # Verification sequence
 
 1. **Calculate first.** Use GUESS for $I=(V_S-V_F)/R$ and $P_R=I^2R$.

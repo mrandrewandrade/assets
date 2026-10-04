@@ -378,4 +378,6 @@ Parallel branches allow one lamp to remain connected if the other opens. A simpl
 
 **Answer sentence:** \answer{The lamps draw $0.60\ \mathrm{A}$ in total, present a $10\ \Omega$ equivalent load, and use $7.2\ \mathrm{Wh}$ in two hours.}
 
+{{< include ../includes/common-assessment-rubric.qmd >}}
+
 CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

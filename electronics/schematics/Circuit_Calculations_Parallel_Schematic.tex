@@ -1,0 +1,16 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\begin{document}
+\begin{tikzpicture}[line width=1.1pt,draw=TEJNavy]
+  \ctikzset{bipoles/length=1.15cm}
+  \draw (0,0) to[battery1,l_=$V_S$] (0,4) -- (8,4) -- (8,0) -- (0,0);
+  \draw (3,4) to[R,l=$R_1$,i>^=$I_1$] (3,0);
+  \draw (6,4) to[R,l=$R_2$,i>^=$I_2$] (6,0);
+  \draw[->] (0.8,4.35) -- (2.0,4.35) node[midway,above,font=\large] {$I_T$};
+  \fill[TEJNavy] (3,4) circle (2pt) (3,0) circle (2pt) (6,4) circle (2pt) (6,0) circle (2pt);
+  \node[font=\large,text=TEJNavy] at (4,-0.65) {$V_1=V_2=V_S$};
+\end{tikzpicture}
+\end{document}

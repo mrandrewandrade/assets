@@ -1,0 +1,22 @@
+module_id: D01
+topic: Digital inputs and stable switch circuits
+asset_type: module
+audience: mixed
+requirement: required
+component_tags: [switch, resistor, capacitor, logic-gate, gpio]
+equipment_tags: [digital-multimeter, logic-probe, microcontroller]
+context_tags: [computer, control, robotics]
+difficulty: core
+curriculum_expectations: [TEJ3M-B1, TEJ3M-C1, TEJ4M-B1]
+grob_reference: "Grob Basic Electronics, 12th edition, digital logic and interfacing chapters"
+safety_category: protected-low-voltage-digital
+estimated_time: "150 minutes"
+copyright_category: original-with-citations
+access: public
+source_path: electronics/modules/D01-digital-inputs/
+download_path: dist/D01_Digital_Inputs_Student_Worksheet.pdf
+website_url: https://andrewandrade.ca/tech-edu-resources/tej3-4/digital-inputs/
+slide_url: https://andrewandrade.ca/slides/2026-27/semester-1/period-1/tej/future/d01-digital-inputs.html
+version: 1.0.0
+last_updated: 2026-10-04
+completion_status: reviewed

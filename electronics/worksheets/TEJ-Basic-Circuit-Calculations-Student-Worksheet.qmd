@@ -22,6 +22,8 @@ lang: en-CA
 
 Complete Questions 1 to 5. Questions 6 to 10 are optional Level 4 evidence. Use GUESS, carry units, show prefix conversions, record the exact calculator entry, keep unrounded intermediate values, and round only the final result. Complete the calculation before simulation.
 
+**Document role:** This worksheet owns calculations, predictions, schematics, and written reasoning. Complete the common evidence cycle where directed: predict, calculate using GUESS, draw, verify, compare, diagnose, and explain.
+
 ::: {.callout-important title="Submission standard"}
 For every question, submit clear front and back photos of your handwritten work. The student version contains no answers.
 :::
@@ -319,5 +321,7 @@ Two loads are connected in parallel across a $12.0\ \mathrm{V}$ supply. Load 1 h
 - [ ] Tinkercad evidence is included where required.
 - [ ] Front and back photos are readable and upright.
 - [ ] No classroom circuit exceeded the stated safe low-voltage limits.
+
+{{< include ../includes/common-assessment-rubric.qmd >}}
 
 CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

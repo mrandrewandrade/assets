@@ -1,0 +1,51 @@
+---
+title: "TEJ Electronics Reference Handbook"
+subtitle: "Circuits, digital inputs, control systems, and measurement"
+author: "Technology Commons"
+date: "2026-10-04"
+license: "CC BY-SA 4.0"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.7in]
+    toc: true
+    toc-depth: 2
+    number-sections: false
+  html:
+    css: ../styles/tej-html.css
+    toc: true
+    toc-depth: 2
+    toc-float: true
+    embed-resources: true
+    section-divs: true
+    html-math-method: mathjax
+execute: {enabled: false}
+lang: en-CA
+---
+
+# How to use this handbook
+
+The handbook follows the curriculum sequence. Each chapter explains the idea, shows the relevant circuit or block diagram, identifies formulas and units, and gives a short GUESS example or engineering check. Use the separate two-page quick reference during assignments and tests.
+
+The diagrams show concepts and classroom-scale circuits. Confirm actual component data, logic voltage, current limits, pinout, polarity, and safety requirements before building.
+
+{{< include handbook/part-1-foundations.qmd >}}
+
+{{< include handbook/part-2-dc-circuits.qmd >}}
+
+{{< include handbook/part-3-network-analysis.qmd >}}
+
+{{< include handbook/part-4-components.qmd >}}
+
+{{< include handbook/part-5-digital-logic.qmd >}}
+
+{{< include handbook/part-6-digital-inputs.qmd >}}
+
+{{< include handbook/part-7-control-systems.qmd >}}
+
+{{< include handbook/part-8-reference.qmd >}}

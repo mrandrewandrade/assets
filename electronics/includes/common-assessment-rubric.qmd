@@ -1,0 +1,19 @@
+# Common assessment rubric {.unnumbered}
+
+```{=latex}
+\small
+```
+
+| Category | Level 1 | Level 2 | Level 3 | Level 4 |
+|:--|:--|:--|:--|:--|
+| Mathematical reasoning and GUESS | limited setup or unit use | partly correct method | correct method and units | precise, efficient reasoning with independent checks |
+| Schematic quality and conventions | major symbol or connection errors | mostly readable with some errors | correct, labelled, and readable | exceptionally clear with purposeful layout and complete references |
+| Simulation or verification evidence | limited or incomplete evidence | some valid evidence and comparison | complete evidence with comparison | well-chosen evidence that tests assumptions and limitations |
+| Physical construction and safe practice | frequent prompting required | generally safe with some prompting | safe, organized, and approved work | consistently anticipates hazards and supports team safety |
+| Testing and troubleshooting | guesses without a test plan | partial plan using some evidence | logical tests identify the likely cause | efficient tests distinguish alternatives and verify the repair |
+| Design decisions | choice has limited justification | some criteria support the choice | clear criteria and trade-offs support the choice | constraints, evidence, and iteration produce a strong decision |
+| Documentation and communication | incomplete or difficult to follow | understandable with gaps | clear tables, labels, results, and conclusion | concise, polished communication makes the evidence easy to audit |
+
+```{=latex}
+\normalsize
+```

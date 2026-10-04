@@ -41,12 +41,13 @@ render_pdf() {
   mv -f "$output" "dist/$output"
 }
 
-render_pdf electronics/reference/TEJ-Electronics-Formula-Reference.qmd TEJ-Electronics-Formula-Reference.pdf
+render_pdf electronics/reference/TEJ-Electronics-Quick-Reference.qmd TEJ-Electronics-Quick-Reference.pdf
+render_pdf electronics/reference/TEJ-Electronics-Reference-Handbook.qmd TEJ-Electronics-Reference-Handbook.pdf
 (
   cd electronics/reference
-  quarto render TEJ-Electronics-Formula-Reference.qmd --to html --output TEJ-Electronics-Formula-Reference.html
+  quarto render TEJ-Electronics-Reference-Handbook.qmd --to html --output TEJ-Electronics-Reference-Handbook.html
 )
-mv -f electronics/reference/TEJ-Electronics-Formula-Reference.html dist/TEJ-Electronics-Formula-Reference.html
+mv -f electronics/reference/TEJ-Electronics-Reference-Handbook.html dist/TEJ-Electronics-Reference-Handbook.html
 
 render_pdf electronics/worksheets/TEJ-Basic-Circuit-Calculations-Student-Worksheet.qmd TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf
 render_pdf electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd TEJ_Basic_Circuit_Calculations_Answer_Key.pdf
@@ -56,6 +57,14 @@ render_pdf "$module_dir/H01_Safety_Lab_Practice_Student_Worksheet.qmd" H01_Safet
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Answer_Key.qmd" H01_Safety_Lab_Practice_Answer_Key.pdf
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Lab.qmd" H01_Safety_Lab_Practice_Lab.pdf
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Tinkercad_Guide.qmd" H01_Safety_Lab_Practice_Tinkercad_Guide.pdf
+
+digital_dir=electronics/modules/D01-digital-inputs
+render_pdf "$digital_dir/D01_Digital_Inputs_Student_Worksheet.qmd" D01_Digital_Inputs_Student_Worksheet.pdf
+render_pdf "$digital_dir/D01_Digital_Inputs_Answer_Key.qmd" D01_Digital_Inputs_Answer_Key.pdf
+
+control_dir=electronics/modules/C06-control-systems
+render_pdf "$control_dir/C06_Control_Methods_Comparison_Student.qmd" C06_Control_Methods_Comparison_Student.pdf
+render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Control_Methods_Comparison_Answer_Key.pdf
 
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/

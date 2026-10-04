@@ -1,11 +1,12 @@
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
-\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{booktabs,longtable,tabularx,array,multicol}
 \usepackage[table]{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage[europeanresistors,americanvoltages]{circuitikz}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{fancyhdr}
 \geometry{letterpaper,margin=0.68in,headheight=16pt,footskip=24pt}
 \definecolor{TEJNavy}{HTML}{1E2B55}
 \definecolor{TEJBlue}{HTML}{1769AA}
@@ -23,3 +24,9 @@
 \newtcolorbox{tejteacher}[1][]{enhanced,breakable,colback=yellow!8,colframe=TEJGold,boxrule=0.7pt,arc=1.5mm,left=2mm,right=2mm,top=1.2mm,bottom=1.2mm,title=#1,fonttitle=\bfseries,coltitle=TEJGold}
 \newcommand{\answer}[1]{\textcolor{TEJBlue}{\textbf{#1}}}
 \newcommand{\workinglines}[1]{\par\vspace{1mm}\foreach \n in {1,...,#1}{\noindent\color{gray!45}\rule{\linewidth}{0.35pt}\par\vspace{5.5mm}}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small TEJ Electronics}
+\fancyhead[R]{\small\nouppercase{\rightmark}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}

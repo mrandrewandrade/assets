@@ -1,0 +1,54 @@
+---
+title: "C06 Control-Method Comparison"
+subtitle: "Teacher answer key and assessment notes"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+# Expected comparison {.unnumbered}
+
+Exact numerical results depend on the supplied simulator or spreadsheet model. Require identical process parameters, initial condition, setpoint, time step, and disturbance before comparing methods.
+
+| Method | Expected pattern | Strong conclusion identifies |
+|:--|:--|:--|
+| open loop | command stays fixed; disturbance changes output without correction | simplicity and inability to reject disturbance |
+| on-off | output cycles around the threshold; rapid switching can occur | lag, chatter, and actuator wear |
+| hysteresis | fewer transitions across a wider temperature band | explicit trade-off between cycling and regulation range |
+| P | faster correction as gain increases; steady-state error can remain | rise time, overshoot, final error, and saturation |
+| PI | persistent error decreases; overshoot or windup can increase | need for output limits and anti-windup |
+| PID | derivative can reduce overshoot when measurements are clean | noise sensitivity and tuning complexity |
+
+# Sample calculations {.unnumbered}
+
+At $r=22.0^\circ\mathrm{C}$ and $y=20.5^\circ\mathrm{C}$:
+
+\answer{$e=r-y=+1.5^\circ\mathrm{C}$.}
+
+For $K_P=30\%/{}^\circ\mathrm{C}$:
+
+\answer{$u=K_Pe=(30)(1.5)=45\%$.}
+
+If the previous error was $1.8^\circ\mathrm{C}$ one second earlier:
+
+\answer{$\Delta e/\Delta t=(1.5-1.8)/1=-0.3^\circ\mathrm{C}/\mathrm{s}$.}
+
+# Assessment notes {.unnumbered}
+
+- Do not reward one gain set as universally correct. Reward evidence and fair comparison.
+- A graph must label axes, units, setpoint, measured output, and the disturbance time.
+- Students should identify only response features that the data support.
+- A physical PID implementation remains optional. Simulation or data analysis satisfies the required investigation.
+- The engineering conclusion should connect the chosen method to response quality, actuator limits, disturbance rejection, and implementation complexity.
+
+{{< include ../../includes/common-assessment-rubric.qmd >}}

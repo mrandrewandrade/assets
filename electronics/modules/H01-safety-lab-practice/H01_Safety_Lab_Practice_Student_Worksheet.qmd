@@ -20,6 +20,10 @@ lang: en-CA
 
 Required: Questions 1 to 5. Optional Level 4 evidence: Questions 6 to 10. Calculate before simulation or building. Use protected extra-low voltage only.
 
+**Document role:** This worksheet contains calculations, predictions, schematic work, and written reasoning. Use the separate Tinkercad guide for simulator construction and screenshots, and the lab handout for physical equipment, procedure, faults, and cleanup.
+
+**Evidence cycle:** Predict, calculate using GUESS, draw, verify, build where approved, compare, diagnose, and reflect.
+
 ![A protected low-voltage series circuit with source, fuse, switch, resistor, and LED.](../../schematics/H01_Safety_Lab_Practice_Schematic.pdf){fig-cap="H01 reference schematic. The fuse is close to the source, the switch controls the path, and the resistor limits LED current." width=96%}
 
 \newpage
@@ -232,5 +236,7 @@ Create a one-page safety case for a low-voltage bicycle-light prototype. Include
 | Front photo submission | Back photo submission |
 |:--|:--|
 | Safety case. | Submit even if blank. |
+
+{{< include ../../includes/common-assessment-rubric.qmd >}}
 
 CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

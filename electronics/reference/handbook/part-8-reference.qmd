@@ -1,0 +1,68 @@
+```{=latex}
+\newpage
+```
+
+# Part 8: Calculator procedures and measurement reference
+
+```{=latex}
+\markright{R01 Casio fx-991ES PLUS C}
+```
+
+## R01 Casio fx-991ES PLUS C procedures
+
+| Task | Key sequence | Check |
+|:--|:--|:--|
+| general calculation | `MODE` `1` (`COMP`) | standard arithmetic mode |
+| scientific entry | coefficient, `×10ˣ`, exponent | use the dedicated negative-sign key |
+| engineering display | calculate, then `ENG` | each press changes exponent by 3 |
+| reuse result | begin with operator or insert `Ans` | keeps the displayed result |
+| fixed decimals | `SHIFT` `MODE`, `6`, digits | changes display rounding |
+| scientific display | `SHIFT` `MODE`, `7`, digits | controls displayed significant digits |
+| normal display | `SHIFT` `MODE`, `8`, `2` | keeps small values in decimal form longer |
+| solve | `MODE` `1`, equation in $X$, `SHIFT` `CALC` | may return one of several roots |
+| table | `MODE` `7`, enter $f(X)$, start, end, step | use for trend checking |
+| base conversion | `MODE` `4`, choose `DEC`, `HEX`, `BIN`, or `OCT` | checks hand conversions |
+
+**Discipline:** Keep the full calculator result through intermediate work. Round once, report units, and include a complete answer sentence.
+
+Official reference: [Casio fx-570ES PLUS and fx-991ES PLUS User's Guide](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf).
+
+```{=latex}
+\newpage\markright{R02 Measurement and evidence cycle}
+```
+
+## R02 Measurement and evidence cycle
+
+Use the same cycle throughout the curriculum:
+
+1. Predict the direction and approximate magnitude.
+2. Calculate using GUESS.
+3. Draw a proper schematic or block diagram.
+4. Simulate or verify.
+5. Build or test where appropriate.
+6. Compare expected and observed results.
+7. Diagnose a fault or limitation.
+8. Explain and reflect.
+
+| Evidence category | Successful work shows |
+|:--|:--|
+| mathematical reasoning and GUESS | correct relationships, units, precision, and conclusion |
+| schematic quality | standard symbols, labels, values, junctions, and readable layout |
+| simulation or verification | correct construction, measurements, comparison, and limitations |
+| physical construction | safe practice, organized wiring, and pre-power checks |
+| testing and troubleshooting | expected readings, evidence-based diagnosis, and verification |
+| design decisions | criteria, trade-offs, and justified changes |
+| documentation | clear tables, graphs, images, captions, and engineering conclusion |
+
+The quick reference contains the compact formulas. The electronics library contains notes, staged slides, assignments, simulations, labs, and restricted teacher materials.
+
+# References and source boundaries
+
+- [Ontario Technological Education curriculum](https://www.edu.gov.on.ca/eng/curriculum/secondary/2009teched1112curr.pdf)
+- [All About Circuits open textbook](https://www.allaboutcircuits.com/textbook/)
+- [Arduino digital pins](https://docs.arduino.cc/learn/microcontrollers/digital-pins/)
+- [Raspberry Pi GPIO documentation](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header)
+- [LinuxCNC documentation](https://linuxcnc.org/docs/html/)
+- [Casio fx-991ES PLUS C manual](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf)
+
+Copyrighted textbook material remains in restricted Google Drive. This public handbook contains original explanations and diagrams with links to open or official sources.

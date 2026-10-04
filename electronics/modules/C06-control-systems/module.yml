@@ -1,0 +1,22 @@
+module_id: C06
+topic: Control-method comparison and PID
+asset_type: module
+audience: mixed
+requirement: required
+component_tags: [sensor, controller, actuator, motor, heater]
+equipment_tags: [spreadsheet, simulator, optional-microcontroller]
+context_tags: [control, automation, cnc]
+difficulty: intermediate
+curriculum_expectations: [TEJ3M-B1, TEJ3M-C2, TEJ4M-B1, TEJ4M-C2]
+grob_reference: "Control and feedback references listed in the handbook"
+safety_category: simulation-first
+estimated_time: "180 minutes"
+copyright_category: original-with-citations
+access: public
+source_path: electronics/modules/C06-control-systems/
+download_path: dist/C06_Control_Methods_Comparison_Student.pdf
+website_url: https://andrewandrade.ca/tech-edu-resources/tej3-4/control-systems/c06-pid.html
+slide_url: https://andrewandrade.ca/slides/2026-27/semester-1/period-1/tej/future/control-systems-and-cnc.html
+version: 1.0.0
+last_updated: 2026-10-04
+completion_status: reviewed

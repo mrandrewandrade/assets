@@ -108,4 +108,6 @@ Award evidence for at least six correctly linked items. A complete answer identi
 
 Use a checklist rather than one prescribed design. Require all named elements: source limit, conductor and connector checks, control, protection, load ratings, meter plan, stop conditions, emergency response, calculation, simulation result and limitation, and a troubleshooting reflection. The argument must connect each control to a specific risk.
 
+{{< include ../../includes/common-assessment-rubric.qmd >}}
+
 CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

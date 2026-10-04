@@ -1,0 +1,129 @@
+---
+title: "D01 Digital Inputs and Stable Switch Circuits"
+subtitle: "Student worksheet | Prepare the hardware before microcontroller code"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Student:** ______________________________  **Date:** __________________
+
+Use the evidence cycle in every activity: predict, calculate using GUESS, draw the schematic, simulate or verify, build or test where appropriate, compare evidence, diagnose a fault or limitation, and explain your conclusion.
+
+# Activity 1: Digital voltage levels {.unnumbered}
+
+**Required | Direct application**
+
+A $3.3\ \mathrm{V}$ GPIO input guarantees low at or below $0.8\ \mathrm{V}$ and high at or above $2.0\ \mathrm{V}$. Classify $0.2$, $1.2$, $2.4$, and $5.0\ \mathrm{V}$. Identify any value that is invalid, indeterminate, or potentially damaging.
+
+| Applied voltage | Guaranteed logic interpretation | Safe? | Evidence |
+|--:|:--:|:--:|:--|
+| $0.2\ \mathrm{V}$ | | | |
+| $1.2\ \mathrm{V}$ | | | |
+| $2.4\ \mathrm{V}$ | | | |
+| $5.0\ \mathrm{V}$ | | | |
+
+\workinglines{4}
+
+\newpage
+
+# Activity 2: Floating input and pull-down {.unnumbered}
+
+**Required | Schematic and verification**
+
+Explain why the unconnected input is incorrect. Redraw the external pull-down circuit, then complete its state table.
+
+![Floating input and pull-down reference circuits.](../../schematics/Digital_Input_Circuits.pdf){width=100%}
+
+| Switch position | Electrical connection | Pin voltage | Logic state | Active or inactive |
+|:--|:--|:--|:--:|:--|
+| open | | | | |
+| closed | | | | |
+
+**Verification evidence:** _______________________________________________
+
+**One limitation or likely fault:** ______________________________________
+
+\newpage
+
+# Activity 3: Pull-up and active-low input {.unnumbered}
+
+**Required | GUESS and interpretation**
+
+Use a $10\ \mathrm{k}\Omega$ external pull-up on a $5.0\ \mathrm{V}$ supply with a switch to ground.
+
+1. Complete the state table.
+2. Calculate resistor current while the switch is pressed.
+3. Explain why the resistor prevents a source short.
+4. Write a clear active-low signal name.
+
+| Switch position | Electrical connection | Pin voltage | Logic state | Active or inactive |
+|:--|:--|:--|:--:|:--|
+| open | | | | |
+| pressed | | | | |
+
+**GUESS work and exact calculator entry:**
+
+\workinglines{7}
+
+\newpage
+
+# Activity 4: Internal pull-up and debounce {.unnumbered}
+
+**Required | Comparison and design decision**
+
+Compare an internal pull-up with an external pull-up. State two reasons an external resistor may still be appropriate. Then choose $R$ and $C$ for a starting debounce time constant between $1$ and $10\ \mathrm{ms}$.
+
+$$\tau=RC$$
+
+| Decision | Choice | Evidence or trade-off |
+|:--|:--|:--|
+| internal or external pull-up | | |
+| resistor value | | |
+| capacitor value | | |
+| calculated $\tau$ | | |
+| software or hardware debounce | | |
+
+\workinglines{6}
+
+\newpage
+
+# Activity 5: Protected input troubleshooting {.unnumbered}
+
+**Required | Design and diagnosis**
+
+A student connects a $5.0\ \mathrm{V}$ sensor output directly to a Raspberry Pi input. The input behaves unpredictably after the test.
+
+1. Identify the compatibility mistake.
+2. Draw an approved interface concept for review.
+3. Name the data needed before selecting resistor or level-shifter values.
+4. Give a safe test sequence that does not risk a second GPIO pin.
+5. Write a one-paragraph engineering conclusion.
+
+\workinglines{10}
+
+\newpage
+
+# Optional Level 4 extensions {.unnumbered}
+
+## Extension A: Logic-gate input system {.unnumbered}
+
+Design a two-input logic circuit in which a stable switch input enables an indicator only when a second condition is true. Include the truth table, pull resistor, LED resistor, and transistor driver if the load exceeds the gate output rating.
+
+## Extension B: Microcontroller transfer {.unnumbered}
+
+Implement the same switch as an internal pull-up input. Record the released and pressed readings, demonstrate software debounce, and explain why the code uses `LOW` for the active state.
+
+{{< include ../../includes/common-assessment-rubric.qmd >}}
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Source: <https://andrewandrade.ca>.

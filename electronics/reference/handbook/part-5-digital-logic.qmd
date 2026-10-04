@@ -1,0 +1,90 @@
+```{=latex}
+\newpage
+```
+
+# Part 5: Digital logic
+
+```{=latex}
+\markright{L01 Logic gates}
+```
+
+## L01 Logic gates
+
+Digital logic represents defined voltage ranges as logic states. A gate performs a Boolean operation on one or more inputs. A small bubble on a symbol means inversion.
+
+::: {.content-visible when-format="html"}
+![Large standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR logic gates.](../schematics/Logic_Gates_Reference.svg){width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Large standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR logic gates.](../schematics/Logic_Gates_Reference.pdf){width=100%}
+:::
+
+| Gate | Boolean form | Output is 1 when |
+|:--|:--|:--|
+| NOT | $Y=\overline{A}$ | input is 0 |
+| AND | $Y=AB$ | every input is 1 |
+| OR | $Y=A+B$ | at least one input is 1 |
+| XOR | $Y=A\oplus B$ | inputs differ |
+| NAND | $Y=\overline{AB}$ | AND would be 0 |
+| NOR | $Y=\overline{A+B}$ | every input is 0 |
+| XNOR | $Y=\overline{A\oplus B}$ | inputs match |
+
+**Warning:** Logic symbols do not define safe voltage. Check the device family, supply voltage, input thresholds, and output-current limits.
+
+```{=latex}
+\newpage\markright{L02 Truth tables}
+```
+
+## L02 Truth tables
+
+A truth table lists every possible input combination. For $n$ inputs, make $2^n$ rows. Count in binary from all zeros to all ones, changing the rightmost bit every row.
+
+| $A$ | $B$ | AND | OR | XOR | NAND | NOR | XNOR |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 |
+
+**Three-input, two-output template**
+
+| Count | $A$ | $B$ | $C$ | Output 1 | Output 2 |
+|--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 | | |
+| 1 | 0 | 0 | 1 | | |
+| 2 | 0 | 1 | 0 | | |
+| 3 | 0 | 1 | 1 | | |
+| 4 | 1 | 0 | 0 | | |
+| 5 | 1 | 0 | 1 | | |
+| 6 | 1 | 1 | 0 | | |
+| 7 | 1 | 1 | 1 | | |
+
+**Common mistake:** The Count column is a row-order check. It is not a logic input or output.
+
+```{=latex}
+\newpage\markright{L03 Full adder}
+```
+
+## L03 Full-adder example
+
+A full adder accepts input bits $A$, $B$, and $C_{\mathrm{in}}$. It produces a sum bit $S$ and carry bit $C_{\mathrm{out}}$.
+
+$$S=A\oplus B\oplus C_{\mathrm{in}}$$
+
+$$C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B)$$
+
+| Count | $A$ | $B$ | $C_{\mathrm{in}}$ | $S$ | $C_{\mathrm{out}}$ |
+|--:|:--:|:--:|:--:|:--:|:--:|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 0 |
+| 2 | 0 | 1 | 0 | 1 | 0 |
+| 3 | 0 | 1 | 1 | 0 | 1 |
+| 4 | 1 | 0 | 0 | 1 | 0 |
+| 5 | 1 | 0 | 1 | 0 | 1 |
+| 6 | 1 | 1 | 0 | 0 | 1 |
+| 7 | 1 | 1 | 1 | 1 | 1 |
+
+**Test case:** `011` means $A=0$, $B=1$, and $C_{\mathrm{in}}=1$. The result is $S=0$ and $C_{\mathrm{out}}=1$.
+
+**Application and links:** Arithmetic logic, counters, and processors. Continue to stable physical inputs before connecting switches to logic or microcontrollers.

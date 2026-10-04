@@ -1,0 +1,12 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\begin{document}\begin{tikzpicture}[line width=1.1pt,draw=TEJNavy]
+\node[draw=TEJNavy,minimum width=2.5cm,minimum height=1.2cm,font=\Large] (pin) at (6.4,2.2) {GPIO};
+\draw (3.8,2.2) -- (pin.west);
+\draw (3.8,2.2) to[R,l=$R$] (3.8,3.7) node[vcc] {$V_{CC}$};
+\draw (3.8,2.2) to[C,l_=$C$] (3.8,0.6) node[ground] {};
+\draw (3.8,2.2) -- (1.2,2.2) to[nos,l_=SW] (1.2,0.6) node[ground] {};
+\fill[TEJNavy] (3.8,2.2) circle (2pt);
+\end{tikzpicture}\end{document}

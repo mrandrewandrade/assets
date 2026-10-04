@@ -1,0 +1,239 @@
+```{=latex}
+\newpage
+```
+
+# Part 4: Components and semiconductor circuits
+
+```{=latex}
+\markright{H14 Conductors and protection}
+```
+
+## H14 Conductors and protection
+
+Conductor resistance causes voltage drop and heating. Protection must interrupt fault current before the conductor or connected equipment reaches an unsafe condition.
+
+$$R=\rho\frac{L}{A} \qquad V_{\mathrm{drop}}=IR_{\mathrm{wire}} \qquad P_{\mathrm{loss}}=I^2R_{\mathrm{wire}}$$
+
+**Worked check:** $I=2.0\ \mathrm{A}$ through $0.15\ \Omega$ of wiring gives $V_{\mathrm{drop}}=0.30\ \mathrm{V}$ and $P_{\mathrm{loss}}=0.60\ \mathrm{W}$.
+
+**Warning:** Select fuses and conductors from approved equipment and manufacturer data. Never replace a fuse with a higher rating merely to stop nuisance opening.
+
+**Application and links:** USB cables, vehicle branches, battery wiring, and PCB traces. H01 shows source-side protection.
+
+```{=latex}
+\newpage\markright{H15 Batteries and sources}
+```
+
+## H15 Batteries and sources
+
+Series cells add voltage. Matched parallel cells can increase available ampere-hour capacity while keeping nominal voltage unchanged. Real sources have current, energy, temperature, and charging limits.
+
+$$E_{\mathrm{Wh}}=VQ_{\mathrm{Ah}} \qquad t\approx\frac{Q_{\mathrm{Ah}}}{I_{\mathrm{A}}}$$
+
+**Worked check:** A $5.0\ \mathrm{V}$, $2.0\ \mathrm{Ah}$ source stores a nominal $10\ \mathrm{Wh}$. Actual runtime depends on conversion loss, load profile, cut-off voltage, and battery condition.
+
+**Warning:** Use the correct charger and protection system for the battery chemistry. Do not assemble unmatched cells in parallel.
+
+**Application and links:** Power banks, portable equipment, robotics, and backup supplies. Restricted battery references remain in the teaching Drive.
+
+```{=latex}
+\newpage\markright{H16 Faults and troubleshooting}
+```
+
+## H16 Faults and troubleshooting
+
+Troubleshooting compares expected and observed evidence. Begin with the symptom, inspect, confirm the source, divide the system into sections, and change one thing at a time.
+
+| Fault | Typical evidence |
+|:--|:--|
+| open | zero path current; voltage can appear across the break |
+| short | low unintended resistance; excessive current or source limiting |
+| wrong value | current or voltage differs consistently from prediction |
+| intermittent | reading changes with movement, heat, or vibration |
+
+**Diagnostic sequence:** observe, inspect, predict, measure safely, isolate, test with power off, repair, and verify normal operation.
+
+**Warning:** Do not create destructive shorts as a classroom test. Treat a blown fuse as evidence of a fault, not the root cause.
+
+**Application and links:** Repair, commissioning, quality control, and maintenance. Use the H01 open-fault activity.
+
+```{=latex}
+\newpage\markright{H17 Magnetism and electromagnetism}
+```
+
+## H17 Magnetism and electromagnetism
+
+Current produces a magnetic field. Changing magnetic flux can induce voltage. Coils store energy in a magnetic field and resist rapid changes in current.
+
+$$E_L=\frac{1}{2}LI^2 \qquad v_L=L\frac{\Delta I}{\Delta t}$$
+
+The finite-difference form uses a measured change over a time interval and does not require calculus.
+
+**Worked check:** A $0.10\ \mathrm{H}$ coil changes by $0.50\ \mathrm{A}$ in $0.020\ \mathrm{s}$. The average induced magnitude is $2.5\ \mathrm{V}$.
+
+**Warning:** Interrupting inductive current can produce a high voltage. Provide an appropriate suppression path.
+
+**Application and links:** Speakers, solenoids, relays, motors, transformers, and ignition systems.
+
+```{=latex}
+\newpage\markright{H18 Relays, solenoids, and motors}
+```
+
+## H18 Relays, solenoids, and motors
+
+Electromagnetic actuators often draw more current than a logic output can provide. A transistor or driver board controls the load, while a diode or other suppressor manages inductive turn-off energy.
+
+| Device | Electrical input | Mechanical output |
+|:--|:--|:--|
+| relay | coil current | contact state |
+| solenoid | coil current | linear force or motion |
+| DC motor | voltage and current | rotation and torque |
+
+**Design check:** use the load's rated and stall current, driver limits, supply capability, and flyback protection. Separate classroom control signals from higher-energy power wiring.
+
+**Application and links:** Locks, valves, fans, pumps, conveyors, and vehicle controls. Related motor-control material appears in C09.
+
+```{=latex}
+\newpage\markright{H19 Capacitors and RC response}
+```
+
+## H19 Capacitors and RC response
+
+A capacitor stores energy in an electric field and opposes rapid voltage change. In a simple RC step response, one time constant reaches about $63.2\%$ of the final change.
+
+$$Q=CV \qquad E_C=\frac{1}{2}CV^2 \qquad \tau=RC$$
+
+**Worked GUESS example:** $R=10\ \mathrm{k}\Omega$ and $C=100\ \mu\mathrm{F}$ give $\tau=(10\times10^3)(100\times10^{-6})=1.0\ \mathrm{s}$.
+
+**Warning:** Confirm polarity and voltage rating. Discharge stored energy safely before resistance measurements or handling.
+
+**Application and links:** Timing, filtering, energy storage, reset circuits, and hardware debouncing.
+
+```{=latex}
+\newpage\markright{H20 Inductors and LR response}
+```
+
+## H20 Inductors and LR response
+
+An inductor stores magnetic-field energy and opposes rapid current change. A simple LR circuit has time constant $\tau=L/R$.
+
+$$E_L=\frac{1}{2}LI^2 \qquad \tau=\frac{L}{R}$$
+
+**Worked check:** $L=0.50\ \mathrm{H}$ and $R=100\ \Omega$ give $\tau=5.0\ \mathrm{ms}$.
+
+**Warning:** Current can continue after the control device turns off. Provide a safe path and check the resulting release time.
+
+**Application and links:** Relay coils, motor windings, filters, energy conversion, and ignition coils.
+
+```{=latex}
+\newpage\markright{H21 Diodes and LEDs}
+```
+
+## H21 Diodes and LEDs
+
+A diode conducts primarily in one direction within its ratings. An LED requires correct polarity and an independent current-limiting element.
+
+$$R=\frac{V_S-V_F}{I_{\mathrm{LED}}} \qquad P_R=I_{\mathrm{LED}}^2R$$
+
+**Worked GUESS example:** For $V_S=5.0\ \mathrm{V}$, $V_F=2.0\ \mathrm{V}$, and $I=10\ \mathrm{mA}$, $R=300\ \Omega$. Choose a suitable standard value and recalculate actual current.
+
+**Warning:** $V_F$ varies with device, current, and temperature. Do not connect an LED directly across a stiff voltage source.
+
+**Application and links:** Indicators, lighting, polarity protection, flyback paths, and rectification. See the H01 circuit.
+
+```{=latex}
+\newpage\markright{H22 Rectifiers and power supplies}
+```
+
+## H22 Rectifiers and power supplies
+
+Rectifiers convert alternating polarity into one-direction current. Filtering reduces ripple, and regulation holds the output closer to a target despite load and input changes.
+
+| Stage | Function |
+|:--|:--|
+| transformer or approved adapter | isolation and voltage conversion |
+| rectifier | one-direction current |
+| filter capacitor | stores energy between peaks |
+| regulator | controls output voltage |
+
+**Design check:** verify diode current and reverse-voltage ratings, capacitor voltage and ripple-current ratings, regulator dissipation, and load current.
+
+**Warning:** Use only approved isolated low-voltage classroom sources. Mains construction requires specialized equipment, training, and supervision.
+
+**Application and links:** Wall adapters, bench supplies, chargers, and embedded systems.
+
+```{=latex}
+\newpage\markright{H23 Transistor as a switch}
+```
+
+## H23 Transistor as a switch
+
+A small control signal can switch a larger load current through a BJT, MOSFET, or driver board. A low-side switch places the switching device between the load and ground.
+
+::: {.content-visible when-format="html"}
+![Reference circuits including an NPN low-side driver with a flyback diode.](../schematics/Common_Reference_Circuits.svg){width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Reference circuits including an NPN low-side driver with a flyback diode.](../schematics/Common_Reference_Circuits.pdf){width=100%}
+:::
+
+$$R_B=\frac{V_{\mathrm{drive}}-V_{BE}}{I_B} \qquad I_B\geq\frac{I_C}{\beta_{\mathrm{forced}}}$$
+
+**Warning:** Confirm pinout, device limits, switching loss, ground reference, and flyback protection. GPIO pins do not drive motors directly.
+
+**Application and links:** Relays, motors, solenoids, lamps, and higher-current indicators.
+
+```{=latex}
+\newpage\markright{H24 555 timer}
+```
+
+## H24 555 timer
+
+The 555 timer compares capacitor voltage with internal thresholds to create delays or oscillation.
+
+$$t_{\mathrm{mono}}\approx1.1RC$$
+
+$$f_{\mathrm{astable}}\approx\frac{1.44}{(R_A+2R_B)C}$$
+
+**Worked check:** $R=100\ \mathrm{k}\Omega$ and $C=10\ \mu\mathrm{F}$ give $t\approx1.1\ \mathrm{s}$.
+
+**Warning:** Check the timer version, supply range, output-current capability, capacitor polarity, and actual threshold tolerances.
+
+**Application and links:** Delays, flashers, pulse generation, missing-pulse detection, and simple control.
+
+```{=latex}
+\newpage\markright{H25 AC impedance, resonance, and filters}
+```
+
+## H25 AC impedance, resonance, and filters
+
+Reactance describes frequency-dependent opposition. Resonance occurs when inductive and capacitive effects balance in an idealized network.
+
+$$X_C=\frac{1}{2\pi fC} \qquad X_L=2\pi fL \qquad f_0=\frac{1}{2\pi\sqrt{LC}}$$
+
+**Worked check:** $C=100\ \mathrm{nF}$ at $1.0\ \mathrm{kHz}$ gives $X_C\approx1.59\ \mathrm{k}\Omega$.
+
+**Warning:** Real components include resistance, tolerance, voltage limits, current limits, and parasitic effects.
+
+**Application and links:** Audio, communication, sensor filtering, power conversion, and interference control.
+
+```{=latex}
+\newpage\markright{H26 Amplifiers and op-amps}
+```
+
+## H26 Amplifiers and op-amps
+
+An amplifier uses a power source and a control signal to produce a larger or better-conditioned output. Negative feedback can set a predictable closed-loop gain.
+
+$$A_V=\frac{V_{\mathrm{out}}}{V_{\mathrm{in}}}$$
+
+For an ideal non-inverting op-amp stage:
+
+$$A_V=1+\frac{R_F}{R_G}$$
+
+**Worked check:** $R_F=9.0\ \mathrm{k}\Omega$ and $R_G=1.0\ \mathrm{k}\Omega$ give $A_V=10$.
+
+**Warning:** Output cannot exceed the available supply range. Check input common-mode range, output swing, bandwidth, and load current.
+
+**Application and links:** Sensor conditioning, audio, comparators, filters, and closed-loop control.

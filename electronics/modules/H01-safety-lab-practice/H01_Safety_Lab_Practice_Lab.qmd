@@ -18,6 +18,8 @@ lang: en-CA
 
 **Module:** H01  **Lab:** L01  **Time:** 75 minutes  **Safety:** Protected extra-low voltage
 
+**Document role:** This lab contains equipment, safety, physical procedure, measurements, approved faults, and cleanup. Bring completed worksheet predictions and simulation evidence rather than copying them again.
+
 # Learning goal
 
 Identify source, conductors, control, protection, and load; predict current; place meters correctly; build safely; and diagnose one teacher-approved open fault.

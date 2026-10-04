@@ -1,0 +1,184 @@
+---
+title: "TEJ Electronics Quick Reference"
+subtitle: "Core formulas and checks for assignments and tests"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [9pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.45in]
+    toc: false
+execute: {enabled: false}
+lang: en-CA
+---
+
+```{=latex}
+\begin{multicols}{2}
+```
+
+# SI prefixes {.unnumbered}
+
+```{=latex}
+\begin{center}\small
+\begin{tabular}{lcc}
+\toprule
+Prefix & Symbol & Multiplier\\
+\midrule
+giga & G & $10^9$\\
+mega & M & $10^6$\\
+kilo & k & $10^3$\\
+base & -- & $10^0$\\
+milli & m & $10^{-3}$\\
+micro & $\mu$ & $10^{-6}$\\
+nano & n & $10^{-9}$\\
+pico & p & $10^{-12}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+# Notation and significant figures {.unnumbered}
+
+- Scientific notation: $1\leq |a|<10$ in $a\times10^n$.
+- Engineering notation uses exponents divisible by 3.
+- Multiplication and division: use the fewest significant figures.
+- Addition and subtraction: round to the least precise decimal place.
+- Keep calculator digits until the final result. Include units.
+
+# GUESS {.unnumbered}
+
+```{=latex}
+\begin{center}\small
+\begin{tabular}{cl}
+\toprule
+Letter & Action\\
+\midrule
+\textbf{G} & list given symbols, values, units\\
+\textbf{U} & name the unknown and target unit\\
+\textbf{E} & write and rearrange the equation\\
+\textbf{S} & substitute values with units\\
+\textbf{S} & solve, round, and state the answer\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+# Ohm's law, power, and energy {.unnumbered}
+
+$$V=IR \qquad I=\frac{V}{R} \qquad R=\frac{V}{I}$$
+
+$$P=VI=I^2R=\frac{V^2}{R}$$
+
+$$E=Pt \qquad Q=It$$
+
+Check component voltage, current, and power ratings.
+
+# Series rules {.unnumbered}
+
+$$I_T=I_1=I_2=\cdots$$
+
+$$V_T=V_1+V_2+\cdots \qquad R_T=R_1+R_2+\cdots$$
+
+One current path. A shared node has no other branch.
+
+# Parallel rules {.unnumbered}
+
+$$V_T=V_1=V_2=\cdots$$
+
+$$I_T=I_1+I_2+\cdots \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$$
+
+For two resistors, $R_T=R_1R_2/(R_1+R_2)$.
+
+![Series has one current path; parallel has separate branches across the same two nodes.](../schematics/Series_Parallel_Comparison.pdf){width=100%}
+
+```{=latex}
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+```
+
+# Kirchhoff's laws {.unnumbered}
+
+**KCL at a node:** $\sum I_{\mathrm{in}}=\sum I_{\mathrm{out}}$
+
+**KVL around a loop:** $\sum V=0$
+
+# Divider and timing relationships {.unnumbered}
+
+$$V_{\mathrm{out}}=V_{\mathrm{in}}\frac{R_2}{R_1+R_2}$$
+
+$$\tau=RC$$
+
+Loading changes the effective divider resistance. One time constant reaches about $63.2\%$ of the final RC step change.
+
+# LED current limiting {.unnumbered}
+
+$$R=\frac{V_S-V_F}{I_{\mathrm{LED}}}$$
+
+$$P_R=I_{\mathrm{LED}}^2R$$
+
+Confirm LED polarity, current, resistor power, and supply limits.
+
+# Transistor switching {.unnumbered}
+
+For an NPN low-side switch:
+
+$$R_B=\frac{V_{\mathrm{drive}}-V_{BE}}{I_B} \qquad I_B\geq\frac{I_C}{\beta_{\mathrm{forced}}}$$
+
+Use a flyback diode across an inductive load. Check device pinout, voltage, current, and power.
+
+# Basic digital logic {.unnumbered}
+
+```{=latex}
+\begin{center}\small
+\begin{tabular}{cl}
+\toprule
+Notation & Meaning\\
+\midrule
+$\overline{A}$ & NOT A\\
+$AB$ & A AND B\\
+$A+B$ & A OR B\\
+$A\oplus B$ & A XOR B\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+For $n$ inputs, a complete truth table has $2^n$ rows. Count from all zeros to all ones in binary.
+
+# Stable switch inputs {.unnumbered}
+
+- Pull-down: open reads 0; a switch to $V_{CC}$ reads 1.
+- Pull-up: open reads 1; a switch to ground reads 0.
+- A switch-to-ground input is usually **active-low**.
+- Never leave a CMOS input floating.
+- Confirm GPIO logic voltage. Do not assume 5 V tolerance.
+
+# Measurement placement {.unnumbered}
+
+```{=latex}
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\toprule
+Instrument & Placement & Power state\\
+\midrule
+voltmeter & parallel & on\\
+ammeter & series & on after setup check\\
+ohmmeter & isolated part & off and discharged\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+Never place a current-configured meter directly across a source. Return the red lead from the current jack after measuring.
+
+```{=latex}
+\end{multicols}
+```
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.

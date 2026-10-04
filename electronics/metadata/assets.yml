@@ -1,7 +1,7 @@
 assets:
-  - module_id: REF
-    topic: Electronics formulas and calculator procedures
-    asset_type: formula-reference
+  - module_id: REF-QUICK
+    topic: Electronics quick reference
+    asset_type: quick-reference
     audience: mixed
     requirement: required
     component_tags: [resistor, capacitor, inductor, diode, led, transistor, 555, logic]
@@ -14,11 +14,33 @@ assets:
     estimated_time: reference
     copyright_category: original-with-citations
     access: public
-    source_path: electronics/reference/TEJ-Electronics-Formula-Reference.qmd
-    download_path: dist/TEJ-Electronics-Formula-Reference.pdf
-    website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Formula-Reference.html
+    source_path: electronics/reference/TEJ-Electronics-Quick-Reference.qmd
+    download_path: dist/TEJ-Electronics-Quick-Reference.pdf
+    website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Quick-Reference.pdf
     slide_url: null
-    version: 1.1.0
+    version: 1.0.0
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: REF-HANDBOOK
+    topic: Electronics reference handbook
+    asset_type: reference-handbook
+    audience: mixed
+    requirement: required
+    component_tags: [resistor, capacitor, inductor, diode, led, transistor, 555, logic, gpio, motor, cnc]
+    equipment_tags: [casio-fx-991es-plus-c, digital-multimeter, simulator]
+    context_tags: [electronics, control, automation, cnc]
+    difficulty: core-to-extension
+    curriculum_expectations: [TEJ3M-B1, TEJ3M-C1, TEJ4M-B1, TEJ4M-C2]
+    grob_reference: "Grob Basic Electronics, 12th edition, Chapters 0-33"
+    safety_category: low-voltage-classroom
+    estimated_time: reference
+    copyright_category: original-with-citations
+    access: public
+    source_path: electronics/reference/TEJ-Electronics-Reference-Handbook.qmd
+    download_path: dist/TEJ-Electronics-Reference-Handbook.pdf
+    website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Reference-Handbook.html
+    slide_url: null
+    version: 1.0.0
     last_updated: 2026-10-04
     completion_status: reviewed
   - module_id: H01
@@ -26,7 +48,7 @@ assets:
     asset_type: module-package
     audience: mixed
     requirement: required
-    component_tags: [fuse, switch, lamp, resistor]
+    component_tags: [fuse, switch, led, resistor]
     equipment_tags: [bench-power-supply, digital-multimeter, breadboard, safety-glasses]
     context_tags: [usb-power-bank, automotive-fuse-panel]
     difficulty: introductory
@@ -40,6 +62,50 @@ assets:
     download_path: dist/H01_*
     website_url: https://andrewandrade.ca/commons/tej3-4/electronics-library/modules/h01-safety-lab-practice.html
     slide_url: https://andrewandrade.ca/slides/future/h01-safety-lab-practice.html
+    version: 1.0.0
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: D01
+    topic: Digital inputs and stable switch circuits
+    asset_type: module-package
+    audience: mixed
+    requirement: required
+    component_tags: [switch, resistor, capacitor, logic-gate, gpio]
+    equipment_tags: [digital-multimeter, logic-probe, microcontroller]
+    context_tags: [computer, control, robotics]
+    difficulty: core
+    curriculum_expectations: [TEJ3M-B1, TEJ3M-C1, TEJ4M-B1]
+    grob_reference: "Grob Basic Electronics, 12th edition, digital logic and interfacing chapters"
+    safety_category: protected-low-voltage-digital
+    estimated_time: 150-minutes
+    copyright_category: original-with-citations
+    access: public
+    source_path: electronics/modules/D01-digital-inputs/
+    download_path: dist/D01_Digital_Inputs_Student_Worksheet.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/digital-inputs/
+    slide_url: https://andrewandrade.ca/slides/future/d01-digital-inputs.html
+    version: 1.0.0
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: C06
+    topic: Control-method comparison and PID
+    asset_type: module-package
+    audience: mixed
+    requirement: required
+    component_tags: [sensor, controller, actuator, motor, heater]
+    equipment_tags: [spreadsheet, simulator]
+    context_tags: [control, automation, cnc]
+    difficulty: intermediate
+    curriculum_expectations: [TEJ3M-B1, TEJ3M-C2, TEJ4M-B1, TEJ4M-C2]
+    grob_reference: "Control and feedback references listed in the handbook"
+    safety_category: simulation-first
+    estimated_time: 180-minutes
+    copyright_category: original-with-citations
+    access: public
+    source_path: electronics/modules/C06-control-systems/
+    download_path: dist/C06_Control_Methods_Comparison_Student.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/control-systems/c06-pid.html
+    slide_url: https://andrewandrade.ca/slides/future/control-systems-and-cnc.html
     version: 1.0.0
     last_updated: 2026-10-04
     completion_status: reviewed

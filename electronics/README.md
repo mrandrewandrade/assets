@@ -4,7 +4,7 @@ This directory is the canonical source for original TEJ electronics teaching art
 
 ## Structure
 
-- `reference/`: formula and calculator references
+- `reference/`: the two-page quick reference and curriculum-ordered handbook
 - `worksheets/`: maintainable student worksheets and teacher keys
 - `modules/`: complete hardware-module packages
 - `schematics/`: reusable accessible SVG diagrams
@@ -27,7 +27,7 @@ On Windows PowerShell when Git Bash or WSL is unavailable:
 powershell -ExecutionPolicy Bypass -File scripts/render-electronics.ps1
 ```
 
-The command renders seven PDFs and one HTML reference into `dist/`. XeLaTeX is required for the PDF build. Rendered outputs use stable, descriptive filenames.
+The command renders the maintained student, teacher, reference, and module PDFs plus the self-contained handbook HTML into `dist/`. XeLaTeX is required for the PDF build. CircuitikZ and TikZ sources generate the reusable PDF and SVG diagrams.
 
 ## Copyright boundary
 

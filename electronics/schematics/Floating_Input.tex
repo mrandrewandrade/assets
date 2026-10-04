@@ -1,0 +1,10 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{TEJNavy}{HTML}{1E2B55}\definecolor{TEJRed}{HTML}{A12622}
+\begin{document}\begin{tikzpicture}[line width=1.1pt]
+\node[font=\bfseries\LARGE,text=TEJRed] at (3.5,2.5) {Floating input: incorrect};
+\node[draw=TEJNavy,minimum width=2.5cm,minimum height=1.2cm,font=\Large] (pin) at (5.2,1.1) {GPIO};
+\draw[TEJNavy] (1.0,1.1) -- (pin.west);
+\node[text=TEJRed,font=\bfseries\Huge] at (1.7,1.75) {$\times$};
+\node[font=\large,text=TEJNavy,align=center] at (3.5,0) {No defined voltage; electrical noise can change the reading};
+\end{tikzpicture}\end{document}

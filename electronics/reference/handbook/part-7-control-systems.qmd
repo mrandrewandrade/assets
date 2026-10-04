@@ -1,0 +1,216 @@
+```{=latex}
+\newpage
+```
+
+# Part 7: Control systems and motion control
+
+```{=latex}
+\markright{C01 Control-system anatomy}
+```
+
+## C01 Control-system anatomy
+
+A control system uses an input and a controller to influence a process or plant. The output describes the result. A disturbance changes the process without being requested. In a feedback system, a sensor returns the measured output so the controller can compare it with the setpoint.
+
+::: {.content-visible when-format="html"}
+![Open-loop, closed-loop, PID, and CNC reference block diagrams.](../schematics/Control_Systems_Reference.svg){width=100%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Open-loop, closed-loop, PID, and CNC reference block diagrams.](../schematics/Control_Systems_Reference.pdf){width=100%}
+:::
+
+$$e=r-y$$
+
+| Symbol | Meaning |
+|:--:|:--|
+| $r$ | setpoint or reference |
+| $y$ | measured output |
+| $e$ | error |
+| $u$ | controller output |
+
+**Application:** thermostats, cruise control, motor drives, robotics, and CNC machines.
+
+```{=latex}
+\newpage\markright{C02 Open-loop control}
+```
+
+## C02 Open-loop control
+
+An open-loop controller does not measure whether the process reached the intended result. It can be simple and predictable when the load and environment remain consistent, but it cannot automatically correct a disturbance.
+
+**Examples:** timed motor operation, fixed PWM, toaster timers, simple conveyors, and stepper systems without position feedback.
+
+**Prediction activity:** Sketch expected output for a motor commanded to $60\%$ PWM. Add a disturbance that increases load at $t=5\ \mathrm{s}$. The command stays fixed while actual speed can fall.
+
+**Design change:** Add a speed sensor and explain what new information becomes available. This changes the architecture to closed loop.
+
+```{=latex}
+\newpage\markright{C03 Closed-loop feedback}
+```
+
+## C03 Closed-loop feedback
+
+A closed-loop controller measures output and calculates error. Negative feedback applies a correcting action intended to reduce the error.
+
+$$e=r-y$$
+
+**Worked check:** A temperature setpoint is $24.0^\circ\mathrm{C}$ and the measured value is $21.5^\circ\mathrm{C}$. The error is $+2.5^\circ\mathrm{C}$, so a heating controller should increase its command.
+
+**Evidence:** Plot setpoint and measured output on the same time axis. Mark rise time, overshoot, steady-state error, or cycling when those features apply.
+
+**Application:** Thermostats, cruise control, regulated power supplies, and servo position systems.
+
+```{=latex}
+\newpage\markright{C04 On-off control and hysteresis}
+```
+
+## C04 On-off control and hysteresis
+
+On-off control applies full output in one state and zero output in the other. A single threshold can cause rapid switching when noise or thermal lag moves the measured value around the setpoint. Hysteresis uses separate turn-on and turn-off thresholds.
+
+For heating with setpoint $r$ and half-band $h$:
+
+- turn on when $y<r-h$
+- turn off when $y>r+h$
+- keep the previous state inside the band
+
+**Worked check:** With $r=22^\circ\mathrm{C}$ and $h=1^\circ\mathrm{C}$, heat turns on below $21^\circ\mathrm{C}$ and turns off above $23^\circ\mathrm{C}$.
+
+**Investigation:** Compare the cycling frequency with $h=0$, $0.5$, and $1.0^\circ\mathrm{C}$ using the same simulated room.
+
+```{=latex}
+\newpage\markright{C05 Proportional control}
+```
+
+## C05 Proportional control
+
+Proportional control makes the command proportional to present error.
+
+$$u=K_Pe$$
+
+**Worked check:** If $K_P=20\%$ output per degree and $e=2.0^\circ\mathrm{C}$, then $u=40\%$ before applying output limits.
+
+Increasing $K_P$ often speeds the response and reduces steady-state error, but excessive gain can cause overshoot or oscillation. Output saturation limits the command to what the actuator can deliver.
+
+**Investigation:** Use one simulated process and compare low, medium, and high $K_P$. Record rise time, overshoot, and final error.
+
+```{=latex}
+\newpage\markright{C06 Integral, derivative, and PID control}
+```
+
+## C06 Integral, derivative, and PID control
+
+Integral action responds to accumulated error and can remove steady-state error. Derivative action responds to how quickly error changes and can reduce overshoot, but measurement noise can make derivative action unstable. PID combines all three actions.
+
+For a classroom spreadsheet or sampled simulation:
+
+$$u_k=K_Pe_k+K_I\sum_{j=0}^{k}e_j\Delta t+K_D\frac{e_k-e_{k-1}}{\Delta t}$$
+
+| Mode | Main benefit | Main limitation |
+|:--|:--|:--|
+| P | simple, fast correction | steady-state error can remain |
+| PI | removes persistent error | windup and added overshoot |
+| PD | anticipates rapid change | noise sensitivity |
+| PID | combines the three actions | more tuning and protection required |
+
+**Concept checks:** Integral windup occurs when error continues accumulating while the output is saturated. Anti-windup limits or pauses that accumulation. Derivative filtering reduces the effect of noisy measurements.
+
+**Manual tuning investigation:** Start with all gains at zero. Increase $K_P$ until the response is useful. Add a small $K_I$ to remove remaining error. Add $K_D$ only if the simulation and measurement quality support it. Compare graphs after each change.
+
+**Safety:** Tune in simulation or data analysis before physical implementation. Keep actuator limits and safe shutdown independent of the software controller.
+
+```{=latex}
+\newpage\markright{C07 Sequential control and state machines}
+```
+
+## C07 Sequential control and state machines
+
+A state machine describes what the system is doing now, which inputs permit a transition, and which outputs belong to each state. Include reset and fault states rather than treating them as afterthoughts.
+
+| State | Outputs | Transition condition |
+|:--|:--|:--|
+| idle | motor off | start and guards safe |
+| run | motor command active | stop, limit, or timer done |
+| complete | indicator on | reset |
+| fault | outputs safe | fault cleared and reset approved |
+
+**Application:** Elevators, vending machines, traffic lights, games, and production sequences.
+
+**Design check:** Every state needs a defined response to stop, fault, and reset inputs.
+
+```{=latex}
+\newpage\markright{C08 Safety controls and interlocks}
+```
+
+## C08 Safety controls and interlocks
+
+Safety controls use normally closed stop circuits, guard or door interlocks, limit switches, and defined fault states so a broken wire tends to stop operation rather than hide the fault.
+
+**Fail-safe principle:** Loss of the healthy signal should move the classroom model toward the safe state.
+
+**Warning:** Classroom circuits demonstrate principles only. Certified industrial safety functions require approved components, risk assessment, validated architecture, documentation, and qualified supervision.
+
+**Evidence:** Draw normal, stop, guard-open, and wire-break states. Explain which energy source each control removes or inhibits.
+
+```{=latex}
+\newpage\markright{C09 Motor and motion control}
+```
+
+## C09 Motor and motion control
+
+Motion systems combine power electronics, motors, sensors, and command signals. A logic output usually controls a transistor, MOSFET, H-bridge, servo interface, stepper driver, or motor-control board rather than the motor directly.
+
+| Method | Main signals | Typical feedback |
+|:--|:--|:--|
+| DC motor | direction and PWM | encoder or speed sensor |
+| hobby servo | command pulse | internal position feedback |
+| stepper driver | step and direction | often open loop; optional encoder |
+| H-bridge | direction and PWM | current, speed, or position as designed |
+
+**Checks:** supply voltage, running and stall current, driver rating, thermal path, flyback or recirculation path, direction logic, and stop behaviour.
+
+```{=latex}
+\newpage\markright{C10 CNC as a control system}
+```
+
+## C10 CNC as a control system
+
+A CNC system connects CAD geometry, CAM toolpaths, G-code, a controller, motor drives, axes, feedback or step counts, limit and home switches, spindle or tool control, and the physical process. Work coordinates relate the programmed part to the actual setup.
+
+| Layer | Role |
+|:--|:--|
+| CAD | defines geometry |
+| CAM | selects tools and creates toolpaths |
+| G-code | expresses machine motion and functions |
+| controller | plans and coordinates motion |
+| drives and motors | move the axes |
+| machine and process | create the physical result |
+
+Open-loop stepper systems assume commanded steps produced motion. Closed-loop servo systems measure motion and correct error. Both need homing, limits, interlocks, and an emergency-stop strategy appropriate to the machine.
+
+LinuxCNC supports open-loop stepper and closed-loop servo architectures and provides motion planning, I/O control, HAL connections, and G-code interpretation. Use simulation before a supervised machine test. See the official [LinuxCNC architecture overview](https://linuxcnc.org/docs/master/html/en/getting-started/about-linuxcnc.html).
+
+Cross-link tooling, materials, CAD, CAM, laser cutting, and shop-safety resources from the existing [Teaching Materials](https://andrewandrade.ca/tech-edu-resources/teaching-materials/) collection instead of duplicating downloads.
+
+```{=latex}
+\newpage\markright{C11 Control-systems and CNC culminating project}
+```
+
+## C11 Control-systems and CNC culminating project
+
+Choose one pathway: simulated thermostat with hysteresis, motor-speed investigation, servo position system, stepper axis with homing and limits, elevator state machine, vending-machine controller, logic game, miniature conveyor, CNC subsystem model, or supervised LinuxCNC configuration and machine test.
+
+**Required engineering evidence**
+
+1. System block diagram and state or control description.
+2. Expected-response prediction.
+3. Sample data or simulation with setpoint and measured output over time.
+4. Identification of rise time, overshoot, steady-state error, or cycling where relevant.
+5. One design change and evidence showing whether performance improved.
+6. Fault, limit, and safe-state analysis.
+7. Written engineering conclusion.
+
+**Comparison requirement:** Use the same simulated process to compare open loop, on-off control, on-off with hysteresis, proportional control, and PI or PID control.
+
+**Boundary:** A physical PID build is optional. LinuxCNC machine operation requires suitable equipment, an approved setup, and direct supervision.
