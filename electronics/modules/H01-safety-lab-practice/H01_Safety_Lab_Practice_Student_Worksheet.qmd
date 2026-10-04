@@ -1,0 +1,236 @@
+---
+title: "H01 Safety and Lab Practice"
+subtitle: "Student worksheet | Protected low-voltage circuits"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Student:** ______________________________  **Date:** __________________  **Class:** ______
+
+Required: Questions 1 to 5. Optional Level 4 evidence: Questions 6 to 10. Calculate before simulation or building. Use protected extra-low voltage only.
+
+![A protected low-voltage series circuit with source, fuse, switch, resistor, and LED.](../../schematics/H01_Safety_Lab_Practice_Schematic.pdf){fig-cap="H01 reference schematic. The fuse is close to the source, the switch controls the path, and the resistor limits LED current." width=96%}
+
+\newpage
+
+# Question 1: Predict LED current {.unnumbered}
+
+**Required | GUESS hand calculation**<br>
+**Context:** A $9.0\ \mathrm{V}$ battery supplies a red LED with $V_F=2.0\ \mathrm{V}$ through $330\ \Omega$.
+
+| Given | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Source voltage | $V_S$ | 9.0 | V |
+| LED forward voltage | $V_F$ | 2.0 | V |
+| Series resistance | $R$ | 330 | $\Omega$ |
+
+**Unknowns:** LED current $I$, resistor power $P_R$, and whether a $0.25\ \mathrm{W}$ resistor is acceptable.<br>
+**Precision:** Two significant figures. Use a sensible metric prefix.<br>
+**Calculator expectation:** Enter $(V_S-V_F)/R$, then reuse Ans for $I^2R$.<br>
+**Tinkercad:** Calculate first; verification is Question 2.
+
+\workinglines{8}
+
+**Final answer:** _________________________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Clear, upright, complete. | Submit even if blank. |
+
+\newpage
+
+# Question 2: Verify the protected circuit {.unnumbered}
+
+**Required | Tinkercad verification**<br>
+**Context:** Recreate the H01 source, switch, $500\ \mathrm{mA}$ fuse, $330\ \Omega$ resistor, and LED.
+
+| Record | Calculated | Simulated | Percent difference |
+|:--|--:|--:|--:|
+| LED current | | | |
+| Resistor voltage | | | |
+| LED voltage | | | |
+
+**Meter rules:** Ammeter in series; voltmeter in parallel.<br>
+**Unknowns:** Readings, percent difference, one discrepancy, and one limitation.<br>
+**Calculator expectation:** Show the percent-difference entry.<br>
+**Tinkercad requirement:** Include a screenshot showing meter placement and component values.
+
+\workinglines{7}
+
+**Screenshot or share link:** _____________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Calculation and comparison. | Submit even if blank. |
+
+\newpage
+
+# Question 3: Source, protection, control, and load {.unnumbered}
+
+**Required | Circuit anatomy**<br>
+**Context:** Compare a USB power bank circuit with a vehicle fuse-panel branch.
+
+Label the source, conductors, control, protection, and load on the H01 schematic. Explain why the fuse belongs close to the source. Calculate normal current for a $12.0\ \mathrm{V}$, $2.2\ \mathrm{W}$ lamp, then select the smallest listed fuse above normal current from $0.10$, $0.25$, $0.50$, and $1.0\ \mathrm{A}$ when the wire is rated for $1.0\ \mathrm{A}$.
+
+**Unknowns:** Lamp current, selected fuse, and two-sentence justification.<br>
+**Precision:** Two significant figures.<br>
+**Calculator expectation:** Show $I=P/V$.<br>
+**Tinkercad:** No destructive short test.
+
+\workinglines{8}
+
+**Final answer:** _________________________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Labelled diagram and GUESS. | Submit even if blank. |
+
+\newpage
+
+# Question 4: Place the meters correctly {.unnumbered}
+
+**Required | Measurement planning**<br>
+**Context:** You need the LED voltage and total circuit current before a physical build.
+
+Draw a voltmeter across the LED and an ammeter in the main series path. State the lead jacks, meter functions, starting ranges, and power state for each measurement. Explain why resistance and continuity measurements require power off.
+
+| Measurement | Connection | Power state | Expected magnitude |
+|:--|:--|:--|:--|
+| LED voltage | | | |
+| Total current | | | |
+| Resistor resistance | | | |
+
+**Calculator expectation:** Record the expected values from Questions 1 and 2.<br>
+**Tinkercad:** Optional meter-placement rehearsal.
+
+\workinglines{7}
+
+**Final answer:** _________________________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Meter sketch and table. | Submit even if blank. |
+
+\newpage
+
+# Question 5: Diagnose an open switch {.unnumbered}
+
+**Required | Troubleshooting**<br>
+**Context:** The LED is off even though the $9.0\ \mathrm{V}$ source is present.
+
+Predict total current, voltage across the open switch, and voltage across the resistor when the switch is open. Give a safe sequence that distinguishes an open switch from a dead source.
+
+**Unknowns:** Three predicted readings and a safe diagnostic sequence.<br>
+**Precision:** Two significant figures.<br>
+**Calculator expectation:** No calculator is needed for zero-current voltage drop; explain the physics.<br>
+**Tinkercad:** Verify only after writing the predictions.
+
+\workinglines{8}
+
+**Final answer:** _________________________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Predictions and diagnosis. | Submit even if blank. |
+
+\newpage
+
+# Question 6: Hazard hunt redesign {.unnumbered}
+
+**Optional Level 4 | Design**<br>
+Identify at least six hazards in a proposed bench setup with loose metal, long stripped wires, no current limit, an unprotected source, a damaged lead, food beside the circuit, and a charged capacitor. Redesign the setup and justify the order of controls.
+
+**Required evidence:** Hazard, consequence, control, and verification table.<br>
+**Calculator expectation:** None.<br>
+**Tinkercad:** State why a simulation cannot prove physical bench safety.
+
+\workinglines{8}
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Hazard table and redesign. | Submit even if blank. |
+
+\newpage
+
+# Question 7: Blade-fuse cutaway {.unnumbered}
+
+**Optional Level 4 | Internal view and explanation**
+
+![Simplified automotive blade fuse cutaway.](../../schematics/H01_Blade_Fuse_Cutaway.pdf){fig-cap="Original simplified cutaway showing terminals and the calibrated fuse element." width=92%}
+
+Explain how the narrow element changes an overload into an open circuit. Distinguish a blown fuse as evidence from the root cause of the fault. Compare fuse replacement with bypassing the fuse.
+
+**Unknowns:** Energy pathway, protection action, and safe next step.<br>
+**Calculator expectation:** None.<br>
+**Tinkercad:** Do not simulate destructive heating.
+
+\workinglines{6}
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Explanation and labels. | Submit even if blank. |
+
+\newpage
+
+# Question 8: USB power-bank transfer {.unnumbered}
+
+**Optional Level 4 | Transfer**<br>
+A power bank is labelled $5.0\ \mathrm{V}$, $2.0\ \mathrm{A}$ maximum. A load requests $7.5\ \mathrm{W}$. Calculate requested current and decide whether the rating is exceeded. Explain why rated maximum current is not a promise that every cable and connector is safe at that current.
+
+**Unknowns:** Requested current and justified decision.<br>
+**Precision:** Two significant figures.<br>
+**Calculator expectation:** Show $I=P/V$.<br>
+**Tinkercad:** Optional current-limit model.
+
+\workinglines{7}
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| GUESS and decision. | Submit even if blank. |
+
+\newpage
+
+# Question 9: Wrong meter jack {.unnumbered}
+
+**Optional Level 4 | Troubleshooting and prevention**<br>
+A student measures voltage while the red lead remains in the high-current jack. Describe the risk, stop-work response, inspection, correct setup, and a habit that prevents recurrence. Add a pre-measurement checklist that another student can follow.
+
+**Unknowns:** Root cause, safe response, and prevention.<br>
+**Calculator expectation:** None.<br>
+**Tinkercad:** Explain why virtual meters may not reproduce real fuse, lead, and arc hazards.
+
+\workinglines{8}
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Diagnosis and checklist. | Submit even if blank. |
+
+\newpage
+
+# Question 10: Safety case and reflection {.unnumbered}
+
+**Optional Level 4 | Justification and reflection**<br>
+Create a one-page safety case for a low-voltage bicycle-light prototype. Include source limits, conductor and connector checks, control, protection, load ratings, meter plan, stop conditions, emergency response, simulation limits, and one lesson learned from troubleshooting.
+
+**Unknowns:** A coherent, evidence-based safety argument.<br>
+**Calculator expectation:** Include at least one rating calculation if your design uses numerical values.<br>
+**Tinkercad:** Include one verification and one limitation.
+
+\workinglines{8}
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Safety case. | Submit even if blank. |
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

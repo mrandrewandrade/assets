@@ -1,0 +1,43 @@
+---
+title: "TEJ Student Worksheet Template"
+subtitle: "Duplicate this source and replace the bracketed fields"
+format:
+  pdf:
+    pdf-engine: xelatex
+    include-in-header: ../styles/tej-preamble.tex
+    geometry: [margin=0.7in]
+    mainfont: "Arial"
+  html:
+    css: ../styles/tej-html.css
+execute: {enabled: false}
+---
+
+**Module:** [H##]<br>
+**Student:** ______________________________  **Date:** __________________
+
+## Question 1: [short title] {.unnumbered}
+
+**Required**<br>
+**Context:** [familiar device or system]
+
+![Descriptive alternative text for the schematic.](../schematics/[schematic].svg){fig-cap="Figure 1. [Descriptive caption]." width=90%}
+
+| Given quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| [quantity] | $[symbol]$ | [value] | [unit] |
+
+**Unknowns:** [symbols and target units]
+
+**Directions:** Use GUESS. Show metric-prefix conversions. Keep the unrounded calculator value. Report the final answer to [n] significant figures with a sensible prefix.
+
+**Exact calculator entry:** ______________________________________________
+
+### Working space {.unnumbered}
+
+\workinglines{7}
+
+**Final answer:** _________________________________________________________
+
+| Front photo submission | Back photo submission |
+|:--|:--|
+| Attach a clear, upright image. | Attach a clear image, even if blank. |

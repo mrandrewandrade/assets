@@ -1,0 +1,277 @@
+---
+title: "TEJ Electronics Formula Reference"
+subtitle: "Formulas, units, GUESS solutions, and Casio fx-991ES PLUS C procedures"
+author: "Technology Commons"
+date: "2026-10-04"
+license: "CC BY-SA 4.0"
+toc: true
+toc-depth: 2
+number-sections: true
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    papersize: letter
+    colorlinks: true
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+  html:
+    toc: true
+    toc-float: true
+    html-math-method: mathjax
+    embed-resources: true
+    format-links: false
+    css: ../styles/tej-html.css
+execute:
+  enabled: false
+lang: en-CA
+---
+
+This reference follows the teaching order in the TEJ curriculum library plan. Keep units with values, keep unrounded values for later steps, and round only the final reported result.
+
+::: {.callout-important title="Safety boundary"}
+Classroom calculations, Tinkercad work, and breadboard builds use protected extra-low voltage. Never connect classroom meters or breadboards to mains voltage.
+:::
+
+# SI prefixes
+
+| Prefix | Symbol | Multiplier | Engineering form |
+|:--|:--:|--:|:--|
+| giga | G | $10^9$ | $1\ \mathrm{G}=10^9$ |
+| mega | M | $10^6$ | $1\ \mathrm{M}=10^6$ |
+| kilo | k | $10^3$ | $1\ \mathrm{k}=10^3$ |
+| none | - | $10^0$ | base unit |
+| milli | m | $10^{-3}$ | $1\ \mathrm{m}=10^{-3}$ |
+| micro | $\mu$ | $10^{-6}$ | $1\ \mu=10^{-6}$ |
+| nano | n | $10^{-9}$ | $1\ \mathrm{n}=10^{-9}$ |
+| pico | p | $10^{-12}$ | $1\ \mathrm{p}=10^{-12}$ |
+
+**Capitalization matters:** $\mathrm{M}$ means mega while $\mathrm{m}$ means milli.
+
+# Scientific and engineering notation
+
+Scientific notation uses $a\times10^n$ with $1\leq |a|<10$. Engineering notation uses an exponent divisible by three and a coefficient from 1 to less than 1000.
+
+| Value | Scientific notation | Engineering notation | Prefixed form |
+|--:|:--|:--|:--|
+| $4700\ \Omega$ | $4.70\times10^3\ \Omega$ | $4.70\times10^3\ \Omega$ | $4.70\ \mathrm{k}\Omega$ |
+| $0.00470\ \mathrm{A}$ | $4.70\times10^{-3}\ \mathrm{A}$ | $4.70\times10^{-3}\ \mathrm{A}$ | $4.70\ \mathrm{mA}$ |
+| $0.000000220\ \mathrm{F}$ | $2.20\times10^{-7}\ \mathrm{F}$ | $220\times10^{-9}\ \mathrm{F}$ | $220\ \mathrm{nF}$ |
+
+# Significant figures
+
+- Multiplication and division: use the same number of significant figures as the least precise measured input.
+- Addition and subtraction: round to the least precise decimal place.
+- Exact counts and defined conversions do not limit significant figures.
+- Keep guard digits in the calculator. Round once, at the end.
+- A trailing zero after a decimal point is significant: $5.0\ \mathrm{V}$ has two significant figures.
+
+# GUESS method
+
+| Step | Evidence |
+|:--:|:--|
+| G - Given | Record every known symbol, value, and unit in a table. |
+| U - Unknown | Name each requested symbol and target unit. |
+| E - Equation | Write the general equation, then rearrange it symbolically. |
+| S - Substitute | Insert values with units and show the exact calculator entry. |
+| S - Solve | Keep the unrounded result, then report correct significant figures and a sensible prefix. |
+| Statement | Answer in a complete sentence and include a final-results table. |
+
+# Charge, current, voltage, resistance, power, and energy
+
+| Quantity | Relationship | SI unit |
+|:--|:--|:--|
+| Charge | $Q=It$ | coulomb, $\mathrm{C}$ |
+| Current | $I=\dfrac{Q}{t}$ | ampere, $\mathrm{A}$ |
+| Voltage | $V=\dfrac{W}{Q}$ | volt, $\mathrm{V}$ |
+| Resistance | $R=\dfrac{V}{I}$ | ohm, $\Omega$ |
+| Conductance | $G=\dfrac{1}{R}$ | siemens, $\mathrm{S}$ |
+| Power | $P=VI=I^2R=\dfrac{V^2}{R}$ | watt, $\mathrm{W}$ |
+| Energy | $E=Pt$ | joule, $\mathrm{J}$ |
+| Electrical energy | $E_{\mathrm{Wh}}=P_{\mathrm{W}}t_{\mathrm{h}}$ | watt-hour, $\mathrm{Wh}$ |
+
+$1\ \mathrm{Wh}=3600\ \mathrm{J}$ and $1\ \mathrm{kWh}=3.6\ \mathrm{MJ}$.
+
+# Ohm's law
+
+$$V=IR \qquad I=\frac{V}{R} \qquad R=\frac{V}{I}$$
+
+$$P=VI \qquad P=I^2R \qquad P=\frac{V^2}{R}$$
+
+Check that calculated component power remains below the component rating with an appropriate design margin.
+
+# Series circuits
+
+$$I_T=I_1=I_2=\cdots$$
+
+$$V_T=V_1+V_2+\cdots \qquad R_T=R_1+R_2+\cdots \qquad P_T=P_1+P_2+\cdots$$
+
+An open anywhere in the single path makes current zero. Voltage may still appear across the open.
+
+# Parallel circuits
+
+$$V_T=V_1=V_2=\cdots$$
+
+$$I_T=I_1+I_2+\cdots \qquad \frac{1}{R_{\mathrm{eq}}}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$$
+
+For two resistors,
+
+$$R_{\mathrm{eq}}=\frac{R_1R_2}{R_1+R_2}$$
+
+For $n$ equal resistors, $R_{\mathrm{eq}}=R/n$. The equivalent resistance must be smaller than the smallest branch resistance.
+
+# Series-parallel circuits
+
+1. Mark nodes and identify true series and parallel groups.
+2. Reduce one group at a time to find $R_{\mathrm{eq}}$.
+3. Find $I_T=V_S/R_{\mathrm{eq}}$.
+4. Expand the circuit in reverse order to find branch voltages and currents.
+5. Check KCL, KVL, and $P_{\text{supplied}}\approx P_{\text{absorbed}}$.
+
+# Kirchhoff's laws
+
+**KCL at a node:**
+
+$$\sum I_{\mathrm{in}}=\sum I_{\mathrm{out}}$$
+
+**KVL around a closed loop:**
+
+$$\sum V=0$$
+
+A negative result means the actual direction or polarity is opposite the assumed reference.
+
+# Voltage and current dividers
+
+Unloaded voltage divider:
+
+$$V_{\mathrm{out}}=V_{\mathrm{in}}\frac{R_2}{R_1+R_2}$$
+
+Loaded divider: replace $R_2$ with $R_2\parallel R_L$ before applying the divider equation.
+
+Two-branch current divider:
+
+$$I_1=I_T\frac{R_2}{R_1+R_2} \qquad I_2=I_T\frac{R_1}{R_1+R_2}$$
+
+# Conductors, protection, and batteries
+
+$$R=\rho\frac{L}{A} \qquad V_{\mathrm{drop}}=IR_{\mathrm{wire}} \qquad P_{\mathrm{loss}}=I^2R_{\mathrm{wire}}$$
+
+- Series cells: voltages add; ampere-hour capacity is approximately unchanged.
+- Matched parallel cells: voltage is unchanged; ampere-hour capacities add.
+- A fuse or breaker protects the conductor and circuit. Select it from manufacturer guidance and the allowed conductor current, not only from the load current.
+
+# Capacitors and RC response
+
+$$C=\frac{Q}{V} \qquad E_C=\frac{1}{2}CV^2 \qquad X_C=\frac{1}{2\pi fC}$$
+
+$$\tau=RC$$
+
+Charging and discharging:
+
+$$V_C(t)=V_S\left(1-e^{-t/(RC)}\right) \qquad V_C(t)=V_0e^{-t/(RC)}$$
+
+After one time constant, a charging capacitor reaches about 63.2% of its final value. After five time constants, the response is commonly treated as complete.
+
+# Inductors, transformers, and AC
+
+$$E_L=\frac{1}{2}LI^2 \qquad X_L=2\pi fL \qquad \tau=\frac{L}{R}$$
+
+$$f=\frac{1}{T} \qquad V_{\mathrm{rms}}=\frac{V_{\mathrm{peak}}}{\sqrt{2}} \qquad V_{\mathrm{pp}}=2V_{\mathrm{peak}}$$
+
+Ideal transformer:
+
+$$\frac{V_p}{V_s}=\frac{N_p}{N_s}=\frac{I_s}{I_p} \qquad V_pI_p\approx V_sI_s$$
+
+# Diodes and LEDs
+
+$$R=\frac{V_S-V_F}{I_{\mathrm{LED}}} \qquad P_R=I_{\mathrm{LED}}^2R$$
+
+Use the specified or measured forward voltage. A generic silicon-diode approximation of $0.7\ \mathrm{V}$ is only an estimate.
+
+# Rectifiers and power supplies
+
+- Bridge rectifier path: two diodes conduct on each half-cycle, so $V_{\text{drop}}\approx2V_F$.
+- Full-wave ripple frequency: $f_{\mathrm{ripple}}=2f_{\mathrm{line}}$.
+- Approximate capacitor ripple: $\Delta V\approx I_{\mathrm{load}}/(f_{\mathrm{ripple}}C)$.
+- Linear regulator dissipation: $P_{\mathrm{reg}}\approx(V_{\mathrm{in}}-V_{\mathrm{out}})I_{\mathrm{load}}$.
+
+# Transistor switching
+
+$$R_B=\frac{V_{\mathrm{drive}}-V_{BE}}{I_B} \qquad I_B\geq\frac{I_C}{\beta_{\mathrm{forced}}}$$
+
+$$P_Q\approx V_{CE}I_C \qquad P_{\mathrm{MOSFET}}\approx I_D^2R_{DS(\mathrm{on})}$$
+
+Check device pinout, current, voltage, thermal limits, and flyback protection before building.
+
+# 555 timing
+
+Monostable:
+
+$$t\approx1.1RC$$
+
+Astable:
+
+$$f\approx\frac{1.44}{(R_A+2R_B)C}$$
+
+$$t_H\approx0.693(R_A+R_B)C \qquad t_L\approx0.693R_BC$$
+
+$$D=\frac{t_H}{t_H+t_L}\times100\%$$
+
+# Digital logic and number systems
+
+$$N=\sum b_n2^n$$
+
+- Unsigned $n$-bit range: $0$ to $2^n-1$.
+- Two's-complement $n$-bit range: $-2^{n-1}$ to $2^{n-1}-1$.
+- Half adder: $S=A\oplus B$, $C=AB$.
+- Full adder: $S=A\oplus B\oplus C_{\mathrm{in}}$.
+- Full-adder carry: $C_{\mathrm{out}}=AB+C_{\mathrm{in}}(A\oplus B)$.
+
+# Casio fx-991ES PLUS C procedures
+
+| Task | Exact sequence | Check |
+|:--|:--|:--|
+| General calculations | `MODE` `1` (`COMP`) | `COMP` is the standard arithmetic mode. |
+| Scientific entry | coefficient, `×10ˣ`, exponent | Use the dedicated negative-sign key for a negative exponent. |
+| Engineering display | calculate, then `ENG` | Each press changes the exponent by 3. `SHIFT` `ENG` moves the other direction. |
+| Reuse full result | begin with an operator or insert `Ans` | The last displayed result is stored in Ans. |
+| Fixed decimals | `SHIFT` `MODE` (`SETUP`), `6` (`Fix`), digit count | Fix rounds the displayed result to the chosen decimal places. |
+| Scientific display | `SHIFT` `MODE` (`SETUP`), `7` (`Sci`), significant digits | Sci controls displayed significant digits. |
+| Normal display | `SHIFT` `MODE` (`SETUP`), `8` (`Norm`), `2` | Norm 2 keeps small values in decimal form down to $10^{-9}$. |
+| SOLVE | `MODE` `1`, enter equation in $X$, `SHIFT` `CALC` (`SOLVE`), enter initial $X$, `=` | SOLVE uses a numerical approximation and may return one of several roots. |
+| TABLE | `MODE` `7`, enter $f(X)$, start, end, step | Use for trend checking, not as a substitute for GUESS. |
+| BASE-N | `MODE` `4`, select `DEC`, `HEX`, `BIN`, or `OCT` | BASE-N checks hand conversions. |
+
+Example LED resistor entry:
+
+```{.calculator-sequence}
+( 12 - 2.1 ) ÷ ( 15 ×10ˣ (-) 3 ) =
+```
+
+The display is $660$, so $R=660\ \Omega$ before selecting a standard value.
+
+::: {.callout-warning title="Ans warning"}
+Confirm what Ans stores before reusing it. Pressing `=` updates Ans. Changing calculation mode or display format can clear calculation history even when stored memories remain.
+:::
+
+# Measurement and safety reminders
+
+- Measure voltage in parallel across two points.
+- Measure current by opening the circuit and placing the meter in series.
+- Measure resistance and continuity only with power off and stored energy discharged.
+- Confirm the input jack, function, and range before probing.
+- Return the lead from the current jack after the measurement.
+- Never place a meter set to current directly across a source.
+- Never use classroom breadboards, meters, or Tinkercad activities on mains voltage.
+
+# Sources
+
+- Casio. *fx-570ES PLUS / fx-991ES PLUS User's Guide*. Official manual: <https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf>
+- Kuphaldt, Tony R. *Lessons in Electric Circuits*. All About Circuits: <https://www.allaboutcircuits.com/textbook/>
+- Ontario Ministry of Education. *The Ontario Curriculum, Grades 11 and 12: Technological Education, 2009*. <https://www.edu.gov.on.ca/eng/curriculum/secondary/2009teched1112curr.pdf>
+- Schultz, Mitchel E. *Grob's Basic Electronics*, 12th edition. Restricted school reference.
+
+Original teaching reference licensed CC BY-SA 4.0. Attribute Technology Commons, Andrew Andrade, <https://andrewandrade.ca>, and <https://github.com/mrandrewandrade>.

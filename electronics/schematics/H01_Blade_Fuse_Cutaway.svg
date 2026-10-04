@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified automotive blade fuse cutaway</title>
+  <desc id="desc">A transparent fuse body contains two metal blades joined by a narrow calibrated fuse element. Current enters one blade, crosses the narrow link, and exits the other blade. Excess heating melts the link and opens the circuit.</desc>
+  <defs>
+    <style>
+      .body{fill:#d8edf8;fill-opacity:.66;stroke:#1769aa;stroke-width:8}
+      .metal{fill:#d7d9dc;stroke:#20262d;stroke-width:6}
+      .link{fill:none;stroke:#b8860b;stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+      .label{font:700 30px Arial,sans-serif;fill:#1e2b55}
+      .small{font:24px Arial,sans-serif;fill:#404a54}
+      .guide{fill:none;stroke:#596673;stroke-width:3;stroke-dasharray:8 7}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1769aa"/>
+    </marker>
+  </defs>
+  <rect class="body" x="280" y="70" width="640" height="300" rx="55"/>
+  <rect class="metal" x="390" y="210" width="125" height="260" rx="8"/>
+  <rect class="metal" x="685" y="210" width="125" height="260" rx="8"/>
+  <path class="link" d="M452 210 V165 H565 L600 125 L635 165 H748 V210"/>
+  <path d="M340 118 H500" fill="none" stroke="#1769aa" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M700 118 H860" fill="none" stroke="#1769aa" stroke-width="6" marker-end="url(#arrow)"/>
+  <text class="label" x="600" y="42" text-anchor="middle">calibrated fuse element</text>
+  <path class="guide" d="M600 52 V112"/>
+  <text class="label" x="190" y="450" text-anchor="middle">blade terminal</text>
+  <path class="guide" d="M285 430 L390 390"/>
+  <text class="label" x="1010" y="450" text-anchor="middle">blade terminal</text>
+  <path class="guide" d="M915 430 L810 390"/>
+  <text class="small" x="600" y="500" text-anchor="middle">Excess current heats the narrow element until it melts and opens the path.</text>
+</svg>

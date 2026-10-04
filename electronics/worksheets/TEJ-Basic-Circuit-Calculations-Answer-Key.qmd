@@ -1,0 +1,381 @@
+---
+title: "TEJ Basic Circuit Calculations"
+subtitle: "Teacher answer key | Full GUESS solutions"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+Answers are blue, significant-figure warnings are red, and teacher notes are gold. Preserve the student question order and use the unrounded value for later parts.
+
+![Two parallel loads connected across a DC source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){fig-cap="General parallel-circuit schematic used in the student version." width=82%}
+
+\newpage
+
+# Question 1: Computer branch in parallel {.unnumbered}
+
+**Required | Straightforward hand calculation using GUESS**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply voltage | $V_S$ | 12.03 | V |
+| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
+| Computer power | $P_2$ | 146 | W |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| Computer branch voltage | $V_2$ | V |
+| Computer equivalent resistance | $R_2$ | $\Omega$ |
+| Total power | $P_T$ | W |
+
+**General equations:** \answer{$V_1=V_2=V_S$, $R=V^2/P$, $I=V/R$, $P=VI$, $P_T=P_1+P_2$}
+
+**Rearranged equations:** \answer{$V_2=V_S$, $R_2=V_2^2/P_2$, $I_1=V_1/R_1$, $P_1=V_1I_1$}
+
+**Substitution and exact calculator entries:**
+
+\answer{$V_2=12.03\ \mathrm{V}$}
+
+\answer{$R_2=(12.03\ \mathrm{V})^2/(146\ \mathrm{W})=0.99124\ \Omega$}<br>
+`12.03 x² ÷ 146 =`
+
+\answer{$I_1=12.03\ \mathrm{V}/4.7\ \Omega=2.55957\ \mathrm{A}$}<br>
+`12.03 ÷ 4.7 =`
+
+\answer{$P_1=(12.03\ \mathrm{V})(\mathrm{Ans})=30.79168\ \mathrm{W}$}<br>
+`12.03 × Ans =`
+
+\answer{$P_T=\mathrm{Ans}+146\ \mathrm{W}=176.79168\ \mathrm{W}$}
+
+\begin{tejwarning}[Significant-figure check]
+$R_2$ is limited by 146 W to three significant figures. Bulb values are limited by $4.7\ \Omega$ to two significant figures. The total is reported to the nearest watt.
+\end{tejwarning}
+
+| Final result | Value |
+|:--|:--|
+| $V_2$ | \answer{$12.03\ \mathrm{V}$} |
+| $R_2$ | \answer{$0.991\ \Omega$} |
+| $P_T$ | \answer{$177\ \mathrm{W}$} |
+
+**Answer sentence:** \answer{The computer branch has $12.03\ \mathrm{V}$ across it and an equivalent resistance of $0.991\ \Omega$. Together, the bulb and computer use $177\ \mathrm{W}$.}
+
+\newpage
+
+# Question 2: Recreate and verify in Tinkercad {.unnumbered}
+
+**Required | Tinkercad verification**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply | $V_S$ | 12.03 | V |
+| Branch 1 resistance | $R_1$ | 4.7 | $\Omega$ |
+| Branch 2 model | $R_2$ | 0.991239041 | $\Omega$ |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| Branch voltages | $V_1,V_2$ | V |
+| Branch and total currents | $I_1,I_2,I_T$ | A |
+| Percent differences | - | % |
+
+**General equations:** \answer{$I=V/R$, $I_T=I_1+I_2$, $\%\text{ difference}=|x_s-x_c|/|x_c|\times100\%$}
+
+**Calculated values and entries:**
+
+- \answer{$I_1=12.03/4.7=2.55957\ \mathrm{A}$} using `12.03 ÷ 4.7 =`.
+- \answer{$I_2=146/12.03=12.13633\ \mathrm{A}$} using `146 ÷ 12.03 =`.
+- \answer{$I_T=2.559574468+12.136325852=14.69590\ \mathrm{A}$} using stored unrounded values.
+- \answer{$V_1=V_2=12.03000\ \mathrm{V}$} for an ideal simulator source.
+
+| Required record | Calculated | Simulated | Percent difference |
+|:--|--:|--:|--:|
+| $V_1$ | \answer{$12.03000\ \mathrm{V}$} | teacher checks file | near 0% |
+| $V_2$ | \answer{$12.03000\ \mathrm{V}$} | teacher checks file | near 0% |
+| $I_1$ | \answer{$2.55957\ \mathrm{A}$} | teacher checks file | near 0% |
+| $I_2$ | \answer{$12.13633\ \mathrm{A}$} | teacher checks file | near 0% |
+| $I_T$ | \answer{$14.69590\ \mathrm{A}$} | teacher checks file | near 0% |
+
+\begin{tejteacher}[Teacher note]
+Accept small differences caused by the number of digits Tinkercad accepts for $R_2$ or by displayed meter resolution. The student must still state that ideal resistors, ideal conductors, fixed temperature, and simplified sources limit the simulation.
+\end{tejteacher}
+
+**Answer sentence:** \answer{The simulated branch voltages and currents should agree closely with the hand calculation when the meters are placed correctly and the unrounded resistance is used.}
+
+\newpage
+
+# Question 3: Cooling fan {.unnumbered}
+
+**Required | Increasing complexity**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply voltage | $V_S$ | 12.0 | V |
+| Fan resistance | $R_1$ | 8.2 | $\Omega$ |
+| Existing power | $P_2$ | 110 | W |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| Fan current | $I_1$ | A |
+| Fan power | $P_1$ | W |
+| Total power | $P_T$ | W |
+
+**General equations:** \answer{$I=V/R$, $P=VI$, $P_T=P_1+P_2$}
+
+**Rearranged equations:** \answer{$I_1=V_1/R_1$, $P_1=V_1I_1$}
+
+**Substitution and exact calculator entries:**
+
+- \answer{$I_1=12.0/8.2=1.46341\ \mathrm{A}$}: `12.0 ÷ 8.2 =`
+- \answer{$P_1=12.0\times\mathrm{Ans}=17.56098\ \mathrm{W}$}: `12.0 × Ans =`
+- \answer{$P_T=\mathrm{Ans}+110=127.56098\ \mathrm{W}$}: `Ans + 110 =`
+
+\begin{tejwarning}[Significant-figure check]
+The $8.2\ \Omega$ resistance limits branch results to two significant figures. The whole-watt existing load makes the total a whole-watt result.
+\end{tejwarning}
+
+| Final result | Value |
+|:--|:--|
+| $I_1$ | \answer{$1.5\ \mathrm{A}$} |
+| $P_1$ | \answer{$18\ \mathrm{W}$} |
+| $P_T$ | \answer{$128\ \mathrm{W}$} |
+
+**Answer sentence:** \answer{The fan draws $1.5\ \mathrm{A}$ and uses $18\ \mathrm{W}$. The computer and fan use $128\ \mathrm{W}$ in total.}
+
+\newpage
+
+# Question 4: Coloured case bulb and motherboard {.unnumbered}
+
+**Required | Multi-step parallel circuit**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply voltage | $V_S$ | 12.03 | V |
+| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
+| Motherboard current | $I_2$ | 12.1 | A |
+
+**Unknowns:** $I_1$, $R_2$, $P_1$, $P_2$, $I_T$, and $P_T$.
+
+**General equations:** \answer{$I=V/R$, $R=V/I$, $P=VI$, $I_T=I_1+I_2$, $P_T=P_1+P_2$}
+
+**Substitution, entries, and full results:**
+
+- \answer{$I_1=12.03/4.7=2.55957\ \mathrm{A}$}: `12.03 ÷ 4.7 =`
+- \answer{$R_2=12.03/12.1=0.99421\ \Omega$}: `12.03 ÷ 12.1 =`
+- \answer{$P_1=12.03(2.559574468)=30.79168\ \mathrm{W}$}: `12.03 × [stored I₁] =`
+- \answer{$P_2=12.03(12.1)=145.56300\ \mathrm{W}$}: `12.03 × 12.1 =`
+- \answer{$I_T=2.559574468+12.1=14.65957\ \mathrm{A}$}
+- \answer{$P_T=30.79168085+145.563=176.35468\ \mathrm{W}$}
+
+\begin{tejwarning}[Significant-figure check]
+Branch 1 results are limited by $4.7\ \Omega$. Branch 2 results are limited by $12.1\ \mathrm{A}$. Apply the decimal-place rule to sums.
+\end{tejwarning}
+
+| $I_1$ | $R_2$ | $P_1$ | $P_2$ | $I_T$ | $P_T$ |
+|--:|--:|--:|--:|--:|--:|
+| \answer{$2.6\ \mathrm{A}$} | \answer{$0.994\ \Omega$} | \answer{$31\ \mathrm{W}$} | \answer{$146\ \mathrm{W}$} | \answer{$14.7\ \mathrm{A}$} | \answer{$177\ \mathrm{W}$} |
+
+**Answer sentence:** \answer{The branches draw a total of $14.7\ \mathrm{A}$ and use $177\ \mathrm{W}$, with the detailed branch results shown above.}
+
+\newpage
+
+# Question 5: Power and resistance are given {.unnumbered}
+
+**Required | Metric-prefix transfer**
+
+| Known quantity | Symbol | Value | Converted value |
+|:--|:--:|:--:|:--:|
+| Load power | $P_1$ | $50\ \mathrm{mW}$ | \answer{$0.050\ \mathrm{W}$} |
+| Load resistance | $R_1$ | $2.0\ \mathrm{k}\Omega$ | \answer{$2000\ \Omega$} |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| Load voltage | $V_1$ | V |
+| Load current | $I_1$ | mA |
+
+**General equation:** \answer{$P=V^2/R$ and $I=P/V$}
+
+**Rearranged equation:** \answer{$V=\sqrt{PR}$}
+
+**Substitution and exact entries:**
+
+- \answer{$V_1=\sqrt{(0.050)(2000)}=10.00000\ \mathrm{V}$}: `√( 50 ×10ˣ (-) 3 × 2.0 ×10ˣ 3 ) =`
+- \answer{$I_1=0.050/\mathrm{Ans}=0.00500\ \mathrm{A}=5.00000\ \mathrm{mA}$}: `( 50 ×10ˣ (-) 3 ) ÷ Ans =`
+
+\begin{tejwarning}[Significant-figure check]
+Both givens have two significant figures. Write $1.0\times10^1\ \mathrm{V}$ when the two significant digits must be explicit.
+\end{tejwarning}
+
+| Final result | Value |
+|:--|:--|
+| $V_1$ | \answer{$1.0\times10^1\ \mathrm{V}$} |
+| $I_1$ | \answer{$5.0\ \mathrm{mA}$} |
+
+**Answer sentence:** \answer{The load has $10\ \mathrm{V}$ across it and draws $5.0\ \mathrm{mA}$.}
+
+\newpage
+
+# Question 6: USB heater {.unnumbered}
+
+**Optional Level 4 | Transfer and justification**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Heater voltage | $V_1$ | 5.0 | V |
+| Heater current | $I_1$ | 1.5 | A |
+| Existing power | $P_2$ | 95 | W |
+
+**Unknowns:** $P_1$, $R_1$, $P_T$, and port suitability.
+
+**General equations:** \answer{$P=VI$, $R=V/I$, $P_T=P_1+P_2$}
+
+**Substitution and exact entries:**
+
+- \answer{$P_1=(5.0)(1.5)=7.50000\ \mathrm{W}$}: `5.0 × 1.5 =`
+- \answer{$R_1=5.0/1.5=3.33333\ \Omega$}: `5.0 ÷ 1.5 =`
+- \answer{$P_T=7.50000+95=102.50000\ \mathrm{W}$}: `[stored P₁] + 95 =`
+
+\begin{tejwarning}[Safety and rating check]
+$1.5\ \mathrm{A}>0.90\ \mathrm{A}$, so the stated port is not rated to supply the heater. Do not test an overload on classroom hardware.
+\end{tejwarning}
+
+| $P_1$ | $R_1$ | $P_T$ | Port decision |
+|--:|--:|--:|:--|
+| \answer{$7.5\ \mathrm{W}$} | \answer{$3.3\ \Omega$} | \answer{$103\ \mathrm{W}$} | \answer{Not suitable} |
+
+**Answer sentence:** \answer{The heater uses $7.5\ \mathrm{W}$ and has an equivalent resistance of $3.3\ \Omega$. The total is $103\ \mathrm{W}$, and a $0.90\ \mathrm{A}$ port is not suitable.}
+
+\newpage
+
+# Question 7: Two parallel loads {.unnumbered}
+
+**Optional Level 4 | Full network evidence**
+
+| Known quantity | Symbol | Value | Converted value |
+|:--|:--:|:--:|:--:|
+| Supply | $V_S$ | $12.0\ \mathrm{V}$ | - |
+| Load 1 resistance | $R_1$ | $4.70\ \mathrm{k}\Omega$ | $4700\ \Omega$ |
+| Load 2 current | $I_2$ | $2.40\ \mathrm{mA}$ | $0.00240\ \mathrm{A}$ |
+
+**General equations:** \answer{$V_1=V_2=V_S$, $I=V/R$, $R=V/I$, $P=VI$, $I_T=I_1+I_2$, $P_T=P_1+P_2$, $R_{\mathrm{eq}}=V_S/I_T$}
+
+**Substitution and full results:**
+
+- \answer{$I_1=12.0/4700=2.55319\ \mathrm{mA}$}
+- \answer{$R_2=12.0/0.00240=5.00000\ \mathrm{k}\Omega$}
+- \answer{$P_1=12.0(2.553191489\ \mathrm{mA})=30.63830\ \mathrm{mW}$}
+- \answer{$P_2=12.0(2.40\ \mathrm{mA})=28.80000\ \mathrm{mW}$}
+- \answer{$I_T=2.553191489+2.40=4.95319\ \mathrm{mA}$}
+- \answer{$P_T=30.63829787+28.8=59.43830\ \mathrm{mW}$}
+- \answer{$R_{\mathrm{eq}}=12.0/0.004953191489=2.42268\ \mathrm{k}\Omega$}
+
+| $V_1$ | $V_2$ | $I_1$ | $R_2$ | $P_1$ | $P_2$ | $I_T$ | $P_T$ | $R_{\mathrm{eq}}$ |
+|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| \answer{$12.0\ \mathrm{V}$} | \answer{$12.0\ \mathrm{V}$} | \answer{$2.55\ \mathrm{mA}$} | \answer{$5.00\ \mathrm{k}\Omega$} | \answer{$30.6\ \mathrm{mW}$} | \answer{$28.8\ \mathrm{mW}$} | \answer{$4.95\ \mathrm{mA}$} | \answer{$59.4\ \mathrm{mW}$} | \answer{$2.42\ \mathrm{k}\Omega$} |
+
+**Answer sentence:** \answer{The two loads share $12.0\ \mathrm{V}$, draw $4.95\ \mathrm{mA}$ in total, use $59.4\ \mathrm{mW}$, and have an equivalent resistance of $2.42\ \mathrm{k}\Omega$.}
+
+\newpage
+
+# Question 8: Choose circuit protection {.unnumbered}
+
+**Optional Level 4 | Design and justification**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply | $V_S$ | 12.0 | V |
+| Lamp power | $P_1$ | 27 | W |
+| Converter power | $P_2$ | 18 | W |
+| Wire allowable current | $I_{\mathrm{wire,max}}$ | 7.5 | A |
+
+**General equation:** \answer{$I=P/V$ and $I_T=I_1+I_2$}
+
+**Substitution and exact entries:**
+
+- \answer{$I_1=27/12.0=2.25000\ \mathrm{A}$}: `27 ÷ 12.0 =`
+- \answer{$I_2=18/12.0=1.50000\ \mathrm{A}$}: `18 ÷ 12.0 =`
+- \answer{$I_T=2.25000+1.50000=3.75000\ \mathrm{A}$}
+
+| Final result | Value |
+|:--|:--|
+| $I_1$ | \answer{$2.3\ \mathrm{A}$} |
+| $I_2$ | \answer{$1.5\ \mathrm{A}$} |
+| $I_T$ | \answer{$3.8\ \mathrm{A}$} |
+| Listed fuse | \answer{$5\ \mathrm{A}$} |
+
+\begin{tejteacher}[Teacher note]
+The $5\ \mathrm{A}$ fuse is the smallest listed rating above the normal $3.75\ \mathrm{A}$ load and remains below the $7.5\ \mathrm{A}$ wire limit. Real vehicle design must also follow manufacturer guidance, inrush requirements, ambient temperature, fuse curves, and connector ratings.
+\end{tejteacher}
+
+**Answer sentence:** \answer{The branch normally draws $3.8\ \mathrm{A}$, so the listed $5\ \mathrm{A}$ fuse is the defensible choice for this simplified problem.}
+
+\newpage
+
+# Question 9: Diagnose an open branch {.unnumbered}
+
+**Optional Level 4 | Troubleshooting**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply | $V_S$ | 9.00 | V |
+| Branch 1 | $R_1$ | 1.00 | $\mathrm{k}\Omega$ |
+| Branch 2 | $R_2$ | 2.20 | $\mathrm{k}\Omega$ |
+
+**General equations:** \answer{$I_1=V_S/R_1$, $I_2=V_S/R_2$, $I_T=I_1+I_2$}
+
+**Normal substitution and exact entries:**
+
+- \answer{$I_1=9.00/1000=0.00900000\ \mathrm{A}=9.00\ \mathrm{mA}$}
+- \answer{$I_2=9.00/2200=0.00409091\ \mathrm{A}=4.09\ \mathrm{mA}$}
+- \answer{$I_T=9.00000+4.09091=13.09091\ \mathrm{mA}\approx13.1\ \mathrm{mA}$}
+
+**Open-branch predictions:** \answer{$I_2=0$, $I_T=I_1=9.00\ \mathrm{mA}$, $V_1=9.00\ \mathrm{V}$, and the open gap can have $9.00\ \mathrm{V}$ across it.}
+
+\begin{tejwarning}[Safe sequence]
+Predict readings, inspect visually, measure source and Branch 1 voltage with power on, then disconnect power and discharge stored energy before continuity or resistance checks. Never use resistance mode on an energized circuit.
+\end{tejwarning}
+
+**Answer sentence:** \answer{A normal Branch 1 voltage and current rule out a complete supply failure, while zero Branch 2 current and voltage across the break support an open-branch diagnosis.}
+
+\newpage
+
+# Question 10: Bicycle lighting transfer {.unnumbered}
+
+**Optional Level 4 | Transfer and reflection**
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Supply | $V_S$ | 6.0 | V |
+| Headlamp power | $P_1$ | 3.0 | W |
+| Tail-lamp power | $P_2$ | 0.60 | W |
+| Time | $t$ | 2.0 | h |
+
+**General equations:** \answer{$I=P/V$, $I_T=I_1+I_2$, $R_{\mathrm{eq}}=V_S/I_T$, $E=P_Tt$}
+
+**Substitution and exact entries:**
+
+- \answer{$I_1=3.0/6.0=0.50000\ \mathrm{A}$}: `3.0 ÷ 6.0 =`
+- \answer{$I_2=0.60/6.0=0.10000\ \mathrm{A}$}: `0.60 ÷ 6.0 =`
+- \answer{$I_T=0.50000+0.10000=0.60000\ \mathrm{A}$}
+- \answer{$R_{\mathrm{eq}}=6.0/0.60000=10.00000\ \Omega$}
+- \answer{$E=(3.0+0.60)(2.0)=7.20000\ \mathrm{Wh}$}
+
+| $I_1$ | $I_2$ | $I_T$ | $R_{\mathrm{eq}}$ | Energy |
+|--:|--:|--:|--:|--:|
+| \answer{$0.50\ \mathrm{A}$} | \answer{$0.10\ \mathrm{A}$} | \answer{$0.60\ \mathrm{A}$} | \answer{$10\ \Omega$} | \answer{$7.2\ \mathrm{Wh}$} |
+
+\begin{tejteacher}[Teacher note]
+Parallel branches allow one lamp to remain connected if the other opens. A simple simulation does not reproduce speed-dependent dynamo voltage, lamp temperature, internal resistance, weather, vibration, or connector corrosion.
+\end{tejteacher}
+
+**Answer sentence:** \answer{The lamps draw $0.60\ \mathrm{A}$ in total, present a $10\ \Omega$ equivalent load, and use $7.2\ \mathrm{Wh}$ in two hours.}
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

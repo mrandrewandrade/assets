@@ -5,6 +5,7 @@ __pycache__/
 dist/*.pdf
 dist/*.html
 dist/*.docx
+dist/*.svg
 **/.quarto/
 assignments/*.pdf
 assignments/*.docx

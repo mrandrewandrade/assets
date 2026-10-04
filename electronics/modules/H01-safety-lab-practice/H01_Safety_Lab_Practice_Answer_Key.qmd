@@ -1,0 +1,111 @@
+---
+title: "H01 Safety and Lab Practice"
+subtitle: "Teacher answer key"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.68in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+# Question 1: Predict LED current {.unnumbered}
+
+| Known | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| Source | $V_S$ | 9.0 | V |
+| LED drop | $V_F$ | 2.0 | V |
+| Resistor | $R$ | 330 | $\Omega$ |
+
+| Unknown | Symbol | Unit |
+|:--|:--:|:--:|
+| LED current | $I$ | mA |
+| Resistor power | $P_R$ | W |
+
+**General equations:** \answer{$V_R=V_S-V_F$, $I=V_R/R$, $P_R=I^2R$}
+
+**Substitution and exact entries:**
+
+- \answer{$I=(9.0-2.0)/330=0.02121\ \mathrm{A}=21.21212\ \mathrm{mA}$}: `( 9.0 - 2.0 ) ÷ 330 =`
+- \answer{$P_R=\mathrm{Ans}^2(330)=0.14876\ \mathrm{W}$}: `Ans x² × 330 =`
+
+\begin{tejwarning}[Significant figures and rating]
+Final values are $21\ \mathrm{mA}$ and $0.15\ \mathrm{W}$. A $0.25\ \mathrm{W}$ resistor exceeds calculated dissipation, but the LED current and design margin must also be checked against actual component data.
+\end{tejwarning}
+
+**Answer sentence:** \answer{The estimated LED current is $21\ \mathrm{mA}$ and resistor dissipation is $0.15\ \mathrm{W}$, so a $0.25\ \mathrm{W}$ resistor is acceptable for this simplified classroom calculation.}
+
+# Question 2: Verify the protected circuit {.unnumbered}
+
+**Expected values:** \answer{$I\approx21.21\ \mathrm{mA}$, $V_R\approx7.0\ \mathrm{V}$, and $V_F\approx2.0\ \mathrm{V}$.}
+
+**Percent-difference entry:** \answer{`Abs( simulated - calculated ) ÷ Abs( calculated ) × 100 =`}
+
+\begin{tejteacher}[Teacher note]
+Tinkercad's LED model, fuse behaviour, source resistance, and component tolerances may differ from a physical build. Require a series ammeter, parallel voltmeters, calculation first, comparison, discrepancy explanation, and one explicit simulation limitation.
+\end{tejteacher}
+
+# Question 3: Source, protection, control, and load {.unnumbered}
+
+**General equation:** \answer{$I=P/V$}
+
+**Substitution:** \answer{$I=2.2\ \mathrm{W}/12.0\ \mathrm{V}=0.18333\ \mathrm{A}$}
+
+**Exact entry:** \answer{`2.2 ÷ 12.0 =`}
+
+**Final result:** \answer{$I=0.18\ \mathrm{A}$ and the smallest listed fuse above normal current is $0.25\ \mathrm{A}$.}
+
+**Answer sentence:** \answer{The $0.25\ \mathrm{A}$ fuse allows normal $0.18\ \mathrm{A}$ operation and remains below the $1.0\ \mathrm{A}$ conductor limit. It belongs near the source so an upstream wire fault cannot leave a long unprotected energized conductor.}
+
+# Question 4: Place the meters correctly {.unnumbered}
+
+| Measurement | Connection | Power state | Expected magnitude |
+|:--|:--|:--|:--|
+| LED voltage | \answer{voltmeter in parallel} | \answer{on} | \answer{about $2.0\ \mathrm{V}$} |
+| Total current | \answer{ammeter in series} | \answer{on after setup check} | \answer{about $21\ \mathrm{mA}$} |
+| Resistor resistance | \answer{ohmmeter across isolated resistor} | \answer{off and discharged} | \answer{about $330\ \Omega$} |
+
+\begin{tejwarning}[Meter setup]
+Black lead in COM. Red lead in the voltage-resistance-current input appropriate to the expected current. Select the correct function and begin on a safe range. Never place a current-configured meter directly across the source.
+\end{tejwarning}
+
+# Question 5: Diagnose an open switch {.unnumbered}
+
+**Predictions:** \answer{$I_T=0.00\ \mathrm{A}$, $V_R=0.00\ \mathrm{V}$, and the open switch can have the full $9.0\ \mathrm{V}$ across its contacts.}
+
+**Safe sequence:** \answer{Inspect first, verify source voltage in parallel, trace voltage toward the load, power off, discharge, then use continuity or resistance mode to test the switch.}
+
+**Answer sentence:** \answer{A good source with full voltage across the open switch and zero circuit current identifies the break without energizing an ohmmeter.}
+
+# Question 6: Hazard hunt redesign {.unnumbered}
+
+Award evidence for at least six correctly linked items. A complete answer identifies the hazard, likely consequence, a control, and how the control is verified. Strong controls include clearing conductive clutter, trimming exposed wire, setting a current limit, adding source-side protection, replacing the damaged lead, removing food, discharging and verifying the capacitor, and using eye protection when required.
+
+# Question 7: Blade-fuse cutaway {.unnumbered}
+
+\answer{Current heats the narrow calibrated element. Excess $I^2R$ heating melts it, turning the faulted path into an open circuit. The blown fuse is evidence of excessive current, not proof that the root cause is gone. Bypassing it removes conductor protection and is prohibited.}
+
+# Question 8: USB power-bank transfer {.unnumbered}
+
+**General equation:** \answer{$I=P/V$}
+
+**Substitution and entry:** \answer{$I=7.5/5.0=1.50000\ \mathrm{A}$}; `7.5 ÷ 5.0 =`
+
+**Final answer:** \answer{$1.5\ \mathrm{A}<2.0\ \mathrm{A}$, so the labelled source limit is not exceeded. The cable, connector, load, temperature, and manufacturer specifications still require separate checks.}
+
+# Question 9: Wrong meter jack {.unnumbered}
+
+\answer{Stop, de-energize, remove the probes, inspect the meter fuse and leads, move the red lead to the voltage-resistance jack, select DC voltage and a safe range, then recheck before energizing. A verbal or printed "jack, function, range, placement" pause prevents recurrence. Virtual meters do not fully reproduce arc, lead, internal-fuse, or equipment-damage hazards.}
+
+# Question 10: Safety case and reflection {.unnumbered}
+
+Use a checklist rather than one prescribed design. Require all named elements: source limit, conductor and connector checks, control, protection, load ratings, meter plan, stop conditions, emergency response, calculation, simulation result and limitation, and a troubleshooting reflection. The argument must connect each control to a specific risk.
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

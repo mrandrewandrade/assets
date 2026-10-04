@@ -1,0 +1,38 @@
+---
+title: "TEJ Lab Template"
+format:
+  pdf:
+    pdf-engine: xelatex
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+execute: {enabled: false}
+---
+
+**Module:** [H##]  **Lab:** [L##]  **Time:** [minutes]  **Safety:** [category]
+
+# Purpose
+
+[One observable learning goal.]
+
+# Predict and calculate first
+
+[GUESS calculation and expected meter readings.]
+
+# Equipment
+
+- [equipment or component]
+
+# Build and measure
+
+1. [Step with power state stated.]
+2. [Meter placement stated.]
+
+# Evidence
+
+| Calculated | Simulated | Measured | Percent difference |
+|--:|--:|--:|--:|
+| | | | |
+
+# Troubleshooting and reflection
+
+[Questions about symptoms, evidence, limits, and next steps.]

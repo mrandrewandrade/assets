@@ -1,0 +1,33 @@
+schema_version: 1.0
+required_fields:
+  - module_id
+  - topic
+  - asset_type
+  - audience
+  - requirement
+  - component_tags
+  - equipment_tags
+  - context_tags
+  - difficulty
+  - curriculum_expectations
+  - grob_reference
+  - safety_category
+  - estimated_time
+  - copyright_category
+  - access
+  - source_path
+  - download_path
+  - website_url
+  - slide_url
+  - version
+  - last_updated
+  - completion_status
+enums:
+  audience: [student, teacher, mixed]
+  requirement: [required, optional-level-4]
+  access: [public, restricted]
+  completion_status: [later, planned, draft, reviewed, complete]
+notes:
+  - Copyrighted source files remain in restricted Google Drive.
+  - Public Git repositories contain only original or openly licensed assets.
+  - Dates use ISO 8601 format.

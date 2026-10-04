@@ -1,0 +1,43 @@
+---
+title: "TEJ Answer-Key Template"
+subtitle: "Preserve the student layout and add blue solutions"
+format:
+  pdf:
+    pdf-engine: xelatex
+    include-in-header: ../styles/tej-preamble.tex
+    geometry: [margin=0.7in]
+    mainfont: "Arial"
+execute: {enabled: false}
+---
+
+## Question 1: [short title] {.unnumbered}
+
+| Known quantity | Symbol | Value | Unit |
+|:--|:--:|--:|:--:|
+| [quantity] | $[symbol]$ | [value] | [unit] |
+
+| Unknown | Symbol | Target unit |
+|:--|:--:|:--:|
+| [quantity] | $[symbol]$ | [unit] |
+
+**General equation:** \answer{$[equation]$}
+
+**Rearranged equation:** \answer{$[equation]$}
+
+**Substitution with units:** \answer{$[substitution]$}
+
+**Exact calculator entry:** \answer{[keys]}
+
+**Full calculator result:** \answer{[five decimals]}
+
+**Correct final result:** \answer{[significant figures and sensible prefix]}
+
+\begin{tejwarning}[Significant-figure check]
+[Explain what limits the final precision.]
+\end{tejwarning}
+
+| Final result | Value |
+|:--|:--|
+| [quantity] | \answer{[value and unit]} |
+
+**Answer sentence:** \answer{[complete sentence].}

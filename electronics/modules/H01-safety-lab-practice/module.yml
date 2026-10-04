@@ -1,0 +1,28 @@
+module_id: H01
+topic: Safety and lab practice
+asset_type: complete-hardware-module
+audience: mixed
+requirement: required
+component_tags: [fuse, switch, resistor, led]
+equipment_tags: [bench-power-supply, digital-multimeter, breadboard, safety-glasses]
+context_tags: [usb-power-bank, automotive-fuse-panel, bicycle-light]
+difficulty: introductory
+curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
+grob_reference: "Grob Basic Electronics, 12th edition, Experiment 1-1 and Chapter 8"
+safety_category: low-voltage-classroom
+estimated_time: 180-minutes
+copyright_category: original-with-restricted-references
+access: public
+source_path: electronics/modules/H01-safety-lab-practice/
+download_path: dist/H01_*
+website_url: https://andrewandrade.ca/commons/tej3-4/electronics-library/modules/h01-safety-lab-practice.html
+slide_url: https://andrewandrade.ca/slides/future/h01-safety-lab-practice.html
+version: 1.0.0
+last_updated: 2026-10-04
+completion_status: reviewed
+assets:
+  - H01_Safety_Lab_Practice_Student_Worksheet.pdf
+  - H01_Safety_Lab_Practice_Answer_Key.pdf
+  - H01_Safety_Lab_Practice_Lab.pdf
+  - H01_Safety_Lab_Practice_Tinkercad_Guide.pdf
+  - H01_Safety_Lab_Practice_Schematic.svg

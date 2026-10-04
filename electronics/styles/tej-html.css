@@ -1,0 +1,22 @@
+:root {
+  --tej-navy: #1e2b55;
+  --tej-blue: #1769aa;
+  --tej-gold: #b8860b;
+  --tej-red: #a52828;
+  --tej-slate: #596673;
+  --tej-mist: #eef2f5;
+}
+
+body { color: #20262d; }
+h1, h2, h3 { color: var(--tej-navy); }
+table { font-size: 0.94rem; }
+thead { background: var(--tej-navy); color: white; }
+.callout-note { border-left-color: var(--tej-blue); }
+.callout-warning, .callout-important { border-left-color: var(--tej-red); }
+.calculator-sequence { font-family: "Source Code Pro", Consolas, monospace; padding: .7rem 1rem; background: var(--tej-mist); border-left: .3rem solid var(--tej-gold); }
+
+@media print {
+  a { color: inherit; text-decoration: none; }
+  h2 { break-before: page; }
+  table { break-inside: avoid; }
+}

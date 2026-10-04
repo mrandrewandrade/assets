@@ -1,0 +1,23 @@
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[table]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{letterpaper,margin=0.68in,headheight=16pt,footskip=24pt}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\definecolor{TEJBlue}{HTML}{1769AA}
+\definecolor{TEJGold}{HTML}{B8860B}
+\definecolor{TEJRed}{HTML}{A52828}
+\definecolor{TEJSlate}{HTML}{596673}
+\definecolor{TEJMist}{HTML}{EEF2F5}
+\hypersetup{colorlinks=true,linkcolor=TEJNavy,urlcolor=TEJBlue,citecolor=TEJNavy}
+\sisetup{per-mode=symbol,detect-all,retain-zero-exponent=true,group-separator={,},group-minimum-digits=4}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtcolorbox{tejnote}[1][]{enhanced,breakable,colback=TEJMist,colframe=TEJBlue,boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,top=1.2mm,bottom=1.2mm,title=#1,fonttitle=\bfseries,coltitle=TEJNavy}
+\newtcolorbox{tejwarning}[1][]{enhanced,breakable,colback=red!4,colframe=TEJRed,boxrule=0.7pt,arc=1.5mm,left=2mm,right=2mm,top=1.2mm,bottom=1.2mm,title=#1,fonttitle=\bfseries,coltitle=TEJRed}
+\newtcolorbox{tejteacher}[1][]{enhanced,breakable,colback=yellow!8,colframe=TEJGold,boxrule=0.7pt,arc=1.5mm,left=2mm,right=2mm,top=1.2mm,bottom=1.2mm,title=#1,fonttitle=\bfseries,coltitle=TEJGold}
+\newcommand{\answer}[1]{\textcolor{TEJBlue}{\textbf{#1}}}
+\newcommand{\workinglines}[1]{\par\vspace{1mm}\foreach \n in {1,...,#1}{\noindent\color{gray!45}\rule{\linewidth}{0.35pt}\par\vspace{5.5mm}}}

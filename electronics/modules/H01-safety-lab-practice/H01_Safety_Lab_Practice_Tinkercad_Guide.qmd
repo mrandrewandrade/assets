@@ -1,0 +1,69 @@
+---
+title: "H01 Tinkercad Verification Guide"
+subtitle: "Calculate first, simulate second, build third"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.7in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+# Verification sequence
+
+1. **Calculate first.** Use GUESS for $I=(V_S-V_F)/R$ and $P_R=I^2R$.
+2. **Build the circuit.** Add a DC source, switch, fuse if available, $330\ \Omega$ resistor, and red LED in one series path.
+3. **Check polarity and values.** Confirm LED orientation, source voltage, resistor value, and an open switch.
+4. **Place meters correctly.** Voltmeter probes go across two points. The ammeter becomes part of the series path.
+5. **Start the simulation.** Close the switch only after the visual check.
+6. **Record values.** Do not replace your hand calculation with simulator readings.
+7. **Compare.** Use percent difference for each non-zero quantity.
+8. **Explain.** Name a cause of discrepancy and a limitation of the model.
+
+![Protected classroom circuit.](../../schematics/H01_Safety_Lab_Practice_Schematic.pdf){fig-cap="H01 schematic to recreate and verify." width=96%}
+
+# Meter placement check
+
+| Meter | Correct placement | Common unsafe or invalid placement |
+|:--|:--|:--|
+| Voltmeter | In parallel across the LED or resistor | In series with the load |
+| Ammeter | In series after opening the path | Directly across the source |
+| Ohmmeter | Across an isolated component with power off | Across an energized component |
+
+# Comparison table
+
+| Quantity | Hand calculation | Tinkercad | Percent difference |
+|:--|--:|--:|--:|
+| LED current | | | |
+| Resistor voltage | | | |
+| LED voltage | | | |
+
+$$\%\text{ difference}=\frac{|\text{simulated}-\text{calculated}|}{|\text{calculated}|}\times100\%$$
+
+# Required explanation
+
+**One discrepancy:** ______________________________________________________
+
+**One simulation limitation:** ____________________________________________
+
+Possible limitations include idealized wires, fixed temperature, simplified LED behaviour, limited source and fuse modelling, and no physical lead or jack hazards.
+
+# Submission
+
+- [ ] GUESS calculation completed before simulation
+- [ ] component values visible
+- [ ] voltmeter in parallel
+- [ ] ammeter in series
+- [ ] comparison table complete
+- [ ] discrepancy explained
+- [ ] simulation limitation stated
+- [ ] screenshot or share link included
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

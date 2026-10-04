@@ -1,0 +1,95 @@
+---
+title: "H01 Lab: Protected Low-Voltage Circuit"
+subtitle: "Predict, simulate, build, measure, troubleshoot, reflect"
+author: "Technology Commons"
+date: "2026-10-04"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.7in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Module:** H01  **Lab:** L01  **Time:** 75 minutes  **Safety:** Protected extra-low voltage
+
+# Learning goal
+
+Identify source, conductors, control, protection, and load; predict current; place meters correctly; build safely; and diagnose one teacher-approved open fault.
+
+# Stop conditions
+
+Stop and disconnect power for heat, smell, smoke, damaged insulation, unexpected current, unstable connections, a dropped metal object, a meter lead in the wrong jack, or any uncertainty about the circuit.
+
+# Equipment
+
+- current-limited $9\ \mathrm{V}$ classroom supply or battery holder
+- $500\ \mathrm{mA}$ fuse and holder
+- switch, red LED, $330\ \Omega$ resistor rated at least $0.25\ \mathrm{W}$
+- breadboard, short insulated jumpers, DMM, and eye protection as directed
+
+![Protected classroom circuit.](../../schematics/H01_Safety_Lab_Practice_Schematic.pdf){fig-cap="Build only after prediction, simulator verification, and teacher approval." width=96%}
+
+# Predict and calculate first
+
+Use $V_S=9.0\ \mathrm{V}$, $V_F=2.0\ \mathrm{V}$, and $R=330\ \Omega$.
+
+| Quantity | Symbol | Predicted value |
+|:--|:--:|:--:|
+| LED current | $I$ | |
+| Resistor voltage | $V_R$ | |
+| LED voltage | $V_F$ | |
+| Resistor power | $P_R$ | |
+
+**Exact calculator entry:** ______________________________________________
+
+# Simulate
+
+1. Build the schematic in Tinkercad with the switch open.
+2. Confirm values and meter placement before starting the simulation.
+3. Close the switch, record readings, and stop the simulation.
+4. Explain one difference from your prediction and one simulation limitation.
+
+# Physical build and measurement
+
+1. Keep the physical source disconnected and the switch open.
+2. Identify the LED polarity, resistor value, fuse rating, and DMM lead jacks.
+3. Build source, fuse, switch, resistor, and LED in series.
+4. Ask a partner to trace the intended path and complete the pre-power check.
+5. Obtain teacher approval.
+6. Set a safe current limit, energize, and close the switch.
+7. Measure voltage in parallel. De-energize before inserting an ammeter in series.
+8. Return the red lead from the current jack when finished.
+
+| Quantity | Calculated | Simulated | Measured | Percent difference |
+|:--|--:|--:|--:|--:|
+| LED current | | | | |
+| Resistor voltage | | | | |
+| LED voltage | | | | |
+
+# Troubleshooting
+
+With the teacher's approval, open the switch or remove one jumper. Predict normal and faulted readings before measuring. Do not introduce a short circuit.
+
+| Test point or quantity | Normal prediction | Fault prediction | Measured | Meaning |
+|:--|--:|--:|--:|:--|
+| Source voltage | | | | |
+| Voltage across open | | | | |
+| Total current | | | | |
+
+# Reflection
+
+1. Which pre-power check prevented the most likely error?
+2. What evidence distinguished the fault from a dead source?
+3. What did Tinkercad simplify or omit?
+4. What would you change before the next build?
+
+**Front evidence photo:** _________________________________________________<br>
+**Back evidence photo:** __________________________________________________
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.

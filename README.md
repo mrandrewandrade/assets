@@ -84,7 +84,10 @@ bash render.sh 0.1
 bash render.sh 0.2
 bash render.sh combined-teacher-marking
 bash render.sh weekly
+bash render.sh electronics
 ```
+
+The electronics build produces the LaTeX-based TEJ formula reference, circuit-calculation worksheet and key, H01 safety module package, reusable schematics, metadata, and templates. See `electronics/README.md`.
 
 The GitHub Actions workflow uses the same Quarto/Typst rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs to GitHub Pages.
 

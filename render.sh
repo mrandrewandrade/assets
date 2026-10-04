@@ -63,14 +63,30 @@ build_personal_weekly_progress() {
   mv -f assignments/weekly-smart-goal-progress-log-andrew-bw.pdf dist/weekly-smart-goal-progress-log-andrew-bw.pdf
 }
 
+build_electronics() {
+  bash scripts/render-electronics.sh
+}
+
 case "${1:-}" in
-  about-me|about-me-all|0-series|all)
+  about-me|about-me-all|0-series)
     build_name_tag
     build_presentation
     build_listening
     build_teacher_marking
     build_weekly_progress
     build_personal_weekly_progress
+    ;;
+  all)
+    build_name_tag
+    build_presentation
+    build_listening
+    build_teacher_marking
+    build_weekly_progress
+    build_personal_weekly_progress
+    build_electronics
+    ;;
+  electronics|tej-electronics)
+    build_electronics
     ;;
   0.0|0.0-name-tag|name-tag|name-tag-pdf)
     build_name_tag
@@ -100,6 +116,7 @@ case "${1:-}" in
     echo "  bash render.sh combined-teacher-marking"
     echo "  bash render.sh weekly"
     echo "  bash render.sh weekly-andrew"
+    echo "  bash render.sh electronics"
     exit 1
     ;;
 esac

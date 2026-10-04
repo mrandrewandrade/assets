@@ -1,0 +1,47 @@
+manifest_version: 1.0
+access_policy: restricted-google-drive-only
+copyrighted_bytes_in_git: false
+planned_structure:
+  Teaching/TEJ/References/Copyrighted:
+    - Grob Basic Electronics 12e/Complete Book
+    - Grob Basic Electronics 12e/Chapter PDFs
+    - Grob Basic Electronics 12e/Chapter Index
+    - Make Electronics/Complete Book
+    - Make Electronics/Chapter PDFs
+    - Make Electronics/Chapter Index
+    - Open Circuits/Complete Book
+    - Open Circuits/Visual Index
+    - Other Textbooks
+  Teaching/TEJ/References/Open Resources:
+    - All About Circuits
+    - Ontario Curriculum
+    - Casio Manuals
+known_locations:
+  grob_12e_folder: https://drive.google.com/drive/folders/1Q_uSqf8qoEsLPAmbxNJ1BLaKgJ1ga7x1
+  make_and_related_folder: https://drive.google.com/drive/folders/15gMc6wnIanBA-gGAV90exV5UMWT4KlDf
+  open_circuits_file: https://drive.google.com/file/d/1nRmKUWh6R0IsVMxQbFk2x4d_9B0GY3_G/view
+  all_about_circuits: https://www.allaboutcircuits.com/textbook/
+  ontario_tej_curriculum: https://www.edu.gov.on.ca/eng/curriculum/secondary/2009teched1112curr.pdf
+  casio_manual: https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf
+chapter_records:
+  - source: "Grob's Basic Electronics"
+    author: "Mitchel E. Schultz"
+    edition: "12th"
+    chapter: 1
+    title: Electricity
+    original_page_range: "Verify in licensed complete book"
+    restricted_folder: "Grob Basic Electronics 12e/Chapter PDFs"
+    modules: [H01, H02]
+  - source: "Grob's Basic Electronics"
+    author: "Mitchel E. Schultz"
+    edition: "12th"
+    chapter: 8
+    title: Analog and Digital Multimeters
+    original_page_range: "Verify in licensed complete book"
+    restricted_folder: "Grob Basic Electronics 12e/Chapter PDFs"
+    modules: [H01, H05]
+remaining_drive_work:
+  - Create or reconcile the planned folder hierarchy under Teaching/TEJ.
+  - Preserve the complete source PDFs and existing copyright notices.
+  - Verify original printed page ranges before creating chapter-only PDFs.
+  - Create native Drive chapter-index spreadsheets and record access controls.

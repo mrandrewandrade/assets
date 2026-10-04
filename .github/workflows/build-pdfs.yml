@@ -21,6 +21,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: "1.10.18"
+          tinytex: true
 
       - name: Build all teaching resources
         run: bash render.sh all
@@ -31,6 +32,8 @@ jobs:
           mkdir -p site-build
           cp site/index.html site-build/index.html
           cp dist/*.pdf site-build/
+          cp dist/*.html site-build/
+          cp dist/*.svg site-build/
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
