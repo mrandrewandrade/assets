@@ -21,6 +21,8 @@ from typing import Any, Iterable
 
 import yaml
 
+from generate_classroom_kit import main as generate_classroom_kit
+
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "library.yml"
 GENERATED = ROOT / "generated"
@@ -989,6 +991,7 @@ def main() -> int:
     parser.parse_args()
     config = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
     write_outputs(build_catalogue(config))
+    generate_classroom_kit()
     return 0
 
 

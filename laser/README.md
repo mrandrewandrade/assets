@@ -23,6 +23,13 @@ python -m unittest discover -s laser/tests -p "test_*.py" -v
 
 Generation is deterministic. It writes canonical fabrication SVGs, colour-coded SVG previews, JSON/CSV manifests, checksums, and a ZIP download bundle under `laser/generated/`.
 
+The focused first-project sequence is generated separately under
+`laser/generated/classroom-kit/`. It contains six named component palettes,
+an editable name-tag engraving template, an open-ended standing-name-tag
+component set, four configurable pill-bottle organizer references, exploded
+diagrams, BOMs, and an explicit physical-test status. This small teaching layer
+is intentionally separate from the large browseable catalogue.
+
 The `shop_coverage` lists in configuration are a design backlog. They are not
 automatically turned into renamed generic plates. A holder is published only
 after its retention geometry and parameters are purposefully defined.
@@ -55,6 +62,7 @@ generated/previews/         web previews, not fabrication inputs
 generated/catalog.json      complete machine-readable manifest
 generated/catalog.csv       flat inventory export
 generated/downloads/        deterministic bundle
+generated/classroom-kit/    first-project palettes, templates and assemblies
 ```
 
 ## Verification states
