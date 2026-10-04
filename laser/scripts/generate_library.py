@@ -624,7 +624,7 @@ def write_outputs(catalogue: Catalogue) -> None:
     bundle_path.parent.mkdir(parents=True, exist_ok=True)
     bundle_files = [ROOT / "README.md", ROOT.parent / "LICENSE.md", ROOT / "docs" / "PHYSICAL-TEST-BATCH.md", catalog_path, GENERATED / "catalog.csv"]
     bundle_files += sorted(SVG_ROOT.rglob("*.svg"))
-    with zipfile.ZipFile(bundle_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    with zipfile.ZipFile(bundle_path, "w", compression=zipfile.ZIP_STORED) as archive:
         for file_path in bundle_files:
             if file_path.is_relative_to(GENERATED):
                 arcname = Path("technology-commons-laser-library") / file_path.relative_to(GENERATED)
@@ -633,7 +633,8 @@ def write_outputs(catalogue: Catalogue) -> None:
             else:
                 arcname = Path("technology-commons-laser-library") / file_path.name
             info = zipfile.ZipInfo(arcname.as_posix(), date_time=(2026, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3
+            info.compress_type = zipfile.ZIP_STORED
             info.external_attr = 0o100644 << 16
             payload = file_path.read_bytes()
             if file_path.suffix.lower() in {".csv", ".json", ".md", ".svg", ".txt", ".yml", ".yaml"}:
