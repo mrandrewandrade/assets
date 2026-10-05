@@ -21,7 +21,9 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: "1.10.18"
-          tinytex: true
+
+      - name: Set up TinyTeX
+        run: quarto install tinytex --no-prompt
 
       - name: Build all teaching resources
         run: bash render.sh all
