@@ -158,12 +158,14 @@ def generate_palettes() -> list[GeneratedFile]:
     ]
     palettes.append(("palettes/wall-mounting.svg", "Wall and Mounting Palette", "Mounting and removable-module building blocks.", body, {"palette": "wall-mounting", "safety": "Instructor approval and load testing required."}))
 
-    body = palette_header("ORGANIZER", "Measure the real object, choose controlling diameter, then duplicate and space the opening.")
+    body = palette_header("ORGANIZER", "Measure the object, choose the controlling diameter, then add retention only when the use needs it.")
     body += [
         palette_card(8,34,96,60,"component-bottle-retainer","Bottle retainer","Ø36 opening · Ø54 ring",[circle(56,64,54),circle(56,64,36)],opening_mm=36,outer_mm=54),
         palette_card(112,34,96,60,"component-four-opening-row","Four-opening row","Ø36 · 42 centres",[rect(118,48,84,32),*[circle(128+i*21,64,18) for i in range(4)]],opening_mm=18,spacing_mm=21,usage_note="Half-scale study; scale dimensions numerically."),
         palette_card(8,102,96,60,"component-label-tab","Label tab","60 × 18 · R3",[rect(26,123,60,18,rx=3)],width_mm=60,height_mm=18),
-        palette_card(112,102,96,60,"component-divider","Divider","70 × 35 · centre slot",[path("M 125 118 H 195 V 153 H 164 V 140 H 158 V 153 H 125 Z")],width_mm=70,height_mm=35,slot_width_mm=6),
+        palette_card(112,102,46,60,"component-divider","Divider","32 × 35 · slot",[path("M 119 118 H 151 V 153 H 137 V 140 H 131 V 153 H 119 Z")],width_mm=32,height_mm=35,slot_width_mm=6),
+        palette_card(162,102,46,27,"component-keeper-rail","Keeper rail","42 × 12",[rect(164,114,42,12,rx=2)],width_mm=42,height_mm=12,semantic="removable-retention"),
+        palette_card(162,135,46,27,"component-keeper-plate","Keeper plate","Ø38 opening",[rect(164,143,42,16,rx=2),circle(185,151,12)],opening_mm=12,usage_note="Scale from measured body/cap; keep removable."),
     ]
     palettes.append(("palettes/organizer.svg", "Organizer Palette", "Measured openings, labels and dividers.", body, {"palette": "organizer"}))
 
@@ -274,14 +276,40 @@ def example_sheet(kind: str) -> tuple[str, dict[str, object], list[dict[str, obj
         g += part_label(218,29,"GUSSET",2,"60 × 60") + [polygon([(218,94),(278,94),(218,34)]),polygon([(288,94),(348,94),(288,34)])]
         bom = [{"part":"shelf","qty":1,"size_mm":[190,70]},{"part":"back","qty":1,"size_mm":[190,90]},{"part":"gusset","qty":2,"size_mm":[60,60]},{"part":"approved wall fastener","qty":3,"size":"site-specific"}]
         params.update({"slot_start_mm":6.2,"shelf_tab_width_mm":30,"assembly":"two shelf tabs locate in the back; gussets reinforce the shelf-to-back joint","mounting":"wall","safety":"Instructor approves wall, anchors, fasteners and load test."})
-    else:
+    elif kind == "removable-wall-bench-rack":
         g += part_label(8,29,"REMOVABLE SHELF",1,"190 × 70 · 4 × Ø36") + [rect(8,34,190,70,rx=3),*bottle_holes(38,69,count,centres,opening)]
         g += part_label(8,119,"MODULE BACK",1,"190 × 70 · 2 × Ø6.4 interface") + [rect(8,124,190,70,rx=3),circle(38,159,6.4),circle(168,159,6.4),line(18,180,188,180,"SCORE")]
         g += part_label(218,29,"BENCH FOOT",2,"70 × 28 · Ø6.4 + slot") + [path("M 218 54 H 288 V 82 H 262 V 68 H 256 V 82 H 218 Z"),circle(278,64,6.4),path("M 298 54 H 368 V 82 H 342 V 68 H 336 V 82 H 298 Z"),circle(308,64,6.4)]
         g += part_label(218,103,"WALL ADAPTER",1,"170 × 45 · 2 × Ø6.4 + mounts") + [rect(218,108,170,45,rx=3),circle(238,130,5),circle(368,130,5),circle(238,143,6.4),circle(368,143,6.4)]
         bom = [{"part":"shelf","qty":1,"size_mm":[190,70]},{"part":"module back","qty":1,"size_mm":[190,70]},{"part":"bench foot","qty":2,"size_mm":[70,28]},{"part":"wall adapter","qty":1,"size_mm":[170,45]},{"part":"M6 hand knob, bolt and washer set","qty":2,"size":"site-specific"}]
         params.update({"interface_hole_mm":6.4,"interface_spacing_mm":130,"assembly":"two removable M6 hand knobs register the same module to either bench supports or an approved wall adapter","mounting":"removable wall/bench","safety":"Adapter interface and wall installation require instructor approval and load testing."})
-    g += [text(218,174,"CUT FILE CHECK",4,weight=700),text(218,181,"□ mm + viewBox",3.1),text(218,187,"□ one outline each",3.1),text(218,193,"□ test opening",3.1),text(218,199,"□ label parts",3.1)]
+    else:
+        g += part_label(8,29,"LOWER LOCATING PLATE",1,"190 × 70 · 4 × Ø36") + [rect(8,34,190,70,rx=3),*bottle_holes(38,69,count,centres,opening)]
+        g += part_label(8,119,"BASE",1,"190 × 55") + [rect(8,124,190,55,rx=3)]
+        g += part_label(208,29,"UPPER KEEPER PLATE",1,"190 × 55 · 4 × Ø38") + [rect(208,34,190,55,rx=3),*bottle_holes(238,61.5,count,42,38),circle(220,61.5,6.4),circle(386,61.5,6.4)]
+        g += part_label(208,104,"BACK",1,"190 × 95 · keeper mounts") + [rect(208,109,190,95,rx=3),circle(220,127,6.4),circle(386,127,6.4),line(218,189,388,189,"SCORE")]
+        g += part_label(8,194,"STANDOFF",2,"70 × 22 · slots to calibrate") + [rect(8,199,70,22,rx=2),rect(88,199,70,22,rx=2)]
+        bom = [
+            {"part":"lower locating plate","qty":1,"size_mm":[190,70]},
+            {"part":"base","qty":1,"size_mm":[190,55]},
+            {"part":"upper keeper plate","qty":1,"size_mm":[190,55]},
+            {"part":"back","qty":1,"size_mm":[190,95]},
+            {"part":"standoff","qty":2,"size_mm":[70,22]},
+            {"part":"M6 hand knob, bolt and washer set","qty":2,"size":"site-specific"},
+        ]
+        params.update({
+            "keeper_type":"hand-knob-retained removable upper plate",
+            "keeper_opening_diameter_mm":38.0,
+            "cap_capture_per_side_mm":2.0,
+            "interface_hole_mm":6.4,
+            "assembly":"the lower plate locates each bottle body; the removable upper plate sits below the cap shoulder and is retained by two hand knobs",
+            "mounting":"bench or approved wall backer",
+            "service_sequence":["support bottles","remove two hand knobs","lift keeper plate","remove or replace bottles","refit plate and hand knobs","record fit and revision"],
+            "physical_test_record_fields":["bottle body diameter","cap diameter","material thickness","opening fit","keeper height","knob clearance","load test","revision"],
+            "safety":"The keeper is a serviceable anti-lift feature, not a child-resistant lock. Physically test access, load path and wall mounting before use.",
+        })
+    if kind != "captured-bottle-rack":
+        g += [text(218,174,"CUT FILE CHECK",4,weight=700),text(218,181,"□ mm + viewBox",3.1),text(218,187,"□ one outline each",3.1),text(218,193,"□ test opening",3.1),text(218,199,"□ label parts",3.1)]
     return svg(kind.replace("-"," ").title(), "True-size reference parts for a configurable pill-bottle organizer.", 400, 225, g, {"project":"pill-bottle-organizer","design":kind,"parameters":params,"bom":bom}), params, bom
 
 
@@ -291,6 +319,7 @@ def exploded_diagram(kind: str) -> str:
         "dowel-supported-rack":"Dowel rack: top + dowels + bottom",
         "reinforced-wall-rack":"Wall rack: back + shelf + gussets",
         "removable-wall-bench-rack":"Transfer rack: shelf + back + interchangeable supports",
+        "captured-bottle-rack":"Captured rack: base + locating plate + removable keeper",
     }
     body = [text(10,12,titles[kind],6,weight=700),text(10,20,"Exploded relationship diagram · arrows show assembly order, not scale",3.2,colour=GUIDE)]
     if kind == "simple-shelf-rack":
@@ -299,8 +328,18 @@ def exploded_diagram(kind: str) -> str:
         body += [rect(55,35,120,40,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,55,4,29,22),*[line(x,82,x,158,"ENGRAVE") for x in (62,168)],rect(55,165,120,40,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,185,4,29,22),text(115,123,"4 × DOWEL",4,"middle",700)]
     elif kind == "reinforced-wall-rack":
         body += [rect(55,35,120,80,"ENGRAVE",colour="#546b7a",rx=2),circle(72,50,5,"ENGRAVE"),circle(115,50,5,"ENGRAVE"),circle(158,50,5,"ENGRAVE"),rect(55,135,120,38,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,154,4,29,22),polygon([(30,135),(55,135),(55,110)],"ENGRAVE"),polygon([(175,135),(200,135),(175,110)],"ENGRAVE"),text(115,127,"↓ shelf",4,"middle")]
-    else:
+    elif kind == "removable-wall-bench-rack":
         body += [rect(55,35,120,45,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,57,4,29,22),rect(55,100,120,55,"ENGRAVE",colour="#546b7a",rx=2),text(115,94,"↓ MODULE",4,"middle",700),rect(15,185,90,28,"ENGRAVE",colour="#546b7a",rx=2),rect(125,185,90,28,"ENGRAVE",colour="#546b7a",rx=2),text(60,177,"BENCH FEET",3.5,"middle"),text(170,177,"WALL ADAPTER",3.5,"middle"),text(115,167,"choose one support",3.2,"middle",400,GUIDE)]
+    else:
+        body += [
+            rect(55,34,120,32,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,50,4,29,24),
+            text(115,76,"↓ removable keeper",3.6,"middle",700),
+            *[rect(x,82,18,58,"ENGRAVE",colour="#9aa3ad",rx=5) for x in (64,93,122,151)],
+            *[circle(x+9,87,22,"ENGRAVE",colour="#546b7a") for x in (64,93,122,151)],
+            rect(55,146,120,32,"ENGRAVE",colour="#546b7a",rx=2),*bottle_holes(73,162,4,29,22),
+            text(115,190,"↓ locating plate",3.6,"middle",700),rect(55,198,120,20,"ENGRAVE",colour="#546b7a",rx=2),
+            line(45,36,45,64,"ENGRAVE"),circle(45,49,6.4,"ENGRAVE"),line(185,36,185,64,"ENGRAVE"),circle(185,49,6.4,"ENGRAVE"),
+        ]
     body += [text(232,42,"ASSEMBLY REVIEW",4.5,weight=700),text(232,52,"1. Identify load path",3.2),text(232,60,"2. Confirm clearances",3.2),text(232,68,"3. Dry-fit first",3.2),text(232,76,"4. Check bottle removal",3.2),text(232,84,"5. Record revision",3.2),text(232,104,"STATUS: UNVERIFIED",3.4,weight=700,colour="#a33b2b")]
     return svg(f"{kind.replace('-',' ').title()} Exploded Diagram", "Teacher-facing assembly relationship diagram.", 340, 225, body, {"project":"pill-bottle-organizer","design":kind,"diagram":"exploded","physical_test_status":"unverified"})
 
@@ -308,7 +347,7 @@ def exploded_diagram(kind: str) -> str:
 def generate_examples() -> list[GeneratedFile]:
     files: list[GeneratedFile] = []
     designs: dict[str, object] = {}
-    for design in ("simple-shelf-rack","dowel-supported-rack","reinforced-wall-rack","removable-wall-bench-rack"):
+    for design in ("simple-shelf-rack","dowel-supported-rack","reinforced-wall-rack","removable-wall-bench-rack","captured-bottle-rack"):
         parts, params, bom = example_sheet(design)
         parts_rel = f"pill-bottle/{design}/parts.svg"
         diagram_rel = f"pill-bottle/{design}/exploded.svg"
@@ -320,7 +359,7 @@ def generate_examples() -> list[GeneratedFile]:
         ]
         designs[design] = {"files":{"parts":parts_rel,"exploded":diagram_rel},"parameters":params,"bom":bom,"assembly_notes":params["assembly"],"physical_test_status":"unverified"}
     write("pill-bottle/assemblies.json", json.dumps({"schema_version":1,"project":"pill-bottle-organizer","units":"mm","designs":designs},indent=2,sort_keys=True)+"\n")
-    files.append(GeneratedFile("pill-bottle/assemblies.json", "Pill-Bottle Assembly Manifest", "manifest", "Parameters, BOMs, notes and verification status for four references.", {"design_count":4}))
+    files.append(GeneratedFile("pill-bottle/assemblies.json", "Pill-Bottle Assembly Manifest", "manifest", "Parameters, BOMs, notes and verification status for five references.", {"design_count":5}))
     return files
 
 

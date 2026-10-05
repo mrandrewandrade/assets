@@ -41,15 +41,26 @@ class ClassroomKitTests(unittest.TestCase):
         self.assertEqual(hole.attrib["data-semantic"], "hole")
         self.assertEqual(disc.attrib["data-semantic"], "circle-part")
 
-    def test_four_pill_bottle_references_have_bom_and_status(self) -> None:
+    def test_five_pill_bottle_references_have_bom_and_status(self) -> None:
         document = json.loads((KIT / "pill-bottle" / "assemblies.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(document["designs"]), 4)
+        self.assertEqual(len(document["designs"]), 5)
         for design in document["designs"].values():
             self.assertGreaterEqual(len(design["bom"]), 3)
             self.assertEqual(design["physical_test_status"], "unverified")
             self.assertEqual(design["parameters"]["opening_diameter_mm"], 36.0)
             for relative in design["files"].values():
                 self.assertTrue((KIT / relative).is_file())
+
+        captured = document["designs"]["captured-bottle-rack"]
+        self.assertEqual(captured["parameters"]["keeper_opening_diameter_mm"], 38.0)
+        self.assertGreaterEqual(len(captured["parameters"]["service_sequence"]), 5)
+        self.assertGreaterEqual(len(captured["parameters"]["physical_test_record_fields"]), 6)
+        self.assertGreaterEqual(len(captured["bom"]), 6)
+
+    def test_organizer_palette_includes_serviceable_keeper_parts(self) -> None:
+        root = ET.parse(KIT / "palettes" / "organizer.svg").getroot()
+        self.assertIsNotNone(root.find(f".//{SVG}g[@id='component-keeper-rail']"))
+        self.assertIsNotNone(root.find(f".//{SVG}g[@id='component-keeper-plate']"))
 
     def test_name_tag_and_stand_assets_exist(self) -> None:
         self.assertTrue((KIT / "name-tag" / "name-tag-engraving-template.svg").is_file())
