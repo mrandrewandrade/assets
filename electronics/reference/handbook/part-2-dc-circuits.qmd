@@ -26,7 +26,21 @@ Ohm's law describes the relationship among voltage, current, and resistance for 
 | $I$ | current | ampere, $\mathrm{A}$ |
 | $R$ | resistance | ohm, $\Omega$ |
 
-**Worked GUESS example:** $V=12.0\ \mathrm{V}$ and $R=680\ \Omega$. $I=12.0/680=17.6\ \mathrm{mA}$. Casio entry: `12.0 ÷ 680 =`.
+**Worked GUESS example**
+
+| Step | Entry |
+|:--:|:--|
+| G | $V=12.0\ \mathrm{V}$ |
+| G | $R=680\ \Omega$ |
+| U | current, $I$, in amperes |
+| E | $I=V/R$ |
+| S | $I=12.0/680$ |
+| S | $I=0.0176\ \mathrm{A}$ |
+| S | $I=17.6\ \mathrm{mA}$ |
+
+**Casio entry**
+
+`12.0 ÷ 680 =`
 
 **Common mistake:** Do not apply one component's voltage across a different component. Mark the two nodes that define each voltage.
 
@@ -44,7 +58,11 @@ $$P=VI=I^2R=\frac{V^2}{R} \qquad E=Pt$$
 
 **Worked GUESS example:** A $12.0\ \mathrm{V}$ lamp draws $0.50\ \mathrm{A}$. $P=(12.0)(0.50)=6.0\ \mathrm{W}$. In $2.0\ \mathrm{h}$ it uses $12\ \mathrm{Wh}$.
 
-**Casio sequence:** `12.0 × 0.50 =`, then `Ans × 2.0 =`.
+**Casio sequence**
+
+`12.0 × 0.50 =`
+
+`Ans × 2.0 =`
 
 **Warning:** A component with the correct resistance can still overheat if its power rating is too low.
 

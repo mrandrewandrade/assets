@@ -42,7 +42,21 @@ For two parallel branches:
 
 $$I_1=I_T\frac{R_2}{R_1+R_2} \qquad I_2=I_T\frac{R_1}{R_1+R_2}$$
 
-**Worked GUESS example:** $V_{\mathrm{in}}=5.0\ \mathrm{V}$, $R_1=3.3\ \mathrm{k}\Omega$, and $R_2=2.2\ \mathrm{k}\Omega$. $V_{\mathrm{out}}=2.0\ \mathrm{V}$. Casio entry: `5.0 × 2.2 ÷ ( 3.3 + 2.2 ) =`.
+**Worked GUESS example**
+
+| Step | Entry |
+|:--:|:--|
+| G | $V_{\mathrm{in}}=5.0\ \mathrm{V}$ |
+| G | $R_1=3.3\ \mathrm{k}\Omega$ |
+| G | $R_2=2.2\ \mathrm{k}\Omega$ |
+| U | output voltage, $V_{\mathrm{out}}$, in volts |
+| E | $V_{\mathrm{out}}=V_{\mathrm{in}}R_2/(R_1+R_2)$ |
+| S | $V_{\mathrm{out}}=(5.0)(2.2)/(3.3+2.2)$ |
+| S | $V_{\mathrm{out}}=2.0\ \mathrm{V}$ |
+
+**Casio entry**
+
+`5.0 × 2.2 ÷ ( 3.3 + 2.2 ) =`
 
 **Warning:** A divider is not a regulated power supply. Load current can move the output far from the unloaded result.
 

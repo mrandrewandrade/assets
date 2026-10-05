@@ -56,7 +56,21 @@ A safe electronics workflow begins with a prediction, a current-limited source, 
 | load | polarity, value, and power rating |
 | measurement | correct jack, function, range, and placement |
 
-**Worked GUESS check:** With $V_S=9.0\ \mathrm{V}$, $V_F=2.0\ \mathrm{V}$, and $R=330\ \Omega$, $I=(9.0-2.0)/330=21\ \mathrm{mA}$. Casio entry: `( 9.0 - 2.0 ) ÷ 330 =`.
+**Worked GUESS check**
+
+| Step | Entry |
+|:--:|:--|
+| G | $V_S=9.0\ \mathrm{V}$ |
+| G | $V_F=2.0\ \mathrm{V}$ |
+| G | $R=330\ \Omega$ |
+| U | current, $I$, in amperes |
+| E | $I=(V_S-V_F)/R$ |
+| S | $I=(9.0-2.0)/330$ |
+| S | $I=0.021\ \mathrm{A}=21\ \mathrm{mA}$ |
+
+**Casio entry**
+
+`( 9.0 - 2.0 ) ÷ 330 =`
 
 **Warning:** Disconnect immediately for heat, smell, smoke, unstable connections, or uncertainty. Never use an ohmmeter on an energized circuit.
 
@@ -79,7 +93,20 @@ Charge is an amount of electric charge. Current is the rate of charge flow. Volt
 
 **When it applies:** Use these definitions to connect current and time, or power and operating time. Keep seconds with watts for joules. Use hours with watts for watt-hours.
 
-**Worked GUESS example:** A $0.25\ \mathrm{A}$ device runs for $120\ \mathrm{s}$. $Q=It=(0.25)(120)=30\ \mathrm{C}$. Casio entry: `0.25 × 120 =`.
+**Worked GUESS example**
+
+| Step | Entry |
+|:--:|:--|
+| G | $I=0.25\ \mathrm{A}$ |
+| G | $t=120\ \mathrm{s}$ |
+| U | charge, $Q$, in coulombs |
+| E | $Q=It$ |
+| S | $Q=(0.25)(120)$ |
+| S | $Q=30\ \mathrm{C}$ |
+
+**Casio entry**
+
+`0.25 × 120 =`
 
 **Common mistake:** Ampere-hours describe charge capacity, not energy, unless voltage is also considered.
 
@@ -99,7 +126,20 @@ Direct current keeps one reference polarity. Alternating current changes directi
 | sine-wave RMS | $V_{\mathrm{RMS}}=V_P/\sqrt{2}$ | volt, $\mathrm{V}$ |
 | peak-to-peak | $V_{PP}=2V_P$ | volt, $\mathrm{V}$ |
 
-**Worked GUESS example:** For $T=20.0\ \mathrm{ms}$, $f=1/(20.0\times10^{-3})=50.0\ \mathrm{Hz}$. Casio entry: `1 ÷ ( 20 EXP (-) 3 ) =`.
+**Worked GUESS example**
+
+| Step | Entry |
+|:--:|:--|
+| G | $T=20.0\ \mathrm{ms}$ |
+| G | $T=20.0\times10^{-3}\ \mathrm{s}$ |
+| U | frequency, $f$, in hertz |
+| E | $f=1/T$ |
+| S | $f=1/(20.0\times10^{-3})$ |
+| S | $f=50.0\ \mathrm{Hz}$ |
+
+**Casio entry**
+
+`1 ÷ ( 20 EXP (-) 3 ) =`
 
 **Warning:** Classroom breadboards and handheld meters must not connect directly to mains. Use approved isolated low-voltage sources.
 
@@ -163,7 +203,21 @@ Resistance relates voltage to current and converts electrical energy into heat. 
 | $P=I^2R$ | check resistor heating |
 | $G=1/R$ | convert to conductance |
 
-**Worked GUESS example:** A resistor has $5.0\ \mathrm{V}$ across it and carries $10.0\ \mathrm{mA}$. $R=5.0/(10.0\times10^{-3})=500\ \Omega$. Casio entry: `5.0 ÷ ( 10.0 EXP (-) 3 ) =`.
+**Worked GUESS example**
+
+| Step | Entry |
+|:--:|:--|
+| G | $V=5.0\ \mathrm{V}$ |
+| G | $I=10.0\ \mathrm{mA}$ |
+| G | $I=10.0\times10^{-3}\ \mathrm{A}$ |
+| U | resistance, $R$, in ohms |
+| E | $R=V/I$ |
+| S | $R=5.0/(10.0\times10^{-3})$ |
+| S | $R=500\ \Omega$ |
+
+**Casio entry**
+
+`5.0 ÷ ( 10.0 EXP (-) 3 ) =`
 
 **Common mistake:** The colour code gives nominal value and tolerance. It does not guarantee the resistor can dissipate the calculated power.
 
