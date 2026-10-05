@@ -413,11 +413,18 @@ Use these files as measured building blocks, not finished answers. Open SVG file
 - the physical-test status is recorded honestly.
 """
     write("README.md", guide)
-    checksum_paths = sorted(p for p in OUT.rglob("*") if p.is_file() and p.name not in {"SHA256SUMS", "technology-commons-first-laser-projects.zip"})
+    checksum_paths = sorted(
+        (p for p in OUT.rglob("*") if p.is_file() and p.name not in {"SHA256SUMS", "technology-commons-first-laser-projects.zip"}),
+        key=lambda p: p.relative_to(OUT).as_posix(),
+    )
     write("SHA256SUMS", "\n".join(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT).as_posix()}" for p in checksum_paths) + "\n")
     archive_path = OUT / "technology-commons-first-laser-projects.zip"
     with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_STORED) as archive:
-        for item in sorted(p for p in OUT.rglob("*") if p.is_file() and p != archive_path):
+        archive_items = sorted(
+            (p for p in OUT.rglob("*") if p.is_file() and p != archive_path),
+            key=lambda p: p.relative_to(OUT).as_posix(),
+        )
+        for item in archive_items:
             info = zipfile.ZipInfo((Path("technology-commons-first-laser-projects") / item.relative_to(OUT)).as_posix(), date_time=(2026,1,1,0,0,0))
             info.create_system = 3
             info.external_attr = 0o100644 << 16

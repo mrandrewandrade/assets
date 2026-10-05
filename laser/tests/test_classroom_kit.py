@@ -87,6 +87,8 @@ class ClassroomKitTests(unittest.TestCase):
         archive_path = KIT / "technology-commons-first-laser-projects.zip"
         text_suffixes = {".csv", ".json", ".md", ".svg", ".txt", ".yml", ".yaml"}
         with zipfile.ZipFile(archive_path) as archive:
+            names = archive.namelist()
+            self.assertEqual(names, sorted(names))
             for info in archive.infolist():
                 self.assertEqual(info.compress_type, zipfile.ZIP_STORED)
                 self.assertEqual(info.date_time, (2026, 1, 1, 0, 0, 0))
