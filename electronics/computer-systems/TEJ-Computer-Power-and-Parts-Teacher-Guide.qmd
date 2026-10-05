@@ -1,6 +1,6 @@
 ---
-title: "Computer Power and Parts Mission"
-subtitle: "Teacher answer and launch guide"
+title: "Computer Power and Parts Lab Shell"
+subtitle: "Teacher setup and launch guide"
 format:
   pdf:
     pdf-engine: xelatex
@@ -13,70 +13,45 @@ execute: {enabled: false}
 lang: en-CA
 ---
 
-## Launch {.unnumbered}
+## Status {.unnumbered}
 
-This individual Main Mission follows Power Circuits Questions 1-6. Provide a powered-off desktop, the repository cutaway and power schematic, exterior PSU nameplate access, calculator, and the editable Google Doc. Students do not install an OS or alter hardware.
+This is a shell, not a released student lab. The previous example numbers and generic computer images have been removed. Do not post the assignment until the actual classroom computer and safe measurement method are documented.
 
-## Functional answers {.unnumbered}
+## Teacher setup decisions {.unnumbered}
 
-- **Parallel loads:** branches receive the intended rail voltage and operate without forcing all load current through one series path.
-- **Power button:** it normally sends a low-power control signal to motherboard power-management logic.
-- **Sealed PSU:** hazardous stored energy and mains-connected parts can remain inside. No student opening or energized probing is permitted.
-- **Nameplate:** the wattage is a maximum rated capacity under stated conditions, not a measurement of present consumption.
+- Select one classroom computer and record its make, model, and asset number.
+- Add a clear exterior photograph of that computer.
+- Add a clear photograph of the exterior PSU nameplate. Never open the PSU.
+- Decide whether actual input power will come from a teacher-operated wall power meter or verified manufacturer documentation.
+- If a wall power meter is used, define the idle condition, the teacher-specified task, the waiting period, and who may operate the meter.
+- Choose the branch values used for Questions 2 to 5 and cite the source beside each value.
+- Confirm that the PSU maximum output rating is not presented as present wall-input power.
+- Test every calculation and write the teacher answer guide only after the actual values are final.
 
-## Calculation answers {.unnumbered}
+## Calculation design {.unnumbered}
 
-### Question 2 {.unnumbered}
+Keep the same six-question progression:
 
-\answer{$P_1=V_1I_1=(12.0\ \mathrm{V})(0.460\ \mathrm{A})=5.52000\ \mathrm{W}\approx5.52\ \mathrm{W}$.}
+1. Label evidence on the actual computer and exterior nameplate photographs.
+2. Calculate branch power from an approved voltage and current.
+3. Calculate branch current from an approved voltage and power.
+4. Calculate equivalent resistance from approved branch values.
+5. Add the approved branch powers to estimate total load power.
+6. Compare measured wall-input power with the exterior PSU rating and explain why they describe different quantities.
 
-::: {.tejwarning title="Significant figures"}
-Both measured values have three significant figures, so the multiplication result is reported as $5.52\ \mathrm{W}$, three significant figures.
+Use $P_{\mathrm{T}}$ for total power. Keep each GUESS step in a separate row. In Question 5, keep $P_1$, $P_2$, CPU branch power, and motherboard/RAM branch power in separate columns.
+
+::: {.tejwarning title="Safety and interpretation"}
+Students must not open the PSU or probe energized internal circuits. A PSU nameplate gives rated limits, not live consumption. A wall power meter reports AC input power and includes conversion losses, so it is not identical to the summed DC branch loads.
 :::
 
-### Question 3 {.unnumbered}
+## Release gate {.unnumbered}
 
-\answer{$I_2=\dfrac{P_2}{V_2}=\dfrac{7.50\ \mathrm{W}}{5.00\ \mathrm{V}}=1.50000\ \mathrm{A}\approx1.50\ \mathrm{A}$.}
-
-::: {.tejwarning title="Significant figures"}
-$P_2$ and $V_2$ each have three significant figures, so $I_2$ is reported as $1.50\ \mathrm{A}$.
-:::
-
-### Question 4 {.unnumbered}
-
-\answer{$R_2=\dfrac{V_2}{I_2}=\dfrac{5.00\ \mathrm{V}}{1.50\ \mathrm{A}}=3.33333\ldots\ \Omega\approx3.33\ \Omega$.}
-
-::: {.tejwarning title="Significant figures"}
-The inputs each carry three significant figures, so $R_2$ is reported as $3.33\ \Omega$.
-:::
-
-### Question 5 {.unnumbered}
-
-\answer{$P_T=5.52\ \mathrm{W}+7.50\ \mathrm{W}+42.0\ \mathrm{W}+18.6\ \mathrm{W}=73.62\ \mathrm{W}\approx73.6\ \mathrm{W}$.}
-
-::: {.tejwarning title="Decimal-place rule"}
-For addition, round to the least precise decimal place. The $42.0\ \mathrm{W}$ and $18.6\ \mathrm{W}$ values limit the sum to one decimal place, so the answer is $73.6\ \mathrm{W}$.
-:::
-
-### Question 6 {.unnumbered}
-
-\answer{$73.6\ \mathrm{W}$ is below the $400\ \mathrm{W}$ rating by $326.4\ \mathrm{W}$. The rating describes PSU capacity, while actual load varies with operating state, efficiency, and connected components.}
-
-::: {.tejwarning title="Precision note"}
-The comparison may be stated to one decimal place because $P_T$ is known to one decimal place. Do not present the nameplate rating as a live power measurement.
-:::
-
-## Assessment check {.unnumbered}
-
-Look for accurate labels, complete GUESS steps, equations before substitution, units on every value, full calculator results before rounding, correct final precision, answer sentences, a safe inspection, and a reflection that connects parallel branches and PSU capacity to the real computer.
+$\square$ actual computer selected  $\square$ photographs added  $\square$ measurement method approved  $\square$ values cited  $\square$ answers checked  $\square$ student copy tested at Chromebook size
 
 ## Google Classroom posting {.unnumbered}
 
-**Topic:** Main Assignments
-
-**Title:** Computer Power and Parts Mission
-
-Make one copy for each student. Students submit the completed Google Doc, labelled image, six responses, GUESS work, final-answer table, and reflection.
+Do not post this shell. Add the final topic, title, due date, evidence list, and one-copy-per-student setting after the lab is complete.
 
 \vfill
 \begin{center}\fontsize{7}{8}\selectfont

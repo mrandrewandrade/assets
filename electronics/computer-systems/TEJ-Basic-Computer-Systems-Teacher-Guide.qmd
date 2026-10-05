@@ -22,7 +22,7 @@ The eight Main Quests form a short required sprint from basic electricity to a c
 
 ## Current classroom timing {.unnumbered}
 
-All students complete Power Circuits Questions 1-6 first. The whole class then completes the Computer Power and Parts Main Mission. Early finishers may choose Make It Print, while a limited pair completes the Computer Recovery and OS Comparison. The pilot prepares equipment and selects the classroom OS but does not count as early completion of CS01-CS08. After Thanksgiving, the whole class completes the formal Best Workstation Project using the selected OS.
+All students complete Power Circuits Questions 1-6 first. The Computer Power and Parts document remains a future-lab shell until the actual computer, photographs, approved measurement method, and cited values are ready. Early finishers may choose Make It Print, while a limited pair completes the Computer Recovery and OS Comparison. The pilot prepares equipment and selects the classroom OS but does not count as early completion of CS01-CS08. After Thanksgiving, the whole class completes the formal Best Workstation Project using the selected OS.
 
 **Deployment policy:** Xubuntu 26.04 LTS remains provisional until the matched crossover comparison with Linux Mint Xfce is complete. The teacher may select Xubuntu, Mint Xfce, Lubuntu for weak hardware, or additional testing. Ubuntu Server is reserved for a later dedicated SSH and systems-administration machine.
 

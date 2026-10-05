@@ -1,6 +1,6 @@
 ---
-title: "Computer Power and Parts Mission"
-subtitle: "Main Mission | Individual assignment | Thursday, October 8, 2026"
+title: "Computer Power and Parts Lab Shell"
+subtitle: "Draft for the future classroom-computer lab"
 format:
   pdf:
     pdf-engine: xelatex
@@ -13,127 +13,162 @@ execute: {enabled: false}
 lang: en-CA
 ---
 
-**Student:** ______________________________  **Class:** ______  **Date:** __________
+**Student:** Type here.  **Class:** Type here.  **Date:** Type here.
 
-Use a powered-off desktop, labelled cutaway, exterior PSU nameplate, computer power schematic, calculator, GUESS, and Google Docs equation tools. This is not an operating-system installation activity.
+This is a planning shell for a future lab using one actual classroom computer. The teacher will add the computer photograph, exterior PSU nameplate photograph, approved measurement method, and actual values before release.
 
 ::: {.tejwarning title="Safety boundary"}
-Never open the PSU or probe energized internal components. Keep the computer powered off and unplugged during identification. Do not alter hardware.
+Keep the computer powered off and unplugged while identifying parts. Never open the PSU or probe energized circuits. Future power readings must use a teacher-approved external wall power meter or verified manufacturer data.
 :::
 
-# A. Real computer {.unnumbered}
+# 1. Actual computer record {.unnumbered}
 
-Identify and photograph or label: power source, conductors, protection, controls, loads, PSU, motherboard, CPU, RAM, storage, and cooling fans.
-
-![A labelled desktop-computer cutaway showing the sealed PSU, motherboard, CPU, RAM, storage, and cooling.](../schematics/Computer_System_Cutaway.pdf){width=94%}
-
-# B. Functional explanation {.unnumbered}
-
-**1. Why do computer loads behave as parallel branches?**
-
-\workinglines{2}
-
-**2. Why is the power button normally a control input?**
-
-\workinglines{2}
-
-**3. Why must the PSU remain sealed?**
-
-\workinglines{2}
-
-**4. Why is a PSU wattage rating not the same as present power use?**
-
-\workinglines{2}
-
-# C. Six computer-specific questions {.unnumbered}
-
-Use $V_1$, $I_1$, $P_1$, $V_2$, $I_2$, $P_2$, $R_2$, and $P_T$. Each calculation needs Given and Unknown tables, a general equation, a rearranged exact equation when needed, substitution with units, full calculator result, correct significant figures, a final-answer entry, and an answer sentence.
-
-## Question 1: schematic labels {.unnumbered}
-
-Label source, conversion/protection, distribution, control, and at least four parallel loads.
-
-![Computer power connections.](../schematics/Computer_Power_Connections.pdf){width=95%}
-
-## Question 2: branch power $P_1$ {.unnumbered}
-
-A $12.0\ \mathrm{V}$ cooling branch draws $0.460\ \mathrm{A}$. Calculate $P_1$ using GUESS.
-
-| GUESS | Your work |
+| Record | Student response |
 |:--|:--|
-| Given with units | |
-| Unknown and target unit | |
-| General equation | |
-| Substitution with units | |
-| Full calculator result | |
-| Final answer and sentence | |
+| Computer make and model | Type here. |
+| Asset number | Type here. |
+| Exterior PSU rated output | Type here. W |
+| Data source | Type here. |
 
-## Question 3: branch current $I_2$ {.unnumbered}
+::: {.tejnote title="Actual classroom computer photograph"}
+Teacher inserts the actual computer photograph here.
 
-A $5.00\ \mathrm{V}$ storage branch uses $7.50\ \mathrm{W}$. Calculate $I_2$ using GUESS.
+\vspace{1.4in}
+:::
 
-| GUESS | Your work |
+::: {.tejnote title="Exterior PSU nameplate photograph"}
+Teacher inserts a clear photograph of the exterior label here. Do not open the PSU.
+
+\vspace{1.4in}
+:::
+
+# 2. Safety and circuit understanding {.unnumbered}
+
+**Why do computer loads behave as parallel branches?**
+
+Type here.
+
+**Why is the power button normally a control input rather than a load-current switch?**
+
+Type here.
+
+**Why must the PSU remain sealed?**
+
+Type here.
+
+**Why is a PSU wattage rating not the same as present power use?**
+
+Type here.
+
+# 3. Future lab calculations {.unnumbered}
+
+The teacher will finalize these questions after selecting the actual computer and an approved measurement method. Use $P_{\mathrm{T}}$ for total power. Do not invent values.
+
+## Question 1: evidence labels {.unnumbered}
+
+Label the actual computer photograph and PSU nameplate photograph. Identify the source, conversion or protection, distribution, control, and the loads that are visible or documented.
+
+**Response:** Type here.
+
+## Question 2: branch power {.unnumbered}
+
+Teacher adds actual voltage and current values, with a source. Calculate branch power using GUESS.
+
+| GUESS step | Student response |
 |:--|:--|
-| Given with units | |
-| Unknown and target unit | |
-| General equation | |
-| Rearranged exact equation | |
-| Substitution with units | |
-| Full calculator result | |
-| Final answer and sentence | |
+| Given with units | Type here. |
+| Unknown and target unit | Branch power in W |
+| General equation | Type here. |
+| Substitution with units | Type here. |
+| Full calculator result | Type here. |
+| Final answer and sentence | Type here. |
 
-## Question 4: equivalent resistance $R_2$ {.unnumbered}
+\clearpage
 
-Use $V_2$ and your calculated $I_2$ to calculate $R_2$.
+## Question 3: branch current {.unnumbered}
 
-| GUESS | Your work |
+Teacher adds actual voltage and power values, with a source. Calculate branch current using GUESS.
+
+| GUESS step | Student response |
 |:--|:--|
-| Given with units | |
-| Unknown and target unit | |
-| General equation | |
-| Rearranged exact equation | |
-| Substitution with units | |
-| Full calculator result | |
-| Final answer and sentence | |
+| Given with units | Type here. |
+| Unknown and target unit | Branch current in A |
+| General equation | Type here. |
+| Rearranged exact equation | Type here. |
+| Substitution with units | Type here. |
+| Full calculator result | Type here. |
+| Final answer and sentence | Type here. |
 
-## Question 5: total power $P_T$ {.unnumbered}
+## Question 4: equivalent resistance {.unnumbered}
 
-Add $P_1$, $P_2=7.50\ \mathrm{W}$, a $42.0\ \mathrm{W}$ CPU branch, and an $18.6\ \mathrm{W}$ motherboard/RAM branch.
+Use teacher-approved voltage and current values to calculate equivalent resistance.
 
-| GUESS | Your work |
+| GUESS step | Student response |
 |:--|:--|
-| Given powers with units | |
-| Unknown and target unit | |
-| General equation | |
-| Substitution with units | |
-| Full calculator result | |
-| Final answer and sentence | |
+| Given with units | Type here. |
+| Unknown and target unit | Equivalent resistance in $\Omega$ |
+| General equation | Type here. |
+| Rearranged exact equation | Type here. |
+| Substitution with units | Type here. |
+| Full calculator result | Type here. |
+| Final answer and sentence | Type here. |
 
-## Question 6: compare with the PSU rating {.unnumbered}
+\clearpage
 
-The exterior PSU nameplate is rated $400\ \mathrm{W}$. Compare your $P_T$ with the rating and explain why the rating does not mean continuous $400\ \mathrm{W}$ consumption.
+## Question 5: total load power {.unnumbered}
 
-\workinglines{4}
+The teacher adds the approved branch powers below. Add them to estimate $P_{\mathrm{T}}$.
+
+| $P_1$ (W) | $P_2$ (W) | CPU branch (W) | Motherboard and RAM (W) |
+|:--:|:--:|:--:|:--:|
+| Type here. | Type here. | Type here. | Type here. |
+
+| GUESS step | Student response |
+|:--|:--|
+| Given powers with units | Use the spaced fields above. |
+| Unknown and target unit | $P_{\mathrm{T}}$ in W |
+| General equation | Type here. |
+| Substitution with units | Type here. |
+| Full calculator result | Type here. |
+| Final answer and sentence | Type here. |
+
+## Question 6: compare measured power with the PSU rating {.unnumbered}
+
+Compare teacher-approved wall-input power data with the rated maximum output shown on the actual exterior PSU nameplate. Explain why the two values describe different things.
+
+**Comparison with units:** Type here.
+
+**Explanation:** Type here.
+
+**Final answer sentence:** Type here.
+
+\clearpage
 
 ## Final-answer table {.unnumbered}
 
-| Question | Quantity | Final answer with unit | Sig-fig or decimal-place rule |
+| Question | Quantity | Final answer with unit | Precision rule |
 |:--|:--:|:--|:--|
-| 2 | $P_1$ | | |
-| 3 | $I_2$ | | |
-| 4 | $R_2$ | | |
-| 5 | $P_T$ | | |
-| 6 | comparison | | |
+| 2 | branch power | Type here. | Type here. |
+| 3 | branch current | Type here. | Type here. |
+| 4 | equivalent resistance | Type here. | Type here. |
+| 5 | $P_{\mathrm{T}}$ | Type here. | Type here. |
+| 6 | comparison | Type here. | Type here. |
 
-# D. Ready-to-power inspection {.unnumbered}
+# 4. Ready-to-measure inspection {.unnumbered}
 
-$\square$ no loose metal/tools  $\square$ connectors appear seated  $\square$ fans clear  $\square$ chassis stable and closed  $\square$ exterior cables correct  **Teacher check:** ____________________
+Do not power or measure the computer until the teacher releases the final lab procedure. This shell does not authorize OS installation, hardware changes, opening the PSU, or internal energized measurements.
 
-# E. Submission and reflection {.unnumbered}
+$\square$ no loose metal or tools  $\square$ connectors appear seated  $\square$ fans clear  $\square$ chassis stable  $\square$ exterior cables correct
 
-Submit the completed Google Doc, labelled image or cutaway, all six responses, GUESS work, final-answer table, and a short reflection connecting the calculations to the real computer.
+**Teacher check:** Type here.
 
-\workinglines{3}
+# 5. Submission {.unnumbered}
+
+This section is not active yet. The teacher will add the final file naming, evidence, and submission requirements when the lab procedure is complete.
+
+**What evidence will the final lab need to connect circuit calculations to the actual computer?**
+
+Type here.
 
 \begin{center}\fontsize{7}{8}\selectfont
 CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\

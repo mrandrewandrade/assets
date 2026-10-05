@@ -211,7 +211,7 @@ assets:
     last_updated: 2026-10-04
     completion_status: reviewed
   - module_id: computer-power-parts
-    topic: Computer Power and Parts Mission
+    topic: Computer Power and Parts Lab Shell
     asset_type: individual-main-mission
     audience: mixed
     requirement: required
