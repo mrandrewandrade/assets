@@ -1,0 +1,25 @@
+catalogue:
+  geometry_origin: original procedural geometry
+  authoring_repository: https://github.com/mrandrewandrade/assets
+  license: CC-BY-SA-4.0
+  attribution: Technology Commons teaching materials by Andrew Andrade and contributors
+  external_artwork_included: false
+  paid_artwork_included: false
+  raster_tracing_used: false
+  protected_team_or_brand_logos_included: false
+  indigenous_restricted_designs_included: false
+  physical_verification: false
+references:
+  - name: SVG 2
+    url: https://www.w3.org/TR/SVG2/
+    purpose: standards-compatible SVG structure
+  - name: Inkscape
+    url: https://inkscape.org/
+    purpose: primary student editor
+  - name: Veccy
+    url: https://veccy.app/
+    purpose: optional browser-based parametric editor
+review_policy:
+  cultural_or_religious_content: Accurate naming, a source note, and human review are required before publication.
+  indigenous_content: Do not generate sacred, clan, ceremonial, nation-specific, or restricted designs without authoritative sources and permission.
+  trademarks: Do not generate official or near-copy team, school, university, or commercial logos without distribution rights.

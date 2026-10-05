@@ -23,6 +23,7 @@ The visual tokens are adapted from the Technology Commons brand kit in `mrandrew
 ```text
 assignments/          Quarto/Typst assignment sources and assignment assets
 brand/                Reusable brand assets
+laser/                Generated laser-fabrication library, metadata, tests, and bundles
 templates/            Legacy HTML/CSS document template
 scripts/              Build and setup tooling
 dist/                 Generated output, not committed
@@ -119,3 +120,15 @@ For an adaptation:
 > Based on Technology Commons teaching materials by Andrew Andrade and contributors. Original source: https://andrewandrade.ca and https://github.com/mrandrewandrade. Licensed under CC BY-SA 4.0. Modified by [your name], [your link]. Changes were made.
 
 See [LICENSE.md](LICENSE.md) for the licence notice and canonical licence link.
+
+## Laser fabrication library
+
+The source-of-truth laser catalogue lives in [`laser/`](laser/README.md). It uses deterministic Python generators and measured material/kerf parameters to produce canonical millimetre SVGs, previews, structured manifests, validation reports, and a downloadable bundle. Run:
+
+```sh
+python laser/scripts/generate_library.py
+python laser/scripts/validate_library.py
+python -m unittest discover -s laser/tests -p "test_*.py" -v
+```
+
+Generated fit-sensitive files are prototypes and are not physically verified by software tests.
