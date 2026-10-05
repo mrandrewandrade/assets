@@ -7,142 +7,134 @@ format:
     classoption: [9pt]
     include-in-header: ../styles/tej-preamble.tex
     mainfont: "Arial"
-    monofont: "Consolas"
-    geometry: [margin=0.48in]
+    geometry: [margin=0.48in, bottom=0.62in]
 execute: {enabled: false}
 lang: en-CA
 ---
 
 \begin{center}
-{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
-{\large Pilot Job Sheet}
+{\Large\bfseries Computer Recovery and OS Comparison}\\[0.1em]
+{\large Side Quest | Student job sheet}
 \end{center}
-\vspace{-0.8em}
-\renewcommand{\arraystretch}{0.88}
+\vspace{-0.45em}
+\renewcommand{\arraystretch}{0.86}
 \setlength{\tabcolsep}{3pt}
 \setlength{\parskip}{1pt}
-\RedeclareSectionCommand[beforeskip=0.45\baselineskip,afterskip=0.18\baselineskip]{section}
-\fontsize{8.5}{9.5}\selectfont
+\fontsize{8.35}{9.25}\selectfont
 
-**Power Circuits Questions 1-6 complete:** $\square$  **Teacher initials:** __________
+**Prerequisite:** $\square$ Power Circuits Questions 1-6 complete  $\square$ teacher approval  $\square$ limited place assigned
 
-| Student names | Date | Class | Asset number |
+| Student 1 | Student 2 | Class | Date |
 |:--|:--|:--|:--|
 | | | | |
 
-| Machine type | Manufacturer | Model | Existing asset label |
-|:--|:--|:--|:--|
-| desktop / laptop / Intel Mac | | | |
+| Round | Technician | Recorder | Role swap confirmed |
+|:--|:--|:--|:--:|
+| 1 | | | $\square$ |
+| 2 | | | $\square$ |
 
-| First technician | First recorder | Role swap | Roles after swap |
-|:--|:--|:--:|:--|
-| | | $\square$ | technician: __________ recorder: __________ |
+Prepare classroom computers and compare **Xubuntu 26.04 LTS** with **Linux Mint Xfce** before the teacher confirms the classroom standard. The current Xubuntu choice is provisional until this pilot is complete.
 
-This limited pilot prepares classroom equipment. It is not a quest ID and does not complete CS01-CS08 early. The machine does not need to work for you to succeed. Assessment uses safety, documentation, reasoning, and approval gates.
+## Matched computers and baseline {.unnumbered}
 
-## Baseline, photographs, and privacy {.unnumbered}
-
-| Assigned condition or symptom | Power state and cables received | Data or privacy restriction |
+| Record | Computer A | Computer B |
 |:--|:--|:--|
-| | | |
+| asset number and exact model | | |
+| processor | | |
+| RAM | | |
+| storage type | | |
+| firmware configuration | | |
+| baseline condition or symptom | | |
 
-**Photographs:** $\square$ front  $\square$ rear ports  $\square$ asset label only  $\square$ interior overview after approval  $\square$ cable locations before movement
+Select computers that match as closely as possible. Explain any difference: __________________________________________
 
-Never photograph passwords, network secrets, private screens, or unnecessary serial numbers.
+**Photo evidence:** $\square$ exterior A  $\square$ exterior B  $\square$ interior after approval  $\square$ firmware or Apple Diagnostics
 
-## Safety and ESD gate {.unnumbered}
+## Safety, ESD, privacy, and sealed PSU {.unnumbered}
 
-**Students never:** open or probe inside a PSU, create a short, invent a fault, move unapproved parts, force a connector, or erase or partition a drive without written teacher approval. The PSU remains sealed.
+Shut down and unplug before opening. Use the approved ESD area and handle parts by their edges. Never open or probe inside a PSU. Never photograph passwords, network secrets, private screens, or unnecessary serial numbers. Stop for liquid, a swollen cell, burnt areas, damaged power hardware, loose metal, sharp damage, smoke, unusual smell, abnormal heat, unstable power, or unexpected noise.
 
-**Controls:** $\square$ shut down  $\square$ unplugged  $\square$ discharged as directed  $\square$ ESD mat or approved grounded area  $\square$ wrist strap when directed  $\square$ parts held by edges
+## Ready-to-power gate {.unnumbered}
 
-Stop for liquid, a swollen cell, burnt areas, damaged power connectors, loose metal, sharp damage, smoke, unusual smell, abnormal heat, or an unknown battery.
+$\square$ loose items removed  $\square$ RAM/cards seated  $\square$ storage secure  $\square$ connectors aligned and latched  $\square$ fans clear  $\square$ chassis stable and closed  $\square$ exterior cables correct
 
-## Parts inventory {.unnumbered}
+**Teacher signature before power:** ____________________________________  **Time:** __________
 
-| Item | Make or label | Qty. | Connection or location | Condition |
-|:--|:--|:--:|:--|:--|
-| motherboard / logic board and CPU | | | | |
-| RAM | | | | |
-| storage | | | | |
-| cooling, expansion, or other | | | | |
-
-**RAM:** type __________  modules __________  total capacity __________  slots used / total __________
-
-**Storage:** type __________  model __________  capacity __________  cable or interface __________
-
-**Visible damage or concern:** ______________________________________________________________________
-
-**Stop condition found:** $\square$ no  $\square$ yes, notify the teacher and describe: _______________________________
-
-## Reassembly and ready-to-power gate {.unnumbered}
-
-$\square$ loose items removed  $\square$ RAM latches checked  $\square$ storage secured  $\square$ power and data connectors checked  $\square$ fans clear  $\square$ case closed as directed  $\square$ exterior cables correct
-
-**Prediction for first power:** _____________________________________________________________________
-
-**Teacher signature before power:** __________________________________  **Time:** __________
-
-\newpage
-
-\begin{center}
-{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
-{\large Pilot Job Sheet, Page 2}
-\end{center}
-\vspace{-0.8em}
-
-## Startup and diagnostic record {.unnumbered}
-
-Use a wired keyboard during startup. Model documentation controls when keys differ.
+## Startup keys {.unnumbered}
 
 | Machine | Key | Purpose | Result |
 |:--|:--|:--|:--|
 | PC | F2 or Delete | firmware setup | |
-| PC | F12 | boot selection | |
+| PC | F12 | boot selection, when supported | |
 | Intel Mac | Option or Alt | Startup Manager | |
 | Intel Mac | D / Option-D | Apple Diagnostics / Internet Diagnostics | |
 | Intel Mac | Command-R / Option-Command-R | Recovery / Internet Recovery | |
 
-Intel Macs use EFI or UEFI firmware rather than an ordinary PC BIOS. Record exactly what the assigned model shows. Do not change settings without approval.
+Use a wired keyboard. Record what the assigned model actually shows.
 
-**POST, firmware, or Apple Diagnostics evidence:** _____________________________________________________
+\newpage
 
-## Xubuntu live-session acceptance tests {.unnumbered}
+\begin{center}
+{\Large\bfseries OS Crossover Results}\\[0.1em]
+{\large Computer Recovery and OS Comparison | Page 2}
+\end{center}
+\vspace{-0.35em}
 
-Boot the teacher-prepared, direct-written Xubuntu 26.04 LTS USB. A live session is a quick compatibility check. Its boot time is not a fair benchmark.
+## Crossover procedure {.unnumbered}
 
-| Test | Green / yellow / red | Evidence or note |
-|:--|:--:|:--|
-| display, keyboard, and mouse | | |
-| USB and Ethernet | | |
-| Wi-Fi and sound | | |
-| internal storage visibility | | |
+Use identical USB models, the same USB-port type, the same waiting period, and the same test procedure where possible.
 
-## Triage classification {.unnumbered}
+- **Round 1:** A runs Xubuntu live; B runs Mint Xfce live.
+- **Round 2:** swap USB drives; A runs Mint Xfce live; B runs Xubuntu live.
+- Live-USB boot time is **not** a fair computer-performance benchmark.
 
-| Class | Meaning |
-|:--|:--|
-| Green | safe, stable, required tests pass, no unresolved data concern |
-| Yellow | one approved repair, driver check, or closer review is needed |
-| Red | stop condition, unsafe damage, unstable power, serious storage concern, or no safe student next step |
+Record **Pass, Concern, or Fail** for each test. Green, Yellow, and Red are reserved for the final machine classification.
 
-**Classification:** $\square$ green  $\square$ yellow  $\square$ red  **Reasoning:** _____________________________________________
+| Individual test | A Xubuntu | A Mint Xfce | B Xubuntu | B Mint Xfce |
+|:--|:--:|:--:|:--:|:--:|
+| display | | | | |
+| keyboard | | | | |
+| mouse | | | | |
+| cursor stability | | | | |
+| USB | | | | |
+| Ethernet | | | | |
+| Wi-Fi | | | | |
+| sound | | | | |
+| internal-storage visibility | | | | |
 
-## Teacher authorization before changes {.unnumbered}
+**Photos:** $\square$ Xubuntu live  $\square$ Mint Xfce live  $\square$ final desktop only after signed installation approval
 
-| Proposed action | Approved action and limits | Teacher signature |
+| Comparison criterion | Xubuntu evidence | Mint Xfce evidence |
 |:--|:--|:--|
-| move or replace RAM | | |
-| replace or add storage | | |
-| erase or partition a drive | | |
-| install Xubuntu or Lubuntu | | |
+| idle memory after the same wait | | |
+| browser launch | | |
+| Tinkercad usability | | |
+| Inkscape usability | | |
+| VS Code usability | | |
+| settings and interface clarity | | |
+| installation and update experience | | |
 
-**Final next action:** $\square$ return to service  $\square$ approved hardware work  $\square$ approved installation  $\square$ teacher diagnosis  $\square$ hold for parts  $\square$ retire or recycle review
+**Student preference:** $\square$ Xubuntu  $\square$ Mint Xfce  $\square$ more testing  **Evidence:** _________________________________
 
-**Details:** ________________________________________________________________________________________
+**Teacher OS decision:** $\square$ Xubuntu standard  $\square$ Mint Xfce standard  $\square$ Lubuntu for weak machines  $\square$ additional testing
 
-## Google Classroom evidence {.unnumbered}
+## Authorization and acceptance {.unnumbered}
 
-Submit $\square$ both pages  $\square$ approved exterior photo  $\square$ approved interior overview  $\square$ diagnostic or live-session evidence  $\square$ classification and next action
+Do not erase, partition, install, replace storage, or move RAM without a signed teacher approval gate.
 
-CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.
+**Approved action and limits:** ______________________________________________________________________
+
+**Teacher signature:** ____________________________________  **Date/time:** ____________________
+
+After an approved installation: $\square$ restart/login  $\square$ display  $\square$ keyboard  $\square$ mouse/cursor  $\square$ USB  $\square$ Ethernet  $\square$ Wi-Fi  $\square$ sound  $\square$ storage  $\square$ updates
+
+**Final classification:** A $\square$ Green $\square$ Yellow $\square$ Red  B $\square$ Green $\square$ Yellow $\square$ Red
+
+Green means safe and stable. Yellow means one defined repair or closer review. Red means stop student work and isolate for teacher review.
+
+\vfill
+\begin{center}\fontsize{6.6}{7.4}\selectfont
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\
+Please share, modify and redistribute. If you change this file, do not remove:\\
+CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!
+\end{center}

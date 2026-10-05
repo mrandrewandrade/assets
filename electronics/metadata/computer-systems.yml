@@ -5,7 +5,8 @@ last_updated: 2026-10-04
 pathway_field: pathway
 score_scale: "0-4"
 deployment_policy:
-  standard_desktop: xubuntu-26.04-lts
+  standard_desktop: pilot-decision-pending
+  pilot_candidates: [xubuntu-26.04-lts, linux-mint-xfce]
   weak_hardware_fallback: lubuntu-26.04-lts
   dedicated_server: ubuntu-server
 classroom_model:
@@ -13,13 +14,16 @@ classroom_model:
   side_quest_topic: Side Quests
   tracker_access: teacher-only
 pilot_deployment:
-  title: TEJ Computer Recovery Crew Pilot
+  title: Computer Recovery and OS Comparison
   canonical_quest_id: none
   classroom_topic: Side Quests
   prerequisite: Power Circuits Questions 1-6
-  purpose: rapid-equipment-preparation
+  purpose: matched-computer-crossover-os-comparison
   does_not_complete: [CS01, CS02, CS03, CS04, CS05, CS06, CS07, CS08]
-  route: [baseline, safe-opening, inventory, reassembly-inspection, teacher-ready-to-power-gate, post-or-apple-diagnostics, xubuntu-live-session, triage, teacher-approved-hardware-work, teacher-approved-installation, acceptance-testing]
+  route: [matched-computers, baseline, safe-opening, inventory, reassembly-inspection, teacher-ready-to-power-gate, post-or-apple-diagnostics, crossover-live-sessions, evidence-based-os-recommendation, teacher-decision, teacher-approved-hardware-work, teacher-approved-installation, acceptance-testing, final-machine-classification]
+  individual_test_scale: [pass, concern, fail]
+  overall_machine_scale: [green, yellow, red]
+  later_project_timing: after-thanksgiving
 modules:
   - id: CS01
     title: Fast electricity-to-computer bridge

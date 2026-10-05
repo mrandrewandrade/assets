@@ -1,63 +1,68 @@
 ---
-title: ""
+title: "Computer Recovery and OS Comparison"
+subtitle: "Teacher launch and answer guide"
 format:
   pdf:
     pdf-engine: xelatex
     documentclass: scrartcl
-    classoption: [9pt]
+    classoption: [10pt]
     include-in-header: ../styles/tej-preamble.tex
     mainfont: "Arial"
-    monofont: "Consolas"
-    geometry: [margin=0.48in]
+    geometry: [margin=0.62in]
 execute: {enabled: false}
 lang: en-CA
 ---
 
-\begin{center}
-{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
-{\large Pilot Teacher Launch Guide}
-\end{center}
-\vspace{-0.9em}
-\renewcommand{\arraystretch}{0.88}
-\setlength{\tabcolsep}{3pt}
+This limited Side Quest compares Xubuntu 26.04 LTS and Linux Mint Xfce before a classroom standard is confirmed. Students first complete Power Circuits Questions 1-6. Pilot work does not complete CS01-CS08 early.
 
-This limited Side Quest prepares classroom computers now. Students first complete Power Circuits Questions 1-6. Pilot participation does not complete CS01-CS08 early.
+## Launch setup {.unnumbered}
 
-## Setup {.unnumbered}
+- Select two computers matched by model, processor, RAM, storage type, and firmware configuration.
+- Prepare identical USB models and use the same USB-port type and procedure.
+- Assign technician and recorder roles, then require a role swap.
+- Provide an ESD mat or approved grounded work area, correct tools, parts trays, wired input devices, Ethernet, and approved camera access.
+- Confirm data ownership and exclude unsafe or privacy-sensitive equipment.
 
-**Safe machines:** Choose equipment with a known asset record, intact power hardware, no liquid damage, no swollen cells, no burnt areas, and a student-appropriate service boundary. Exclude unknown batteries, damaged power connectors, and machines with unresolved data ownership.
+## Required gates {.unnumbered}
 
-**Pairs and supervision:** Assign one technician and one recorder, then require a role swap. Start with one pair per machine. A suggested maximum is one supervising teacher for three actively opened machines. Reduce that ratio for unfamiliar models, Intel Macs, or inexperienced students.
+Sign before first power after opening. Sign again before students erase, partition, install, replace storage, or move RAM. Students never open or probe a PSU, create a short, invent a fault, force a connector, or move unapproved parts.
 
-**Tools and media:** ESD mat or approved grounded work area, wrist straps when directed, correct screwdrivers, parts trays, asset labels, approved camera, wired keyboard and mouse, Ethernet, direct-written Xubuntu 26.04 LTS live USB, and a Memtest86+ USB for suitable PCs. Use Apple Diagnostics for Intel Macs.
+Stop for liquid, swollen cells, burnt areas, damaged power hardware, loose metal, sharp damage, smoke, unusual smell, abnormal heat, unstable power, repeated shutdowns, or uncertain data ownership.
 
-Create the Xubuntu USB with an image-writing tool. Copying the ISO file onto a normal USB filesystem is not sufficient. Verify the image and label every USB device.
+## Fair comparison {.unnumbered}
 
-## Route and approval gates {.unnumbered}
+Round 1 places Xubuntu on A and Mint Xfce on B. Round 2 swaps the USB drives. Use the same waiting period before idle-memory readings and the same launch task for the browser, Tinkercad, Inkscape, and VS Code. Do not score live-USB boot time as a computer benchmark.
 
-Baseline, safe opening, inventory, reassembly inspection, ready-to-power teacher gate, POST/firmware or Apple Diagnostics, Xubuntu live session, green/yellow/red classification, teacher-approved hardware work, teacher-approved installation, acceptance testing.
+Use **Pass / Concern / Fail** for individual hardware and usability tests. Use **Green / Yellow / Red** only for the overall machine classification.
 
-Sign before first power after opening. Sign again before students move RAM, replace storage, erase or partition a drive, or install an operating system. Students never open or probe inside a PSU, create a short, invent a fault, force a connector, or move unapproved parts.
+## Evidence and decision {.unnumbered}
 
-## Triage, stop conditions, and data {.unnumbered}
+Look for complete inventory, both crossover rounds, comparable conditions, specific observations, approved photographs, student preference, and an evidence-based recommendation.
 
-| Class | Teacher decision |
-|:--|:--|
-| Green | Required live-session tests pass safely and no data concern remains. Approve installation or return to service. |
-| Yellow | Hold for one defined repair, driver check, memory test, or closer review. |
-| Red | Stop student work. Isolate unsafe, unstable, damaged, or data-sensitive equipment. |
+The teacher may choose:
 
-Stop for liquid, swollen cells, burnt areas, damaged mains or DC power hardware, loose metal, sharp damage, smoke, unusual smell, abnormal heat, unstable power, repeated shutdowns, or uncertain data ownership. Do not erase, partition, or reinstall until ownership, backups, target drive, and authorization are documented.
+- Xubuntu as the classroom standard
+- Mint Xfce as the classroom standard
+- Lubuntu for weak machines
+- additional testing required
 
-Do not open an iMac display until its exact model and service procedure are known. Adhesive, display cables, power components, and model-specific tools make this a separate teacher-controlled decision.
+Record the decision before any standard installation. The later CS01-CS08 Best Workstation Project begins after Thanksgiving and uses the selected OS to commission, upgrade, benchmark, and recommend a classroom computer.
 
-## Classroom posting {.unnumbered}
+## Google Classroom posting {.unnumbered}
 
-**Title:** Computer Recovery Crew Pilot  
 **Topic:** Side Quests
 
-Power Circuits Questions 1-6 must be complete first. Places are limited. Students work only on the assigned machine and submit the completed job sheet with approved photos. Success uses safe evidence rather than whether the machine works. Teacher approval is required before power, hardware changes, or installation.
+**Title:** Computer Recovery and OS Comparison
 
-**Official references:** [Xubuntu 26.04](https://xubuntu.org/release/26.04/), [Ubuntu bootable USB guidance](https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/), [Apple startup keys](https://support.apple.com/102603), and [Apple Diagnostics](https://support.apple.com/102550).
+One shared Google Doc per pair. Power Circuits Questions 1-6 must be complete first. Places are limited. Compare both operating systems on matched computers, submit the completed document and approved photos, and stop at every teacher approval gate. Safe evidence determines success even when a machine does not work.
 
-CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.
+## Official references {.unnumbered}
+
+[Xubuntu releases](https://xubuntu.org/releases/), [Linux Mint downloads](https://linuxmint.com/download.php), [Ubuntu bootable USB guidance](https://documentation.ubuntu.com/desktop/en/latest/how-to/create-a-bootable-usb-stick/), [Apple startup keys](https://support.apple.com/102603), and [Apple Diagnostics](https://support.apple.com/102550).
+
+\vfill
+\begin{center}\fontsize{7}{8}\selectfont
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\
+Please share, modify and redistribute. If you change this file, do not remove:\\
+CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!
+\end{center}

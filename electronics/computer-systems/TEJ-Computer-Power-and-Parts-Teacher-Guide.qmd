@@ -1,0 +1,86 @@
+---
+title: "Computer Power and Parts Mission"
+subtitle: "Teacher answer and launch guide"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    geometry: [margin=0.65in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+## Launch {.unnumbered}
+
+This individual Main Mission follows Power Circuits Questions 1-6. Provide a powered-off desktop, the repository cutaway and power schematic, exterior PSU nameplate access, calculator, and the editable Google Doc. Students do not install an OS or alter hardware.
+
+## Functional answers {.unnumbered}
+
+- **Parallel loads:** branches receive the intended rail voltage and operate without forcing all load current through one series path.
+- **Power button:** it normally sends a low-power control signal to motherboard power-management logic.
+- **Sealed PSU:** hazardous stored energy and mains-connected parts can remain inside. No student opening or energized probing is permitted.
+- **Nameplate:** the wattage is a maximum rated capacity under stated conditions, not a measurement of present consumption.
+
+## Calculation answers {.unnumbered}
+
+### Question 2 {.unnumbered}
+
+\answer{$P_1=V_1I_1=(12.0\ \mathrm{V})(0.460\ \mathrm{A})=5.52000\ \mathrm{W}\approx5.52\ \mathrm{W}$.}
+
+::: {.tejwarning title="Significant figures"}
+Both measured values have three significant figures, so the multiplication result is reported as $5.52\ \mathrm{W}$, three significant figures.
+:::
+
+### Question 3 {.unnumbered}
+
+\answer{$I_2=\dfrac{P_2}{V_2}=\dfrac{7.50\ \mathrm{W}}{5.00\ \mathrm{V}}=1.50000\ \mathrm{A}\approx1.50\ \mathrm{A}$.}
+
+::: {.tejwarning title="Significant figures"}
+$P_2$ and $V_2$ each have three significant figures, so $I_2$ is reported as $1.50\ \mathrm{A}$.
+:::
+
+### Question 4 {.unnumbered}
+
+\answer{$R_2=\dfrac{V_2}{I_2}=\dfrac{5.00\ \mathrm{V}}{1.50\ \mathrm{A}}=3.33333\ldots\ \Omega\approx3.33\ \Omega$.}
+
+::: {.tejwarning title="Significant figures"}
+The inputs each carry three significant figures, so $R_2$ is reported as $3.33\ \Omega$.
+:::
+
+### Question 5 {.unnumbered}
+
+\answer{$P_T=5.52\ \mathrm{W}+7.50\ \mathrm{W}+42.0\ \mathrm{W}+18.6\ \mathrm{W}=73.62\ \mathrm{W}\approx73.6\ \mathrm{W}$.}
+
+::: {.tejwarning title="Decimal-place rule"}
+For addition, round to the least precise decimal place. The $42.0\ \mathrm{W}$ and $18.6\ \mathrm{W}$ values limit the sum to one decimal place, so the answer is $73.6\ \mathrm{W}$.
+:::
+
+### Question 6 {.unnumbered}
+
+\answer{$73.6\ \mathrm{W}$ is below the $400\ \mathrm{W}$ rating by $326.4\ \mathrm{W}$. The rating describes PSU capacity, while actual load varies with operating state, efficiency, and connected components.}
+
+::: {.tejwarning title="Precision note"}
+The comparison may be stated to one decimal place because $P_T$ is known to one decimal place. Do not present the nameplate rating as a live power measurement.
+:::
+
+## Assessment check {.unnumbered}
+
+Look for accurate labels, complete GUESS steps, equations before substitution, units on every value, full calculator results before rounding, correct final precision, answer sentences, a safe inspection, and a reflection that connects parallel branches and PSU capacity to the real computer.
+
+## Google Classroom posting {.unnumbered}
+
+**Topic:** Main Assignments
+
+**Title:** Computer Power and Parts Mission
+
+Make one copy for each student. Students submit the completed Google Doc, labelled image, six responses, GUESS work, final-answer table, and reflection.
+
+\vfill
+\begin{center}\fontsize{7}{8}\selectfont
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\
+Please share, modify and redistribute. If you change this file, do not remove:\\
+CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!
+\end{center}

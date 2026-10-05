@@ -1,0 +1,142 @@
+---
+title: "Computer Power and Parts Mission"
+subtitle: "Main Mission | Individual assignment | Thursday, October 8, 2026"
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [10pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    geometry: [margin=0.62in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+**Student:** ______________________________  **Class:** ______  **Date:** __________
+
+Use a powered-off desktop, labelled cutaway, exterior PSU nameplate, computer power schematic, calculator, GUESS, and Google Docs equation tools. This is not an operating-system installation activity.
+
+::: {.tejwarning title="Safety boundary"}
+Never open the PSU or probe energized internal components. Keep the computer powered off and unplugged during identification. Do not alter hardware.
+:::
+
+# A. Real computer {.unnumbered}
+
+Identify and photograph or label: power source, conductors, protection, controls, loads, PSU, motherboard, CPU, RAM, storage, and cooling fans.
+
+![A labelled desktop-computer cutaway showing the sealed PSU, motherboard, CPU, RAM, storage, and cooling.](../schematics/Computer_System_Cutaway.pdf){width=94%}
+
+# B. Functional explanation {.unnumbered}
+
+**1. Why do computer loads behave as parallel branches?**
+
+\workinglines{2}
+
+**2. Why is the power button normally a control input?**
+
+\workinglines{2}
+
+**3. Why must the PSU remain sealed?**
+
+\workinglines{2}
+
+**4. Why is a PSU wattage rating not the same as present power use?**
+
+\workinglines{2}
+
+# C. Six computer-specific questions {.unnumbered}
+
+Use $V_1$, $I_1$, $P_1$, $V_2$, $I_2$, $P_2$, $R_2$, and $P_T$. Each calculation needs Given and Unknown tables, a general equation, a rearranged exact equation when needed, substitution with units, full calculator result, correct significant figures, a final-answer entry, and an answer sentence.
+
+## Question 1: schematic labels {.unnumbered}
+
+Label source, conversion/protection, distribution, control, and at least four parallel loads.
+
+![Computer power connections.](../schematics/Computer_Power_Connections.pdf){width=95%}
+
+## Question 2: branch power $P_1$ {.unnumbered}
+
+A $12.0\ \mathrm{V}$ cooling branch draws $0.460\ \mathrm{A}$. Calculate $P_1$ using GUESS.
+
+| GUESS | Your work |
+|:--|:--|
+| Given with units | |
+| Unknown and target unit | |
+| General equation | |
+| Substitution with units | |
+| Full calculator result | |
+| Final answer and sentence | |
+
+## Question 3: branch current $I_2$ {.unnumbered}
+
+A $5.00\ \mathrm{V}$ storage branch uses $7.50\ \mathrm{W}$. Calculate $I_2$ using GUESS.
+
+| GUESS | Your work |
+|:--|:--|
+| Given with units | |
+| Unknown and target unit | |
+| General equation | |
+| Rearranged exact equation | |
+| Substitution with units | |
+| Full calculator result | |
+| Final answer and sentence | |
+
+## Question 4: equivalent resistance $R_2$ {.unnumbered}
+
+Use $V_2$ and your calculated $I_2$ to calculate $R_2$.
+
+| GUESS | Your work |
+|:--|:--|
+| Given with units | |
+| Unknown and target unit | |
+| General equation | |
+| Rearranged exact equation | |
+| Substitution with units | |
+| Full calculator result | |
+| Final answer and sentence | |
+
+## Question 5: total power $P_T$ {.unnumbered}
+
+Add $P_1$, $P_2=7.50\ \mathrm{W}$, a $42.0\ \mathrm{W}$ CPU branch, and an $18.6\ \mathrm{W}$ motherboard/RAM branch.
+
+| GUESS | Your work |
+|:--|:--|
+| Given powers with units | |
+| Unknown and target unit | |
+| General equation | |
+| Substitution with units | |
+| Full calculator result | |
+| Final answer and sentence | |
+
+## Question 6: compare with the PSU rating {.unnumbered}
+
+The exterior PSU nameplate is rated $400\ \mathrm{W}$. Compare your $P_T$ with the rating and explain why the rating does not mean continuous $400\ \mathrm{W}$ consumption.
+
+\workinglines{4}
+
+## Final-answer table {.unnumbered}
+
+| Question | Quantity | Final answer with unit | Sig-fig or decimal-place rule |
+|:--|:--:|:--|:--|
+| 2 | $P_1$ | | |
+| 3 | $I_2$ | | |
+| 4 | $R_2$ | | |
+| 5 | $P_T$ | | |
+| 6 | comparison | | |
+
+# D. Ready-to-power inspection {.unnumbered}
+
+$\square$ no loose metal/tools  $\square$ connectors appear seated  $\square$ fans clear  $\square$ chassis stable and closed  $\square$ exterior cables correct  **Teacher check:** ____________________
+
+# E. Submission and reflection {.unnumbered}
+
+Submit the completed Google Doc, labelled image or cutaway, all six responses, GUESS work, final-answer table, and a short reflection connecting the calculations to the real computer.
+
+\workinglines{3}
+
+\begin{center}\fontsize{7}{8}\selectfont
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\
+Please share, modify and redistribute. If you change this file, do not remove:\\
+CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!
+\end{center}

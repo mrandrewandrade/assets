@@ -1,0 +1,70 @@
+---
+title: ""
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [9pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    geometry: [margin=0.48in, bottom=0.55in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+\begin{center}
+{\Large\bfseries Make It Print}\\[-0.05em]
+{\large 3D Printing Side Quest}
+\end{center}
+\vspace{-0.55em}
+\fontsize{8.6}{9.5}\selectfont
+\renewcommand{\arraystretch}{0.9}
+\setlength{\tabcolsep}{3pt}
+
+**Names:** __________________________________  **Class:** ______  **Date:** __________
+
+**Prerequisites:** $\square$ Power Circuits Questions 1-6 complete  $\square$ teacher approval  $\square$ printer available
+
+## Mission {.unnumbered}
+
+Use the teacher-approved printer workflow to print the approved PCSS logo model, if your teacher provides it, or another small teacher-approved object. You do not need to design a new model.
+
+## Safe workflow {.unnumbered}
+
+1. Obtain the printer login from your teacher.
+2. Select the approved printer and model.
+3. Confirm scale, orientation, material, and estimated print time.
+4. Show the sliced preview to the teacher.
+5. Obtain approval before starting.
+6. Start the print and observe the first layer.
+7. Stop and notify the teacher for poor adhesion, filament problems, unusual noise, collision, smoke, smell, or unexpected movement.
+8. Allow the printer and print surface to cool before removal.
+9. Remove the object only when approved, clean the area, and record the result.
+
+| Approval record | Response |
+|:--|:--|
+| approved model and printer | |
+| scale, orientation, and material | |
+| estimated print time | |
+| teacher approval before start | |
+
+## Required evidence {.unnumbered}
+
+$\square$ sliced-preview screenshot  $\square$ first successful layers photo  $\square$ completed print or safely stopped print photo
+
+**What worked:** __________________________________________________________________________________
+
+**One improvement for next time:** __________________________________________________________________
+
+## Success {.unnumbered}
+
+Success means following the process safely and producing a successful print attempt. A failed print can still earn achievement when you document the evidence and respond safely.
+
+**Google Classroom:** Topic **Side Quests** | Title **Make It Print** | One shared submission per pair.
+
+\vfill
+\begin{center}\fontsize{6.5}{7.2}\selectfont
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade\\
+Please share, modify and redistribute. If you change this file, do not remove:\\
+CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!
+\end{center}

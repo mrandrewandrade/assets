@@ -45,10 +45,11 @@ SQ01 teardown, SQ02 teacher-prepared faults, SQ03 storage and expansion, SQ04 Li
 
 ## Classroom deployment policy {.unnumbered}
 
-- Xubuntu 26.04 LTS is the standard student desktop.
+- The Computer Recovery and OS Comparison pilot selects the classroom standard between Xubuntu 26.04 LTS and Linux Mint Xfce.
 - Lubuntu 26.04 LTS is the fallback for exceptionally weak hardware.
 - Ubuntu Server is reserved for a later dedicated SSH and systems-administration machine.
-- The Computer Recovery Crew pilot prepares equipment quickly. It does not complete CS01-CS08 early.
+- The comparison pilot prepares equipment and gathers evidence. It does not complete CS01-CS08 early.
+- After Thanksgiving, the class uses the selected OS to commission, upgrade, benchmark, and recommend a classroom computer.
 
 \newpage
 

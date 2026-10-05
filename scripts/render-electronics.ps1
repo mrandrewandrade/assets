@@ -82,6 +82,9 @@ Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Student-Activity-Pack
 Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" 'TEJ-Basic-Computer-Systems-Teacher-Guide.pdf'
 Render-Pdf "$computerSystemsDir/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd" 'TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf'
 Render-Pdf "$computerSystemsDir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" 'TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Make-It-Print-Side-Quest.qmd" 'TEJ-Make-It-Print-Side-Quest.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Mission.qmd" 'TEJ-Computer-Power-and-Parts-Mission.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" 'TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf'
 
 Get-ChildItem -LiteralPath 'electronics/schematics' -File |
     Where-Object { $_.Extension -in @('.svg', '.pdf') } |

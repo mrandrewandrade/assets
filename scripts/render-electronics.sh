@@ -71,6 +71,9 @@ render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Student-Activity-Pa
 render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" TEJ-Basic-Computer-Systems-Teacher-Guide.pdf
 render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd" TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf
 render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf
+render_pdf "$computer_systems_dir/TEJ-Make-It-Print-Side-Quest.qmd" TEJ-Make-It-Print-Side-Quest.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Mission.qmd" TEJ-Computer-Power-and-Parts-Mission.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf
 
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/

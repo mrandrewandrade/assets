@@ -153,14 +153,14 @@ assets:
     version: 1.0.0
     last_updated: 2026-10-04
     completion_status: reviewed
-  - module_id: computer-recovery-crew-pilot
-    topic: Computer Recovery Crew Pilot Job Sheet
+  - module_id: computer-recovery-os-comparison
+    topic: Computer Recovery and OS Comparison
     asset_type: standalone-job-sheet
     audience: student
     requirement: optional-limited-pilot
     component_tags: [ram, storage, psu, motherboard]
-    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, wired-keyboard]
-    context_tags: [recovery, triage, xubuntu, apple-diagnostics, approval-gates]
+    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, mint-xfce-live-usb, wired-keyboard]
+    context_tags: [recovery, crossover-comparison, xubuntu, linux-mint-xfce, apple-diagnostics, approval-gates]
     difficulty: introductory-to-intermediate
     curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
     safety_category: supervised-computer-service
@@ -172,14 +172,14 @@ assets:
     website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-recovery-crew-pilot.html
     last_updated: 2026-10-04
     completion_status: reviewed
-  - module_id: computer-recovery-crew-pilot-teacher
-    topic: Computer Recovery Crew Pilot Teacher Launch Guide
+  - module_id: computer-recovery-os-comparison-teacher
+    topic: Computer Recovery and OS Comparison Teacher Launch Guide
     asset_type: teacher-launch-guide
     audience: teacher
     requirement: staff-planning
     component_tags: [ram, storage, psu, motherboard]
-    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, memtest86-plus, wired-keyboard, ethernet]
-    context_tags: [recovery, triage, supervision, data-protection, approval-gates]
+    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, mint-xfce-live-usb, wired-keyboard, ethernet]
+    context_tags: [recovery, crossover-comparison, supervision, data-protection, approval-gates]
     difficulty: teacher-reference
     curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
     safety_category: teacher-controlled-computer-service
@@ -189,5 +189,43 @@ assets:
     source_file: electronics/computer-systems/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd
     output_file: TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf
     website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-recovery-crew-pilot.html
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: make-it-print
+    topic: Make It Print 3D Printing Side Quest
+    asset_type: one-page-side-quest
+    audience: student
+    requirement: optional-limited-access
+    component_tags: [3d-printer, slicer, filament]
+    equipment_tags: [teacher-approved-printer, teacher-approved-model]
+    context_tags: [early-finisher, safe-workflow, evidence]
+    difficulty: introductory
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2]
+    safety_category: teacher-approved-printer-workflow
+    estimated_time: variable
+    copyright_category: original
+    access: public
+    source_file: electronics/computer-systems/TEJ-Make-It-Print-Side-Quest.qmd
+    output_file: TEJ-Make-It-Print-Side-Quest.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/make-it-print.html
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: computer-power-parts
+    topic: Computer Power and Parts Mission
+    asset_type: individual-main-mission
+    audience: mixed
+    requirement: required
+    component_tags: [psu, motherboard, cpu, ram, storage, fan]
+    equipment_tags: [powered-off-desktop, computer-cutaway, calculator]
+    context_tags: [parallel-loads, guess, power, significant-figures]
+    difficulty: introductory
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
+    safety_category: powered-off-inspection
+    estimated_time: 75-minutes
+    copyright_category: original
+    access: public-student-and-teacher
+    source_file: electronics/computer-systems/TEJ-Computer-Power-and-Parts-Mission.qmd
+    output_file: TEJ-Computer-Power-and-Parts-Mission.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-power-parts.html
     last_updated: 2026-10-04
     completion_status: reviewed
