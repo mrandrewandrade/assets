@@ -9,8 +9,8 @@ if command -v magick >/dev/null 2>&1; then
 elif command -v convert >/dev/null 2>&1; then
   imagemagick=(convert)
 else
-  echo "ImageMagick is required to create print-ready schematic PDFs." >&2
-  exit 1
+  imagemagick=()
+  echo "ImageMagick is unavailable; using committed PDFs for SVG-only schematics."
 fi
 if ! command -v pdflatex >/dev/null 2>&1; then
   echo "pdfLaTeX is required to generate CircuitikZ schematics." >&2
@@ -35,7 +35,12 @@ for schematic in electronics/schematics/*.svg; do
   if [[ -f "${schematic%.svg}.tex" ]]; then
     continue
   fi
-  "${imagemagick[@]}" -density 144 "$schematic" -background white -alpha remove -alpha off -compress Zip "${schematic%.svg}.pdf"
+  if (( ${#imagemagick[@]} )); then
+    "${imagemagick[@]}" -density 144 "$schematic" -background white -alpha remove -alpha off -compress Zip "${schematic%.svg}.pdf"
+  elif [[ ! -f "${schematic%.svg}.pdf" ]]; then
+    echo "Missing committed PDF fallback for $schematic." >&2
+    exit 1
+  fi
 done
 
 render_pdf() {
