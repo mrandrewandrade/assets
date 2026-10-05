@@ -9,7 +9,9 @@ format:
     pdf-engine: xelatex
     documentclass: scrartcl
     classoption: [10pt]
-    include-in-header: ../styles/tej-preamble.tex
+    include-in-header:
+      - ../styles/tej-preamble.tex
+      - ../styles/tej-reference-branding.tex
     mainfont: "Arial"
     monofont: "Consolas"
     geometry: [margin=0.7in]
@@ -49,3 +51,10 @@ The diagrams show concepts and classroom-scale circuits. Confirm actual componen
 {{< include handbook/part-7-control-systems.qmd >}}
 
 {{< include handbook/part-8-reference.qmd >}}
+
+```{=html}
+<footer class="tej-attribution">
+  <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · Created by Andrew Andrade · <a href="https://andrewandrade.ca/">andrewandrade.ca</a> · Source: <a href="https://github.com/mrandrewandrade">github.com/mrandrewandrade</a></p>
+  <p>Please share, modify and redistribute. If you change this file, do not remove: CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!</p>
+</footer>
+```

@@ -5,7 +5,9 @@ format:
     pdf-engine: xelatex
     documentclass: scrartcl
     classoption: [9pt]
-    include-in-header: ../styles/tej-preamble.tex
+    include-in-header:
+      - ../styles/tej-preamble.tex
+      - ../styles/tej-quick-reference-branding.tex
     mainfont: "Arial"
     monofont: "Consolas"
     geometry: [margin=0.45in]
@@ -196,5 +198,3 @@ Never place a current-configured meter directly across a source. Return the red 
 ```{=latex}
 \end{multicols}
 ```
-
-CC BY-SA 4.0. Andrew Andrade and contributors. Sources: [andrewandrade.ca](https://andrewandrade.ca) and [GitHub](https://github.com/mrandrewandrade).

@@ -7,6 +7,18 @@
   --tej-mist: #eef2f5;
 }
 
+.tej-attribution {
+  margin-top: 3rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--tej-mist, #d9dee2);
+  color: #20262d;
+  font-size: 0.82rem;
+}
+
+.tej-attribution p {
+  margin: 0.25rem 0;
+}
+
 body { color: #20262d; }
 h1, h2, h3 { color: var(--tej-navy); }
 table { font-size: 0.94rem; }
