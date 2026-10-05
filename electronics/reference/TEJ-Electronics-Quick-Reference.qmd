@@ -1,8 +1,5 @@
 ---
 title: "TEJ Electronics Quick Reference"
-subtitle: "Core formulas and checks for assignments and tests"
-author: "Technology Commons"
-date: "2026-10-04"
 format:
   pdf:
     pdf-engine: xelatex
@@ -42,13 +39,25 @@ pico & p & $10^{-12}$\\
 \end{center}
 ```
 
-# Notation and significant figures {.unnumbered}
+# Engineering notation and significant figures {.unnumbered}
 
-- Scientific notation: $1\leq |a|<10$ in $a\times10^n$.
-- Engineering notation uses exponents divisible by 3.
-- Multiplication and division: use the fewest significant figures.
-- Addition and subtraction: round to the least precise decimal place.
-- Keep calculator digits until the final result. Include units.
+For a nonzero value, write $a\times10^{3n}$ with $1\leq |a|<1000$. The exponent is a multiple of three and matches an SI prefix. Write zero as $0$.
+
+```{=latex}
+\begin{center}\scriptsize
+\begin{tabular}{@{}lll@{}}
+\toprule
+Value & Engineering form & Prefix form\\
+\midrule
+$0.000\,047\ \mathrm{A}$ & $47\times10^{-6}\ \mathrm{A}$ & $47\ \mu\mathrm{A}$\\
+$4700\ \Omega$ & $4.7\times10^3\ \Omega$ & $4.7\ \mathrm{k}\Omega$\\
+$2\,200\,000\ \mathrm{Hz}$ & $2.2\times10^6\ \mathrm{Hz}$ & $2.2\ \mathrm{MHz}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+Multiply or divide using the fewest significant figures. Add or subtract to the least precise decimal place. Keep calculator digits until the final result and include units.
 
 # GUESS {.unnumbered}
 
@@ -70,7 +79,7 @@ Letter & Action\\
 
 # Ohm's law, power, and energy {.unnumbered}
 
-$$V=IR \qquad I=\frac{V}{R} \qquad R=\frac{V}{I}$$
+![](../schematics/Ohms_Law_Triangle.pdf){width=43%}
 
 $$P=VI=I^2R=\frac{V^2}{R}$$
 
@@ -94,7 +103,7 @@ $$I_T=I_1+I_2+\cdots \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$$
 
 For two resistors, $R_T=R_1R_2/(R_1+R_2)$.
 
-![Series has one current path; parallel has separate branches across the same two nodes.](../schematics/Series_Parallel_Comparison.pdf){width=100%}
+![](../schematics/Series_Parallel_Comparison.pdf){width=88%}
 
 ```{=latex}
 \end{multicols}
@@ -104,9 +113,7 @@ For two resistors, $R_T=R_1R_2/(R_1+R_2)$.
 
 # Kirchhoff's laws {.unnumbered}
 
-**KCL at a node:** $\sum I_{\mathrm{in}}=\sum I_{\mathrm{out}}$
-
-**KVL around a loop:** $\sum V=0$
+![](../schematics/Kirchhoff_Node_Loop_Reference.pdf){width=92%}
 
 # Divider and timing relationships {.unnumbered}
 
@@ -153,11 +160,20 @@ For $n$ inputs, a complete truth table has $2^n$ rows. Count from all zeros to a
 
 # Stable switch inputs {.unnumbered}
 
-- Pull-down: open reads 0; a switch to $V_{CC}$ reads 1.
-- Pull-up: open reads 1; a switch to ground reads 0.
-- A switch-to-ground input is usually **active-low**.
-- Never leave a CMOS input floating.
-- Confirm GPIO logic voltage. Do not assume 5 V tolerance.
+```{=latex}
+\begin{center}\footnotesize
+\begin{tabular}{llll}
+\toprule
+Input circuit & Switch open & Switch closed & Meaning\\
+\midrule
+pull-down & 0 & 1 to $V_{CC}$ & active-high\\
+pull-up & 1 & 0 to ground & active-low\\
+\bottomrule
+\end{tabular}
+\end{center}
+```
+
+A switch-to-ground input normally uses a pull-up and is active-low. Never leave a CMOS input floating. Confirm the GPIO voltage; do not assume 5 V tolerance.
 
 # Measurement placement {.unnumbered}
 
@@ -181,4 +197,4 @@ Never place a current-configured meter directly across a source. Return the red 
 \end{multicols}
 ```
 
-CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.
+CC BY-SA 4.0. Andrew Andrade and contributors. Sources: [andrewandrade.ca](https://andrewandrade.ca) and [GitHub](https://github.com/mrandrewandrade).

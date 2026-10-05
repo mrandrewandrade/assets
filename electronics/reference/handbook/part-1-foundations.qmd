@@ -5,7 +5,35 @@
 # Part 1: Measurement and mathematical foundations
 
 ```{=latex}
-\markright{H01 Safety and lab practice}
+\markright{Engineering notation and SI prefixes}
+```
+
+## Engineering notation and SI prefixes {.unnumbered}
+
+For a nonzero value, engineering notation uses $a\times10^{3n}$ with $1\leq |a|<1000$. The exponent is a multiple of three, so the value converts directly to an SI prefix. Write zero as $0$.
+
+| Value | Engineering form | Prefix form |
+|:--|:--|:--|
+| $0.000\,047\ \mathrm{A}$ | $47\times10^{-6}\ \mathrm{A}$ | $47\ \mu\mathrm{A}$ |
+| $0.0047\ \mathrm{A}$ | $4.7\times10^{-3}\ \mathrm{A}$ | $4.7\ \mathrm{mA}$ |
+| $4700\ \Omega$ | $4.7\times10^3\ \Omega$ | $4.7\ \mathrm{k}\Omega$ |
+| $2\,200\,000\ \mathrm{Hz}$ | $2.2\times10^6\ \mathrm{Hz}$ | $2.2\ \mathrm{MHz}$ |
+
+| Exponent | Prefix | Symbol |
+|:--:|:--|:--:|
+| $10^9$ | giga | $\mathrm{G}$ |
+| $10^6$ | mega | $\mathrm{M}$ |
+| $10^3$ | kilo | $\mathrm{k}$ |
+| $10^0$ | base unit | - |
+| $10^{-3}$ | milli | $\mathrm{m}$ |
+| $10^{-6}$ | micro | $\mu$ |
+| $10^{-9}$ | nano | $\mathrm{n}$ |
+| $10^{-12}$ | pico | $\mathrm{p}$ |
+
+Choose the exponent that keeps the coefficient from $1$ up to, but not including, $1000$. For example, $999\ \Omega$ stays $999\ \Omega$, while $1000\ \Omega$ becomes $1\ \mathrm{k}\Omega$.
+
+```{=latex}
+\newpage\markright{H01 Safety and lab practice}
 ```
 
 ## H01 Safety and lab practice

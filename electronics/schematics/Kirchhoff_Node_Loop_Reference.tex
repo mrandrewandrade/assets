@@ -1,0 +1,31 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\definecolor{TEJBlue}{HTML}{1769AA}
+\begin{document}
+\begin{tikzpicture}[line width=1.05pt,draw=TEJNavy,text=TEJNavy,>=latex]
+  \ctikzset{bipoles/length=1.05cm}
+
+  \node[font=\bfseries\Large,text=TEJBlue] at (3.2,7.4) {KCL at a node};
+  \coordinate (N) at (3.2,5.7);
+  \draw[->] (0.2,6.6) -- (N) node[midway,above,sloped,font=\large] {$I_1$};
+  \draw[->] (0.2,4.8) -- (N) node[midway,below,sloped,font=\large] {$I_2$};
+  \draw[->] (N) -- (6.2,6.6) node[midway,above,sloped,font=\large] {$I_3$};
+  \draw[->] (N) -- (6.2,4.8) node[midway,below,sloped,font=\large] {$I_4$};
+  \fill[TEJNavy] (N) circle (3.2pt);
+  \node[font=\large] at (3.2,4.15) {$I_1+I_2=I_3+I_4$};
+  \node[font=\large] at (3.2,3.55) {$\sum I_{\mathrm{in}}=\sum I_{\mathrm{out}}$};
+
+  \node[font=\bfseries\Large,text=TEJBlue] at (3.2,2.95) {KVL around a loop};
+  \draw
+    (0.7,-0.3) to[battery1,l_=$V_S$] (0.7,1.7)
+    to[R,l^=$R_1$,v_>=$V_1$] (3.2,1.7)
+    to[R,l^=$R_2$,v_>=$V_2$] (5.7,1.7)
+    -- (5.7,-0.3) -- (0.7,-0.3);
+  \draw[->,TEJBlue,line width=1.4pt] (3.0,0.15) arc[start angle=-90,end angle=200,radius=0.72cm];
+  \node[font=\large,align=center,text width=7.0cm] at (3.2,-1.05)
+    {$V_S-V_1-V_2=0$ \qquad $V_S=V_1+V_2$};
+\end{tikzpicture}
+\end{document}

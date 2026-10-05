@@ -12,7 +12,13 @@
 
 Ohm's law describes the relationship among voltage, current, and resistance for a component or network under the stated operating conditions.
 
-$$V=IR \qquad I=\frac{V}{R} \qquad R=\frac{V}{I}$$
+::: {.content-visible when-format="html"}
+![Ohm's law triangle with voltage above current and resistance.](../schematics/Ohms_Law_Triangle.svg){width=48%}
+:::
+
+::: {.content-visible when-format="pdf"}
+![Ohm's law triangle with voltage above current and resistance.](../schematics/Ohms_Law_Triangle.pdf){width=48%}
+:::
 
 | Symbol | Meaning | Unit |
 |:--:|:--|:--|

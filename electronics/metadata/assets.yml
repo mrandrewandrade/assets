@@ -18,8 +18,8 @@ assets:
     download_path: dist/TEJ-Electronics-Quick-Reference.pdf
     website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Quick-Reference.pdf
     slide_url: null
-    version: 1.0.0
-    last_updated: 2026-10-04
+    version: 1.1.0
+    last_updated: 2026-10-05
     completion_status: reviewed
   - module_id: REF-HANDBOOK
     topic: Electronics reference handbook
@@ -40,8 +40,8 @@ assets:
     download_path: dist/TEJ-Electronics-Reference-Handbook.pdf
     website_url: https://mrandrewandrade.github.io/assets/TEJ-Electronics-Reference-Handbook.html
     slide_url: null
-    version: 1.0.0
-    last_updated: 2026-10-04
+    version: 1.1.0
+    last_updated: 2026-10-05
     completion_status: reviewed
   - module_id: H01
     topic: Safety and lab practice
