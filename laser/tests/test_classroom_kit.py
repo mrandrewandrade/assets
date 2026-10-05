@@ -7,6 +7,7 @@ import subprocess
 import sys
 import unittest
 import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 
 
@@ -81,6 +82,16 @@ class ClassroomKitTests(unittest.TestCase):
         manifest = json.loads((KIT / "manifest.json").read_text(encoding="utf-8"))
         self.assertGreaterEqual(len(manifest["files"]), 26)
         self.assertTrue((KIT / "technology-commons-first-laser-projects.zip").stat().st_size > 0)
+
+    def test_bundle_is_cross_platform_deterministic(self) -> None:
+        archive_path = KIT / "technology-commons-first-laser-projects.zip"
+        text_suffixes = {".csv", ".json", ".md", ".svg", ".txt", ".yml", ".yaml"}
+        with zipfile.ZipFile(archive_path) as archive:
+            for info in archive.infolist():
+                self.assertEqual(info.compress_type, zipfile.ZIP_STORED)
+                self.assertEqual(info.date_time, (2026, 1, 1, 0, 0, 0))
+                if Path(info.filename).suffix.lower() in text_suffixes or Path(info.filename).name == "SHA256SUMS":
+                    self.assertNotIn(b"\r", archive.read(info))
 
 
 if __name__ == "__main__":

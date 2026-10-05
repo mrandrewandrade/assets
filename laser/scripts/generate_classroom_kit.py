@@ -416,13 +416,16 @@ Use these files as measured building blocks, not finished answers. Open SVG file
     checksum_paths = sorted(p for p in OUT.rglob("*") if p.is_file() and p.name not in {"SHA256SUMS", "technology-commons-first-laser-projects.zip"})
     write("SHA256SUMS", "\n".join(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT).as_posix()}" for p in checksum_paths) + "\n")
     archive_path = OUT / "technology-commons-first-laser-projects.zip"
-    with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_DEFLATED) as archive:
+    with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_STORED) as archive:
         for item in sorted(p for p in OUT.rglob("*") if p.is_file() and p != archive_path):
             info = zipfile.ZipInfo((Path("technology-commons-first-laser-projects") / item.relative_to(OUT)).as_posix(), date_time=(2026,1,1,0,0,0))
             info.create_system = 3
             info.external_attr = 0o100644 << 16
-            info.compress_type = zipfile.ZIP_DEFLATED
-            archive.writestr(info, item.read_bytes())
+            info.compress_type = zipfile.ZIP_STORED
+            payload = item.read_bytes()
+            if item.suffix.lower() in {".csv", ".json", ".md", ".svg", ".txt", ".yml", ".yaml"} or item.name == "SHA256SUMS":
+                payload = payload.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            archive.writestr(info, payload)
     print(f"Generated classroom kit with {len(records)} documented files")
     return 0
 
