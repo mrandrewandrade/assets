@@ -59,11 +59,11 @@ $$P=VI=I^2R=\frac{V^2}{R} \qquad E=Pt$$
 Series components form one current path. The same current passes through every series component, while the source voltage divides among them.
 
 ::: {.content-visible when-format="html"}
-![Series has one current path while parallel has branches across the same two nodes.](../schematics/Series_Parallel_Comparison.svg){width=100%}
+![Series circuit with one path and the same current through both resistors.](../schematics/Series_Rule_Reference.svg){width=68%}
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Series has one current path while parallel has branches across the same two nodes.](../schematics/Series_Parallel_Comparison.pdf){width=100%}
+![Series circuit with one path and the same current through both resistors.](../schematics/Series_Rule_Reference.pdf){width=68%}
 :::
 
 $$I_T=I_1=I_2 \qquad V_T=V_1+V_2 \qquad R_T=R_1+R_2$$
@@ -83,11 +83,11 @@ $$I_T=I_1=I_2 \qquad V_T=V_1+V_2 \qquad R_T=R_1+R_2$$
 Parallel branches connect to the same two nodes, so every branch has the same voltage. Total current is the sum of branch currents.
 
 ::: {.content-visible when-format="html"}
-![Two resistive loads connected in parallel across a DC source.](../schematics/Circuit_Calculations_Parallel_Schematic.svg){width=100%}
+![Parallel circuit with separate branches and the same voltage across both resistors.](../schematics/Parallel_Rule_Reference.svg){width=68%}
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Two resistive loads connected in parallel across a DC source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){width=100%}
+![Parallel circuit with separate branches and the same voltage across both resistors.](../schematics/Parallel_Rule_Reference.pdf){width=68%}
 :::
 
 $$V_T=V_1=V_2 \qquad I_T=I_1+I_2 \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}$$

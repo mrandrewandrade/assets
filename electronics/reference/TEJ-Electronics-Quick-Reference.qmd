@@ -93,7 +93,7 @@ $$I_T=I_1=I_2=\cdots$$
 
 $$V_T=V_1+V_2+\cdots \qquad R_T=R_1+R_2+\cdots$$
 
-One current path. A shared node has no other branch.
+![](../schematics/Series_Rule_Reference.pdf){width=58%}
 
 # Parallel rules {.unnumbered}
 
@@ -103,7 +103,7 @@ $$I_T=I_1+I_2+\cdots \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$$
 
 For two resistors, $R_T=R_1R_2/(R_1+R_2)$.
 
-![](../schematics/Series_Parallel_Comparison.pdf){width=88%}
+![](../schematics/Parallel_Rule_Reference.pdf){width=58%}
 
 ```{=latex}
 \end{multicols}

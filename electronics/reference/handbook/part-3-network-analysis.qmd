@@ -13,11 +13,11 @@
 Reduce only groups that are clearly series or parallel. Kirchhoff's current law checks charge conservation at a node. Kirchhoff's voltage law checks energy transfer around a closed loop.
 
 ::: {.content-visible when-format="html"}
-![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/Kirchhoff_Node_Loop_Reference.svg){width=72%}
+![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/Kirchhoff_Node_Loop_Reference.svg){width=58%}
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/Kirchhoff_Node_Loop_Reference.pdf){width=72%}
+![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/Kirchhoff_Node_Loop_Reference.pdf){width=58%}
 :::
 
 **Method:** mark nodes, identify series and parallel groups, reduce the network, solve total values, then expand back to branch values. Verify KCL and KVL at the end.
