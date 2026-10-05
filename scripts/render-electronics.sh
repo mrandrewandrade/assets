@@ -12,24 +12,23 @@ else
   imagemagick=()
   echo "ImageMagick is unavailable; using committed PDFs for SVG-only schematics."
 fi
-if ! command -v pdflatex >/dev/null 2>&1; then
-  echo "pdfLaTeX is required to generate CircuitikZ schematics." >&2
-  exit 1
-fi
-if ! command -v dvisvgm >/dev/null 2>&1; then
-  echo "dvisvgm is required to generate vector SVG schematics." >&2
-  exit 1
+regenerate_schematics=true
+if ! command -v pdflatex >/dev/null 2>&1 || ! command -v dvisvgm >/dev/null 2>&1; then
+  regenerate_schematics=false
+  echo "CircuitikZ conversion tools are incomplete; using committed schematic PDFs and SVGs."
 fi
 
 schematic_build=tmp/schematics
 mkdir -p "$schematic_build"
-for source in electronics/schematics/*.tex; do
-  base_name="$(basename "${source%.tex}")"
-  pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$schematic_build" "$source" >/dev/null
-  cp "$schematic_build/$base_name.pdf" "electronics/schematics/$base_name.pdf"
-  dvisvgm --pdf --no-fonts --exact-bbox --bbox=min \
-    --output="electronics/schematics/$base_name.svg" "$schematic_build/$base_name.pdf"
-done
+if [[ "$regenerate_schematics" == true ]]; then
+  for source in electronics/schematics/*.tex; do
+    base_name="$(basename "${source%.tex}")"
+    pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$schematic_build" "$source" >/dev/null
+    cp "$schematic_build/$base_name.pdf" "electronics/schematics/$base_name.pdf"
+    dvisvgm --pdf --no-fonts --exact-bbox --bbox=min \
+      --output="electronics/schematics/$base_name.svg" "$schematic_build/$base_name.pdf"
+  done
+fi
 
 for schematic in electronics/schematics/*.svg; do
   if [[ -f "${schematic%.svg}.tex" ]]; then
