@@ -23,7 +23,7 @@ jobs:
           version: "1.10.18"
 
       - name: Set up TinyTeX
-        run: quarto install tinytex --no-prompt
+        uses: r-lib/actions/setup-tinytex@v2
 
       - name: Build all teaching resources
         run: bash render.sh all
