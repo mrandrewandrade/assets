@@ -8,8 +8,8 @@ format:
     include-in-header:
       - ../styles/tej-preamble.tex
       - ../styles/tej-quick-reference-branding.tex
-    mainfont: "Arial"
-    monofont: "Consolas"
+    mainfont: "Liberation Sans"
+    monofont: "Liberation Mono"
     geometry: [margin=0.45in]
     toc: false
 execute: {enabled: false}

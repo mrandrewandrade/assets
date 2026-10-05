@@ -12,8 +12,8 @@ format:
     include-in-header:
       - ../styles/tej-preamble.tex
       - ../styles/tej-reference-branding.tex
-    mainfont: "Arial"
-    monofont: "Consolas"
+    mainfont: "Liberation Sans"
+    monofont: "Liberation Mono"
     geometry: [margin=0.7in]
     toc: true
     toc-depth: 2

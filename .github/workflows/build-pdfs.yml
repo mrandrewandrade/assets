@@ -25,6 +25,11 @@ jobs:
       - name: Set up TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
 
+      - name: Install document fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes fonts-liberation
+
       - name: Build all teaching resources
         run: bash render.sh all
 
