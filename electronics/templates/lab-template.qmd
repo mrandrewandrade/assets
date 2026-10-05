@@ -4,7 +4,7 @@ format:
   pdf:
     pdf-engine: xelatex
     include-in-header: ../styles/tej-preamble.tex
-    mainfont: "Arial"
+    mainfont: "Liberation Sans"
 execute: {enabled: false}
 ---
 

@@ -6,7 +6,7 @@ format:
     pdf-engine: xelatex
     include-in-header: ../styles/tej-preamble.tex
     geometry: [margin=0.7in]
-    mainfont: "Arial"
+    mainfont: "Liberation Sans"
   html:
     css: ../styles/tej-html.css
 execute: {enabled: false}

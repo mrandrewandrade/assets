@@ -6,7 +6,7 @@ format:
     documentclass: scrartcl
     classoption: [9pt]
     include-in-header: ../styles/tej-preamble.tex
-    mainfont: "Arial"
+    mainfont: "Liberation Sans"
     geometry: [margin=0.48in, bottom=0.55in]
 execute: {enabled: false}
 lang: en-CA

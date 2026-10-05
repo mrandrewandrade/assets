@@ -9,8 +9,8 @@ format:
     documentclass: scrartcl
     classoption: [10pt]
     include-in-header: ../styles/tej-preamble.tex
-    mainfont: "Arial"
-    monofont: "Consolas"
+    mainfont: "Liberation Sans"
+    monofont: "Liberation Mono"
     geometry: [margin=0.68in]
 execute: {enabled: false}
 lang: en-CA
