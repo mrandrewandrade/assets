@@ -4,7 +4,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p dist
 
-if ! command -v magick >/dev/null 2>&1; then
+if command -v magick >/dev/null 2>&1; then
+  imagemagick=(magick)
+elif command -v convert >/dev/null 2>&1; then
+  imagemagick=(convert)
+else
   echo "ImageMagick is required to create print-ready schematic PDFs." >&2
   exit 1
 fi
@@ -31,7 +35,7 @@ for schematic in electronics/schematics/*.svg; do
   if [[ -f "${schematic%.svg}.tex" ]]; then
     continue
   fi
-  magick -density 144 "$schematic" -background white -alpha remove -alpha off -compress Zip "${schematic%.svg}.pdf"
+  "${imagemagick[@]}" -density 144 "$schematic" -background white -alpha remove -alpha off -compress Zip "${schematic%.svg}.pdf"
 done
 
 render_pdf() {
