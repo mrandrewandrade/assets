@@ -22,7 +22,7 @@ The eight Main Quests form a short required sprint from basic electricity to a c
 
 ## Current classroom timing {.unnumbered}
 
-All students complete Power Circuits Questions 1-6 first. The Computer Power and Parts document remains a future-lab shell until the actual computer, photographs, approved measurement method, and cited values are ready. Early finishers may choose Make It Print, while a limited pair completes the Computer Recovery and OS Comparison. The pilot prepares equipment and selects the classroom OS but does not count as early completion of CS01-CS08. After Thanksgiving, the whole class completes the formal Best Workstation Project using the selected OS.
+All students complete Power Circuits Questions 1-6 first, then the published Computer Power and Parallel Loads fillable worksheet as a calculation bridge. In parallel, a small teacher-approved team may complete the Computer Recovery and OS Comparison so matched computers are ready. The class then continues through safe opening, parts identification, POST, operating-system testing, upgrades, and benchmarking. The separate Computer Power and Parts physical lab remains a future-lab shell until the actual computer, photographs, approved measurement method, and cited values are ready. The pilot prepares equipment and selects the classroom OS but does not count as early completion of CS01-CS08.
 
 **Deployment policy:** Xubuntu 26.04 LTS remains provisional until the matched crossover comparison with Linux Mint Xfce is complete. The teacher may select Xubuntu, Mint Xfce, Lubuntu for weak hardware, or additional testing. Ubuntu Server is reserved for a later dedicated SSH and systems-administration machine.
 
@@ -30,6 +30,7 @@ All students complete Power Circuits Questions 1-6 first. The Computer Power and
 
 | Package | Pathway | Primary prerequisites | Main evidence |
 |:--|:--|:--|:--|
+| CSB01 | Main Quest | Power Circuits Questions 1-6 | completed parallel-load calculation worksheet |
 | CS01 | Main Quest | H01, basic electricity, D01 | annotated photograph and block diagram |
 | CS02 | Main Quest | CS01 | baseline, labels, safety sign-off |
 | CS03 | Main Quest | CS02, power, parallel circuits, conductors | connection map and GUESS work |

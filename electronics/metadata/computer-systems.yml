@@ -1,6 +1,6 @@
 catalog_id: tej-basic-computer-systems
 title: Basic Computer Systems
-version: 1.0.0
+version: 1.1.0
 last_updated: 2026-10-04
 pathway_field: pathway
 score_scale: "0-4"
@@ -25,6 +25,16 @@ pilot_deployment:
   overall_machine_scale: [green, yellow, red]
   later_project_timing: after-thanksgiving
 modules:
+  - id: CSB01
+    title: Computer Power and Parallel Loads calculation bridge
+    pathway: main-quest
+    difficulty: introductory
+    prerequisites: [Power Circuits Questions 1-6]
+    time: 60-minutes
+    risk: low
+    simulation: calculation-and-diagram
+    physical_lab: none
+    tags: [power, parallel-loads, guess, significant-figures, worksheet]
   - id: CS01
     title: Fast electricity-to-computer bridge
     pathway: main-quest
