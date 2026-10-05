@@ -153,3 +153,41 @@ assets:
     version: 1.0.0
     last_updated: 2026-10-04
     completion_status: reviewed
+  - module_id: computer-recovery-crew-pilot
+    topic: Computer Recovery Crew Pilot Job Sheet
+    asset_type: standalone-job-sheet
+    audience: student
+    requirement: optional-limited-pilot
+    component_tags: [ram, storage, psu, motherboard]
+    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, wired-keyboard]
+    context_tags: [recovery, triage, xubuntu, apple-diagnostics, approval-gates]
+    difficulty: introductory-to-intermediate
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
+    safety_category: supervised-computer-service
+    estimated_time: 90-minutes
+    copyright_category: original-with-citations
+    access: public
+    source_file: electronics/computer-systems/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd
+    output_file: TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-recovery-crew-pilot.html
+    last_updated: 2026-10-04
+    completion_status: reviewed
+  - module_id: computer-recovery-crew-pilot-teacher
+    topic: Computer Recovery Crew Pilot Teacher Launch Guide
+    asset_type: teacher-launch-guide
+    audience: teacher
+    requirement: staff-planning
+    component_tags: [ram, storage, psu, motherboard]
+    equipment_tags: [desktop-computer, esd-control, xubuntu-live-usb, memtest86-plus, wired-keyboard, ethernet]
+    context_tags: [recovery, triage, supervision, data-protection, approval-gates]
+    difficulty: teacher-reference
+    curriculum_expectations: [TEJ3M-A1, TEJ3M-A2, TEJ3M-B1]
+    safety_category: teacher-controlled-computer-service
+    estimated_time: reference
+    copyright_category: original-with-citations
+    access: public-teacher-labelled
+    source_file: electronics/computer-systems/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd
+    output_file: TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf
+    website_url: https://andrewandrade.ca/commons/tej3-4/computer-systems/computer-recovery-crew-pilot.html
+    last_updated: 2026-10-04
+    completion_status: reviewed

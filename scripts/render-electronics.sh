@@ -69,6 +69,8 @@ render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Cont
 computer_systems_dir=electronics/computer-systems
 render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
 render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" TEJ-Basic-Computer-Systems-Teacher-Guide.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd" TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf
 
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/

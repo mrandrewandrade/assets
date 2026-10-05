@@ -37,11 +37,18 @@ Predict, calculate using GUESS when numbers matter, draw, verify, build or test 
 
 ## Main Quest route {.unnumbered}
 
-CS01 Bridge, CS02 baseline and safe opening, CS03 power and connections, CS04 inspection and first boot, CS05 POST and firmware, CS06 Linux commissioning, CS07 RAM upgrade, CS08 benchmark challenge.
+CS01 Bridge, CS02 baseline and safe opening, CS03 power and connections, CS04 inspection and first boot, CS05 POST and firmware, CS06 Xubuntu commissioning, CS07 RAM upgrade, CS08 benchmark challenge. Approved storage improvements may be included when equipment is available, but an SSD installation is not required.
 
 ## Side Quest route {.unnumbered}
 
 SQ01 teardown, SQ02 teacher-prepared faults, SQ03 storage and expansion, SQ04 Linux inventory, SQ05 power and thermal control, SQ06 repair and reuse.
+
+## Classroom deployment policy {.unnumbered}
+
+- Xubuntu 26.04 LTS is the standard student desktop.
+- Lubuntu 26.04 LTS is the fallback for exceptionally weak hardware.
+- Ubuntu Server is reserved for a later dedicated SSH and systems-administration machine.
+- The Computer Recovery Crew pilot prepares equipment quickly. It does not complete CS01-CS08 early.
 
 \newpage
 
@@ -267,15 +274,15 @@ Power command, stable rails, firmware begins, POST checks essential hardware, fi
 
 \newpage
 
-# CS06 Linux Mint Xfce Installation and Commissioning {.unnumbered}
+# CS06 Xubuntu 26.04 LTS Installation and Commissioning {.unnumbered}
 
 | Pathway | Prerequisite | Time | Risk |
 |:--|:--|:--|:--|
 | Main Quest | CS05 | 150 minutes | target-drive data loss |
 
-**Learning goal:** Install the teacher-approved Linux Mint Xfce image on the confirmed target drive and prove that the workstation is usable.
+**Learning goal:** Install the teacher-approved Xubuntu 26.04 LTS image on the confirmed target drive and prove that the workstation is usable.
 
-**Official sources:** [Linux Mint download](https://linuxmint.com/download.php/) and [installation guide](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html).
+**Official sources:** [Xubuntu 26.04 release and downloads](https://xubuntu.org/release/26.04/) and [Ubuntu bootable USB guidance](https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/).
 
 ## Installation gate {.unnumbered}
 
@@ -289,10 +296,10 @@ Power command, stable rails, firmware begins, POST checks essential hardware, fi
 
 ## Required evidence {.unnumbered}
 
-1. Use the live session to test display, keyboard, mouse, USB, sound, and network before installation.
+1. Use the live session to test display, keyboard, mouse, USB, Ethernet, Wi-Fi, sound, and storage visibility before installation.
 2. Record the exact target drive by model and capacity.
 3. Obtain teacher approval before any erase or partition action.
-4. Install the approved Linux Mint Xfce image, then apply approved updates.
+4. Install the approved Xubuntu 26.04 LTS image, then apply approved updates.
 5. Complete the commissioning table below.
 
 | Acceptance test | Method | Result | Evidence |
@@ -305,6 +312,8 @@ Power command, stable rails, firmware begins, POST checks essential hardware, fi
 | display | native or approved resolution | | |
 | network | local and approved Internet test | | |
 | restart and login | normal reboot | | |
+
+Lubuntu 26.04 LTS may be assigned only when the teacher identifies exceptionally weak hardware. Ubuntu Server belongs on a later dedicated SSH and systems-administration machine, not on the strongest classroom desktop.
 
 **Optional extension:** Write a short user handoff with login, update, shutdown, and support information. Do not include a password.
 
@@ -356,6 +365,8 @@ Power command, stable rails, firmware begins, POST checks essential hardware, fi
 
 **Learning goal:** Define what best means for a user, run repeatable tests, improve one compatible computer, and support the recommendation with evidence.
 
+Formal benchmarking begins only after the system is operational. USB live-session boot time is a deployment check, not a fair computer benchmark.
+
 ![A repeatable benchmark loop from user needs and baseline through one approved change and a fair retest.](../schematics/Computer_Benchmark_Loop.pdf){width=100%}
 
 ## Assigned user and criteria {.unnumbered}
@@ -373,14 +384,14 @@ Power command, stable rails, firmware begins, POST checks essential hardware, fi
 | memory task | | | | | |
 | storage task | | | | | |
 | temperature at stated load | | | | | $^\circ$C |
-| user-task score | | | | | |
+| user task, such as loading Tinkercad or opening Inkscape | | | | | |
 
 ## Required evidence {.unnumbered}
 
 1. Define best for the assigned user before seeing final scores.
 2. Record hardware, software, test versions, temperature conditions, and baseline results.
 3. Identify the likely bottleneck using the evidence.
-4. Propose and receive approval for compatible part combinations or settings.
+4. Propose and receive approval for compatible part combinations, settings, or an available storage improvement. An SSD installation is optional and depends on school equipment.
 5. Make the approved change, verify the system, rerun the same tests, and recommend the best build.
 
 \enlargethispage{3\baselineskip}

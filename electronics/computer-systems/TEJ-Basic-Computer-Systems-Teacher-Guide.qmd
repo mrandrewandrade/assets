@@ -18,7 +18,13 @@ lang: en-CA
 
 # Teacher overview {.unnumbered}
 
-The eight Main Quests form a short required sprint from basic electricity to a commissioned, upgraded, benchmarked Linux workstation. The six Side Quests extend service, troubleshooting, administration, thermal-control, and lifecycle work.
+The eight Main Quests form a short required sprint from basic electricity to a commissioned, upgraded, benchmarked Xubuntu workstation. The six Side Quests extend service, troubleshooting, administration, thermal control, and lifecycle work.
+
+## Current classroom timing {.unnumbered}
+
+All students complete Power Circuits Questions 1-6 first. Early finishers may choose an approved 3D-printing Side Quest or a limited Computer Recovery Crew pilot assignment. The pilot prepares equipment quickly and does not count as early completion of CS01-CS08. The whole class later completes the formal Computer Power and Best Workstation Project.
+
+**Deployment policy:** Xubuntu 26.04 LTS is the standard student desktop. Lubuntu 26.04 LTS is a teacher-selected fallback for exceptionally weak hardware. Ubuntu Server is reserved for a later dedicated SSH and systems-administration machine.
 
 ## Curriculum and prerequisite map {.unnumbered}
 
@@ -181,7 +187,7 @@ Possible symptom predictions: missing RAM can stop POST with a model-specific co
 
 # CS06 Answer and Facilitation Guide {.unnumbered}
 
-**Teacher preparation:** Use the school-approved image and account policy. Verify installer media and target-machine backups. The official Linux Mint guide states that erase-disk installation destroys target-drive data, so the teacher must approve the target choice.
+**Teacher preparation:** Use the school-approved Xubuntu 26.04 LTS image and account policy. Prepare direct-written installation media, verify the download and target-machine backups, and require a teacher signature before erase or partition choices. Ubuntu's official USB guidance states that creating installation media rewrites the USB device and destroys its existing data.
 
 **Expected evidence:** live-session hardware check, exact target drive record, teacher authorization, successful installation, approved updates, and all acceptance tests.
 
@@ -205,7 +211,9 @@ If POST fails after the approved upgrade, remove power, restore the baseline con
 
 **Teacher preparation:** Assign user profiles such as general classroom workstation, light coding workstation, or media playback station. Approve benchmarks and part combinations. Record labelled parts before the challenge.
 
-Strong work defines best before final results and keeps conditions constant. Require benchmark name/version, power mode, background-task rule, run count, units, and temperature context. A faster score alone does not prove a better machine for every user.
+Strong work defines best before final results and keeps conditions constant. Require benchmark name/version, power mode, background-task rule, run count, units, and temperature context. A faster score alone does not prove a better machine for every user. USB live-session boot time is a deployment check and is not a fair benchmark.
+
+An approved storage improvement may be included when equipment is available, but do not require an SSD installation. SQ03 remains the deeper storage and expansion Side Quest. Suitable formal tests include boot or login time, a CPU task, a memory task, a storage task, temperature at a stated load, and a real user task such as loading Tinkercad or opening Inkscape.
 
 Assess the recommendation against the stated workload, compatibility, observed bottleneck, temperatures, reliability, and uncertainty.
 
@@ -292,7 +300,12 @@ Use Tinkercad for building, measuring, and verifying introductory circuits. Use 
 
 ## Source notes {.unnumbered}
 
-- Linux Mint: <https://linuxmint.com/download.php/> and <https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html>
+- Xubuntu 26.04 LTS release and downloads: <https://xubuntu.org/release/26.04/>
+- Ubuntu bootable USB guidance: <https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/>
+- Lubuntu 26.04 LTS release: <https://lubuntu.me/2026/>
+- Ubuntu Server documentation: <https://ubuntu.com/server/docs/>
+- Apple Intel startup combinations: <https://support.apple.com/102603>
+- Apple Diagnostics: <https://support.apple.com/102550>
 - KiCad schematic editor: <https://docs.kicad.org/9.0/en/eeschema/eeschema.html>
 - Hardware specifications should come from the exact manufacturer service manual, motherboard manual, CPU documentation, or memory qualification information for the assigned system.
 

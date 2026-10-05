@@ -1,0 +1,63 @@
+---
+title: ""
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [9pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.48in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+\begin{center}
+{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
+{\large Pilot Teacher Launch Guide}
+\end{center}
+\vspace{-0.9em}
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{3pt}
+
+This limited Side Quest prepares classroom computers now. Students first complete Power Circuits Questions 1-6. Pilot participation does not complete CS01-CS08 early.
+
+## Setup {.unnumbered}
+
+**Safe machines:** Choose equipment with a known asset record, intact power hardware, no liquid damage, no swollen cells, no burnt areas, and a student-appropriate service boundary. Exclude unknown batteries, damaged power connectors, and machines with unresolved data ownership.
+
+**Pairs and supervision:** Assign one technician and one recorder, then require a role swap. Start with one pair per machine. A suggested maximum is one supervising teacher for three actively opened machines. Reduce that ratio for unfamiliar models, Intel Macs, or inexperienced students.
+
+**Tools and media:** ESD mat or approved grounded work area, wrist straps when directed, correct screwdrivers, parts trays, asset labels, approved camera, wired keyboard and mouse, Ethernet, direct-written Xubuntu 26.04 LTS live USB, and a Memtest86+ USB for suitable PCs. Use Apple Diagnostics for Intel Macs.
+
+Create the Xubuntu USB with an image-writing tool. Copying the ISO file onto a normal USB filesystem is not sufficient. Verify the image and label every USB device.
+
+## Route and approval gates {.unnumbered}
+
+Baseline, safe opening, inventory, reassembly inspection, ready-to-power teacher gate, POST/firmware or Apple Diagnostics, Xubuntu live session, green/yellow/red classification, teacher-approved hardware work, teacher-approved installation, acceptance testing.
+
+Sign before first power after opening. Sign again before students move RAM, replace storage, erase or partition a drive, or install an operating system. Students never open or probe inside a PSU, create a short, invent a fault, force a connector, or move unapproved parts.
+
+## Triage, stop conditions, and data {.unnumbered}
+
+| Class | Teacher decision |
+|:--|:--|
+| Green | Required live-session tests pass safely and no data concern remains. Approve installation or return to service. |
+| Yellow | Hold for one defined repair, driver check, memory test, or closer review. |
+| Red | Stop student work. Isolate unsafe, unstable, damaged, or data-sensitive equipment. |
+
+Stop for liquid, swollen cells, burnt areas, damaged mains or DC power hardware, loose metal, sharp damage, smoke, unusual smell, abnormal heat, unstable power, repeated shutdowns, or uncertain data ownership. Do not erase, partition, or reinstall until ownership, backups, target drive, and authorization are documented.
+
+Do not open an iMac display until its exact model and service procedure are known. Adhesive, display cables, power components, and model-specific tools make this a separate teacher-controlled decision.
+
+## Classroom posting {.unnumbered}
+
+**Title:** Computer Recovery Crew Pilot  
+**Topic:** Side Quests
+
+Power Circuits Questions 1-6 must be complete first. Places are limited. Students work only on the assigned machine and submit the completed job sheet with approved photos. Success uses safe evidence rather than whether the machine works. Teacher approval is required before power, hardware changes, or installation.
+
+**Official references:** [Xubuntu 26.04](https://xubuntu.org/release/26.04/), [Ubuntu bootable USB guidance](https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/), [Apple startup keys](https://support.apple.com/102603), and [Apple Diagnostics](https://support.apple.com/102550).
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.

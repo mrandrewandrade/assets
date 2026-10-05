@@ -4,10 +4,22 @@ version: 1.0.0
 last_updated: 2026-10-04
 pathway_field: pathway
 score_scale: "0-4"
+deployment_policy:
+  standard_desktop: xubuntu-26.04-lts
+  weak_hardware_fallback: lubuntu-26.04-lts
+  dedicated_server: ubuntu-server
 classroom_model:
   main_quest: regular_assignment
   side_quest_topic: Side Quests
   tracker_access: teacher-only
+pilot_deployment:
+  title: TEJ Computer Recovery Crew Pilot
+  canonical_quest_id: none
+  classroom_topic: Side Quests
+  prerequisite: Power Circuits Questions 1-6
+  purpose: rapid-equipment-preparation
+  does_not_complete: [CS01, CS02, CS03, CS04, CS05, CS06, CS07, CS08]
+  route: [baseline, safe-opening, inventory, reassembly-inspection, teacher-ready-to-power-gate, post-or-apple-diagnostics, xubuntu-live-session, triage, teacher-approved-hardware-work, teacher-approved-installation, acceptance-testing]
 modules:
   - id: CS01
     title: Fast electricity-to-computer bridge
@@ -60,7 +72,7 @@ modules:
     physical_lab: required
     tags: [post, bios, uefi, firmware, boot-order]
   - id: CS06
-    title: Linux Mint Xfce installation and workstation commissioning
+    title: Xubuntu 26.04 LTS installation and workstation commissioning
     pathway: main-quest
     difficulty: developing
     prerequisites: [CS05]
@@ -68,7 +80,7 @@ modules:
     risk: data-loss
     simulation: live-session
     physical_lab: required
-    tags: [linux-mint, xfce, installation, commissioning, storage]
+    tags: [xubuntu, xfce, installation, commissioning, storage]
   - id: CS07
     title: RAM compatibility, installation, and verification
     pathway: main-quest

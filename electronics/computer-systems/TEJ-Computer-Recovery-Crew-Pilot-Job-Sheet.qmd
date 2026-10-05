@@ -1,0 +1,148 @@
+---
+title: ""
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    classoption: [9pt]
+    include-in-header: ../styles/tej-preamble.tex
+    mainfont: "Arial"
+    monofont: "Consolas"
+    geometry: [margin=0.48in]
+execute: {enabled: false}
+lang: en-CA
+---
+
+\begin{center}
+{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
+{\large Pilot Job Sheet}
+\end{center}
+\vspace{-0.8em}
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{3pt}
+\setlength{\parskip}{1pt}
+\RedeclareSectionCommand[beforeskip=0.45\baselineskip,afterskip=0.18\baselineskip]{section}
+\fontsize{8.5}{9.5}\selectfont
+
+**Power Circuits Questions 1-6 complete:** $\square$  **Teacher initials:** __________
+
+| Student names | Date | Class | Asset number |
+|:--|:--|:--|:--|
+| | | | |
+
+| Machine type | Manufacturer | Model | Existing asset label |
+|:--|:--|:--|:--|
+| desktop / laptop / Intel Mac | | | |
+
+| First technician | First recorder | Role swap | Roles after swap |
+|:--|:--|:--:|:--|
+| | | $\square$ | technician: __________ recorder: __________ |
+
+This limited pilot prepares classroom equipment. It is not a quest ID and does not complete CS01-CS08 early. The machine does not need to work for you to succeed. Assessment uses safety, documentation, reasoning, and approval gates.
+
+## Baseline, photographs, and privacy {.unnumbered}
+
+| Assigned condition or symptom | Power state and cables received | Data or privacy restriction |
+|:--|:--|:--|
+| | | |
+
+**Photographs:** $\square$ front  $\square$ rear ports  $\square$ asset label only  $\square$ interior overview after approval  $\square$ cable locations before movement
+
+Never photograph passwords, network secrets, private screens, or unnecessary serial numbers.
+
+## Safety and ESD gate {.unnumbered}
+
+**Students never:** open or probe inside a PSU, create a short, invent a fault, move unapproved parts, force a connector, or erase or partition a drive without written teacher approval. The PSU remains sealed.
+
+**Controls:** $\square$ shut down  $\square$ unplugged  $\square$ discharged as directed  $\square$ ESD mat or approved grounded area  $\square$ wrist strap when directed  $\square$ parts held by edges
+
+Stop for liquid, a swollen cell, burnt areas, damaged power connectors, loose metal, sharp damage, smoke, unusual smell, abnormal heat, or an unknown battery.
+
+## Parts inventory {.unnumbered}
+
+| Item | Make or label | Qty. | Connection or location | Condition |
+|:--|:--|:--:|:--|:--|
+| motherboard / logic board and CPU | | | | |
+| RAM | | | | |
+| storage | | | | |
+| cooling, expansion, or other | | | | |
+
+**RAM:** type __________  modules __________  total capacity __________  slots used / total __________
+
+**Storage:** type __________  model __________  capacity __________  cable or interface __________
+
+**Visible damage or concern:** ______________________________________________________________________
+
+**Stop condition found:** $\square$ no  $\square$ yes, notify the teacher and describe: _______________________________
+
+## Reassembly and ready-to-power gate {.unnumbered}
+
+$\square$ loose items removed  $\square$ RAM latches checked  $\square$ storage secured  $\square$ power and data connectors checked  $\square$ fans clear  $\square$ case closed as directed  $\square$ exterior cables correct
+
+**Prediction for first power:** _____________________________________________________________________
+
+**Teacher signature before power:** __________________________________  **Time:** __________
+
+\newpage
+
+\begin{center}
+{\Large\bfseries TEJ Computer Recovery Crew}\\[-0.1em]
+{\large Pilot Job Sheet, Page 2}
+\end{center}
+\vspace{-0.8em}
+
+## Startup and diagnostic record {.unnumbered}
+
+Use a wired keyboard during startup. Model documentation controls when keys differ.
+
+| Machine | Key | Purpose | Result |
+|:--|:--|:--|:--|
+| PC | F2 or Delete | firmware setup | |
+| PC | F12 | boot selection | |
+| Intel Mac | Option or Alt | Startup Manager | |
+| Intel Mac | D / Option-D | Apple Diagnostics / Internet Diagnostics | |
+| Intel Mac | Command-R / Option-Command-R | Recovery / Internet Recovery | |
+
+Intel Macs use EFI or UEFI firmware rather than an ordinary PC BIOS. Record exactly what the assigned model shows. Do not change settings without approval.
+
+**POST, firmware, or Apple Diagnostics evidence:** _____________________________________________________
+
+## Xubuntu live-session acceptance tests {.unnumbered}
+
+Boot the teacher-prepared, direct-written Xubuntu 26.04 LTS USB. A live session is a quick compatibility check. Its boot time is not a fair benchmark.
+
+| Test | Green / yellow / red | Evidence or note |
+|:--|:--:|:--|
+| display, keyboard, and mouse | | |
+| USB and Ethernet | | |
+| Wi-Fi and sound | | |
+| internal storage visibility | | |
+
+## Triage classification {.unnumbered}
+
+| Class | Meaning |
+|:--|:--|
+| Green | safe, stable, required tests pass, no unresolved data concern |
+| Yellow | one approved repair, driver check, or closer review is needed |
+| Red | stop condition, unsafe damage, unstable power, serious storage concern, or no safe student next step |
+
+**Classification:** $\square$ green  $\square$ yellow  $\square$ red  **Reasoning:** _____________________________________________
+
+## Teacher authorization before changes {.unnumbered}
+
+| Proposed action | Approved action and limits | Teacher signature |
+|:--|:--|:--|
+| move or replace RAM | | |
+| replace or add storage | | |
+| erase or partition a drive | | |
+| install Xubuntu or Lubuntu | | |
+
+**Final next action:** $\square$ return to service  $\square$ approved hardware work  $\square$ approved installation  $\square$ teacher diagnosis  $\square$ hold for parts  $\square$ retire or recycle review
+
+**Details:** ________________________________________________________________________________________
+
+## Google Classroom evidence {.unnumbered}
+
+Submit $\square$ both pages  $\square$ approved exterior photo  $\square$ approved interior overview  $\square$ diagnostic or live-session evidence  $\square$ classification and next action
+
+CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>.
