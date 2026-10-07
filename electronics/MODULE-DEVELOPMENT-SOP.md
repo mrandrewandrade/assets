@@ -73,6 +73,7 @@ Use the parts that fit the topic while preserving the progression.
 - Show the real classroom component beside its schematic symbol when possible.
 - Keep symbols and subscripts consistent across slides, questions, and answers.
 - Put the schematic beside the givens for calculation questions.
+- Link the current electronics quick-reference sheet from the GUESS overview or another clearly labelled reference slide.
 - Reveal or discuss a prediction before showing the result.
 - Keep body text, table text, schematic labels, and gate labels readable from the back of the classroom.
 - Do not stretch photographs, screenshots, or schematics.
@@ -93,14 +94,15 @@ The document collects evidence without forcing students to reproduce mathematica
 2. One-sentence purpose
 3. Student number or other required identifier
 4. Concise instructions
-5. GUESS requirements
-6. Handwritten-work requirement
-7. One clearly titled section for each question
-8. The complete question text
-9. A front-photo space
-10. A back-photo space
-11. A final submission check
-12. Clean reference schematics for every question
+5. A direct link to the current electronics quick-reference sheet
+6. GUESS requirements
+7. Handwritten-work requirement
+8. One clearly titled section for each question
+9. The complete question text
+10. A front-photo space
+11. A back-photo space
+12. A final submission check
+13. Clean reference schematics for every question
 
 The front and back photo spaces should use stable tables or image placeholders so students can click, replace the prompt, and keep the page organized. Require both sides even when the back is blank so submissions are consistent and missing work is easier to identify.
 
@@ -133,18 +135,19 @@ Keep the answer document restricted when the questions are being assessed.
 
 1. Repeat the exact question title and context.
 2. Show the related schematic.
-3. Provide a **Given** table with quantity, symbol, value, and unit.
-4. Provide an **Unknowns** table with quantity, symbol, and required unit.
-5. Write the general equations before inserting numbers.
-6. Show rearrangement where needed.
-7. Show metric-prefix conversions explicitly.
-8. Put each calculator entry or calculation step on its own line.
-9. Keep full calculator precision for dependent calculations.
-10. Explain when to use `ANS` or calculator memory.
-11. State the rounding or significant-figure rule.
-12. Provide a results table with every requested quantity.
-13. Finish with a plain-language answer statement.
-14. Add a short teacher note only where it helps address a likely misconception or acceptable variation.
+3. Link the current electronics quick-reference sheet beside the GUESS reference.
+4. Provide a **Given** table with quantity, symbol, value, and unit.
+5. Provide an **Unknowns** table with quantity, symbol, and required unit.
+6. Write the general equations before inserting numbers.
+7. Show rearrangement where needed.
+8. Show metric-prefix conversions explicitly.
+9. Put each calculator entry or calculation step on its own line.
+10. Keep full calculator precision for dependent calculations.
+11. Explain when to use `ANS` or calculator memory.
+12. State the rounding or significant-figure rule.
+13. Provide a results table with every requested quantity.
+14. Finish with a plain-language answer statement.
+15. Add a short teacher note only where it helps address a likely misconception or acceptable variation.
 
 The answer key must follow the same question order, variable names, circuit labels, and wording as the student document.
 
@@ -249,6 +252,7 @@ Before release, confirm that all three artifacts use the same:
 - calculator conventions;
 - precision and significant-figure rules;
 - expected final answers;
+- the current electronics quick-reference link;
 - source links and attribution.
 
 The slides may include one fully worked example and guided practice. They should not reveal all answers to the assigned student questions before those questions are completed.
@@ -268,6 +272,7 @@ The slides may include one fully worked example and guided practice. They should
 ### Questions and answers
 
 - [ ] Every student question has a matching worked answer.
+- [ ] The slide deck, student document, and answer key link the same electronics quick-reference sheet.
 - [ ] Question numbers, wording, diagrams, values, and unknowns match.
 - [ ] Givens and unknowns are visually separated.
 - [ ] General equations appear before substitutions.
