@@ -2,7 +2,7 @@
 
 This directory is the canonical source for original TEJ electronics teaching artifacts.
 
-Use [MODULE-DEVELOPMENT-SOP.md](MODULE-DEVELOPMENT-SOP.md) when creating or revising a complete module. It defines the instructional sequence, required student and teacher materials, schematic workflow, alignment rules, and release checks. H01 Safety and Lab Practice is the reference implementation.
+Use [MODULE-DEVELOPMENT-SOP.md](MODULE-DEVELOPMENT-SOP.md) when creating or revising a coordinated lesson package. It defines the Google Slides teaching deck, handwritten-work submission Google Doc, restricted worked-answer Google Doc, schematic workflow, alignment rules, and release checks. The Basic Electricity to Basic Computer Systems package is the reference implementation.
 
 ## Structure
 
