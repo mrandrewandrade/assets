@@ -2,6 +2,8 @@
 
 This directory is the canonical source for original TEJ electronics teaching artifacts.
 
+Use [MODULE-DEVELOPMENT-SOP.md](MODULE-DEVELOPMENT-SOP.md) when creating or revising a complete module. It defines the instructional sequence, required student and teacher materials, schematic workflow, alignment rules, and release checks. H01 Safety and Lab Practice is the reference implementation.
+
 ## Structure
 
 - `reference/`: the two-page quick reference and curriculum-ordered handbook
