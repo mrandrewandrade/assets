@@ -6,7 +6,7 @@ Use [MODULE-DEVELOPMENT-SOP.md](MODULE-DEVELOPMENT-SOP.md) when creating or revi
 
 ## Structure
 
-- `reference/`: the two-page quick reference and curriculum-ordered handbook
+- `reference/`: the three-page printable quick reference and the single curriculum-ordered course book
 - `worksheets/`: maintainable student worksheets and teacher keys
 - `modules/`: complete hardware-module packages
 - `computer-systems/`: CS01-CS08 Main Quest and SQ01-SQ06 Side Quest activity packages

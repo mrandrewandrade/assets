@@ -1,8 +1,8 @@
 ---
-title: "TEJ Basic Circuit Calculations"
-subtitle: "Teacher answer key | Full GUESS solutions"
+title: "TEJ Parallel-Circuit Calculations"
+subtitle: "Teacher answer key | Complete GUESS solutions"
 author: "Technology Commons"
-date: "2026-10-04"
+date: "2026-10-07"
 format:
   pdf:
     pdf-engine: xelatex
@@ -12,372 +12,323 @@ format:
     mainfont: "Liberation Sans"
     monofont: "Liberation Mono"
     geometry: [margin=0.68in]
+  html:
+    css: ../styles/tej-html.css
 execute: {enabled: false}
 lang: en-CA
 ---
 
-Answers are blue, significant-figure warnings are red, and teacher notes are gold. Preserve the student question order and use the unrounded value for later parts.
+Use the same symbols and order as the student worksheet. Each solution shows the general equation, rearrangement, substitution, full calculator result, and final rounded statement.
 
-![Two parallel loads connected across a DC source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){fig-cap="General parallel-circuit schematic used in the student version." width=82%}
+[Electronics Quick Reference](https://andrewandrade.ca/assets/TEJ-Electronics-Quick-Reference.pdf) · [Electronics Reference Handbook](https://andrewandrade.ca/assets/TEJ-Electronics-Reference-Handbook.pdf) · [Casio fx-991ES PLUS manual](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf)
 
-\newpage
-
-# Question 1: Computer branch in parallel {.unnumbered}
-
-**Required | Straightforward hand calculation using GUESS**
-
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.03 | V |
-| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
-| Computer power | $P_2$ | 146 | W |
-
-| Unknown | Symbol | Target unit |
-|:--|:--:|:--:|
-| Computer branch voltage | $V_2$ | V |
-| Computer equivalent resistance | $R_2$ | $\Omega$ |
-| Total power | $P_T$ | W |
-
-**General equations:** \answer{$V_1=V_2=V_S$, $R=V^2/P$, $I=V/R$, $P=VI$, $P_T=P_1+P_2$}
-
-**Rearranged equations:** \answer{$V_2=V_S$, $R_2=V_2^2/P_2$, $I_1=V_1/R_1$, $P_1=V_1I_1$}
-
-**Substitution and exact calculator entries:**
-
-\answer{$V_2=12.03\ \mathrm{V}$}
-
-\answer{$R_2=(12.03\ \mathrm{V})^2/(146\ \mathrm{W})=0.99124\ \Omega$}<br>
-`12.03 x² ÷ 146 =`
-
-\answer{$I_1=12.03\ \mathrm{V}/4.7\ \Omega=2.55957\ \mathrm{A}$}<br>
-`12.03 ÷ 4.7 =`
-
-\answer{$P_1=(12.03\ \mathrm{V})(\mathrm{Ans})=30.79168\ \mathrm{W}$}<br>
-`12.03 × Ans =`
-
-\answer{$P_T=\mathrm{Ans}+146\ \mathrm{W}=176.79168\ \mathrm{W}$}
-
-\begin{tejwarning}[Significant-figure check]
-$R_2$ is limited by 146 W to three significant figures. Bulb values are limited by $4.7\ \Omega$ to two significant figures. The total is reported to the nearest watt.
-\end{tejwarning}
-
-| Final result | Value |
-|:--|:--|
-| $V_2$ | \answer{$12.03\ \mathrm{V}$} |
-| $R_2$ | \answer{$0.991\ \Omega$} |
-| $P_T$ | \answer{$177\ \mathrm{W}$} |
-
-**Answer sentence:** \answer{The computer branch has $12.03\ \mathrm{V}$ across it and an equivalent resistance of $0.991\ \Omega$. Together, the bulb and computer use $177\ \mathrm{W}$.}
+![Three parallel loads connected across one source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){fig-cap="Canonical schematic for the question set." width=78%}
 
 \newpage
 
-# Question 2: Recreate and verify in Tinkercad {.unnumbered}
+# Question 1: Two parallel branches {.unnumbered}
 
-**Required | Tinkercad verification**
+## GUESS {.unnumbered}
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply | $V_S$ | 12.03 | V |
-| Branch 1 resistance | $R_1$ | 4.7 | $\Omega$ |
-| Branch 2 model | $R_2$ | 0.991239041 | $\Omega$ |
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Source voltage | $V_T$ | $15.0\ \mathrm{V}$ |
+| Branch 1 resistance | $R_1$ | $1.00\ \mathrm{k}\Omega$ |
+| Branch 2 resistance | $R_2$ | $600\ \Omega$ |
 
-| Unknown | Symbol | Target unit |
-|:--|:--:|:--:|
-| Branch voltages | $V_1,V_2$ | V |
-| Branch and total currents | $I_1,I_2,I_T$ | A |
-| Percent differences | - | % |
+| Unknown | Symbol | Final answer |
+|:--|:--:|--:|
+| Branch 1 current | $I_1$ | $15.0\ \mathrm{mA}$ |
+| Branch 2 current | $I_2$ | $25.0\ \mathrm{mA}$ |
+| Total current | $I_T$ | $40.0\ \mathrm{mA}$ |
 
-**General equations:** \answer{$I=V/R$, $I_T=I_1+I_2$, $\%\text{ difference}=|x_s-x_c|/|x_c|\times100\%$}
+**Equations**
 
-**Calculated values and entries:**
+$V_T=V_1=V_2$
 
-- \answer{$I_1=12.03/4.7=2.55957\ \mathrm{A}$} using `12.03 ÷ 4.7 =`.
-- \answer{$I_2=146/12.03=12.13633\ \mathrm{A}$} using `146 ÷ 12.03 =`.
-- \answer{$I_T=2.559574468+12.136325852=14.69590\ \mathrm{A}$} using stored unrounded values.
-- \answer{$V_1=V_2=12.03000\ \mathrm{V}$} for an ideal simulator source.
+$I=\dfrac{V}{R}$
 
-| Required record | Calculated | Simulated | Percent difference |
-|:--|--:|--:|--:|
-| $V_1$ | \answer{$12.03000\ \mathrm{V}$} | teacher checks file | near 0% |
-| $V_2$ | \answer{$12.03000\ \mathrm{V}$} | teacher checks file | near 0% |
-| $I_1$ | \answer{$2.55957\ \mathrm{A}$} | teacher checks file | near 0% |
-| $I_2$ | \answer{$12.13633\ \mathrm{A}$} | teacher checks file | near 0% |
-| $I_T$ | \answer{$14.69590\ \mathrm{A}$} | teacher checks file | near 0% |
+$I_T=I_1+I_2$
 
-\begin{tejteacher}[Teacher note]
-Accept small differences caused by the number of digits Tinkercad accepts for $R_2$ or by displayed meter resolution. The student must still state that ideal resistors, ideal conductors, fixed temperature, and simplified sources limit the simulation.
-\end{tejteacher}
+**Substitute and solve**
 
-**Answer sentence:** \answer{The simulated branch voltages and currents should agree closely with the hand calculation when the meters are placed correctly and the unrounded resistance is used.}
+$I_1=\dfrac{15.0\ \mathrm{V}}{1.00\times10^3\ \Omega}=0.015000\ \mathrm{A}$
 
-\newpage
+`15 ÷ (1 × 10³) =`
 
-# Question 3: Cooling fan {.unnumbered}
+$I_2=\dfrac{15.0\ \mathrm{V}}{600\ \Omega}=0.025000\ \mathrm{A}$
 
-**Required | Increasing complexity**
+`15 ÷ 600 =`
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.0 | V |
-| Fan resistance | $R_1$ | 8.2 | $\Omega$ |
-| Existing power | $P_2$ | 110 | W |
+$I_T=0.015000+0.025000=0.040000\ \mathrm{A}$
 
-| Unknown | Symbol | Target unit |
-|:--|:--:|:--:|
-| Fan current | $I_1$ | A |
-| Fan power | $P_1$ | W |
-| Total power | $P_T$ | W |
+`Ans + 0.015 =`
 
-**General equations:** \answer{$I=V/R$, $P=VI$, $P_T=P_1+P_2$}
+::: {.callout-important title="Key note"}
+In a parallel circuit, use the full source voltage for every branch. Do not divide the voltage between the resistors.
+:::
 
-**Rearranged equations:** \answer{$I_1=V_1/R_1$, $P_1=V_1I_1$}
-
-**Substitution and exact calculator entries:**
-
-- \answer{$I_1=12.0/8.2=1.46341\ \mathrm{A}$}: `12.0 ÷ 8.2 =`
-- \answer{$P_1=12.0\times\mathrm{Ans}=17.56098\ \mathrm{W}$}: `12.0 × Ans =`
-- \answer{$P_T=\mathrm{Ans}+110=127.56098\ \mathrm{W}$}: `Ans + 110 =`
-
-\begin{tejwarning}[Significant-figure check]
-The $8.2\ \Omega$ resistance limits branch results to two significant figures. The whole-watt existing load makes the total a whole-watt result.
-\end{tejwarning}
-
-| Final result | Value |
-|:--|:--|
-| $I_1$ | \answer{$1.5\ \mathrm{A}$} |
-| $P_1$ | \answer{$18\ \mathrm{W}$} |
-| $P_T$ | \answer{$128\ \mathrm{W}$} |
-
-**Answer sentence:** \answer{The fan draws $1.5\ \mathrm{A}$ and uses $18\ \mathrm{W}$. The computer and fan use $128\ \mathrm{W}$ in total.}
+**Statement:** The branches draw $15.0\ \mathrm{mA}$ and $25.0\ \mathrm{mA}$. The source supplies $40.0\ \mathrm{mA}$ in total.
 
 \newpage
 
-# Question 4: Coloured case bulb and motherboard {.unnumbered}
+# Question 2: Current, resistance, and power {.unnumbered}
 
-**Required | Multi-step parallel circuit**
+## GUESS {.unnumbered}
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.03 | V |
-| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
-| Motherboard current | $I_2$ | 12.1 | A |
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Source voltage | $V_T$ | $30.0\ \mathrm{V}$ |
+| Branch resistances | $R_1,R_2,R_3$ | $120\ \Omega, 200\ \Omega, 300\ \Omega$ |
 
-**Unknowns:** $I_1$, $R_2$, $P_1$, $P_2$, $I_T$, and $P_T$.
+| Unknown | Final answer |
+|:--|--:|
+| $I_1,I_2,I_3$ | $250\ \mathrm{mA},150\ \mathrm{mA},100\ \mathrm{mA}$ |
+| $I_T$ | $500\ \mathrm{mA}$ |
+| $R_T$ | $60.0\ \Omega$ |
+| $P_1,P_2,P_3$ | $7.50\ \mathrm{W},4.50\ \mathrm{W},3.00\ \mathrm{W}$ |
+| $P_T$ | $15.0\ \mathrm{W}$ |
 
-**General equations:** \answer{$I=V/R$, $R=V/I$, $P=VI$, $I_T=I_1+I_2$, $P_T=P_1+P_2$}
+**Equations**
 
-**Substitution, entries, and full results:**
+$I_n=V_T/R_n$; $I_T=I_1+I_2+I_3$; $R_T=V_T/I_T$; $P_n=V_TI_n$; $P_T=P_1+P_2+P_3$.
 
-- \answer{$I_1=12.03/4.7=2.55957\ \mathrm{A}$}: `12.03 ÷ 4.7 =`
-- \answer{$R_2=12.03/12.1=0.99421\ \Omega$}: `12.03 ÷ 12.1 =`
-- \answer{$P_1=12.03(2.559574468)=30.79168\ \mathrm{W}$}: `12.03 × [stored I₁] =`
-- \answer{$P_2=12.03(12.1)=145.56300\ \mathrm{W}$}: `12.03 × 12.1 =`
-- \answer{$I_T=2.559574468+12.1=14.65957\ \mathrm{A}$}
-- \answer{$P_T=30.79168085+145.563=176.35468\ \mathrm{W}$}
+**Substitute and solve**
 
-\begin{tejwarning}[Significant-figure check]
-Branch 1 results are limited by $4.7\ \Omega$. Branch 2 results are limited by $12.1\ \mathrm{A}$. Apply the decimal-place rule to sums.
-\end{tejwarning}
+$I_1=30.0/120=0.250000\ \mathrm{A}$
 
-| $I_1$ | $R_2$ | $P_1$ | $P_2$ | $I_T$ | $P_T$ |
-|--:|--:|--:|--:|--:|--:|
-| \answer{$2.6\ \mathrm{A}$} | \answer{$0.994\ \Omega$} | \answer{$31\ \mathrm{W}$} | \answer{$146\ \mathrm{W}$} | \answer{$14.7\ \mathrm{A}$} | \answer{$177\ \mathrm{W}$} |
+`30 ÷ 120 =`
 
-**Answer sentence:** \answer{The branches draw a total of $14.7\ \mathrm{A}$ and use $177\ \mathrm{W}$, with the detailed branch results shown above.}
+$I_2=30.0/200=0.150000\ \mathrm{A}$
 
-\newpage
+`30 ÷ 200 =`
 
-# Question 5: Power and resistance are given {.unnumbered}
+$I_3=30.0/300=0.100000\ \mathrm{A}$
 
-**Required | Metric-prefix transfer**
+`30 ÷ 300 =`
 
-| Known quantity | Symbol | Value | Converted value |
-|:--|:--:|:--:|:--:|
-| Load power | $P_1$ | $50\ \mathrm{mW}$ | \answer{$0.050\ \mathrm{W}$} |
-| Load resistance | $R_1$ | $2.0\ \mathrm{k}\Omega$ | \answer{$2000\ \Omega$} |
+$I_T=0.250000+0.150000+0.100000=0.500000\ \mathrm{A}$
 
-| Unknown | Symbol | Target unit |
-|:--|:--:|:--:|
-| Load voltage | $V_1$ | V |
-| Load current | $I_1$ | mA |
+`0.25 + 0.15 + 0.1 =`
 
-**General equation:** \answer{$P=V^2/R$ and $I=P/V$}
+$R_T=30.0/0.500000=60.0000\ \Omega$
 
-**Rearranged equation:** \answer{$V=\sqrt{PR}$}
+`30 ÷ Ans =`
 
-**Substitution and exact entries:**
+$P_1=30.0(0.250000)=7.50000\ \mathrm{W}$
 
-- \answer{$V_1=\sqrt{(0.050)(2000)}=10.00000\ \mathrm{V}$}: `√( 50 ×10ˣ (-) 3 × 2.0 ×10ˣ 3 ) =`
-- \answer{$I_1=0.050/\mathrm{Ans}=0.00500\ \mathrm{A}=5.00000\ \mathrm{mA}$}: `( 50 ×10ˣ (-) 3 ) ÷ Ans =`
+$P_2=30.0(0.150000)=4.50000\ \mathrm{W}$
 
-\begin{tejwarning}[Significant-figure check]
-Both givens have two significant figures. Write $1.0\times10^1\ \mathrm{V}$ when the two significant digits must be explicit.
-\end{tejwarning}
+$P_3=30.0(0.100000)=3.00000\ \mathrm{W}$
 
-| Final result | Value |
-|:--|:--|
-| $V_1$ | \answer{$1.0\times10^1\ \mathrm{V}$} |
-| $I_1$ | \answer{$5.0\ \mathrm{mA}$} |
+$P_T=7.50000+4.50000+3.00000=15.0000\ \mathrm{W}$
 
-**Answer sentence:** \answer{The load has $10\ \mathrm{V}$ across it and draws $5.0\ \mathrm{mA}$.}
+::: {.callout-important title="Key note"}
+$R_T$ must be lower than $120\ \Omega$, the smallest branch resistance. If it is not, recheck the reciprocal calculation or $V_T/I_T$.
+:::
+
+**Statement:** The source supplies $500\ \mathrm{mA}$ through an equivalent resistance of $60.0\ \Omega$. The network uses $15.0\ \mathrm{W}$.
 
 \newpage
 
-# Question 6: USB heater {.unnumbered}
+# Question 3: Find an unknown branch resistance {.unnumbered}
 
-**Optional Level 4 | Transfer and justification**
+## GUESS {.unnumbered}
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Heater voltage | $V_1$ | 5.0 | V |
-| Heater current | $I_1$ | 1.5 | A |
-| Existing power | $P_2$ | 95 | W |
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Equivalent resistance | $R_T$ | $8.00\ \mathrm{k}\Omega$ |
+| Known branch resistance | $R_1$ | $12.0\ \mathrm{k}\Omega$ |
 
-**Unknowns:** $P_1$, $R_1$, $P_T$, and port suitability.
+| Unknown | Symbol | Final answer |
+|:--|:--:|--:|
+| Unknown branch resistance | $R_X$ | $24.0\ \mathrm{k}\Omega$ |
 
-**General equations:** \answer{$P=VI$, $R=V/I$, $P_T=P_1+P_2$}
+**Equation**
 
-**Substitution and exact entries:**
+$\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_X}$
 
-- \answer{$P_1=(5.0)(1.5)=7.50000\ \mathrm{W}$}: `5.0 × 1.5 =`
-- \answer{$R_1=5.0/1.5=3.33333\ \Omega$}: `5.0 ÷ 1.5 =`
-- \answer{$P_T=7.50000+95=102.50000\ \mathrm{W}$}: `[stored P₁] + 95 =`
+**Rearrange**
 
-\begin{tejwarning}[Safety and rating check]
-$1.5\ \mathrm{A}>0.90\ \mathrm{A}$, so the stated port is not rated to supply the heater. Do not test an overload on classroom hardware.
-\end{tejwarning}
+$\dfrac{1}{R_X}=\dfrac{1}{R_T}-\dfrac{1}{R_1}$
 
-| $P_1$ | $R_1$ | $P_T$ | Port decision |
-|--:|--:|--:|:--|
-| \answer{$7.5\ \mathrm{W}$} | \answer{$3.3\ \Omega$} | \answer{$103\ \mathrm{W}$} | \answer{Not suitable} |
+$R_X=\dfrac{1}{\left(\dfrac{1}{R_T}-\dfrac{1}{R_1}\right)}$
 
-**Answer sentence:** \answer{The heater uses $7.5\ \mathrm{W}$ and has an equivalent resistance of $3.3\ \Omega$. The total is $103\ \mathrm{W}$, and a $0.90\ \mathrm{A}$ port is not suitable.}
+**Substitute and solve**
 
-\newpage
+$R_X=\dfrac{1}{\left(\dfrac{1}{8.00\ \mathrm{k}\Omega}-\dfrac{1}{12.0\ \mathrm{k}\Omega}\right)}=24.0000\ \mathrm{k}\Omega$
 
-# Question 7: Two parallel loads {.unnumbered}
+**Casio fx-991ES PLUS entry**
 
-**Optional Level 4 | Full network evidence**
+`1 ÷ ((1 ÷ 8) − (1 ÷ 12)) =`
 
-| Known quantity | Symbol | Value | Converted value |
-|:--|:--:|:--:|:--:|
-| Supply | $V_S$ | $12.0\ \mathrm{V}$ | - |
-| Load 1 resistance | $R_1$ | $4.70\ \mathrm{k}\Omega$ | $4700\ \Omega$ |
-| Load 2 current | $I_2$ | $2.40\ \mathrm{mA}$ | $0.00240\ \mathrm{A}$ |
+The display is `24`. Because every resistance was entered in kilohms, the result is in kilohms.
 
-**General equations:** \answer{$V_1=V_2=V_S$, $I=V/R$, $R=V/I$, $P=VI$, $I_T=I_1+I_2$, $P_T=P_1+P_2$, $R_{\mathrm{eq}}=V_S/I_T$}
+::: {.callout-important title="Key note"}
+Keep both resistance values in the same unit before using the reciprocal equation. The equivalent resistance must remain smaller than either branch resistance.
+:::
 
-**Substitution and full results:**
-
-- \answer{$I_1=12.0/4700=2.55319\ \mathrm{mA}$}
-- \answer{$R_2=12.0/0.00240=5.00000\ \mathrm{k}\Omega$}
-- \answer{$P_1=12.0(2.553191489\ \mathrm{mA})=30.63830\ \mathrm{mW}$}
-- \answer{$P_2=12.0(2.40\ \mathrm{mA})=28.80000\ \mathrm{mW}$}
-- \answer{$I_T=2.553191489+2.40=4.95319\ \mathrm{mA}$}
-- \answer{$P_T=30.63829787+28.8=59.43830\ \mathrm{mW}$}
-- \answer{$R_{\mathrm{eq}}=12.0/0.004953191489=2.42268\ \mathrm{k}\Omega$}
-
-| $V_1$ | $V_2$ | $I_1$ | $R_2$ | $P_1$ | $P_2$ | $I_T$ | $P_T$ | $R_{\mathrm{eq}}$ |
-|--:|--:|--:|--:|--:|--:|--:|--:|--:|
-| \answer{$12.0\ \mathrm{V}$} | \answer{$12.0\ \mathrm{V}$} | \answer{$2.55\ \mathrm{mA}$} | \answer{$5.00\ \mathrm{k}\Omega$} | \answer{$30.6\ \mathrm{mW}$} | \answer{$28.8\ \mathrm{mW}$} | \answer{$4.95\ \mathrm{mA}$} | \answer{$59.4\ \mathrm{mW}$} | \answer{$2.42\ \mathrm{k}\Omega$} |
-
-**Answer sentence:** \answer{The two loads share $12.0\ \mathrm{V}$, draw $4.95\ \mathrm{mA}$ in total, use $59.4\ \mathrm{mW}$, and have an equivalent resistance of $2.42\ \mathrm{k}\Omega$.}
+**Statement:** The unknown branch must be $R_X=24.0\ \mathrm{k}\Omega$.
 
 \newpage
 
-# Question 8: Choose circuit protection {.unnumbered}
+# Question 4: Reduce, then solve {.unnumbered}
 
-**Optional Level 4 | Design and justification**
+## GUESS {.unnumbered}
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply | $V_S$ | 12.0 | V |
-| Lamp power | $P_1$ | 27 | W |
-| Converter power | $P_2$ | 18 | W |
-| Wire allowable current | $I_{\mathrm{wire,max}}$ | 7.5 | A |
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Existing branches | $R_1,R_2$ | $12.0\ \mathrm{k}\Omega,4.00\ \mathrm{k}\Omega$ |
+| Required total | $R_T$ | $2.00\ \mathrm{k}\Omega$ |
 
-**General equation:** \answer{$I=P/V$ and $I_T=I_1+I_2$}
+| Unknown | Symbol | Final answer |
+|:--|:--:|--:|
+| Added branch | $R_X$ | $6.00\ \mathrm{k}\Omega$ |
 
-**Substitution and exact entries:**
+**Equations and rearrangement**
 
-- \answer{$I_1=27/12.0=2.25000\ \mathrm{A}$}: `27 ÷ 12.0 =`
-- \answer{$I_2=18/12.0=1.50000\ \mathrm{A}$}: `18 ÷ 12.0 =`
-- \answer{$I_T=2.25000+1.50000=3.75000\ \mathrm{A}$}
+$R_{12}=\dfrac{R_1R_2}{R_1+R_2}$
 
-| Final result | Value |
-|:--|:--|
-| $I_1$ | \answer{$2.3\ \mathrm{A}$} |
-| $I_2$ | \answer{$1.5\ \mathrm{A}$} |
-| $I_T$ | \answer{$3.8\ \mathrm{A}$} |
-| Listed fuse | \answer{$5\ \mathrm{A}$} |
+$R_X=\dfrac{1}{\left(\dfrac{1}{R_T}-\dfrac{1}{R_{12}}\right)}$
 
-\begin{tejteacher}[Teacher note]
-The $5\ \mathrm{A}$ fuse is the smallest listed rating above the normal $3.75\ \mathrm{A}$ load and remains below the $7.5\ \mathrm{A}$ wire limit. Real vehicle design must also follow manufacturer guidance, inrush requirements, ambient temperature, fuse curves, and connector ratings.
-\end{tejteacher}
+**Substitute and solve**
 
-**Answer sentence:** \answer{The branch normally draws $3.8\ \mathrm{A}$, so the listed $5\ \mathrm{A}$ fuse is the defensible choice for this simplified problem.}
+$R_{12}=\dfrac{(12.0)(4.00)}{12.0+4.00}=3.00000\ \mathrm{k}\Omega$
 
-\newpage
+`(12 × 4) ÷ (12 + 4) =`
 
-# Question 9: Diagnose an open branch {.unnumbered}
+$R_X=\dfrac{1}{\left(\dfrac{1}{2.00}-\dfrac{1}{3.00000}\right)}=6.00000\ \mathrm{k}\Omega$
 
-**Optional Level 4 | Troubleshooting**
+`1 ÷ ((1 ÷ 2) − (1 ÷ Ans)) =`
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply | $V_S$ | 9.00 | V |
-| Branch 1 | $R_1$ | 1.00 | $\mathrm{k}\Omega$ |
-| Branch 2 | $R_2$ | 2.20 | $\mathrm{k}\Omega$ |
+::: {.callout-important title="Key note"}
+After the first reduction, redraw the network as two parallel branches: $R_{12}$ and $R_X$. This prevents mixing the old and reduced circuits.
+:::
 
-**General equations:** \answer{$I_1=V_S/R_1$, $I_2=V_S/R_2$, $I_T=I_1+I_2$}
-
-**Normal substitution and exact entries:**
-
-- \answer{$I_1=9.00/1000=0.00900000\ \mathrm{A}=9.00\ \mathrm{mA}$}
-- \answer{$I_2=9.00/2200=0.00409091\ \mathrm{A}=4.09\ \mathrm{mA}$}
-- \answer{$I_T=9.00000+4.09091=13.09091\ \mathrm{mA}\approx13.1\ \mathrm{mA}$}
-
-**Open-branch predictions:** \answer{$I_2=0$, $I_T=I_1=9.00\ \mathrm{mA}$, $V_1=9.00\ \mathrm{V}$, and the open gap can have $9.00\ \mathrm{V}$ across it.}
-
-\begin{tejwarning}[Safe sequence]
-Predict readings, inspect visually, measure source and Branch 1 voltage with power on, then disconnect power and discharge stored energy before continuity or resistance checks. Never use resistance mode on an energized circuit.
-\end{tejwarning}
-
-**Answer sentence:** \answer{A normal Branch 1 voltage and current rule out a complete supply failure, while zero Branch 2 current and voltage across the break support an open-branch diagnosis.}
+**Statement:** Add a $6.00\ \mathrm{k}\Omega$ branch to obtain $R_T=2.00\ \mathrm{k}\Omega$.
 
 \newpage
 
-# Question 10: Bicycle lighting transfer {.unnumbered}
+# Question 5: Respect the component power ratings {.unnumbered}
 
-**Optional Level 4 | Transfer and reflection**
+## GUESS {.unnumbered}
 
-| Known quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply | $V_S$ | 6.0 | V |
-| Headlamp power | $P_1$ | 3.0 | W |
-| Tail-lamp power | $P_2$ | 0.60 | W |
-| Time | $t$ | 2.0 | h |
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Branch 1 | $R_1,P_{1\max}$ | $1.00\ \mathrm{k}\Omega,0.500\ \mathrm{W}$ |
+| Branch 2 | $R_2,P_{2\max}$ | $100\ \Omega,1.00\ \mathrm{W}$ |
 
-**General equations:** \answer{$I=P/V$, $I_T=I_1+I_2$, $R_{\mathrm{eq}}=V_S/I_T$, $E=P_Tt$}
+| Unknown | Final answer |
+|:--|--:|
+| Largest safe source voltage | $10.0\ \mathrm{V}$ |
+| $I_1,I_2,I_T$ | $10.0\ \mathrm{mA},100\ \mathrm{mA},110\ \mathrm{mA}$ |
+| $P_T$ | $1.10\ \mathrm{W}$ |
+| Limiting component | $100\ \Omega$, $1.00\ \mathrm{W}$ branch |
 
-**Substitution and exact entries:**
+**Equations**
 
-- \answer{$I_1=3.0/6.0=0.50000\ \mathrm{A}$}: `3.0 ÷ 6.0 =`
-- \answer{$I_2=0.60/6.0=0.10000\ \mathrm{A}$}: `0.60 ÷ 6.0 =`
-- \answer{$I_T=0.50000+0.10000=0.60000\ \mathrm{A}$}
-- \answer{$R_{\mathrm{eq}}=6.0/0.60000=10.00000\ \Omega$}
-- \answer{$E=(3.0+0.60)(2.0)=7.20000\ \mathrm{Wh}$}
+$V_{\max}=\sqrt{P_{\max}R}$; $I=V/R$; $I_T=I_1+I_2$; $P_T=VI_T$.
 
-| $I_1$ | $I_2$ | $I_T$ | $R_{\mathrm{eq}}$ | Energy |
-|--:|--:|--:|--:|--:|
-| \answer{$0.50\ \mathrm{A}$} | \answer{$0.10\ \mathrm{A}$} | \answer{$0.60\ \mathrm{A}$} | \answer{$10\ \Omega$} | \answer{$7.2\ \mathrm{Wh}$} |
+**Substitute and solve**
 
-\begin{tejteacher}[Teacher note]
-Parallel branches allow one lamp to remain connected if the other opens. A simple simulation does not reproduce speed-dependent dynamo voltage, lamp temperature, internal resistance, weather, vibration, or connector corrosion.
-\end{tejteacher}
+$V_{1\max}=\sqrt{(0.500)(1000)}=22.360679775\ \mathrm{V}$
 
-**Answer sentence:** \answer{The lamps draw $0.60\ \mathrm{A}$ in total, present a $10\ \Omega$ equivalent load, and use $7.2\ \mathrm{Wh}$ in two hours.}
+`√(0.5 × 1000) =`
 
-{{< include ../includes/common-assessment-rubric.qmd >}}
+$V_{2\max}=\sqrt{(1.00)(100)}=10.000000000\ \mathrm{V}$
 
-CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.
+`√(1 × 100) =`
+
+Use the lower limit: $V_T=10.000000000\ \mathrm{V}$.
+
+$I_1=10.000000000/1000=0.010000000\ \mathrm{A}$
+
+$I_2=10.000000000/100=0.100000000\ \mathrm{A}$
+
+$I_T=0.010000000+0.100000000=0.110000000\ \mathrm{A}$
+
+$P_T=(10.000000000)(0.110000000)=1.100000000\ \mathrm{W}$
+
+::: {.callout-important title="Key note"}
+Parallel branches share the same voltage, so the first component to reach its voltage limit sets the safe voltage for the entire network.
+:::
+
+**Statement:** The largest safe source voltage is $10.0\ \mathrm{V}$. At that voltage the network draws $110\ \mathrm{mA}$ and uses $1.10\ \mathrm{W}$.
+
+\newpage
+
+# Question 6: Total power and resistance ratios {.unnumbered}
+
+## GUESS {.unnumbered}
+
+| Given | Symbol | Value |
+|:--|:--:|--:|
+| Source voltage | $V_T$ | $120\ \mathrm{V}$ |
+| Total power | $P_T$ | $288\ \mathrm{W}$ |
+| Resistance relationships |  | $R_2=3R_1$, $R_2=2R_3$ |
+
+| Unknown | Final answer |
+|:--|--:|
+| $I_T$ | $2.40\ \mathrm{A}$ |
+| $R_T$ | $50.0\ \Omega$ |
+| $R_1,R_2,R_3$ | $100\ \Omega,300\ \Omega,150\ \Omega$ |
+| $I_1,I_2,I_3$ | $1.20\ \mathrm{A},0.400\ \mathrm{A},0.800\ \mathrm{A}$ |
+| $P_1,P_2,P_3$ | $144\ \mathrm{W},48.0\ \mathrm{W},96.0\ \mathrm{W}$ |
+
+**Equations and rearrangement**
+
+$I_T=P_T/V_T$
+
+$R_T=V_T/I_T$
+
+Let $R_1=x$. Then $R_2=3x$ and $R_3=\dfrac{3x}{2}=1.5x$.
+
+$\dfrac{1}{R_T}=\dfrac{1}{x}+\dfrac{1}{3x}+\dfrac{1}{1.5x}=\dfrac{2}{x}$
+
+Therefore, $x=2R_T$.
+
+**Substitute and solve**
+
+$I_T=288/120=2.400000\ \mathrm{A}$
+
+`288 ÷ 120 =`
+
+$R_T=120/2.400000=50.000000\ \Omega$
+
+`120 ÷ Ans =`
+
+$R_1=x=2(50.000000)=100.000000\ \Omega$
+
+$R_2=3x=300.000000\ \Omega$
+
+$R_3=1.5x=150.000000\ \Omega$
+
+$I_1=120/100.000000=1.200000\ \mathrm{A}$
+
+$I_2=120/300.000000=0.400000\ \mathrm{A}$
+
+$I_3=120/150.000000=0.800000\ \mathrm{A}$
+
+$P_1=120(1.200000)=144.000000\ \mathrm{W}$
+
+$P_2=120(0.400000)=48.000000\ \mathrm{W}$
+
+$P_3=120(0.800000)=96.000000\ \mathrm{W}$
+
+**Checks**
+
+$I_1+I_2+I_3=1.200000+0.400000+0.800000=2.400000\ \mathrm{A}=I_T$
+
+$P_1+P_2+P_3=144.000000+48.000000+96.000000=288.000000\ \mathrm{W}=P_T$
+
+::: {.callout-important title="Key note"}
+Translate every verbal relationship into one variable before using the reciprocal-resistance equation. Check the result two ways: branch currents must add to $I_T$, and branch powers must add to $P_T$.
+:::
+
+**Statement:** The network uses $R_1=100\ \Omega$, $R_2=300\ \Omega$, and $R_3=150\ \Omega$. It draws $2.40\ \mathrm{A}$ and uses $288\ \mathrm{W}$ in total.
+
+# Source and use note {.unnumbered}
+
+Question values are adapted from Mitchel E. Schultz, *Grob's Basic Electronics*, 12th edition, Chapter 5, and the accompanying *Problems Manual*. The wording, ordering, GUESS solutions, calculator guidance, checks, and classroom presentation are original to this resource.
+
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade

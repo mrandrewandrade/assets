@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 7: Control systems and motion control
+# Control systems and motion control
 
 ```{=latex}
 \markright{C01 Control-system anatomy}
@@ -17,7 +17,7 @@ A control system uses an input and a controller to influence a process or plant.
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Open-loop, closed-loop, PID, and CNC reference block diagrams.](../schematics/Control_Systems_Reference.pdf){width=100%}
+![Open-loop, closed-loop, PID, and CNC reference block diagrams.](../schematics/bw/Control_Systems_Reference.pdf){width=100%}
 :::
 
 $$e=r-y$$

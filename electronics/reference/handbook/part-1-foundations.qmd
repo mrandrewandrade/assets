@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 1: Measurement and mathematical foundations
+# Measurement and mathematical foundations
 
 ```{=latex}
 \markright{Engineering notation and SI prefixes}
@@ -45,7 +45,7 @@ A safe electronics workflow begins with a prediction, a current-limited source, 
 :::
 
 ::: {.content-visible when-format="pdf"}
-![A protected 9 V classroom circuit with a source, fuse, switch, resistor, and LED in one series path.](../schematics/H01_Safety_Lab_Practice_Schematic.pdf){width=100%}
+![A protected 9 V classroom circuit with a source, fuse, switch, resistor, and LED in one series path.](../schematics/bw/H01_Safety_Lab_Practice_Schematic.pdf){width=100%}
 :::
 
 | Check | Evidence |

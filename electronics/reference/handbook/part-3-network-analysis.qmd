@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 3: Network analysis
+# Network analysis
 
 ```{=latex}
 \markright{H11 Series-parallel circuits and Kirchhoff's laws}
@@ -17,7 +17,7 @@ Reduce only groups that are clearly series or parallel. Kirchhoff's current law 
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/Kirchhoff_Node_Loop_Reference.pdf){width=58%}
+![Kirchhoff current law at a node and voltage law around a closed loop, with equations.](../schematics/bw/Kirchhoff_Node_Loop_Reference.pdf){width=58%}
 :::
 
 **Method:** mark nodes, identify series and parallel groups, reduce the network, solve total values, then expand back to branch values. Verify KCL and KVL at the end.

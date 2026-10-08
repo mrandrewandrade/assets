@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 6: Digital inputs and microcontroller interfacing
+# Digital inputs and microcontroller interfacing
 
 ```{=latex}
 \markright{D01 Digital voltage levels}
@@ -35,7 +35,7 @@ A switch can connect an input to a rail, but the open switch leaves no defined p
 :::
 
 ::: {.content-visible when-format="pdf"}
-![An unconnected GPIO input marked incorrect because it has no defined voltage.](../schematics/Floating_Input.pdf){width=92%}
+![An unconnected GPIO input marked incorrect because it has no defined voltage.](../schematics/bw/Floating_Input.pdf){width=92%}
 :::
 
 | Switch position | Electrical connection | Pin voltage | Logic state | Interpretation |
@@ -59,7 +59,7 @@ A pull-down resistor connects the input weakly to ground. The input reads 0 whil
 :::
 
 ::: {.content-visible when-format="pdf"}
-![A switch connects a GPIO input to VCC while an external resistor pulls the open input to ground.](../schematics/External_Pull_Down_Input.pdf){width=92%}
+![A switch connects a GPIO input to VCC while an external resistor pulls the open input to ground.](../schematics/bw/External_Pull_Down_Input.pdf){width=92%}
 :::
 
 | Switch | Electrical connection | Pin voltage | Logic | Meaning |
@@ -84,7 +84,7 @@ A pull-up resistor connects the input weakly to $V_{CC}$. The input reads 1 whil
 :::
 
 ::: {.content-visible when-format="pdf"}
-![A resistor pulls a GPIO input to VCC while a switch connects the input to ground when pressed.](../schematics/External_Pull_Up_Input.pdf){width=92%}
+![A resistor pulls a GPIO input to VCC while a switch connects the input to ground when pressed.](../schematics/bw/External_Pull_Up_Input.pdf){width=92%}
 :::
 
 | Switch | Electrical connection | Pin voltage | Logic | Meaning |
@@ -113,7 +113,7 @@ Many microcontrollers can connect a built-in resistor from an input pin to the d
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Equivalent circuit for a software-enabled pull-up resistor inside a microcontroller.](../schematics/Internal_Pull_Up_Input.pdf){width=92%}
+![Equivalent circuit for a software-enabled pull-up resistor inside a microcontroller.](../schematics/bw/Internal_Pull_Up_Input.pdf){width=92%}
 :::
 
 Example Arduino configuration:
@@ -140,7 +140,7 @@ Mechanical contacts can open and close several times during one physical press. 
 :::
 
 ::: {.content-visible when-format="pdf"}
-![An RC network filters rapid transitions from a switch before the GPIO input.](../schematics/RC_Debounce_Input.pdf){width=92%}
+![An RC network filters rapid transitions from a switch before the GPIO input.](../schematics/bw/RC_Debounce_Input.pdf){width=92%}
 :::
 
 $$\tau=RC$$
@@ -162,7 +162,7 @@ An input-protection network can limit fault current and clamp moderate transient
 :::
 
 ::: {.content-visible when-format="pdf"}
-![A digital input with a series resistor and upper and lower clamp diodes.](../schematics/Protected_Digital_Input.pdf){width=92%}
+![A digital input with a series resistor and upper and lower clamp diodes.](../schematics/bw/Protected_Digital_Input.pdf){width=92%}
 :::
 
 | Check | Question |
@@ -188,7 +188,7 @@ Complete the circuits strand before beginning the separate microcontroller stran
 :::
 
 ::: {.content-visible when-format="pdf"}
-![A pull-down switch drives one input of an AND gate while the other input is a separate logic signal.](../schematics/Switch_Logic_Gate_Input.pdf){width=92%}
+![A pull-down switch drives one input of an AND gate while the other input is a separate logic signal.](../schematics/bw/Switch_Logic_Gate_Input.pdf){width=92%}
 :::
 
 **Required evidence cycle:** Predict, calculate using GUESS, draw the schematic, simulate or verify, build or test, compare expected and observed results, diagnose one fault or limitation, then explain and reflect.

@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 5: Digital logic
+# Digital logic
 
 ```{=latex}
 \markright{L01 Logic gates}
@@ -17,7 +17,7 @@ Digital logic represents defined voltage ranges as logic states. A gate performs
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Large standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR logic gates.](../schematics/Logic_Gates_Reference.pdf){width=100%}
+![Large standard symbols for NOT, AND, OR, XOR, NAND, NOR, and XNOR logic gates.](../schematics/bw/Logic_Gates_Reference.pdf){width=100%}
 :::
 
 | Gate | Boolean form | Output is 1 when |

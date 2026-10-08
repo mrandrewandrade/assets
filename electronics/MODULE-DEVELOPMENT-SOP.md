@@ -155,12 +155,12 @@ The answer key must follow the same question order, variable names, circuit labe
 
 A useful six-question progression is:
 
-1. **Worked bridge problem** — connect a simple load calculation to a computer-system context.
-2. **Single-load variation** — change a value or component while keeping the mathematical structure familiar.
-3. **Parallel application** — combine branch quantities and total quantities.
-4. **Different authentic context** — transfer the same equations to a USB, automotive, fan, heater, lighting, or computer example.
-5. **Metric-prefix and equation-rearrangement problem** — require conversions before substitution.
-6. **Comprehensive synthesis** — solve voltage, current, resistance, power, totals, and equivalent resistance in one labelled circuit.
+1. **Textbook-supported worked example** — begin with a solved example from the assigned chapter and paraphrase it for the class handout.
+2. **Second solved example** — combine more quantities while students can still check the method against the textbook or problems manual.
+3. **Fully modelled GUESS problem** — provide the complete worked answer for the first independent variation.
+4. **Two-stage problem** — reduce part of the network, redraw it, and then solve the remaining unknown.
+5. **Constraint problem** — apply power, current, thermal, or component-rating limits.
+6. **Comprehensive synthesis** — make the final question the most difficult by combining totals, ratios, multiple branches, and independent checks.
 
 The sequence should increase independence and mathematical demand without changing every feature at once. Early questions reinforce the method; later questions combine representations, conversions, and circuit rules.
 
@@ -194,12 +194,16 @@ Give the final values with symbols, units, sensible metric prefixes, and correct
 
 Whenever students will handle or identify a component, use this progression:
 
-1. class setup or authentic system photograph;
-2. isolated component photograph or close-up;
-3. component name and functional role;
-4. schematic symbol and connection rule;
-5. clean schematic using that component;
-6. calculation or decision based on the schematic.
+1. show the complete working system first so students know its purpose;
+2. show the complete real component on the left and a clear cutaway or internal-current-path view on the right;
+3. show the same real component on the left and its schematic symbol on the right;
+4. name the component, identify its functional role, and explain what opens, closes, stores, measures, or converts energy;
+5. show a clean schematic using that component and state its connection rule;
+6. ask for a prediction, calculation, or decision based on the schematic.
+
+For the introductory electricity lesson, the complete system is a battery powering a lamp through conductors and a switch. Introduce the purpose of the system before isolating the battery, switch, lamp, ammeter, or voltmeter. A cutaway is required when it explains an internal path or mechanism. For a sealed instrument, use a simplified functional internal-path diagram rather than pretending to show inaccessible construction.
+
+The real/cutaway and real/symbol pairs must reuse the same photograph, labels, orientation, and component name. Do not crop away terminals, polarity marks, scale markings, or the moving contact. Keep the cutaway explanatory, not decorative.
 
 This helps students understand that the photograph and schematic are two representations of the same system rather than unrelated pictures.
 

@@ -1,0 +1,31 @@
+% Copier-safe black-and-white print overrides for Technology Commons handouts.
+% Load this after tej-preamble.tex and any document-specific branding file.
+\colorlet{TEJNavy}{black}
+\colorlet{TEJBlue}{black}
+\colorlet{TEJGold}{black}
+\colorlet{TEJRed}{black}
+\colorlet{TEJSlate}{black}
+\colorlet{TEJMist}{gray!10}
+
+\AtBeginDocument{\hypersetup{colorlinks=false,hidelinks,pdfborder={0 0 0}}}
+
+\renewtcolorbox{tejnote}[1][]{
+  enhanced,breakable,
+  colback=white,colframe=black,colbacktitle=gray!15,coltitle=black,
+  boxrule=0.8pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title=#1,fonttitle=\bfseries
+}
+\renewtcolorbox{tejwarning}[1][]{
+  enhanced,breakable,
+  colback=white,colframe=black,colbacktitle=gray!15,coltitle=black,
+  boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title=#1,fonttitle=\bfseries
+}
+\renewtcolorbox{tejteacher}[1][]{
+  enhanced,breakable,
+  colback=white,colframe=black,colbacktitle=gray!15,coltitle=black,
+  boxrule=0.8pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title=#1,fonttitle=\bfseries
+}
+
+\renewcommand{\answer}[1]{\textbf{#1}}

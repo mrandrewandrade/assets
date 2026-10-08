@@ -1,8 +1,8 @@
 ---
-title: "TEJ Basic Circuit Calculations"
-subtitle: "Student worksheet | GUESS, calculator discipline, Tinkercad, and evidence"
+title: "TEJ Parallel-Circuit Calculations"
+subtitle: "Student worksheet | GUESS, calculator discipline, and handwritten evidence"
 author: "Technology Commons"
-date: "2026-10-04"
+date: "2026-10-07"
 format:
   pdf:
     pdf-engine: xelatex
@@ -20,308 +20,138 @@ lang: en-CA
 
 **Student:** ______________________________  **Class:** __________  **Date:** __________
 
-Complete Questions 1 to 5. Questions 6 to 10 are optional Level 4 evidence. Use GUESS, carry units, show prefix conversions, record the exact calculator entry, keep unrounded intermediate values, and round only the final result. Complete the calculation before simulation.
+Solve all six questions by hand using GUESS. Show the general equation, rearrangement, substitution with units, full calculator value, and final rounded result. Keep unrounded values in the calculator until the last step. Submit clear front and back photographs of each solution.
 
-**Document role:** This worksheet owns calculations, predictions, schematics, and written reasoning. Complete the common evidence cycle where directed: predict, calculate using GUESS, draw, verify, compare, diagnose, and explain.
-
-::: {.callout-important title="Submission standard"}
-For every question, submit clear front and back photos of your handwritten work. The student version contains no answers.
+::: {.callout-important title="References you may use"}
+[Electronics Quick Reference](https://andrewandrade.ca/assets/TEJ-Electronics-Quick-Reference.pdf) · [Electronics Reference Handbook](https://andrewandrade.ca/assets/TEJ-Electronics-Reference-Handbook.pdf) · [Casio fx-991ES PLUS manual](https://www.casio.com/content/dam/casio/global/support/manuals/calculators/pdf/004-en/f/fx-570_991ES_PLUS_EN.pdf)
 :::
 
-![Two parallel loads connected across a DC source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){fig-cap="General parallel-circuit schematic used throughout this worksheet. A functional load may be represented by a labelled box." width=92%}
+# Parallel-circuit rules and earlier equations {.unnumbered}
+
+| Rule | Equation | What it means |
+|:--|:--|:--|
+| Branch voltage | $V_T=V_1=V_2=\cdots$ | Every branch is connected across the same two nodes. |
+| Current at a node | $I_T=I_1+I_2+\cdots$ | Current entering a node equals current leaving it. |
+| Equivalent resistance | $\frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$ | A parallel network has less resistance than its smallest branch. |
+| Two-resistor shortcut | $R_T=\frac{R_1R_2}{R_1+R_2}$ | Use only when exactly two resistors are being combined. |
+| Ohm's law | $V=IR$ | Rearrange before substituting. |
+| Electrical power | $P=VI=I^2R=\frac{V^2}{R}$ | Choose the form that uses the quantities you know. |
+| Total power | $P_T=P_1+P_2+\cdots=V_TI_T$ | Branch powers add. |
+
+![Three loads connected in parallel across one source.](../schematics/Circuit_Calculations_Parallel_Schematic.pdf){fig-cap="Use the same node labels, branch labels, and current directions in your handwritten schematic." width=82%}
+
+::: {.callout-note title="Casio fx-991ES PLUS habit"}
+Put the entire numerator and denominator in parentheses when needed. Use `Ans` for a dependent step so the calculator carries the full value. Write each calculator entry on its own line.
+:::
 
 \newpage
 
-# Question 1: Computer branch in parallel {.unnumbered}
+# Question 1: Two parallel branches {.unnumbered}
 
-**Required | Straightforward hand calculation using GUESS**<br>
-**Context:** A 12 V computer lighting branch and motherboard-equivalent load.
+A $15.0\ \mathrm{V}$ source is connected across $R_1=1.00\ \mathrm{k}\Omega$ and $R_2=600\ \Omega$ in parallel. Find $I_1$, $I_2$, and $I_T$.
 
-A $12.03\ \mathrm{V}$ supply powers a $4.7\ \Omega$ bulb, Load 1, and a $146\ \mathrm{W}$ computer load, Load 2, in parallel.
+**Use:** $V_T=V_1=V_2$; $I=V/R$; $I_T=I_1+I_2$.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.03 | V |
-| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
-| Computer power | $P_2$ | 146 | W |
-
-**Unknowns:** $V_2$ in volts, $R_2$ in ohms, and $P_T$ in watts. Find supporting values $I_1$ and $P_1$.
-
-**Precision:** Follow the precision of each given value. Report a sensible unit and prefix.<br>
-**Calculator:** Record the exact entry and use Ans for the unrounded bulb current and power.<br>
-**Tinkercad:** Not required for Question 1. Complete the hand calculation first.
-
-\workinglines{9}
-
-**Final-answer area:** ____________________________________________________
-
-| Front photo submission | Back photo submission |
-|:--|:--|
-| Attach a clear, upright photo of the complete front. | Attach the back, even if it is blank. |
-
-\newpage
-
-# Question 2: Recreate and verify in Tinkercad {.unnumbered}
-
-**Required | Tinkercad verification**<br>
-**Context:** Model the two computer loads from Question 1 with resistors.
-
-Use the full unrounded $R_2$ calculated in Question 1. Recreate the parallel circuit using a DC source and two resistors. Place the ammeter in series with the measured path and voltmeters in parallel.
-
-| Required record | Calculated | Simulated | Percent difference |
-|:--|--:|--:|--:|
-| $V_1$ | | | |
-| $V_2$ | | | |
-| $I_1$ | | | |
-| $I_2$ | | | |
-| $I_T$ | | | |
-
-**Unknowns:** Five simulated readings, percent difference for each non-zero value, one discrepancy explanation, and one simulation limitation.<br>
-**Precision:** Use unrounded calculations for comparison; report percent difference to two significant figures.<br>
-**Calculator:** $\%\text{ difference}=|\text{simulated}-\text{calculated}|/|\text{calculated}|\times100\%$.
-
-\workinglines{7}
-
-**Tinkercad screenshot or share link:** ____________________________________
-
-| Front photo submission | Back photo submission |
-|:--|:--|
-| Attach the hand calculations and comparison table. | Attach the back, even if it is blank. |
-
-\newpage
-
-# Question 3: Cooling fan {.unnumbered}
-
-**Required | Increasing complexity**<br>
-**Context:** A computer cooling fan is added to an existing system.
-
-A cooling fan has an equivalent resistance of $8.2\ \Omega$ and is connected to a $12.0\ \mathrm{V}$ supply. The existing computer uses $110\ \mathrm{W}$.
-
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.0 | V |
-| Fan resistance | $R_1$ | 8.2 | $\Omega$ |
-| Existing computer power | $P_2$ | 110 | W |
-
-**Unknowns:** Fan current $I_1$, fan power $P_1$, and total power $P_T$.<br>
-**Precision:** Use significant figures and report total power to the nearest watt.<br>
-**Calculator:** Use Ans to carry the unrounded current into the power calculation.<br>
-**Tinkercad:** Optional check after the hand solution.
-
-\workinglines{9}
-
-**Final-answer area:** ____________________________________________________
-
-| Front photo submission | Back photo submission |
-|:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
-
-\newpage
-
-# Question 4: Coloured case bulb and motherboard {.unnumbered}
-
-**Required | Multi-step parallel circuit**<br>
-**Context:** Two loads share a computer power-supply rail.
-
-A $12.03\ \mathrm{V}$ supply powers a coloured case bulb with $R_1=4.7\ \Omega$ and a motherboard-equivalent branch drawing $I_2=12.1\ \mathrm{A}$.
-
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.03 | V |
-| Bulb resistance | $R_1$ | 4.7 | $\Omega$ |
-| Motherboard current | $I_2$ | 12.1 | A |
-
-**Unknowns:** $I_1$, $R_2$, $P_1$, $P_2$, $I_T$, and $P_T$.<br>
-**Precision:** Apply multiplication/division and addition rules correctly.<br>
-**Calculator:** Preserve both branch values before calculating totals.<br>
-**Tinkercad:** Optional verification after the hand solution.
+**Source note:** Adapted from Grob's *Basic Electronics*, 12th edition, Chapter 5, Example 5-1.
 
 \workinglines{10}
 
-**Final-answer area:** ____________________________________________________
-
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
-# Question 5: Power and resistance are given {.unnumbered}
+# Question 2: Current, resistance, and power {.unnumbered}
 
-**Required | Metric-prefix transfer**<br>
-**Context:** A small sensor load in a household device.
+A $30.0\ \mathrm{V}$ source supplies three parallel resistors: $R_1=120\ \Omega$, $R_2=200\ \Omega$, and $R_3=300\ \Omega$. Find $I_1$, $I_2$, $I_3$, $I_T$, $R_T$, $P_1$, $P_2$, $P_3$, and $P_T$.
 
-A load uses $50\ \mathrm{mW}$ and has a resistance of $2.0\ \mathrm{k}\Omega$.
+**Use:** $I=V/R$; $I_T=I_1+I_2+I_3$; $R_T=V_T/I_T$; $P=VI$; $P_T=P_1+P_2+P_3$.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Load power | $P_1$ | 50 | mW |
-| Load resistance | $R_1$ | 2.0 | $\mathrm{k}\Omega$ |
+**Source note:** Adapted from the Chapter 5 solved problems in the *Problems Manual for Use with Grob's Basic Electronics*.
 
-**Unknowns:** $V_1$ in volts and $I_1$ in milliamperes.<br>
-**Precision:** Give both final answers to two significant figures.<br>
-**Metric prefixes:** Show both conversions before substituting.<br>
-**Calculator:** Record the square-root entry exactly and use Ans for current.<br>
-**Tinkercad:** Optional verification after the hand solution.
-
-\workinglines{9}
-
-**Final-answer area:** ____________________________________________________
+\workinglines{12}
 
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
-# Question 6: USB heater {.unnumbered}
+# Question 3: Find an unknown branch resistance {.unnumbered}
 
-**Optional Level 4 | Transfer and justification**<br>
-**Context:** A portable USB hand warmer is added to a computer system.
+An unknown resistor $R_X$ is connected in parallel with a $12.0\ \mathrm{k}\Omega$ resistor. Their equivalent resistance must be $8.00\ \mathrm{k}\Omega$. Find $R_X$.
 
-A USB heater draws $1.5\ \mathrm{A}$ from a $5.0\ \mathrm{V}$ supply. The computer already uses $95\ \mathrm{W}$.
+**Use:** $\frac{1}{R_T}=\frac{1}{R_X}+\frac{1}{R_1}$ or the two-resistor shortcut. Rearrange before substituting.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Heater voltage | $V_1$ | 5.0 | V |
-| Heater current | $I_1$ | 1.5 | A |
-| Existing power | $P_2$ | 95 | W |
+**Source note:** Adapted from the Chapter 5 word problems in the *Problems Manual for Use with Grob's Basic Electronics*.
 
-**Unknowns:** $P_1$, $R_1$, and $P_T$. Explain whether a USB port rated for $0.90\ \mathrm{A}$ could supply this heater.<br>
-**Precision:** Apply two significant figures to branch results and the addition rule to total power.<br>
-**Calculator:** Keep full branch power for the total.<br>
-**Tinkercad:** Optional current-limit investigation.
-
-\workinglines{9}
-
-**Final-answer area:** ____________________________________________________
+\workinglines{12}
 
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
-# Question 7: Two parallel loads {.unnumbered}
+# Question 4: Reduce, then solve {.unnumbered}
 
-**Optional Level 4 | Full network evidence**<br>
-**Context:** A dashboard sensor and indicator share one supply.
+A $12.0\ \mathrm{k}\Omega$ resistor and a $4.00\ \mathrm{k}\Omega$ resistor are already connected in parallel. A third resistor $R_X$ will be added in parallel so that the complete network has $R_T=2.00\ \mathrm{k}\Omega$. Find $R_X$.
 
-Two loads are connected in parallel across a $12.0\ \mathrm{V}$ supply. Load 1 has $R_1=4.70\ \mathrm{k}\Omega$, and Load 2 draws $I_2=2.40\ \mathrm{mA}$.
+**Use:** First combine $12.0\ \mathrm{k}\Omega$ and $4.00\ \mathrm{k}\Omega$. Then treat that result and $R_X$ as a new two-branch parallel network.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.0 | V |
-| Load 1 resistance | $R_1$ | 4.70 | $\mathrm{k}\Omega$ |
-| Load 2 current | $I_2$ | 2.40 | mA |
+**Source note:** Adapted from the Chapter 5 word problems in the *Problems Manual for Use with Grob's Basic Electronics*.
 
-**Unknowns:** $V_1$, $V_2$, $I_1$, $R_2$, $P_1$, $P_2$, $I_T$, $P_T$, and $R_{\mathrm{eq}}$.<br>
-**Precision:** Give every final answer to three significant figures with sensible prefixes.<br>
-**Calculator:** Store or reuse unrounded branch values.<br>
-**Tinkercad:** Required for Level 4 evidence; include the comparison table used in Question 2.
-
-\workinglines{10}
-
-**Final-answer area:** ____________________________________________________
+\workinglines{13}
 
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
-# Question 8: Choose circuit protection {.unnumbered}
+# Question 5: Respect the component power ratings {.unnumbered}
 
-**Optional Level 4 | Design and justification**<br>
-**Context:** A vehicle accessory branch powers a $27\ \mathrm{W}$ lamp and an $18\ \mathrm{W}$ USB converter from $12.0\ \mathrm{V}$.
+A $1.00\ \mathrm{k}\Omega$, $0.500\ \mathrm{W}$ resistor is connected in parallel with a $100\ \Omega$, $1.00\ \mathrm{W}$ resistor. Find the largest safe source voltage for the network. At that voltage, find each branch current, total current, and total power. Identify which resistor sets the voltage limit.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 12.0 | V |
-| Lamp power | $P_1$ | 27 | W |
-| Converter power | $P_2$ | 18 | W |
-| Wire allowable current | $I_{\mathrm{wire,max}}$ | 7.5 | A |
-| Available fuse ratings | - | 2, 3, 5, 7.5, 10 | A |
+**Use:** $V_{\max}=\sqrt{P_{\max}R}$ for each branch; choose the lower safe voltage. Then use $I=V/R$, $I_T=I_1+I_2$, and $P_T=VI_T$.
 
-**Unknowns:** $I_1$, $I_2$, $I_T$, and the best listed fuse. Justify how the fuse protects the conductor while allowing normal operation.<br>
-**Precision:** Report currents to two significant figures.<br>
-**Calculator:** Use unrounded branch currents for $I_T$.<br>
-**Tinkercad:** Required; use a current-limited source and do not model a destructive short.
+**Source note:** Adapted from the Chapter 5 word problems in the *Problems Manual for Use with Grob's Basic Electronics*.
 
-\workinglines{10}
-
-**Final-answer area:** ____________________________________________________
+\workinglines{14}
 
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
-# Question 9: Diagnose an open branch {.unnumbered}
+# Question 6: Total power and resistance ratios {.unnumbered}
 
-**Optional Level 4 | Troubleshooting**<br>
-**Context:** Two indicator branches, $R_1=1.00\ \mathrm{k}\Omega$ and $R_2=2.20\ \mathrm{k}\Omega$, operate in parallel from $9.00\ \mathrm{V}$.
+Three resistors are connected in parallel across $120\ \mathrm{V}$ and use $288\ \mathrm{W}$ in total. Their values satisfy $R_2=3R_1$ and $R_2=2R_3$. Find $I_T$, $R_T$, $R_1$, $R_2$, $R_3$, every branch current, and every branch power. Verify both current and power totals.
 
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 9.00 | V |
-| Branch 1 resistance | $R_1$ | 1.00 | $\mathrm{k}\Omega$ |
-| Branch 2 resistance | $R_2$ | 2.20 | $\mathrm{k}\Omega$ |
-| Fault symptom | - | Branch 2 off; Branch 1 normal | - |
+**Use:** $I_T=P_T/V_T$; $R_T=V_T/I_T$; substitute the resistance ratios into the reciprocal-resistance equation; then use $I=V/R$ and $P=VI$.
 
-**Unknowns:** Normal $I_1$, $I_2$, and $I_T$; predicted readings if Branch 2 is open; a safe measurement sequence; and one observation that would rule out a supply failure.<br>
-**Precision:** Three significant figures.<br>
-**Calculator:** Use full branch values for the total.<br>
-**Tinkercad:** Required. Simulate the open only after recording normal readings.
+**Source note:** Adapted from the Chapter 5 word problems in the *Problems Manual for Use with Grob's Basic Electronics*.
 
-\workinglines{10}
-
-**Final-answer area:** ____________________________________________________
+\workinglines{12}
 
 | Front photo submission | Back photo submission |
 |:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
-
-\newpage
-
-# Question 10: Bicycle lighting transfer {.unnumbered}
-
-**Optional Level 4 | Transfer and reflection**<br>
-**Context:** A $6.0\ \mathrm{V}$ bicycle dynamo powers a $3.0\ \mathrm{W}$ headlamp and a $0.60\ \mathrm{W}$ tail lamp in parallel for $2.0\ \mathrm{h}$.
-
-| Given quantity | Symbol | Value | Unit |
-|:--|:--:|--:|:--:|
-| Supply voltage | $V_S$ | 6.0 | V |
-| Headlamp power | $P_1$ | 3.0 | W |
-| Tail-lamp power | $P_2$ | 0.60 | W |
-| Operating time | $t$ | 2.0 | h |
-
-**Unknowns:** $I_1$, $I_2$, $I_T$, $R_{\mathrm{eq}}$, and total energy in watt-hours. Explain why parallel connection is useful if one lamp opens.<br>
-**Precision:** Two significant figures with sensible prefixes.<br>
-**Calculator:** Use unrounded current for $R_{\mathrm{eq}}$.<br>
-**Tinkercad:** Optional; state one reason the simulation cannot reproduce every real dynamo effect.
-
-\workinglines{10}
-
-**Final-answer area:** ____________________________________________________
-
-| Front photo submission | Back photo submission |
-|:--|:--|
-| Attach the complete front. | Attach the back, even if it is blank. |
+| Insert a clear, upright photograph of the complete front. | Insert the back, even if it is blank. |
 
 \newpage
 
 # Submission check {.unnumbered}
 
-- [ ] Questions 1 to 5 are complete.
-- [ ] Each solution uses GUESS and includes units.
-- [ ] Metric-prefix conversions are shown.
-- [ ] Exact calculator entries and unrounded values are recorded.
-- [ ] Tinkercad evidence is included where required.
-- [ ] Front and back photos are readable and upright.
-- [ ] No classroom circuit exceeded the stated safe low-voltage limits.
+- [ ] All six questions use GUESS.
+- [ ] Every circuit has a labelled hand-drawn schematic.
+- [ ] General equations appear before rearrangement and substitution.
+- [ ] Each calculator entry is on its own line.
+- [ ] Full calculator values are shown before rounding.
+- [ ] Final values use correct symbols, metric prefixes, units, and significant figures.
+- [ ] Front and back photographs are upright and readable.
 
-{{< include ../includes/common-assessment-rubric.qmd >}}
+**Question sources:** Mitchel E. Schultz, *Grob's Basic Electronics*, 12th edition, Chapter 5, and the accompanying *Problems Manual*. Problems are paraphrased and organized into a new instructional progression.
 
-CC BY-SA 4.0. Created by Andrew Andrade and contributors. Original source: <https://andrewandrade.ca> and <https://github.com/mrandrewandrade>. Sharing is caring.
+CC BY-SA 4.0 · Created by Andrew Andrade · andrewandrade.ca · Source: github.com/mrandrewandrade

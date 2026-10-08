@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 4: Components and semiconductor circuits
+# Components and semiconductor circuits
 
 ```{=latex}
 \markright{H14 Conductors and protection}
@@ -175,7 +175,7 @@ A small control signal can switch a larger load current through a BJT, MOSFET, o
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Reference circuits including an NPN low-side driver with a flyback diode.](../schematics/Common_Reference_Circuits.pdf){width=100%}
+![Reference circuits including an NPN low-side driver with a flyback diode.](../schematics/bw/Common_Reference_Circuits.pdf){width=100%}
 :::
 
 $$R_B=\frac{V_{\mathrm{drive}}-V_{BE}}{I_B} \qquad I_B\geq\frac{I_C}{\beta_{\mathrm{forced}}}$$

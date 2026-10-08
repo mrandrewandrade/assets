@@ -1,23 +1,25 @@
 ---
-title: "TEJ Electronics Reference Handbook"
-subtitle: "Circuits, digital inputs, control systems, and measurement"
+title: "TEJ Electronics Course Book"
+subtitle: "A chaptered guide to circuits, components, digital logic, inputs, control systems, and measurement"
 author: "Technology Commons"
-date: "2026-10-04"
+date: "2026-10-07"
 license: "CC BY-SA 4.0"
 format:
   pdf:
     pdf-engine: xelatex
-    documentclass: scrartcl
-    classoption: [10pt]
+    documentclass: scrbook
+    classoption: [11pt,oneside,openany]
     include-in-header:
       - ../styles/tej-preamble.tex
       - ../styles/tej-reference-branding.tex
+      - ../styles/tej-print-bw.tex
     mainfont: "Liberation Sans"
     monofont: "Liberation Mono"
     geometry: [margin=0.7in]
     toc: true
     toc-depth: 2
-    number-sections: false
+    number-sections: true
+    top-level-division: chapter
   html:
     css: ../styles/tej-html.css
     toc: true
@@ -30,9 +32,11 @@ execute: {enabled: false}
 lang: en-CA
 ---
 
-# How to use this handbook
+# How to use this book {.unnumbered}
 
-The handbook follows the curriculum sequence. Each chapter explains the idea, shows the relevant circuit or block diagram, identifies formulas and units, and gives a short GUESS example or engineering check. Use the separate two-page quick reference during assignments and tests.
+This is the main TEJ electronics book. It follows the curriculum sequence so students can move from basic measurements to circuits, components, digital logic, microcontroller inputs, and control systems.
+
+Each chapter uses the same pattern: a simple idea, a familiar example, a schematic or block diagram, the parts of the system, the equations and units, a short GUESS example, and a check using measurement or simulation. The separate quick reference is a short printable extract for assignments and tests.
 
 The diagrams show concepts and classroom-scale circuits. Confirm actual component data, logic voltage, current limits, pinout, polarity, and safety requirements before building.
 

@@ -1,200 +1,267 @@
 ---
-title: "TEJ Electronics Quick Reference"
 format:
   pdf:
     pdf-engine: xelatex
     documentclass: scrartcl
-    classoption: [9pt]
+    classoption: [12pt]
     include-in-header:
       - ../styles/tej-preamble.tex
       - ../styles/tej-quick-reference-branding.tex
+      - ../styles/tej-print-bw.tex
     mainfont: "Liberation Sans"
     monofont: "Liberation Mono"
-    geometry: [margin=0.45in]
+    geometry: [margin=0.55in]
     toc: false
 execute: {enabled: false}
 lang: en-CA
 ---
 
 ```{=latex}
-\begin{multicols}{2}
-```
-
-# SI prefixes {.unnumbered}
-
-```{=latex}
-\begin{center}\small
-\begin{tabular}{lcc}
-\toprule
-Prefix & Symbol & Multiplier\\
-\midrule
-giga & G & $10^9$\\
-mega & M & $10^6$\\
-kilo & k & $10^3$\\
-base & -- & $10^0$\\
-milli & m & $10^{-3}$\\
-micro & $\mu$ & $10^{-6}$\\
-nano & n & $10^{-9}$\\
-pico & p & $10^{-12}$\\
-\bottomrule
-\end{tabular}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\renewcommand{\arraystretch}{1.15}
+\RedeclareSectionCommand[beforeskip=7pt,afterskip=3pt]{section}
+\begin{center}
+{\Large\bfseries\color{TEJNavy} TEJ Electronics Quick Reference}\\[2pt]
+{\normalsize Foundations, calculations, series circuits, and parallel circuits}
 \end{center}
 ```
 
-# Engineering notation and significant figures {.unnumbered}
-
-For a nonzero value, write $a\times10^{3n}$ with $1\leq |a|<1000$. The exponent is a multiple of three and matches an SI prefix. Write zero as $0$.
+# What the letters mean {.unnumbered}
 
 ```{=latex}
-\begin{center}\scriptsize
-\begin{tabular}{@{}lll@{}}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c l l Y}
 \toprule
-Value & Engineering form & Prefix form\\
+\rowcolor{TEJMist}
+Quantity & Letter & Unit & Unit symbol & Simple meaning\\
 \midrule
-$0.000\,047\ \mathrm{A}$ & $47\times10^{-6}\ \mathrm{A}$ & $47\ \mu\mathrm{A}$\\
-$4700\ \Omega$ & $4.7\times10^3\ \Omega$ & $4.7\ \mathrm{k}\Omega$\\
-$2\,200\,000\ \mathrm{Hz}$ & $2.2\times10^6\ \mathrm{Hz}$ & $2.2\ \mathrm{MHz}$\\
+Current & $I$ & ampere & A & How much electric charge is moving.\\
+Voltage & $V$ & volt & V & The electrical push across two points.\\
+Resistance & $R$ & ohm & $\Omega$ & How strongly a part limits current.\\
+Power & $P$ & watt & W & How quickly electrical energy is used.\\
+Energy & $E$ & joule & J & The total amount of energy used.\\
+Charge & $Q$ & coulomb & C & The amount of electric charge.\\
+Time & $t$ & second & s & How long something happens.\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
+\end{center}
+
+\textbf{Why is current written as $I$?} $I$ means current. It comes from the older phrase \textit{current intensity}.
+```
+
+# Subscripts: the small letters and numbers {.unnumbered}
+
+```{=latex}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l Y}
+\toprule
+\rowcolor{TEJMist}
+Example & Read it as & Meaning\\
+\midrule
+$I_T$ & total current & Current for the whole circuit.\\
+$I_1$ & current one & Current through part or branch 1.\\
+$I_2$ & current two & Current through part or branch 2.\\
+$V_S$ & source voltage & Voltage supplied by the source.\\
+$V_{\mathrm{out}}$ & output voltage & Voltage measured at the output.\\
+\bottomrule
+\end{tabularx}
 \end{center}
 ```
 
-Multiply or divide using the fewest significant figures. Add or subtract to the least precise decimal place. Keep calculator digits until the final result and include units.
-
-# GUESS {.unnumbered}
+# Significant figures {.unnumbered}
 
 ```{=latex}
-\begin{center}\small
-\begin{tabular}{cl}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}p{0.29\textwidth} Y}
 \toprule
-Letter & Action\\
+\rowcolor{TEJMist}
+Situation & What to do\\
 \midrule
-\textbf{G} & list given symbols, values, units\\
-\textbf{U} & name the unknown and target unit\\
-\textbf{E} & write and rearrange the equation\\
-\textbf{S} & substitute values with units\\
-\textbf{S} & solve, round, and state the answer\\
+Multiply or divide & Use the fewest significant figures in the question.\\
+Add or subtract & Use the fewest decimal places in the question.\\
+During the calculation & Keep the full calculator value.\\
+Final answer & Round once. Include the unit.\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 ```
 
-# Ohm's law, power, and energy {.unnumbered}
-
-![](../schematics/Ohms_Law_Triangle.pdf){width=43%}
-
-$$P=VI=I^2R=\frac{V^2}{R}$$
-
-$$E=Pt \qquad Q=It$$
-
-Check component voltage, current, and power ratings.
-
-# Series rules {.unnumbered}
-
-$$I_T=I_1=I_2=\cdots$$
-
-$$V_T=V_1+V_2+\cdots \qquad R_T=R_1+R_2+\cdots$$
-
-![](../schematics/Series_Rule_Reference.pdf){width=58%}
-
-# Parallel rules {.unnumbered}
-
-$$V_T=V_1=V_2=\cdots$$
-
-$$I_T=I_1+I_2+\cdots \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$$
-
-For two resistors, $R_T=R_1R_2/(R_1+R_2)$.
-
-![](../schematics/Parallel_Rule_Reference.pdf){width=58%}
+# GUESS method {.unnumbered}
 
 ```{=latex}
-\end{multicols}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries\large}c l Y}
+\toprule
+\rowcolor{TEJMist}
+Letter & Step & What to write\\
+\midrule
+G & Given & List the known symbols, values, and units in a table.\\
+U & Unknown & List what you need to find and its unit.\\
+E & Equation & Write the general equation, then rearrange it.\\
+S & Substitute & Put the numbers and units into the equation.\\
+S & Solve & Calculate, round once, include the unit, and write an answer sentence.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+```
+
+```{=latex}
 \newpage
-\begin{multicols}{2}
-```
-
-# Kirchhoff's laws {.unnumbered}
-
-![](../schematics/Kirchhoff_Node_Loop_Reference.pdf){width=92%}
-
-# Divider and timing relationships {.unnumbered}
-
-$$V_{\mathrm{out}}=V_{\mathrm{in}}\frac{R_2}{R_1+R_2}$$
-
-$$\tau=RC$$
-
-Loading changes the effective divider resistance. One time constant reaches about $63.2\%$ of the final RC step change.
-
-# LED current limiting {.unnumbered}
-
-$$R=\frac{V_S-V_F}{I_{\mathrm{LED}}}$$
-
-$$P_R=I_{\mathrm{LED}}^2R$$
-
-Confirm LED polarity, current, resistor power, and supply limits.
-
-# Transistor switching {.unnumbered}
-
-For an NPN low-side switch:
-
-$$R_B=\frac{V_{\mathrm{drive}}-V_{BE}}{I_B} \qquad I_B\geq\frac{I_C}{\beta_{\mathrm{forced}}}$$
-
-Use a flyback diode across an inductive load. Check device pinout, voltage, current, and power.
-
-# Basic digital logic {.unnumbered}
-
-```{=latex}
-\begin{center}\small
-\begin{tabular}{cl}
-\toprule
-Notation & Meaning\\
-\midrule
-$\overline{A}$ & NOT A\\
-$AB$ & A AND B\\
-$A+B$ & A OR B\\
-$A\oplus B$ & A XOR B\\
-\bottomrule
-\end{tabular}
+\begin{center}
+{\Large\bfseries\color{TEJNavy} Circuit Calculations}\par
+{\normalsize Ohm's law, power, series circuits, and parallel circuits}
 \end{center}
-```
 
-For $n$ inputs, a complete truth table has $2^n$ rows. Count from all zeros to all ones in binary.
+\begin{minipage}[t]{0.48\textwidth}
+\section*{Ohm's law}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}
+Find & Formula & Units\\
+\midrule
+Voltage & $V=I\times R$ & volts (V)\\
+Current & $\displaystyle I=\frac{V}{R}$ & amperes (A)\\
+Resistance & $\displaystyle R=\frac{V}{I}$ & ohms ($\Omega$)\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\section*{Power and energy}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}
+Use when you know & Formula & Unit\\
+\midrule
+Voltage and current & $P=V\times I$ & W\\
+Current and resistance & $P=I^2\times R$ & W\\
+Voltage and resistance & $\displaystyle P=\frac{V^2}{R}$ & W\\
+Power and time & $E=P\times t$ & J\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{minipage}
 
-# Stable switch inputs {.unnumbered}
+\textbf{Pick the equation that matches what you know.} Use $V$ for voltage, $I$ for current, $R$ for resistance, and $P$ for power.
 
-```{=latex}
+\section*{Series circuits}
+\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+\centering\Large\bfseries\color{TEJNavy} ONE PATH. SAME CURRENT THROUGH EVERY PART.
+\end{tcolorbox}
+
+\begin{minipage}[c]{0.43\textwidth}
+\centering
+\includegraphics[width=\linewidth]{../schematics/bw/Series_Rule_Reference.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.54\textwidth}
+\begin{tabularx}{\linewidth}{l >{\centering\arraybackslash}Y}
+\toprule
+\rowcolor{TEJMist}
+Quantity & Rule\\
+\midrule
+Current & $I_T=I_1=I_2=\cdots$\\
+Voltage & $V_T=V_1+V_2+\cdots$\\
+Resistance & $R_T=R_1+R_2+\cdots$\\
+Power & $P_T=P_1+P_2+\cdots$\\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\textbf{Remember:} Same current everywhere. Add voltage drops, resistances, and load powers.
+
+\section*{Parallel circuits}
+\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+\centering\Large\bfseries\color{TEJNavy} MORE THAN ONE PATH. SAME VOLTAGE ACROSS EVERY BRANCH.
+\end{tcolorbox}
+
+\begin{minipage}[c]{0.43\textwidth}
+\centering
+\includegraphics[width=\linewidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.54\textwidth}
+\begin{tabularx}{\linewidth}{l >{\centering\arraybackslash}Y}
+\toprule
+\rowcolor{TEJMist}
+Quantity & Rule\\
+\midrule
+Voltage & $V_T=V_1=V_2=\cdots$\\
+Current & $I_T=I_1+I_2+\cdots$\\
+Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$\\
+Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$\\
+Power & $P_T=P_1+P_2+\cdots$\\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\textbf{Remember:} Same voltage on each branch. Add branch currents and powers. $R_T$ is smaller than the smallest branch resistance.
+
+\newpage
+\begin{center}
+{\Large\bfseries\color{TEJNavy} SI Prefix Table}\par
+{\normalsize Use the prefix to replace a power of ten}
+\end{center}
+
+\begin{tejnote}[Capital letters matter]
+$M$ means mega, but $m$ means milli. On the calculator, $1.0\mathrm{E}6$ means $1.0\times10^6$.
+\end{tejnote}
+
+\section*{Engineering notation examples}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l Y}
+\toprule
+\rowcolor{TEJMist}
+Original value & Engineering form & Prefix form & What changed\\
+\midrule
+$0.000\,047\ \mathrm{A}$ & $47\times10^{-6}\ \mathrm{A}$ & $47\ \mu\mathrm{A}$ & $10^{-6}$ became micro.\\
+$4700\ \Omega$ & $4.7\times10^3\ \Omega$ & $4.7\ \mathrm{k}\Omega$ & $10^3$ became kilo.\\
+$2\,200\,000\ \mathrm{Hz}$ & $2.2\times10^6\ \mathrm{Hz}$ & $2.2\ \mathrm{MHz}$ & $10^6$ became mega.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
 \begin{center}\footnotesize
-\begin{tabular}{llll}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{l c c >{\raggedleft\arraybackslash}X c}
 \toprule
-Input circuit & Switch open & Switch closed & Meaning\\
+\rowcolor{TEJNavy!12}
+\textbf{Prefix} & \textbf{Symbol} & \textbf{Power} & \textbf{Decimal multiplier} & \textbf{Calculator}\\
 \midrule
-pull-down & 0 & 1 to $V_{CC}$ & active-high\\
-pull-up & 1 & 0 to ground & active-low\\
+quetta & Q & $10^{30}$ & 1,000,000,000,000,000,000,000,000,000,000 & 1E30\\
+ronna & R & $10^{27}$ & 1,000,000,000,000,000,000,000,000,000 & 1E27\\
+yotta & Y & $10^{24}$ & 1,000,000,000,000,000,000,000,000 & 1E24\\
+zetta & Z & $10^{21}$ & 1,000,000,000,000,000,000,000 & 1E21\\
+exa & E & $10^{18}$ & 1,000,000,000,000,000,000 & 1E18\\
+peta & P & $10^{15}$ & 1,000,000,000,000,000 & 1E15\\
+tera & T & $10^{12}$ & 1,000,000,000,000 & 1E12\\
+\rowcolor{TEJMist} giga & G & $10^9$ & 1,000,000,000 & 1E9\\
+\rowcolor{TEJMist} mega & M & $10^6$ & 1,000,000 & 1E6\\
+\rowcolor{TEJMist} kilo & k & $10^3$ & 1,000 & 1E3\\
+hecto & h & $10^2$ & 100 & 1E2\\
+deca & da & $10^1$ & 10 & 1E1\\
+\rowcolor{TEJMist} no prefix & none & $10^0$ & 1 & 1E0\\
+deci & d & $10^{-1}$ & 0.1 & 1E-1\\
+centi & c & $10^{-2}$ & 0.01 & 1E-2\\
+\rowcolor{TEJMist} milli & m & $10^{-3}$ & 0.001 & 1E-3\\
+\rowcolor{TEJMist} micro & $\mu$ & $10^{-6}$ & 0.000001 & 1E-6\\
+\rowcolor{TEJMist} nano & n & $10^{-9}$ & 0.000000001 & 1E-9\\
+\rowcolor{TEJMist} pico & p & $10^{-12}$ & 0.000000000001 & 1E-12\\
+femto & f & $10^{-15}$ & 0.000000000000001 & 1E-15\\
+atto & a & $10^{-18}$ & 0.000000000000000001 & 1E-18\\
+zepto & z & $10^{-21}$ & 0.000000000000000000001 & 1E-21\\
+yocto & y & $10^{-24}$ & 0.000000000000000000000001 & 1E-24\\
+ronto & r & $10^{-27}$ & 0.000000000000000000000000001 & 1E-27\\
+quecto & q & $10^{-30}$ & 0.000000000000000000000000000001 & 1E-30\\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
-```
 
-A switch-to-ground input normally uses a pull-up and is active-low. Never leave a CMOS input floating. Confirm the GPIO voltage; do not assume 5 V tolerance.
-
-# Measurement placement {.unnumbered}
-
-```{=latex}
-\begin{center}\footnotesize
-\begin{tabular}{lll}
-\toprule
-Instrument & Placement & Power state\\
-\midrule
-voltmeter & parallel & on\\
-ammeter & series & on after setup check\\
-ohmmeter & isolated part & off and discharged\\
-\bottomrule
-\end{tabular}
-\end{center}
-```
-
-Never place a current-configured meter directly across a source. Return the red lead from the current jack after measuring.
-
-```{=latex}
-\end{multicols}
+\begin{tejnote}[Prefixes most often used in this course]
+Focus first on giga, mega, kilo, no prefix, milli, micro, nano, and pico. The complete table is here when you need another prefix.
+\end{tejnote}
 ```

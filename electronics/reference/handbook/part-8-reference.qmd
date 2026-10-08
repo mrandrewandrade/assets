@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 8: Calculator procedures and measurement reference
+# Calculator procedures and measurement reference
 
 ```{=latex}
 \markright{R01 Casio fx-991ES PLUS C}

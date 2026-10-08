@@ -2,7 +2,7 @@
 \newpage
 ```
 
-# Part 2: DC circuit foundations
+# DC circuit foundations
 
 ```{=latex}
 \markright{H07 Ohm's law}
@@ -17,7 +17,7 @@ Ohm's law describes the relationship among voltage, current, and resistance for 
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Ohm's law triangle with voltage above current and resistance.](../schematics/Ohms_Law_Triangle.pdf){width=48%}
+![Ohm's law triangle with voltage above current and resistance.](../schematics/bw/Ohms_Law_Triangle.pdf){width=48%}
 :::
 
 | Symbol | Meaning | Unit |
@@ -47,7 +47,7 @@ Ohm's law describes the relationship among voltage, current, and resistance for 
 **Application and links:** LED resistors, sensors, lamps, heaters, and conductors. [Ohm's law notes](https://andrewandrade.ca/tech-edu-resources/tej3-4/02-basic-electronics/03-ohms-law.html).
 
 ```{=latex}
-\newpage\markright{H08 Power and energy}
+\markright{H08 Power and energy}
 ```
 
 ## H08 Power and energy
@@ -81,7 +81,7 @@ Series components form one current path. The same current passes through every s
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Series circuit with one path and the same current through both resistors.](../schematics/Series_Rule_Reference.pdf){width=68%}
+![Series circuit with one path and the same current through both resistors.](../schematics/bw/Series_Rule_Reference.pdf){width=68%}
 :::
 
 $$I_T=I_1=I_2 \qquad V_T=V_1+V_2 \qquad R_T=R_1+R_2$$
@@ -105,7 +105,7 @@ Parallel branches connect to the same two nodes, so every branch has the same vo
 :::
 
 ::: {.content-visible when-format="pdf"}
-![Parallel circuit with separate branches and the same voltage across both resistors.](../schematics/Parallel_Rule_Reference.pdf){width=68%}
+![Parallel circuit with separate branches and the same voltage across both resistors.](../schematics/bw/Parallel_Rule_Reference.pdf){width=68%}
 :::
 
 $$V_T=V_1=V_2 \qquad I_T=I_1+I_2 \qquad \frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}$$
