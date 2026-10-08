@@ -23,7 +23,7 @@ lang: en-CA
 \RedeclareSectionCommand[beforeskip=7pt,afterskip=3pt]{section}
 \begin{center}
 {\Large\bfseries\color{TEJNavy} TEJ Electronics Quick Reference}\\[2pt]
-{\normalsize Foundations, calculations, series circuits, and parallel circuits}
+{\normalsize Foundations, calculations, parallel circuits, and series circuits}
 \end{center}
 ```
 
@@ -88,11 +88,11 @@ S & Solve & Calculate, round once, include the unit, and write an answer sentenc
 ```
 
 ```{=latex}
-\newpage
+\clearpage
 \thispagestyle{fancy}
 \begin{center}
 {\Large\bfseries\color{TEJNavy} Circuit Calculations}\par
-{\normalsize Ohm's law, power, series circuits, and parallel circuits}
+{\normalsize Ohm's law, power, parallel circuits, and series circuits}
 \end{center}
 
 \begin{minipage}[t]{0.48\textwidth}
@@ -152,59 +152,8 @@ Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or bra
 
 \textbf{Keep subscripts together:} If you are calculating part 1, use the values marked with subscript 1.
 
-\newpage
+\clearpage
 \thispagestyle{fancy}
-\begin{center}
-\begin{tabular}{c}
-{\Large\bfseries\color{TEJNavy} Series Circuits}\\[3pt]
-{\normalsize One path through every component}
-\end{tabular}
-\end{center}
-
-\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
-\centering\Large\bfseries\color{TEJNavy} ONE PATH. SAME CURRENT THROUGH EVERY PART.
-\end{tcolorbox}
-
-\begin{center}
-\centering
-\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
-\end{center}
-
-\section*{How the subscripts change the meaning}
-\begin{center}
-\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
-\toprule
-\rowcolor{TEJMist}
-Subscript & Examples & Meaning\\
-\midrule
-None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular part.\\
-$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
-$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered component or location.\\
-$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\textbf{In a series circuit:} $I_1$ and $I_2$ are the currents through components 1 and 2. $V_1$ and $V_2$ are the voltage drops across those components.
-
-\section*{Series rules}
-\begin{center}
-\begin{tabularx}{\textwidth}{l c Y}
-\toprule
-\rowcolor{TEJMist}
-Quantity & Rule & Meaning\\
-\midrule
-Current & $I_T=I_1=I_2=\cdots$ & Current is the same through every part.\\
-Voltage & $V_T=V_1+V_2+\cdots$ & Add the voltage drops.\\
-Resistance & $R_T=R_1+R_2+\cdots$ & Add the component resistances.\\
-Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\newpage
-\thispagestyle{fancy}
-\vspace*{0.32in}
 \begin{center}
 \begin{tabular}{c}
 {\Large\bfseries\color{TEJNavy} Parallel Circuits}\\[3pt]
@@ -256,7 +205,58 @@ Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
 
 \textbf{Quick check:} $R_T$ is smaller than the smallest branch resistance.
 
-\newpage
+\clearpage
+\thispagestyle{fancy}
+\vspace*{0.32in}
+\begin{center}
+\begin{tabular}{c}
+{\Large\bfseries\color{TEJNavy} Series Circuits}\\[3pt]
+{\normalsize One path through every component}
+\end{tabular}
+\end{center}
+
+\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+\centering\Large\bfseries\color{TEJNavy} ONE PATH. SAME CURRENT THROUGH EVERY PART.
+\end{tcolorbox}
+
+\begin{center}
+\centering
+\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
+\end{center}
+
+\section*{How the subscripts change the meaning}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
+\toprule
+\rowcolor{TEJMist}
+Subscript & Examples & Meaning\\
+\midrule
+None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular part.\\
+$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
+$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered component or location.\\
+$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{In a series circuit:} $I_1$ and $I_2$ are the currents through components 1 and 2. $V_1$ and $V_2$ are the voltage drops across those components.
+
+\section*{Series rules}
+\begin{center}
+\begin{tabularx}{\textwidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}
+Quantity & Rule & Meaning\\
+\midrule
+Current & $I_T=I_1=I_2=\cdots$ & Current is the same through every part.\\
+Voltage & $V_T=V_1+V_2+\cdots$ & Add the voltage drops.\\
+Resistance & $R_T=R_1+R_2+\cdots$ & Add the component resistances.\\
+Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\clearpage
 \thispagestyle{fancy}
 \begin{center}
 \begin{tabular}{c}
