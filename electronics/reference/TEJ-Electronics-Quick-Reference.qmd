@@ -98,7 +98,7 @@ S & Solve & Calculate, round once, include the unit, and write an answer sentenc
 \begin{minipage}[t]{0.48\textwidth}
 \section*{Ohm's law}
 \begin{center}
-\renewcommand{\arraystretch}{1.35}
+\renewcommand{\arraystretch}{1.45}
 \begin{tabularx}{\linewidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -114,7 +114,7 @@ Resistance & $\displaystyle R=\frac{V}{I}$ & ohms ($\Omega$)\\
 \begin{minipage}[t]{0.48\textwidth}
 \section*{Power and energy}
 \begin{center}
-\renewcommand{\arraystretch}{1.35}
+\renewcommand{\arraystretch}{1.45}
 \begin{tabularx}{\linewidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -137,6 +137,7 @@ A plain letter such as $V$, $I$, $R$, or $P$ names a general quantity. A subscri
 \end{tejnote}
 
 \begin{center}
+\renewcommand{\arraystretch}{1.35}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -172,6 +173,7 @@ Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or bra
 
 \section*{How the subscripts change the meaning}
 \begin{center}
+\renewcommand{\arraystretch}{1.30}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -189,6 +191,7 @@ $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 
 \section*{Parallel rules}
 \begin{center}
+\renewcommand{\arraystretch}{1.40}
 \begin{tabularx}{\textwidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -226,6 +229,7 @@ Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
 
 \section*{How the subscripts change the meaning}
 \begin{center}
+\renewcommand{\arraystretch}{1.30}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -243,6 +247,7 @@ $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 
 \section*{Series rules}
 \begin{center}
+\renewcommand{\arraystretch}{1.40}
 \begin{tabularx}{\textwidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
