@@ -147,7 +147,7 @@ Power and time & $E=P\times t$ & J\\
 \end{center}
 \end{minipage}
 
-\textbf{Pick the equation that matches what you know.} Use $V$ for voltage, $I$ for current, $R$ for resistance, and $P$ for power.
+\textbf{Choose the equation that uses the values known in the problem.}
 
 \section*{Series circuits}
 \begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
