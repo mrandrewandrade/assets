@@ -191,7 +191,7 @@ $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 
 \section*{Parallel rules}
 \begin{center}
-\renewcommand{\arraystretch}{1.40}
+\renewcommand{\arraystretch}{1.55}
 \begin{tabularx}{\textwidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
@@ -199,8 +199,8 @@ Quantity & Rule & Meaning\\
 \midrule
 Voltage & $V_T=V_1=V_2=\cdots$ & Voltage is the same across every branch.\\
 Current & $I_T=I_1+I_2+\cdots$ & Add the branch currents.\\
-Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$ & Add the reciprocals.\\
-Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$ & Use this shortcut for two resistors.\\
+Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$ & Add the reciprocals.\\[6pt]
+Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$ & Use this shortcut for two resistors.\\[6pt]
 Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
 \bottomrule
 \end{tabularx}
