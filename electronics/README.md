@@ -4,9 +4,11 @@ This directory is the canonical source for original TEJ electronics teaching art
 
 Use [MODULE-DEVELOPMENT-SOP.md](MODULE-DEVELOPMENT-SOP.md) when creating or revising a coordinated lesson package. It defines the Google Slides teaching deck, handwritten-work submission Google Doc, restricted worked-answer Google Doc, schematic workflow, alignment rules, and release checks. The Basic Electricity to Basic Computer Systems package is the reference implementation.
 
+Use the [cheat sheet and reference guide style guide](styles/cheat-sheet-reference-guide-style-guide.md) for printable formula sheets, quick references, and compact reference guides. It defines typography, tables, equation spacing, schematic rules, print constraints, and measurable no-overlap checks.
+
 ## Structure
 
-- `reference/`: the three-page printable quick reference and the single curriculum-ordered course book
+- `reference/`: the printable quick reference and the single curriculum-ordered course book
 - `worksheets/`: maintainable student worksheets and teacher keys
 - `modules/`: complete hardware-module packages
 - `computer-systems/`: CS01-CS08 Main Quest and SQ01-SQ06 Side Quest activity packages
