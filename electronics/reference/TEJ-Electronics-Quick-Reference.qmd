@@ -50,25 +50,6 @@ Time & $t$ & second & s & How long something happens.\\
 \textbf{Why is current written as $I$?} $I$ means current. It comes from the older phrase \textit{current intensity}.
 ```
 
-# Subscripts: the small letters and numbers {.unnumbered}
-
-```{=latex}
-\begin{center}
-\begin{tabularx}{\textwidth}{l l Y}
-\toprule
-\rowcolor{TEJMist}
-Example & Read it as & Meaning\\
-\midrule
-$I_T$ & total current & Current for the whole circuit.\\
-$I_1$ & current one & Current through part or branch 1.\\
-$I_2$ & current two & Current through part or branch 2.\\
-$V_S$ & source voltage & Voltage supplied by the source.\\
-$V_{\mathrm{out}}$ & output voltage & Voltage measured at the output.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-```
-
 # Significant figures {.unnumbered}
 
 ```{=latex}
@@ -108,6 +89,7 @@ S & Solve & Calculate, round once, include the unit, and write an answer sentenc
 
 ```{=latex}
 \newpage
+\thispagestyle{fancy}
 \begin{center}
 {\Large\bfseries\color{TEJNavy} Circuit Calculations}\par
 {\normalsize Ohm's law, power, series circuits, and parallel circuits}
@@ -149,61 +131,138 @@ Power and time & $E=P\times t$ & J\\
 
 \textbf{Choose the equation that uses the values known in the problem.}
 
-\section*{Series circuits}
+\section*{General equations and specific values}
+\begin{tejnote}[What a subscript does]
+A plain letter such as $V$, $I$, $R$, or $P$ names a general quantity. A subscript identifies the total circuit, a particular component, or a particular branch.
+\end{tejnote}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
+\toprule
+\rowcolor{TEJMist}
+Type of value & Example equation & Meaning\\
+\midrule
+General & $\displaystyle R=\frac{V}{I}$ & The relationship works for any resistance, voltage, and current.\\
+Total circuit & $\displaystyle R_T=\frac{V_T}{I_T}$ & Every value belongs to the whole circuit.\\
+Part or branch 1 & $\displaystyle R_1=\frac{V_1}{I_1}$ & Every value belongs to component or branch 1.\\
+Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or branch 2.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Keep subscripts together:} If you are calculating part 1, use the values marked with subscript 1.
+
+\newpage
+\thispagestyle{fancy}
+\begin{center}
+\begin{tabular}{c}
+{\Large\bfseries\color{TEJNavy} Series Circuits}\\[3pt]
+{\normalsize One path through every component}
+\end{tabular}
+\end{center}
+
 \begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
 \centering\Large\bfseries\color{TEJNavy} ONE PATH. SAME CURRENT THROUGH EVERY PART.
 \end{tcolorbox}
 
-\begin{minipage}[c]{0.43\textwidth}
+\begin{center}
 \centering
-\includegraphics[width=\linewidth]{../schematics/bw/Series_Rule_Reference.pdf}
-\end{minipage}\hfill
-\begin{minipage}[c]{0.54\textwidth}
-\begin{tabularx}{\linewidth}{l >{\centering\arraybackslash}Y}
+\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
+\end{center}
+
+\section*{How the subscripts change the meaning}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
-Quantity & Rule\\
+Subscript & Examples & Meaning\\
 \midrule
-Current & $I_T=I_1=I_2=\cdots$\\
-Voltage & $V_T=V_1+V_2+\cdots$\\
-Resistance & $R_T=R_1+R_2+\cdots$\\
-Power & $P_T=P_1+P_2+\cdots$\\
+None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular part.\\
+$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
+$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered component or location.\\
+$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 \bottomrule
 \end{tabularx}
-\end{minipage}
+\end{center}
 
-\textbf{Remember:} Same current everywhere. Add voltage drops, resistances, and load powers.
+\textbf{In a series circuit:} $I_1$ and $I_2$ are the currents through components 1 and 2. $V_1$ and $V_2$ are the voltage drops across those components.
 
-\section*{Parallel circuits}
+\section*{Series rules}
+\begin{center}
+\begin{tabularx}{\textwidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}
+Quantity & Rule & Meaning\\
+\midrule
+Current & $I_T=I_1=I_2=\cdots$ & Current is the same through every part.\\
+Voltage & $V_T=V_1+V_2+\cdots$ & Add the voltage drops.\\
+Resistance & $R_T=R_1+R_2+\cdots$ & Add the component resistances.\\
+Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\newpage
+\thispagestyle{fancy}
+\vspace*{0.32in}
+\begin{center}
+\begin{tabular}{c}
+{\Large\bfseries\color{TEJNavy} Parallel Circuits}\\[3pt]
+{\normalsize More than one path through the circuit}
+\end{tabular}
+\end{center}
+
 \begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
 \centering\Large\bfseries\color{TEJNavy} MORE THAN ONE PATH. SAME VOLTAGE ACROSS EVERY BRANCH.
 \end{tcolorbox}
 
-\begin{minipage}[c]{0.43\textwidth}
+\begin{center}
 \centering
-\includegraphics[width=\linewidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
-\end{minipage}\hfill
-\begin{minipage}[c]{0.54\textwidth}
-\begin{tabularx}{\linewidth}{l >{\centering\arraybackslash}Y}
+\includegraphics[width=0.82\textwidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
+\end{center}
+
+\section*{How the subscripts change the meaning}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
-Quantity & Rule\\
+Subscript & Examples & Meaning\\
 \midrule
-Voltage & $V_T=V_1=V_2=\cdots$\\
-Current & $I_T=I_1+I_2+\cdots$\\
-Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$\\
-Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$\\
-Power & $P_T=P_1+P_2+\cdots$\\
+None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular branch.\\
+$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
+$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered branch or component.\\
+$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 \bottomrule
 \end{tabularx}
-\end{minipage}
+\end{center}
 
-\textbf{Remember:} Same voltage on each branch. Add branch currents and powers. $R_T$ is smaller than the smallest branch resistance.
+\textbf{In a parallel circuit:} $I_1$ and $I_2$ are branch currents. $V_1$ and $V_2$ are the voltages across branches 1 and 2.
+
+\section*{Parallel rules}
+\begin{center}
+\begin{tabularx}{\textwidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}
+Quantity & Rule & Meaning\\
+\midrule
+Voltage & $V_T=V_1=V_2=\cdots$ & Voltage is the same across every branch.\\
+Current & $I_T=I_1+I_2+\cdots$ & Add the branch currents.\\
+Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$ & Add the reciprocals.\\
+Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$ & Use this shortcut for two resistors.\\
+Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Quick check:} $R_T$ is smaller than the smallest branch resistance.
 
 \newpage
+\thispagestyle{fancy}
 \begin{center}
-{\Large\bfseries\color{TEJNavy} SI Prefix Table}\par
+\begin{tabular}{c}
+{\Large\bfseries\color{TEJNavy} SI Prefix Table}\\[3pt]
 {\normalsize Use the prefix to replace a power of ten}
+\end{tabular}
 \end{center}
 
 \begin{tejnote}[Capital letters matter]
