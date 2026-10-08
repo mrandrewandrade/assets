@@ -1,33 +1,28 @@
-\documentclass[tikz,border=7pt]{standalone}
-\usepackage[scaled=0.95]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage[europeanresistors,americanvoltages]{circuitikz}
-\definecolor{TEJNavy}{HTML}{1E2B55}
-\definecolor{TEJBlue}{HTML}{1769AA}
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage[american]{circuitikz}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{sansmath}
+\sansmath
 \begin{document}
-\begin{tikzpicture}[line width=1.05pt,draw=TEJNavy]
-  \ctikzset{bipoles/length=1.15cm}
+\begin{circuitikz}[american voltages, font=\sffamily]
+  \node[font=\bfseries\large] at (2.6,3.4) {SERIES: ONE PATH};
+  \draw (0,0) to[battery1,l_={$V_T$}] (0,2.5)
+        to[R,l={$R_1$}] (2.2,2.5)
+        to[R,l={$R_2$}] (4.4,2.5)
+        to[R,l={$R_3$}] (6.6,2.5) -- (6.6,0) -- (0,0);
+  \draw[->,teal!70!black,very thick] (0.8,2.88) -- (2.0,2.88) node[midway,above,black] {$I_T$};
 
-  \node[font=\bfseries\Large,text=TEJNavy] at (3.0,3.8) {Series: one path};
-  \draw
-    (0,0) to[battery1,l_=$V_S$] (0,2.8)
-    to[R,l=$R_1$,i>^=$I_T$] (3.0,2.8)
-    to[R,l=$R_2$] (6.0,2.8)
-    -- (6.0,0) -- (0,0);
-  \node[font=\large,text=TEJNavy,align=center,text width=5.8cm] at (3.0,-0.6)
-    {Same current through both resistors};
-
-  \begin{scope}[xshift=8.2cm]
-    \node[font=\bfseries\Large,text=TEJNavy] at (3.0,3.8) {Parallel: two branches};
-    \draw
-      (0,0) to[battery1,l_=$V_S$] (0,2.8)
-      -- (6.0,2.8) -- (6.0,0) -- (0,0);
-    \draw (2.0,2.8) to[R,l=$R_1$,i>_=$I_1$] (2.0,0);
-    \draw (4.2,2.8) to[R,l=$R_2$,i>_=$I_2$] (4.2,0);
-    \fill[TEJNavy] (2.0,2.8) circle (2.1pt) (2.0,0) circle (2.1pt)
-      (4.2,2.8) circle (2.1pt) (4.2,0) circle (2.1pt);
-    \node[font=\large,text=TEJNavy,align=center,text width=5.8cm] at (3.0,-0.6)
-      {Same voltage across both branches};
-  \end{scope}
-\end{tikzpicture}
+  \node[font=\bfseries\large] at (11.2,3.4) {PARALLEL: THREE BRANCHES};
+  \draw (8.0,0) to[battery1,l_={$V_T$}] (8.0,2.5) -- (9.2,2.5)
+        -- (14.5,2.5) -- (14.5,0) -- (8.0,0);
+  \draw (10.0,2.5) to[R,l={$R_1$}] (10.0,0);
+  \draw (11.8,2.5) to[R,l={$R_2$}] (11.8,0);
+  \draw (13.6,2.5) to[R,l={$R_3$}] (13.6,0);
+  \foreach \x in {10.0,11.8,13.6} {
+    \fill[black] (\x,2.5) rectangle ++(0.10,0.10);
+    \fill[black] (\x,0) rectangle ++(0.10,0.10);
+  }
+  \draw[->,teal!70!black,very thick] (8.6,2.88) -- (9.8,2.88) node[midway,above,black] {$I_T$};
+\end{circuitikz}
 \end{document}
