@@ -1,23 +1,21 @@
-\documentclass[tikz,border=8pt]{standalone}
+\documentclass[border=8pt]{standalone}
 \usepackage{fontspec}
 \setmainfont{Arial}
 \setsansfont{Arial}
-\usepackage{sansmath}
-\sansmath
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[europeanresistors,americanvoltages]{circuitikz}
-\definecolor{TEJNavy}{HTML}{1D2748}
-\definecolor{TEJGreen}{HTML}{2E7D32}
+\definecolor{TechCharcoal}{HTML}{202124}
+\definecolor{TechNavy}{HTML}{1D2748}
 \begin{document}
-\begin{circuitikz}[line width=1.15pt,draw=TEJNavy,text=TEJNavy]
+\begin{circuitikz}[line width=1.15pt,draw=TechCharcoal,text=TechCharcoal]
   \ctikzset{bipoles/length=1.15cm}
-  \draw (0,0) to[battery1,l_=$V_T$] (0,3)
-        to[short,i>^=$I_T$] (1.4,3)
-        to[R,l=$R_1$,v^>=$V_1$] (4.1,3)
-        to[R,l=$R_2$,v^>=$V_2$] (6.8,3)
-        to[R,l=$R_3$,v^>=$V_3$] (9.5,3)
+  \draw (0,0) to[battery1,l_={V\textsubscript{T}}] (0,3)
+        to[short,i>^={I\textsubscript{T}}] (1.4,3)
+        to[R,l={R\textsubscript{1}},v_>={V\textsubscript{1}}] (4.1,3)
+        to[R,l={R\textsubscript{2}},v_>={V\textsubscript{2}}] (6.8,3)
+        to[R,l={R\textsubscript{3}},v_>={V\textsubscript{3}}] (9.5,3)
         -- (9.5,0) -- (0,0);
-  \node[font=\bfseries\large,text=TEJGreen] at (4.75,-0.55)
+  \node[font=\bfseries\large,text=TechNavy] at (4.75,-0.55)
     {one path means the same current everywhere};
 \end{circuitikz}
 \end{document}
