@@ -10,8 +10,11 @@
   \ctikzset{bipoles/length=1.15cm}
   \draw (0,0) to[battery1,l_={V\textsubscript{T} = ?}] (0,3)
         to[R,l={R\textsubscript{1} = 6.8 kΩ}] (3.2,3)
-        to[R,l={R\textsubscript{2} = 12 kΩ},v_>={V\textsubscript{2} = 9.0 V}] (6.8,3)
+        to[R,l={R\textsubscript{2} = 12 kΩ}] (6.8,3)
         to[R,l={R\textsubscript{3} = 24 kΩ}] (10.0,3)
         -- (10.0,0) -- (0,0);
+  \draw[<->,line width=0.9pt] (3.55,2.18) -- (6.45,2.18);
+  \node[fill=white,inner sep=3pt,font=\large] at (5.0,1.70)
+        {V\textsubscript{2} = 9.0 V};
 \end{circuitikz}
 \end{document}

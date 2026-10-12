@@ -165,23 +165,23 @@ Do not place complete assigned-question answers in the student-facing deck.
 
 Choose questions by evidence required, not by arbitrary difficulty labels.
 
-### Question 1 — direct transfer
+### Question 1: direct transfer
 
 Use the same central relationship and topology as the guided example, with a different context or values. Students should be able to begin independently.
 
-### Question 2 — rearrangement or representation change
+### Question 2: rearrangement or representation change
 
 Change the unknown, require one algebraic rearrangement, or require students to move from a real component description to a schematic quantity.
 
-### Question 3 — units and practical values
+### Question 3: units and practical values
 
 Use realistic component or device values and require engineering notation, metric prefixes, significant figures, or a device-label interpretation.
 
-### Question 4 — multi-step application
+### Question 4: multi-step application
 
 Require an intermediate result, a total, a branch quantity, or a check using a second relationship. This is the first question that should clearly depend on full-precision intermediate values.
 
-### Question 5 — synthesis or troubleshooting
+### Question 5: synthesis or troubleshooting
 
 Use the most difficult fair application of the lesson. Combine the current concept with one previously mastered skill, or ask students to explain a fault, rating, or design decision. Do not introduce an untaught topology or formula here.
 
@@ -225,10 +225,10 @@ The TEJ basic-electronics pathway is broader than one five-question package. Gro
 
 The current material should not be treated as one five-question lesson. It contains at least four packages:
 
-1. **Electrical quantities and complete circuits** — Grob Chapter 1.
-2. **Ohm's law and electrical power** — Grob Chapter 3.
-3. **Parallel loads and totals in computer systems** — Grob Chapter 5 plus Chapter 3 power relationships.
-4. **Multimeter connection and measurement** — Grob Chapter 8.
+1. **Electrical quantities and complete circuits:** Grob Chapter 1.
+2. **Ohm's law and electrical power:** Grob Chapter 3.
+3. **Parallel loads and totals in computer systems:** Grob Chapter 5 plus Chapter 3 power relationships.
+4. **Multimeter connection and measurement:** Grob Chapter 8.
 
 Open/short circuits and fuses may be taught with Package 1 as conceptual safety content, but if students must calculate fault current or diagnose faults, make that a separate package. The computer-system slides are a transfer/application deck and should not force extra calculation questions into the electrical-fundamentals assignment.
 
@@ -417,6 +417,24 @@ The teacher document contains complete solutions to the exact five assigned ques
 Use `ANS` or calculator memory when later calculations depend on an earlier result. Do not re-enter rounded intermediate values. Match the Casio calculator model recommended for the course and keep each key sequence on its own line.
 
 The answer document must use the same wording, topology, labels, values, units, order, and precision expectations as the student document.
+
+### Filled answer visual style
+
+Use the Basic Circuit Calculations answer key as the visual model. The page should read like a completed student solution, with a restrained teacher layer added only where it improves instruction.
+
+- Use black for the question, section headings, table labels, units, and source text.
+- Use one consistent dark blue for completed solution work, including known values, unknown values, equations, substitutions, calculator results, final tables, and answer statements.
+- Use red only for a short warning about a misconception, safety issue, calculator trap, or significant-figure decision. Do not place routine instructions or administrative reminders in red.
+- Do not include sharing restrictions, publication notes, teacher-copy warnings, or other administrative callouts inside the answer key.
+- Do not use em dashes. Use a colon, comma, parentheses, or a new sentence.
+- Keep the page visually quiet. Avoid decorative colour blocks, oversized banners, and repeated navigation links inside every answer.
+- Put Given, Unknown, and final results in clean tables. Keep one quantity per row and use separate columns for quantity, symbol, value, and unit.
+- Put each general equation, rearrangement, substitution, and calculator entry on its own line. Align related equations vertically when possible.
+- Use real subscripts. Keep value and unit together. Show the unrounded value immediately before the correctly rounded result.
+- Place the final results table at the end of the solve section, followed immediately by one plain-language answer sentence.
+- Use the same canonical schematic as the student document. Place it before the GUESS tables and size it for comfortable reading without enlarging a low-resolution raster.
+- Keep body text at 11 pt or larger. Use at least 12 pt for equations and schematic labels when the destination is a printable handout.
+- Export the native Google Doc to PDF and inspect every page. Blurry diagrams, missing schematics, awkward page breaks, orphaned headings, clipped tables, or overlapping labels are release blockers.
 
 ## GUESS standard
 
