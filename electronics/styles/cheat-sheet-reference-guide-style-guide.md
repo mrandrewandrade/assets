@@ -25,7 +25,7 @@ Give each page one clear job. Keep related reference material together and begin
 For an introductory electronics reference, use this order unless the course sequence requires otherwise:
 
 1. quantities, letters, units, significant figures, the GUESS method, and common metric prefixes;
-2. Ohm's law, power, energy, and the meaning of subscripts;
+2. Ohm's law, power, energy, and derived-unit relationships;
 3. parallel circuits;
 4. series circuits;
 5. the complete SI prefix table.
@@ -87,13 +87,26 @@ Write equations as mathematics, not as typed approximations.
 | Use a source subscript when needed | $V_S$ |
 | Keep related subscripts together | $R_1=\dfrac{V_1}{I_1}$ |
 
-Explain the difference between a general equation and a circuit-specific equation. A plain variable such as $R=V/I$ states a general relationship. A subscripted equation such as $R_1=V_1/I_1$ identifies the values for one component or branch.
+Explain subscripts on the circuit page where students use them. On the parallel page, identify total values and numbered branches. On the series page, identify total values and numbered components. Do not use a separate generic subscript section when the same idea can be taught beside the matching schematic and rules.
 
 Put each major equation or concept on its own table row. Do not place several unrelated formulas in one paragraph. Align equations consistently so students can compare their structure.
 
 Write final values as a number from 0 to 999 followed by the appropriate metric prefix and unit. For example, write $0.047\ \mathrm{A}$ as $47\ \mathrm{mA}$ and $4700\ \Omega$ as $4.7\ \mathrm{k}\Omega$.
 
 Do not define a term by repeating the same term. For energy, use a concrete explanation such as, "How much work a source can provide or a load has used."
+
+## Derived units
+
+After the main Ohm's law, power, and energy equations, show how named units are built from other units. Use a short table and include these relationships:
+
+| Named unit | Relationship |
+|:--|:--|
+| ohm | $1\ \Omega=1\ \mathrm{V}/1\ \mathrm{A}$ |
+| watt | $1\ \mathrm{W}=1\ \mathrm{V}\times1\ \mathrm{A}=1\ \mathrm{J/s}$ |
+| joule | $1\ \mathrm{J}=1\ \mathrm{W}\times1\ \mathrm{s}$ |
+| watt-hour | $1\ \mathrm{Wh}=1\ \mathrm{W}\times1\ \mathrm{h}=3600\ \mathrm{J}$ |
+
+State the time-unit rule explicitly: seconds give joules, while hours give watt-hours. Never state that one joule is one watt-hour.
 
 ## Formula triangles
 
@@ -146,14 +159,13 @@ Give parallel and series circuits separate pages when space permits. Each page s
 
 | Element | Requirement |
 |:--|:--|
-| Plain-language rule | Use a large statement such as `MORE THAN ONE PATH. SAME VOLTAGE ACROSS EVERY BRANCH.` |
-| Schematic | Use one large, clean, canonical schematic. |
-| Subscript table | Explain no subscript, total, numbered branch or component, and source. |
-| Rule table | Show voltage, current, resistance, and power relationships. |
+| Subscript table | Place it before the schematic. Explain total, numbered branch or component, and source in that specific circuit. |
+| Schematic | Use one large, clean, canonical schematic after the subscript explanation. |
+| Rule table | Show voltage, current, resistance, and power relationships. Put each plain-language rule beside its equation. |
 | Quick check | Add one short way to test whether the result is reasonable. |
 | Summation notation | After the series rule, show $R_T=\sum_{i=1}^{n}R_i=R_1+R_2+\cdots+R_n$. |
 
-Make the one-path or multiple-path rule visibly larger than ordinary body text. Keep the equations aligned and use matching reference labels in the schematic and rule table.
+Keep the one-path or multiple-path rule visible but subordinate to the equation it explains. For example, place "More than one path. The same voltage is across every branch." beside $V_T=V_1=V_2=\cdots$. Do not use an oversized banner when the sentence belongs with the rule table. Keep the equations aligned and use matching reference labels in the schematic and rule table.
 
 Teach summation notation with a concrete case before expecting students to use the general form. For three resistors, show $R_T=\sum_{i=1}^{3}R_i=R_1+R_2+R_3$, then substitute three actual resistance values and calculate the total.
 
@@ -225,15 +237,16 @@ Render the complete final PDF again after the last spacing or font change. A suc
 - [ ] Parallel appears before series when using the TEJ Electronics sequence.
 - [ ] Core quantities use separate quantity, letter, unit, unit-symbol, and meaning columns.
 - [ ] Equations use sans-serif mathematics, stacked fractions, multiplication signs, and correct subscripts.
-- [ ] General variables and specific subscripted variables are explained.
+- [ ] Circuit-specific subscripts are explained before each matching schematic.
 - [ ] Equation tables have enough vertical clearance for all fractions and subscripts.
 - [ ] Measured equation gaps are at least 8 pt.
 - [ ] Circuit diagrams are large, neat, canonical, and readable in black and white.
-- [ ] Major rules are visually prominent.
+- [ ] Major plain-language rules appear beside the equations they explain.
 - [ ] Significant-figure guidance uses separate lines or rows.
 - [ ] Common metric prefixes are on page 1 and the complete SI prefix table is at the end.
 - [ ] Final values include a number from 0 to 999, the metric prefix, and the unit.
 - [ ] The Ohm's law, power, and energy triangles appear near the top of the calculations page.
+- [ ] Derived-unit relationships correctly distinguish joules, watt-seconds, and watt-hours.
 - [ ] Series rules include the general summation form and a concrete three-resistor example.
 - [ ] The website appears in the header and the licence footer is light grey.
 - [ ] No body or table text is below 10 pt.

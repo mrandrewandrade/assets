@@ -198,27 +198,27 @@ Power and time & $E=P\times t$ & J\\
 
 \textbf{Choose the equation that uses the values known in the problem.}
 
-\section*{General equations and specific values}
-\begin{tejnote}[What a subscript does]
-A plain letter such as $V$, $I$, $R$, or $P$ names a general quantity. A subscript identifies the total circuit, a particular component, or a particular branch.
+\section*{How the units fit together}
+\begin{tejnote}[A unit can be built from other units]
+Some named units are shorthand for combinations of other units. For example, a watt is the power produced by one volt pushing one ampere of current.
 \end{tejnote}
 
 \begin{center}
-\renewcommand{\arraystretch}{1.60}
+\renewcommand{\arraystretch}{1.35}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
 \toprule
 \rowcolor{TEJMist}
-Type of value & Example equation & Meaning\\
+Named unit & Unit relationship & Meaning\\
 \midrule
-General & $\displaystyle R=\frac{V}{I}$ & The relationship works for any resistance, voltage, and current.\\[18pt]
-Total circuit & $\displaystyle R_T=\frac{V_T}{I_T}$ & Every value belongs to the whole circuit.\\[18pt]
-Part or branch 1 & $\displaystyle R_1=\frac{V_1}{I_1}$ & Every value belongs to component or branch 1.\\[18pt]
-Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or branch 2.\\
+ohm & $\displaystyle 1\ \Omega=\frac{1\ \mathrm{V}}{1\ \mathrm{A}}$ & One volt across one ohm causes one ampere of current.\\[12pt]
+watt & $1\ \mathrm{W}=1\ \mathrm{V}\times1\ \mathrm{A}=1\ \mathrm{J/s}$ & A watt tells how quickly work is being done.\\
+joule & $1\ \mathrm{J}=1\ \mathrm{W}\times1\ \mathrm{s}$ & A one-watt load operating for one second uses one joule.\\
+watt-hour & $1\ \mathrm{Wh}=1\ \mathrm{W}\times1\ \mathrm{h}=3600\ \mathrm{J}$ & A one-watt load operating for one hour uses one watt-hour.\\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\textbf{Keep subscripts together:} If you are calculating part 1, use the values marked with subscript 1.
+\textbf{Match the time unit to the energy unit:} seconds give joules; hours give watt-hours.
 
 \clearpage
 \thispagestyle{fancy}
@@ -229,16 +229,7 @@ Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or bra
 \end{tabular}
 \end{center}
 
-\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
-\centering\Large\bfseries\color{TEJNavy} MORE THAN ONE PATH. SAME VOLTAGE ACROSS EVERY BRANCH.
-\end{tcolorbox}
-
-\begin{center}
-\centering
-\includegraphics[width=0.74\textwidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
-\end{center}
-
-\section*{How the subscripts change the meaning}
+\section*{Parallel subscripts}
 \begin{center}
 \renewcommand{\arraystretch}{1.30}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
@@ -246,7 +237,6 @@ Part or branch 2 & $P_2=V_2\times I_2$ & Every value belongs to component or bra
 \rowcolor{TEJMist}
 Subscript & Examples & Meaning\\
 \midrule
-None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular branch.\\
 $T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
 $1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered branch or component.\\
 $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
@@ -256,15 +246,20 @@ $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 
 \textbf{In a parallel circuit:} $I_1$ and $I_2$ are branch currents. $V_1$ and $V_2$ are the voltages across branches 1 and 2.
 
+\begin{center}
+\centering
+\includegraphics[width=0.74\textwidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
+\end{center}
+
 \section*{Parallel rules}
 \begin{center}
 \renewcommand{\arraystretch}{1.55}
-\begin{tabularx}{\textwidth}{l c Y}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\centering\arraybackslash}p{0.28\textwidth} Y}
 \toprule
 \rowcolor{TEJMist}
 Quantity & Rule & Meaning\\
 \midrule
-Voltage & $V_T=V_1=V_2=\cdots$ & Voltage is the same across every branch.\\
+Voltage & $V_T=V_1=V_2=\cdots$ & More than one path. The same voltage is across every branch.\\
 Current & $I_T=I_1+I_2+\cdots$ & Add the branch currents.\\
 Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$ & Add the reciprocals.\\[22pt]
 Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$ & Use this shortcut for two resistors.\\[14pt]
@@ -285,16 +280,7 @@ Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
 \end{tabular}
 \end{center}
 
-\begin{tcolorbox}[colback=white,colframe=black,boxrule=1pt,arc=0mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
-\centering\Large\bfseries\color{TEJNavy} ONE PATH. SAME CURRENT THROUGH EVERY PART.
-\end{tcolorbox}
-
-\begin{center}
-\centering
-\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
-\end{center}
-
-\section*{How the subscripts change the meaning}
+\section*{Series subscripts}
 \begin{center}
 \renewcommand{\arraystretch}{1.30}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
@@ -302,7 +288,6 @@ Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
 \rowcolor{TEJMist}
 Subscript & Examples & Meaning\\
 \midrule
-None & $I$, $V$, $R$, $P$ & A general quantity in an equation. It does not identify a particular part.\\
 $T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
 $1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered component or location.\\
 $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
@@ -312,15 +297,20 @@ $S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
 
 \textbf{In a series circuit:} $I_1$ and $I_2$ are the currents through components 1 and 2. $V_1$ and $V_2$ are the voltage drops across those components.
 
+\begin{center}
+\centering
+\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
+\end{center}
+
 \section*{Series rules}
 \begin{center}
 \renewcommand{\arraystretch}{1.40}
-\begin{tabularx}{\textwidth}{l c Y}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\centering\arraybackslash}p{0.28\textwidth} Y}
 \toprule
 \rowcolor{TEJMist}
 Quantity & Rule & Meaning\\
 \midrule
-Current & $I_T=I_1=I_2=\cdots$ & Current is the same through every part.\\
+Current & $I_T=I_1=I_2=\cdots$ & One path. The same current flows through every part.\\
 Voltage & $V_T=V_1+V_2+\cdots$ & Add the voltage drops.\\
 Resistance & $R_T=R_1+R_2+\cdots$ & Add the component resistances.\\
 Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
