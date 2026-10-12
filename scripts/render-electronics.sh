@@ -2,7 +2,12 @@
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
-mkdir -p dist
+mkdir -p dist private-dist
+rm -f \
+  dist/TEJ_Basic_Circuit_Calculations_Answer_Key.pdf \
+  dist/H01_Safety_Lab_Practice_Answer_Key.pdf \
+  dist/D01_Digital_Inputs_Answer_Key.pdf \
+  dist/C06_Control_Methods_Comparison_Answer_Key.pdf
 
 if command -v magick >/dev/null 2>&1; then
   imagemagick=(magick)
@@ -45,8 +50,9 @@ done
 render_pdf() {
   local source="$1"
   local output="$2"
+  local destination="${3:-dist}"
   quarto render "$source" --to pdf --output "$output"
-  mv -f "$output" "dist/$output"
+  mv -f "$output" "$destination/$output"
 }
 
 render_pdf electronics/reference/TEJ-Electronics-Quick-Reference.qmd TEJ-Electronics-Quick-Reference.pdf
@@ -58,21 +64,21 @@ render_pdf electronics/reference/TEJ-Electronics-Reference-Handbook.qmd TEJ-Elec
 mv -f electronics/reference/TEJ-Electronics-Reference-Handbook.html dist/TEJ-Electronics-Reference-Handbook.html
 
 render_pdf electronics/worksheets/TEJ-Basic-Circuit-Calculations-Student-Worksheet.qmd TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf
-render_pdf electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd TEJ_Basic_Circuit_Calculations_Answer_Key.pdf
+render_pdf electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd TEJ_Basic_Circuit_Calculations_Answer_Key.pdf private-dist
 
 module_dir=electronics/modules/H01-safety-lab-practice
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Student_Worksheet.qmd" H01_Safety_Lab_Practice_Student_Worksheet.pdf
-render_pdf "$module_dir/H01_Safety_Lab_Practice_Answer_Key.qmd" H01_Safety_Lab_Practice_Answer_Key.pdf
+render_pdf "$module_dir/H01_Safety_Lab_Practice_Answer_Key.qmd" H01_Safety_Lab_Practice_Answer_Key.pdf private-dist
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Lab.qmd" H01_Safety_Lab_Practice_Lab.pdf
 render_pdf "$module_dir/H01_Safety_Lab_Practice_Tinkercad_Guide.qmd" H01_Safety_Lab_Practice_Tinkercad_Guide.pdf
 
 digital_dir=electronics/modules/D01-digital-inputs
 render_pdf "$digital_dir/D01_Digital_Inputs_Student_Worksheet.qmd" D01_Digital_Inputs_Student_Worksheet.pdf
-render_pdf "$digital_dir/D01_Digital_Inputs_Answer_Key.qmd" D01_Digital_Inputs_Answer_Key.pdf
+render_pdf "$digital_dir/D01_Digital_Inputs_Answer_Key.qmd" D01_Digital_Inputs_Answer_Key.pdf private-dist
 
 control_dir=electronics/modules/C06-control-systems
 render_pdf "$control_dir/C06_Control_Methods_Comparison_Student.qmd" C06_Control_Methods_Comparison_Student.pdf
-render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Control_Methods_Comparison_Answer_Key.pdf
+render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Control_Methods_Comparison_Answer_Key.pdf private-dist
 
 computer_systems_dir=electronics/computer-systems
 render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
@@ -86,4 +92,4 @@ render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/
 
-echo "Rendered TEJ electronics assets to dist/."
+echo "Rendered public TEJ electronics assets to dist/ and answer keys to private-dist/."

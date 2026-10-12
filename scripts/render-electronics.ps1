@@ -3,6 +3,15 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $repoRoot
 New-Item -ItemType Directory -Force -Path (Join-Path $repoRoot 'dist') | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $repoRoot 'private-dist') | Out-Null
+@(
+    'TEJ_Basic_Circuit_Calculations_Answer_Key.pdf',
+    'H01_Safety_Lab_Practice_Answer_Key.pdf',
+    'D01_Digital_Inputs_Answer_Key.pdf',
+    'C06_Control_Methods_Comparison_Answer_Key.pdf'
+) | ForEach-Object {
+    Remove-Item -LiteralPath (Join-Path 'dist' $_) -Force -ErrorAction SilentlyContinue
+}
 
 $magick = Get-Command magick -ErrorAction SilentlyContinue
 if (-not $magick) { throw 'ImageMagick is required to create print-ready schematic PDFs.' }
@@ -40,12 +49,13 @@ Get-ChildItem -LiteralPath 'electronics/schematics' -Filter '*.svg' | ForEach-Ob
 function Render-Pdf {
     param(
         [Parameter(Mandatory = $true)][string]$Source,
-        [Parameter(Mandatory = $true)][string]$Output
+        [Parameter(Mandatory = $true)][string]$Output,
+        [string]$Destination = 'dist'
     )
 
     & $quarto.Source render $Source --to pdf --output $Output
     if ($LASTEXITCODE -ne 0) { throw "Quarto PDF render failed for $Source" }
-    Move-Item -LiteralPath $Output -Destination (Join-Path 'dist' $Output) -Force
+    Move-Item -LiteralPath $Output -Destination (Join-Path $Destination $Output) -Force
 }
 
 Render-Pdf 'electronics/reference/TEJ-Electronics-Quick-Reference.qmd' 'TEJ-Electronics-Quick-Reference.pdf'
@@ -61,21 +71,21 @@ finally {
 Move-Item -LiteralPath 'electronics/reference/TEJ-Electronics-Reference-Handbook.html' -Destination 'dist/TEJ-Electronics-Reference-Handbook.html' -Force
 
 Render-Pdf 'electronics/worksheets/TEJ-Basic-Circuit-Calculations-Student-Worksheet.qmd' 'TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf'
-Render-Pdf 'electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd' 'TEJ_Basic_Circuit_Calculations_Answer_Key.pdf'
+Render-Pdf 'electronics/worksheets/TEJ-Basic-Circuit-Calculations-Answer-Key.qmd' 'TEJ_Basic_Circuit_Calculations_Answer_Key.pdf' 'private-dist'
 
 $moduleDir = 'electronics/modules/H01-safety-lab-practice'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Student_Worksheet.qmd" 'H01_Safety_Lab_Practice_Student_Worksheet.pdf'
-Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Answer_Key.qmd" 'H01_Safety_Lab_Practice_Answer_Key.pdf'
+Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Answer_Key.qmd" 'H01_Safety_Lab_Practice_Answer_Key.pdf' 'private-dist'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Lab.qmd" 'H01_Safety_Lab_Practice_Lab.pdf'
 Render-Pdf "$moduleDir/H01_Safety_Lab_Practice_Tinkercad_Guide.qmd" 'H01_Safety_Lab_Practice_Tinkercad_Guide.pdf'
 
 $digitalDir = 'electronics/modules/D01-digital-inputs'
 Render-Pdf "$digitalDir/D01_Digital_Inputs_Student_Worksheet.qmd" 'D01_Digital_Inputs_Student_Worksheet.pdf'
-Render-Pdf "$digitalDir/D01_Digital_Inputs_Answer_Key.qmd" 'D01_Digital_Inputs_Answer_Key.pdf'
+Render-Pdf "$digitalDir/D01_Digital_Inputs_Answer_Key.qmd" 'D01_Digital_Inputs_Answer_Key.pdf' 'private-dist'
 
 $controlDir = 'electronics/modules/C06-control-systems'
 Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Student.qmd" 'C06_Control_Methods_Comparison_Student.pdf'
-Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Answer_Key.qmd" 'C06_Control_Methods_Comparison_Answer_Key.pdf'
+Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Answer_Key.qmd" 'C06_Control_Methods_Comparison_Answer_Key.pdf' 'private-dist'
 
 $computerSystemsDir = 'electronics/computer-systems'
 Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" 'TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf'
@@ -92,4 +102,4 @@ Get-ChildItem -LiteralPath 'electronics/schematics' -File |
         Copy-Item -LiteralPath $_.FullName -Destination (Join-Path 'dist' $_.Name) -Force
     }
 
-Write-Host 'Rendered TEJ electronics assets to dist/.'
+Write-Host 'Rendered public TEJ electronics assets to dist/ and answer keys to private-dist/.'

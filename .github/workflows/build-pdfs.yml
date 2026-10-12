@@ -33,6 +33,13 @@ jobs:
       - name: Build all teaching resources
         run: bash render.sh all
 
+      - name: Verify private teacher files are not public
+        run: |
+          if find dist -maxdepth 1 -type f \( -iname '*answer*key*' -o -iname '*teacher*marking*' \) | grep -q .; then
+            echo 'A restricted teacher file was written to public dist/.' >&2
+            exit 1
+          fi
+
       - name: Stage website
         run: |
           rm -rf site-build

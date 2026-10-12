@@ -32,7 +32,7 @@ On Windows PowerShell when Git Bash or WSL is unavailable:
 powershell -ExecutionPolicy Bypass -File scripts/render-electronics.ps1
 ```
 
-The command renders the maintained student, teacher, reference, and module PDFs plus the self-contained handbook HTML into `dist/`. XeLaTeX is required for the PDF build. CircuitikZ and TikZ sources generate the reusable PDF and SVG diagrams.
+The command renders public student, reference, and module PDFs plus the self-contained handbook HTML into `dist/`. Answer keys are written to ignored `private-dist/` for restricted teacher distribution. XeLaTeX is required for the PDF build. CircuitikZ and TikZ sources generate the reusable PDF and SVG diagrams.
 
 Main Quest and Side Quest classification for the computer-systems layer is maintained in `metadata/computer-systems.yml`. Student pages, teacher guidance, website labels, and Classroom posting language should use the `pathway` field instead of inventing a second classification.
 

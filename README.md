@@ -26,7 +26,8 @@ brand/                Reusable brand assets
 laser/                Generated laser-fabrication library, metadata, tests, and bundles
 templates/            Legacy HTML/CSS document template
 scripts/              Build and setup tooling
-dist/                 Generated output, not committed
+dist/                 Public generated output, not committed
+private-dist/         Restricted teacher output, not committed or published
 site/                 GitHub Pages source
 ```
 
@@ -71,7 +72,6 @@ The generated files are written to `dist/`:
 0.2-the-way-we-meet.pdf
 0.2-the-way-we-meet-notes.pdf
 0.2-the-way-we-meet-notes-bw.pdf
-0.1-0.2-combined-teacher-marking.pdf
 weekly-smart-goal-progress-log.pdf
 weekly-smart-goal-progress-log-bw.pdf
 weekly-smart-goal-progress-log-andrew-bw.pdf
@@ -90,7 +90,7 @@ bash render.sh electronics
 
 The electronics build produces the LaTeX-based TEJ formula reference, circuit-calculation worksheet and key, H01 safety module package, reusable schematics, metadata, and templates. See `electronics/README.md`.
 
-The GitHub Actions workflow uses the same Quarto/Typst rendering path, uploads the generated files in `dist/` as a workflow artifact, and publishes the PDFs to GitHub Pages.
+The GitHub Actions workflow uses the same Quarto/Typst rendering path, uploads the public files in `dist/` as a workflow artifact, and publishes only that directory to GitHub Pages. Answer keys and teacher marking files are rendered locally to ignored `private-dist/` and are never staged for Pages.
 
 ## Creating another assignment
 

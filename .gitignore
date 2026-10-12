@@ -6,6 +6,7 @@ dist/*.pdf
 dist/*.html
 dist/*.docx
 dist/*.svg
+private-dist/
 **/.quarto/
 assignments/*.pdf
 assignments/*.docx

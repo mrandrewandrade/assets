@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 
 export TYPST_FONT_PATHS="${PWD}/brand/fonts${TYPST_FONT_PATHS:+:${TYPST_FONT_PATHS}}"
 
-mkdir -p dist
+mkdir -p dist private-dist
 
 # Remove old filenames from previous local builds so dist only shows the current names.
 rm -f \
@@ -20,6 +20,7 @@ rm -f \
   dist/about-me-audience-notes.pdf \
   dist/about-me-presentation.pdf \
   dist/about-me-teacher-marking.pdf \
+  dist/0.1-0.2-combined-teacher-marking.pdf \
   dist/weekly-smart-goal-progress-log.pdf \
   dist/weekly-smart-goal-progress-log-bw.pdf \
   dist/weekly-smart-goal-progress-log-andrew-bw.pdf
@@ -47,7 +48,7 @@ build_listening() {
 
 build_teacher_marking() {
   quarto render assignments/combined-teacher-marking.qmd
-  mv -f assignments/combined-teacher-marking.pdf dist/0.1-0.2-combined-teacher-marking.pdf
+  mv -f assignments/combined-teacher-marking.pdf private-dist/0.1-0.2-combined-teacher-marking.pdf
 }
 
 build_weekly_progress() {
