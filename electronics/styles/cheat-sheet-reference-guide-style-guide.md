@@ -24,13 +24,13 @@ Give each page one clear job. Keep related reference material together and begin
 
 For an introductory electronics reference, use this order unless the course sequence requires otherwise:
 
-1. quantities, letters, units, significant figures, and the GUESS method;
+1. quantities, letters, units, significant figures, the GUESS method, and common metric prefixes;
 2. Ohm's law, power, energy, and the meaning of subscripts;
 3. parallel circuits;
 4. series circuits;
 5. the complete SI prefix table.
 
-Put parallel before series when following the TEJ Electronics Quick Reference sequence. Put the large SI prefix table at the end so it remains available without crowding the core formulas.
+Put parallel before series when following the TEJ Electronics Quick Reference sequence. Put the most-used metric prefixes on page 1 and the complete SI prefix table at the end.
 
 ## Typography
 
@@ -41,7 +41,8 @@ Put parallel before series when following the TEJ Electronics Quick Reference se
 | Page title | Large, bold, centred, with a short subtitle |
 | Section title | Large, bold, left aligned, with clear space above and below |
 | Table text | 12 pt preferred, 10 pt minimum |
-| Footer | 10 pt minimum and separated from page content |
+| Header | Course name on the left and `andrewandrade.ca` on the right |
+| Footer | 10 pt minimum, light grey, and separated from page content |
 | Colour | Black text on white; light grey table headers may be used |
 
 Never place blue text on black or rely on colour to communicate meaning. Avoid decorative fonts. Do not use em dashes or en dashes in instructional text. Use commas, parentheses, colons, or ASCII hyphens instead.
@@ -90,6 +91,22 @@ Explain the difference between a general equation and a circuit-specific equatio
 
 Put each major equation or concept on its own table row. Do not place several unrelated formulas in one paragraph. Align equations consistently so students can compare their structure.
 
+Write final values as a number from 0 to 999 followed by the appropriate metric prefix and unit. For example, write $0.047\ \mathrm{A}$ as $47\ \mathrm{mA}$ and $4700\ \Omega$ as $4.7\ \mathrm{k}\Omega$.
+
+Do not define a term by repeating the same term. For energy, use a concrete explanation such as, "How much work a source can provide or a load has used."
+
+## Formula triangles
+
+Place the Ohm's law, power, and energy triangles near the top of the main calculations page. Use one consistent triangle style:
+
+| Triangle | Top | Bottom left | Bottom right |
+|:--|:--:|:--:|:--:|
+| Ohm's law | $V$ | $I$ | $R$ |
+| Power | $P$ | $V$ | $I$ |
+| Energy | $E$ | $P$ | $t$ |
+
+Keep the triangles large enough to read at normal print size. Label each triangle below it. The triangles support equation recall but do not replace the full equation tables.
+
 ## Equation spacing
 
 Automatic table row height is not enough for stacked fractions. Fractions extend above and below the normal text box and can collide with the equation in the next row even when the page appears acceptable at a quick glance.
@@ -117,9 +134,9 @@ For adjacent equation rows, measure the rendered PDF text bounds:
 gap = top of the next equation - bottom of the previous equation
 ```
 
-The gap must be at least 4 pt for stacked equations. A gap below 0 pt is a true overlap and fails review. A gap from 0 pt to less than 4 pt is too tight and must be increased.
+The gap must be at least 8 pt for stacked equations. A gap below 0 pt is a true overlap and fails review. A gap from 0 pt to less than 8 pt is too tight and must be increased.
 
-The parallel-resistance table exposed the need for this rule. Its first render had the reciprocal denominator ending at 660.64 pt and the next numerator beginning at 657.66 pt. The calculated gap was -2.98 pt, so the characters overlapped. After correction, the denominator ended at 657.33 pt and the next numerator began at 661.35 pt. The 4.02 pt gap passed.
+The parallel-resistance table exposed the need for this rule. Its first render had the reciprocal denominator ending at 660.64 pt and the next numerator beginning at 657.66 pt. The calculated gap was -2.98 pt, so the characters overlapped. A later 4.02 pt gap was still visually too tight. It no longer passes this guide.
 
 Do not approve an equation-dense page only by looking at a scaled screenshot. Inspect it at high resolution and measure the bounding boxes when rows contain fractions, superscripts, subscripts, radicals, matrices, or multi-line equations.
 
@@ -134,8 +151,11 @@ Give parallel and series circuits separate pages when space permits. Each page s
 | Subscript table | Explain no subscript, total, numbered branch or component, and source. |
 | Rule table | Show voltage, current, resistance, and power relationships. |
 | Quick check | Add one short way to test whether the result is reasonable. |
+| Summation notation | After the series rule, show $R_T=\sum_{i=1}^{n}R_i=R_1+R_2+\cdots+R_n$. |
 
 Make the one-path or multiple-path rule visibly larger than ordinary body text. Keep the equations aligned and use matching reference labels in the schematic and rule table.
+
+Teach summation notation with a concrete case before expecting students to use the general form. For three resistors, show $R_T=\sum_{i=1}^{3}R_i=R_1+R_2+R_3$, then substitute three actual resistance values and calculate the total.
 
 ## Schematics
 
@@ -169,7 +189,7 @@ Keep significant-figure rules on separate lines or table rows. Show one concept 
 
 ## Print and page-fit rules
 
-Use letter-sized pages unless another paper size is required. Keep at least 0.55 in margins and reserve enough space for the header and licence footer. Do not allow a table, quick check, or schematic caption to touch the footer.
+Use letter-sized pages unless another paper size is required. Keep at least 0.55 in margins and reserve enough space for the header and licence footer. Put the website in the header. Render the CC BY-SA licence footer in light grey so it remains available without competing with the instructional content. Do not allow a table, quick check, or schematic caption to touch the footer.
 
 Do not solve page-fit problems by shrinking text below 10 pt. Use these remedies in order:
 
@@ -189,7 +209,7 @@ Every new or revised cheat sheet must pass all of the following checks before re
 | Page count | The intended number of pages is confirmed with `pdfinfo`. |
 | Visual inspection | Every page is rendered to PNG and reviewed at normal page view. |
 | High-resolution inspection | Equation-heavy pages are reviewed at 300 dpi or equivalent. |
-| Equation bounds | Adjacent stacked equations have at least 4 pt of measurable clearance. |
+| Equation bounds | Adjacent stacked equations have at least 8 pt of measurable clearance. |
 | Typography | Body and table text are 12 pt where possible and never below 10 pt. |
 | Contrast | All content remains readable in black and white. |
 | Schematics | Symbols, labels, junctions, paths, and captions are clear. |
@@ -207,11 +227,15 @@ Render the complete final PDF again after the last spacing or font change. A suc
 - [ ] Equations use sans-serif mathematics, stacked fractions, multiplication signs, and correct subscripts.
 - [ ] General variables and specific subscripted variables are explained.
 - [ ] Equation tables have enough vertical clearance for all fractions and subscripts.
-- [ ] Measured equation gaps are at least 4 pt.
+- [ ] Measured equation gaps are at least 8 pt.
 - [ ] Circuit diagrams are large, neat, canonical, and readable in black and white.
 - [ ] Major rules are visually prominent.
 - [ ] Significant-figure guidance uses separate lines or rows.
-- [ ] The SI prefix table is placed at the end.
+- [ ] Common metric prefixes are on page 1 and the complete SI prefix table is at the end.
+- [ ] Final values include a number from 0 to 999, the metric prefix, and the unit.
+- [ ] The Ohm's law, power, and energy triangles appear near the top of the calculations page.
+- [ ] Series rules include the general summation form and a concrete three-resistor example.
+- [ ] The website appears in the header and the licence footer is light grey.
 - [ ] No body or table text is below 10 pt.
 - [ ] Every page has been rendered and visually inspected.
 - [ ] The final distribution PDF matches the inspected render.
