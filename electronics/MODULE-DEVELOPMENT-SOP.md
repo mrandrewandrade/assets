@@ -338,6 +338,32 @@ The deck tells the instructional story. It should teach, model, and prepare stud
 - Export one canonical high-quality schematic and reuse it in slides, student questions, and answers.
 - Verify every schematic against the written problem before release.
 
+### Schematic production and acceptance gate
+
+A schematic is not finished when the generator runs. It is finished only after the native Google Slides or Google Docs artifact has passed the checks below.
+
+- Keep the generator's vector master, normally SVG. Never use a screenshot, thumbnail, copied preview, or previously compressed image as the schematic source.
+- Prefer vector placement. If the destination requires a raster image, render a fresh PNG from the vector master at no less than four times its final displayed pixel dimensions. Never enlarge a raster image after insertion.
+- Build labels in the generator or as native document text. Use native subscript formatting on ordinary letters and numbers, or vector-rendered LaTeX. Do not use Unicode subscript characters such as `ₜ` when a Google conversion may replace them with boxes.
+- Keep a protected clear zone around every label. No wire, arrow, symbol, border, polarity mark, or other label may enter that zone. The minimum clearance is one-half of the label's capital-letter height; one full capital-letter height is preferred.
+- The generator must test the expanded bounding box of every label against every wire segment and symbol. Any intersection is a generation failure, not a warning. Move the label, reroute the wire, or use an opaque white knockout behind the label.
+- Keep each value and unit together with a non-breaking space, for example `15.0 mA`, `1.0 kΩ`, and `12.0 V`. A wire or crop boundary must never separate the number from its unit.
+- At final slide size, schematic labels must remain readable from the back of the room and line weights must remain distinct. Do not shrink an entire circuit to make it fit beside a long question; shorten the text or give the schematic more space.
+- Use the same canonical schematic file in the teaching deck and student document. The answer key may add solution markings, but it must not redraw the underlying topology.
+
+#### Post-conversion visual inspection
+
+Google Slides conversion is a separate production stage. A local PowerPoint, source image, or code preview is not proof that the native Google file is correct.
+
+1. Open the native Google Slides deck after import or conversion.
+2. Inspect every slide containing a schematic at 100% editing zoom and in slideshow mode.
+3. Zoom to 200% for one representative copy of each schematic family. Pixelated text or lines fail the check.
+4. Export the native deck to PDF and inspect every schematic again. Check the actual question slides, not only a contact sheet or generator preview.
+5. Reject any slide containing a replacement box, missing glyph, clipped unit, blurred line, overlapping label, stretched figure, or unreadable small text.
+6. Repeat the same inspection after any image replacement, resizing, font substitution, or deck conversion.
+
+The final reviewer must record the slide numbers checked and the defects repaired. “Generated successfully,” “imported successfully,” and an automated structure check are not visual approval.
+
 ## Artifact 2: student question and photo-submission Google Doc
 
 ### Role
@@ -463,6 +489,11 @@ Before release, confirm that all three artifacts use the same:
 - [ ] Schematics come from the canonical generator.
 - [ ] Junctions, crossings, labels, meter positions, and topology are correct.
 - [ ] No meaning-bearing visual is stretched or unintentionally cropped.
+- [ ] Every schematic uses the vector master or a fresh 4× raster export; no screenshot, thumbnail, or enlarged low-resolution copy is present.
+- [ ] Expanded label bounding boxes do not intersect wires, arrows, symbols, borders, or other labels.
+- [ ] Every number remains attached to its unit, and no wire or crop boundary cuts through the quantity.
+- [ ] Native Google Slides and Google Docs show no replacement boxes or missing subscript glyphs.
+- [ ] Every schematic slide was inspected at 100%, in slideshow mode, and in the exported PDF; one example from each schematic family was also checked at 200%.
 - [ ] Third-party visuals and problem sources are attributed concisely.
 
 ### Google Classroom workflow
