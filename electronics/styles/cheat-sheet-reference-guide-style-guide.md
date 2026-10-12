@@ -167,7 +167,16 @@ Give parallel and series circuits separate pages when space permits. Each page s
 
 Keep the one-path or multiple-path rule visible but subordinate to the equation it explains. For example, place "More than one path. The same voltage is across every branch." beside $V_T=V_1=V_2=\cdots$. Do not use an oversized banner when the sentence belongs with the rule table. Keep the equations aligned and use matching reference labels in the schematic and rule table.
 
-Teach summation notation with a concrete case before expecting students to use the general form. For three resistors, show $R_T=\sum_{i=1}^{3}R_i=R_1+R_2+R_3$, then substitute three actual resistance values and calculate the total.
+Teach summation notation with a concrete case before expecting students to use the general form. Place the given component values directly below the schematic. In the worked example, align the equals signs and show one operation per line: the summation, the expanded terms, the substituted values with units, and the final total. For three resistors, use this sequence:
+
+\[
+\begin{aligned}
+R_T &= \sum_{i=1}^{3}R_i \\
+    &= R_1+R_2+R_3 \\
+    &= \text{the three given resistance values} \\
+    &= \text{the final resistance with its unit.}
+\end{aligned}
+\]
 
 ## Schematics
 
@@ -248,6 +257,7 @@ Render the complete final PDF again after the last spacing or font change. A suc
 - [ ] The Ohm's law, power, and energy triangles appear near the top of the calculations page.
 - [ ] Derived-unit relationships correctly distinguish joules, watt-seconds, and watt-hours.
 - [ ] Series rules include the general summation form and a concrete three-resistor example.
+- [ ] Summation examples place givens below the schematic and align each calculation step at the equals sign.
 - [ ] The website appears in the header and the licence footer is light grey.
 - [ ] No body or table text is below 10 pt.
 - [ ] Every page has been rendered and visually inspected.
