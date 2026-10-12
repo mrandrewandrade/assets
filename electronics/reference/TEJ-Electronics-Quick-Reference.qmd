@@ -185,24 +185,23 @@ Resistance & $\displaystyle R=\frac{V}{I}$ & ohms ($\Omega$)\\
 \begin{tabularx}{\linewidth}{l c Y}
 \toprule
 \rowcolor{TEJMist}
-Use when you know & Formula & Unit\\
+Question gives & Formula & Answer unit\\
 \midrule
 Voltage and current & $P=V\times I$ & W\\
 Current and resistance & $P=I^2\times R$ & W\\[12pt]
 Voltage and resistance & $\displaystyle P=\frac{V^2}{R}$ & W\\[12pt]
-Power and time & $E=P\times t$ & J\\
+Power and seconds & $E=P\times t$ & J\\
+Power and hours & $E=P\times t$ & Wh\\
 \bottomrule
 \end{tabularx}
 \end{center}
 \end{minipage}
 
-\textbf{Choose the equation that uses the values known in the problem.}
-
-\section*{How the units fit together}
-\begin{tejnote}[A unit can be built from other units]
-Some named units are shorthand for combinations of other units. For example, a watt is the power produced by one volt pushing one ampere of current.
+\begin{tejnote}[Use the units from the question]
+The values and units given in the question are the inputs. Match the input units to the unit you need: $\mathrm{V}\div\mathrm{A}=\Omega$, $\mathrm{V}\div\Omega=\mathrm{A}$, $\mathrm{A}\times\Omega=\mathrm{V}$, and $\mathrm{V}\times\mathrm{A}=\mathrm{W}$.
 \end{tejnote}
 
+\section*{How the units fit together}
 \begin{center}
 \renewcommand{\arraystretch}{1.35}
 \begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
@@ -213,12 +212,12 @@ Named unit & Unit relationship & Meaning\\
 ohm & $\displaystyle 1\ \Omega=\frac{1\ \mathrm{V}}{1\ \mathrm{A}}$ & One volt across one ohm causes one ampere of current.\\[12pt]
 watt & $1\ \mathrm{W}=1\ \mathrm{V}\times1\ \mathrm{A}=1\ \mathrm{J/s}$ & A watt tells how quickly work is being done.\\
 joule & $1\ \mathrm{J}=1\ \mathrm{W}\times1\ \mathrm{s}$ & A one-watt load operating for one second uses one joule.\\
-watt-hour & $1\ \mathrm{Wh}=1\ \mathrm{W}\times1\ \mathrm{h}=3600\ \mathrm{J}$ & A one-watt load operating for one hour uses one watt-hour.\\
+watt-hour & $\begin{aligned}1\ \mathrm{h}&=60\ \mathrm{min}\times60\ \mathrm{s/min}=3600\ \mathrm{s}\\ 1\ \mathrm{Wh}&=1\ \mathrm{W}\times3600\ \mathrm{s}=3600\ \mathrm{J}\end{aligned}$ & The 3600 comes from the number of seconds in one hour.\\[18pt]
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\textbf{Match the time unit to the energy unit:} seconds give joules; hours give watt-hours.
+\textbf{Time decides the energy unit:} watts multiplied by seconds give joules. Watts multiplied by hours give watt-hours.
 
 \clearpage
 \thispagestyle{fancy}

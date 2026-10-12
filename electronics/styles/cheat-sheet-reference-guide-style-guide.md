@@ -108,6 +108,10 @@ After the main Ohm's law, power, and energy equations, show how named units are 
 
 State the time-unit rule explicitly: seconds give joules, while hours give watt-hours. Never state that one joule is one watt-hour.
 
+Show where the factor of 3600 comes from: $1\ \mathrm{h}=60\ \mathrm{min}\times60\ \mathrm{s/min}=3600\ \mathrm{s}$, so $1\ \mathrm{Wh}=1\ \mathrm{W}\times3600\ \mathrm{s}=3600\ \mathrm{J}$.
+
+Treat the values and units given in the question as the equation inputs. Use a heading such as `Question gives` instead of the vague phrase `Use when you know`. Give students direct unit clues, such as $\mathrm{V}/\mathrm{A}=\Omega$, $\mathrm{V}/\Omega=\mathrm{A}$, $\mathrm{A}\times\Omega=\mathrm{V}$, and $\mathrm{V}\times\mathrm{A}=\mathrm{W}$.
+
 ## Formula triangles
 
 Place the Ohm's law, power, and energy triangles near the top of the main calculations page. Use one consistent triangle style:
@@ -256,6 +260,8 @@ Render the complete final PDF again after the last spacing or font change. A suc
 - [ ] Final values include a number from 0 to 999, the metric prefix, and the unit.
 - [ ] The Ohm's law, power, and energy triangles appear near the top of the calculations page.
 - [ ] Derived-unit relationships correctly distinguish joules, watt-seconds, and watt-hours.
+- [ ] Equation guidance identifies values and units from the question as inputs and shows how units help select or check the equation.
+- [ ] The watt-hour conversion shows that 3600 comes from the number of seconds in one hour.
 - [ ] Series rules include the general summation form and a concrete three-resistor example.
 - [ ] Summation examples place givens below the schematic and align each calculation step at the equals sign.
 - [ ] The website appears in the header and the licence footer is light grey.
