@@ -358,8 +358,8 @@ Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
 \rowcolor{TEJMist}
 Case & Equation & Meaning\\
 \midrule
-Any number & $\displaystyle R_T=\sum_{i=1}^{n}R_i=R_1+R_2+\cdots+R_n$ & Start at resistor 1 and add every resistor through resistor $n$.\\[10pt]
-Three resistors & $\displaystyle R_T=\sum_{i=1}^{3}R_i=R_1+R_2+R_3$ & The 1 is where counting starts. The 3 is where counting stops.\\[10pt]
+Any number & $\displaystyle R_T=\sum_{i=1}^{n}R_i=R_1+R_2+\cdots+R_n$ & Start at resistor 1 and add every resistor through resistor $n$.\\[20pt]
+Three resistors & $\displaystyle R_T=\sum_{i=1}^{3}R_i=R_1+R_2+R_3$ & The 1 is where counting starts. The 3 is where counting stops.\\[20pt]
 Example & $R_T=100\ \Omega+220\ \Omega+330\ \Omega=650\ \Omega$ & Three series resistors have a total resistance of $650\ \Omega$.\\
 \bottomrule
 \end{tabularx}
