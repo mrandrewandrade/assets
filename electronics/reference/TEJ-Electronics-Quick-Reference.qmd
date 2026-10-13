@@ -46,7 +46,7 @@ Time & $t$ & second & s & Duration of an event.\\
 
 \begin{minipage}[t]{0.49\textwidth}
 \section*{Significant figures}
-\begin{tabularx}{\linewidth}{>{\bfseries}p{0.31\linewidth} Y}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{0.31\linewidth} Y}
 \toprule
 \rowcolor{TEJMist}Situation & Rule\\
 \midrule
@@ -54,7 +54,7 @@ Multiply or divide & Use the fewest significant figures.\\
 Add or subtract & Use the fewest decimal places.\\
 During the work & Keep the full calculator value.\\
 Final answer & Round once. Include prefix and unit.\\
-Engineering form & Choose a prefix so the number is 0 to 999.\\
+Engineering form & Use a power of ten in steps of three so a non-zero value is from 1 to less than 1000.\\
 \bottomrule
 \end{tabularx}
 \end{minipage}\hfill
