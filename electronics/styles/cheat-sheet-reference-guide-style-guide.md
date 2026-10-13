@@ -4,7 +4,7 @@
 
 Use this guide for printable cheat sheets, formula sheets, quick references, and compact reference guides. These documents are for fast lookup during instruction, practice, assignments, and tests. They are not condensed textbooks.
 
-The current reference implementation is [`../reference/TEJ-Electronics-Quick-Reference.qmd`](../reference/TEJ-Electronics-Quick-Reference.qmd). Its shared PDF styling is in [`tej-quick-reference-branding.tex`](tej-quick-reference-branding.tex), [`tej-preamble.tex`](tej-preamble.tex), and [`tej-print-bw.tex`](tej-print-bw.tex).
+The current reference implementation is [`../reference/TEJ-Electronics-Quick-Reference.qmd`](../reference/TEJ-Electronics-Quick-Reference.qmd). Its shared PDF styling is in [`tej-quick-reference-branding.tex`](tej-quick-reference-branding.tex), [`tej-preamble.tex`](tej-preamble.tex), and [`tej-print-bw.tex`](tej-print-bw.tex). This two-page LaTeX-generated PDF is the single student cheat sheet. The chaptered electronics handbook is a course book, not a second cheat sheet.
 
 ## Design goals
 
@@ -22,15 +22,12 @@ The current reference implementation is [`../reference/TEJ-Electronics-Quick-Ref
 
 Give each page one clear job. Keep related reference material together and begin a major topic on a new page when that improves scanning.
 
-For an introductory electronics reference, use this order unless the course sequence requires otherwise:
+For the concise two-page student cheat sheet, use this order unless the course sequence requires otherwise:
 
-1. quantities, letters, units, significant figures, the GUESS method, and common metric prefixes;
-2. Ohm's law, power, energy, and derived-unit relationships;
-3. parallel circuits;
-4. series circuits;
-5. the complete SI prefix table.
+1. quantities, letters, units, significant figures, the GUESS method, common metric prefixes, engineering-notation examples, and standard 5% resistor values;
+2. Ohm's law, power, energy, derived-unit checks, parallel rules, and series rules.
 
-Put parallel before series when following the TEJ Electronics Quick Reference sequence. Put the most-used metric prefixes on page 1 and the complete SI prefix table at the end.
+Put parallel before series when following the TEJ Electronics Quick Reference sequence. Put only the prefixes used most often in the course on page 1. Keep the complete SI prefix table in the course notes or handbook so the cheat sheet remains concise.
 
 ## Typography
 
@@ -256,7 +253,7 @@ Render the complete final PDF again after the last spacing or font change. A suc
 - [ ] Circuit diagrams are large, neat, canonical, and readable in black and white.
 - [ ] Major plain-language rules appear beside the equations they explain.
 - [ ] Significant-figure guidance uses separate lines or rows.
-- [ ] Common metric prefixes are on page 1 and the complete SI prefix table is at the end.
+- [ ] Common metric prefixes are on page 1; the complete SI prefix table remains in the course notes or handbook.
 - [ ] Final values include a number from 0 to 999, the metric prefix, and the unit.
 - [ ] The Ohm's law, power, and energy triangles appear near the top of the calculations page.
 - [ ] Derived-unit relationships correctly distinguish joules, watt-seconds, and watt-hours.

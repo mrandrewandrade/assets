@@ -3,7 +3,7 @@ format:
   pdf:
     pdf-engine: xelatex
     documentclass: scrartcl
-    classoption: [12pt]
+    classoption: [11pt]
     include-in-header:
       - ../styles/tej-preamble.tex
       - ../styles/tej-quick-reference-branding.tex
@@ -19,80 +19,55 @@ lang: en-CA
 ```{=latex}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1pt}
-\renewcommand{\arraystretch}{1.15}
-\RedeclareSectionCommand[beforeskip=7pt,afterskip=3pt]{section}
+\renewcommand{\arraystretch}{1.10}
+\RedeclareSectionCommand[beforeskip=5pt,afterskip=2pt]{section}
 \begin{center}
-{\Large\bfseries\color{TEJNavy} TEJ Electronics Quick Reference}\\[2pt]
-{\normalsize Foundations, calculations, parallel circuits, and series circuits}
+{\Large\bfseries\color{TEJNavy} TEJ Electronics Quick Reference}\\[1pt]
+{\normalsize Units, notation, GUESS, formulas, series circuits, and parallel circuits}
 \end{center}
-```
 
-# What the letters mean {.unnumbered}
-
-```{=latex}
+\section*{Quantities, letters, and units}
 \begin{center}
-\begin{tabularx}{\textwidth}{>{\bfseries}l c l l Y}
+\begin{tabularx}{\textwidth}{>{\bfseries}l c l c Y}
 \toprule
 \rowcolor{TEJMist}
-Quantity & Letter & Unit & Unit symbol & Simple meaning\\
+Quantity & Letter & Unit & Symbol & Meaning\\
 \midrule
-Current & $I$ & ampere & A & How much electric charge is moving.\\
-Voltage & $V$ & volt & V & The electrical push across two points.\\
-Resistance & $R$ & ohm & $\Omega$ & How strongly a part limits current.\\
-Power & $P$ & watt & W & How quickly electrical energy is used.\\
-Energy & $E$ & joule & J & How much work it can do or has already done.\\
-Charge & $Q$ & coulomb & C & The amount of electric charge.\\
-Time & $t$ & second & s & How long something happens.\\
+Current & $I$ & ampere & A & Rate of electric charge flow.\\
+Voltage & $V$ & volt & V & Electrical push between two points.\\
+Resistance & $R$ & ohm & $\Omega$ & Opposition to current.\\
+Power & $P$ & watt & W & Rate of energy transfer.\\
+Energy & $E$ & joule & J & Work supplied or used.\\
+Charge & $Q$ & coulomb & C & Amount of electric charge.\\
+Time & $t$ & second & s & Duration of an event.\\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\textbf{Why is current written as $I$?} $I$ means current. It comes from the older phrase \textit{current intensity}.
-```
-
-# Significant figures {.unnumbered}
-
-```{=latex}
-\begin{center}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{0.24\textwidth} Y}
+\begin{minipage}[t]{0.49\textwidth}
+\section*{Significant figures}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.31\linewidth} Y}
 \toprule
-\rowcolor{TEJMist}
-Situation & What to do\\
+\rowcolor{TEJMist}Situation & Rule\\
 \midrule
-Multiply or divide & Use the fewest significant figures in the question.\\
-Add or subtract & Use the fewest decimal places in the question.\\
-During the calculation & Keep the full calculator value.\\
-Final answer & Round once. Include the metric prefix and unit.\\
-Prefix and unit & Use a prefix so the number is from 0 to 999. Example: $0.047\ \mathrm{A}=47\ \mathrm{mA}$.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\section*{Common metric prefixes}
-\textbf{Write the number, metric prefix, and unit together.} Example: $4700\ \Omega=4.7\ \mathrm{k}\Omega$.
-
-\begin{center}
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.18}
-\begin{minipage}[t]{0.48\textwidth}
-\begin{tabularx}{\linewidth}{l c c Y}
-\toprule
-\rowcolor{TEJMist}
-Prefix & Symbol & Power & Example\\
-\midrule
-giga & G & $10^9$ & $2.4\ \mathrm{GHz}$\\
-mega & M & $10^6$ & $3.3\ \mathrm{M}\Omega$\\
-kilo & k & $10^3$ & $4.7\ \mathrm{k}\Omega$\\
-no prefix & none & $10^0$ & $12\ \mathrm{V}$\\
+Multiply or divide & Use the fewest significant figures.\\
+Add or subtract & Use the fewest decimal places.\\
+During the work & Keep the full calculator value.\\
+Final answer & Round once. Include prefix and unit.\\
+Engineering form & Choose a prefix so the number is 0 to 999.\\
 \bottomrule
 \end{tabularx}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
+\section*{Common metric prefixes}
 \begin{tabularx}{\linewidth}{l c c Y}
 \toprule
-\rowcolor{TEJMist}
-Prefix & Symbol & Power & Example\\
+\rowcolor{TEJMist}Prefix & Symbol & Power & Example\\
 \midrule
+giga & G & $10^9$ & $2.4\ \mathrm{GHz}$\\
+mega & M & $10^6$ & $3.3\ \mathrm{M}\Omega$\\
+kilo & k & $10^3$ & $4.7\ \mathrm{k}\Omega$\\
+none & none & $10^0$ & $12\ \mathrm{V}$\\
 milli & m & $10^{-3}$ & $47\ \mathrm{mA}$\\
 micro & $\mu$ & $10^{-6}$ & $220\ \mu\mathrm{F}$\\
 nano & n & $10^{-9}$ & $100\ \mathrm{nF}$\\
@@ -100,352 +75,130 @@ pico & p & $10^{-12}$ & $22\ \mathrm{pF}$\\
 \bottomrule
 \end{tabularx}
 \end{minipage}
-\end{center}
-```
-
-# GUESS method {.unnumbered}
-
-```{=latex}
-\begin{center}
-\begin{tabularx}{\textwidth}{>{\bfseries\large}c l Y}
-\toprule
-\rowcolor{TEJMist}
-Letter & Step & What to write\\
-\midrule
-G & Given & List the known symbols, values, and units in a table.\\
-U & Unknown & List what you need to find and its unit.\\
-E & Equation & Write the general equation, then rearrange it.\\
-S & Substitute & Put the numbers and units into the equation.\\
-S & Solve & Calculate, round once, include the metric prefix and unit, and write an answer sentence.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-```
-
-```{=latex}
-\clearpage
-\thispagestyle{fancy}
-\begin{center}
-{\Large\bfseries\color{TEJNavy} Circuit Calculations}\par
-{\normalsize Ohm's law, power, parallel circuits, and series circuits}
-\end{center}
-
-\begin{center}
-\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\sffamily\bfseries}]
-  \begin{scope}[shift={(0,0)}]
-    \draw[thick] (-1.2,0)--(0,1.8)--(1.2,0)--cycle;
-    \draw[thick] (-0.74,0.70)--(0.74,0.70);
-    \draw[thick] (0,0)--(0,0.70);
-    \node[font=\sffamily\bfseries\Large] at (0,1.18) {$V$};
-    \node[font=\sffamily\bfseries\Large] at (-0.43,0.32) {$I$};
-    \node[font=\sffamily\bfseries\Large] at (0.43,0.32) {$R$};
-    \node[font=\sffamily\bfseries] at (0,-0.33) {Ohm's law};
-  \end{scope}
-  \begin{scope}[shift={(4.5,0)}]
-    \draw[thick] (-1.2,0)--(0,1.8)--(1.2,0)--cycle;
-    \draw[thick] (-0.74,0.70)--(0.74,0.70);
-    \draw[thick] (0,0)--(0,0.70);
-    \node[font=\sffamily\bfseries\Large] at (0,1.18) {$P$};
-    \node[font=\sffamily\bfseries\Large] at (-0.43,0.32) {$V$};
-    \node[font=\sffamily\bfseries\Large] at (0.43,0.32) {$I$};
-    \node[font=\sffamily\bfseries] at (0,-0.33) {Power};
-  \end{scope}
-  \begin{scope}[shift={(9,0)}]
-    \draw[thick] (-1.2,0)--(0,1.8)--(1.2,0)--cycle;
-    \draw[thick] (-0.74,0.70)--(0.74,0.70);
-    \draw[thick] (0,0)--(0,0.70);
-    \node[font=\sffamily\bfseries\Large] at (0,1.18) {$E$};
-    \node[font=\sffamily\bfseries\Large] at (-0.43,0.32) {$P$};
-    \node[font=\sffamily\bfseries\Large] at (0.43,0.32) {$t$};
-    \node[font=\sffamily\bfseries] at (0,-0.33) {Energy};
-  \end{scope}
-\end{tikzpicture}
-\end{center}
-
-\begin{minipage}[t]{0.48\textwidth}
-\section*{Ohm's law}
-\begin{center}
-\renewcommand{\arraystretch}{1.75}
-\begin{tabularx}{\linewidth}{l c Y}
-\toprule
-\rowcolor{TEJMist}
-Find & Formula & Units\\
-\midrule
-Voltage & $V=I\times R$ & volts (V)\\
-Current & $\displaystyle I=\frac{V}{R}$ & amperes (A)\\[16pt]
-Resistance & $\displaystyle R=\frac{V}{I}$ & ohms ($\Omega$)\\
-\bottomrule
-\end{tabularx}
-\end{center}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\section*{Power and energy}
-\begin{center}
-\renewcommand{\arraystretch}{1.65}
-\begin{tabularx}{\linewidth}{l c Y}
-\toprule
-\rowcolor{TEJMist}
-Question gives & Formula & Answer unit\\
-\midrule
-Voltage and current & $P=V\times I$ & W\\
-Current and resistance & $P=I^2\times R$ & W\\[12pt]
-Voltage and resistance & $\displaystyle P=\frac{V^2}{R}$ & W\\[12pt]
-Power and seconds & $E=P\times t$ & J\\
-Power and hours & $E=P\times t$ & Wh\\
-\bottomrule
-\end{tabularx}
-\end{center}
-\end{minipage}
-
-\begin{tejnote}[Use the units from the question]
-The values and units given in the question are the inputs. Match the input units to the unit you need: $\mathrm{V}\div\mathrm{A}=\Omega$, $\mathrm{V}\div\Omega=\mathrm{A}$, $\mathrm{A}\times\Omega=\mathrm{V}$, and $\mathrm{V}\times\mathrm{A}=\mathrm{W}$.
-\end{tejnote}
-
-\section*{How the units fit together}
-\begin{center}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
-\toprule
-\rowcolor{TEJMist}
-Named unit & Unit relationship & Meaning\\
-\midrule
-ohm & $\displaystyle 1\ \Omega=\frac{1\ \mathrm{V}}{1\ \mathrm{A}}$ & One volt across one ohm causes one ampere of current.\\[12pt]
-watt & $1\ \mathrm{W}=1\ \mathrm{V}\times1\ \mathrm{A}=1\ \mathrm{J/s}$ & A watt tells how quickly work is being done.\\
-joule & $1\ \mathrm{J}=1\ \mathrm{W}\times1\ \mathrm{s}$ & A one-watt load operating for one second uses one joule.\\
-watt-hour & $\begin{aligned}1\ \mathrm{h}&=60\ \mathrm{min}\times60\ \mathrm{s/min}=3600\ \mathrm{s}\\ 1\ \mathrm{Wh}&=1\ \mathrm{W}\times3600\ \mathrm{s}=3600\ \mathrm{J}\end{aligned}$ & The 3600 comes from the number of seconds in one hour.\\[18pt]
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\textbf{Time decides the energy unit:} watts multiplied by seconds give joules. Watts multiplied by hours give watt-hours.
-
-\clearpage
-\thispagestyle{fancy}
-\begin{center}
-\begin{tabular}{c}
-{\Large\bfseries\color{TEJNavy} Parallel Circuits}\\[3pt]
-{\normalsize More than one path through the circuit}
-\end{tabular}
-\end{center}
-
-\section*{Parallel subscripts}
-\begin{center}
-\renewcommand{\arraystretch}{1.30}
-\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
-\toprule
-\rowcolor{TEJMist}
-Subscript & Examples & Meaning\\
-\midrule
-$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
-$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered branch or component.\\
-$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\textbf{In a parallel circuit:} $I_1$ and $I_2$ are branch currents. $V_1$ and $V_2$ are the voltages across branches 1 and 2.
-
-\begin{center}
-\centering
-\includegraphics[width=0.74\textwidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
-\end{center}
-
-\section*{Parallel rules}
-\begin{center}
-\renewcommand{\arraystretch}{1.55}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\centering\arraybackslash}p{0.28\textwidth} Y}
-\toprule
-\rowcolor{TEJMist}
-Quantity & Rule & Meaning\\
-\midrule
-Voltage & $V_T=V_1=V_2=\cdots$ & More than one path. The same voltage is across every branch.\\
-Current & $I_T=I_1+I_2+\cdots$ & Add the branch currents.\\
-Resistance & $\dfrac{1}{R_T}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots$ & Add the reciprocals.\\[22pt]
-Two resistors & $R_T=\dfrac{R_1\times R_2}{R_1+R_2}$ & Use this shortcut for two resistors.\\[14pt]
-Power & $P_T=P_1+P_2+\cdots$ & Add the branch powers.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\textbf{Quick check:} $R_T$ is smaller than the smallest branch resistance.
-
-\clearpage
-\thispagestyle{fancy}
-\vspace*{0.32in}
-\begin{center}
-\begin{tabular}{c}
-{\Large\bfseries\color{TEJNavy} Series Circuits}\\[3pt]
-{\normalsize One path through every component}
-\end{tabular}
-\end{center}
-
-\section*{Series subscripts}
-\begin{center}
-\renewcommand{\arraystretch}{1.30}
-\begin{tabularx}{\textwidth}{>{\bfseries}l c Y}
-\toprule
-\rowcolor{TEJMist}
-Subscript & Examples & Meaning\\
-\midrule
-$T$ & $I_T$, $V_T$, $R_T$, $P_T$ & The total value for the whole circuit.\\
-$1$, $2$, and so on & $I_1$, $V_1$, $R_1$, $P_1$ & The value for a numbered component or location.\\
-$S$ & $V_S$ & The source voltage. In this simple circuit, $V_S=V_T$.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\textbf{In a series circuit:} $I_1$ and $I_2$ are the currents through components 1 and 2. $V_1$ and $V_2$ are the voltage drops across those components.
-
-\begin{center}
-\centering
-\includegraphics[width=0.82\textwidth]{../schematics/bw/Series_Rule_Reference.pdf}
-\end{center}
-
-\section*{Series rules}
-\begin{center}
-\renewcommand{\arraystretch}{1.40}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.17\textwidth} >{\centering\arraybackslash}p{0.28\textwidth} Y}
-\toprule
-\rowcolor{TEJMist}
-Quantity & Rule & Meaning\\
-\midrule
-Current & $I_T=I_1=I_2=\cdots$ & One path. The same current flows through every part.\\
-Voltage & $V_T=V_1+V_2+\cdots$ & Add the voltage drops.\\
-Resistance & $R_T=R_1+R_2+\cdots$ & Add the component resistances.\\
-Power & $P_T=P_1+P_2+\cdots$ & Add the component powers.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\thispagestyle{fancy}
-
-\clearpage
-\thispagestyle{fancy}
-\begin{center}
-{\Large\bfseries\color{TEJNavy} Series Summation Notation}\\[3pt]
-{\normalsize The sigma symbol means add a sequence of values}
-\end{center}
-
-\begin{center}
-\begin{circuitikz}[scale=1.05,transform shape]
-  \draw (0,0)
-    to[battery1,l=$V_S$] (0,2)
-    to[R,l=$R_1$] (2,2)
-    to[R,l=$R_2$] (4,2)
-    to[R,l=$R_3$] (6,2)
-    -- (6,0) -- (0,0);
-\end{circuitikz}
-
-\textbf{Three resistors in one path are added to find the total resistance.}
-\end{center}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{0.88\textwidth}{>{\bfseries}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
-\toprule
-\rowcolor{TEJMist}
-Given & $R_1$ & $R_2$ & $R_3$\\
-\midrule
-Resistance & $100\ \Omega$ & $220\ \Omega$ & $330\ \Omega$\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\section*{Summation notation}
-\begin{center}
-\renewcommand{\arraystretch}{1.45}
-\begin{tabularx}{\textwidth}{>{\bfseries}p{0.21\textwidth} >{\centering\arraybackslash}p{0.42\textwidth} Y}
-\toprule
-\rowcolor{TEJMist}
-Rule & Equation & Meaning\\
-\midrule
-Any number of resistors & $\displaystyle R_T=\sum_{i=1}^{n}R_i$ & Start at resistor 1 and add every resistor through resistor $n$.\\[16pt]
-This circuit & $\displaystyle R_T=\sum_{i=1}^{3}R_i$ & Start at resistor 1 and stop after resistor 3.\\[16pt]
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\begin{tejnote}[Worked example]
-\begin{center}
-\renewcommand{\arraystretch}{1.45}
-$\displaystyle
-\begin{aligned}
-R_T &= \sum_{i=1}^{3}R_i \\
-    &= R_1+R_2+R_3 \\
-    &= 100\ \Omega+220\ \Omega+330\ \Omega \\
-    &= 650\ \Omega
-\end{aligned}
-$
-\end{center}
-
-The three series resistors have a total resistance of $650\ \Omega$.
-\end{tejnote}
-
-\clearpage
-\thispagestyle{fancy}
-\begin{center}
-\begin{tabular}{c}
-{\Large\bfseries\color{TEJNavy} Complete SI Prefix Table}\\[3pt]
-{\normalsize Use the prefix to replace a power of ten}
-\end{tabular}
-\end{center}
-
-\begin{tejnote}[Capital letters matter]
-$M$ means mega, but $m$ means milli. On the calculator, $1.0\mathrm{E}6$ means $1.0\times10^6$.
-\end{tejnote}
 
 \section*{Engineering notation examples}
 \begin{center}
 \begin{tabularx}{\textwidth}{l l l Y}
 \toprule
-\rowcolor{TEJMist}
-Original value & Engineering form & Prefix form & What changed\\
+\rowcolor{TEJMist}Original & Engineering notation & Prefix form & Calculator entry\\
 \midrule
-$0.000\,047\ \mathrm{A}$ & $47\times10^{-6}\ \mathrm{A}$ & $47\ \mu\mathrm{A}$ & $10^{-6}$ became micro.\\
-$4700\ \Omega$ & $4.7\times10^3\ \Omega$ & $4.7\ \mathrm{k}\Omega$ & $10^3$ became kilo.\\
-$2\,200\,000\ \mathrm{Hz}$ & $2.2\times10^6\ \mathrm{Hz}$ & $2.2\ \mathrm{MHz}$ & $10^6$ became mega.\\
+$0.000\,047\ \mathrm{A}$ & $47\times10^{-6}\ \mathrm{A}$ & $47\ \mu\mathrm{A}$ & \texttt{47 EXP -6}\\
+$4700\ \Omega$ & $4.7\times10^3\ \Omega$ & $4.7\ \mathrm{k}\Omega$ & \texttt{4.7 EXP 3}\\
+$2\,200\,000\ \mathrm{Hz}$ & $2.2\times10^6\ \mathrm{Hz}$ & $2.2\ \mathrm{MHz}$ & \texttt{2.2 EXP 6}\\
 \bottomrule
 \end{tabularx}
 \end{center}
+\textbf{Capital letters matter:} $M$ means mega, but $m$ means milli. The calculator may display \texttt{E} instead of $\times10^n$.
 
-\begin{center}\footnotesize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\textwidth}{l c c >{\raggedleft\arraybackslash}X c}
+\section*{GUESS method}
+\begin{center}
+\begin{tabularx}{\textwidth}{>{\bfseries\large}c l Y}
 \toprule
-\rowcolor{TEJNavy!12}
-\textbf{Prefix} & \textbf{Symbol} & \textbf{Power} & \textbf{Decimal multiplier} & \textbf{Calculator}\\
+\rowcolor{TEJMist}Letter & Step & What to write\\
 \midrule
-quetta & Q & $10^{30}$ & 1,000,000,000,000,000,000,000,000,000,000 & 1E30\\
-ronna & R & $10^{27}$ & 1,000,000,000,000,000,000,000,000,000 & 1E27\\
-yotta & Y & $10^{24}$ & 1,000,000,000,000,000,000,000,000 & 1E24\\
-zetta & Z & $10^{21}$ & 1,000,000,000,000,000,000,000 & 1E21\\
-exa & E & $10^{18}$ & 1,000,000,000,000,000,000 & 1E18\\
-peta & P & $10^{15}$ & 1,000,000,000,000,000 & 1E15\\
-tera & T & $10^{12}$ & 1,000,000,000,000 & 1E12\\
-\rowcolor{TEJMist} giga & G & $10^9$ & 1,000,000,000 & 1E9\\
-\rowcolor{TEJMist} mega & M & $10^6$ & 1,000,000 & 1E6\\
-\rowcolor{TEJMist} kilo & k & $10^3$ & 1,000 & 1E3\\
-hecto & h & $10^2$ & 100 & 1E2\\
-deca & da & $10^1$ & 10 & 1E1\\
-\rowcolor{TEJMist} no prefix & none & $10^0$ & 1 & 1E0\\
-deci & d & $10^{-1}$ & 0.1 & 1E-1\\
-centi & c & $10^{-2}$ & 0.01 & 1E-2\\
-\rowcolor{TEJMist} milli & m & $10^{-3}$ & 0.001 & 1E-3\\
-\rowcolor{TEJMist} micro & $\mu$ & $10^{-6}$ & 0.000001 & 1E-6\\
-\rowcolor{TEJMist} nano & n & $10^{-9}$ & 0.000000001 & 1E-9\\
-\rowcolor{TEJMist} pico & p & $10^{-12}$ & 0.000000000001 & 1E-12\\
-femto & f & $10^{-15}$ & 0.000000000000001 & 1E-15\\
-atto & a & $10^{-18}$ & 0.000000000000000001 & 1E-18\\
-zepto & z & $10^{-21}$ & 0.000000000000000000001 & 1E-21\\
-yocto & y & $10^{-24}$ & 0.000000000000000000000001 & 1E-24\\
-ronto & r & $10^{-27}$ & 0.000000000000000000000000001 & 1E-27\\
-quecto & q & $10^{-30}$ & 0.000000000000000000000000000001 & 1E-30\\
+G & Given & Known symbols, values, and units.\\
+U & Unknown & What must be found and its unit.\\
+E & Equation & General equation first, then rearrange it.\\
+S & Substitute & Numbers and units in the rearranged equation.\\
+S & Solve & Full value, rounded value, prefix, unit, and answer sentence.\\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\begin{tejnote}[Prefixes most often used in this course]
-Focus first on giga, mega, kilo, no prefix, milli, micro, nano, and pico. The complete table is here when you need another prefix.
+\clearpage
+\thispagestyle{fancy}
+\begin{center}
+{\Large\bfseries\color{TEJNavy} Circuit Calculations}\\[1pt]
+{\normalsize Choose the rule that matches the circuit and the known values}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\sffamily\bfseries}]
+  \foreach \x/\top/\left/\right/\label in {0/V/I/R/Ohm's law,4.3/P/V/I/Power,8.6/E/P/t/Energy}{
+    \begin{scope}[shift={(\x,0)}]
+      \draw[thick] (-1.05,0)--(0,1.55)--(1.05,0)--cycle;
+      \draw[thick] (-0.65,0.60)--(0.65,0.60);
+      \draw[thick] (0,0)--(0,0.60);
+      \node[font=\sffamily\bfseries\Large] at (0,1.02) {$\top$};
+      \node[font=\sffamily\bfseries\Large] at (-0.38,0.28) {$\left$};
+      \node[font=\sffamily\bfseries\Large] at (0.38,0.28) {$\right$};
+      \node[font=\sffamily\bfseries] at (0,-0.28) {\label};
+    \end{scope}
+  }
+\end{tikzpicture}
+\end{center}
+
+\begin{minipage}[t]{0.47\textwidth}
+\section*{Ohm's law}
+\begin{tabularx}{\linewidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}Find & Formula & Unit\\
+\midrule
+Voltage & $V=I\times R$ & V\\
+Current & $\displaystyle I=\frac{V}{R}$ & A\\[10pt]
+Resistance & $\displaystyle R=\frac{V}{I}$ & $\Omega$\\
+\bottomrule
+\end{tabularx}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.50\textwidth}
+\section*{Power and energy}
+\begin{tabularx}{\linewidth}{l c Y}
+\toprule
+\rowcolor{TEJMist}Question gives & Formula & Unit\\
+\midrule
+$V$ and $I$ & $P=V\times I$ & W\\
+$I$ and $R$ & $P=I^2\times R$ & W\\
+$V$ and $R$ & $\displaystyle P=\frac{V^2}{R}$ & W\\[10pt]
+$P$ and seconds & $E=P\times t$ & J\\
+$P$ and hours & $E=P\times t$ & Wh\\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\begin{tejnote}[Unit checks]
+$\mathrm{V}/\mathrm{A}=\Omega$, $\mathrm{V}/\Omega=\mathrm{A}$, $\mathrm{A}\times\Omega=\mathrm{V}$, and $\mathrm{V}\times\mathrm{A}=\mathrm{W}$. Also, $1\ \mathrm{W}=1\ \mathrm{J/s}$ and $1\ \mathrm{Wh}=3600\ \mathrm{J}$.
+\end{tejnote}
+
+\begin{minipage}[t]{0.49\textwidth}
+\section*{Parallel circuits: more than one path}
+\begin{center}
+\includegraphics[width=0.94\linewidth]{../schematics/bw/Parallel_Rule_Reference.pdf}
+\end{center}
+\begin{tabularx}{\linewidth}{l c}
+\toprule
+\rowcolor{TEJMist}Quantity & General rule\\
+\midrule
+Voltage & $V_T=V_1=V_2=\cdots$\\
+Current & $I_T=I_1+I_2+\cdots$\\
+Resistance & $\displaystyle\frac{1}{R_T}=\frac{1}{R_1}+\frac{1}{R_2}+\cdots$\\[10pt]
+Two resistors & $\displaystyle R_T=\frac{R_1R_2}{R_1+R_2}$\\[10pt]
+Power & $P_T=P_1+P_2+\cdots$\\
+\bottomrule
+\end{tabularx}
+
+\textbf{Check:} $R_T<$ every branch resistance.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\section*{Series circuits: one path}
+\begin{center}
+\includegraphics[width=0.98\linewidth]{../schematics/bw/Series_Rule_Reference.pdf}
+\end{center}
+\begin{tabularx}{\linewidth}{l c}
+\toprule
+\rowcolor{TEJMist}Quantity & General rule\\
+\midrule
+Current & $I_T=I_1=I_2=\cdots$\\
+Voltage & $V_T=V_1+V_2+\cdots$\\
+Resistance & $R_T=R_1+R_2+\cdots$\\
+Summation & $\displaystyle R_T=\sum_{i=1}^{n}R_i$\\[10pt]
+Power & $P_T=P_1+P_2+\cdots$\\
+\bottomrule
+\end{tabularx}
+
+\textbf{Check:} the voltage drops add to the source voltage.
+\end{minipage}
+
+\begin{tejnote}[Standard 5\% resistor values]
+E24 values in each decade: \textbf{10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91}. Multiply by a power of ten, for example $47\ \Omega$, $470\ \Omega$, $4.7\ \mathrm{k}\Omega$, or $47\ \mathrm{k}\Omega$.
 \end{tejnote}
 ```
