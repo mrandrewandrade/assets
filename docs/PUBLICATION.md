@@ -33,7 +33,7 @@ not publishable merely because it exists in the working directory.
 
 - `assignments/` contains editable Quarto and Typst source.
 - `dist/` contains generated PDFs and is rebuilt by GitHub Actions.
-- `site/files/` contains reviewed prebuilt public PDFs, including fillable forms.
+- `site-build/files/` receives validated downloads during the Pages build.
 - `site/index.html` is the public catalogue.
 - `electronics/` contains public student sources and generated reference files.
   Answer keys and teacher-only material are written to `private-dist/`.
