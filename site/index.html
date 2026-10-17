@@ -3,42 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Print-first Technology Commons resources generated from Quarto and Typst source.">
-  <title>Technology Commons | Generated Print Resources</title>
+  <meta name="description" content="Accessible, print-ready Technology Commons assignments, planning tools, course outlines, and family forms.">
+  <title>Technology Commons | Teaching Resources</title>
   <style>
-    :root { --navy:#1e2b55; --charcoal:#20262d; --slate:#596673; --mist:#d9dee2; --sail:#f4f5f6; --gold:#f4c91d; --white:#ffffff; }
+    :root {
+      --navy: #1e2b55;
+      --ink: #20262d;
+      --slate: #596673;
+      --line: #d9dee2;
+      --paper: #ffffff;
+      --mist: #f4f5f6;
+      --gold: #f4c91d;
+    }
+
     * { box-sizing: border-box; }
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--charcoal); background:var(--sail); line-height:1.5; }
-    a { color:var(--navy); }
-    a:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
-    .page { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
-    header { background:var(--white); border-bottom:1px solid var(--mist); }
-    .header-inner { display:flex; justify-content:space-between; gap:24px; align-items:center; padding:28px 0; }
-    .eyebrow { margin:0 0 4px; color:var(--slate); font-size:.9rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
-    h1 { margin:0; color:var(--navy); font-size:clamp(2rem,5vw,3.25rem); line-height:1.05; }
-    .school { margin:8px 0 0; color:var(--slate); }
-    .gold-rule { width:64px; height:5px; margin-top:18px; background:var(--gold); }
-    main { padding:42px 0 56px; }
-    .resource,.download-card { background:var(--white); border:1px solid var(--mist); border-radius:14px; overflow:hidden; box-shadow:0 12px 32px rgba(30,43,85,.08); }
-    .resource + .resource { margin-top:26px; }
-    .resource-header,.download-card { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; padding:26px 28px; }
-    .resource-header { border-bottom:1px solid var(--mist); }
-    h2,h3 { margin:0 0 5px; color:var(--navy); }
-    h2 { font-size:1.55rem; }
-    h3 { font-size:1.15rem; }
-    .resource-header p,.download-card p { margin:0; color:var(--slate); }
-    .actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
-    .button { display:inline-block; padding:11px 18px; border-radius:8px; background:var(--navy); color:var(--white); font-weight:700; text-decoration:none; white-space:nowrap; }
-    .button.secondary { background:var(--white); color:var(--navy); border:1px solid var(--navy); }
-    .button:hover { text-decoration:underline; }
-    .viewer { width:100%; height:min(72vh,760px); min-height:520px; border:0; display:block; background:var(--mist); }
-    .downloads { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
-    .mobile-note { display:none; padding:18px 22px; color:var(--slate); background:var(--sail); border-top:1px solid var(--mist); }
-    .site-note { margin:0 0 28px; padding:20px 22px; background:var(--white); border:1px solid var(--mist); border-left:5px solid var(--gold); border-radius:10px; }
-    .site-note p { margin:0; }
-    footer { padding:0 0 40px; color:var(--slate); font-size:.9rem; }
-    footer p { margin:0; }
-    @media (max-width:760px) { .header-inner{align-items:flex-start}.resource-header,.download-card,.downloads{grid-template-columns:1fr}.actions{justify-content:flex-start}.button{text-align:center}.viewer{min-height:62vh}.mobile-note{display:block} }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mist);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    a { color: var(--navy); }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .page { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+
+    header { background: var(--paper); border-bottom: 1px solid var(--line); }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+      gap: 36px;
+      align-items: center;
+      padding: 34px 0 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: var(--slate);
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      line-height: 1.02;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 14px 0 0;
+      color: var(--slate);
+      font-size: 1.08rem;
+    }
+
+    .gold-rule { width: 76px; height: 6px; margin-top: 21px; background: var(--gold); }
+
+    .brand-mark {
+      width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      object-position: center right;
+    }
+
+    nav { background: var(--navy); color: var(--paper); }
+
+    .nav-inner {
+      display: flex;
+      gap: 8px 22px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .nav-inner a { color: var(--paper); font-weight: 700; text-decoration: none; }
+    .nav-inner a:hover { text-decoration: underline; }
+    main { padding: 34px 0 60px; }
+
+    .notice {
+      margin: 0 0 34px;
+      padding: 20px 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--gold);
+      border-radius: 10px;
+    }
+
+    .notice p { margin: 0; }
+    .section { margin-top: 42px; scroll-margin-top: 24px; }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 10px;
+    }
+
+    h2 { margin: 0; color: var(--navy); font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; }
+    .section-heading p { max-width: 600px; margin: 0; color: var(--slate); text-align: right; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 10px 26px rgba(30, 43, 85, .07);
+    }
+
+    .card.featured { border-top: 7px solid var(--gold); padding-top: 18px; }
+
+    .tag {
+      align-self: flex-start;
+      margin: 0 0 10px;
+      padding: 4px 9px;
+      color: var(--navy);
+      background: #eef2f7;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.25rem; line-height: 1.25; }
+    .card p { margin: 0; color: var(--slate); }
+
+    .actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      color: var(--paper);
+      background: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.secondary { color: var(--navy); background: var(--paper); }
+    .button:hover { text-decoration: underline; }
+    footer { padding: 28px 0 42px; color: var(--slate); font-size: .92rem; }
+    footer p { margin: 0; }
+
+    @media (max-width: 780px) {
+      body { font-size: 16px; }
+      .header-inner { grid-template-columns: 1fr; }
+      .brand-mark { max-width: 320px; object-position: left center; }
+      .grid { grid-template-columns: 1fr; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 6px; text-align: left; }
+      .button { flex: 1 1 180px; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -47,102 +188,149 @@
       <div>
         <p class="eyebrow">Port Credit Secondary School</p>
         <h1>Technology Commons</h1>
-        <p class="school">Print-first resources generated from Quarto + Typst</p>
+        <p class="lede">Accessible, print-ready assignments, planning tools, course information, and classroom forms.</p>
         <div class="gold-rule" aria-hidden="true"></div>
       </div>
+      <img class="brand-mark" src="technology-commons-logo.svg" alt="Technology Commons, Port Credit Secondary School">
     </div>
   </header>
 
-  <main class="page">
-    <section class="site-note" aria-label="About these generated resources">
-      <p><strong>Generated print resources.</strong> These documents are built from Quarto (<code>.qmd</code>) and Typst source when precise page layout matters. They do not have Google Docs versions. For the full collection of teaching materials, slides, notes, and editable classroom resources, visit <a href="https://andrewandrade.ca/tech-edu-resources/teaching-materials/">Technology Education Resources</a>.</p>
-    </section>
+  <nav aria-label="Resource categories">
+    <div class="page nav-inner">
+      <a href="#electronics">Electronics</a>
+      <a href="#laser-library">Laser library</a>
+      <a href="#student-work">Student work</a>
+      <a href="#planning">Planning and reflection</a>
+      <a href="#course-information">Course information</a>
+    </div>
+  </nav>
 
-    <section class="resource" aria-labelledby="electronics-title">
-      <div class="resource-header">
-        <div>
-          <h2 id="electronics-title">TEJ Electronics Library</h2>
-          <p>Two-page quick reference, full electronics handbook, circuit-calculation package, and the H01 protected low-voltage safety module.</p>
-        </div>
-        <div class="actions">
-          <a class="button" href="TEJ-Electronics-Formula-Reference.pdf">Formula PDF</a>
-          <a class="button secondary" href="TEJ-Electronics-Formula-Reference.html">Accessible HTML</a>
-        </div>
+  <main class="page">
+    <aside class="notice" aria-label="About this resource library">
+      <p><strong>Public resource library.</strong> These files are blank classroom resources with no student information. Fillable PDFs should be downloaded before completing or signing them. Source files and licensing information are available in the <a href="https://github.com/mrandrewandrade/assets">public repository</a>.</p>
+    </aside>
+
+    <section class="section" id="electronics">
+      <div class="section-heading">
+        <h2>Electronics</h2>
+        <p>Accessible references, calculations, simulation guidance, and protected low-voltage lab practice.</p>
       </div>
-      <div class="downloads">
-        <article class="download-card">
-          <div><h3>Electronics Quick Reference</h3><p>Two classroom-ready pages with engineering notation, GUESS, circuit laws, reference schematics, digital inputs, and measurement checks.</p></div>
-          <div class="actions">
-            <a class="button" href="TEJ-Electronics-Quick-Reference.pdf">Quick-reference PDF</a>
-          </div>
+      <div class="grid">
+        <article class="card featured">
+          <p class="tag">Quick reference</p>
+          <h3>Electronics Quick Reference</h3>
+          <p>Two classroom-ready pages with engineering notation, GUESS, circuit laws, reference schematics, digital inputs, and measurement checks.</p>
+          <div class="actions"><a class="button" href="TEJ-Electronics-Quick-Reference.pdf">Open PDF</a></div>
         </article>
-        <article class="download-card">
-          <div><h3>Electronics Reference Handbook</h3><p>The larger reference with circuits, logic, stable digital inputs, control systems, calculator procedures, and measurement guidance.</p></div>
+
+        <article class="card">
+          <p class="tag">Handbook</p>
+          <h3>Electronics Reference Handbook</h3>
+          <p>A larger reference for circuits, logic, stable digital inputs, control systems, calculator procedures, and measurement guidance.</p>
           <div class="actions">
-            <a class="button" href="TEJ-Electronics-Reference-Handbook.pdf">Handbook PDF</a>
+            <a class="button" href="TEJ-Electronics-Reference-Handbook.pdf">Open PDF</a>
             <a class="button secondary" href="TEJ-Electronics-Reference-Handbook.html">Accessible HTML</a>
           </div>
         </article>
-        <article class="download-card">
-          <div><h3>Basic Circuit Calculations</h3><p>Ten-question GUESS worksheet with required and optional Level 4 pathways and Tinkercad verification. The teacher key is distributed separately through the restricted teacher channel.</p></div>
-          <div class="actions">
-            <a class="button" href="TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf">Student PDF</a>
-          </div>
+
+        <article class="card">
+          <p class="tag">Student worksheet</p>
+          <h3>Basic Circuit Calculations</h3>
+          <p>Ten GUESS questions with required and optional Level 4 pathways and Tinkercad verification.</p>
+          <div class="actions"><a class="button" href="TEJ_Basic_Circuit_Calculations_Student_Worksheet.pdf">Open PDF</a></div>
         </article>
-        <article class="download-card">
-          <div><h3>H01 Safety and Lab Practice</h3><p>Calculate, simulate, build, measure, troubleshoot, and reflect using a protected low-voltage circuit.</p></div>
+
+        <article class="card">
+          <p class="tag">Safety and lab practice</p>
+          <h3>H01 Protected Low-Voltage Circuit</h3>
+          <p>Calculate, simulate, build, measure, troubleshoot, and reflect using a protected low-voltage circuit.</p>
           <div class="actions">
-            <a class="button" href="H01_Safety_Lab_Practice_Student_Worksheet.pdf">Student worksheet</a>
+            <a class="button" href="H01_Safety_Lab_Practice_Student_Worksheet.pdf">Worksheet</a>
             <a class="button secondary" href="H01_Safety_Lab_Practice_Lab.pdf">Lab</a>
             <a class="button secondary" href="H01_Safety_Lab_Practice_Tinkercad_Guide.pdf">Tinkercad guide</a>
           </div>
         </article>
+
+        <article class="card">
+          <p class="tag">Digital inputs</p>
+          <h3>D01 Stable Switch Circuits</h3>
+          <p>Prepare and test stable hardware inputs before moving to microcontroller code.</p>
+          <div class="actions"><a class="button" href="D01_Digital_Inputs_Student_Worksheet.pdf">Open PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Control systems</p>
+          <h3>C06 Control-Method Comparison</h3>
+          <p>Compare open loop, on-off, hysteresis, proportional, and PI or PID control.</p>
+          <div class="actions"><a class="button" href="C06_Control_Methods_Comparison_Student.pdf">Open PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Computer systems</p>
+          <h3>Basic Computer Systems Activities</h3>
+          <p>Student activity packages for computer systems, troubleshooting, recovery, and related side quests.</p>
+          <div class="actions">
+            <a class="button" href="TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf">Activity package</a>
+            <a class="button secondary" href="TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf">Recovery job sheet</a>
+            <a class="button secondary" href="TEJ-Make-It-Print-Side-Quest.pdf">Printing side quest</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="resource" aria-labelledby="name-tag-title">
-      <div class="resource-header">
-        <div>
-          <h2 id="name-tag-title">0.0 Name Tag PDF - /10</h2>
-          <p>A first practice assignment for clear photography, student identification, PDF creation, file checking, and following submission instructions.</p>
-        </div>
-        <div class="actions">
-          <a class="button" href="0.0-name-tag-pdf.pdf">PDF</a>
-        </div>
+    <section class="section" id="laser-library">
+      <div class="section-heading">
+        <h2>Laser fabrication library</h2>
+        <p>Original, tested vector designs and project-ready files for classroom fabrication.</p>
       </div>
-      <iframe class="viewer" src="0.0-name-tag-pdf.pdf#view=FitH" title="0.0 Name Tag PDF assignment"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use the PDF button above.</p>
+      <div class="grid">
+        <article class="card featured">
+          <p class="tag">Downloadable library</p>
+          <h3>Technology Commons Laser Library</h3>
+          <p>A generated collection of classroom-ready laser projects with source files, documentation, and validated outputs.</p>
+          <div class="actions"><a class="button" href="files/technology-commons-laser-library.zip">Download ZIP</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Open source</p>
+          <h3>Browse the Laser Project Sources</h3>
+          <p>View the project catalogue, editable vector sources, generator, tests, and licence information.</p>
+          <div class="actions"><a class="button" href="https://github.com/mrandrewandrade/assets/tree/master/laser">Browse repository</a></div>
+        </article>
+      </div>
     </section>
 
-    <section class="resource" aria-labelledby="presentation-title">
-      <div class="resource-header">
-        <div>
-          <h2 id="presentation-title">0.1 Past, Present &amp; Becoming - /10</h2>
-          <p>Who was I? Who am I? Who am I becoming? A short presentation about the path so far and what may come next.</p>
-        </div>
-        <div class="actions">
-          <a class="button" href="0.1-past-present-becoming.pdf">PDF</a>
-        </div>
+    <section class="section" id="student-work">
+      <div class="section-heading">
+        <h2>Student work</h2>
+        <p>Clear, printable assignments for the opening learning sequence.</p>
       </div>
-      <iframe class="viewer" src="0.1-past-present-becoming.pdf#view=FitH" title="0.1 Past, Present and Becoming PDF"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use the PDF button above.</p>
-    </section>
+      <div class="grid">
+        <article class="card">
+          <p class="tag">0.0 assignment</p>
+          <h3>Name Tag PDF - /10</h3>
+          <p>Practice clear photography, student identification, PDF creation, file checking, and submission instructions.</p>
+          <div class="actions"><a class="button" href="0.0-name-tag-pdf.pdf">Open PDF</a></div>
+        </article>
 
-    <section class="resource" aria-labelledby="listening-title">
-      <div class="resource-header">
-        <div>
-          <h2 id="listening-title">0.2 The Way We Meet - /10</h2>
-          <p>Attention, connection, and making space for one another through listening, notes, discussion, two written reflections, and Learning Skills.</p>
-        </div>
-        <div class="actions">
-          <a class="button" href="0.2-the-way-we-meet.pdf">PDF</a>
-        </div>
-      </div>
-      <iframe class="viewer" src="0.2-the-way-we-meet.pdf#view=FitH" title="0.2 The Way We Meet PDF"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use the PDF button above.</p>
-      <div class="downloads">
-        <article class="download-card">
-          <div><h3>0.2 Listening Notes + Reflections</h3><p>Four-part package: notes for 34 presenters, honest attention ratings, a dedicated Listening Reflection with Learning Skills self-evaluation, and a separate Presentation Reflection comparing 0.1 with what the student learned from classmates. Students submit the completed package as one PDF.</p></div>
+        <article class="card">
+          <p class="tag">0.1 assignment</p>
+          <h3>Past, Present &amp; Becoming - /10</h3>
+          <p>A short presentation about who the student was, who they are, and who they may be becoming.</p>
+          <div class="actions"><a class="button" href="0.1-past-present-becoming.pdf">Open PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">0.2 assignment</p>
+          <h3>The Way We Meet - /10</h3>
+          <p>Listening, connection, discussion, written reflection, and Learning Skills.</p>
+          <div class="actions"><a class="button" href="0.2-the-way-we-meet.pdf">Open PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">0.2 student package</p>
+          <h3>Listening Notes and Reflections</h3>
+          <p>Notes for presenters, attention ratings, a Listening Reflection, a Presentation Reflection, and Learning Skills evidence.</p>
           <div class="actions">
             <a class="button" href="0.2-the-way-we-meet-notes.pdf">Colour PDF</a>
             <a class="button secondary" href="0.2-the-way-we-meet-notes-bw.pdf">B&amp;W Print PDF</a>
@@ -151,24 +339,71 @@
       </div>
     </section>
 
-    <section class="resource" aria-labelledby="weekly-progress-title">
-      <div class="resource-header">
-        <div>
-          <h2 id="weekly-progress-title">Weekly SMART Goal &amp; Progress Log</h2>
-          <p>Set the Goal. Follow the Way. Take Action. Daily SMART goals, concise progress reflection, weekend catch-up and practice planning, gratitude and credit, and a Learning Skills self-evaluation.</p>
-        </div>
-        <div class="actions">
-          <a class="button" href="weekly-smart-goal-progress-log.pdf?v=20260927-smartlog2">Colour PDF</a>
-          <a class="button secondary" href="weekly-smart-goal-progress-log-bw.pdf?v=20260927-smartlog2">B&amp;W Print PDF</a>
-        </div>
+    <section class="section" id="planning">
+      <div class="section-heading">
+        <h2>Planning and reflection</h2>
+        <p>Weekly goal setting, progress evidence, reflection, and Learning Skills.</p>
       </div>
-      <iframe class="viewer" src="weekly-smart-goal-progress-log.pdf?v=20260927-smartlog2#view=FitH" title="Weekly SMART Goal and Progress Log"></iframe>
-      <p class="mobile-note">If the PDF does not display in your browser, use one of the PDF buttons above.</p>
+      <div class="grid">
+        <article class="card">
+          <p class="tag">Reusable student log</p>
+          <h3>Weekly SMART Goal and Progress Log</h3>
+          <p>Set a daily SMART goal, record progress, identify next steps, and complete the weekly reflection and Learning Skills proof.</p>
+          <div class="actions">
+            <a class="button" href="weekly-smart-goal-progress-log.pdf">Colour PDF</a>
+            <a class="button secondary" href="weekly-smart-goal-progress-log-bw.pdf">B&amp;W PDF</a>
+          </div>
+        </article>
+
+        <article class="card featured">
+          <p class="tag">Classroom edition</p>
+          <h3>Weekly Log with Anonymous Feedback QR</h3>
+          <p>The black-and-white weekly log with a classroom feedback QR code on the reflection page.</p>
+          <div class="actions"><a class="button" href="weekly-smart-goal-progress-log-andrew-bw.pdf">Open PDF</a></div>
+        </article>
+      </div>
     </section>
+
+    <section class="section" id="course-information">
+      <div class="section-heading">
+        <h2>Course information and family forms</h2>
+        <p>Current 2026-27 course outlines and a fillable classroom acknowledgment form.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <p class="tag">Fillable course outline</p>
+          <h3>TAS2O Technology and the Skilled Trades</h3>
+          <p>Grade 10 course content, learning goals, assessment, safety expectations, digital tools, privacy notice, and signatures.</p>
+          <div class="actions"><a class="button" href="files/2026-27-tas2o-course-outline-fillable.pdf">Download PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Fillable course outline</p>
+          <h3>TEJ3M Computer Engineering Technology</h3>
+          <p>Grade 11 course content, learning goals, assessment, safety expectations, digital tools, privacy notice, and signatures.</p>
+          <div class="actions"><a class="button" href="files/2026-27-tej3m-course-outline-fillable.pdf">Download PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Fillable course outline</p>
+          <h3>TTS3C Small Engine and Recreational Equipment</h3>
+          <p>Grade 11 course content, learning goals, assessment, shop expectations, digital tools, privacy notice, and signatures.</p>
+          <div class="actions"><a class="button" href="files/2026-27-tts3c-course-outline-fillable.pdf">Download PDF</a></div>
+        </article>
+
+        <article class="card">
+          <p class="tag">Fillable family form</p>
+          <h3>Personal Items Brought to Technology Class</h3>
+          <p>Records the proposed item and activity, known hazards, family acknowledgment, and student safety commitment.</p>
+          <div class="actions"><a class="button" href="files/personal-items-technology-class-fillable.pdf">Download PDF</a></div>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer class="page">
-    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · Created by Andrew Andrade · <a href="https://andrewandrade.ca/">andrewandrade.ca</a> · Source: <a href="https://github.com/mrandrewandrade">github.com/mrandrewandrade</a><br>Please share, modify and redistribute. If you change this file, do not remove: CC BY-SA 4.0. Original Source: andrewandrade.ca and add your own name + links. Sharing is caring!</p>
+    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless a document states otherwise. Share, modify, and redistribute adapted resources under the same licence. Original source: <a href="https://andrewandrade.ca/">andrewandrade.ca</a> and <a href="https://github.com/mrandrewandrade/assets">github.com/mrandrewandrade/assets</a>.</p>
   </footer>
 </body>
 </html>

@@ -7,7 +7,11 @@ rm -f \
   dist/TEJ_Basic_Circuit_Calculations_Answer_Key.pdf \
   dist/H01_Safety_Lab_Practice_Answer_Key.pdf \
   dist/D01_Digital_Inputs_Answer_Key.pdf \
-  dist/C06_Control_Methods_Comparison_Answer_Key.pdf
+  dist/C06_Control_Methods_Comparison_Answer_Key.pdf \
+  dist/TEJ-Basic-Computer-Systems-Teacher-Guide.pdf \
+  dist/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf \
+  dist/TEJ-Computer-Power-and-Parts-Mission.pdf \
+  dist/TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf
 
 if command -v magick >/dev/null 2>&1; then
   imagemagick=(magick)
@@ -18,7 +22,8 @@ else
   echo "ImageMagick is unavailable; using committed PDFs for SVG-only schematics."
 fi
 regenerate_schematics=true
-if ! command -v pdflatex >/dev/null 2>&1 || ! command -v dvisvgm >/dev/null 2>&1; then
+if ! command -v dvisvgm >/dev/null 2>&1 ||
+  { ! command -v pdflatex >/dev/null 2>&1 && ! command -v xelatex >/dev/null 2>&1; }; then
   regenerate_schematics=false
   echo "CircuitikZ conversion tools are incomplete; using committed schematic PDFs and SVGs."
 fi
@@ -28,7 +33,14 @@ mkdir -p "$schematic_build"
 if [[ "$regenerate_schematics" == true ]]; then
   for source in electronics/schematics/*.tex; do
     base_name="$(basename "${source%.tex}")"
-    pdflatex -interaction=nonstopmode -halt-on-error -output-directory="$schematic_build" "$source" >/dev/null
+    if grep -q '\\usepackage{fontspec}' "$source"; then
+      schematic_engine=xelatex
+    elif command -v pdflatex >/dev/null 2>&1; then
+      schematic_engine=pdflatex
+    else
+      schematic_engine=xelatex
+    fi
+    "$schematic_engine" -interaction=nonstopmode -halt-on-error -output-directory="$schematic_build" "$source" >/dev/null
     cp "$schematic_build/$base_name.pdf" "electronics/schematics/$base_name.pdf"
     dvisvgm --pdf --no-fonts --exact-bbox --bbox=min \
       --output="electronics/schematics/$base_name.svg" "$schematic_build/$base_name.pdf"
@@ -82,14 +94,14 @@ render_pdf "$control_dir/C06_Control_Methods_Comparison_Answer_Key.qmd" C06_Cont
 
 computer_systems_dir=electronics/computer-systems
 render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf
-render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" TEJ-Basic-Computer-Systems-Teacher-Guide.pdf
+render_pdf "$computer_systems_dir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" TEJ-Basic-Computer-Systems-Teacher-Guide.pdf private-dist
 render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd" TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf
-render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf private-dist
 render_pdf "$computer_systems_dir/TEJ-Make-It-Print-Side-Quest.qmd" TEJ-Make-It-Print-Side-Quest.pdf
-render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Mission.qmd" TEJ-Computer-Power-and-Parts-Mission.pdf
-render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf
+render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Mission.qmd" TEJ-Computer-Power-and-Parts-Mission.pdf private-dist
+render_pdf "$computer_systems_dir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf private-dist
 
 cp electronics/schematics/*.svg dist/
 cp electronics/schematics/*.pdf dist/
 
-echo "Rendered public TEJ electronics assets to dist/ and answer keys to private-dist/."
+echo "Rendered public TEJ electronics assets to dist/ and restricted teacher or draft files to private-dist/."
