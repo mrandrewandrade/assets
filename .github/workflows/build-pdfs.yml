@@ -35,7 +35,7 @@ jobs:
 
       - name: Verify private teacher files are not public
         run: |
-          if find dist -maxdepth 1 -type f \( -iname '*answer*key*' -o -iname '*teacher*marking*' \) | grep -q .; then
+          if find dist -maxdepth 1 -type f \( -iname '*answer*key*' -o -iname '*teacher*' \) | grep -q .; then
             echo 'A restricted teacher file was written to public dist/.' >&2
             exit 1
           fi
@@ -44,16 +44,20 @@ jobs:
         run: |
           rm -rf site-build
           mkdir -p site-build
-          cp site/index.html site-build/index.html
+          cp -R site/. site-build/
           cp dist/*.pdf site-build/
           cp dist/*.html site-build/
           cp dist/*.svg site-build/
+          mkdir -p site-build/files
+          cp laser/generated/downloads/*.zip site-build/files/
 
       - name: Upload generated documents
         uses: actions/upload-artifact@v4
         with:
           name: teaching-resources
-          path: dist/
+          path: |
+            dist/
+            laser/generated/downloads/
           if-no-files-found: error
 
       - name: Upload Pages site

@@ -14,3 +14,54 @@ assignments/*.typ
 .tools/
 tmp/
 site-build/
+
+# Local agent, document-conversion, and QA workspaces
+.codex-remote-attachments/
+.codex-temp/
+.docs-trusted-read/
+.qa/
+.qa-*/
+.tmp/
+bridge/
+build/
+gdoc-work/
+output/
+qa/
+qa_nice/
+renders/
+tmp_pdf_job_record*/
+
+# Local source libraries and school-specific working material
+assets/OneDrive_*/
+course-outline-assets/
+safety-library/
+photopea-tutorial-system/
+tej_curriculum_plan/
+
+# Generated visual working files
+generated-schematics/
+google-doc-assets/
+schematics/
+schematics_v2/
+voice-samples/
+
+# Root-level exports and media are working files unless deliberately moved
+# into a tracked publication directory.
+/*.pdf
+/*.docx
+/*.png
+/*.html
+/*.mp4
+/*.webm
+/*.ass
+/*.mjs
+
+# One-off generators that still depend on local or third-party working assets
+/build_safety_agreement.py
+/create_gratitude_tree_worksheets*.py
+/generate_schematics.py
+/slide20-design-catalog.md
+/slide20-design-system.json
+/slide20-reference-raw.json
+/brand/technology-commons-emblem-800.png
+/brand/technology-commons-logo.png

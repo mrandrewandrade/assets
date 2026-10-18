@@ -8,15 +8,20 @@ New-Item -ItemType Directory -Force -Path (Join-Path $repoRoot 'private-dist') |
     'TEJ_Basic_Circuit_Calculations_Answer_Key.pdf',
     'H01_Safety_Lab_Practice_Answer_Key.pdf',
     'D01_Digital_Inputs_Answer_Key.pdf',
-    'C06_Control_Methods_Comparison_Answer_Key.pdf'
+    'C06_Control_Methods_Comparison_Answer_Key.pdf',
+    'TEJ-Basic-Computer-Systems-Teacher-Guide.pdf',
+    'TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf',
+    'TEJ-Computer-Power-and-Parts-Mission.pdf',
+    'TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf'
 ) | ForEach-Object {
     Remove-Item -LiteralPath (Join-Path 'dist' $_) -Force -ErrorAction SilentlyContinue
 }
 
 $magick = Get-Command magick -ErrorAction SilentlyContinue
 if (-not $magick) { throw 'ImageMagick is required to create print-ready schematic PDFs.' }
+$xelatex = Get-Command xelatex -ErrorAction SilentlyContinue
 $pdflatex = Get-Command pdflatex -ErrorAction SilentlyContinue
-if (-not $pdflatex) { throw 'pdfLaTeX is required to generate CircuitikZ schematics.' }
+if (-not $xelatex -and -not $pdflatex) { throw 'XeLaTeX or pdfLaTeX is required to generate CircuitikZ schematics.' }
 $dvisvgm = Get-Command dvisvgm -ErrorAction SilentlyContinue
 if (-not $dvisvgm) { throw 'dvisvgm is required to generate vector SVG schematics.' }
 $quarto = Get-Command quarto.exe -ErrorAction SilentlyContinue
@@ -28,7 +33,10 @@ New-Item -ItemType Directory -Force -Path $schematicBuild | Out-Null
 
 Get-ChildItem -LiteralPath 'electronics/schematics' -Filter '*.tex' | ForEach-Object {
     $baseName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
-    & $pdflatex.Source '-interaction=nonstopmode' '-halt-on-error' "-output-directory=$schematicBuild" $_.FullName | Out-Null
+    $requiresFontspec = Select-String -LiteralPath $_.FullName -SimpleMatch '\usepackage{fontspec}' -Quiet
+    $schematicEngine = if ($requiresFontspec) { $xelatex } elseif ($pdflatex) { $pdflatex } else { $xelatex }
+    if (-not $schematicEngine) { throw "XeLaTeX is required for $($_.FullName)" }
+    & $schematicEngine.Source '-interaction=nonstopmode' '-halt-on-error' "-output-directory=$schematicBuild" $_.FullName | Out-Null
     if ($LASTEXITCODE -ne 0) { throw "CircuitikZ PDF generation failed for $($_.FullName)" }
     $generatedPdf = Join-Path $schematicBuild "$baseName.pdf"
     $pdfPath = Join-Path $_.DirectoryName "$baseName.pdf"
@@ -89,12 +97,12 @@ Render-Pdf "$controlDir/C06_Control_Methods_Comparison_Answer_Key.qmd" 'C06_Cont
 
 $computerSystemsDir = 'electronics/computer-systems'
 Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Student-Activity-Packages.qmd" 'TEJ-Basic-Computer-Systems-Student-Activity-Packages.pdf'
-Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" 'TEJ-Basic-Computer-Systems-Teacher-Guide.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Basic-Computer-Systems-Teacher-Guide.qmd" 'TEJ-Basic-Computer-Systems-Teacher-Guide.pdf' 'private-dist'
 Render-Pdf "$computerSystemsDir/TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.qmd" 'TEJ-Computer-Recovery-Crew-Pilot-Job-Sheet.pdf'
-Render-Pdf "$computerSystemsDir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" 'TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.qmd" 'TEJ-Computer-Recovery-Crew-Pilot-Teacher-Launch-Guide.pdf' 'private-dist'
 Render-Pdf "$computerSystemsDir/TEJ-Make-It-Print-Side-Quest.qmd" 'TEJ-Make-It-Print-Side-Quest.pdf'
-Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Mission.qmd" 'TEJ-Computer-Power-and-Parts-Mission.pdf'
-Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" 'TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf'
+Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Mission.qmd" 'TEJ-Computer-Power-and-Parts-Mission.pdf' 'private-dist'
+Render-Pdf "$computerSystemsDir/TEJ-Computer-Power-and-Parts-Teacher-Guide.qmd" 'TEJ-Computer-Power-and-Parts-Teacher-Guide.pdf' 'private-dist'
 
 Get-ChildItem -LiteralPath 'electronics/schematics' -File |
     Where-Object { $_.Extension -in @('.svg', '.pdf') } |
@@ -102,4 +110,4 @@ Get-ChildItem -LiteralPath 'electronics/schematics' -File |
         Copy-Item -LiteralPath $_.FullName -Destination (Join-Path 'dist' $_.Name) -Force
     }
 
-Write-Host 'Rendered public TEJ electronics assets to dist/ and answer keys to private-dist/.'
+Write-Host 'Rendered public TEJ electronics assets to dist/ and restricted teacher or draft files to private-dist/.'
