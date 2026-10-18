@@ -1,7 +1,5 @@
 \documentclass[border=8pt]{standalone}
-\usepackage{fontspec}
-\setmainfont{Arial}
-\setsansfont{Arial}
+\usepackage[scaled=0.95]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[europeanresistors,americanvoltages]{circuitikz}
 \definecolor{TechCharcoal}{HTML}{202124}
@@ -9,12 +7,13 @@
 \begin{document}
 \begin{circuitikz}[line width=1.15pt,draw=TechCharcoal,text=TechCharcoal]
   \ctikzset{bipoles/length=1.15cm}
-  \draw (0,0) to[battery1,l_={V\textsubscript{T}}] (0,3)
+  \draw (0,0) to[battery1,invert,l_={V\textsubscript{T}}] (0,3)
         to[short,i>^={I\textsubscript{T}}] (1.4,3)
         to[R,l={R\textsubscript{1}},v_>={V\textsubscript{1}}] (4.1,3)
         to[R,l={R\textsubscript{2}},v_>={V\textsubscript{2}}] (6.8,3)
         to[R,l={R\textsubscript{3}},v_>={V\textsubscript{3}}] (9.5,3)
         -- (9.5,0) -- (0,0);
+  \draw (0,0) node[ground] {};
   \node[font=\bfseries\large,text=TechNavy] at (4.75,-0.55)
     {one path means the same current everywhere};
 \end{circuitikz}

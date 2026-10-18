@@ -1,0 +1,15 @@
+\documentclass[border=10pt]{standalone}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\begin{document}
+\begin{circuitikz}[line width=1.15pt,draw=TEJNavy,text=TEJNavy]
+  \ctikzset{bipoles/length=1.15cm}
+  \draw (0,0) node[ground] {} to[V,invert] (0,4) -- (8.6,4) -- (8.6,0) -- (0,0);
+  \node[font=\large,anchor=east] at (-0.35,3.25) {$V_T=12.03\,\mathrm{V}$};
+  \draw (3.0,4) to[lamp,l={Bulb, $R_1=4.7\,\Omega$},i>_={$I_1$}] (3.0,0);
+  \draw (6.4,4) to[R,l={Motherboard, $I_2=12.1\,\mathrm{A}$}] (6.4,0);
+  \fill (3.0,4) circle (2pt) (3.0,0) circle (2pt) (6.4,4) circle (2pt) (6.4,0) circle (2pt);
+\end{circuitikz}
+\end{document}

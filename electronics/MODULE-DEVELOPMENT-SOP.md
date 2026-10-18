@@ -331,12 +331,17 @@ The deck tells the instructional story. It should teach, model, and prepare stud
 
 - Generate schematics with the established circuit generator.
 - Use standard IEC/ANSI symbols consistently within the course.
+- Draw the higher-voltage rail toward the top and the 0 V reference toward the bottom unless the real circuit requires another orientation.
+- For a vertical cell or battery symbol, put the positive terminal (long plate) above the negative terminal (short plate).
+- In a single-supply direct-current circuit, connect the negative terminal to the bottom 0 V or ground rail and show the ground symbol explicitly. Ground is the chosen reference potential; it is not automatically a negative voltage.
+- Draw conventional-current arrows from the positive source rail through the load toward the 0 V or ground return.
 - Use rectangular wiring paths and square corners where they make topology clearer.
 - Use visible junction dots and unambiguous crossings.
 - Label source, load, total, and branch quantities consistently.
 - Place ammeters in series, voltmeters across two points, and resistance measurements only on de-energized circuits.
 - Export one canonical high-quality schematic and reuse it in slides, student questions, and answers.
 - Verify every schematic against the written problem before release.
+- Reject any schematic whose battery polarity, ground reference, current arrows, or voltage labels contradict one another.
 
 ### Schematic production and acceptance gate
 

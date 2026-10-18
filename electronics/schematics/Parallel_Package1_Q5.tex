@@ -1,0 +1,14 @@
+\documentclass[border=10pt]{standalone}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[europeanresistors,americanvoltages]{circuitikz}
+\definecolor{TEJNavy}{HTML}{1E2B55}
+\begin{document}
+\begin{circuitikz}[line width=1.15pt,draw=TEJNavy,text=TEJNavy]
+  \ctikzset{bipoles/length=1.15cm}
+  \draw (0,0) node[ground] {} to[V,invert] (0,4)
+        to[R,l={Load: $R_1=2.0\,\mathrm{k}\Omega$, $P_1=50\,\mathrm{mW}$},i>^={$I_1=?$}] (7.0,4)
+        -- (7.0,0) -- (0,0);
+  \node[font=\large,anchor=east] at (-0.35,3.25) {$V_1=?$};
+\end{circuitikz}
+\end{document}

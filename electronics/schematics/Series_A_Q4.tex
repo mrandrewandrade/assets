@@ -1,18 +1,17 @@
 \documentclass[border=8pt]{standalone}
-\usepackage{fontspec}
-\setmainfont{Arial}
-\setsansfont{Arial}
+\usepackage[scaled=0.95]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[europeanresistors,americanvoltages]{circuitikz}
 \definecolor{TechCharcoal}{HTML}{202124}
 \begin{document}
 \begin{circuitikz}[line width=1.15pt,draw=TechCharcoal,text=TechCharcoal]
   \ctikzset{bipoles/length=1.15cm}
-  \draw (0,0) to[battery1,l_={V\textsubscript{T} = ?}] (0,3)
-        to[R,l={R\textsubscript{1} = 6.8 kΩ}] (3.2,3)
-        to[R,l={R\textsubscript{2} = 12 kΩ}] (6.8,3)
-        to[R,l={R\textsubscript{3} = 24 kΩ}] (10.0,3)
+  \draw (0,0) to[battery1,invert,l_={V\textsubscript{T} = ?}] (0,3)
+        to[R,l={R\textsubscript{1} = 6.8 k$\Omega$}] (3.2,3)
+        to[R,l={R\textsubscript{2} = 12 k$\Omega$}] (6.8,3)
+        to[R,l={R\textsubscript{3} = 24 k$\Omega$}] (10.0,3)
         -- (10.0,0) -- (0,0);
+  \draw (0,0) node[ground] {};
   \draw[<->,line width=0.9pt] (3.55,2.18) -- (6.45,2.18);
   \node[fill=white,inner sep=3pt,font=\large] at (5.0,1.70)
         {V\textsubscript{2} = 9.0 V};
